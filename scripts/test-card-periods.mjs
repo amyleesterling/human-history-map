@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { partitionItems, matchingPeriods, endingFor } from '../js/card-periods.js';
+import { advanceYear, yearToTick, tickToYear, normalizeYear } from '../js/timeline.js';
+assert.equal(advanceYear(-1, 1), 1);
+assert.equal(advanceYear(1, -1), -1);
+assert.equal(advanceYear(-5, 10), 6);
+assert.equal(normalizeYear(0), 1);
+for (const y of [-3500, -1, 1, 2026]) assert.equal(tickToYear(yearToTick(y)), y);
+const card = { periods: [{ from: -2500, to: -1500, summary: 'Kerma period' }] };
+assert.equal(matchingPeriods(card, -2000).length, 1);
+assert.equal(matchingPeriods(card, -1500).length, 0);
+const items = [{year: -2000}, {year: -1490}, {text: 'undated'}];
+assert.deepEqual(partitionItems(items, -1500), {earlier: [items[0]], later: [items[1]], undated: [items[2]]});
+assert.equal(endingFor({fall: {}}, {fell: {year: 100}}).status, 'unresearched');
+assert.equal(endingFor(null, {to:null,kind:'culture'}).status, 'unresearched');
+assert.equal(endingFor({ending:{status:'continuity',text:'Sourced continuity'}}, {}).status,'continuity');
+console.log('Temporal card and BCE/CE boundary checks passed.');

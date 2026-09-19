@@ -11,7 +11,7 @@
 <meta property="og:description" content="Every known kingdom and civilization on one globe, from the first cities to the present.">
 <meta name="theme-color" content="#0b1220">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="site.css?v=research-2">
+<link rel="stylesheet" href="site.css?v=depth-1">
 </head>
 <body class="explorer">
 
@@ -28,6 +28,15 @@
 
 <main id="stage" class="stage">
   <canvas id="globe" role="img" aria-label="Interactive globe showing the borders of kingdoms and countries in the selected year. Drag to turn, pinch to zoom, tap a border to learn about it."></canvas>
+  <details class="map-key">
+    <summary>Map key</summary>
+    <ul>
+      <li><span class="key-state" aria-hidden="true"></span>State or political territory</li>
+      <li><span class="key-culture" aria-hidden="true"></span>People or cultural range</li>
+      <li><span class="key-approximate" aria-hidden="true"></span>Fainter lines: approximate extent</li>
+    </ul>
+    <p>Historical outlines are source snapshots, not surveyed frontiers. Cultural ranges do not necessarily mark state borders. Unmarked boundaries are not automatically precise.</p>
+  </details>
 
   <div id="search" class="search" hidden>
     <input id="searchInput" type="search" placeholder="Find a kingdom, empire or country" autocomplete="off" spellcheck="false" aria-label="Find a kingdom, empire or country" aria-controls="searchResults">
@@ -84,6 +93,6 @@
 <script src="vendor/d3/d3-array.min.js"></script>
 <script src="vendor/d3/d3-geo.min.js"></script>
 <script src="vendor/topojson/topojson-client.min.js"></script>
-<script type="module" src="js/app.js?v=research-2"></script>
+<script type="module" src="js/app.js?v=depth-1"></script>
 </body>
 </html>

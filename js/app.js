@@ -3,9 +3,11 @@
 // a function of (year, view, selected polity), and all three live in the
 // query string so any moment can be shared.
 
-import { HistoryData } from './data.js?v=research-2';
-import { Globe } from './globe.js';
-import { TimeScale, formatYear, formatCivSpan, defaultTicks } from './timeline.js?v=research-2';
+import { HistoryData } from './data.js?v=depth-1';
+import { Globe } from './globe.js?v=depth-1';
+import { TimeScale, formatYear, formatCivSpan, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+
+import { matchingPeriods } from './card-periods.js?v=depth-1';
 
 const $ = (id) => document.getElementById(id);
 const els = {
@@ -29,7 +31,7 @@ const state = {
   tipOpen: false,
 };
 let data, globe, scale, manifest, speeds, eras = [], ticks = [];
-let rafId = 0, lastTick = 0, urlTimer = 0;
+let rafId = 0, lastTick = 0, urlTimer = 0, navigationVersion = 0;
 
 // ---- boot -------------------------------------------------------------
 
@@ -80,8 +82,9 @@ async function main() {
 // ---- the clock --------------------------------------------------------
 
 function setYear(t, { force = false, fromSlider = false } = {}) {
-  state.time = t;
-  const yr = Math.round(t);
+  navigationVersion++;
+  const yr = normalizeYear(t);
+  state.time = yearToTick(yr);
   if (yr === state.year && !force) return;
   state.year = yr;
   const label = formatYear(yr);
@@ -101,6 +104,11 @@ function eraFor(yr) {
 
 function refreshPolities() {
   const yr = state.year;
+  if (data.yearStatus(yr).state === 'error') {
+    globe.setPolities([]);
+    if (state.selected && !els.tip.hidden) { const civ = data.civ(state.selected); if (civ) syncTipTime(civ); }
+    updateLoading(); return;
+  }
   const ready = data.isYearReady(yr);
   if (!ready) {
     data.ensureYear(yr).then(() => { if (state.year === yr) refreshPolities(); });
@@ -109,10 +117,9 @@ function refreshPolities() {
   }
   const list = data.polities(yr);
   globe.setPolities(list);
-  if (state.selected && !list.some((f) => f._civ.id === state.selected) && !els.tip.hidden) {
-    // the selected polity is gone in this year: say so rather than drop the card
-    els.tipMeta.textContent = `Not on the map in ${formatYear(yr)}.`;
-    els.tipMeta.hidden = false;
+  if (state.selected && !els.tip.hidden) {
+    const civ = data.civ(state.selected);
+    if (civ) syncTipTime(civ);
   }
   updateLoading();
   if (ready) {
@@ -127,6 +134,16 @@ function refreshPolities() {
 }
 
 function updateLoading() {
+  const failed = data.yearStatus(state.year).state === 'error';
+  let retry = document.getElementById('retryMap');
+  if (!retry) {
+    retry = document.createElement('button'); retry.id = 'retryMap';
+    retry.className = 'retry-map'; retry.textContent = 'Retry map loading';
+    retry.hidden = true; els.stage.appendChild(retry);
+    retry.addEventListener('click', async () => { await data.retryYear(state.year); refreshPolities(); });
+  }
+  retry.hidden = !failed;
+  if (failed) { pause(); showHint(`Borders for ${formatYear(state.year)} could not load. Please retry.`); }
   els.loading.hidden = !(data.loadingCount() > 0 && !data.isYearReady(state.year));
 }
 
@@ -134,7 +151,7 @@ function play() {
   if (state.playing) return;
   if (state.year >= scale.end) setYear(scale.start, { force: true });
   state.playing = true;
-  state.time = state.year;
+  state.time = yearToTick(state.year);
   els.playBtn.setAttribute('aria-pressed', 'true');
   els.playBtn.setAttribute('aria-label', 'Pause');
   closeTip();
@@ -157,20 +174,24 @@ function tick(now) {
   const dt = Math.min(0.1, (now - lastTick) / 1000);
   lastTick = now;
   // hold at a seam until the next file is in, instead of playing an empty world
-  const ahead = Math.min(scale.end, Math.round(state.time) + 1);
+  const next = state.time + state.speed * dt;
+  const ahead = Math.min(scale.end, tickToYear(Math.round(next)));
   if (!data.isYearReady(ahead)) {
+    if (data.yearStatus(ahead).state === 'error') {
+      setYear(ahead); pause(); updateLoading(); return;
+    }
     data.ensureYear(ahead);
     updateLoading();
     rafId = requestAnimationFrame(tick);
     return;
   }
-  const next = state.time + state.speed * dt;
-  if (next >= scale.end) {
+  if (next >= yearToTick(scale.end)) {
     setYear(scale.end);
     pause();
     return;
   }
-  setYear(next);
+  setYear(tickToYear(Math.round(next)));
+  state.time = next;
   rafId = requestAnimationFrame(tick);
 }
 
@@ -245,7 +266,7 @@ function bindControls() {
     else if (e.key === 'Escape') { if (!els.search.hidden) closeSearch(); else { closeTip(); deselect(); } }
     else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       const step = (e.shiftKey ? 10 : 1) * (e.key === 'ArrowRight' ? 1 : -1);
-      setYear(scale.clamp(state.year + step));
+      setYear(scale.clamp(advanceYear(state.year, step)));
     } else if (e.key === '/' ) { e.preventDefault(); openSearch(); }
   });
 }
@@ -315,6 +336,7 @@ function drawTrack() {
 // ---- selection and the tooltip -------------------------------------------
 
 function onTap(feature, x, y) {
+  navigationVersion++;
   if (!feature) { closeTip(); deselect(); return; }
   pause();
   select(feature._civ.id);
@@ -338,6 +360,7 @@ function showTip(civ, anchor, feature) {
   // a colony carries its own name on the map but belongs to its ruler: the
   // card is headed by the name that was tapped and says whose it was
   const label = feature && feature.properties.label;
+  state.tipLabel = label;
   const possession = label && label !== civ.name;
   els.tipSwatch.style.background = civ.color;
   els.tipName.textContent = label || civ.name;
@@ -349,7 +372,8 @@ function showTip(civ, anchor, feature) {
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
   if (civ.region) meta.push(civ.region);
   const drawn = data.featuresOf(civ.id, state.year).length > 0;
-  if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
+  if (data.yearStatus(state.year).state === 'error') meta.push(`Borders could not load for ${formatYear(state.year)}.`);
+  else if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
   els.tipMeta.textContent = meta.join(' · ');
   els.tipMeta.hidden = meta.length === 0;
   els.tipSource.hidden = true;
@@ -358,32 +382,74 @@ function showTip(civ, anchor, feature) {
   els.tipLine.textContent = meta.length ? meta[0] : '';
   els.tipLine.classList.remove('pending');
   const want = civ.id;
-  data.summaryFor(civ.id).then((s) => {
+  state.tipSummary = null;
+  state.tipLoaded = false;
+  if (state.tipCardId !== want) {
+    state.tipCardId = want;
+    state.tipCard = null;
+    state.tipCardPromise = data.card(want);
+  }
+  Promise.all([data.summaryFor(want), state.tipCardPromise]).then(([summary, card]) => {
     if (state.selected !== want || els.tip.hidden) return;
-    if (s) {
-      els.tipSummary.textContent = s.text;
-      els.tipSummary.classList.remove('pending');
-      // the chip carries the first sentence; the arrow opens the rest
-      els.tipLine.textContent = firstSentence(s.text);
-      if (s.source) {
-        els.tipSource.innerHTML = '';
-        const a = document.createElement('a');
-        a.href = s.source.url; a.target = '_blank'; a.rel = 'noopener';
-        a.textContent = s.source.name || 'source';
-        els.tipSource.append('Summary from ', a, s.source.license ? `, ${s.source.license}` : '');
-        els.tipSource.hidden = false;
-      }
-    } else {
-      els.tipSummary.textContent = 'Summary coming soon.';
-      if (!meta.length) { els.tipLine.textContent = 'Summary coming soon.'; els.tipLine.classList.add('pending'); }
-    }
+    state.tipLoaded = true;
+    state.tipSummary = summary;
+    state.tipCard = card;
+    syncTipTime(civ);
     placeTip();
   });
-  els.tipMore.href = `civ.html?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
+  syncTipTime(civ);
   els.tipZoom.hidden = !drawn;
   state.tipAnchor = anchor || null;
   els.tip.hidden = false;
   setTipOpen(state.tipOpen);
+}
+
+function syncTipTime(civ) {
+  const periods = state.tipCardId === civ.id ? matchingPeriods(state.tipCard, state.year) : [];
+  const summary = state.tipSummary;
+  if (periods.length || summary) {
+    const text = periods.length ? periods.map(p => p.summary).join(' ') : summary.text;
+    els.tipSummary.textContent = periods.length ? `In ${formatYear(state.year)}: ${text}` : `Across its history: ${text}`;
+    els.tipSummary.classList.remove('pending');
+    els.tipLine.textContent = firstSentence(text);
+    els.tipLine.classList.remove('pending');
+    els.tipSource.replaceChildren();
+    if (periods.length) {
+      const refs = [...new Set(periods.flatMap(p => p.sourceIds || []))];
+      for (const ref of refs) {
+        const source = (state.tipCard.sources || []).find(s => s.id === ref);
+        if (!source?.url) continue;
+        const a = document.createElement('a'); a.href = source.url;
+        a.target = '_blank'; a.rel = 'noopener'; a.textContent = source.title || 'Source';
+        if (els.tipSource.childNodes.length) els.tipSource.append(' · ');
+        els.tipSource.append(a);
+      }
+    } else if (summary?.source) {
+      const a = document.createElement('a'); a.href = summary.source.url;
+      a.target = '_blank'; a.rel = 'noopener'; a.textContent = summary.source.name || 'Source';
+      els.tipSource.append('Summary from ', a);
+    }
+    els.tipSource.hidden = !els.tipSource.childNodes.length;
+  } else if (state.tipLoaded) {
+    els.tipSummary.textContent = 'Summary coming soon.';
+    els.tipLine.textContent = 'Summary coming soon.';
+    els.tipSource.hidden = true;
+  }
+  const drawn = data.featuresOf(civ.id, state.year).length > 0;
+  const label = state.tipLabel;
+  const possession = label && label !== civ.name && data.featuresOf(civ.id, state.year).some(f => f.properties.label === label);
+  els.tipName.textContent = possession ? label : civ.name;
+  els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : formatCivSpan(civ);
+  const meta = [];
+  if (civ.kind === 'culture') meta.push('A people or culture, not a state');
+  if (civ.capital) meta.push(`Capital: ${civ.capital}`);
+  if (civ.region) meta.push(civ.region);
+  if (data.yearStatus(state.year).state === 'error') meta.push(`Borders could not load for ${formatYear(state.year)}.`);
+  else if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
+  els.tipMeta.textContent = meta.join(' · ');
+  els.tipMeta.hidden = !meta.length;
+  els.tipMore.href = `civ.html?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
+  els.tipZoom.hidden = !drawn;
 }
 
 function firstSentence(text) {
@@ -423,23 +489,27 @@ function closeTip() {
 
 // Go to a polity: pick a year it existed, load that year's borders, turn the
 // globe to it and open its card. Links from the card pages ("fell to X")
-// arrive here with the year of the fall, which is clamped into X's lifetime.
+// arrive here with a dated request, which must not silently change years.
 async function jumpToCiv(id, year) {
   const civ = data.civ(id);
   if (!civ) { showHint(`No polity with the id "${id}".`); return; }
   pause();
-  const to = civ.to == null ? scale.end : civ.to - 1;
+  const to = civ.to == null ? scale.end : advanceYear(civ.to, -1);
   let yr = Number.isFinite(year) ? year : state.year;
-  if (yr < civ.from || yr > to) yr = Number.isFinite(year) ? Math.max(civ.from, Math.min(to, yr)) : Math.round((civ.from + to) / 2);
-  yr = scale.clamp(yr);
+  if (!Number.isFinite(year) && (yr < civ.from || yr > to)) yr = Math.round((civ.from + to) / 2);
+  yr = normalizeYear(Number.isFinite(year) ? yr : scale.clamp(yr));
   setYear(yr, { force: true });
+  let requestVersion = navigationVersion;
   await data.ensureYear(yr);
+  if (navigationVersion !== requestVersion) return;
   let feats = data.featuresOf(id, yr);
-  if (!feats.length) {
+  if (!feats.length && !Number.isFinite(year)) {
     const near = data.nearestDrawnYear(id, yr);
     if (near != null && near !== yr) {
       setYear(scale.clamp(near), { force: true });
+      requestVersion = navigationVersion;
       await data.ensureYear(state.year);
+      if (navigationVersion !== requestVersion) return;
       feats = data.featuresOf(id, state.year);
     }
   }
