@@ -254,3 +254,114 @@ Thirteen cards delivered (Silla twice, identical); kept verbatim in
   automated link checks, so their links were confirmed by search or by
   their known slugs (Britannica's Koguryo, Parhae, Choson dynasty,
   Kamakura period and Tibet history pages).
+
+## Cards, fifth drop: Iran, India and Southeast Asia, and seven China entries
+
+Nineteen cards and seven polity entries. None of the cards existed
+before, so nothing was rectified; all nineteen are published with the
+changes below. The seven entries are saved verbatim as
+`batch-03-civilizations.json` (the array brackets are ours; Qwen sent
+the entries as a fragment). Amy asked whether they were already there.
+Five were, under the importer's ids; two were not.
+
+- **Already there, harmonized.** `liao-dynasty` is the imported `liao`,
+  which now also absorbs the 900 map's "Khitans" so the Liao's researched
+  dates (907 to 1125) have a polygon from 907. `western-xia` is the
+  imported `xixia`. `yuan-dynasty` is the imported "Great Khanate"
+  (1279 to 1492 on the maps, renamed in the importer's merge table).
+  `qing-dynasty` is the imported "Manchu Empire" and "Qing Empire",
+  three runs that are now one polity (1650 to 1920 on the maps, 1644 to
+  1912 by Qwen's dates). `ming-dynasty` is curated; Qwen's entry adds
+  only its aliases.
+- **New.** `jin-dynasty-1115`, the Jurchen Jin. The 1200 map draws
+  Manchuria and north China as "Liao", which by 1200 was Jin, so the
+  importer names that one polygon "Jurchen Jin" with this id; it draws
+  from 1200 to 1234. `southern-song` is skipped, as the two Han were: the
+  site's `song-dynasty` runs 960 to 1279.
+- **Republic of China** stays a plain name in the Qing's fall; no entry
+  covers China between 1912 and the 1945 map.
+- **Other harmonizations the cards needed.** The imported "Seljuk Empire"
+  of 1100 to 1492 was the Great Seljuks in Iran on the 1100 map and the
+  Seljuks of Rum in Anatolia from 1279; the Anatolian polygons are now
+  `sultanate-of-rum`, and `seljuk-empire` carries curated dates 1037 to
+  1194. The two Maratha runs ("Maratha", "Maratha Confederacy") are one
+  `maratha`, 1674 to 1818. Curated dates were added for `samanid-empire`
+  (819 to 999), `sukhothai` (1238 to 1438), `champa` (192 to 1832) and
+  `malacca` (1400 to 1511); each polygon still draws only for the years
+  its map covers.
+- **Fall links.** Balhae now falls to `liao`, drawn in 926. Samanid to
+  `ghaznavid-emirate` (its map begins in 1000, one year after the fall)
+  and the Karakhanids as a plain name; Seljuk to `khwarazmian-dynasty`;
+  Safavid to a plain "Afsharid dynasty", since the map's Persia begins
+  again only in 1783; Chola to `pandya-state-1279`; Vijayanagara to
+  `golkonda` and a plain Bijapur; Maratha to `british-east-india-company`;
+  Champa to `annam-1815`, the map's Vietnam in 1832; Malacca to
+  `portugal`; Funan, Ayutthaya and Majapahit to plain Chenla, Thonburi
+  and Demak, which have no entries. The curated `mongol-empire`,
+  `ming-dynasty` and `han-dynasty` falls now link the Yuan, the Qing and
+  the Three Kingdoms by id.
+- **elam**: Chogha Zanbil is a ziggurat, not a pyramid; the matrilineal
+  claim is hedged as a reading some scholars make; Napir-Asu's statue
+  (1,750 kg, c. 1340 BCE) and Proto-Elamite (c. 3100 BCE) dated; the fall
+  adds Assyria's sack of Susa in 647 BCE; UNESCO listing dated 1979.
+- **achaemenid-empire**: the couriers took about a week, not nine days;
+  the Cyrus Cylinder's "human rights" reading is marked disputed and
+  "freeing enslaved peoples" becomes the return of deported peoples;
+  "Zoroastrianism practiced by the royal family" becomes the kings'
+  invocation of Ahura Mazda with the question left open; coins (c. 515),
+  Persepolis (518), the Judean return (538) dated.
+- **parthian-empire**: the 97 CE contact was the Han envoy Gan Ying
+  reaching Parthia, and Han envoys first came in the 110s BCE; Carrhae
+  (53 BCE) added.
+- **samanid-empire**: Al-Biruni was born in Khwarazm in 973 and worked
+  mostly after the Samanids; Rudaki dated to Nasr II's court (c. 930),
+  Ferdowsi's start c. 977, Bal'ami's Tabari 963, the mausoleum before
+  943.
+- **seljuk-empire**: the Friday Mosque domes dated 1086 and 1088, the
+  Nizamiyya 1067; "more accurate than the Gregorian" given its figure
+  (about a day in 3,770 years); the Rubaiyat described as quatrains
+  later gathered; the fall separates the Great Seljuks (1194) from Rum
+  (1308).
+- **safavid-empire**: the Imam Mosque named by its historical name, the
+  Shah Mosque; the fall adds the Afghan capture of Isfahan in 1722; New
+  Julfa dated 1606; the Tahmasp Shahnameh's 258 miniatures.
+- **kushan-empire**: Gandhara made "some of the first" Buddha images,
+  contemporary with Mathura; the Kashmir council is given as Buddhist
+  tradition; Bactrian as the state language; the fall names the
+  Kushano-Sasanians.
+- **chola-empire**: the Brihadisvara tower's height (about 66 m), the
+  Chola embassies to Song China (1015, 1077) and the Uttaramerur
+  assemblies (920s) added; the fall names the Pandyas of Madurai.
+- **delhi-sultanate**: the Qutb Minar's start moved to c. 1199 (the
+  complex began in 1193) and its height to 72.5 m; the Alai Darwaza
+  (1311) and Amir Khusrau added; UNESCO listing dated 1993.
+- **vijayanagara**: the population figure of 500,000 is hedged as
+  "several hundred thousand"; Paes's account (c. 1520) and
+  Krishnadevaraya's works added; the fall names the Aravidu capitals and
+  the year 1646.
+- **maratha**: Kanhoji Angre's navy, chauth and sardeshmukhi, and
+  Panipat (1761) added; the fall names the Peshwa's surrender.
+- **funan**: the fall is marked circa (c. 550); Kang Tai and Zhu Ying
+  (c. 245), the Roman coins and the 90 km canal added.
+- **champa**: founding as Lin-yi (192 CE), the sack of Angkor (1177), the
+  Dong Yen Chau inscription (fourth century) and the fall of Vijaya
+  (1471) added.
+- **srivijaya**: the Kedukan Bukit inscription (683) and Atisha's stay
+  (c. 1011) added; the fall gives the sequence from the Chola raid of
+  1025 to Majapahit's attack of 1377.
+- **pagan**: Anawrahta's conversion is c. 1056 with the conquest of Thaton
+  in 1057; the Ananda temple (1105) and the Myazedi inscription (1113)
+  dated; the fall names the Mongol invasions of 1277 and 1287, the
+  murder of Narathihapate and the Myinsaing brothers (1297). Qwen's
+  Britannica link could not be confirmed, so the sources are UNESCO's
+  Bagan listing and Wikipedia.
+- **sukhothai**: the Ram Khamhaeng inscription's date is given as its own
+  claim, with the dispute over the stone noted; Sawankhalok ware added.
+- **ayutthaya**: the Dutch factory (1608), Phaulkon and the embassy to
+  Versailles (1686) added; the fall names Taksin's Thonburi.
+- **majapahit**: the fall is marked circa (Demak took the capital around
+  1527; some histories say 1478); Bhinneka Tunggal Ika added.
+- **malacca**: "over 80 languages" becomes Tomé Pires's count of 84;
+  Zheng He's visits (from 1405) added.
+- **Links.** Britannica's Srivijaya and Majapahit pages are at
+  "Srivijaya-empire" and "Majapahit-empire".

@@ -77,6 +77,9 @@ const MERGES = [
   [['Pallava state'], 'Pallava'],
   [['Chinese warlords'], 'Chinese Warlords'],
   [['Principality of Novgorod'], 'Novgorod'],
+  // the source draws the Seljuks of Rum in Anatolia under the same name as
+  // the Great Seljuks of Iran; from 1279 they are their own polity
+  [['Seljuk Empire', 'Seljuk Turks', 'Seljuk Caliphate'], 'Sultanate of Rum', 'sultanate-of-rum', { from: 1279 }],
   [['Seljuk Caliphate'], 'Seljuk Empire'],
   [['Ghana'], 'Empire of Ghana', null, { to: 1300 }],
   [['Indus valley civilization'], 'Indus Valley Civilization', 'indus-valley'],
@@ -96,6 +99,15 @@ const MERGES = [
   [['Tang Empire'], 'Tang', 'tang'],
   [['Song Empire'], 'Song', 'song-dynasty'],
   [['Koguryo'], 'Goguryeo', 'goguryeo'],
+  // the Khitan realm of the 900 map is the Liao of 1000 and 1100; the 1200
+  // map's "Liao" sits in Manchuria and north China, which was Jurchen Jin
+  [['Khitans'], 'Liao', 'liao', { to: 1100 }],
+  // its own name, since runs are grouped by name and "Jin" is already the
+  // Jin of 266; Qwen's entry renames it "Jin Dynasty"
+  [['Liao'], 'Jurchen Jin', 'jin-dynasty-1115', { from: 1200 }],
+  [['Great Khanate', 'Great Khanat'], 'Yuan Dynasty', 'yuan-dynasty'],
+  [['Manchu Empire', 'Qing Empire'], 'Qing Dynasty', 'qing-dynasty'],
+  [['Maratha Confederacy', 'Maratha Con.'], 'Maratha', 'maratha'],
   [['Paekche'], 'Baekje', 'baekje'],
   [['Parhae', 'Balhae'], 'Balhae', 'balhae'],
   [['Korea'], 'Goryeo', 'goryeo', { to: 1200 }],

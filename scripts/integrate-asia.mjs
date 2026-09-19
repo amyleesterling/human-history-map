@@ -34,8 +34,10 @@ const ID_MAP = {
   'western-han': 'han-dynasty', 'eastern-han': 'han-dynasty',
   'unified-silla': 'silla', 'liao-dynasty': 'liao', 'uyghur-khaganate': 'uyghurs',
   'british-india': 'british-raj', seleucid: 'seleucid-kingdom', pandya: 'pandya-state-1279',
+  'western-xia': 'xixia',
 };
-const SKIP = new Set(['western-han', 'eastern-han']);
+// the Southern Song is the second half of song-dynasty, as the two Han are one
+const SKIP = new Set(['western-han', 'eastern-han', 'southern-song']);
 // hand-set fields for particular entries, with the reason in NOTES.md
 const PATCH = {
   // the imported border is the Qin state from 323 BCE; the entry covers the
@@ -45,9 +47,12 @@ const PATCH = {
   // imported 1900 map draws it; ending the entry in 1897 left Korea blank
   // until the 1914 map, so the entry runs to the annexation
   joseon: (c) => ({ ...c, to: 1910, successors: ['imperial-japan'], fell: { year: 1910, to: ['imperial-japan'], text: 'Joseon was proclaimed the Korean Empire in 1897 under the same royal house. Japan made it a protectorate in 1905 and annexed it in 1910.' } }),
-  // the imported Liao begins in 1000; the Khitan polygon is the one on the
-  // map in 926, so the fall link lands on a drawn border
-  balhae: (c) => ({ ...c, fell: { ...c.fell, to: ['khitans'] } }),
+  // the importer now folds the 900 map's Khitans into liao, whose
+  // researched dates begin in 907, so the fall link lands on a drawn border
+  balhae: (c) => ({ ...c, fell: { ...c.fell, to: ['liao'] } }),
+  // no entry covers China between 1912 and the 1945 map, so the Republic
+  // stays a plain name; the resolver would title-case it otherwise
+  'qing-dynasty': (c) => ({ ...c, fell: { ...c.fell, to: ['Republic of China'] }, successors: [] }),
 };
 
 const manifest = read(join(root, 'data', 'manifest.json'));
