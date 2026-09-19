@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Human History Map</title>
+<meta name="description" content="Every known kingdom and civilization on one globe, from the first cities to the present. Press play and watch the borders move; pause and tap one to learn what it made.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Human History Map">
+<meta property="og:title" content="Human History Map">
+<meta property="og:description" content="Every known kingdom and civilization on one globe, from the first cities to the present.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="explorer">
+
+<header class="bar">
+  <a class="brand" href="./">Human History Map</a>
+  <div class="bar-tools">
+    <button id="searchBtn" class="iconbtn" type="button" aria-label="Search for a kingdom or country" aria-expanded="false" aria-controls="search">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button id="viewBtn" class="chip" type="button" aria-pressed="false" title="Switch between the globe and a flat map">Flat map</button>
+    <button id="shareBtn" class="chip" type="button" title="Share this exact view">Share</button>
+  </div>
+</header>
+
+<main id="stage" class="stage">
+  <canvas id="globe" role="img" aria-label="Interactive globe showing the borders of kingdoms and countries in the selected year. Drag to turn, pinch to zoom, tap a border to learn about it."></canvas>
+
+  <div id="search" class="search" hidden>
+    <input id="searchInput" type="search" placeholder="Find a kingdom, empire or country" autocomplete="off" spellcheck="false" aria-label="Find a kingdom, empire or country" aria-controls="searchResults">
+    <ul id="searchResults" role="listbox" aria-label="Matches"></ul>
+  </div>
+
+  <div id="loading" class="loading num" hidden>loading borders</div>
+  <div id="hint" class="hint" hidden></div>
+  <div id="notice" class="notice" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
+
+  <aside id="tip" class="tip" hidden role="dialog" aria-labelledby="tipName">
+    <button class="tip-close" id="tipClose" type="button" aria-label="Close">&times;</button>
+    <div class="tip-head">
+      <span class="swatch" id="tipSwatch" aria-hidden="true"></span>
+      <h2 id="tipName"></h2>
+    </div>
+    <p class="tip-span num" id="tipSpan"></p>
+    <p class="tip-meta" id="tipMeta" hidden></p>
+    <p class="tip-summary" id="tipSummary"></p>
+    <div class="tip-actions">
+      <a id="tipMore" class="btn" href="#">More info</a>
+      <button id="tipZoom" class="btn ghost" type="button">Zoom to</button>
+    </div>
+  </aside>
+</main>
+
+<footer class="controls">
+  <div class="row">
+    <button id="playBtn" class="play" type="button" aria-label="Play" aria-pressed="false">
+      <svg class="ico-play" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z" fill="currentColor"/></svg>
+    </button>
+    <div class="year">
+      <output id="yearOut" class="num" for="slider" aria-live="off">3500 BCE</output>
+      <span id="eraOut" class="era"></span>
+    </div>
+    <button id="speedBtn" class="chip num" type="button" title="Playback speed, years per second">25 yr/s</button>
+  </div>
+  <div class="track">
+    <canvas id="trackCanvas" aria-hidden="true"></canvas>
+    <input id="slider" type="range" min="0" max="10000" step="1" value="0" aria-label="Year" aria-valuetext="3500 BCE">
+  </div>
+</footer>
+
+<script src="vendor/d3/d3-array.min.js"></script>
+<script src="vendor/d3/d3-geo.min.js"></script>
+<script src="vendor/topojson/topojson-client.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

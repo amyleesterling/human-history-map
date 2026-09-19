@@ -1,0 +1,16 @@
+d3-array.min.js and d3-geo.min.js are the official UMD builds, copied
+unmodified from npm via jsdelivr on 2026-09-19:
+
+  https://cdn.jsdelivr.net/npm/d3-array@3.2.4/dist/d3-array.min.js
+  https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/dist/d3-geo.min.js
+
+d3-geo depends on d3-array, so both load (in that order) as classic scripts
+before the page's module code. Both are ISC, copyright Mike Bostock.
+
+Consumers: js/globe.js (projections, path rendering, graticule, spherical
+hit testing via geoContains, centroids and areas for labels and draw order).
+Nothing else from D3 ships with this site; there is no DOM, scale, or zoom
+module here, the gestures are hand-written pointer handlers.
+
+Do not edit these files. To upgrade, replace both together and update the
+versions above.
