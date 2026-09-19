@@ -84,6 +84,31 @@ const MERGES = [
   [['Maya chiefdoms and states', 'Maya states', 'Maya city-states'], 'Maya', 'maya'],
   [['Songhai'], 'Songhai Empire'],
   [['Mali'], 'Mali Empire', null, { to: 1800 }],
+  // Asia, harmonized with the ids Qwen's research uses (see
+  // data/research/regions/asia-qwen/NOTES.md), so its entries override
+  // these polities instead of standing beside them
+  [['Zhoa'], 'Zhou', 'zhou', { to: -1200 }],
+  [['Zhoa'], 'Western Zhou', 'western-zhou', { from: -1046, to: -771 }],
+  [['Zhoa'], 'Eastern Zhou', 'eastern-zhou', { from: -770, to: -256 }],
+  [['Jin'], 'Jin', 'jin-dynasty', { to: 700 }],
+  [['Toba Wei'], 'Northern Wei', 'northern-wei'],
+  [['Sui Empire'], 'Sui', 'sui'],
+  [['Tang Empire'], 'Tang', 'tang'],
+  [['Song Empire'], 'Song', 'song-dynasty'],
+  [['Koguryo'], 'Goguryeo', 'goguryeo'],
+  [['Paekche'], 'Baekje', 'baekje'],
+  [['Parhae', 'Balhae'], 'Balhae', 'balhae'],
+  [['Korea'], 'Goryeo', 'goryeo', { to: 1200 }],
+  [['Korea'], 'Joseon', 'joseon', { from: 1492, to: 1900 }],
+  [['Japan'], 'Heian', 'heian-japan', { from: 800, to: 900 }],
+  [['Imperial Japan (Fujiwara)'], 'Heian', 'heian-japan', { to: 1100 }],
+  [['Imperial Japan (Fujiwara)'], 'Kamakura', 'kamakura', { from: 1200 }],
+  [['Shogun Japan (Kamakura)'], 'Kamakura', 'kamakura', { to: 1300 }],
+  [['Shogun Japan (Kamakura)'], 'Muromachi', 'muromachi', { from: 1400 }],
+  [['Sultanate of Delhi'], 'Delhi Sultanate', 'delhi-sultanate'],
+  [['Srivijaya Empire'], 'Srivijaya', 'srivijaya'],
+  [['Cholas', 'Chola Empire'], 'Chola Empire', 'chola-empire'],
+  [['Parthia', 'Parthian Empire'], 'Parthian Empire', 'parthian-empire'],
 ];
 
 const CULTURE_TYPES = new Set(['hunter-gatherers', 'farmers', 'pastoral nomads', 'rice farmers', 'pastoralists',

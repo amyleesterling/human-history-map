@@ -248,7 +248,21 @@ format:
   (summary, capital, fall, dates) replaces the imported value for that id.
 
 Run order: `build-base`, then `import-historical-basemaps`, then
-`fetch-summaries`, then `validate`.
+`integrate-asia`, then `fetch-summaries`, then `validate`.
+
+## The Asia batches in `data/research/regions/asia-qwen/`
+
+Qwen's deliveries are kept verbatim as `batch-NN-civilizations.json`.
+`scripts/integrate-asia.mjs` writes `data/civilizations-asia.json` from
+them: it renames Qwen's ids onto the site's where the same polity already
+has one (its table `ID_MAP`), skips phases the site treats as one polity
+(Western and Eastern Han are `han-dynasty`), keeps a curated entry's text
+and takes only the native-script aliases, turns fall targets the index
+does not know into plain names, and marks every entry `dateBasis:
+historical`. The importer's merge table gives the imported polities the
+same ids (Koguryo is `goguryeo`, Tang Empire is `tang`), so Qwen's entries
+override them and inherit their borders. `NOTES.md` there records every
+decision per batch.
 
 ## Overriding
 

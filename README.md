@@ -39,6 +39,7 @@ base/                    coastlines, lakes and rivers (Natural Earth, public dom
 vendor/                  d3-geo, d3-array, topojson-client, unmodified
 scripts/build-base.mjs   rebuilds base/ and the present-day border file
 scripts/import-historical-basemaps.mjs   converts the historical-basemaps snapshots
+scripts/integrate-asia.mjs    turns Qwen's Asia batches into data/civilizations-asia.json
 scripts/fetch-summaries.mjs   fills missing summaries from Wikipedia, with attribution
 scripts/validate.mjs     checks every data file; run it before committing data
 ```
@@ -90,6 +91,7 @@ To regenerate everything (needs `npm install` once, for the TopoJSON tools):
 ```
 node scripts/build-base.mjs                                  # base layers, present-day borders
 node scripts/import-historical-basemaps.mjs --fetch          # the fifty snapshots
+node scripts/integrate-asia.mjs                              # Qwen's Asia batches, harmonized onto the index
 node scripts/fetch-summaries.mjs                             # Wikipedia openings (cached in .cache/)
 node scripts/validate.mjs                                    # check, and write the card index
 ```
