@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "africa_north_east",
+  "reviewedAt": "2026-09-19",
+  "status": "accepted_implementation_alternative",
+  "supersedes": "Recommendations to set runtime to:null in oceania.json and oceania-batch-02.json where runtime dates control polygon availability. Narrative verdicts unchanged.",
+  "rationale": "Continuing cultural identity and available map coverage are different data. Retaining coverage endpoints avoids implying verified borders through the present. An endpoint labeled Map coverage must not be described as cultural extinction.",
+  "preconditions": [
+    "UI labels imported from/to explicitly as Map coverage, including circa presentation.",
+    "No founded, fell, duration-of-civilization or extinction claim is derived from coverage endpoints.",
+    "Accepted cards describe cultural continuity independently of geometry availability.",
+    "Suppress unsupported successor chains and fall links.",
+    "No new present-day polygon is inferred."
+  ],
+  "proposals": [
+    {
+      "id": "yolngu",
+      "preserveMapCoverage": {
+        "from": 1600,
+        "to": 1815
+      },
+      "metadata": {
+        "kind": "culture",
+        "fell": null
+      },
+      "historicalCulturalStart": "unknown_not_inferred",
+      "historicalCulturalEnd": "continuing_not_encoded_by_map_to",
+      "successorLinks": "suppress_unless_independently_supported"
+    },
+    {
+      "id": "gunditjmara",
+      "preserveMapCoverage": {
+        "from": 1600,
+        "to": 1815
+      },
+      "metadata": {
+        "kind": "culture",
+        "fell": null
+      },
+      "historicalCulturalStart": "unknown_not_inferred",
+      "historicalCulturalEnd": "continuing_not_encoded_by_map_to",
+      "successorLinks": "suppress_unless_independently_supported"
+    },
+    {
+      "id": "maori",
+      "preserveMapCoverage": {
+        "from": 1279,
+        "to": 1530
+      },
+      "metadata": {
+        "kind": "culture",
+        "fell": null
+      },
+      "historicalCulturalStart": "unknown_not_inferred",
+      "historicalCulturalEnd": "continuing_not_encoded_by_map_to",
+      "successorLinks": "suppress_unless_independently_supported"
+    },
+    {
+      "id": "maoris",
+      "preserveMapCoverage": {
+        "from": 1530,
+        "to": 1650
+      },
+      "metadata": {
+        "kind": "culture",
+        "fell": null
+      },
+      "historicalCulturalStart": "unknown_not_inferred",
+      "historicalCulturalEnd": "continuing_not_encoded_by_map_to",
+      "successorLinks": "suppress_unless_independently_supported"
+    },
+    {
+      "id": "maori-1650",
+      "preserveMapCoverage": {
+        "from": 1650,
+        "to": 1914
+      },
+      "metadata": {
+        "kind": "culture",
+        "fell": null
+      },
+      "historicalCulturalStart": "unknown_not_inferred",
+      "historicalCulturalEnd": "continuing_not_encoded_by_map_to",
+      "successorLinks": "suppress_unless_independently_supported"
+    }
+  ],
+  "duplicateMaoriHandling": {
+    "ids": [
+      "maori",
+      "maoris",
+      "maori-1650"
+    ],
+    "finding": "These are imported temporal coverage records, not evidence of three distinct civilizations.",
+    "safeImplementation": "Retain polygon record IDs and intervals; display a consistent Maori/Māori cultural identity and reuse the independently accepted cultural narrative through an explicit alias or canonical relation. Do not invent fall links between the records.",
+    "limits": "No automatic polygon merging or precise cultural founding in 1279 approved. Preserve local iwi and hapu distinctions; no pan-Maori historical kingdom inferred."
+  },
+  "evidence": [
+    "data/research/reviews/oceania.json",
+    "data/research/reviews/oceania-batch-02.json"
+  ],
+  "verificationLimit": "Reviewer accepts the explicit UI contract stated by root; this file is not a browser verification of every date display."
+}

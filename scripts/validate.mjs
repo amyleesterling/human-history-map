@@ -166,7 +166,7 @@ for (const c of civs.values()) {
 }
 
 // ---- summaries --------------------------------------------------------
-let summaryCount = 0;
+const summaryIds = new Set([...civs.values()].filter(c => c.summary).map(c => c.id));
 const summaryFiles = Array.isArray(manifest.summaries) ? manifest.summaries : (manifest.summaries ? [manifest.summaries] : []);
 for (const rel of summaryFiles) {
   if (!existsSync(join(root, 'data', rel))) { warn(`${rel}: listed in the manifest but not written yet (run scripts/fetch-summaries.mjs)`); continue; }
@@ -175,12 +175,12 @@ for (const rel of summaryFiles) {
   for (const [id, e] of Object.entries(obj)) {
     if (!civs.has(id)) { warn(`${rel}: summary for unknown polity ${id}`); continue; }
     if (!e || !e.summary) { err(`${rel}: ${id} has no summary text`); continue; }
-    summaryCount++;
+    summaryIds.add(id);
     checkCopy(`${rel} ${id}`, e.summary);
     if (e.source && !e.source.url) warn(`${rel}: ${id} names a source without a url`);
   }
 }
-const withSummary = [...civs.values()].filter((c) => c.summary).length + summaryCount;
+const withSummary = summaryIds.size;
 
 // ---- cards ------------------------------------------------------------
 const pattern = manifest.cards || 'cards/{id}.json';

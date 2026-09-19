@@ -13,7 +13,7 @@ const pointer=(obj,p)=>p.split('/').slice(1).reduce((v,k)=>v?.[k.replace(/~1/g,'
 const records=[];
 for(const file of walk('data/research/regions').filter(f=>f.endsWith('/evidence.json'))){
   const doc=read(file);
-  const sourceMap=new Map(Array.isArray(doc.sources)?doc.sources.map(s=>[s.id,s]):Object.entries(doc.sources||{}));
+  const sourceMap=new Map(Array.isArray(doc.sources)?doc.sources.map(s=>[s.id||s.url,s]):Object.entries(doc.sources||{}));
   const entities=doc.entities||doc.records||[doc];
   for(const entity of entities){
     let cardPath=entity.cardFile||entity.cardPath||entity.card||entity.proposedCard||entity.proposedCardPath||entity.path;

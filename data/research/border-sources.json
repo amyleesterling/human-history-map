@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-19",
+  "scope": "Non-Asia border acquisition; QWEN owns Asia; transcontinental identities deferred",
+  "status": "source_checked_inventory_pending_independent_review",
+  "complete": false,
+  "sources": [
+    {
+      "id": "historical-basemaps",
+      "name": "Ourednik historical-basemaps",
+      "regions": [
+        "all_non_asia"
+      ],
+      "coverage": {
+        "temporal": "Local imported snapshots: -4000 to 2010; modern handoff 2020",
+        "spatial": "World/continental scale",
+        "resolution": "irregular snapshots"
+      },
+      "formats": [
+        "GeoJSON",
+        "local TopoJSON"
+      ],
+      "checkedURLs": [
+        "https://github.com/aourednik/historical-basemaps",
+        "https://raw.githubusercontent.com/aourednik/historical-basemaps/master/index.json"
+      ],
+      "limitations": [
+        "Work in progress with mixed source provenance. Precision ordinal 1/2/3 is approximate/moderate/legal, not measured positional error. Cultures can overlap.",
+        "Local importer holds each snapshot until the next, joins names across one missing snapshot, groups dependencies by ruler and attaches modern countries by name. These are software heuristics, not source-backed lifetimes.",
+        "No interpolation of shapes or invention of earlier/later polygons."
+      ],
+      "nextAction": "Pin upstream commit and feature identifiers; preserve source snapshotYear separately from display interval. Audit names and dependency relations before using inherited dates.",
+      "candidateIDs": [],
+      "status": "source_and_local_importer_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "cshapes-global",
+      "name": "ETH CShapes 2.0",
+      "regions": [
+        "europe",
+        "africa",
+        "americas",
+        "oceania"
+      ],
+      "coverage": {
+        "documented": "1886-01-01 through 2019-12-31",
+        "observedFeatures": 710,
+        "observedNames": 252,
+        "spatial": "global",
+        "temporalModel": "country-period rows with separate year/month/day fields"
+      },
+      "formats": [
+        "GeoJSON",
+        "CSV",
+        "Shapefile ZIP",
+        "SQL",
+        "R"
+      ],
+      "checkedURLs": [
+        "https://icr.ethz.ch/data/cshapes/",
+        "https://icr.ethz.ch/data/cshapes/ChangeLog.txt",
+        "https://icr.ethz.ch/data/cshapes/CShapes-2.0_Codebook.pdf",
+        "https://icr.ethz.ch/data/cshapes/CShapes-2.0.geojson"
+      ],
+      "limitations": [
+        "2018 PDF discusses 2017 endpoint; current file and changelog extend to 2019.",
+        "Coding manual: de jure changes; excludes changes below 10000 sq km, some unrecognized secessions, temporary wartime changes; may backdate current lines when evidence is absent. Some January dates are placeholders.",
+        "Downloaded GeoJSON lacks status/ruledby/b_def fields described in manual. Historical colonial rows exist but sovereignty cannot be inferred from names alone.",
+        "String timestamps differ from component date fields by hours/day: retain both and use date components for reviewed normalization."
+      ],
+      "nextAction": "First integrate reviewed Sudan/South Sudan transition as a paired replacement with exact-date handling. Fetch table formats to recover dependency metadata before broader import.",
+      "candidateIDs": [
+        "sudan",
+        "south-sudan"
+      ],
+      "status": "downloaded_and_schema_checked",
+      "independentReview": "pending",
+      "runtimeReady": false,
+      "download": {
+        "url": "https://icr.ethz.ch/data/cshapes/CShapes-2.0.geojson",
+        "bytes": 26344671,
+        "sha256": "384b1ea90b9419f30a858d7ec237c85a22c60d1b35b5f85f215a1204f9989d42",
+        "formatsURLs": [
+          "https://icr.ethz.ch/data/cshapes/CShapes-2.0.csv",
+          "https://icr.ethz.ch/data/cshapes/CShapes-2.0.zip"
+        ],
+        "additionalFormatsStatus": "links verified in HTML; files not downloaded"
+      }
+    },
+    {
+      "id": "cshapes-europe",
+      "name": "ETH CShapes-Europe",
+      "regions": [
+        "europe",
+        "north_africa"
+      ],
+      "coverage": {
+        "advertisedStart": 1816,
+        "observedMinFrom": 1806,
+        "observedMaxTo": 2023,
+        "observedFeatures": 322,
+        "spatial": "European extract with selected North African and transcontinental entities",
+        "temporalModel": "integer From/To years; not global daily schema"
+      },
+      "formats": [
+        "GeoJSON"
+      ],
+      "checkedURLs": [
+        "https://icr.ethz.ch/data/cshapes/",
+        "https://icr.ethz.ch/data/cshapes/CShapes-Europe.geojson"
+      ],
+      "limitations": [
+        "Endpoint/schema differ from global product. Do not assume 1806 minimum means complete 1806 coverage.",
+        "Observed Belgium 1886-1919 and 1886-2023 rows overlap. Blind import is blocked until duplicates/alternative histories are explained.",
+        "Year transitions cannot establish exact treaty days. Same geometry or small coastline differences may be source resolution changes, not territorial change."
+      ],
+      "nextAction": "Use exact Denmark extraction as technical pilot, then review 1864/1920 changes and source interval conventions. Crosswalk Germany/Prussia and Austria phases explicitly; defer transcontinental entities.",
+      "candidateIDs": [
+        "denmark-1815",
+        "prussia",
+        "netherlands-1878",
+        "france"
+      ],
+      "status": "downloaded_and_schema_checked",
+      "independentReview": "pending",
+      "runtimeReady": false,
+      "download": {
+        "url": "https://icr.ethz.ch/data/cshapes/CShapes-Europe.geojson",
+        "bytes": 4574391,
+        "sha256": "9831764d2ad17e37bc009031829265621534de097f7b3e8d6928d1a828436279"
+      }
+    },
+    {
+      "id": "euratlas",
+      "name": "Euratlas Periodis GIS",
+      "regions": [
+        "europe",
+        "north_africa"
+      ],
+      "coverage": {
+        "years": [
+          1,
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900,
+          1000,
+          1100,
+          1200,
+          1300,
+          1400,
+          1500,
+          1600,
+          1700,
+          1800,
+          1900,
+          2000
+        ],
+        "spatialBBox": [
+          -15,
+          20,
+          50,
+          60
+        ],
+        "temporalModel": "first day of centennial years"
+      },
+      "formats": [
+        "Shapefile ZIP",
+        "web images"
+      ],
+      "checkedURLs": [
+        "https://www.euratlas.net/history/europe/index.html",
+        "https://www.euratlas.net/shop/maps_gis/gis_1500.html",
+        "https://www.euratlas.net/tele/1500_vector_data_sample.zip"
+      ],
+      "limitations": [
+        "Centennial snapshots cannot establish annual transitions. Northern Europe above 60N excluded.",
+        "Layers distinguish sovereign, holder, province and autonomous peoples; fuzzy-border polygons should remain uncertainty overlays.",
+        "Complete files require acquisition; public demo link responds as ZIP but content not downloaded or inspected."
+      ],
+      "nextAction": "Inspect public 1500 demo shapefile metadata and footprint, then select missing European snapshot coverage. No purchase or contact made.",
+      "candidateIDs": [
+        "venice",
+        "genoa",
+        "poland-lithuania"
+      ],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "awmc",
+      "name": "Ancient World Mapping Center geodata",
+      "regions": [
+        "europe",
+        "north_africa"
+      ],
+      "coverage": {
+        "temporal": "ancient world; feature-specific period URIs",
+        "spatial": "ancient Mediterranean; no complete temporal polygon series established"
+      },
+      "formats": [
+        "GeoJSON",
+        "Shapefile ZIP"
+      ],
+      "checkedURLs": [
+        "https://awmc.unc.edu/gis-data/",
+        "https://github.com/AWMC/geodata",
+        "https://github.com/AWMC/geodata/blob/master/attribute_information.md"
+      ],
+      "limitations": [
+        "Includes physical geography, roads and cultural features; repository label does not prove every geometry is a political border.",
+        "Preserve initial_provenance, citations, notes and timeperiod. Resolve PeriodO chronology per feature."
+      ],
+      "nextAction": "Inspect Cultural-Data directory and exact border features; source metadata and period citations first. Coastlines are useful for ancient context independently of political coverage.",
+      "candidateIDs": [
+        "roman-empire",
+        "carthaginian-empire",
+        "egypt"
+      ],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "whg",
+      "name": "World Historical Gazetteer",
+      "regions": [
+        "all_non_asia"
+      ],
+      "coverage": {
+        "temporal": "dataset and place-specific; no universal start/end",
+        "spatial": "world place reconciliation, heterogeneous geometries"
+      },
+      "formats": [
+        "Linked Places Format JSON",
+        "LP-TSV"
+      ],
+      "checkedURLs": [
+        "https://docs.whgazetteer.org/",
+        "https://docs.whgazetteer.org/content/technical/apis.html",
+        "https://whgazetteer.org/"
+      ],
+      "limitations": [
+        "Main site returned 403; documentation accessible. Most API endpoints require token.",
+        "Geometry can be a point and dates can describe habitation, not state control. Do not create borders from city points or name matches."
+      ],
+      "nextAction": "Use /reconcile batches then /entity/{type}:{id}/api for identifiers and citations; exact-match and period review required. Polygon-only datasets need their own inventories.",
+      "candidateIDs": [],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "native-land",
+      "name": "Native Land Digital",
+      "regions": [
+        "americas",
+        "oceania"
+      ],
+      "coverage": {
+        "temporal": "not a dated state-boundary series",
+        "spatial": "Indigenous territories; actual completeness per region not verified"
+      },
+      "formats": [
+        "API JSON; inspect schema before import"
+      ],
+      "checkedURLs": [
+        "https://api-docs.native-land.ca/"
+      ],
+      "limitations": [
+        "Provider says outlines are not official or legal Indigenous nation boundaries.",
+        "API documentation describes account/key transition. No authenticated dataset acquired; dates and geometries unverified."
+      ],
+      "nextAction": "Use as a cultural territory research layer with community-specific provenance and uncertainty. Never equate undated areas with all prehistoric periods.",
+      "candidateIDs": [],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "aiatsis",
+      "name": "AIATSIS Indigenous Australia map",
+      "regions": [
+        "oceania"
+      ],
+      "coverage": {
+        "temporal": "1996 compilation using sources from eighteenth century to 1994",
+        "spatial": "general locations of Aboriginal Australian language/social/nation groupings"
+      },
+      "formats": [
+        "web map; vector download not established"
+      ],
+      "checkedURLs": [
+        "https://aiatsis.gov.au/explore/map-indigenous-australia"
+      ],
+      "limitations": [
+        "General, intentionally blurred and contested group boundaries; no time-varying political polygons."
+      ],
+      "nextAction": "Use group names and source leads for regional research, not fixed ancient borders. Indigenous chronology must come from additional sources.",
+      "candidateIDs": [],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "rumsey",
+      "name": "David Rumsey Map Collection / Stanford",
+      "regions": [
+        "africa",
+        "americas",
+        "europe",
+        "oceania"
+      ],
+      "coverage": {
+        "temporal": "collection items circa 1550 to present; map depicted dates must be checked separately",
+        "spatial": "world, strongest emphasis Americas"
+      },
+      "formats": [
+        "high-resolution raster images",
+        "georeferencer tools"
+      ],
+      "checkedURLs": [
+        "https://www.davidrumsey.com/about"
+      ],
+      "limitations": [
+        "Map publication date does not prove depicted date or ground control. Colonial maps may record claims rather than governed extent.",
+        "Raster images are not polygons. Each digitized line needs map identifier, legend, scale, control points and source interpretation."
+      ],
+      "nextAction": "For pre-1886 Africa and Pacific gaps, select dated regional map sheets, georeference, digitize only attested limits, independently compare with documentary evidence.",
+      "candidateIDs": [],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "ibge",
+      "name": "IBGE territorial meshes",
+      "regions": [
+        "americas"
+      ],
+      "coverage": {
+        "temporal": "edition-specific modern administrative boundaries; historical endpoint not established",
+        "spatial": "Brazil state/municipal/district/subdistrict"
+      },
+      "formats": [
+        "product downloads; exact archive format not inspected"
+      ],
+      "checkedURLs": [
+        "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/"
+      ],
+      "limitations": [
+        "Administrative units are not precolonial civilization territories."
+      ],
+      "nextAction": "Inspect dated municipal product archives for modern administration only; obtain separate source-backed Brazilian imperial/provincial changes.",
+      "candidateIDs": [
+        "brazil"
+      ],
+      "status": "documentation_checked",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "newberry-ahcb",
+      "name": "Newberry Atlas of Historical County Boundaries",
+      "regions": [
+        "americas"
+      ],
+      "coverage": {
+        "temporal": null,
+        "spatial": "US county project lead; exact coverage not verified in this session"
+      },
+      "formats": [],
+      "checkedURLs": [
+        "https://publications.newberry.org/ahcb/",
+        "https://publications.newberry.org/ahcb/downloads/"
+      ],
+      "limitations": [
+        "403/access failures; no download URL, dates or format confirmed. County polygons do not directly represent sovereign states."
+      ],
+      "nextAction": "Recover institutional catalog and source download; inspect county date semantics and any state-level layers before import.",
+      "candidateIDs": [],
+      "status": "access_blocked_lead",
+      "independentReview": "pending",
+      "runtimeReady": false
+    },
+    {
+      "id": "harvard-africamap",
+      "name": "Harvard AfricaMap",
+      "regions": [
+        "africa"
+      ],
+      "coverage": {
+        "temporal": null,
+        "spatial": "Africa portal lead; exact layer coverage unverified"
+      },
+      "formats": [],
+      "checkedURLs": [
+        "https://africamap.harvard.edu/",
+        "https://worldmap.harvard.edu/africamap/"
+      ],
+      "limitations": [
+        "Portal inaccessible during this check. No historical layer or export verified."
+      ],
+      "nextAction": "Find migrated institutional layer catalog. Inspect per-layer provenance, date and downloadable service before claiming precolonial coverage.",
+      "candidateIDs": [],
+      "status": "access_blocked_lead",
+      "independentReview": "pending",
+      "runtimeReady": false
+    }
+  ],
+  "pipeline": [
+    "Pin source URL, retrieval date, version and SHA256; keep original bytes outside runtime.",
+    "Validate schema, coordinate CRS/order, rings, finite values, topology and overlaps; never auto-repair without a record.",
+    "Separate source observation dates, source validity, identity lifetime and display interval.",
+    "Crosswalk each source ID and dated phase to reviewed entity IDs; preserve dependency holder and sovereignty distinctly.",
+    "Retain uncertainty and disputed/claimed/control semantics; do not interpolate unknown polygons.",
+    "Generate staged exact-geometry samples with immutable provenance; independent historical and geometry review.",
+    "Convert reviewed polygons to shared-arc TopoJSON; measure distortion and retain raw sources; lazy-load regional date slices.",
+    "Integrate neighboring changed polygons together and test transition dates, BCE semantics, antimeridian, taps and mobile payload."
+  ],
+  "regionPriorities": {
+    "europe": "CShapes reviewed 1816+ subset, Euratlas earlier snapshots, AWMC ancient features",
+    "africa": "CShapes 1886+ with missing dependency metadata restored; dated map digitization and regional institutional GIS for earlier periods",
+    "americas": "CShapes modern states, Native Land cultural layers, Newberry administrative lead, source-specific precolonial mapping",
+    "oceania": "CShapes modern state/dependency subset, dated Pacific map sheets, AIATSIS/Native Land contextual layers; island influence networks may need points/routes rather than invented filled polygons"
+  }
+}
