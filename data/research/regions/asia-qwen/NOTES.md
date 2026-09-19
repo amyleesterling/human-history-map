@@ -365,3 +365,60 @@ Five were, under the importer's ids; two were not.
   Zheng He's visits (from 1405) added.
 - **Links.** Britannica's Srivijaya and Majapahit pages are at
   "Srivijaya-empire" and "Majapahit-empire".
+
+## Seams: why dynasties vanished, and the fixes
+
+Amy's screenshots showed China blank in 252 and 423 and a stack of
+translucent polygons over Central Asia in 721. Sampling the map at
+nineteen cities every four years found the pattern: a researched polity
+was drawn only for the years its imported snapshot covered, so every
+dynasty change that fell between two maps left a hole (222 to 298, 422 to
+598, 758 to 798, 910 to 958 and 1370 to 1398 in China; Japan, Korea and
+Tibet the same). The 721 stack was two duplicates (the imported
+"Göktürks" beside Qwen's `gokturk`, "Tufan Empire" beside
+`tibetan-empire`) plus Qwen's Tang polygon reaching to 47 N over
+Mongolia.
+
+- **Founding backfill** (`js/data.js`, `BACKFILL_YEARS`): a researched
+  polity is drawn from its founding with its earliest shape, if that
+  shape is no more than 150 years later. Only the start is stretched. A
+  fallen state's last shape is never carried forward, because a rump is
+  usually far smaller than the map it came from (the Mughals of 1800 are
+  not the Mughals of 1715). This alone closed the Jin (266), Northern Wei
+  (439), Southern Qi (479), Sui (581), Balhae (698), Goryeo (918), Yuan
+  (1271), Kamakura (1185) and Heian (794) gaps.
+- **Mislabelled maps** (importer `MERGES` with year bounds): the 700 map
+  says Sui over what was Tang, the 900 map says Yamato over the Heian
+  court, the 800 map spells Silla "Silia". Renamed for those years.
+- **Shared polygons** (importer `SPLITS`): the 400 map's Jin is the
+  Eastern Jin, whose south the Liu Song took in 420; the 500 map's
+  southern Jin was the Southern Qi, Liang and Chen in turn; the 700 map's
+  Yamato became the Nara court in 710; the 1300 map's Kamakura became the
+  Muromachi shogunate in 1333; the 1200 map's Jurchen Jin fell to the
+  Mongols in 1234. Each segment is its own feature, and the polities
+  created this way (Southern Qi, Liang, Chen) carry curated dates.
+- **Carried and dropped shapes** (importer `CARRIES`, `DROPS`): the 1279
+  and 1300 maps fold Korea into the Yuan, so the 1200 Goryeo shape is
+  carried to 1392; the 1400 map draws China and Mongolia as one Great
+  Khanate, which is dropped, and the 1492 Ming shape stands in from 1368
+  (Mongolia is then blank until 1492; the Northern Yuan has no entry).
+- **Drawn by the site** (`data/civilizations-seams.json`,
+  `data/borders/china-seams.geojson`): no map has the Three Kingdoms,
+  the eastern and western halves of the Northern Wei's successors, or the
+  Five Dynasties, so coarse extents were drawn after Tan Qixiang's
+  Historical Atlas of China, dashed and marked precision 1, with entries
+  for Eastern Wei, Western Wei, Northern Qi, Northern Zhou, Later Tang,
+  Later Jin, Later Han and Later Zhou. The Later Liang shape leaves out
+  Shanxi, held by its rival; the shapes from 938 leave out the Sixteen
+  Prefectures ceded to the Liao.
+- **Overlaps**: `gokturks` and `tufan-empire` are merged into `gokturk`
+  and `tibetan-empire`; the Tang polygon's northern edge now stops at
+  43 N. The Tang and Tibetan shapes still overlap in the Tarim and
+  Qinghai, which both contested; that is the coarseness of both.
+- **Still blank**: south China from 907 to 960 (the Ten Kingdoms have no
+  entries), Mongolia from 1368 to 1492, and Kyoto before 350 (Yamato's
+  earliest shape is the 500 map, beyond the 150-year reach). A Qwen batch
+  for the Ten Kingdoms and the Northern Yuan would close the first two.
+- The Later Liang, Liu Song and Northern Wei cards now link their
+  successors by id; the Sixteen Kingdoms carry curated dates (304 to 439)
+  so they no longer overlap the Northern Wei.

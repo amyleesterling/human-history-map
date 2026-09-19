@@ -158,6 +158,27 @@ Rules for geometry:
   of it or run into the water. Trace the Natural Earth 1:50m coastline
   where you can; the base layer is drawn from it.
 
+### Seams between snapshots
+
+A researched polity usually rises between two snapshots, and the map that
+first draws it may come decades later. The loader closes that gap: a polity
+with historical dates is drawn from its founding with its earliest shape,
+as long as that shape is no more than 150 years later (`BACKFILL_YEARS` in
+`js/data.js`). Only the start is stretched. A fallen state's last shape is
+never carried forward, since a rump is usually far smaller than the map it
+came from.
+
+Where the snapshots label a polygon with a state that had already fallen,
+the importer's `MERGES` table renames it for that one year (the 700 map's
+"Sui" is the Tang) and its `SPLITS` table lets successive polities share
+one polygon until the next map (the 500 map's southern "Jin" is drawn as
+the Southern Qi, the Liang and the Chen in turn). Where no snapshot holds a
+shape at all, `data/civilizations-seams.json` and
+`data/borders/china-seams.geojson` carry entries and coarse extents drawn
+by the site after Tan Qixiang's Historical Atlas of China: the Three
+Kingdoms, the eastern and western successors of the Northern Wei, and the
+Five Dynasties. Each is `precision: 1`, dashed, and its `note` says so.
+
 ## `data/cards/<id>.json`: the info cards
 
 The reading page. Civilization first: what they built, discovered, wrote,
