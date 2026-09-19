@@ -119,6 +119,7 @@ function checkRing(where, ring, quantized = false) {
 }
 for (const b of manifest.borders || []) {
   if (!b.file || !isInt(b.from) || !isInt(b.to) || b.from >= b.to) { err(`manifest borders: bad entry ${JSON.stringify(b)}`); continue; }
+  if (b.priority != null && ![0, 1].includes(b.priority)) err(`manifest borders: ${b.file} priority must be 0 (imported) or 1 (researched)`);
   const rel = 'data/' + b.file;
   if (!existsSync(join(root, rel))) { err(`${rel}: listed in the manifest but missing`); continue; }
   const size = statSync(join(root, rel)).size;
@@ -147,9 +148,12 @@ for (const b of manifest.borders || []) {
       if (from < b.from || to > b.to) warn(`${where} (${p.civ}): border ${from}..${to} is outside this file's manifest range ${b.from}..${b.to}, so it will not always load`);
       const seen = drawn.get(p.civ) || [];
       // several shapes with the same dates are one polity in pieces (an
-      // empire and its colonies); only different, overlapping ranges are odd
-      if (!imported) for (const [f0, t0] of seen) if (from < t0 && f0 < to && !(f0 === from && t0 === to)) { warn(`${where} (${p.civ}): overlaps another border of the same polity (${f0}..${t0}); both will draw`); break; }
-      seen.push([from, to]);
+      // empire and its colonies); only different, overlapping ranges within
+      // the same priority are odd (a researched border over an imported one
+      // is the intended way to replace it)
+      const prio = b.priority || 0;
+      if (!imported) for (const [f0, t0, p0] of seen) if (p0 === prio && from < t0 && f0 < to && !(f0 === from && t0 === to)) { warn(`${where} (${p.civ}): overlaps another border of the same polity (${f0}..${t0}); both will draw`); break; }
+      seen.push([from, to, prio]);
       drawn.set(p.civ, seen);
     }
     if (p.precision != null && ![1, 2, 3].includes(p.precision)) err(`${where} (${p.civ}): precision must be 1, 2 or 3`);

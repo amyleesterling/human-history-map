@@ -64,7 +64,10 @@ link by it. If two polities could share a name, add the period or region:
   up to two upcoming snapshots within a coordinate budget. Files outside
   that working set are released. Split big datasets by era (or
   by region, or by polity; any split works as long as each entry's
-  `from`/`to` covers its features).
+  `from`/`to` covers its features). An entry with `"priority": 1` holds
+  researched borders: where a polity has both a researched and an imported
+  border for a year, only the researched one draws, which is how a
+  researched border replaces an imported snapshot without editing it.
 - `speeds` are playback rates in years per second.
 
 ## `data/civilizations*.json`: the polity index
@@ -268,10 +271,10 @@ decision per batch.
 
 The same id in a later `civilizations` file replaces the fields it names,
 so a researched entry can correct an imported one without editing
-`data/hb/`. Borders do not override: a researched border for a polity that
-also has imported ones draws alongside them, so remove or re-date the
-imported feature (or give the researched polity its own id) when you
-replace a border.
+`data/hb/`. A border in a file listed with `"priority": 1` replaces the
+imported border of the same polity for the years it covers; outside those
+years the imported border still shows, so a researched border for one
+period sits beside imported ones for the rest of a polity's life.
 
 ## Period-specific context and endings
 
