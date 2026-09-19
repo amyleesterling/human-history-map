@@ -17,3 +17,7 @@ The interface labels snapshot intervals as map coverage, including curated recor
 ## Remaining work
 
 Regional batch-02 packets remain staged until independent review. Chronological phase supplements and proposed overrides are research material, not automatically applied facts. New identities without adequate dates or border evidence remain staged. The coverage inventory measures the current imported registry only and cannot prove all human societies have been enumerated.
+
+## Tooltip summaries
+
+The same 49 reviewed card overviews are also used as tooltip summaries. Each copied overview matched the independently reviewed card SHA-256 before integration. This replaces imported summaries such as modern Venice city information on the historical polity. The old quoted-summary attribution is cleared; supporting sources remain on the linked full card. Existing metadata corrections are preserved.
