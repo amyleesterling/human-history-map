@@ -322,7 +322,7 @@ export class HistoryData {
     const pattern = (this.manifest && this.manifest.cards) || 'cards/{id}.json';
     const path = civ.card || pattern.replace('{id}', id);
     try {
-      const res = await fetch(this.url(this.dataDir + path), { cache: 'force-cache' });
+      const res = await fetch(this.url(this.dataDir + path), { cache: 'no-cache' });
       if (!res.ok) return null;
       return await res.json();
     } catch (e) {
