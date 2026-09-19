@@ -22,6 +22,17 @@ export function formatSpan(from, to, { circa = false } = {}) {
   return `${c}${a} to ${b}`;
 }
 
+// A society's first and last imported map appearances are not its founding
+// and fall. Reviewed historical dates can explicitly replace that basis.
+export function formatCivSpan(civ) {
+  const importedCoverage = !!civ.circa ||
+    String(civ.generated || '').startsWith('natural-earth');
+  const coverage = civ.dateBasis === 'map_coverage' ||
+    (civ.dateBasis !== 'historical' && importedCoverage);
+  const span = formatSpan(civ.from, civ.to, { circa: !!civ.circa });
+  return coverage ? `Map coverage: ${span}` : span;
+}
+
 // Recorded history is lopsided: three thousand years of a handful of river
 // kingdoms, then a crowded last millennium. A linear slider would spend most
 // of its length on the empty part, so the axis is piecewise linear through a

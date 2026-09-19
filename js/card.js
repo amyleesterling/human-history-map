@@ -6,7 +6,7 @@
 
 import { HistoryData } from './data.js';
 import { Globe } from './globe.js';
-import { TimeScale, formatYear, formatSpan } from './timeline.js';
+import { TimeScale, formatYear, formatCivSpan } from './timeline.js';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -61,10 +61,10 @@ async function main() {
   const last = civ.to == null ? scale.end : civ.to - 1;
   const year = Number.isFinite(yearParam) ? Math.max(civ.from, Math.min(last, yearParam)) : Math.round((civ.from + last) / 2);
 
-  document.title = `${civ.name}, ${formatSpan(civ.from, civ.to)}: Human History Map`;
+  document.title = `${civ.name}, ${formatCivSpan(civ)}: Human History Map`;
   $('swatch').style.background = civ.color;
   $('nameText').textContent = civ.name;
-  $('dates').textContent = formatSpan(civ.from, civ.to, { circa: !!civ.circa });
+  $('dates').textContent = formatCivSpan(civ);
   $('crumbYear').textContent = formatYear(year);
   $('globeLink').href = globeURL(civ.id, year);
   $('heroOpen').href = globeURL(civ.id, year);

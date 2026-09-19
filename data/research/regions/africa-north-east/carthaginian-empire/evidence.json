@@ -1,0 +1,101 @@
+{
+  "id": "carthaginian-empire",
+  "region": "Africa: North and Northeast",
+  "researcher": "africa-north-east",
+  "checkedOn": "2026-09-19",
+  "status": "source_checked",
+  "independentReview": "pending",
+  "cardFile": "data/cards/carthaginian-empire.json",
+  "runtime": true,
+  "coverage": "Initial thematic card. Does not constitute exhaustive polity, chronology or boundary research.",
+  "sources": [
+    {
+      "id": "carthage",
+      "title": "UNESCO, Archaeological Site of Carthage",
+      "url": "https://whc.unesco.org/en/list/37/",
+      "access": "page_text_read"
+    }
+  ],
+  "claims": [
+    {
+      "cardPath": "/overview",
+      "sourceIds": [
+        "carthage"
+      ],
+      "locator": "Synthesis of the specific sections identified below",
+      "status": "source_checked"
+    },
+    {
+      "cardPath": "/sections/0/items/0/text",
+      "sourceIds": [
+        "carthage"
+      ],
+      "locator": "Brief synthesis: ports; criterion ii",
+      "status": "source_checked"
+    },
+    {
+      "cardPath": "/sections/1/items/0/text",
+      "sourceIds": [
+        "carthage"
+      ],
+      "locator": "Criterion ii: tophet and stelae",
+      "status": "source_checked"
+    },
+    {
+      "cardPath": "/sections/2/items/0/text",
+      "sourceIds": [
+        "carthage"
+      ],
+      "locator": "Brief synthesis: Magon and Hannon",
+      "status": "source_checked"
+    },
+    {
+      "cardPath": "/sections/3/items/0/text",
+      "sourceIds": [
+        "carthage"
+      ],
+      "locator": "English introduction; list of successive archaeological periods",
+      "status": "source_checked"
+    },
+    {
+      "cardPath": "/fall",
+      "sourceIds": [
+        "carthage"
+      ],
+      "locator": "English introductory description",
+      "status": "source_checked"
+    }
+  ],
+  "identityAndDateCaveats": [
+    "carthaginian-empire and carthage are consecutive imported labels, not two independently counted civilizations.",
+    "UNESCO English lead gives destruction in 146 BC; synthesis has a conflicting 146 AD typo. The correct BCE statement is used.",
+    "Do not treat every feature in the UNESCO mixed-period property as Punic."
+  ],
+  "proposedOverrides": [
+    {
+      "action": "unify_identity_preserve_alias",
+      "ids": [
+        "carthaginian-empire",
+        "carthage"
+      ]
+    },
+    {
+      "action": "correct_terminal_date",
+      "ids": [
+        "carthaginian-empire",
+        "carthage"
+      ],
+      "proposedEnd": -146
+    }
+  ],
+  "borders": {
+    "status": "not_researched",
+    "rule": "Archaeological property boundaries are not political frontiers."
+  },
+  "remainingWork": [
+    "Independent claim review",
+    "Expand primary and specialist sources",
+    "Date each cultural development by phase",
+    "Research political transitions and defensible map geometry"
+  ]
+}
