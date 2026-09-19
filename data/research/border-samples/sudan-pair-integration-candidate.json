@@ -1,0 +1,139 @@
+{
+  "status": "candidate_source_checked_pending_independent_review",
+  "autoApply": false,
+  "runtimeReady": false,
+  "sourceId": "cshapes-global",
+  "checkedOn": "2026-09-19",
+  "identityMatches": [
+    {
+      "sourceName": "Sudan",
+      "gwcode": 625,
+      "existingId": "sudan",
+      "existingFrom": 1920,
+      "existingTo": null,
+      "verdict": "same modern-country ID for 2010-2019; imported 1920 coverage start not founding evidence"
+    },
+    {
+      "sourceName": "South Sudan",
+      "gwcode": 626,
+      "existingId": "south-sudan",
+      "existingFrom": 2020,
+      "existingTo": null,
+      "verdict": "exact modern country match; existing start is geometry handoff, not independence"
+    }
+  ],
+  "observations": [
+    {
+      "date": "2011-07-08",
+      "precision": "day",
+      "sourceClaim": "Last inclusive day of pre-split Sudan row",
+      "evidence": "CShapes global gweyear/gwemonth/gweday: 2011/7/8"
+    },
+    {
+      "date": "2011-07-09",
+      "precision": "day",
+      "sourceClaim": "New South Sudan row and reduced Sudan row begin together",
+      "evidence": "CShapes global gwsyear/gwsmonth/gwsday: 2011/7/9"
+    },
+    {
+      "date": "2011-07-09",
+      "precision": "day",
+      "claim": "South Sudan became independent",
+      "url": "https://www.worldbank.org/ext/en/country/southsudan",
+      "locator": "OVERVIEW: SOUTH SUDAN / About, first paragraph",
+      "status": "independently_source_checked"
+    }
+  ],
+  "transitionMeaning": {
+    "type": "secession_with_continuing_parent_state",
+    "from": "sudan",
+    "newState": "south-sudan",
+    "continuingState": "sudan",
+    "fellTo": null,
+    "note": "Do not mark Sudan as fallen or wholly replaced. This inference follows the paired continuing Sudan and new South Sudan country-periods."
+  },
+  "candidateCivilizationOverrides": [
+    {
+      "id": "south-sudan",
+      "from": 2011,
+      "to": null,
+      "foundingDate": "2011-07-09",
+      "reason": "Correct current 2020 coverage start; exact date stored separately",
+      "autoApply": false
+    }
+  ],
+  "candidateManifestReplacement": {
+    "removeExactEntry": {
+      "file": "hb/borders/world-2010.json",
+      "from": 2010,
+      "to": 2020
+    },
+    "addEntries": [
+      {
+        "file": "research/border-samples/world-2010-without-sudan.candidate.geojson",
+        "from": 2010,
+        "to": 2020
+      },
+      {
+        "file": "research/border-samples/cshapes-sudan-pair.candidate.geojson",
+        "from": 2010,
+        "to": 2020
+      }
+    ],
+    "note": "Proposal only. Candidate background removes old Sudan by ID; every other decoded 2010 feature retained. Additional neighbor reconciliation is required before use. No 2020+ modern file changes."
+  },
+  "timelineReview": {
+    "currentBehavior": "js/app.js setYear and URL/slider parsing round years; js/data.js activeAt uses from <= year < to.",
+    "decimalTransition": 2011.517808219178,
+    "encoding": "Gregorian year plus elapsed days / days in year. July 9 is day offset 189 in 2011.",
+    "candidateBehavior": {
+      "2010": "pre-split Sudan",
+      "2011": "pre-split Sudan at January 1 convention",
+      "2012": "Sudan and South Sudan",
+      "2019": "Sudan and South Sudan",
+      "2020": "existing Natural Earth modern layer"
+    },
+    "limitation": "Current UI cannot pause at July 9 or access fractional dates; rounding decimal transition to an integer changes the represented day.",
+    "recommendedNextStep": "Expose explicit year observation convention and exact dated event selection; retain exact dates even if yearly display is used.",
+    "alternativeYearEndConvention": "If product chooses end-of-year snapshots, both post-split features could display from integer 2011, but must label this convention and not present January 1 as independence. Not applied."
+  },
+  "geometryVerdict": {
+    "internalPair": "accepted_technical_checks",
+    "neighborIntegration": "blocked_pending_review",
+    "modernHandoff": "revise_source_discontinuity_notice",
+    "independentReview": "pending"
+  },
+  "remainingGates": [
+    "Review source boundary treatment in disputed sectors, including differences near Egypt and Ethiopia; do not infer explanations from polygon position alone.",
+    "Resolve all neighbor overlaps with consistent source/temporal coverage or documented uncertainty overlays, never automatic clipping as a historical claim.",
+    "Compare 2020 Natural Earth handoff as a change in cartographic source, not an invented territorial event.",
+    "Independent history, topology and UI QA before manifest mutation."
+  ],
+  "files": [
+    {
+      "file": "cshapes-sudan-pair.candidate.geojson",
+      "bytes": 43190,
+      "sha256": "2b5eb09dfe4af1eb1241dafdcd11add190c129db374faafb65d27dfef2979928"
+    },
+    {
+      "file": "world-2010-without-sudan.candidate.geojson",
+      "bytes": 1407224,
+      "sha256": "ddc516fedb2801b22452c7e47f54d7361298771cf1d9f56a63f507b178a0a2c3"
+    },
+    {
+      "file": "sudan-pair-geometry-qa.json",
+      "bytes": 2667,
+      "sha256": "d385633bd9f757781eb43b171515d0a602e7c6029200e437da5748a124a95c59"
+    },
+    {
+      "file": "sudan-pair-spherical-qa.json",
+      "bytes": 690,
+      "sha256": "8888c23a8140c406256ef2532ab5c8946ece957f5f510f0b96cdde6f9439abd3"
+    },
+    {
+      "file": "background-provenance.json",
+      "bytes": 394,
+      "sha256": "ac7ea051ec680baf8d5a0fb027f727ff060b02af6c31a540303aa09c4467a34d"
+    }
+  ]
+}

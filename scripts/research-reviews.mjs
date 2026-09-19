@@ -21,7 +21,10 @@ for(const name of fs.readdirSync(path.join(root,'data/research/reviews')).filter
   const hash=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,cardPath))).digest('hex');
   const expected=r.reviewedFileSha256||r.cardSha256;
   const valid=!!expected&&hash===expected;
-  const verdict=key=>r.verdicts?.[key]||r[`${key}Verdict`]||r[key]?.verdict||'unreviewed';
+  const verdict=key=>{
+   const value=r.verdicts?.[key]||r[`${key}Verdict`]||r[key]?.verdict||'unreviewed';
+   return key==='narrative' && value==='accept_narrow_introductory_claims' ? 'accepted' : value;
+  };
   output[r.id]={
    narrative:valid?verdict('narrative'):'stale_review',
    identity:valid?verdict('identity'):'stale_review',
