@@ -99,8 +99,12 @@ export class HistoryData {
     this.summaryFiles = Array.isArray(m.summaries) ? m.summaries : (m.summaries ? [m.summaries] : []);
     this._summaries = null;
 
+    // priority 1 marks a researched border file: where a polity has both a
+    // researched and an imported border for a year, only the researched one
+    // draws (the imported snapshots are not edited by hand, so this is how
+    // a researched border replaces one)
     this.files = (m.borders || []).map((b) => ({
-      file: b.file, from: b.from, to: b.to, state: 'idle', promise: null, features: [],
+      file: b.file, from: b.from, to: b.to, priority: b.priority || 0, state: 'idle', promise: null, features: [],
     }));
     return m;
   }
@@ -195,6 +199,7 @@ export class HistoryData {
         feat._area = geo.geoArea(feat);
         feat._centroid = geo.geoCentroid(feat);
         feat._civ = civ;
+        feat._priority = f.priority;
         feats.push(feat);
       }
       const count = (coords) => !Array.isArray(coords) ? 0 : typeof coords[0] === 'number'
@@ -298,14 +303,33 @@ export class HistoryData {
   }
 
   // Border features on the map in `year`, largest first.
+  // A polity with a researched border in that year shows only that one.
   polities(year) {
-    return this.features.filter((f) => activeAt(drawableInterval(f), year));
+    const active = this.features.filter((f) => activeAt(drawableInterval(f), year));
+    const researched = new Set();
+    for (const f of active) if (f._priority > 0) researched.add(f._civ.id);
+    if (!researched.size) return active;
+    return active.filter((f) => f._priority > 0 || !researched.has(f._civ.id));
   }
 
   // The features of one polity in a given year (a kingdom can be several
   // polygons: an empire and its exclaves, or a border redrawn mid-reign).
   featuresOf(id, year) {
-    return this.features.filter((f) => f._civ.id === id && activeAt(drawableInterval(f), year));
+    return this.polities(year).filter((f) => f._civ.id === id);
+  }
+
+  // The years of the border files that could hold a drawn border for this
+  // polity, nearest to `year` first, so a page can look through them in
+  // order until one has it.
+  candidateYearsFor(id, year) {
+    const c = this.civs.get(id);
+    if (!c) return [];
+    const to = c.to == null ? Infinity : c.to;
+    return this.files
+      .filter((f) => f.from < to && c.from < f.to)
+      .map((f) => Math.max(f.from, c.from))
+      .filter((y, i, a) => a.indexOf(y) === i)
+      .sort((a, b) => Math.abs(a - year) - Math.abs(b - year));
   }
 
   // Any year in which this polity has a border drawn, nearest to `year`.

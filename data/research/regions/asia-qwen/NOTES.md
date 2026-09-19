@@ -116,3 +116,58 @@ in `data/cards/` is the checked version. Edits so far:
   scholars marked as tradition; the Lingqu canal named; "the name China
   derives from Qin" hedged to "probably"; the fall now links han-dynasty,
   the site's one Han, in place of Qwen's western-han.
+- **western-han, eastern-han** (cards): not published. The site treats the
+  Han as one polity, `han-dynasty`, with a checked card, and both deliveries
+  again put Cai Lun's paper (105) and Zhang Heng's seismoscope (132) in the
+  Western Han. Two checked items unique to the Eastern Han card were folded
+  into the Han card: Xu Shen's Shuowen Jiezi (presented 121) and the Way of
+  the Celestial Masters (142). The "first true porcelain" of about 100 CE is
+  Eastern Han proto-porcelain, so it was left out.
+- **xin**: the trade in slaves was banned, not slavery abolished; the land
+  order's withdrawal within three years and the monopolies of 10 CE added;
+  the fall links `han-dynasty` (Qwen's `eastern-han` is not an id).
+- **cao-wei**: Cao Pi's Discourse on Literature named and dated; the
+  south-pointing chariot's gearing described as reconstructed; the tuntian
+  colonies dated to 196 under the Han; the nine-rank system (220) added;
+  the abdication's date given in both calendars.
+- **shu-han**: the repeating crossbow predates Zhuge Liang, so his part is
+  "improved, by tradition"; Dujiangyan named.
+- **eastern-wu**: "possibly the Roman world" replaced by the recorded visit
+  of the merchant Qin Lun in 226.
+- **jin-dynasty**: the Orchid Pavilion Preface (353), Huiyuan (386) and
+  Faxian (399) added with dates; the Seven Sages placed at the Wei to Jin
+  transition.
+- **liu-song**: Zu Chongzhi's pi given as the bounds he found, with his
+  dates, and his Daming calendar of 462 added, since the pi work itself is
+  not dated to a year.
+- **northern-wei**: Xiaowen's move to Luoyang dated 494, Longmen 493;
+  Western Wei's separation dated 535.
+- **sui**: the Grand Canal dated 605 to 610; the examinations "begin"
+  rather than "revived", with the jinshi degree of about 605.
+- **tang**: the gunpowder reference moved from about 700 to about 850,
+  the date of the earliest alchemical warning; Alopen and the Xi'an Stele
+  named; Lu Yu dated; the claim that the English word Chinatown derives from
+  Tang replaced by the Chinese word Tangrenjie, which does.
+- **later-liang**: as delivered; the fall names Later Tang in plain text.
+- **song-dynasty**: Zhu Xi moved from about 1100 to about 1190 (he was
+  born in 1130); the jiaozi dated 1024 and Champa rice 1012; the fall links
+  `mongol-empire`, on the map to 1294, and names the Yuan in the text.
+- **qin** (card): delivered a second time, identical; the published card
+  stands.
+
+## Borders from Qwen (asia-ancient.geojson)
+
+Kept verbatim in `proposed-borders/`; published as
+`data/borders/asia-ancient.geojson` with priority 1 in the manifest, so
+these polygons replace the imported snapshot borders of the same polities
+for the years they cover (the loader's rule for researched borders).
+Edits: Qwen's `western-han` and `eastern-han` polygons, which differ by
+one vertex, became one `han-dynasty` feature for 206 BCE to 220 CE, and
+the same polygon serves `xin` for 9 to 23 CE, which held the same
+territory; the Northern Song polygon's northern edge was clipped from 42
+to 40 degrees north, since the Sixteen Prefectures around Beijing were
+Liao. All seven are coarse "core area" polygons of about ten vertices,
+marked precision 1, and draw dashed.
+
+Since Cao Wei, Shu Han and Eastern Wu are now polities with cards, the
+Han card's fall entry names them by id so the three pills link.

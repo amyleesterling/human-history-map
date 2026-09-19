@@ -107,6 +107,12 @@ async function main() {
   let failed = data.yearStatus(year).state === 'error';
   failedMapYear = year;
   if (!feats.length && !failed) {
+    // the nearest drawn border may sit in a file the year did not need:
+    // try the files of the polity's lifetime, nearest year first
+    for (const y of data.candidateYearsFor(civ.id, year).slice(0, 6)) {
+      await data.ensureYear(y);
+      if (data.featuresOf(civ.id, y).length) break;
+    }
     const near = data.nearestDrawnYear(civ.id, year);
     if (near != null) {
       shownYear = near; await data.ensureYear(near); feats = data.featuresOf(civ.id, near);
