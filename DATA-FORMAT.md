@@ -105,8 +105,15 @@ tooltip is built from this entry alone, so keep it complete.
 | `card` | no | Path relative to `data/` if the card is not at `cards/<id>.json`. |
 | `kind` | no | `"state"` (default) or `"culture"` for a people, a hunter-gatherer range or a farming culture: drawn as a faint wash under the states, labelled only when there is room. |
 | `circa` | no | `true` when `from` and `to` are only as fine as the source's snapshots; dates then print as "c. 1000 to 1100 CE". |
+| `dateBasis` | no | `"map_coverage"` labels the interval as available map coverage, not a researched lifetime. `"historical"` is for source-supported historical dates, including explicitly approximate dates. Snapshot records default to map coverage when `circa` is true; generated Natural Earth records also default to map coverage. |
 | `summarySource` | no | `{ "name", "title", "url", "license" }` when `summary` is quoted; the pages show the link. |
 | `schematic` | no | `true` marks a placeholder border; the card says so. |
+
+The tooltip, search results and card header visibly prefix snapshot ranges
+with "Map coverage:". A record's first or last map appearance must not be
+described as a founding or fall without separate evidence. A historical
+date correction changes metadata, not the supporting geometry; researchers
+must review both dimensions separately.
 
 ## `data/borders/*.geojson`: the borders
 

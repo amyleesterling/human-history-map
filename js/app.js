@@ -5,7 +5,7 @@
 
 import { HistoryData } from './data.js';
 import { Globe } from './globe.js';
-import { TimeScale, formatYear, formatSpan, defaultTicks } from './timeline.js';
+import { TimeScale, formatYear, formatCivSpan, defaultTicks } from './timeline.js';
 
 const $ = (id) => document.getElementById(id);
 const els = {
@@ -341,7 +341,7 @@ function showTip(civ, anchor, feature) {
   const possession = label && label !== civ.name;
   els.tipSwatch.style.background = civ.color;
   els.tipName.textContent = label || civ.name;
-  const span = formatSpan(civ.from, civ.to, { circa: !!civ.circa });
+  const span = formatCivSpan(civ);
   els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : span;
   const meta = [];
   if (possession) meta.push(`${civ.name}: ${span}`);
@@ -482,7 +482,7 @@ function renderSearch() {
     li.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
     const sw = document.createElement('span'); sw.className = 'swatch'; sw.style.background = c.color;
     const nm = document.createElement('span'); nm.className = 'name'; nm.textContent = c.name;
-    const sp = document.createElement('span'); sp.className = 'span num'; sp.textContent = formatSpan(c.from, c.to, { circa: !!c.circa });
+    const sp = document.createElement('span'); sp.className = 'span num'; sp.textContent = formatCivSpan(c);
     li.append(sw, nm, sp);
     els.searchResults.appendChild(li);
   });

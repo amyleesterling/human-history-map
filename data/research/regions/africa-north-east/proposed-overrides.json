@@ -1,0 +1,129 @@
+{
+  "status": "source_checked_pending_independent_review",
+  "checkedOn": "2026-09-19",
+  "applyAutomatically": false,
+  "overrides": [
+    {
+      "id": "merinides",
+      "patch": {
+        "name": "Marinid dynasty",
+        "aliases": [
+          "Marinids",
+          "Merinids",
+          "Merinides"
+        ]
+      },
+      "evidence": "merinides/evidence.json",
+      "locator": "UNESCO Medina of Fez, introductory description and Brief synthesis",
+      "reason": "Normalize an imported spelling while preserving the stable ID."
+    },
+    {
+      "id": "carthage",
+      "patch": {
+        "to": -146
+      },
+      "evidence": "carthaginian-empire/evidence.json",
+      "locator": "UNESCO Carthage, English introductory description",
+      "reason": "The final Punic period cannot remain active to 100 BCE. This change does not unify the duplicate imported identity or replace geometry."
+    },
+    {
+      "id": "almoravid-dynasty",
+      "patch": {
+        "to": 1147,
+        "circa": true
+      },
+      "evidence": "almoravid-dynasty/evidence.json",
+      "locator": "UNESCO Medina of Marrakesh, Brief synthesis, Almoravids 1056 to 1147 and Almohad capital 1147 to 1269",
+      "reason": "Correct the end of the Marrakesh-centered government. Residual rule elsewhere requires separate records and specialist review."
+    },
+    {
+      "id": "almohad-caliphate",
+      "patch": {
+        "to": 1269,
+        "circa": true
+      },
+      "evidence": "almohad-caliphate/evidence.json",
+      "locator": "UNESCO Medina of Marrakesh, Brief synthesis, capital of Almohads 1147 to 1269",
+      "reason": "Correct the terminal date of the Marrakesh-centered state; the movement's beginning is separately unresolved."
+    },
+    {
+      "id": "egypt",
+      "patch": {
+        "fell": {
+          "year": -525,
+          "to": [
+            "achaemenid-empire"
+          ],
+          "text": "Persian conquest ended the Saite dynasty in 525 BCE. Native dynasties recovered control from 404 to 343 BCE, followed by renewed Persian rule until Alexander took Egypt in 332 BCE."
+        }
+      },
+      "evidence": "phase-transition-supplement.json",
+      "locator": "egypt-late-met: Saite Period, Persian Period and Dynasties 28-30",
+      "reason": "Correct misleading claim of only brief native intervals; describe conquest as a phase, not extinction."
+    },
+    {
+      "id": "kush",
+      "patch": {
+        "fell": {},
+        "successors": []
+      },
+      "evidence": "phase-transition-supplement.json",
+      "locator": "nubian-heirs-loc opening paragraph; meroe-loc final paragraph; ezana-inscription opening page",
+      "reason": "Campaign chronology cannot justify unqualified linear succession to Aksum."
+    },
+    {
+      "id": "aksum",
+      "patch": {
+        "fell": {},
+        "predecessors": []
+      },
+      "evidence": "phase-transition-supplement.json",
+      "locator": "aksum-unesco introduction versus Brief synthesis",
+      "reason": "Exact 940 fall and immediate Zagwe transition unverified; Kush predecessor chain unsupported."
+    }
+  ],
+  "blockedMetadata": [
+    {
+      "id": "kush",
+      "fields": [
+        "from",
+        "to",
+        "fell",
+        "successors"
+      ],
+      "issue": "The Napatan and Meroitic kingdom spans approximately the ninth century BCE to the fourth century CE, whereas imported dates end at 323 BCE. Do not conflate this with earlier Kerma or treat Aksum as an automatic successor.",
+      "evidence": "kush/evidence.json",
+      "temporaryMitigation": "The new card explicitly discusses continuity and uses an empty fall object to suppress the inherited unsupported footer. Tooltip metadata still needs review."
+    },
+    {
+      "id": "aksum",
+      "fields": [
+        "to",
+        "fell",
+        "predecessors"
+      ],
+      "issue": "A precise 940 collapse and direct succession from Kush are unsupported by the checked source, which itself uses different periods for kingdom and decline.",
+      "evidence": "aksum/evidence.json",
+      "temporaryMitigation": "The card uses an empty fall object and a continuity section. Tooltip metadata still needs review."
+    },
+    {
+      "id": "merinides",
+      "fields": [
+        "from",
+        "to"
+      ],
+      "issue": "1279 to 1300 cannot represent the dynasty described through the fifteenth century. Exact political endpoints require a separate scholarly source.",
+      "evidence": "merinides/evidence.json"
+    },
+    {
+      "id": "hafsid-caliphate",
+      "fields": [
+        "from",
+        "to",
+        "fell"
+      ],
+      "issue": "The current snapshot interval is not a verified political lifetime. The checked Tunis heritage source is insufficient to establish a precise final conquest and successor.",
+      "evidence": "hafsid-caliphate/evidence.json"
+    }
+  ]
+}
