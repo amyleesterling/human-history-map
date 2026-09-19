@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-09-19",
+  "reviewedCommit": "cbf3905c557a14b9df17ab401513ae60b596b42c",
+  "status": "source_checked_pending_independent_review",
+  "purpose": "Research staging. This file is not consumed by the app or covered by its runtime card schema. Evidence ranges are inclusive and must not be copied directly into half-open border intervals.",
+  "sources": [
+    {
+      "id": "met-1988-433-1",
+      "title": "The Metropolitan Museum of Art, proto-cuneiform tablet with seal impressions, probably barley distribution",
+      "url": "https://www.metmuseum.org/art/collection/search/329081",
+      "locator": "Object 1988.433.1; date, geography and description",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "id": "met-babylon",
+      "title": "The Metropolitan Museum of Art, Babylon, Michael Seymour",
+      "url": "https://www.metmuseum.org/essays/babylon",
+      "locator": "Discussions of Nebuchadnezzar II's building projects, the Processional Way and the conquest by Cyrus",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "id": "met-great-zimbabwe",
+      "title": "The Metropolitan Museum of Art, Great Zimbabwe (11th to 15th century)",
+      "url": "https://www.metmuseum.org/essays/great-zimbabwe-11th-15th-century",
+      "locator": "Masonry construction, soapstone birds and daga buildings",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "id": "unesco-caral",
+      "title": "UNESCO World Heritage Centre, Sacred City of Caral-Supe",
+      "url": "https://whc.unesco.org/en/list/1269/",
+      "locator": "Description and Statement of Outstanding Universal Value, including Integrity and Authenticity",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "id": "unesco-liangzhu",
+      "title": "UNESCO World Heritage Centre, Archaeological Ruins of Liangzhu City",
+      "url": "https://whc.unesco.org/en/list/1592/",
+      "locator": "Description and Statement of Outstanding Universal Value",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "id": "unesco-budj-bim",
+      "title": "UNESCO World Heritage Centre, Budj Bim Cultural Landscape",
+      "url": "https://whc.unesco.org/en/list/1577/",
+      "locator": "Description and Statement of Outstanding Universal Value, including continuing Gunditjmara knowledge and aquaculture",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "dossiers": [
+    {
+      "id": "uruk-recordkeeping",
+      "subject": "Uruk and early Sumerian recordkeeping",
+      "subjectType": "city_and_object_evidence",
+      "relatedExistingIds": ["sumer"],
+      "identityStatus": "related_to_broader_record_not_equivalent",
+      "claims": [
+        {
+          "id": "uruk-administrative-tablet",
+          "text": "A proto-cuneiform tablet, probably from Uruk, records quantities interpreted as barley distribution. It provides material evidence of early administrative writing; the interpretation remains qualified.",
+          "date": {
+            "earliest": -3100,
+            "latest": -2900,
+            "precision": "approximate_range",
+            "appliesTo": "object_date",
+            "sourceExpression": "ca. 3100 to 2900 BCE"
+          },
+          "evidence": [
+            { "sourceId": "met-1988-433-1", "locator": "Date, Geography and object description" }
+          ]
+        }
+      ],
+      "integrationNotes": [
+        "Do not describe the object as the first invention of writing in a specific year.",
+        "The findspot is qualified as probable. This source does not establish a political boundary for Uruk."
+      ]
+    },
+    {
+      "id": "neo-babylonian-babylon",
+      "subject": "Babylon in the Neo-Babylonian period",
+      "subjectType": "city_within_polity_period",
+      "relatedExistingIds": ["babylonia"],
+      "identityStatus": "period_identity_requires_review",
+      "claims": [
+        {
+          "id": "babylon-glazed-brick",
+          "text": "Under Nebuchadnezzar II, Babylon's monumental building program included glazed-brick decoration at the Ishtar Gate and Processional Way, linking craft production with the city's ceremonial landscape.",
+          "date": {
+            "earliest": -604,
+            "latest": -562,
+            "precision": "reign_context",
+            "appliesTo": "building_program_context_not_exact_construction_dates",
+            "sourceExpression": "Nebuchadnezzar II, reigned 604 to 562 BCE"
+          },
+          "evidence": [
+            { "sourceId": "met-babylon", "locator": "Nebuchadnezzar II's Babylon, Ishtar Gate and Processional Way" }
+          ]
+        }
+      ],
+      "candidateTransitions": [
+        {
+          "id": "babylon-conquest-by-cyrus",
+          "year": -539,
+          "type": "conquest",
+          "targetExistingId": "achaemenid-empire",
+          "text": "Cyrus conquered Babylon in 539 BCE. The city continued as one of the Achaemenid royal capitals.",
+          "status": "source_checked_identity_and_map_date_pending",
+          "evidence": [
+            { "sourceId": "met-babylon", "locator": "Conquest in 539 BCE and subsequent Achaemenid Babylon" }
+          ]
+        }
+      ],
+      "integrationNotes": [
+        "The existing babylonia record spans a broader interval. Do not replace it with a Neo-Babylonian identity without reviewing its features and links.",
+        "Political conquest is not the end of Babylonian cultural life. Check target geometry at the transition year before enabling a dated map jump."
+      ]
+    },
+    {
+      "id": "great-zimbabwe-built-environment",
+      "subject": "Great Zimbabwe's built environment",
+      "subjectType": "site_associated_with_existing_polity",
+      "relatedExistingIds": ["great-zimbabwe"],
+      "identityStatus": "existing_card_target_site_and_polity_distinction_retained",
+      "claims": [],
+      "cardPath": "data/cards/great-zimbabwe.json",
+      "cardEvidence": [
+        { "sourceId": "met-great-zimbabwe", "locator": "Paragraphs on walls, birds and residential buildings" }
+      ],
+      "integrationNotes": [
+        "The card uses the existing runtime schema. Its bibliography identifies the source supporting all three subject sections.",
+        "The imported circa 1000 to 1492 polity interval has not been independently validated by this packet.",
+        "No precise founding year, collapse event, successor or kingdom polygon is inferred from the architectural evidence."
+      ]
+    },
+    {
+      "id": "caral-supe-urbanism",
+      "subject": "Caral-Supe",
+      "subjectType": "archaeological_city_and_regional_society",
+      "relatedExistingIds": [],
+      "identityStatus": "dedicated_identity_requires_review",
+      "claims": [
+        {
+          "id": "caral-monumental-center",
+          "text": "Caral combined monumental platform structures with sunken circular courts. UNESCO reports radiocarbon evidence for its development between 3000 and 1800 BCE.",
+          "date": {
+            "earliest": -3000,
+            "latest": -1800,
+            "precision": "archaeological_range",
+            "appliesTo": "site_development_not_state_lifetime",
+            "sourceExpression": "development between 3000 and 1800 B.C."
+          },
+          "evidence": [
+            { "sourceId": "unesco-caral", "locator": "Description; Integrity and Authenticity, radiocarbon paragraph" }
+          ]
+        }
+      ],
+      "integrationNotes": [
+        "A site boundary must not be presented as a kingdom's territorial extent.",
+        "Resolve the city, the wider Supe Valley settlement network and any proposed polity identity separately."
+      ]
+    },
+    {
+      "id": "liangzhu-water-and-jade",
+      "subject": "Liangzhu",
+      "subjectType": "archaeological_city_and_regional_society",
+      "relatedExistingIds": [],
+      "identityStatus": "city_culture_and_state_extent_require_review",
+      "claims": [
+        {
+          "id": "liangzhu-water-management",
+          "text": "Liangzhu's archaeological remains connect a rice-based regional society with large water-management works and an organized urban landscape. Jade objects also preserve evidence of status and belief.",
+          "date": {
+            "earliest": -3300,
+            "latest": -2300,
+            "precision": "archaeological_period",
+            "appliesTo": "period_context_not_date_of_each_work",
+            "sourceExpression": "3300 to 2300 BC"
+          },
+          "evidence": [
+            { "sourceId": "unesco-liangzhu", "locator": "Description and Outstanding Universal Value, water works, rice cultivation and jade" }
+          ]
+        }
+      ],
+      "integrationNotes": [
+        "The archaeological property, the distribution of Liangzhu material culture and political control require distinct geometries.",
+        "Do not assign every dam or artifact the same precise year from this broad period."
+      ]
+    },
+    {
+      "id": "budj-bim-gunditjmara-aquaculture",
+      "subject": "Gunditjmara knowledge and Budj Bim aquaculture",
+      "subjectType": "continuing_society_and_cultural_landscape",
+      "relatedExistingIds": ["gunditjmara"],
+      "identityStatus": "existing_id_kind_and_lifetime_require_review",
+      "claims": [
+        {
+          "id": "budj-bim-eel-aquaculture",
+          "text": "Gunditjmara aquaculture at Budj Bim uses channels, weirs and dams to trap, store and harvest kooyang, the short-finned eel. UNESCO describes continuing knowledge and practice associated with this landscape.",
+          "date": {
+            "earliest": null,
+            "latest": null,
+            "precision": "relative_age_not_normalized",
+            "appliesTo": "aquaculture_system_history",
+            "sourceExpression": "at least 6,600 years"
+          },
+          "evidence": [
+            { "sourceId": "unesco-budj-bim", "locator": "Description and Outstanding Universal Value, aquaculture and Gunditjmara continuity" }
+          ]
+        }
+      ],
+      "integrationNotes": [
+        "Preserve the source's relative age; do not subtract it from the current year to invent a precise construction date.",
+        "The generated gunditjmara record spans circa 1600 to 1815 and lacks an explicit culture kind. Review these fields before using them to describe the society's duration.",
+        "A continuing society should not receive an invented fell-to event. Aquaculture features do not establish a state's political frontier."
+      ]
+    }
+  ]
+}
