@@ -93,3 +93,26 @@ in `data/cards/` is the checked version. Edits so far:
   works kept as tradition and labelled so. Sources kept, with the Cambridge
   volume's editors and the Erlitou chapter named, and Britannica's Erlitou
   entry added.
+- **shang**: the last king is Di Xin (Qwen's "Zhou Xin" mixes his name and
+  his posthumous title); the calendar item now names the ten-day week and
+  the sixty-day stem-and-branch cycle rather than "decimal and duodecimal";
+  cowries were royal gifts and grave wealth, not a currency in the later
+  sense; rice was a lesser crop beside millet; the Houmuwu ding's 832 kg
+  and Fu Hao's 755 jades and 468 bronzes added as checked figures.
+- **western-zhou**: smelted iron reaches China only about 800 BCE, at the
+  period's end, so the item is dated and hedged; the Classic of Poetry's
+  songs are of the period but the anthology was assembled later; the Book
+  of Changes item separates the Zhou divination core from the much later
+  commentaries; "feudal lords" became "regional lords"; the empire ended in
+  1912, not 1911.
+- **eastern-zhou**: the Daodejing is dated by its earliest copies (Guodian,
+  about 300 BCE) rather than to a 500 BCE Laozi; cast iron moved from 600
+  to about 500 BCE and bronze crossbow triggers to about 400 BCE, the
+  earliest finds; the Annals' span 722 to 481 BCE and Chu lacquer added.
+- **qin**: the site's Qin runs from 770 BCE (the state) to 206 BCE, so the
+  overview opens with the state and Shang Yang's reforms of 356 BCE are
+  added; the Terracotta Army item now gives 8,000 figures and the 246 BCE
+  start; the burning of the books is dated 213 and the execution of
+  scholars marked as tradition; the Lingqu canal named; "the name China
+  derives from Qin" hedged to "probably"; the fall now links han-dynasty,
+  the site's one Han, in place of Qwen's western-han.
