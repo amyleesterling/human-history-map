@@ -112,6 +112,7 @@ tooltip is built from this entry alone, so keep it complete.
 | `dateBasis` | no | `"map_coverage"` labels the interval as available map coverage, not a researched lifetime. `"historical"` is for source-supported historical dates, including explicitly approximate dates. Snapshot records default to map coverage when `circa` is true; generated Natural Earth records also default to map coverage. |
 | `summarySource` | no | `{ "name", "title", "url", "license" }` when `summary` is quoted; the pages show the link. |
 | `schematic` | no | `true` marks a placeholder border; the card says so. |
+| `wikipedia` | no | The exact English Wikipedia title to quote when the name alone finds a namesake ("Wu" the empress for Wu the state). An empty string means nothing on Wikipedia is about this polity, so quote nothing. Set it in `data/curated.json`; the importer copies it onto the polity and `fetch-summaries` obeys it. |
 
 The tooltip, search results and card header visibly prefix snapshot ranges
 with "Map coverage:". A record's first or last map appearance must not be
