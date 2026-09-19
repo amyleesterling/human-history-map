@@ -78,3 +78,18 @@ batch file here and writes `data/civilizations-asia.json`. Its rules:
   Xia, the Five Dynasties after Later Liang, Chenla, Sukhothai's own
   entry, Muromachi and Edo, the Korean Empire, and borders for every
   polity that has none.
+
+## Cards from Qwen
+
+Delivered cards are kept verbatim in `proposed-cards/`; what is published
+in `data/cards/` is the checked version. Edits so far:
+
+- **xia**: Erlitou's earliest bronze vessels (jue) belong to phases II and
+  III, about 1700 BCE, not 1900; the vessels are plain, so "animal masks"
+  (the taotie of Shang bronzes) was removed and the turquoise dragon added;
+  the Mandate of Heaven is a Zhou idea used to explain the Shang's fall,
+  so the Legacy item now says the Zhou named the pattern; the palace
+  precinct's size (about 11 hectares, walled, found 2004) added; Yu's flood
+  works kept as tradition and labelled so. Sources kept, with the Cambridge
+  volume's editors and the Erlitou chapter named, and Britannica's Erlitou
+  entry added.
