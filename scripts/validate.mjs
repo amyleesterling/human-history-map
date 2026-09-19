@@ -13,6 +13,7 @@
 import { readFileSync, writeFileSync, statSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { feature as topoFeature } from 'topojson-client';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
@@ -67,7 +68,9 @@ for (const rel of civFiles) {
     const where = `${rel}[${i}]`;
     if (!c || typeof c !== 'object') return err(`${where}: not an object`);
     if (!c.id || !ID.test(c.id)) err(`${where}: id "${c.id}" must be lower-case words joined by hyphens`);
-    if (civs.has(c.id)) err(`${where}: duplicate id ${c.id}`);
+    // the same id in a later file is an override, not a duplicate
+    if (civs.has(c.id) && civs.get(c.id)._file === rel) err(`${where}: duplicate id ${c.id}`);
+    if (civs.has(c.id)) c = { ...civs.get(c.id), ...Object.fromEntries(Object.entries(c).filter(([, v]) => v !== undefined)) };
     if (!c.name) err(`${where} (${c.id}): missing name`);
     if (!isInt(c.from)) err(`${where} (${c.id}): from must be an integer year`);
     if (c.to != null && !isInt(c.to)) err(`${where} (${c.id}): to must be an integer year or null`);
@@ -75,6 +78,7 @@ for (const rel of civFiles) {
     if (c.from === 0 || c.to === 0) warn(`${where} (${c.id}): there is no year 0; use -1 for 1 BCE or 1 for 1 CE`);
     if (c.color && !/^#[0-9a-fA-F]{6}$/.test(c.color)) err(`${where} (${c.id}): color must be #rrggbb`);
     if (c.summary && c.summary.length > 600) warn(`${where} (${c.id}): summary is ${c.summary.length} characters; the tooltip wants one paragraph`);
+    if (c.kind != null && !['state', 'culture'].includes(c.kind)) err(`${where} (${c.id}): kind must be "state" or "culture"`);
     for (const k of ['name', 'summary', 'capital', 'region']) checkCopy(`${where} (${c.id}).${k}`, c[k]);
     (c.aliases || []).forEach((a) => checkCopy(`${where} (${c.id}).aliases`, a));
     if (c.fell) {
@@ -100,14 +104,16 @@ for (const c of civs.values()) {
 
 // ---- borders ----------------------------------------------------------
 const drawn = new Map(); // civ id -> [from, to] ranges seen
-function checkRing(where, ring) {
+function checkRing(where, ring, quantized = false) {
   if (!Array.isArray(ring) || ring.length < 4) return err(`${where}: ring needs at least 4 positions`);
   const [a, b] = [ring[0], ring[ring.length - 1]];
   if (a[0] !== b[0] || a[1] !== b[1]) err(`${where}: ring is not closed (first and last position differ)`);
   for (const p of ring) {
     if (!Array.isArray(p) || p.length < 2 || typeof p[0] !== 'number' || typeof p[1] !== 'number') return err(`${where}: bad position ${JSON.stringify(p)}`);
     if (p[0] < -180 || p[0] > 180 || p[1] < -90 || p[1] > 90) return err(`${where}: position out of range ${JSON.stringify(p)} (longitude, latitude)`);
-    if (String(p[0]).split('.')[1]?.length > 4 || String(p[1]).split('.')[1]?.length > 4) { warn(`${where}: coordinates carry more than 4 decimals; round them to shrink the file`); break; }
+    // decoded TopoJSON arcs are floats by construction; only hand-written
+    // GeoJSON is asked to round
+    if (!quantized && (String(p[0]).split('.')[1]?.length > 4 || String(p[1]).split('.')[1]?.length > 4)) { warn(`${where}: coordinates carry more than 4 decimals; round them to shrink the file`); break; }
   }
 }
 for (const b of manifest.borders || []) {
@@ -116,8 +122,17 @@ for (const b of manifest.borders || []) {
   if (!existsSync(join(root, rel))) { err(`${rel}: listed in the manifest but missing`); continue; }
   const size = statSync(join(root, rel)).size;
   if (size > 1.5e6) warn(`${rel}: ${(size / 1e6).toFixed(1)} MB; split it by era or simplify the geometry`);
-  const fc = readJSON(rel);
-  if (!fc || fc.type !== 'FeatureCollection' || !Array.isArray(fc.features)) { err(`${rel}: must be a GeoJSON FeatureCollection`); continue; }
+  let fc = readJSON(rel);
+  const quantized = !!(fc && fc.type === 'Topology');
+  if (fc && fc.type === 'Topology') {
+    const key = Object.keys(fc.objects || {})[0];
+    if (!key) { err(`${rel}: TopoJSON with no objects`); continue; }
+    fc = topoFeature(fc, fc.objects[key]);
+  }
+  if (!fc || fc.type !== 'FeatureCollection' || !Array.isArray(fc.features)) { err(`${rel}: must be a GeoJSON FeatureCollection or a TopoJSON Topology`); continue; }
+  // imported snapshot files carry snapshot dates that need not match a
+  // polity's curated lifetime; only hand-drawn files get the lifetime check
+  const imported = b.file.startsWith('hb/');
   fc.features.forEach((f, i) => {
     const where = `${b.file}#${i}`;
     const p = f.properties || {};
@@ -127,10 +142,12 @@ for (const b of manifest.borders || []) {
     if (!isInt(from) || (to !== Infinity && !isInt(to))) err(`${where} (${p.civ}): from/to must be integer years`);
     else if (from >= to) err(`${where} (${p.civ}): from ${from} is not before to ${to}`);
     else {
-      if (from < civ.from || (civ.to != null && to > civ.to)) warn(`${where} (${p.civ}): border ${from}..${to} lies outside the polity's lifetime ${civ.from}..${civ.to ?? 'present'}`);
+      if (!imported && (from < civ.from || (civ.to != null && to > civ.to))) warn(`${where} (${p.civ}): border ${from}..${to} lies outside the polity's lifetime ${civ.from}..${civ.to ?? 'present'}`);
       if (from < b.from || to > b.to) warn(`${where} (${p.civ}): border ${from}..${to} is outside this file's manifest range ${b.from}..${b.to}, so it will not always load`);
       const seen = drawn.get(p.civ) || [];
-      for (const [f0, t0] of seen) if (from < t0 && f0 < to) { warn(`${where} (${p.civ}): overlaps another border of the same polity (${f0}..${t0}); both will draw`); break; }
+      // several shapes with the same dates are one polity in pieces (an
+      // empire and its colonies); only different, overlapping ranges are odd
+      if (!imported) for (const [f0, t0] of seen) if (from < t0 && f0 < to && !(f0 === from && t0 === to)) { warn(`${where} (${p.civ}): overlaps another border of the same polity (${f0}..${t0}); both will draw`); break; }
       seen.push([from, to]);
       drawn.set(p.civ, seen);
     }
@@ -138,14 +155,31 @@ for (const b of manifest.borders || []) {
     checkCopy(`${where}.label`, p.label); checkCopy(`${where}.note`, p.note);
     const g = f.geometry;
     if (!g) return err(`${where} (${p.civ}): no geometry`);
-    if (g.type === 'Polygon') g.coordinates.forEach((r, k) => checkRing(`${where} ring ${k}`, r));
-    else if (g.type === 'MultiPolygon') g.coordinates.forEach((poly, j) => poly.forEach((r, k) => checkRing(`${where} polygon ${j} ring ${k}`, r)));
+    if (g.type === 'Polygon') g.coordinates.forEach((r, k) => checkRing(`${where} ring ${k}`, r, quantized));
+    else if (g.type === 'MultiPolygon') g.coordinates.forEach((poly, j) => poly.forEach((r, k) => checkRing(`${where} polygon ${j} ring ${k}`, r, quantized)));
     else err(`${where} (${p.civ}): geometry must be a Polygon or MultiPolygon, not ${g.type}`);
   });
 }
 for (const c of civs.values()) {
   if (!drawn.has(c.id) && !c.generated) warn(`${c.id}: no border drawn in any file`);
 }
+
+// ---- summaries --------------------------------------------------------
+let summaryCount = 0;
+const summaryFiles = Array.isArray(manifest.summaries) ? manifest.summaries : (manifest.summaries ? [manifest.summaries] : []);
+for (const rel of summaryFiles) {
+  if (!existsSync(join(root, 'data', rel))) { warn(`${rel}: listed in the manifest but not written yet (run scripts/fetch-summaries.mjs)`); continue; }
+  const obj = readJSON('data/' + rel);
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) { err(`${rel}: must be an object of id -> { summary, source }`); continue; }
+  for (const [id, e] of Object.entries(obj)) {
+    if (!civs.has(id)) { warn(`${rel}: summary for unknown polity ${id}`); continue; }
+    if (!e || !e.summary) { err(`${rel}: ${id} has no summary text`); continue; }
+    summaryCount++;
+    checkCopy(`${rel} ${id}`, e.summary);
+    if (e.source && !e.source.url) warn(`${rel}: ${id} names a source without a url`);
+  }
+}
+const withSummary = [...civs.values()].filter((c) => c.summary).length + summaryCount;
 
 // ---- cards ------------------------------------------------------------
 const pattern = manifest.cards || 'cards/{id}.json';
@@ -188,7 +222,7 @@ if (!errors.length) {
 function report() {
   for (const w of warnings) console.log('warning:', w);
   for (const e of errors) console.log('ERROR:', e);
-  console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
+  console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${withSummary} with summaries, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
 }
 report();
 process.exit(errors.length || (strict && warnings.length) ? 1 : 0);

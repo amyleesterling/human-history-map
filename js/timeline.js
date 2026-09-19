@@ -11,13 +11,15 @@ export function formatYear(year) {
   return `${y} CE`;
 }
 
-// "27 BCE to 476 CE", "1299 to 1922 CE", "2686 to 2181 BCE", "2020 CE to present"
-export function formatSpan(from, to) {
-  if (to == null) return `${formatYear(from)} to present`;
+// "27 BCE to 476 CE", "1299 to 1922 CE", "2686 to 2181 BCE", "2020 CE to present";
+// with circa (dates that are only as fine as the source's snapshots): "c. 1000 to 1100 CE"
+export function formatSpan(from, to, { circa = false } = {}) {
+  const c = circa ? 'c. ' : '';
+  if (to == null) return `${c}${formatYear(from)} to present`;
   const a = formatYear(from), b = formatYear(to);
-  if (from > 0 && to > 0) return `${from} to ${b}`;
-  if (from <= 0 && to <= 0) return `${from === 0 ? 1 : -from} to ${b}`;
-  return `${a} to ${b}`;
+  if (from > 0 && to > 0) return `${c}${from} to ${b}`;
+  if (from <= 0 && to <= 0) return `${c}${from === 0 ? 1 : -from} to ${b}`;
+  return `${c}${a} to ${b}`;
 }
 
 // Recorded history is lopsided: three thousand years of a handful of river

@@ -75,7 +75,13 @@ export class Globe {
 
   setBase(layers) { this.base = layers; this.baseDirty = true; this.render(); }
   setLandHi(land) { this.landHi = land; this.baseDirty = true; this.render(); }
-  setPolities(list) { this.polities = list; this.render(); }
+  // cultural regions go under states whatever their size, so a state inside
+  // a people's range stays visible and tappable
+  setPolities(list) {
+    const rank = (f) => (f._civ.kind === 'culture' ? 0 : 1);
+    this.polities = list.slice().sort((a, b) => rank(a) - rank(b) || b._area - a._area);
+    this.render();
+  }
   setSelected(id) { this.selectedId = id; this.render(); }
 
   setMode(mode) {
@@ -332,10 +338,14 @@ export class Globe {
 
   _drawPolity(ctx, path, f, isSelected) {
     const color = f._civ.color;
-    const approx = f.properties.precision === 1;
+    const culture = f._civ.kind === 'culture';
+    const precision = f.properties.precision || 1;
     ctx.beginPath();
     path(f);
-    ctx.fillStyle = withAlpha(color, isSelected ? 0.74 : 0.52);
+    // a people's range is a wash, a state is a fill; an approximate border
+    // (precision 1) is drawn lighter than one fixed by treaty or survey, so
+    // the map never claims more certainty than its sources have
+    ctx.fillStyle = withAlpha(color, isSelected ? 0.74 : culture ? 0.2 : 0.52);
     ctx.fill();
     if (isSelected) {
       ctx.save();
@@ -345,14 +355,14 @@ export class Globe {
       ctx.strokeStyle = STYLE.select;
       ctx.stroke();
       ctx.restore();
-    } else {
-      ctx.lineWidth = 1;
-      ctx.strokeStyle = withAlpha(color, approx ? 0.75 : 0.95);
-      // an approximate border (precision 1) is drawn dashed, so the map never
-      // claims more certainty than the historians have
-      if (approx) ctx.setLineDash([3, 3]);
+    } else if (culture) {
+      ctx.lineWidth = 0.8;
+      ctx.strokeStyle = withAlpha(color, 0.3);
       ctx.stroke();
-      if (approx) ctx.setLineDash([]);
+    } else {
+      ctx.lineWidth = precision >= 2 ? 1 : 0.9;
+      ctx.strokeStyle = withAlpha(color, precision >= 3 ? 0.95 : precision === 2 ? 0.8 : 0.6);
+      ctx.stroke();
     }
   }
 
@@ -402,6 +412,7 @@ export class Globe {
       if (pt[0] < -20 || pt[0] > w + 20 || pt[1] < -20 || pt[1] > h + 20) continue;
       const side = Math.sqrt(Math.max(0, f._area * pxPerSr * cosd));
       const isSel = f._civ.id === this.selectedId;
+      const culture = f._civ.kind === 'culture';
       const name = (f.properties.label || f._civ.name).toUpperCase();
       let lines = [name];
       let width = this._textWidth(ctx, name, font);
@@ -417,7 +428,8 @@ export class Globe {
         lines = [words.slice(0, best).join(' '), words.slice(best).join(' ')];
         width = Math.max(...lines.map((l) => this._textWidth(ctx, l, font)));
       }
-      if (!isSel && width > side * 1.3) continue;
+      // a people's name only when there is plenty of room: it is context, not a border
+      if (!isSel && width > side * (culture ? 0.7 : 1.3)) continue;
       const lh = fs * 1.15;
       const box = { x0: pt[0] - width / 2 - 3, x1: pt[0] + width / 2 + 3, y0: pt[1] - (lh * lines.length) / 2 - 2, y1: pt[1] + (lh * lines.length) / 2 + 2 };
       if (placed.some((b) => b.x0 < box.x1 && b.x1 > box.x0 && b.y0 < box.y1 && b.y1 > box.y0)) continue;
@@ -425,7 +437,7 @@ export class Globe {
       ctx.font = font;
       ctx.lineWidth = 3;
       ctx.strokeStyle = STYLE.halo;
-      ctx.fillStyle = isSel ? '#ffffff' : STYLE.label;
+      ctx.fillStyle = isSel ? '#ffffff' : culture ? 'rgba(245,241,232,.7)' : STYLE.label;
       lines.forEach((line, i) => {
         const y = pt[1] + (i - (lines.length - 1) / 2) * lh;
         ctx.strokeText(line, pt[0], y);

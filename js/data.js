@@ -65,18 +65,25 @@ export class HistoryData {
 
     const civFiles = Array.isArray(m.civilizations) ? m.civilizations : [m.civilizations];
     const lists = await Promise.all(civFiles.map((f) => this.fetchJSON(dir + f)));
+    // the same id in a later file overrides the fields it names, so a
+    // researched entry can replace an imported one without deleting it
     for (const list of lists) {
       for (const c of list) {
         if (!c || !c.id) continue;
-        if (this.civs.has(c.id)) console.warn(`duplicate polity id ${c.id}`);
-        c._explicit = !!c.color;
-        c.color = colorFor(c);
-        c.to = c.to == null ? null : c.to;
-        this.civs.set(c.id, c);
+        const prev = this.civs.get(c.id);
+        const merged = prev ? Object.assign(prev, Object.fromEntries(Object.entries(c).filter(([, v]) => v !== undefined))) : c;
+        merged.to = merged.to == null ? null : merged.to;
+        this.civs.set(merged.id, merged);
       }
+    }
+    for (const c of this.civs.values()) {
+      c._explicit = !!c.color;
+      c.color = colorFor(c);
     }
     this.civList = [...this.civs.values()];
     this._cardIndex = null;
+    this.summaryFiles = Array.isArray(m.summaries) ? m.summaries : (m.summaries ? [m.summaries] : []);
+    this._summaries = null;
 
     this.files = (m.borders || []).map((b) => ({
       file: b.file, from: b.from, to: b.to, state: 'idle', promise: null, features: [],
@@ -92,17 +99,34 @@ export class HistoryData {
 
   // Loads every border file that covers `year`, and quietly starts the ones
   // that cover the years just ahead so playback never waits at the seam.
+  // Files far from the clock are let go once more than a handful are in, so
+  // a full playback on a phone does not hold fifty world maps in memory.
   ensureYear(year, lookahead = 150) {
     const wanted = this.files.filter((f) => f.from <= year + lookahead && year - lookahead < f.to);
     const now = wanted.filter((f) => f.from <= year && year < f.to);
     for (const f of wanted) this._loadFile(f);
+    const ready = this.files.filter((f) => f.state === 'ready');
+    if (ready.length > 8) {
+      const keep = new Set(wanted);
+      for (const f of ready) if (!keep.has(f)) this._evict(f);
+    }
     return Promise.all(now.map((f) => f.promise));
+  }
+
+  _evict(f) {
+    const gone = new Set(f.features);
+    this.features = this.features.filter((x) => !gone.has(x));
+    f.features = [];
+    f.state = 'idle';
+    f.promise = null;
   }
 
   _loadFile(f) {
     if (f.state !== 'idle') return f.promise;
     f.state = 'loading';
-    f.promise = this.fetchJSON(this.dataDir + f.file).then((fc) => {
+    f.promise = this.fetchJSON(this.dataDir + f.file).then((raw) => {
+      // border files may be TopoJSON (shared arcs, a third the size) or GeoJSON
+      const fc = raw.type === 'Topology' ? topo.feature(raw, raw.objects[Object.keys(raw.objects)[0]]) : raw;
       const feats = [];
       for (const feat of fc.features || []) {
         const p = feat.properties || {};
@@ -138,11 +162,12 @@ export class HistoryData {
   }
 
   // Two polities that share a stretch of time and a stretch of ground must
-  // not share a colour, or the border between them vanishes. Once borders are
+  // not share a colour, or the border between them vanishes. As borders come
   // in, each polity without a colour of its own takes the first palette entry
   // (counting from its hashed default, so the spread stays even) that none of
   // its contemporary neighbours has taken. Bounding boxes on the sphere stand
-  // in for adjacency; it is cheap and it errs on the side of caution.
+  // in for adjacency; it is cheap and it errs on the side of caution. A colour
+  // once given is kept, so nothing flickers when files load or are let go.
   _recolor() {
     const groups = new Map();
     for (const f of this.features) {
@@ -163,9 +188,9 @@ export class HistoryData {
     const overlap = (a, b) => a.from < b.to && b.from < a.to;
     const N = PALETTE.length;
     const index = (color) => { const i = PALETTE.indexOf(color); return i < 0 ? null : i; };
-    for (const g of list) g._idx = g.civ._explicit ? index(g.civ.color) : null;
+    for (const g of list) g._idx = g.civ._explicit || g.civ._colored ? index(g.civ.color) : null;
     for (const g of list) {
-      if (g.civ._explicit) continue;
+      if (g.civ._explicit || g.civ._colored) continue;
       const taken = new Set();
       for (const h of list) if (h !== g && h._idx != null && overlap(g, h) && touch(g, h)) taken.add(h._idx);
       const start = index(colorFor({ id: g.civ.id })) ?? 0;
@@ -173,7 +198,33 @@ export class HistoryData {
       for (let k = 0; k < N; k++) { const i = (start + k) % N; if (!taken.has(i)) { idx = i; break; } }
       g._idx = idx;
       g.civ.color = PALETTE[idx];
+      g.civ._colored = true;
     }
+  }
+
+  // ---- summaries ------------------------------------------------------
+  // Hand-written summaries sit in the polity entry. The rest (thousands of
+  // Wikipedia openings) live in separate files fetched the first time one is
+  // needed, so the index a phone loads up front stays small.
+
+  loadSummaries() {
+    if (!this._summaries) {
+      this._summaries = Promise.all(this.summaryFiles.map((f) => this.fetchJSON(this.dataDir + f).catch((e) => { console.warn(e); return {}; })))
+        .then((parts) => Object.assign({}, ...parts));
+    }
+    return this._summaries;
+  }
+
+  // { text, source } or null; source is { name, title, url, license } when
+  // the text is quoted from somewhere and must say so
+  async summaryFor(id) {
+    const civ = this.civs.get(id);
+    if (!civ) return null;
+    if (civ.summary) return { text: civ.summary, source: civ.summarySource || null };
+    if (!this.summaryFiles.length) return null;
+    const all = await this.loadSummaries();
+    const e = all[id];
+    return e && e.summary ? { text: e.summary, source: e.source || null } : null;
   }
 
   // true when every file that covers this year has arrived (or failed)

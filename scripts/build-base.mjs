@@ -15,7 +15,9 @@
 //                                 Tigris and Euphrates, the Indus, the Yellow
 //                                 River: how early civilizations found water)
 //   data/borders/modern.geojson   present-day sovereign borders in the site's
-//                                 own schema, shown from 2020 onward
+//                                 own schema, shown from 2020 onward (the
+//                                 historical-basemaps importer then joins
+//                                 them onto the polities alive in 2010)
 //   data/civilizations-modern.json  one polity entry per modern country
 //   base/SOURCE.txt               what is here and where it came from
 
@@ -114,13 +116,16 @@ async function main() {
   const polities = [];
   const seen = new Set();
   const features = [];
+  // not polities: an uninhabited continent and two remote dependencies
+  const SKIP = new Set(['Antarctica', 'French Southern and Antarctic Lands', 'Falkland Islands']);
   for (const f of countries.features) {
     const p = f.properties;
+    if (SKIP.has(p.ADMIN)) continue;
     // ADMIN is the everyday name ("Russia", "United States of America");
     // NAME abbreviates ("Dem. Rep. Congo") and NAME_LONG is formal
     const name = p.ADMIN || p.NAME_LONG || p.NAME;
     if (!name) continue;
-    const id = 'modern-' + slug(name);
+    const id = slug(name);
     if (seen.has(id)) continue;
     seen.add(id);
     polities.push({
@@ -160,7 +165,7 @@ lakes.json, rivers.json
 
 data/borders/modern.geojson, data/civilizations-modern.json
   ne_110m_admin_0_countries converted to this site's border schema (see
-  DATA-FORMAT.md): one feature per country with civ = modern-<slug>,
+  DATA-FORMAT.md): one feature per country with civ = <slug of the name>,
   from ${MODERN_FROM}, to ${MODERN_TO}, precision 3. The matching polity entries carry
   no summary; those are for the research pipeline to fill in.
 `);

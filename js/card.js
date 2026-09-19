@@ -64,7 +64,7 @@ async function main() {
   document.title = `${civ.name}, ${formatSpan(civ.from, civ.to)}: Human History Map`;
   $('swatch').style.background = civ.color;
   $('nameText').textContent = civ.name;
-  $('dates').textContent = formatSpan(civ.from, civ.to);
+  $('dates').textContent = formatSpan(civ.from, civ.to, { circa: !!civ.circa });
   $('crumbYear').textContent = formatYear(year);
   $('globeLink').href = globeURL(civ.id, year);
   $('heroOpen').href = globeURL(civ.id, year);
@@ -75,6 +75,7 @@ async function main() {
     if (!value) return;
     const li = el('li'); li.append(el('b', null, label + ' '), document.createTextNode(value)); facts.appendChild(li);
   };
+  if (civ.kind === 'culture') fact('Kind', 'a people or culture, not a state');
   fact('Capital', civ.capital);
   fact('Region', civ.region);
   if (civ.aliases && civ.aliases.length) fact('Also called', civ.aliases.join(', '));
@@ -106,8 +107,10 @@ async function main() {
 
   const card = await data.card(civ.id);
   const lead = $('lead');
+  const quoted = await data.summaryFor(civ.id);
+  let quotedSource = null;
   if (card && card.overview) lead.textContent = card.overview;
-  else if (civ.summary) lead.textContent = civ.summary;
+  else if (quoted) { lead.textContent = quoted.text; quotedSource = quoted.source; }
   else { lead.textContent = 'The summary for this polity has not been written yet.'; lead.classList.add('pending'); }
 
   const sections = $('sections');
@@ -168,10 +171,12 @@ async function main() {
     }
   }
 
-  if (card && Array.isArray(card.sources) && card.sources.length) {
+  const sources = [...((card && Array.isArray(card.sources)) ? card.sources : [])];
+  if (quotedSource) sources.push({ title: `Summary quoted from ${quotedSource.name || 'its source'}: ${quotedSource.title || ''}`, url: quotedSource.url, note: quotedSource.license ? `(${quotedSource.license})` : '' });
+  if (sources.length) {
     $('sourcesSection').hidden = false;
     const ul = $('sources');
-    for (const s of card.sources) {
+    for (const s of sources) {
       const li = el('li');
       if (s.url) { const a = el('a', null, s.title || s.url); a.href = s.url; a.rel = 'noopener'; a.target = '_blank'; li.appendChild(a); }
       else li.textContent = s.title || '';

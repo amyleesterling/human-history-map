@@ -12,7 +12,7 @@ const els = {
   stage: $('stage'), globe: $('globe'), loading: $('loading'), hint: $('hint'),
   notice: $('notice'), noticeText: $('noticeText'), noticeClose: $('noticeClose'),
   tip: $('tip'), tipClose: $('tipClose'), tipSwatch: $('tipSwatch'), tipName: $('tipName'),
-  tipSpan: $('tipSpan'), tipMeta: $('tipMeta'), tipSummary: $('tipSummary'), tipMore: $('tipMore'), tipZoom: $('tipZoom'),
+  tipSpan: $('tipSpan'), tipMeta: $('tipMeta'), tipSummary: $('tipSummary'), tipSource: $('tipSource'), tipMore: $('tipMore'), tipZoom: $('tipZoom'),
   playBtn: $('playBtn'), yearOut: $('yearOut'), eraOut: $('eraOut'), speedBtn: $('speedBtn'),
   slider: $('slider'), track: $('trackCanvas'),
   searchBtn: $('searchBtn'), search: $('search'), searchInput: $('searchInput'), searchResults: $('searchResults'),
@@ -313,7 +313,7 @@ function onTap(feature, x, y) {
   if (!feature) { closeTip(); deselect(); return; }
   pause();
   select(feature._civ.id);
-  showTip(feature._civ, { x, y });
+  showTip(feature._civ, { x, y }, feature);
 }
 
 function select(id) {
@@ -329,24 +329,46 @@ function deselect() {
   queueURL();
 }
 
-function showTip(civ, anchor) {
+function showTip(civ, anchor, feature) {
+  // a colony carries its own name on the map but belongs to its ruler: the
+  // card is headed by the name that was tapped and says whose it was
+  const label = feature && feature.properties.label;
+  const possession = label && label !== civ.name;
   els.tipSwatch.style.background = civ.color;
-  els.tipName.textContent = civ.name;
-  els.tipSpan.textContent = formatSpan(civ.from, civ.to);
+  els.tipName.textContent = label || civ.name;
+  const span = formatSpan(civ.from, civ.to, { circa: !!civ.circa });
+  els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : span;
   const meta = [];
+  if (possession) meta.push(`${civ.name}: ${span}`);
+  if (civ.kind === 'culture') meta.push('A people or culture, not a state');
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
   if (civ.region) meta.push(civ.region);
   const drawn = data.featuresOf(civ.id, state.year).length > 0;
   if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
   els.tipMeta.textContent = meta.join(' · ');
   els.tipMeta.hidden = meta.length === 0;
-  if (civ.summary) {
-    els.tipSummary.textContent = civ.summary;
-    els.tipSummary.classList.remove('pending');
-  } else {
-    els.tipSummary.textContent = 'Summary coming soon.';
-    els.tipSummary.classList.add('pending');
-  }
+  els.tipSource.hidden = true;
+  els.tipSummary.textContent = 'Loading summary';
+  els.tipSummary.classList.add('pending');
+  const want = civ.id;
+  data.summaryFor(civ.id).then((s) => {
+    if (state.selected !== want || els.tip.hidden) return;
+    if (s) {
+      els.tipSummary.textContent = s.text;
+      els.tipSummary.classList.remove('pending');
+      if (s.source) {
+        els.tipSource.innerHTML = '';
+        const a = document.createElement('a');
+        a.href = s.source.url; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = s.source.name || 'source';
+        els.tipSource.append('Summary from ', a, s.source.license ? `, ${s.source.license}` : '');
+        els.tipSource.hidden = false;
+      }
+    } else {
+      els.tipSummary.textContent = 'Summary coming soon.';
+    }
+    placeTip();
+  });
   els.tipMore.href = `civ.html?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
   els.tipZoom.hidden = !drawn;
   state.tipAnchor = anchor || null;
@@ -399,7 +421,7 @@ async function jumpToCiv(id, year) {
   }
   select(id);
   if (feats.length) globe.focusFeatures(feats);
-  showTip(civ, { x: els.stage.clientWidth / 2, y: els.stage.clientHeight * 0.25 });
+  showTip(civ, { x: els.stage.clientWidth / 2, y: els.stage.clientHeight * 0.25 }, feats[0]);
 }
 
 // ---- search -------------------------------------------------------------
@@ -436,7 +458,7 @@ function renderSearch() {
     li.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
     const sw = document.createElement('span'); sw.className = 'swatch'; sw.style.background = c.color;
     const nm = document.createElement('span'); nm.className = 'name'; nm.textContent = c.name;
-    const sp = document.createElement('span'); sp.className = 'span num'; sp.textContent = formatSpan(c.from, c.to);
+    const sp = document.createElement('span'); sp.className = 'span num'; sp.textContent = formatSpan(c.from, c.to, { circa: !!c.circa });
     li.append(sw, nm, sp);
     els.searchResults.appendChild(li);
   });

@@ -23,9 +23,13 @@ footnote. That is the whole brief; keep every change in its service.
 - **Data lives in `data/`, never in code.** Polities, borders and cards are
   JSON described in `DATA-FORMAT.md`. The pages look things up by id. If a
   page needs a new fact, add a field to the format and document it there.
-- **`data/` is sample data until the research pipeline lands.** Borders are
-  schematic (`precision: 1`, dashed on the map) and say so; the manifest
-  carries a notice. Do not present a placeholder as researched.
+- **`data/hb/`, the modern files and the summaries are generated.** Fifty
+  snapshots imported from historical-basemaps (GPL-3.0, rough by its own
+  account), present-day borders from Natural Earth, and summaries quoted
+  from Wikipedia (CC BY-SA 4.0, always with the link). Never edit them by
+  hand: change `data/curated.json` or the scripts and regenerate, in the
+  order build-base, import, fetch-summaries, validate. The manifest notice
+  tells visitors where the data comes from; keep it honest.
 - **Run `node scripts/validate.mjs` after any data change.** It is the only
   test harness. It also regenerates `data/cards/index.json`, which the pages
   read so they never request a card that is not there.
@@ -56,11 +60,14 @@ footnote. That is the whole brief; keep every change in its service.
 
 ## How the pieces fit
 
-- `js/data.js` loads the manifest, the polity index, and border files lazily
-  by the years they cover (150 years of lookahead so playback never waits).
-  It rewinds polygon rings for d3, sorts features by spherical area so small
-  polities draw on top and win taps, and recolours polities so no two
-  contemporaries that touch share a colour.
+- `js/data.js` loads the manifest, the polity index (later files override
+  earlier ids), and border files (GeoJSON or TopoJSON) lazily by the years
+  they cover, with 150 years of lookahead so playback never waits and
+  eviction of files far from the clock so a phone never holds fifty maps.
+  It rewinds polygon rings for d3, sorts features by spherical area so
+  small polities draw on top and win taps, colours polities so no two
+  contemporaries that touch share a colour (a colour once given is kept),
+  and fetches the quoted summaries only when one is first needed.
 - `js/globe.js` draws on a canvas: the base (ocean, graticule, land, lakes,
   rivers) is cached offscreen until the view moves; polities and labels draw
   every frame. Gestures are hand-written pointer events. `hitTest` uses
