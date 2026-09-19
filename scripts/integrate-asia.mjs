@@ -41,6 +41,13 @@ const PATCH = {
   // the imported border is the Qin state from 323 BCE; the entry covers the
   // state and the empire it became
   qin: (c) => ({ ...c, from: -770, summary: 'A western frontier state of the Zhou from 770 BCE that in 221 BCE became China\'s first unified empire under Qin Shi Huang. ' + c.summary.replace(/^China's first unified empire under Qin Shi Huang\. /, '') }),
+  // the Korean Empire of 1897 to 1910 was Joseon under a new title, and the
+  // imported 1900 map draws it; ending the entry in 1897 left Korea blank
+  // until the 1914 map, so the entry runs to the annexation
+  joseon: (c) => ({ ...c, to: 1910, successors: ['imperial-japan'], fell: { year: 1910, to: ['imperial-japan'], text: 'Joseon was proclaimed the Korean Empire in 1897 under the same royal house. Japan made it a protectorate in 1905 and annexed it in 1910.' } }),
+  // the imported Liao begins in 1000; the Khitan polygon is the one on the
+  // map in 926, so the fall link lands on a drawn border
+  balhae: (c) => ({ ...c, fell: { ...c.fell, to: ['khitans'] } }),
 };
 
 const manifest = read(join(root, 'data', 'manifest.json'));
