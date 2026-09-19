@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>History map layout checks</title>
+<style>body{margin:24px;background:#202633;color:#fff;font:16px system-ui}label{margin-right:20px}select{font:inherit;padding:8px}iframe{display:block;margin-top:20px;width:390px;height:844px;border:1px solid #586377;border-radius:12px;max-width:100%}p{max-width:650px;line-height:1.5}</style>
+<h1>Phone-width layout checks</h1>
+<p>This frame checks responsive layout. It does not emulate phone hardware, touch gestures or memory limits.</p>
+<label>Width <select id="width" aria-label="Phone width"><option>320</option><option selected>390</option><option>430</option></select></label>
+<label>Page <select id="page" aria-label="Preview page"><option value="../civ.html?id=kerma&amp;year=-3000">Kerma, 3000 BCE</option><option value="../civ.html?id=kerma&amp;year=-1500">Kerma, 1500 BCE</option><option value="../?civ=kerma&amp;y=-1500">Globe, Kerma</option></select></label>
+<iframe id="preview" title="Phone preview" src="../civ.html?id=kerma&amp;year=-3000"></iframe>
+<script>const frame=document.getElementById('preview');document.getElementById('width').addEventListener('change',e=>frame.style.width=e.target.value+'px');document.getElementById('page').addEventListener('change',e=>frame.src=e.target.value);</script>
+</html>

@@ -60,8 +60,9 @@ link by it. If two polities could share a name, add the period or region:
 - `summaries` lists files of quoted summaries (below), fetched the first
   time a summary is needed rather than with the index.
 - `borders` lists every border file with the years it covers. The explorer
-  loads a file only when the clock is within about 150 years of its range
-  and lets go of files far from the clock, so split big datasets by era (or
+  prioritizes files needed for the selected year and optionally prefetches
+  up to two upcoming snapshots within a coordinate budget. Files outside
+  that working set are released. Split big datasets by era (or
   by region, or by polity; any split works as long as each entry's
   `from`/`to` covers its features).
 - `speeds` are playback rates in years per second.
@@ -257,3 +258,45 @@ so a researched entry can correct an imported one without editing
 also has imported ones draws alongside them, so remove or re-date the
 imported feature (or give the researched polity its own id) when you
 replace a border.
+
+## Period-specific context and endings
+
+Cards may include `periods`, ordered without overlap. Each period contains
+`from`, exclusive `to` (or null), `title`, `summary`, `sourceIds` and optionally
+`circa: true`. Endpoints are nonzero integer years. Sources referenced by ID
+must have matching `id` values in the card's `sources` array. Only a period
+containing the selected year can supply an "In this year" summary. A period's
+bounds describe the historical phase supported by its sources, not a newly
+verified polygon. Describe approximate or disputed bounds explicitly.
+
+Card section items may also carry `sourceIds`. Dated events are separated
+into those through the selected year and later events. An earlier event is
+not proof that its consequences still held in the selected year. Undated
+items remain broader context, never an inferred contemporary fact.
+
+The optional `ending` object supersedes the legacy `fall` object:
+
+```json
+{
+  "status": "uncertain",
+  "text": "A sourced account of what is known and what remains disputed.",
+  "sourceIds": ["excavation-report"]
+}
+```
+
+Allowed statuses are `conquest`, `dissolution`, `transformation`, `continuity`
+and `uncertain`. Optional `year` is a nonzero integer; `circa: true` marks an
+approximate date. Optional `to` contains existing polity IDs and requires an
+explicit year for navigation. A link retains its requested date even when
+no border is available there. Unknown successor IDs must remain research
+proposals until the identity exists. Never use a coverage endpoint as a fall.
+
+All reading pages address endings and continuity. Missing research is labeled
+as research not yet available; it is not presented as historical uncertainty.
+A sourced `uncertain` ending means researchers have investigated the question
+and the evidence itself is uncertain. Living cultures need evidence of
+continuity, not a fall invented from the map's last observation.
+
+For archaeological claims, follow `docs/research/CONTENT-STANDARD.md`: say
+what was found, where and in what context, what it reveals, and which parts
+are interpretation. "Extensive excavations" alone does not supply a finding.

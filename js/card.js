@@ -4,9 +4,11 @@
 // top is the same renderer as the globe, frozen on the polity's borders in
 // the requested year, and tapping it opens the explorer at that moment.
 
-import { HistoryData } from './data.js?v=research-2';
-import { Globe } from './globe.js';
-import { TimeScale, formatYear, formatCivSpan } from './timeline.js?v=research-2';
+import { HistoryData } from './data.js?v=depth-1';
+import { Globe } from './globe.js?v=depth-1';
+import { TimeScale, formatYear, formatCivSpan, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+
+import { matchingPeriods, partitionItems, endingFor } from './card-periods.js?v=depth-1';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -44,6 +46,20 @@ function pill(entry, year, kind = 'globe') {
   return el('span', 'pill plain', name);
 }
 
+function appendReferences(parent, ids, card) {
+  for (const id of ids || []) {
+    const sourceIndex = (card?.sources || []).findIndex(s => s.id === id);
+    const source = card?.sources?.[sourceIndex];
+    if (!source) continue;
+    parent.appendChild(document.createTextNode(' '));
+    const a = el('a', 'source-ref', `[${sourceIndex + 1}]`);
+    a.setAttribute('aria-label', `Source ${sourceIndex + 1}: ${source.title || 'Supporting evidence'}`);
+    a.title = source.title || 'Supporting evidence';
+    a.href = `#source-${encodeURIComponent(id)}`;
+    parent.appendChild(a);
+  }
+}
+
 async function main() {
   const manifest = await data.load('data/manifest.json');
   const civ = id ? data.civ(id) : null;
@@ -58,8 +74,8 @@ async function main() {
 
   const tl = manifest.timeline || {};
   const scale = new TimeScale(tl.start ?? -3500, tl.end ?? new Date().getFullYear(), tl.anchors);
-  const last = civ.to == null ? scale.end : civ.to - 1;
-  const year = Number.isFinite(yearParam) ? Math.max(civ.from, Math.min(last, yearParam)) : Math.round((civ.from + last) / 2);
+  const last = civ.to == null ? scale.end : advanceYear(civ.to, -1);
+  const year = normalizeYear(Number.isFinite(yearParam) ? yearParam : (civ.from + last) / 2);
 
   document.title = `${civ.name}, ${formatCivSpan(civ)}: Human History Map`;
   $('swatch').style.background = civ.color;
@@ -82,17 +98,27 @@ async function main() {
 
   // the extent map, drawn once the borders for that year are in
   const mini = new Globe($('minimap'), { interactive: false, labels: true, view: manifest.view || {} });
-  data.loadBase().then((b) => mini.setBase(b));
+  data.loadBase().then((b) => mini.setBase(b)).catch(console.error);
+  let failedMapYear = year;
+  async function drawMap() {
   await data.ensureYear(year);
   let feats = data.featuresOf(civ.id, year);
   let shownYear = year;
-  if (!feats.length) {
+  let failed = data.yearStatus(year).state === 'error';
+  failedMapYear = year;
+  if (!feats.length && !failed) {
     const near = data.nearestDrawnYear(civ.id, year);
-    if (near != null) { shownYear = near; await data.ensureYear(near); feats = data.featuresOf(civ.id, near); }
+    if (near != null) {
+      shownYear = near; await data.ensureYear(near); feats = data.featuresOf(civ.id, near);
+      failed = data.yearStatus(near).state === 'error'; failedMapYear = near;
+    }
   }
   mini.setPolities(data.polities(shownYear));
   mini.setSelected(civ.id);
-  if (feats.length) {
+  if (failed) {
+    mini.setPolities([]);
+    $('heroCaption').textContent = `Borders for ${formatYear(failedMapYear)} could not fully load. Please retry.`;
+  } else if (feats.length) {
     mini.focusFeatures(feats, { animate: false, zoom: Math.min(mini.fitZoomFor(feats), 5) });
     $('heroCaption').textContent = shownYear === year
       ? `Borders as drawn for ${formatYear(year)}`
@@ -100,8 +126,18 @@ async function main() {
     const approx = feats.some((f) => f.properties.precision === 1);
     if (approx) $('heroCaption').textContent += ' (approximate)';
   } else {
-    $('heroCaption').textContent = 'No border has been drawn for this polity yet.';
+    $('heroCaption').textContent = failed ? `Borders for ${formatYear(failedMapYear)} could not load.` : 'No border has been drawn for this polity yet.';
   }
+
+  let retry = document.getElementById('retryCardMap');
+  if (!retry) {
+    retry = el('button', 'retry-map', 'Retry map loading'); retry.id = 'retryCardMap';
+    $('heroCaption').parentElement.appendChild(retry);
+    retry.addEventListener('click', async () => { await data.retryYear(failedMapYear); await drawMap(); });
+  }
+  retry.hidden = !failed;
+  }
+  await drawMap();
 
   drawLifebar(scale, civ, year);
 
@@ -113,30 +149,51 @@ async function main() {
   else if (quoted) { lead.textContent = quoted.text; quotedSource = quoted.source; }
   else { lead.textContent = 'The summary for this polity has not been written yet.'; lead.classList.add('pending'); }
 
+  const context = el('section', 'period-context');
+  context.appendChild(el('h2', null, `In ${formatYear(year)}`));
+  const periods = matchingPeriods(card, year);
+  if (periods.length) {
+    for (const period of periods) {
+      if (period.title) context.appendChild(el('h3', null, period.title));
+      context.appendChild(el('p', 'num', formatSpan(period.from, period.to, { circa: !!period.circa })));
+      context.appendChild(el('p', null, period.summary));
+      appendReferences(context, period.sourceIds, card);
+    }
+  } else context.appendChild(el('p', 'pending', 'A sourced account for this selected period has not been added yet. The history below covers other moments too.'));
+  lead.before(context, el('h2', 'history-context', 'Across this civilization’s history'));
+
   const sections = $('sections');
   if (card && Array.isArray(card.sections)) {
     for (const s of card.sections) {
       if (!s || !Array.isArray(s.items) || !s.items.length) continue;
       const sec = el('section');
       sec.appendChild(el('h2', null, s.title || ''));
+      const groups = partitionItems(s.items, year);
+      for (const [key, items] of Object.entries(groups)) {
+      if (!items.length) continue;
+      const label = key === 'earlier' ? `Dated events through ${formatYear(year)}`
+        : key === 'later' ? `Later than ${formatYear(year)}` : 'Broader context, not dated to this year';
+      sec.appendChild(el('h3', 'item-period-label', label));
       const ul = el('ul', 'items');
-      for (const it of s.items) {
+      for (const it of items) {
         const li = el('li');
         const hasYear = typeof it.year === 'number';
         if (hasYear) li.appendChild(el('span', 'when num', (it.circa ? 'c. ' : '') + formatYear(it.year)));
         else li.classList.add('undated');
         const body = el('span');
         body.textContent = it.text || '';
+        appendReferences(body, it.sourceIds, card);
         if (it.link && it.link.civ && data.civ(it.link.civ)) {
           body.appendChild(document.createTextNode(' '));
           const a = el('a', null, 'See on the globe');
-          a.href = globeURL(it.link.civ, Number.isFinite(it.link.year) ? it.link.year : it.year);
+          a.href = globeURL(it.link.civ, Number.isFinite(it.link.year) ? it.link.year : (Number.isFinite(it.year) ? it.year : year));
           body.appendChild(a);
         }
         li.appendChild(body);
         ul.appendChild(li);
       }
       sec.appendChild(ul);
+      }
       sections.appendChild(sec);
     }
   } else if (!card) {
@@ -144,17 +201,16 @@ async function main() {
     sections.appendChild(p);
   }
 
-  const fall = (card && card.fall) || civ.fell;
-  if (fall && (fall.year != null || fall.text || (fall.to && fall.to.length))) {
-    $('fallSection').hidden = false;
-    const when = fall.year != null ? fall.year : civ.to;
-    const head = when != null ? `Fell in ${formatYear(when)}. ` : '';
-    $('fallText').textContent = head + (fall.text || '');
-    const to = $('fallTo');
-    for (const t of fall.to || []) to.appendChild(pill(t, when != null ? when : civ.to));
-  } else if (civ.to == null) {
-    $('fallSection').hidden = false;
-    $('fallText').textContent = 'Still on the map today.';
+  const ending = endingFor(card, civ);
+  $('fallSection').hidden = false;
+  $('fallSection').querySelector('h2').textContent = 'Endings and continuity';
+  const when = Number.isFinite(ending.year) ? ending.year : null;
+  const prefix = when == null ? '' : `${formatYear(when)}${when > year ? ', later than the selected year' : ''}. `;
+  $('fallText').textContent = (ending.circa && when != null ? 'c. ' : '') + prefix + (ending.text || 'The details of this transition have not been added yet.');
+  appendReferences($('fallText'), ending.sourceIds, card);
+  for (const target of ending.to || []) {
+    // Without a researched transition date, offer the destination history.
+    $('fallTo').appendChild(pill(target, when, when == null ? 'card' : 'globe'));
   }
 
   const chain = $('chain');
@@ -163,7 +219,7 @@ async function main() {
     $('chainSection').hidden = false;
     if (pre.length) {
       chain.appendChild(el('span', 'pill plain', 'Before'));
-      for (const p of pre) { const c = data.civ(p); chain.appendChild(pill(p, c ? (c.to == null ? scale.end : c.to - 1) : civ.from, 'card')); }
+      for (const p of pre) { const c = data.civ(p); chain.appendChild(pill(p, c ? (c.to == null ? scale.end : advanceYear(c.to, -1)) : civ.from, 'card')); }
     }
     if (suc.length) {
       chain.appendChild(el('span', 'pill plain', 'After'));
@@ -176,8 +232,10 @@ async function main() {
   if (sources.length) {
     $('sourcesSection').hidden = false;
     const ul = $('sources');
-    for (const s of sources) {
+    for (const [sourceIndex, s] of sources.entries()) {
       const li = el('li');
+      li.appendChild(document.createTextNode(`[${sourceIndex + 1}] `));
+      if (s.id) li.id = `source-${encodeURIComponent(s.id)}`;
       if (s.url) { const a = el('a', null, s.title || s.url); a.href = s.url; a.rel = 'noopener'; a.target = '_blank'; li.appendChild(a); }
       else li.textContent = s.title || '';
       if (s.note) li.appendChild(document.createTextNode(` ${s.note}`));

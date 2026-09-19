@@ -73,11 +73,17 @@ field by field in **`DATA-FORMAT.md`**. What is there now:
   kept as cultures and drawn fainter.
 - **Summaries**: the opening lines of the matching English Wikipedia
   article (CC BY-SA 4.0), each with its article link, for polities where an
-  article could be matched with confidence. Twenty-four are hand-written in
-  `data/curated.json` and win over the fetched ones.
-- **Cards**: two finished (Roman Empire, Han Dynasty) as models for the
-  research pipeline, which adds cards and corrects borders without
-  touching the code.
+  article could be matched with confidence. Written summaries in
+  `data/curated.json` and `data/researched-overrides.json` win over fetched text.
+- **Cards**: the generated `data/cards/index.json` lists published cards.
+  Research packets and independent reviews are kept separately under
+  `data/research/`; the coverage ledger distinguishes narratives from
+  verified identity, chronology and geometry. All cards address endings
+  and continuity. Source-supported period summaries follow the selected
+  year; later events and undated context are clearly separated.
+- **Evidence depth**: `docs/research/CONTENT-STANDARD.md` requires concrete
+  discoveries and what they reveal, alongside cultural life and a sourced
+  account of how a polity ended or a culture continued.
 
 To regenerate everything (needs `npm install` once, for the TopoJSON tools):
 

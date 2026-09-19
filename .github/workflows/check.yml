@@ -21,3 +21,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: node scripts/validate.mjs --strict
+      - run: node scripts/test-card-periods.mjs
+      - run: node scripts/tests-app-interactions.mjs
+      - run: node scripts/tests-globe-data.mjs

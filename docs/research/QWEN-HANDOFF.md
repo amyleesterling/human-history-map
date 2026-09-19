@@ -71,3 +71,7 @@ assigned to QWEN, while cross-continental cases remain explicit.
 ## Publication checkpoints
 
 Run `node scripts/research-audit.mjs`, then `node scripts/research-reviews.mjs`, then `node scripts/research-coverage.mjs` and `node scripts/validate.mjs --strict`. Independent acceptance is tied to the reviewed card SHA-256. Keep new batch cards in regional `proposed-cards/` directories until review, even when the ID already exists.
+
+## Shared depth standard
+
+Amy requires concrete discoveries and what they reveal, plus how each polity ended if known. Apply `CONTENT-STANDARD.md` and the `periods`/`ending` contract in `DATA-FORMAT.md` to Asian cards too. Do not replace missing research with a claim that historians do not know. Findings should distinguish excavated evidence from interpretation. Cultural continuity, governmental transformation and conquest are separate outcomes.
