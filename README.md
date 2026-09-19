@@ -90,8 +90,10 @@ node scripts/validate.mjs                                    # check, and write 
 
 ## Deploying
 
-GitHub Pages from the repository root (there is a `.nojekyll`). Nothing to
-build.
+Every push to `main` runs `.github/workflows/deploy.yml`, which copies the
+site's files (without the scripts, the tooling and the cache) to GitHub
+Pages. Nothing to build. The site lives at
+https://amyleesterling.github.io/human-history-map/
 
 ## Credits
 
