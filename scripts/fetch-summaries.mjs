@@ -197,6 +197,10 @@ async function lookupExact(q) {
 // present-day country's article is looked up as its ancient self or its
 // history instead, or left without a summary
 async function lookupFor(c, modernNames) {
+  // a pinned title wins outright: the name alone found a namesake ("Wu"
+  // the empress for Wu the state), or nothing on Wikipedia is about this
+  // polity and an empty pin says so
+  if (c.wikipedia != null) return c.wikipedia ? lookupExact(c.wikipedia) : { title: null };
   const plain = lookupName(c.name);
   const old = c.to != null && c.to <= 1900;
   const modernTitle = (t) => t && modernNames.has(lookupName(t).toLowerCase());

@@ -247,7 +247,9 @@ for (const c of curated) {
     else p[k] = v;
   }
   if (c.from != null || c.to != null) p.circa = false;
-  delete p.generated;
+  // a curated entry that only pins a Wikipedia title leaves the record a
+  // generated one; the marker tells the coverage report what is researched
+  if (Object.keys(c).some((k) => k !== 'id' && k !== 'wikipedia')) delete p.generated;
 }
 
 // ---- pass 4: present-day countries join the polities alive in 2010 ---------
