@@ -52,7 +52,9 @@ export class HistoryData {
   }
 
   async fetchJSON(path) {
-    const res = await fetch(this.url(path), { cache: 'force-cache' });
+    // Revalidate mutable JSON after a deployment. Force-cache can preserve
+    // an old card index indefinitely and hide newly published research.
+    const res = await fetch(this.url(path), { cache: 'no-cache' });
     if (!res.ok) throw new Error(`${res.status} loading ${path}`);
     return res.json();
   }
@@ -320,7 +322,7 @@ export class HistoryData {
     const pattern = (this.manifest && this.manifest.cards) || 'cards/{id}.json';
     const path = civ.card || pattern.replace('{id}', id);
     try {
-      const res = await fetch(this.url(this.dataDir + path), { cache: 'force-cache' });
+      const res = await fetch(this.url(this.dataDir + path), { cache: 'no-cache' });
       if (!res.ok) return null;
       return await res.json();
     } catch (e) {
