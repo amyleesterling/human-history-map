@@ -4,9 +4,9 @@
 // top is the same renderer as the globe, frozen on the polity's borders in
 // the requested year, and tapping it opens the explorer at that moment.
 
-import { HistoryData } from './data.js';
+import { HistoryData } from './data.js?v=research-2';
 import { Globe } from './globe.js';
-import { TimeScale, formatYear, formatCivSpan } from './timeline.js';
+import { TimeScale, formatYear, formatCivSpan } from './timeline.js?v=research-2';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);

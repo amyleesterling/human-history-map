@@ -3,9 +3,9 @@
 // a function of (year, view, selected polity), and all three live in the
 // query string so any moment can be shared.
 
-import { HistoryData } from './data.js';
+import { HistoryData } from './data.js?v=research-2';
 import { Globe } from './globe.js';
-import { TimeScale, formatYear, formatCivSpan, defaultTicks } from './timeline.js';
+import { TimeScale, formatYear, formatCivSpan, defaultTicks } from './timeline.js?v=research-2';
 
 const $ = (id) => document.getElementById(id);
 const els = {

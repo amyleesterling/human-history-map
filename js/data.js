@@ -52,7 +52,9 @@ export class HistoryData {
   }
 
   async fetchJSON(path) {
-    const res = await fetch(this.url(path), { cache: 'force-cache' });
+    // Revalidate mutable JSON after a deployment. Force-cache can preserve
+    // an old card index indefinitely and hide newly published research.
+    const res = await fetch(this.url(path), { cache: 'no-cache' });
     if (!res.ok) throw new Error(`${res.status} loading ${path}`);
     return res.json();
   }
