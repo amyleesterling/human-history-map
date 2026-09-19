@@ -25,6 +25,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # the validator decodes the TopoJSON borders with topojson-client, the
+      # one dependency the scripts have; the site itself installs nothing
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - name: Check the data
         run: node scripts/validate.mjs --strict
       - name: Assemble the site
