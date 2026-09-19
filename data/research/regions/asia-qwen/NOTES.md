@@ -171,3 +171,86 @@ marked precision 1, and draw dashed.
 
 Since Cao Wei, Shu Han and Eastern Wu are now polities with cards, the
 Han card's fall entry names them by id so the three pills link.
+
+## Cards, fourth drop: Korea, Japan, Tibet and the steppe
+
+Thirteen cards delivered (Silla twice, identical); kept verbatim in
+`proposed-cards/`, published with these changes.
+
+- **Ids.** `unified-silla` is the site's `silla` (which runs to 935),
+  `liao-dynasty` and `uyghur-khaganate` are the imported `liao` and
+  `uyghurs`, and Qwen's `xiongnu` card is Modu's empire, so it is published
+  as `xiongnu-bc200`, the entry the batch integration already maps it to
+  (the imported `xiongnu` of 400 to 323 BCE is a pre-imperial snapshot).
+- **Fall links land on drawn borders.** Balhae's fall links `khitans`,
+  the polygon on the map in 926; the imported Liao begins in 1000, so a
+  link to it opened an empty view. The polity entry's `fell` is patched
+  the same way in `integrate-asia.mjs`. Goguryeo and Baekje fall to `silla`
+  and `tang`, both drawn in 668 and 660. Kamakura's link to `muromachi`
+  opens a chip saying the map covers 1400 to 1492, since the imported
+  1300 map's Japan is the Kamakura polygon and no map holds the Ashikaga
+  years before 1400; a known seam, left for a researched border.
+- **Joseon runs to 1910.** Qwen ended it in 1897 with a fall to a
+  "korean-empire" that has no entry. The Korean Empire was Joseon under a
+  new title, and the imported 1900 map draws it, so the entry now ends at
+  the annexation of 1910 and falls to `imperial-japan`, which is drawn
+  then. Ending in 1897 had left Korea blank until the 1914 map.
+- **goguryeo**: Korea's name comes from Goryeo, which took its name from
+  Goguryeo, not from Goguryeo directly; the gold crowns are gilt-bronze
+  ornaments; the two UNESCO listings are named with their year (2004);
+  the fall text adds the Tang protectorate and Silla's expulsion of Tang
+  by 676.
+- **silla**: Bulguksa and Seokguram dated (begun 751, listed 1995);
+  Cheomseongdae dated by Queen Seondeok's reign (632 to 647); the
+  unification of 676 added to the overview; Gyeongju listing dated 2000.
+- **baekje**: the Buddhism-to-Japan item is marked circa, since Japanese
+  sources give 538 or 552; the fall adds Baekgang (663) and Tang's
+  interim rule; the incense burner's find (Neungsan-ri, 1993) is named.
+- **balhae**: founding (698, Dae Joyeong) added; "surprise campaign"
+  becomes a campaign of a few weeks under Yelü Abaoji.
+- **goryeo**: the 1234 printing names the Sangjeong Gogeum Yemun and the
+  Jikji (1377) as the oldest surviving metal-type book; the Tripitaka
+  Koreana is "more than 81,000 blocks", since UNESCO and the temple's own
+  recount give 81,258 and 81,352; "still usable after 800 years" becomes
+  "nearly 800 years" (1251 to today is 775); the examinations are dated
+  to 958 and no longer said to test Buddhist texts (monks had a separate
+  examination); the Khan Academy link is the canonical one (Qwen's had a
+  typo in the path, though it resolves) and UNESCO's Haeinsa listing is
+  added.
+- **joseon**: Hangul 1443 with the 1446 promulgation; the rain gauge's
+  European comparison is dated (1639); the clock is dated 1434 and named;
+  the Chiljeongsan (1442) and Donguibogam (1613) are added; the Annals'
+  span (1392 to 1863) is given.
+- **yamato**: the largest kofun is named and measured (Daisen, 486 m);
+  Shotoku's constitution (604), the Inariyama sword (471) and the Taika
+  Reform (645) are added; "Shinto" is glossed as the later name for kami
+  worship; the Mozu-Furuichi listing (2019) is added.
+- **nara-japan**: the Manyoshu count (4,516) and its latest poem (759),
+  the Kojiki (712) and Nihon Shoki (720), the Great Buddha (752) and the
+  provincial temples (741) are dated; the ritsuryo codes are named.
+- **heian-japan**: The Pillow Book marked circa; the kana (c. 900),
+  Tendai and Shingon (806), Genshin (985) and the Phoenix Hall (1053) are
+  dated; the fall adds Dan-no-ura and the shogunal title of 1192.
+- **kamakura**: Zen (Eisai 1191, Dogen 1227), the Pure Land and Lotus
+  schools (1175, 1253) and the Great Buddha (1252) are dated; "Zen
+  gardens" dropped, since the dry garden is a Muromachi form; bushido
+  is described as the later codification; the Mongol invasions (1274,
+  1281) are added; the fall names Ashikaga Takauji's shogunate of 1336.
+- **tibetan-empire**: the script is dated c. 640 and its model given as an
+  Indian script of the Gupta type rather than Brahmi; Samye (779),
+  Chang'an (763), Dunhuang (786 to 848) and the treaty pillar (822) are
+  added; the fall names the Era of Fragmentation.
+- **xiongnu-bc200**: Modu (209 BCE), the heqin treaties (198 BCE), the
+  split of 54 BCE and Ikh Bayan (89 CE) are added; the fall also links
+  `southern-xiongnu`, drawn from 100.
+- **gokturk**: Qwen dated the Orkhon script c. 600; the oldest long texts
+  are the Kül Tegin and Bilge Qaghan stelae of 732 and 735, so the item
+  says so. Manichaeism is dropped (it reached the steppe with the Uyghurs
+  in 762) and Taspar Qaghan's Buddhism (c. 575) and Maniakh's embassy
+  (568) are added. Qwen's World History Encyclopedia link does not
+  resolve to an article, so the sources are Wikipedia's First Turkic
+  Khaganate and Orkhon inscriptions pages.
+- **Sources.** Britannica, UNESCO, Khan Academy and the Met all block
+  automated link checks, so their links were confirmed by search or by
+  their known slugs (Britannica's Koguryo, Parhae, Choson dynasty,
+  Kamakura period and Tibet history pages).
