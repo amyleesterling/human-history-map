@@ -1,0 +1,23 @@
+# Checks the data on every push and pull request. Publishing is not done
+# here: GitHub Pages serves the main branch's root directly (Settings ->
+# Pages -> deploy from a branch), so a push to main is live within a minute
+# with nothing to build. This job only makes sure that what lands is sound.
+name: Check the data
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # the validator decodes the TopoJSON borders with topojson-client, the
+      # one dependency the scripts have; the site itself installs nothing
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/validate.mjs --strict

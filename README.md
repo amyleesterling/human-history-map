@@ -90,9 +90,10 @@ node scripts/validate.mjs                                    # check, and write 
 
 ## Deploying
 
-Every push to `main` runs `.github/workflows/deploy.yml`, which copies the
-site's files (without the scripts, the tooling and the cache) to GitHub
-Pages. Nothing to build. The site lives at
+GitHub Pages serves the `main` branch's root directly (Settings, Pages,
+deploy from a branch), so a push to `main` is live within a minute with
+nothing to build. `.github/workflows/check.yml` runs the data validator on
+every push and pull request. The site lives at
 https://amyleesterling.github.io/human-history-map/
 
 ## Credits
