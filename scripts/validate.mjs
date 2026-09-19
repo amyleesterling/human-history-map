@@ -161,8 +161,12 @@ for (const b of manifest.borders || []) {
     else err(`${where} (${p.civ}): geometry must be a Polygon or MultiPolygon, not ${g.type}`);
   });
 }
+// a researched polity may arrive before anyone has drawn its border; the
+// site copes (search finds it, the chip says no border is drawn yet), so
+// this is worth knowing but not worth failing a strict run over
+const notes = [];
 for (const c of civs.values()) {
-  if (!drawn.has(c.id) && !c.generated) warn(`${c.id}: no border drawn in any file`);
+  if (!drawn.has(c.id) && !c.generated) notes.push(`${c.id}: no border drawn in any file yet`);
 }
 
 // ---- summaries --------------------------------------------------------
@@ -262,6 +266,7 @@ if (!errors.length) {
 }
 
 function report() {
+  for (const n of notes) console.log('note:', n);
   for (const w of warnings) console.log('warning:', w);
   for (const e of errors) console.log('ERROR:', e);
   console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${withSummary} with summaries, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
