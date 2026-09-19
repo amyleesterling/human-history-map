@@ -93,8 +93,10 @@ body.explorer {
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px;
   pointer-events: none;
 }
+/* above the map key, which shares the top right corner, so the notice's
+   button can always be reached */
 .notice {
-  position: absolute; top: 10px; left: 12px; right: 12px; margin: 0 auto; max-width: 520px;
+  position: absolute; top: 10px; left: 12px; right: 12px; margin: 0 auto; max-width: 520px; z-index: 5;
   display: flex; gap: 10px; align-items: center; justify-content: space-between;
   font-size: 13px; color: var(--ink-dim);
   background: var(--panel); border: 1px solid rgba(224,164,88,.45); border-radius: 10px; padding: 8px 8px 8px 12px;

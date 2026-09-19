@@ -104,42 +104,79 @@ function trimExtract(s, max = 520) {
 const DESCRIPTIVE = /hunter|gatherer|farmers|foraging|fishers|fichers|nomads|pastoral|shellfish|chiefdoms|societies|tribes$|peoples$|cultures$/i;
 
 let failures = 0;
-async function lookup(name, kind) {
+// The direct result is cached by name. When the name is a disambiguation
+// page the resolution depends on the polity's dates, so that result is
+// cached by name and span; a "Jin" of 300 CE and a "Jin" of 1115 CE each
+// get their own.
+async function lookup(name, kind, span) {
   const file = join(CACHE, key(name) + '.json');
-  if (existsSync(file)) return JSON.parse(readFileSync(file, 'utf8'));
   const q = lookupName(name);
+  let r;
   try {
-    return await finish(file, await find(q, kind));
+    r = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : await finish(file, ...(await find(q, kind)));
+  } catch (e) {
+    failures++;
+    return { title: null };
+  }
+  if (r.title || !r.ambiguous) return r;
+  const file2 = join(CACHE, key(`${name}@${span ? span.join('..') : ''}`) + '.json');
+  if (existsSync(file2)) return JSON.parse(readFileSync(file2, 'utf8'));
+  try {
+    return await finish(file2, await resolveAmbiguous(q, span));
   } catch (e) {
     failures++;
     return { title: null };
   }
 }
 
-async function finish(file, hit) {
-  const out = hit ? { title: hit.title, url: hit.url, extract: hit.extract } : { title: null };
+async function finish(file, hit, extra = {}) {
+  const out = hit ? { title: hit.title, url: hit.url, extract: hit.extract } : { title: null, ...extra };
   writeFileSync(file, JSON.stringify(out));
   await sleep(120);
   return out;
 }
 
-async function find(q, kind) {
-  let hit = null;
-  if (!DESCRIPTIVE.test(q) || /culture$/i.test(q)) {
-    const s = await summaryOf(q);
-    if (s && s.type === 'standard' && s.extract.length > 40) hit = s;
-    else if (kind !== 'culture' && !DESCRIPTIVE.test(q)) {
-      // disambiguation or nothing: look for the state by that name
-      const st = stem(q);
-      const titles = await search(`${q} (empire OR kingdom OR dynasty OR state OR civilization OR caliphate OR sultanate OR khanate OR republic)`);
-      for (const t of titles) {
-        if (st && !t.toLowerCase().includes(st)) continue;
-        const s2 = await summaryOf(t);
-        if (s2 && s2.type === 'standard' && s2.extract.length > 40) { hit = s2; break; }
-      }
-    }
+// "Jin dynasty (266–420)" carries its own dates; a polity of 300 to 600 CE
+// is that Jin and not the Jurchen one of 1115 to 1234
+const YEARS = /\((?:c\.\s*)?(\d{1,4})\s*(BC|BCE)?\s*[\u2013\u2014-]\s*(\d{1,4})\s*(BC|BCE|AD|CE)?\)/;
+function titleSpan(t) {
+  const m = YEARS.exec(t);
+  if (!m) return null;
+  let a = +m[1], b = +m[3];
+  if (m[4] && /BC/.test(m[4])) { a = -a; b = -b; } else if (m[2]) a = -a;
+  return [Math.min(a, b), Math.max(a, b)];
+}
+const overlaps = (s, span, slack = 60) => s[0] - slack <= span[1] && span[0] <= s[1] + slack;
+const escapeRe = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+// the name must be a whole word of the title: "Han" is not in "Ilkhanate"
+const wordIn = (t, name) => new RegExp(`(^|[^\\p{L}])${escapeRe(name)}([^\\p{L}]|$)`, 'iu').test(t);
+const KIND_WORD = /dynasty|empire|kingdom|state|caliphate|sultanate|khaganate|khanate|republic|civilization|culture|people|period|confederation|commonwealth/i;
+
+// A name that is a disambiguation page (Jin, Zhou, Song): the articles
+// whose titles carry the name, filtered by whole word, list pages dropped,
+// a dated title only if its dates overlap the polity's, "X dynasty" forms
+// first.
+async function resolveAmbiguous(q, span) {
+  const titles = [...new Set([...(await search(`intitle:"${q}"`)), ...(await search(`${q} dynasty OR empire OR kingdom OR state`))])];
+  const ok = titles.filter((t) => !NOT_AN_ARTICLE.test(t) && wordIn(t, q))
+    .filter((t) => { const s = titleSpan(t); return !s || !span || overlaps(s, span); })
+    .sort((a, b) => (KIND_WORD.test(b) ? 1 : 0) - (KIND_WORD.test(a) ? 1 : 0) || a.length - b.length);
+  for (const t of ok) {
+    const s = await summaryOf(t);
+    if (s && s.type === 'standard' && s.extract.length > 40) return s;
   }
-  return hit;
+  return null;
+}
+
+// returns [hit, extra]: the article, or null with a note of why, so that a
+// disambiguation page can be resolved later with the polity's dates
+async function find(q, kind) {
+  if (DESCRIPTIVE.test(q) && !/culture$/i.test(q)) return [null, {}];
+  const s = await summaryOf(q);
+  if (s && s.type === 'standard' && s.extract.length > 40) return [s, {}];
+  const ambiguous = !!s && s.type === 'disambiguation';
+  if (kind === 'culture' || DESCRIPTIVE.test(q)) return [null, { ambiguous }];
+  return [null, { ambiguous: ambiguous || !s }];
 }
 
 async function lookupExact(q) {
@@ -171,8 +208,9 @@ async function lookupFor(c, modernNames) {
     return { title: null };
   };
   if (old && modernTitle(plain)) return historical(plain);
-  let r = await lookup(c.name, c.kind);
-  for (const a of c.aliases || []) { if (r.title) break; r = await lookup(a, c.kind); }
+  const span = [c.from, c.to == null ? 2026 : c.to];
+  let r = await lookup(c.name, c.kind, span);
+  for (const a of c.aliases || []) { if (r.title) break; r = await lookup(a, c.kind, span); }
   if (old && r.title && modernTitle(r.title)) return historical(r.title);
   return r;
 }
@@ -201,6 +239,8 @@ if (prefetchFile) {
   const modernNames = new Set();
   for (const rel of civFiles) {
     for (const c of JSON.parse(readFileSync(join(root, 'data', rel), 'utf8'))) {
+      // an override entry may carry only an id and a few fields
+      if (!c.name) continue;
       if (c.to == null) for (const n of [c.name, ...(c.aliases || [])]) modernNames.add(lookupName(n).toLowerCase());
     }
   }
@@ -208,7 +248,7 @@ if (prefetchFile) {
     const list = JSON.parse(readFileSync(join(root, 'data', rel), 'utf8'));
     const outRel = rel.replace(/civilizations(-[^/]*)?\.json$/, (m, suf) => `summaries${suf || ''}.json`);
     if (outRel === rel) continue;
-    const need = list.filter((c) => c.summary == null);
+    const need = list.filter((c) => c.summary == null && c.name);
     if (!need.length) continue;
     const summaries = {};
     let found = 0;

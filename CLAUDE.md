@@ -28,8 +28,15 @@ footnote. That is the whole brief; keep every change in its service.
   account), present-day borders from Natural Earth, and summaries quoted
   from Wikipedia (CC BY-SA 4.0, always with the link). Never edit them by
   hand: change `data/curated.json` or the scripts and regenerate, in the
-  order build-base, import, fetch-summaries, validate. The manifest notice
-  tells visitors where the data comes from; keep it honest.
+  order build-base, import, integrate-asia, fetch-summaries, validate. The
+  manifest notice tells visitors where the data comes from; keep it honest.
+- **Asia comes from Qwen, the rest from Codex.** Qwen's batches are kept
+  verbatim under `data/research/regions/asia-qwen/` and folded in by
+  `scripts/integrate-asia.mjs`; Codex's packets live in the other
+  `data/research/regions/` folders and land as cards and
+  `data/researched-overrides.json`. When a Qwen id and an imported polity
+  are the same thing, harmonize the import's name in the importer's merge
+  table rather than keeping two ids.
 - **Run `node scripts/validate.mjs` after any data change.** It is the only
   test harness. It also regenerates `data/cards/index.json`, which the pages
   read so they never request a card that is not there.
