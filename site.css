@@ -123,32 +123,53 @@ body.explorer {
 
 .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 4px; flex: none; box-shadow: 0 0 0 1px rgba(255,255,255,.25) inset; }
 
-/* the tooltip: a card by the finger on wide screens, a sheet on phones */
+/* the tooltip: a slim chip (name, dates, one line) so the globe stays in
+   view, with an arrow that opens the summary and the buttons. A card by the
+   finger on wide screens; a bar along the bottom on phones. */
 .tip {
-  position: absolute; z-index: 6; width: 300px; max-width: calc(100% - 24px);
+  position: absolute; z-index: 6; width: 320px; max-width: calc(100% - 24px);
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
-  padding: 12px 14px 12px; box-shadow: 0 12px 34px rgba(0,0,0,.45);
+  padding: 8px 10px 8px 12px; box-shadow: 0 12px 34px rgba(0,0,0,.45);
   backdrop-filter: blur(8px);
 }
+.tip-head {
+  display: flex; align-items: center; gap: 10px; width: calc(100% - 26px);
+  background: none; border: 0; padding: 0; text-align: left; cursor: pointer; color: inherit;
+  touch-action: manipulation;
+}
+.tip-title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.tip-head h2 { margin: 0; font-size: 16px; font-weight: 650; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-span { font-size: 12px; color: var(--ink-dim); letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-chevron { flex: none; color: var(--ink-dim); transition: transform .18s ease; }
+.tip[data-open="true"] .tip-chevron { transform: rotate(180deg); }
+.tip-head:hover .tip-chevron { color: var(--ink); }
 .tip-close {
-  position: absolute; top: 6px; right: 8px; background: none; border: 0; color: var(--ink-faint);
+  position: absolute; top: 4px; right: 6px; background: none; border: 0; color: var(--ink-faint);
   font-size: 22px; line-height: 1; cursor: pointer; padding: 4px 6px; touch-action: manipulation;
 }
 .tip-close:hover { color: var(--ink); }
-.tip-head { display: flex; align-items: center; gap: 9px; padding-right: 24px; }
-.tip-head h2 { margin: 0; font-size: 17px; font-weight: 650; line-height: 1.25; }
-.tip-span { margin: 4px 0 0; font-size: 12.5px; color: var(--ink-dim); letter-spacing: .02em; }
-.tip-meta { margin: 4px 0 0; font-size: 12.5px; color: var(--ink-faint); }
-.tip-summary { margin: 8px 0 0; font-size: 14px; color: var(--ink); }
+/* one sentence, cut with an ellipsis; gone once the card is open */
+.tip-line { margin: 6px 0 0; font-size: 13px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-line.pending { color: var(--ink-faint); font-style: italic; }
+.tip[data-open="true"] .tip-line { display: none; }
+.tip-body { margin-top: 8px; display: flex; flex-direction: column; min-height: 0; }
+/* the text scrolls; the buttons stay put beneath it */
+.tip-scroll { overflow: auto; min-height: 0; max-height: 50vh; }
+.tip-meta { margin: 0 0 6px; font-size: 12.5px; color: var(--ink-faint); }
+.tip-summary { margin: 0; font-size: 14px; color: var(--ink); }
 .tip-summary.pending { color: var(--ink-faint); font-style: italic; }
 .tip-source { margin: 6px 0 0; font-size: 11.5px; color: var(--ink-faint); }
 .tip-source a { color: var(--ink-faint); }
-.tip-actions { display: flex; gap: 8px; margin-top: 12px; }
+.tip-actions { display: flex; gap: 8px; margin-top: 12px; flex: none; }
 @media (max-width: 640px) {
   .tip {
     left: 8px !important; right: 8px !important; top: auto !important; bottom: 8px !important;
-    width: auto; max-width: none; max-height: 46%; overflow: auto;
+    width: auto; max-width: none;
   }
+  /* open, the sheet may take at most half the stage; the summary scrolls inside it */
+  .tip[data-open="true"] { display: flex; flex-direction: column; max-height: 58%; }
+  .tip[data-open="true"] .tip-body { flex: 1 1 auto; }
+  .tip[data-open="true"] .tip-scroll { max-height: none; }
 }
 
 /* ---- the controls ------------------------------------------------------- */

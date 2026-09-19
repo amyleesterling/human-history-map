@@ -39,18 +39,26 @@
   <div id="notice" class="notice" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
 
   <aside id="tip" class="tip" hidden role="dialog" aria-labelledby="tipName">
-    <button class="tip-close" id="tipClose" type="button" aria-label="Close">&times;</button>
-    <div class="tip-head">
+    <button class="tip-head" id="tipToggle" type="button" aria-expanded="false" aria-controls="tipBody" title="Show more">
       <span class="swatch" id="tipSwatch" aria-hidden="true"></span>
-      <h2 id="tipName"></h2>
-    </div>
-    <p class="tip-span num" id="tipSpan"></p>
-    <p class="tip-meta" id="tipMeta" hidden></p>
-    <p class="tip-summary" id="tipSummary"></p>
-    <p class="tip-source" id="tipSource" hidden></p>
-    <div class="tip-actions">
-      <a id="tipMore" class="btn" href="#">More info</a>
-      <button id="tipZoom" class="btn ghost" type="button">Zoom to</button>
+      <span class="tip-title">
+        <h2 id="tipName"></h2>
+        <span class="tip-span num" id="tipSpan"></span>
+      </span>
+      <svg class="tip-chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 14.5 12 8.5l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="tip-close" id="tipClose" type="button" aria-label="Close">&times;</button>
+    <p class="tip-line" id="tipLine"></p>
+    <div class="tip-body" id="tipBody" hidden>
+      <div class="tip-scroll">
+        <p class="tip-meta" id="tipMeta" hidden></p>
+        <p class="tip-summary" id="tipSummary"></p>
+        <p class="tip-source" id="tipSource" hidden></p>
+      </div>
+      <div class="tip-actions">
+        <a id="tipMore" class="btn" href="#">More info</a>
+        <button id="tipZoom" class="btn ghost" type="button">Zoom to</button>
+      </div>
     </div>
   </aside>
 </main>

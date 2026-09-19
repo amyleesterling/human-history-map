@@ -11,7 +11,8 @@ const $ = (id) => document.getElementById(id);
 const els = {
   stage: $('stage'), globe: $('globe'), loading: $('loading'), hint: $('hint'),
   notice: $('notice'), noticeText: $('noticeText'), noticeClose: $('noticeClose'),
-  tip: $('tip'), tipClose: $('tipClose'), tipSwatch: $('tipSwatch'), tipName: $('tipName'),
+  tip: $('tip'), tipClose: $('tipClose'), tipToggle: $('tipToggle'), tipLine: $('tipLine'), tipBody: $('tipBody'),
+  tipSwatch: $('tipSwatch'), tipName: $('tipName'),
   tipSpan: $('tipSpan'), tipMeta: $('tipMeta'), tipSummary: $('tipSummary'), tipSource: $('tipSource'), tipMore: $('tipMore'), tipZoom: $('tipZoom'),
   playBtn: $('playBtn'), yearOut: $('yearOut'), eraOut: $('eraOut'), speedBtn: $('speedBtn'),
   slider: $('slider'), track: $('trackCanvas'),
@@ -23,6 +24,9 @@ const SLIDER_MAX = 10000;
 const state = {
   year: -3000, time: -3000, playing: false, speed: 25,
   selected: null, mode: 'globe', tipAnchor: null,
+  // the chip opens into the full card only when asked, and stays the way
+  // the visitor left it from one tap to the next
+  tipOpen: false,
 };
 let data, globe, scale, manifest, speeds, eras = [], ticks = [];
 let rafId = 0, lastTick = 0, urlTimer = 0;
@@ -197,6 +201,7 @@ function bindControls() {
 
   els.shareBtn.addEventListener('click', share);
   els.tipClose.addEventListener('click', () => { closeTip(); deselect(); });
+  els.tipToggle.addEventListener('click', () => setTipOpen(!state.tipOpen));
   els.tipZoom.addEventListener('click', () => {
     if (!state.selected) return;
     const feats = data.featuresOf(state.selected, state.year);
@@ -350,12 +355,16 @@ function showTip(civ, anchor, feature) {
   els.tipSource.hidden = true;
   els.tipSummary.textContent = 'Loading summary';
   els.tipSummary.classList.add('pending');
+  els.tipLine.textContent = meta.length ? meta[0] : '';
+  els.tipLine.classList.remove('pending');
   const want = civ.id;
   data.summaryFor(civ.id).then((s) => {
     if (state.selected !== want || els.tip.hidden) return;
     if (s) {
       els.tipSummary.textContent = s.text;
       els.tipSummary.classList.remove('pending');
+      // the chip carries the first sentence; the arrow opens the rest
+      els.tipLine.textContent = firstSentence(s.text);
       if (s.source) {
         els.tipSource.innerHTML = '';
         const a = document.createElement('a');
@@ -366,6 +375,7 @@ function showTip(civ, anchor, feature) {
       }
     } else {
       els.tipSummary.textContent = 'Summary coming soon.';
+      if (!meta.length) { els.tipLine.textContent = 'Summary coming soon.'; els.tipLine.classList.add('pending'); }
     }
     placeTip();
   });
@@ -373,6 +383,20 @@ function showTip(civ, anchor, feature) {
   els.tipZoom.hidden = !drawn;
   state.tipAnchor = anchor || null;
   els.tip.hidden = false;
+  setTipOpen(state.tipOpen);
+}
+
+function firstSentence(text) {
+  const m = /^(.+?[.!?])(\s|$)/.exec(text);
+  return m ? m[1] : text;
+}
+
+function setTipOpen(open) {
+  state.tipOpen = !!open;
+  els.tip.dataset.open = String(state.tipOpen);
+  els.tipBody.hidden = !state.tipOpen;
+  els.tipToggle.setAttribute('aria-expanded', String(state.tipOpen));
+  els.tipToggle.title = state.tipOpen ? 'Show less' : 'Show more';
   placeTip();
 }
 
