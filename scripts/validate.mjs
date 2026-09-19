@@ -199,12 +199,53 @@ for (const c of civs.values()) {
   if (!card) continue;
   if (card.id && card.id !== c.id) err(`${rel}: id "${card.id}" does not match the file's polity ${c.id}`);
   checkCopy(`${rel}.overview`, card.overview);
+  const sourceIds = new Set();
+  for (const source of card.sources || []) {
+    if (source.id) {
+      if (sourceIds.has(source.id)) err(`${rel}: duplicate source id ${source.id}`);
+      sourceIds.add(source.id);
+    }
+  }
+  const checkEvidence = (where, refs, required = false) => {
+    if (refs == null && !required) return;
+    if (!Array.isArray(refs) || (required && !refs.length)) { err(`${where}: needs sourceIds`); return; }
+    for (const id of refs) if (!sourceIds.has(id)) err(`${where}: unknown source id ${id}`);
+  };
+  const historicalYear = n => isInt(n) && n !== 0;
+  if (card.periods != null && !Array.isArray(card.periods)) err(`${rel}.periods: must be an array`);
+  let previousEnd = -Infinity;
+  for (const period of Array.isArray(card.periods) ? card.periods : []) {
+    if (!historicalYear(period.from) || (period.to !== null && !historicalYear(period.to)) || (period.to !== null && period.from >= period.to)) err(`${rel}.periods: needs nonzero integer from < exclusive to (or null)`);
+    if (period.from < previousEnd) err(`${rel}.periods: periods must be ordered without overlap`);
+    previousEnd = period.to ?? Infinity;
+    if (!period.title || !period.summary) err(`${rel}.periods: needs title and summary`);
+    if (period.circa != null && typeof period.circa !== 'boolean') err(`${rel}.periods.circa: must be boolean`);
+    checkCopy(`${rel}.periods.title`, period.title);
+    checkCopy(`${rel}.periods.summary`, period.summary);
+    checkEvidence(`${rel}.periods`, period.sourceIds, true);
+  }
+  if (card.ending != null) {
+    const ending = card.ending;
+    if (!['conquest', 'dissolution', 'transformation', 'continuity', 'uncertain'].includes(ending.status)) err(`${rel}.ending: invalid status`);
+    if (!ending.text) err(`${rel}.ending: needs evidence-based text`);
+    if (ending.year != null && !historicalYear(ending.year)) err(`${rel}.ending.year: needs a nonzero integer`);
+    if (ending.circa != null && typeof ending.circa !== 'boolean') err(`${rel}.ending.circa: must be boolean`);
+    if (ending.to != null && !Array.isArray(ending.to)) err(`${rel}.ending.to: must be an array of polity ids`);
+    for (const target of Array.isArray(ending.to) ? ending.to : []) {
+      if (!civs.has(target)) err(`${rel}.ending.to: unknown polity ${target}`);
+      if (ending.year == null) err(`${rel}.ending.to: dated navigation needs an explicit year`);
+    }
+    checkCopy(`${rel}.ending.text`, ending.text);
+    checkEvidence(`${rel}.ending`, ending.sourceIds, true);
+  }
   for (const s of card.sections || []) {
     checkCopy(`${rel} section title`, s.title);
     if (!Array.isArray(s.items)) { err(`${rel}: section "${s.title}" needs an items array`); continue; }
     s.items.forEach((it, i) => {
       if (!it.text) err(`${rel}: section "${s.title}" item ${i} has no text`);
       if (it.year != null && !isInt(it.year)) err(`${rel}: section "${s.title}" item ${i} year must be an integer`);
+      if (it.year === 0) err(`${rel}: section "${s.title}" item ${i} cannot use year zero`);
+      checkEvidence(`${rel}: section "${s.title}" item ${i}`, it.sourceIds);
       if (it.link && it.link.civ && !civs.has(it.link.civ)) warn(`${rel}: section "${s.title}" item ${i} links to unknown polity "${it.link.civ}"`);
       checkCopy(`${rel} "${s.title}" item ${i}`, it.text);
     });

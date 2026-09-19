@@ -11,11 +11,13 @@ const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
 const walk=dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(`${dir}/${e.name}`):[`${dir}/${e.name}`]);
 const pointer=(obj,p)=>p.split('/').slice(1).reduce((v,k)=>v?.[k.replace(/~1/g,'/').replace(/~0/g,'~')],obj);
 const records=[];
-for(const file of walk('data/research/regions').filter(f=>f.endsWith('/evidence.json'))){
+const packetRoots=['data/research/regions','data/research/kerma-depth','data/research/depth-upgrades'];
+for(const file of packetRoots.filter(d=>fs.existsSync(path.join(root,d))).flatMap(walk).filter(f=>f.endsWith('/evidence.json'))){
   const doc=read(file);
-  const sourceMap=new Map(Array.isArray(doc.sources)?doc.sources.map(s=>[s.id||s.url,s]):Object.entries(doc.sources||{}));
+  const entries=sources=>Array.isArray(sources)?sources.map(s=>[s.id||s.url,s]):Object.entries(sources||{});
   const entities=doc.entities||doc.records||[doc];
   for(const entity of entities){
+    const sourceMap=new Map([...entries(doc.sources),...entries(entity.sources)]);
     let cardPath=entity.cardFile||entity.cardPath||entity.card||entity.proposedCard||entity.proposedCardPath||entity.path;
     if(!cardPath){errors.push(`${file}: no card path for ${entity.id}`);continue;}
     if(!fs.existsSync(path.join(root,cardPath))) cardPath=path.join(path.dirname(file),cardPath);
@@ -49,6 +51,8 @@ for(const file of walk('data/research/regions').filter(f=>f.endsWith('/evidence.
     if(card.overview)required.push('/overview');
     for(const [i,section] of (card.sections||[]).entries())for(const [j,item] of (section.items||[]).entries())if(item.text)required.push(`/sections/${i}/items/${j}/text`);
     if(card.fall?.text)required.push('/fall/text');
+    if(card.ending?.text)required.push('/ending/text');
+    for(const [i,period] of (card.periods||[]).entries())if(period.summary)required.push(`/periods/${i}/summary`);
     const unmapped=required.filter(p=>!claims.some(c=>p===c.pointer||p.startsWith(c.pointer+'/')));
     if(unmapped.length)errors.push(`${file}: unmapped card text ${entity.id}: ${unmapped.join(', ')}`);
     const urls=[...new Set(claims.flatMap(c=>c.sources.map(s=>s.url)).filter(Boolean))];

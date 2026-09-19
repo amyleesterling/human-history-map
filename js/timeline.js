@@ -4,6 +4,12 @@
 // what a historian writing "550 BCE" means, and it keeps the data files
 // readable: -550 is 550 BCE, full stop.
 
+// Consecutive clock positions skip the nonexistent historical year zero.
+export const yearToTick = year => year < 0 ? year + 1 : year;
+export const tickToYear = tick => tick <= 0 ? tick - 1 : tick;
+export const normalizeYear = year => Math.round(year) || 1;
+export const advanceYear = (year, amount) => tickToYear(yearToTick(normalizeYear(year)) + amount);
+
 // Years never take a thousands separator: "3500 BCE", not "3,500 BCE".
 export function formatYear(year) {
   const y = Math.round(year);

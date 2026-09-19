@@ -15,6 +15,18 @@ export function activeAt(props, year) {
   return props.from <= year && year < props.to;
 }
 
+// Imported snapshot spans describe coverage, not a society's lifetime.
+// Only dates represented as historical can constrain a supplied polygon.
+export function drawableInterval(feature) {
+  const c = feature._civ;
+  const historical = c.dateBasis === 'historical' ||
+    (c.dateBasis !== 'map_coverage' && !c.circa && !String(c.generated || '').startsWith('natural-earth'));
+  return {
+    from: historical ? Math.max(feature.properties.from, c.from) : feature.properties.from,
+    to: historical ? Math.min(feature.properties.to, c.to ?? Infinity) : feature.properties.to,
+  };
+}
+
 // d3 reads polygons on the sphere, where a ring has two sides: the winding
 // order says which is inside. Its convention (exterior rings clockwise, holes
 // the other way) is the opposite of the GeoJSON specification's, and the
@@ -51,10 +63,10 @@ export class HistoryData {
     return this.base + path;
   }
 
-  async fetchJSON(path) {
+  async fetchJSON(path, options = {}) {
     // Revalidate mutable JSON after a deployment. Force-cache can preserve
     // an old card index indefinitely and hide newly published research.
-    const res = await fetch(this.url(path), { cache: 'no-cache' });
+    const res = await fetch(this.url(path), { ...options, cache: 'no-cache' });
     if (!res.ok) throw new Error(`${res.status} loading ${path}`);
     return res.json();
   }
@@ -99,34 +111,74 @@ export class HistoryData {
 
   // ---- borders --------------------------------------------------------
 
-  // Loads every border file that covers `year`, and quietly starts the ones
-  // that cover the years just ahead so playback never waits at the seam.
-  // Files far from the clock are let go once more than a handful are in, so
-  // a full playback on a phone does not hold fifty world maps in memory.
+  // Current coverage always wins. At most two next snapshots are prefetched,
+  // after current downloads finish. Coordinate count bounds optional decoded
+  // geometry, rather than pretending compressed transfer size measures heap.
   ensureYear(year, lookahead = 150) {
-    const wanted = this.files.filter((f) => f.from <= year + lookahead && year - lookahead < f.to);
-    const now = wanted.filter((f) => f.from <= year && year < f.to);
-    for (const f of wanted) this._loadFile(f);
-    const ready = this.files.filter((f) => f.state === 'ready');
-    if (ready.length > 8) {
-      const keep = new Set(wanted);
-      for (const f of ready) if (!keep.has(f)) this._evict(f);
+    this._requestedYear = year;
+    const now = this.files.filter((f) => activeAt(f, year));
+    const next = this.files.filter((f) => f.from > year && f.from <= year + lookahead && !f.prefetchSkipped)
+      .sort((a, b) => a.from - b.from).slice(0, 2);
+    this._wantedFiles = new Set([...now, ...next]);
+    for (const f of this.files) {
+      if (!this._wantedFiles.has(f) && (f.state === 'ready' || f.state === 'loading')) this._evict(f);
     }
-    return Promise.all(now.map((f) => f.promise));
+    const pending = now.map((f) => this._loadFile(f));
+    return Promise.all(pending).then(() => {
+      if (this._requestedYear !== year || !this.isYearReady(year)) return;
+      for (const f of next) this._loadFile(f);
+      this._trimCache();
+    });
+  }
+
+  _trimCache() {
+    const optional = this.files.filter((f) => f.state === 'ready' && !activeAt(f, this._requestedYear))
+      .sort((a, b) => Math.abs(a.from - this._requestedYear) - Math.abs(b.from - this._requestedYear));
+    let positions = 0;
+    for (const f of optional) {
+      positions += f.positions || 0;
+      if (!this._wantedFiles?.has(f) || positions > 120000) {
+        f.prefetchSkipped = true;
+        this._evict(f);
+      }
+    }
   }
 
   _evict(f) {
+    f.controller?.abort();
+    f.request = null;
     const gone = new Set(f.features);
     this.features = this.features.filter((x) => !gone.has(x));
     f.features = [];
     f.state = 'idle';
     f.promise = null;
+    f.positions = 0;
+  }
+
+  // Explicit retry avoids a failing connection creating an automatic loop.
+  retryYear(year) {
+    for (const f of this.files) if (activeAt(f, year) && f.state === 'error') {
+      f.state = 'idle';
+      f.promise = null;
+      f.error = null;
+    }
+    return this.ensureYear(year);
+  }
+
+  yearStatus(year) {
+    const files = this.files.filter((f) => activeAt(f, year));
+    const failed = files.filter((f) => f.state === 'error');
+    return { state: !files.length ? 'missing' : failed.length ? 'error' :
+      files.every((f) => f.state === 'ready') ? 'ready' : 'loading', failed };
   }
 
   _loadFile(f) {
     if (f.state !== 'idle') return f.promise;
     f.state = 'loading';
-    f.promise = this.fetchJSON(this.dataDir + f.file).then((raw) => {
+    f.controller = new AbortController();
+    const request = f.request = {};
+    f.promise = this.fetchJSON(this.dataDir + f.file, { signal: f.controller.signal }).then((raw) => {
+      if (f.request !== request) return;
       // border files may be TopoJSON (shared arcs, a third the size) or GeoJSON
       const fc = raw.type === 'Topology' ? topo.feature(raw, raw.objects[Object.keys(raw.objects)[0]]) : raw;
       const feats = [];
@@ -145,13 +197,19 @@ export class HistoryData {
         feat._civ = civ;
         feats.push(feat);
       }
+      const count = (coords) => !Array.isArray(coords) ? 0 : typeof coords[0] === 'number'
+        ? 1 : coords.reduce((sum, child) => sum + count(child), 0);
+      f.positions = feats.reduce((sum, feat) => sum + count(feat.geometry?.coordinates), 0);
       f.features = feats;
       f.state = 'ready';
       this.features.push(...feats);
       this.features.sort((a, b) => b._area - a._area);
+      this._trimCache();
       this._recolor();
       if (this.onChange) this.onChange(f);
     }).catch((err) => {
+      if (f.request !== request) return;
+      f.error = err;
       f.state = 'error';
       console.error(err);
       if (this.onChange) this.onChange(f);
@@ -229,10 +287,10 @@ export class HistoryData {
     return e && e.summary ? { text: e.summary, source: e.source || null } : null;
   }
 
-  // true when every file that covers this year has arrived (or failed)
+  // A failed transfer is never evidence of an empty historical world.
   isYearReady(year) {
     return this.files.filter((f) => f.from <= year && year < f.to)
-      .every((f) => f.state === 'ready' || f.state === 'error');
+      .every((f) => f.state === 'ready');
   }
 
   hasFilesFor(year) {
@@ -241,13 +299,13 @@ export class HistoryData {
 
   // Border features on the map in `year`, largest first.
   polities(year) {
-    return this.features.filter((f) => activeAt(f.properties, year));
+    return this.features.filter((f) => activeAt(drawableInterval(f), year));
   }
 
   // The features of one polity in a given year (a kingdom can be several
   // polygons: an empire and its exclaves, or a border redrawn mid-reign).
   featuresOf(id, year) {
-    return this.features.filter((f) => f._civ.id === id && activeAt(f.properties, year));
+    return this.features.filter((f) => f._civ.id === id && activeAt(drawableInterval(f), year));
   }
 
   // Any year in which this polity has a border drawn, nearest to `year`.
@@ -256,11 +314,14 @@ export class HistoryData {
   nearestDrawnYear(id, year) {
     const feats = this.features.filter((f) => f._civ.id === id);
     if (!feats.length) return null;
-    if (feats.some((f) => activeAt(f.properties, year))) return year;
+    if (feats.some((f) => activeAt(drawableInterval(f), year))) return year;
     let best = null, bestD = Infinity;
     for (const f of feats) {
-      const { from, to } = f.properties;
-      const y = year < from ? from : Math.min(to - 1, to === Infinity ? from : to - 1);
+      const { from, to } = drawableInterval(f);
+      if (from >= to) continue;
+      let y = year < from ? from : to - 1;
+      if (y === 0) y = year < from ? 1 : -1;
+      if (!activeAt({ from, to }, y)) continue;
       const d = Math.abs(y - year);
       if (d < bestD) { bestD = d; best = y; }
     }

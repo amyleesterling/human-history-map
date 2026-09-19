@@ -327,13 +327,13 @@ export class Globe {
 
   _drawPolities(ctx) {
     const path = this.path;
-    let selected = null;
+    const selected = [];
     ctx.lineJoin = 'round';
     for (const f of this.polities) {
-      if (f._civ.id === this.selectedId) { selected = f; continue; }
+      if (f._civ.id === this.selectedId) { selected.push(f); continue; }
       this._drawPolity(ctx, path, f, false);
     }
-    if (selected) this._drawPolity(ctx, path, selected, true);
+    for (const f of selected) this._drawPolity(ctx, path, f, true);
   }
 
   _drawPolity(ctx, path, f, isSelected) {
