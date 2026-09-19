@@ -17,15 +17,26 @@ export function activeAt(props, year) {
 
 // Imported snapshot spans describe coverage, not a society's lifetime.
 // Only dates represented as historical can constrain a supplied polygon.
+export function isHistorical(c) {
+  return c.dateBasis === 'historical' ||
+    (c.dateBasis !== 'map_coverage' && !c.circa && !String(c.generated || '').startsWith('natural-earth'));
+}
 export function drawableInterval(feature) {
   const c = feature._civ;
-  const historical = c.dateBasis === 'historical' ||
-    (c.dateBasis !== 'map_coverage' && !c.circa && !String(c.generated || '').startsWith('natural-earth'));
+  const historical = isHistorical(c);
   return {
     from: historical ? Math.max(feature.properties.from, c.from) : feature.properties.from,
     to: historical ? Math.min(feature.properties.to, c.to ?? Infinity) : feature.properties.to,
   };
 }
+
+// A researched polity usually rises between two snapshots: the Ming took
+// China in 1368 and the first map that draws them is the 1400 one. Rather
+// than leave the country blank until then, a polity's earliest shape reaches
+// back to its founding, within this many years. Only backwards: a fallen
+// state's last shape must not linger, since a rump is usually far smaller
+// than the map it came from.
+export const BACKFILL_YEARS = 150;
 
 // d3 reads polygons on the sphere, where a ring has two sides: the winding
 // order says which is inside. Its convention (exterior rings clockwise, holes
@@ -306,6 +317,17 @@ export class HistoryData {
   // A polity with a researched border in that year shows only that one.
   polities(year) {
     const active = this.features.filter((f) => activeAt(drawableInterval(f), year));
+    // researched polities alive this year with no shape yet: their earliest
+    // later shape stands in (see BACKFILL_YEARS)
+    const drawn = new Set(active.map((f) => f._civ.id));
+    const reach = new Map();
+    for (const f of this.features) {
+      const c = f._civ, a = f.properties.from;
+      if (drawn.has(c.id) || a <= year || a - year > BACKFILL_YEARS) continue;
+      if (!isHistorical(c) || !(c.from <= year && year < (c.to ?? Infinity))) continue;
+      if (!reach.has(c.id) || a < reach.get(c.id)) reach.set(c.id, a);
+    }
+    if (reach.size) for (const f of this.features) if (reach.get(f._civ.id) === f.properties.from) active.push(f);
     const researched = new Set();
     for (const f of active) if (f._priority > 0) researched.add(f._civ.id);
     if (!researched.size) return active;

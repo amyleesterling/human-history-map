@@ -35,6 +35,16 @@ assert.equal(synthetic.featuresOf('culture', 250).length, 1, 'coverage dates mus
 synthetic.features[0]._civ.dateBasis = 'historical';
 assert.equal(synthetic.featuresOf('culture', 250).length, 0);
 assert.equal(synthetic.nearestDrawnYear('culture', 250), 199);
+// the earliest shape of a researched polity reaches back to its founding
+const backfill = new HistoryData();
+backfill.features = [{ properties: { from: 400, to: 500 }, _civ: { id: 'ming', from: 368, to: 644, dateBasis: 'historical' } }];
+assert.equal(backfill.featuresOf('ming', 380).length, 1, 'a researched polity is drawn from its founding with its earliest shape');
+assert.equal(backfill.featuresOf('ming', 360).length, 0, 'but not before it');
+backfill.features[0]._civ.dateBasis = 'map_coverage';
+assert.equal(backfill.featuresOf('ming', 380).length, 0, 'coverage dates never reach back');
+backfill.features[0]._civ.dateBasis = 'historical';
+backfill.features[0].properties.from = 600;
+assert.equal(backfill.featuresOf('ming', 380).length, 0, 'and a shape more than 150 years away stays put');
 
 const failing = new HistoryData();
 failing.dataDir = '';
@@ -77,4 +87,4 @@ for (const year of [1860, 1900, 1938, 1960, 2000, 2026]) {
   assert.ok(retained.length <= current.length + 2);
   assert.ok(retained.filter((f) => !current.includes(f)).reduce((n, f) => n + f.positions, 0) <= 120000);
 }
-console.log('Passed: multipart drawing, historical/coverage dates, nearest year, failure/retry, stale requests and bounded prefetch.');
+console.log('Passed: multipart drawing, historical/coverage dates, founding backfill, nearest year, failure/retry, stale requests and bounded prefetch.');

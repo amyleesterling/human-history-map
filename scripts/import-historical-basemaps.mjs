@@ -95,6 +95,13 @@ const MERGES = [
   [['Zhoa'], 'Eastern Zhou', 'eastern-zhou', { from: -770, to: -256 }],
   [['Jin'], 'Jin', 'jin-dynasty', { to: 700 }],
   [['Toba Wei'], 'Northern Wei', 'northern-wei'],
+  // the 700 map still says Sui, the 900 map still says Yamato: by then they
+  // were the Tang and the Heian court, whose own maps begin in 800 and 1000
+  [['Sui', 'Sui Empire'], 'Tang', 'tang', { from: 700, to: 700 }],
+  [['Yamato'], 'Heian', 'heian-japan', { from: 900, to: 900 }],
+  [['Silia'], 'Silla', 'silla'],
+  [['Tufan Empire'], 'Tibetan Empire', 'tibetan-empire'],
+  [['Göktürks'], 'Göktürk Khaganate', 'gokturk'],
   [['Sui Empire'], 'Sui', 'sui'],
   [['Tang Empire'], 'Tang', 'tang'],
   [['Song Empire'], 'Song', 'song-dynasty'],
@@ -133,6 +140,35 @@ const tagOf = (year) => (year < 0 ? `bc${-year}` : String(year));
 
 // two spellings that differ only in diacritics or punctuation ("Maori" and
 // "Māori") are one name: the first spelling met is kept, the rest are aliases
+// [name on the map, snapshot year, segments]: one polygon that successive
+// polities held between that map and the next. The 400 map's Jin is the
+// Eastern Jin, whose lands the Liu Song took in 420; the 500 map still says
+// Jin over a south that was the Southern Qi, then Liang, then Chen. Each
+// segment runs to its `to`, the last to the next map. A segment's polity is
+// created if the index does not have it, with the segment's years as its
+// coverage; curated or researched dates then narrow the drawing.
+const SPLITS = [
+  ['Jin', 400, [{ id: 'jin-dynasty', to: 420 }, { id: 'liu-song', name: 'Liu Song' }]],
+  ['Jin', 500, [{ id: 'southern-qi', name: 'Southern Qi', to: 502 }, { id: 'liang-dynasty', name: 'Liang', to: 557 }, { id: 'chen-dynasty', name: 'Chen' }]],
+  ['Yamato', 700, [{ id: 'yamato', to: 710 }, { id: 'nara-japan', name: 'Nara' }]],
+  ['Kamakura', 1300, [{ id: 'kamakura', to: 1333 }, { id: 'muromachi', name: 'Muromachi' }]],
+  ['Jurchen Jin', 1200, [{ id: 'jin-dynasty-1115', to: 1234 }, { id: 'mongol-empire' }]],
+];
+// [name, map year, from, until]: a polygon carried into the other maps of
+// [from, until) that lack it while the polity lived. The 1279 and 1300 maps
+// fold Korea into the Yuan; Goryeo, a Yuan client, kept its own court until
+// 1392. The 1400 map still draws China and Mongolia as one Great Khanate;
+// that shape is dropped (DROPS) and the 1492 Ming shape stands in from 1368.
+const CARRIES = [
+  ['Goryeo', 1200, 1200, 1392],
+  ['Ming Dynasty', 1492, 1368, 1492],
+];
+// [name, map year]: shapes left out altogether
+const DROPS = [
+  ['Great Khanate', 1400],
+];
+const splitFor = (name, year) => SPLITS.find(([n, y]) => n === name && y === year);
+
 const spellings = new Map();
 function canonical(name, year) {
   // house style: a compound name takes a plain hyphen, never an en dash
@@ -246,6 +282,22 @@ for (const e of presence.values()) {
   });
 }
 
+// polities that share a map's polygon with a predecessor (see SPLITS)
+for (const [name, year, segs] of SPLITS) {
+  const i = snaps.findIndex((s) => s.year === year);
+  if (i < 0 || !perSnap[i].some((sh) => sh.owner.name === name)) { console.warn(`split: no ${name} on the ${year} map`); continue; }
+  let start = year;
+  for (const seg of segs) {
+    const end = seg.to ?? nextYear(i);
+    let pol = polities.find((p) => p.id === seg.id);
+    if (!pol) {
+      pol = { id: seg.id, name: seg.name, aliases: [], from: start, to: end, kind: undefined, circa: true, summary: null, generated: 'historical-basemaps' };
+      polities.push(pol);
+    } else if (seg.name) { pol.from = Math.min(pol.from, start); pol.to = Math.max(pol.to, end); }
+    start = end;
+  }
+}
+
 // ---- pass 3: the curated entries win on everything they say ---------------
 const curatedPath = join(root, 'data', 'curated.json');
 const curated = existsSync(curatedPath) ? JSON.parse(readFileSync(curatedPath, 'utf8')) : [];
@@ -310,11 +362,33 @@ const manifestLines = [];
 let totalBytes = 0;
 perSnap.forEach((shapes, i) => {
   const from = snaps[i].year, to = nextYear(i);
-  const features = shapes.map((sh) => {
-    const pol = runOf.get(`${sh.owner.name}@${i}`);
-    const props = { civ: pol.id, from, to, precision: sh.precision };
-    if (sh.label) props.label = sh.label;
-    return { type: 'Feature', properties: props, geometry: sh.geometry };
+  const carried = [];
+  for (const [name, year, start, until] of CARRIES) {
+    if (from === year || from < start || from >= until || shapes.some((sh) => sh.owner.name === name)) continue;
+    const src = snaps.findIndex((s) => s.year === year);
+    const shape = perSnap[src]?.find((sh) => sh.owner.name === name);
+    if (!shape) { console.warn(`carry: no ${name} on the ${year} map`); continue; }
+    carried.push({ ...shape, carriedFrom: src, carriedUntil: until });
+  }
+  const kept = shapes.filter((sh) => !DROPS.some(([name, year]) => name === sh.owner.name && year === from));
+  const features = [...kept, ...carried].flatMap((sh) => {
+    const pol = runOf.get(`${sh.owner.name}@${sh.carriedFrom ?? i}`);
+    if (sh.carriedFrom != null) {
+      pol.from = Math.min(pol.from, from);
+      pol.to = Math.max(pol.to, Math.min(to, sh.carriedUntil));
+      const props = { civ: pol.id, from, to: Math.min(to, sh.carriedUntil), precision: sh.precision };
+      return [{ type: 'Feature', properties: props, geometry: sh.geometry }];
+    }
+    const split = splitFor(sh.owner.name, from);
+    const segs = split ? split[2] : [{ id: pol.id }];
+    let start = from;
+    return segs.map((seg) => {
+      const end = seg.to ?? to;
+      const props = { civ: seg.id, from: start, to: end, precision: sh.precision };
+      if (sh.label) props.label = sh.label;
+      start = end;
+      return { type: 'Feature', properties: props, geometry: sh.geometry };
+    });
   });
   let t = topology({ borders: { type: 'FeatureCollection', features } });
   t = presimplify(t, sphericalTriangleArea);
