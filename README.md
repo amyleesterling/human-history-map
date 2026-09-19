@@ -17,7 +17,7 @@ handful written by hand. Open `index.html` over any web server and it runs.
 
 | Page | What it does |
 | --- | --- |
-| `index.html` | The explorer. A canvas globe (or a flat map, one tap away) with a timeline from 3500 BCE to today. Play, pause, scrub, pinch, turn. Tap a polity for its summary; "More info" opens its card. Search finds any polity by name and flies to it. The whole view lives in the URL, so a link reproduces the exact year, angle and selection. |
+| `index.html` | The explorer. A canvas globe (or a flat map, one tap away) with a timeline from 3500 BCE to today. Play, pause, scrub, pinch, turn. Tap a polity for a slim chip with its name, dates and one sentence; the arrow opens the summary and "More info" opens its card. Search finds any polity by name and flies to it. The whole view lives in the URL, so a link reproduces the exact year, angle and selection. |
 | `civ.html` | The card. `civ.html?id=roman-empire&year=200` shows that polity's extent map for the year, its lifetime on the timeline, an overview, sections of tidbits (inventions, science, technology, arts, ideas, daily life), how and when it ended with links to what came next, and sources. |
 
 ## Layout

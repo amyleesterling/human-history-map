@@ -52,7 +52,9 @@ footnote. That is the whole brief; keep every change in its service.
 1. Serve the folder (`python3 -m http.server`) and load both pages. The
    console must be clean and every request must be 200.
 2. On a phone-width viewport nothing scrolls sideways, the tooltip is a
-   bottom sheet, one finger turns the globe, two fingers zoom, a tap selects.
+   slim chip along the bottom (name, dates, one sentence) whose arrow opens
+   the summary and buttons, one finger turns the globe, two fingers zoom, a
+   tap selects. Amy asked for the chip because a full card hid the globe.
 3. Play from the start at 25 years a second and watch the seams where one
    border file hands over to the next: the clock waits for the file rather
    than showing an empty world.
