@@ -457,12 +457,11 @@ function showTip(civ, anchor, feature) {
   els.tipZoom.hidden = !drawn;
   state.tipAnchor = state.tipPos ? null : (anchor || null);
   els.tip.hidden = false;
-  // the panel's materialise plays on every arrival: the class comes off, one
+  // the card's materialise plays on every arrival: the class comes off, one
   // reflow, and back on, which is the only way to restart a CSS animation
   els.tip.classList.remove('is-in');
   void els.tip.offsetWidth;
   els.tip.classList.add('is-in');
-  materialise();
   setTipOpen(state.tipOpen);
 }
 
@@ -471,26 +470,6 @@ function showTip(civ, anchor, feature) {
 function spanWithDuration(civ) {
   const duration = formatCivDuration(civ);
   return duration ? `${formatCivSpan(civ)} · ${duration}` : formatCivSpan(civ);
-}
-
-// The card arrives out of particles: the library's swarm streams in from the
-// panel's edges and gathers on the name, then fades; a burst, not a loop.
-// Under reduced motion start() declines and the panel simply appears.
-let swarm = null, swarmTimers = [];
-function materialise() {
-  if (!swarm) swarm = window.holoconverge ? window.holoconverge(els.tip, els.tipName) : null;
-  if (!swarm) return;
-  dematerialise();
-  if (!swarm.start()) return;
-  swarmTimers = [
-    setTimeout(() => { const c = els.tip.querySelector('.holoconverge-canvas'); if (c) c.classList.remove('is-on'); }, 1100),
-    setTimeout(() => swarm.stop(), 1450),
-  ];
-}
-function dematerialise() {
-  for (const t of swarmTimers) clearTimeout(t);
-  swarmTimers = [];
-  if (swarm) swarm.stop();
 }
 
 function syncTipTime(civ) {
@@ -587,7 +566,6 @@ function moveTip(x, y) {
 function closeTip() {
   els.tip.hidden = true;
   els.tip.classList.remove('is-in');
-  dematerialise();
   state.tipAnchor = null;
 }
 

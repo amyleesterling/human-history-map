@@ -1,9 +1,9 @@
 // The sci-fi pages are the explorer and the card page in the black
 // holographic skin. They are the same markup as index.html and civ.html
 // (the atlas, the default) with the root marked data-skin="scifi", the
-// holographic library loaded, atlas.css left out and the skin toggle turned
-// into a sun that leads back, so they are generated from the two, never
-// edited by hand:
+// holographic library (its panels and its tap layer) loaded, atlas.css
+// left out and the skin toggle turned into a sun that leads back, so they
+// are generated from the two, never edited by hand:
 //
 //   node scripts/build-scifi.mjs          # writes scifi.html, scifi-civ.html
 //   node scripts/build-scifi.mjs --check  # exits 1 when either is stale
@@ -36,7 +36,8 @@ export function scifiOf(html, page) {
     `<link rel="stylesheet" href="vendor/scifi-ui/hologram.css">\n<link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">\n<link rel="stylesheet" href="site.css${v || ''}">`);
   if (out.includes('atlas.css')) throw new Error(`${page}: the atlas stylesheet link was not where expected`);
   // the tap layer the library requires wherever its hover treatments are used
-  if (!card) out = swap(out, '<script src="vendor/scifi-ui/converge-swarm.js"></script>', '<script src="vendor/scifi-ui/hologram-tap.js"></script>\n<script src="vendor/scifi-ui/converge-swarm.js"></script>', page);
+  if (!card) out = out.replace(/(<script type="module" src="js\/app\.js[^"]*"><\/script>)/, '<script src="vendor/scifi-ui/hologram-tap.js"></script>\n$1');
+  if (!card && !out.includes('hologram-tap.js')) throw new Error(`${page}: the app script was not where expected`);
   // the brand takes the library's underline and, with the static globe
   // links, points at the sci-fi explorer; the scripts rewrite the rest with
   // the skin in hand

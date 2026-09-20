@@ -41,7 +41,7 @@ data/hb/                 fifty imported world snapshots (borders, polities, summ
 data/curated.json        hand-written entries merged onto the imported ones
 data/cards/              the info cards
 base/                    coastlines, lakes and rivers (Natural Earth, public domain)
-vendor/                  d3-geo, d3-array, topojson-client, the five scifi-ui
+vendor/                  d3-geo, d3-array, topojson-client, the three scifi-ui
                          files the sci-fi skin is built on, and the Cinzel and
                          EB Garamond faces the map is lettered in, unmodified
 scripts/build-scifi.mjs  regenerates the sci-fi pages; --check is run by validate
