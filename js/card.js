@@ -157,7 +157,7 @@ async function main() {
   else if (quoted) { lead.textContent = quoted.text; quotedSource = quoted.source; }
   else { lead.textContent = 'The summary for this polity has not been written yet.'; lead.classList.add('pending'); }
 
-  const context = el('section', 'period-context holopanel');
+  const context = el('section', 'period-context sheet');
   context.appendChild(el('h2', null, `In ${formatYear(year)}`));
   const periods = matchingPeriods(card, year);
   if (periods.length) {
@@ -267,15 +267,15 @@ function drawLifebar(scale, civ, year) {
   const ctx = c.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   const X = (yr) => scale.toT(yr) * w;
-  ctx.fillStyle = 'rgba(255,255,255,.07)';
+  ctx.fillStyle = 'rgba(35,41,58,.08)';
   ctx.fillRect(0, 8, w, 6);
   const x0 = X(civ.from), x1 = X(civ.to == null ? scale.end : civ.to);
   ctx.fillStyle = civ.color;
   ctx.fillRect(x0, 7, Math.max(2, x1 - x0), 8);
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = '#23293a';
   ctx.fillRect(X(year) - 1, 3, 2, 16);
-  ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
-  ctx.fillStyle = 'rgba(236,231,220,.5)';
+  ctx.font = '11px "EB Garamond", Garamond, "Times New Roman", serif';
+  ctx.fillStyle = 'rgba(35,41,58,.6)';
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 11);
   ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 11);

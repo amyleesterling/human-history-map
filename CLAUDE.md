@@ -42,8 +42,12 @@ footnote. That is the whole brief; keep every change in its service.
   read so they never request a card that is not there.
 - **Shared CSS lives in `site.css`.** Both pages load it; nothing is pasted
   twice.
-- **Body text is sans-serif; years, readouts and ticks are monospace** via
-  `.num`.
+- **The page is paper and the type is an engraved chart's.** Body text is
+  EB Garamond; titles, the brand, the year readout and the map's state
+  names are Cinzel capitals; a people's range is lettered in Garamond
+  italic capitals; years, readouts and ticks take tabular lining figures
+  via `.num`. Both faces are vendored under `vendor/fonts/` (SIL OFL). One
+  ink, one paper, no orange, nothing that glows.
 - **`vendor/` and `base/` are never edited by hand.** Vendor files are copied
   down from upstream with a `SOURCE.txt`; `base/` is rebuilt by
   `scripts/build-base.mjs`.

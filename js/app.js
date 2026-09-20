@@ -333,10 +333,10 @@ function drawTrack() {
 
   eras.forEach((e, i) => {
     const x0 = X(Math.max(e.from, scale.start)), x1 = X(Math.min(e.to, scale.end));
-    ctx.fillStyle = i % 2 ? 'rgba(255,255,255,.035)' : 'rgba(255,255,255,.07)';
+    ctx.fillStyle = i % 2 ? 'rgba(35,41,58,.04)' : 'rgba(35,41,58,.085)';
     ctx.fillRect(x0, 0, x1 - x0, bandH);
-    ctx.font = '600 9.5px "Segoe UI", system-ui, sans-serif';
-    ctx.fillStyle = 'rgba(236,231,220,.5)';
+    ctx.font = '600 9.5px "Cinzel", "Times New Roman", serif';
+    ctx.fillStyle = 'rgba(35,41,58,.6)';
     ctx.textAlign = 'center'; ctx.textBaseline = 'top';
     const name = e.name.toUpperCase();
     if (ctx.measureText(name).width < x1 - x0 - 8) ctx.fillText(name, (x0 + x1) / 2, 4);
@@ -345,25 +345,25 @@ function drawTrack() {
   const bins = Math.max(20, Math.floor(tw / 3));
   const dens = data.density(scale, bins);
   const max = Math.max(1, ...dens);
-  ctx.fillStyle = 'rgba(127,178,230,.42)';
+  ctx.fillStyle = 'rgba(47,79,127,.32)';
   for (let i = 0; i < bins; i++) {
     if (!dens[i]) continue;
     const hh = 2 + 16 * Math.log1p(dens[i]) / Math.log1p(max);
     ctx.fillRect(pad + (i / bins) * tw, bandH - hh, tw / bins + 0.5, hh);
   }
 
-  ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+  ctx.font = '11px "EB Garamond", Garamond, "Times New Roman", serif';
   ctx.textAlign = 'center'; ctx.textBaseline = 'top';
   let lastRight = -Infinity;
   for (const yr of ticks) {
     const x = X(yr);
-    ctx.fillStyle = 'rgba(236,231,220,.35)';
+    ctx.fillStyle = 'rgba(35,41,58,.42)';
     ctx.fillRect(x - 0.5, bandH, 1, 5);
     const label = formatYear(yr);
     const lw = ctx.measureText(label).width;
     if (x - lw / 2 < lastRight + 8) continue;
     if (x - lw / 2 < 0 || x + lw / 2 > w) continue;
-    ctx.fillStyle = 'rgba(236,231,220,.6)';
+    ctx.fillStyle = 'rgba(35,41,58,.75)';
     ctx.fillText(label, x, bandH + 7);
     lastRight = x + lw / 2;
   }

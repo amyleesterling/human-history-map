@@ -1,132 +1,140 @@
 /* Human History Map: the rules both pages share. index.html is the explorer
    (globe, timeline, tooltip); civ.html is the reading page for one polity.
-   Dark ocean, parchment text, muted fills; body text is sans-serif, years and
-   readouts are monospace via .num. */
+   The page is a sheet of paper and everything on it is ink: the globe is
+   drawn on the sheet, the panels are smaller sheets laid on it, and the
+   type is an engraved chart's: Cinzel capitals for titles and readouts,
+   EB Garamond for reading, tabular figures via .num. Nothing is orange. */
 
-/* the hand lettering on the map, drawn by js/globe.js on the canvas
-   (vendor/fonts/patrick-hand-sc, SIL Open Font License) */
+/* the faces (vendor/fonts, SIL Open Font License); js/globe.js letters the
+   map in the same two */
 @font-face {
-  font-family: 'Patrick Hand SC'; font-style: normal; font-weight: 400; font-display: swap;
-  src: url(vendor/fonts/patrick-hand-sc/patrick-hand-sc-latin.woff2) format('woff2');
+  font-family: 'Cinzel'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url(vendor/fonts/cinzel/cinzel-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Cinzel'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url(vendor/fonts/cinzel/cinzel-600-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Patrick Hand SC'; font-style: normal; font-weight: 400; font-display: swap;
-  src: url(vendor/fonts/patrick-hand-sc/patrick-hand-sc-latin-ext.woff2) format('woff2');
+  font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url(vendor/fonts/eb-garamond/eb-garamond-400-italic-latin-ext.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url(vendor/fonts/eb-garamond/eb-garamond-400-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'EB Garamond'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(vendor/fonts/eb-garamond/eb-garamond-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'EB Garamond'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(vendor/fonts/eb-garamond/eb-garamond-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
-  --bg: #0b1220;
-  --bg-2: #101a2c;
-  --panel: rgba(16, 24, 40, .92);
-  --line: rgba(196, 214, 240, .16);
-  --ink: #ece7dc;
-  --ink-dim: #a9b1bf;
-  --ink-faint: #6f7a8a;
-  --accent: #7ee0ff;      /* the library's cyan; Amy's rule: no orange anywhere */
-  --accent-ink: #06121c;
-  --blue: #7fb2e6;
+  --paper: #e9e3d3;        /* the sheet the page is */
+  --paper-2: #f3efe4;      /* a lighter sheet laid on it: panels, cards */
+  --paper-3: #ddd6c4;      /* a darker sheet: hover, the track */
+  --ink: #23293a;          /* the one ink */
+  --ink-dim: #4f5566;
+  --ink-faint: #7d8292;
+  --line: rgba(35, 41, 58, .28);
+  --line-strong: rgba(35, 41, 58, .62);
+  --blue: #2f4f7f;         /* the sea's ink: links and the active state */
+  --wash: 127 158 196;     /* the key's sample of a polity wash */
+  --serif: "EB Garamond", Garamond, "Times New Roman", Georgia, serif;
+  --caps: "Cinzel", "Trajan Pro", "Times New Roman", Georgia, serif;
   --safe-b: env(safe-area-inset-bottom, 0px);
   --safe-t: env(safe-area-inset-top, 0px);
-  /* the scifi-ui tokens (vendor/scifi-ui), read by every surface, bracket,
-     hairline and sweep on these pages, mapped onto this palette. The field
-     stays cool throughout; the library's one warm accent is redefined to
-     the same cyan, so nothing it draws can come out orange. */
-  --holo-line: 196 214 240;
-  --holo-beam: 178 216 248;
-  --holo-glow: 127 178 230;
-  --holo-cyan: 126 224 255;
-  --holo-warm: 126 224 255;
-  --holo-ink: 236 231 220;
-  --holo-dim: 169 177 191;
-  --holo-panel: 16 24 40;
+  /* the converge swarm (vendor/scifi-ui) reads these three for its
+     particles: all ink here, so the card gathers out of ink */
+  --holo-line: 35 41 58;
+  --holo-beam: 47 79 127;
+  --holo-cyan: 35 41 58;
 }
 
 html, body { margin: 0; padding: 0; }
-html { background: var(--bg); }
+/* the sheet: paper with a faint grain, made once by the browser from noise */
+html {
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .16 0 0 0 0 .22 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
 body {
-  background: var(--bg); color: var(--ink);
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background: transparent; color: var(--ink);
+  font-family: var(--serif); font-size: 17px;
   line-height: 1.45;
 }
-.num, .mono, output { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.num, .mono, output { font-family: var(--serif); font-variant-numeric: lining-nums tabular-nums; letter-spacing: .02em; }
 a { color: var(--blue); }
 button { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
 
 /* ---- header bar --------------------------------------------------------- */
-/* the bar and the controls carry the lit hairline the library's panels wear
-   along their top edge (panel-surface.css), so the whole page reads as one
-   instrument: the same 8 per cent inset, the same glow */
+/* the bar and the controls are ruled off the map with a chart's double rule:
+   one firm line and a lighter one a little away from it */
 .bar, .controls { position: relative; }
 .bar::after, .controls::before {
-  content: ""; position: absolute; left: 8%; right: 8%; height: 1px; pointer-events: none;
-  background: linear-gradient(90deg, transparent, rgb(var(--holo-line) / .95) 50%, transparent);
-  box-shadow: 0 0 12px rgb(var(--holo-beam) / .6);
+  content: ""; position: absolute; left: 0; right: 0; height: 1px; pointer-events: none;
+  background: var(--line);
 }
-.bar::after { bottom: -1px; }
-.controls::before { top: -1px; }
+.bar::after { bottom: -4px; }
+.controls::before { top: -4px; }
 .bar {
   display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  padding: calc(8px + var(--safe-t)) 14px 8px;
-  border-bottom: 1px solid rgb(var(--holo-line) / .08);
-  background: var(--bg);
+  padding: calc(8px + var(--safe-t)) 16px 8px;
+  border-bottom: 1px solid var(--line-strong);
 }
 .brand {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 15px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-  color: rgb(var(--holo-line)); text-decoration: none; white-space: nowrap;
-  text-shadow: 0 0 14px rgb(var(--holo-glow) / .45);
+  font-family: var(--caps); font-size: 15px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none; white-space: nowrap;
 }
+.brand:hover, .brand:focus-visible { color: var(--blue); }
 .bar-tools { display: flex; align-items: center; gap: 8px; }
-/* controls in the language of the library's HUD readouts: small mono
-   capitals, a cool hairline border, and a rim that lights on hover, focus
-   or press. Controls are not tap hosts (the library leaves them out on
-   purpose), so :active and :focus-visible are their touch answer. */
+/* controls are inked outlines on the paper: spaced capitals in a pill, filled
+   with ink while pressed, hovered or on */
+.chip, .iconbtn {
+  background: transparent; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--ink);
+  cursor: pointer; touch-action: manipulation;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
 .chip {
-  background: rgb(var(--holo-panel) / .5); border: 1px solid rgb(var(--holo-line) / .22); border-radius: 999px;
-  padding: 6px 12px; color: rgb(var(--holo-line) / .85);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
-  cursor: pointer; white-space: nowrap; touch-action: manipulation;
-  transition: border-color .3s ease, box-shadow .3s ease, color .3s ease;
+  display: inline-block; padding: 6px 13px; text-decoration: none;
+  font-family: var(--serif); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap;
 }
-.chip:hover, .chip:focus-visible, .chip:active, .chip[aria-pressed="true"] {
-  color: rgb(var(--holo-ink)); border-color: rgb(var(--holo-cyan) / .7);
-  box-shadow: 0 0 14px rgb(var(--holo-glow) / .28), inset 0 1px 0 rgb(var(--holo-line) / .12);
-}
-.iconbtn {
-  background: rgb(var(--holo-panel) / .5); border: 1px solid rgb(var(--holo-line) / .22); border-radius: 999px;
-  width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;
-  color: rgb(var(--holo-line) / .85); cursor: pointer; touch-action: manipulation;
-  transition: border-color .3s ease, box-shadow .3s ease, color .3s ease;
-}
+.iconbtn { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+.chip:hover, .chip:focus-visible, .chip:active, .chip[aria-pressed="true"],
 .iconbtn:hover, .iconbtn:focus-visible, .iconbtn:active, .iconbtn[aria-expanded="true"] {
-  color: rgb(var(--holo-ink)); border-color: rgb(var(--holo-cyan) / .7);
-  box-shadow: 0 0 14px rgb(var(--holo-glow) / .28), inset 0 1px 0 rgb(var(--holo-line) / .12);
+  background: var(--ink); color: var(--paper-2); border-color: var(--ink);
 }
-.chip:focus-visible, .iconbtn:focus-visible, .btn:focus-visible { outline: 2px solid rgb(var(--holo-beam)); outline-offset: 3px; }
-/* the primary button is a lit pane, not a filled block: the cyan at low
-   alpha over the panel, a brighter rim, and a glow that comes up on hover */
+.chip:focus-visible, .iconbtn:focus-visible, .btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+/* the primary button is a block of ink; the ghost is an outline */
 .btn {
-  display: inline-block; background: rgb(var(--holo-cyan) / .14); color: rgb(var(--holo-ink));
-  border: 1px solid rgb(var(--holo-cyan) / .55); border-radius: 8px; padding: 7px 13px;
-  font-size: 13.5px; font-weight: 600; letter-spacing: .02em; text-decoration: none; cursor: pointer;
-  text-shadow: 0 0 8px rgb(var(--holo-cyan) / .35);
-  box-shadow: inset 0 1px 0 rgb(var(--holo-line) / .12);
+  display: inline-block; background: var(--ink); color: var(--paper-2);
+  border: 1px solid var(--ink); border-radius: 5px; padding: 7px 14px;
+  font-family: var(--serif); font-size: 15px; letter-spacing: .04em; text-decoration: none; cursor: pointer;
   touch-action: manipulation;
-  transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease, transform .25s ease;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
-.btn.ghost { background: none; color: var(--ink); border-color: rgb(var(--holo-line) / .25); font-weight: 500; text-shadow: none; }
-.btn:hover, .btn:focus-visible, .btn:active {
-  background: rgb(var(--holo-cyan) / .22); border-color: rgb(var(--holo-cyan) / .9);
-  box-shadow: 0 0 18px rgb(var(--holo-glow) / .35), inset 0 1px 0 rgb(var(--holo-line) / .16);
-  transform: translateY(-1px);
+.btn:hover, .btn:focus-visible, .btn:active { background: var(--blue); border-color: var(--blue); color: #fff; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.btn.ghost:hover, .btn.ghost:focus-visible, .btn.ghost:active { background: var(--paper-3); border-color: var(--ink); color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .chip, .iconbtn, .btn { transition: none; } }
+
+/* a smaller sheet laid on the page: lighter paper, an ink edge, and the
+   double rule of a chart's frame drawn just inside it; whatever sits on it
+   keeps at least 6px of padding so the inner rule stays clear */
+.sheet {
+  background: var(--paper-2); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: 4px;
+  box-shadow: inset 0 0 0 3px var(--paper-2), inset 0 0 0 4px var(--line), 0 2px 0 rgba(35, 41, 58, .08), 0 10px 26px rgba(35, 41, 58, .16);
 }
-.btn.ghost:hover, .btn.ghost:focus-visible, .btn.ghost:active { background: rgb(var(--holo-line) / .06); border-color: rgb(var(--holo-cyan) / .6); }
-@media (prefers-reduced-motion: reduce) { .chip, .iconbtn, .btn { transition: none; } .btn:hover, .btn:focus-visible, .btn:active { transform: none; } }
 
 /* ---- the explorer ------------------------------------------------------- */
 body.explorer {
@@ -141,75 +149,72 @@ body.explorer {
 }
 
 .loading {
-  position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
-  font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint);
-  background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim);
+  background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: 999px; padding: 4px 11px;
   pointer-events: none;
 }
 .loading::after { content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 7px;
-  border-radius: 50%; background: rgb(var(--holo-cyan)); box-shadow: 0 0 8px rgb(var(--holo-cyan) / .8);
+  border-radius: 50%; background: var(--ink);
   animation: blink 1s infinite alternate; vertical-align: middle; }
 @keyframes blink { from { opacity: .2 } to { opacity: 1 } }
 
-/* the hint, the notice, the search and the map key are .holopanel surfaces
-   (vendor/scifi-ui/panel-surface.css): the gradient, rim and hairline are
-   the library's; only the placement is ours */
+/* the hint, the notice, the search and the map key are sheets; only the
+   placement is set here */
 .hint {
   position: absolute; left: 12px; bottom: 12px; max-width: min(360px, calc(100% - 24px));
-  font-size: 13px; color: var(--ink-dim); padding: 8px 12px;
+  font-size: 14.5px; color: var(--ink-dim); padding: 9px 13px;
   pointer-events: none;
 }
 /* above the map key, which shares the top right corner, so the notice's
    button can always be reached */
 .notice {
-  position: absolute; top: 10px; left: 12px; right: 12px; margin: 0 auto; max-width: 520px; z-index: 5;
+  position: absolute; top: 12px; left: 12px; right: 12px; margin: 0 auto; max-width: 540px; z-index: 5;
   display: flex; gap: 10px; align-items: center; justify-content: space-between;
-  font-size: 13px; color: var(--ink-dim); padding: 8px 8px 8px 12px;
+  font-size: 14.5px; color: var(--ink-dim); padding: 9px 9px 9px 14px;
 }
 .notice button {
-  background: rgb(var(--holo-cyan) / .12); border: 1px solid rgb(var(--holo-cyan) / .5); border-radius: 6px;
-  padding: 4px 9px; color: rgb(var(--holo-ink)); cursor: pointer; white-space: nowrap;
+  background: transparent; border: 1px solid var(--line-strong); border-radius: 4px;
+  padding: 4px 10px; color: var(--ink); cursor: pointer; white-space: nowrap; font-size: 14.5px;
 }
-.notice button:hover, .notice button:focus-visible { border-color: rgb(var(--holo-cyan) / .9); box-shadow: 0 0 14px rgb(var(--holo-glow) / .3); }
-@media (max-width: 640px) { .notice { font-size: 12px; padding: 6px 6px 6px 10px; line-height: 1.35; } }
+.notice button:hover, .notice button:focus-visible { background: var(--ink); color: var(--paper-2); border-color: var(--ink); }
+@media (max-width: 640px) { .notice { font-size: 13.5px; padding: 8px 8px 8px 12px; line-height: 1.35; } }
 
 /* search drops down from the bar */
 .search {
-  position: absolute; top: 8px; left: 12px; right: 12px; margin: 0 auto; max-width: 460px; z-index: 5;
-  padding: 8px;
+  position: absolute; top: 10px; left: 12px; right: 12px; margin: 0 auto; max-width: 460px; z-index: 5;
+  padding: 10px;
 }
 .search input {
-  width: 100%; box-sizing: border-box; font: inherit; font-size: 15px;
-  background: rgb(6 10 18 / .7); color: var(--ink); border: 1px solid rgb(var(--holo-line) / .22); border-radius: 8px; padding: 9px 11px;
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 16.5px;
+  background: rgba(255, 255, 255, .55); color: var(--ink); border: 1px solid var(--line-strong); border-radius: 4px; padding: 8px 11px;
 }
-.search input:focus { outline: none; border-color: rgb(var(--holo-cyan) / .7); box-shadow: 0 0 14px rgb(var(--holo-glow) / .28); }
+.search input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 2px rgba(47, 79, 127, .2); }
 .search ul { list-style: none; margin: 6px 0 0; padding: 0; max-height: 40vh; overflow: auto; }
-.search li { display: grid; grid-template-columns: 12px minmax(0, 1fr); align-items: center; column-gap: 10px; row-gap: 3px; padding: 8px 8px; border-radius: 8px; cursor: pointer; }
-.search li:hover, .search li[aria-selected="true"] { background: rgba(255,255,255,.06); }
+.search li { display: grid; grid-template-columns: 12px minmax(0, 1fr); align-items: center; column-gap: 10px; row-gap: 3px; padding: 8px 8px; border-radius: 4px; cursor: pointer; }
+.search li:hover, .search li[aria-selected="true"] { background: var(--paper-3); }
 .search li .swatch { width: 12px; height: 12px; }
-.search li .name { flex: 1; font-size: 14.5px; }
-.search li .span { grid-column: 2; font-size: 12px; color: var(--ink-faint); overflow-wrap: anywhere; }
-.search .empty { display: block; padding: 8px; color: var(--ink-faint); font-size: 13px; }
+.search li .name { flex: 1; font-size: 16px; }
+.search li .span { grid-column: 2; font-size: 13px; color: var(--ink-faint); overflow-wrap: anywhere; }
+.search .empty { display: block; padding: 8px; color: var(--ink-faint); font-size: 14.5px; }
 /* a match found in a summary shows the sentence that made it */
-.search li .hit { grid-column: 2; font-size: 12px; color: var(--ink-dim); overflow-wrap: anywhere; }
+.search li .hit { grid-column: 2; font-size: 13px; color: var(--ink-dim); overflow-wrap: anywhere; }
 
-.swatch { display: inline-block; width: 14px; height: 14px; border-radius: 4px; flex: none; box-shadow: 0 0 0 1px rgba(255,255,255,.25) inset; }
+.swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex: none; box-shadow: inset 0 0 0 1px rgba(35, 41, 58, .4); }
 
 /* the tooltip: a slim chip (name, dates, one line) so the globe stays in
    view, with an arrow that opens the summary and the buttons. A card by the
-   finger on wide screens; a bar along the bottom on phones. */
-/* The card is a scifi-ui panel (vendor/scifi-ui): .holopanel gives it the
-   gradient surface, the lit top hairline and the materialise that plays each
-   time it opens; .holoframe gives it the four HUD corner brackets that push
-   outward on hover or tap; and as it arrives the converge swarm streams
-   particles in from its edges to gather on the name (js/app.js starts it and
-   stops it). Only the layout is ours. */
+   finger on wide screens; a bar along the bottom on phones. It is a sheet,
+   and as it arrives the converge swarm (vendor/scifi-ui) streams ink in
+   from its edges to gather on the name; js/app.js starts and stops it and
+   replays the entrance each time the card opens. */
 .tip {
   position: absolute; z-index: 6; width: 340px; max-width: calc(100% - 24px);
-  margin: 0; /* .holoframe sets a figure's vertical margin; a card has none */
-  padding: 10px 12px 10px 14px; border-radius: 14px;
+  padding: 12px 14px 12px 16px;
 }
-/* the swarm's canvas sits at z-index 5 over the panel; the text rides above
+.tip.is-in { animation: sheet-in 380ms cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes sheet-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+/* the swarm's canvas sits at z-index 5 over the sheet; the text rides above
    it, so the particles pass behind the name they gather on */
 .tip > .holoconverge-canvas { border-radius: inherit; }
 .tip > .tip-head, .tip > .tip-line, .tip > .tip-body { position: relative; z-index: 6; }
@@ -226,30 +231,31 @@ body.explorer {
   .tip.is-dragging, .tip.is-dragging .tip-head { cursor: grabbing; }
   .tip.is-dragging { user-select: none; }
 }
-.tip-title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
-.tip-head h2 { margin: 0; font-size: 16px; font-weight: 650; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.tip-span { font-size: 11px; color: rgb(var(--holo-line) / .82); letter-spacing: .05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.tip-head h2 { margin: 0; font-family: var(--caps); font-size: 14.5px; font-weight: 600; letter-spacing: .05em; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-span { font-size: 12.5px; color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tip-chevron { flex: none; color: var(--ink-dim); transition: transform .18s ease; }
 .tip[data-open="true"] .tip-chevron { transform: rotate(180deg); }
 .tip-head:hover .tip-chevron { color: var(--ink); }
 .tip-close {
-  position: absolute; top: 4px; right: 6px; background: none; border: 0; color: var(--ink-faint);
+  position: absolute; top: 6px; right: 8px; background: none; border: 0; color: var(--ink-faint);
   font-size: 22px; line-height: 1; cursor: pointer; padding: 4px 6px; touch-action: manipulation;
 }
 .tip-close:hover { color: var(--ink); }
 /* one sentence, cut with an ellipsis; gone once the card is open */
-.tip-line { margin: 6px 0 0; font-size: 13px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-line { margin: 7px 0 0; font-size: 15px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tip-line.pending { color: var(--ink-faint); font-style: italic; }
 .tip[data-open="true"] .tip-line { display: none; }
 .tip-body { margin-top: 8px; display: flex; flex-direction: column; min-height: 0; }
 /* the text scrolls; the buttons stay put beneath it */
 .tip-scroll { overflow: auto; min-height: 0; max-height: 50vh; }
-.tip-meta { margin: 0 0 6px; font-size: 12.5px; color: var(--ink-faint); }
-.tip-summary { margin: 0; font-size: 14px; color: var(--ink); }
+.tip-meta { margin: 0 0 6px; font-size: 13.5px; color: var(--ink-faint); }
+.tip-summary { margin: 0; font-size: 15.5px; color: var(--ink); }
 .tip-summary.pending { color: var(--ink-faint); font-style: italic; }
-.tip-source { margin: 6px 0 0; font-size: 11.5px; color: var(--ink-faint); }
+.tip-source { margin: 6px 0 0; font-size: 12.5px; color: var(--ink-faint); }
 .tip-source a { color: var(--ink-faint); }
 .tip-actions { display: flex; gap: 8px; margin-top: 12px; flex: none; }
+@media (prefers-reduced-motion: reduce) { .tip.is-in { animation: none; } .tip-chevron { transition: none; } }
 @media (max-width: 640px) {
   .tip {
     left: 8px !important; right: 8px !important; top: auto !important; bottom: 8px !important;
@@ -263,38 +269,30 @@ body.explorer {
 
 /* ---- the controls ------------------------------------------------------- */
 .controls {
-  flex: none; padding: 8px 14px calc(10px + var(--safe-b));
-  border-top: 1px solid rgb(var(--holo-line) / .08); background: var(--bg);
+  flex: none; padding: 9px 16px calc(10px + var(--safe-b));
+  border-top: 1px solid var(--line-strong);
 }
 .controls .row { display: flex; align-items: center; gap: 12px; }
-/* the play button carries the library's play badge: the same 2px rim,
-   radial pane, double glow and 1.07 lift (hologram.css .playbadge), at
-   the size a toolbar allows */
+/* the play button is an inked ring that fills while time runs */
 .play {
   width: 46px; height: 46px; border-radius: 50%; flex: none; padding: 0;
-  color: rgba(226,244,255,.96); cursor: pointer;
-  border: 2px solid rgba(150,215,255,.85);
-  background: radial-gradient(circle at 50% 50%, rgba(20,45,80,.72), rgba(8,16,30,.62));
-  box-shadow: 0 0 0 6px rgba(62,150,240,.10), 0 0 26px rgba(62,150,240,.35);
+  color: var(--ink); cursor: pointer;
+  border: 1.5px solid var(--ink); background: var(--paper-2);
+  box-shadow: 0 1px 0 rgba(35, 41, 58, .15);
   display: inline-flex; align-items: center; justify-content: center; touch-action: manipulation;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  transition: background-color .2s ease, color .2s ease;
 }
-.play:hover, .play:focus-visible, .play[aria-pressed="true"] {
-  transform: scale(1.07); border-color: rgba(190,235,255,1);
-  box-shadow: 0 0 0 8px rgba(62,150,240,.14), 0 0 34px rgba(62,150,240,.55);
-}
-.play:focus-visible { outline: 2px solid rgb(var(--holo-beam)); outline-offset: 4px; }
+.play:hover, .play:focus-visible, .play[aria-pressed="true"] { background: var(--ink); color: var(--paper-2); }
+.play:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .play { transition: none; } }
 .play .ico-pause { display: none; }
 .play[aria-pressed="true"] .ico-play { display: none; }
 .play[aria-pressed="true"] .ico-pause { display: block; }
 .year { flex: 1 1 auto; display: flex; align-items: baseline; gap: 10px; min-width: 0; }
-/* the year is the page's one big readout, set like the library's .holo
-   value: tabular figures, a glow that comes up while time runs; the era is
-   its key line */
-.year output { font-size: 26px; font-weight: 500; letter-spacing: .02em; color: #eff4fb; white-space: nowrap; font-variant-numeric: tabular-nums; transition: text-shadow .4s ease; }
-.play[aria-pressed="true"] + .year output { color: #f4f9ff; text-shadow: 0 0 20px rgba(120,190,255,.6); }
-.year .era { font-size: 10px; letter-spacing: .19em; text-transform: uppercase; color: #6ba4e6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* the year is the page's one big readout, in the chart's capitals; the era
+   is its key line */
+.year output { font-family: var(--caps); font-size: 26px; font-weight: 600; letter-spacing: .04em; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.year .era { font-size: 12px; letter-spacing: .19em; text-transform: uppercase; color: var(--ink-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 380px) { .year output { font-size: 20px; } .year .era { display: none; } }
 
 .track { position: relative; height: 54px; margin-top: 6px; }
@@ -305,61 +303,66 @@ body.explorer {
   touch-action: pan-x;
 }
 .track input[type="range"]:focus { outline: none; }
-.track input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--accent); outline-offset: 2px; }
+.track input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--blue); outline-offset: 2px; }
 .track input[type="range"]::-webkit-slider-runnable-track { height: 34px; background: transparent; }
 .track input[type="range"]::-moz-range-track { height: 34px; background: transparent; }
+/* the thumb is an ink lozenge with a paper rim */
 .track input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; appearance: none;
   width: 14px; height: 30px; margin-top: 2px; border-radius: 4px;
-  background: var(--ink); border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--accent);
+  background: var(--ink); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink);
 }
 .track input[type="range"]::-moz-range-thumb {
   width: 14px; height: 30px; border-radius: 4px;
-  background: var(--ink); border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--accent);
+  background: var(--ink); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink);
 }
 
 /* ---- the card page ------------------------------------------------------ */
 body.card { min-height: 100vh; }
-.card .wrap { max-width: 720px; margin: 0 auto; padding: 22px 18px 70px; }
-.card .crumbs { font-size: 13px; color: var(--ink-dim); margin: 0 0 16px; }
+.card .wrap { max-width: 720px; margin: 0 auto; padding: 24px 18px 70px; }
+.card .crumbs { font-size: 14.5px; color: var(--ink-dim); margin: 0 0 16px; }
 .card .crumbs a { color: var(--ink-dim); }
-.card h1 { font-size: 30px; line-height: 1.15; margin: 0 0 6px; font-weight: 700; display: flex; align-items: center; gap: 12px; }
-.card h1 .swatch { width: 18px; height: 18px; border-radius: 5px; }
-.card .dates { font-size: 15px; color: var(--ink-dim); margin: 0 0 4px; }
-.card .facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13.5px; color: var(--ink-dim); margin: 6px 0 0; padding: 0; list-style: none; }
+.card h1 { font-family: var(--caps); font-size: 28px; line-height: 1.2; margin: 0 0 6px; font-weight: 600; letter-spacing: .04em; display: flex; align-items: center; gap: 12px; }
+.card h1 .swatch { width: 18px; height: 18px; border-radius: 4px; }
+.card .dates { font-size: 16px; color: var(--ink-dim); margin: 0 0 4px; }
+.card .facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 15px; color: var(--ink-dim); margin: 6px 0 0; padding: 0; list-style: none; }
 .card .facts b { color: var(--ink); font-weight: 600; }
-.card .hero { margin: 18px 0 8px; border-radius: 14px; overflow: hidden; }
-.card .hero .minimap { position: relative; height: 260px; display: block; }
+/* the extent map sits inside the sheet's double rule */
+.card .hero { margin: 18px 0 8px; padding: 6px; }
+.card .hero .minimap { position: relative; height: 260px; display: block; border: 1px solid var(--line); }
 .card .hero .minimap canvas { display: block; width: 100%; height: 100%; }
-.card .hero .hero-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 12px; font-size: 13px; color: var(--ink-dim); border-top: 1px solid var(--line); }
-.card .hero .hero-foot .btn { padding: 6px 11px; font-size: 13px; }
+.card .hero .hero-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 8px 4px; font-size: 14px; color: var(--ink-dim); }
+.card .hero .hero-foot .btn { padding: 6px 12px; font-size: 14px; }
 .card .lifebar { position: relative; height: 22px; margin: 12px 0 0; }
 .card .lifebar canvas { width: 100%; height: 100%; display: block; }
-.card .lead { font-size: 17px; line-height: 1.55; color: var(--ink); margin: 18px 0 0; }
+.card .lead { font-size: 18.5px; line-height: 1.55; color: var(--ink); margin: 18px 0 0; }
 .card .pending { color: var(--ink-faint); font-style: italic; }
 .card section { margin-top: 26px; }
-.card section h2 { font-size: 11px; letter-spacing: .19em; text-transform: uppercase; color: #6ba4e6; margin: 0 0 10px; font-weight: 600; }
+/* a section is headed the way a chart labels a region: spaced capitals
+   with a rule running out from them */
+.card section h2 { font-family: var(--caps); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-dim); margin: 0 0 10px; font-weight: 600; display: flex; align-items: center; gap: 12px; }
+.card section h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .card .items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.card .items li { display: grid; grid-template-columns: 78px 1fr; gap: 10px; padding: 9px 11px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; font-size: 14.5px; }
-.card .items li .when { font-size: 12px; color: var(--ink-faint); padding-top: 2px; }
+.card .items li { display: grid; grid-template-columns: 78px 1fr; gap: 10px; padding: 9px 12px; background: var(--paper-2); border: 1px solid var(--line); border-radius: 4px; font-size: 15.5px; }
+.card .items li .when { font-size: 13px; color: var(--ink-faint); padding-top: 2px; }
 .card .items li.undated { grid-template-columns: 1fr; }
-.card .fall { padding: 12px 14px; font-size: 14.5px; }
+.card .fall { padding: 14px 16px; font-size: 15.5px; }
 .card .fall .to { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-.card .pill { display: inline-flex; align-items: center; gap: 7px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-2); color: var(--ink); text-decoration: none; font-size: 13.5px; }
+.card .pill { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--paper-2); color: var(--ink); text-decoration: none; font-size: 14.5px; }
 .card .pill .swatch { width: 10px; height: 10px; border-radius: 3px; }
 .card .pill.plain { color: var(--ink-dim); border-style: dashed; }
-.card .pill:hover { border-color: var(--accent); }
+.card .pill:hover { border-color: var(--blue); color: var(--blue); }
 .card .chain { display: flex; flex-wrap: wrap; gap: 8px; }
-.card .sources { font-size: 13.5px; color: var(--ink-dim); padding-left: 18px; margin: 0; }
+.card .sources { font-size: 14.5px; color: var(--ink-dim); padding-left: 18px; margin: 0; }
 .card .sources li { margin: 4px 0; }
-.card .foot { margin-top: 40px; font-size: 12.5px; color: var(--ink-faint); border-top: 1px solid var(--line); padding-top: 12px; }
+.card .foot { margin-top: 40px; font-size: 13.5px; color: var(--ink-faint); border-top: 1px solid var(--line); padding-top: 12px; }
 
 /* Period context stays readable beside the full civilization history. */
-.card .period-context { margin: 20px 0; padding: 16px; }
+.card .period-context { margin: 20px 0; padding: 16px 18px; }
 .card .period-context p { margin: 8px 0 0; line-height: 1.6; }
-.card .history-context { color: var(--ink-dim); font-size: 13px; margin: 22px 0 6px; }
-.card .item-period-label { color: var(--ink-dim); font-size: 12px; margin: 14px 0 6px; }
-.card .source-refs { font-size: 12px; margin-top: 7px; overflow-wrap: anywhere; }
+.card .history-context { color: var(--ink-dim); font-size: 14px; margin: 22px 0 6px; }
+.card .item-period-label { color: var(--ink-dim); font-size: 13px; margin: 14px 0 6px; }
+.card .source-refs { font-size: 13px; margin-top: 7px; overflow-wrap: anywhere; }
 .card .map-retry, .explorer .map-retry { min-height: 44px; padding: 8px 14px; }
 .card .sources li { overflow-wrap: anywhere; scroll-margin-top: 80px; }
 @media (max-width: 420px) {
@@ -367,24 +370,23 @@ body.card { min-height: 100vh; }
   .card .hero .hero-foot .btn { min-height: 44px; display: inline-flex; align-items: center; }
   .card .items li { grid-template-columns: 1fr; gap: 5px; }
 }
-.explorer .retry-map { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); z-index: 25; min-height: 44px; border: 1px solid var(--accent); border-radius: 10px; padding: 9px 14px; background: var(--bg-2); color: var(--ink); cursor: pointer; }
-.card .retry-map { min-height: 44px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg-2); color: var(--ink); padding: 8px 12px; cursor: pointer; }
-.map-key { position: absolute; top: 12px; right: 12px; z-index: 4; max-width: min(260px, calc(100vw - 24px)); color: var(--ink-dim); font-size: 12px; }
-.map-key summary { min-height: 44px; padding: 13px 12px; cursor: pointer; }
-.map-key ul { padding: 0 12px; margin: 0; list-style: none; }
+.explorer .retry-map { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); z-index: 25; min-height: 44px; border: 1px solid var(--ink); border-radius: 5px; padding: 9px 14px; background: var(--paper-2); color: var(--ink); cursor: pointer; }
+.card .retry-map { min-height: 44px; border: 1px solid var(--ink); border-radius: 5px; background: var(--paper-2); color: var(--ink); padding: 8px 12px; cursor: pointer; }
+.map-key { position: absolute; top: 12px; right: 12px; z-index: 4; max-width: min(260px, calc(100vw - 24px)); color: var(--ink-dim); font-size: 13.5px; }
+.map-key summary { min-height: 44px; padding: 13px 14px; cursor: pointer; }
+.map-key ul { padding: 0 14px; margin: 0; list-style: none; }
 .map-key li { display: flex; align-items: center; gap: 8px; margin: 9px 0; }
 .map-key li span { display: inline-block; width: 20px; height: 14px; flex-shrink: 0; border-radius: 3px; }
-.key-state { background: rgb(var(--holo-glow)); }
-.key-culture { background: rgb(var(--holo-glow) / .22); border: 1px solid rgb(var(--holo-glow) / .4); }
-.key-approximate { border: 1px dashed rgb(var(--holo-glow)); }
-.map-key p { margin: 12px; line-height: 1.5; }
-.key-approximate { border: 1px solid rgb(var(--holo-glow) / .35); }
-.card .source-ref { display: inline-flex; align-items: center; justify-content: center; min-width: 26px; min-height: 26px; font-size: 12px; vertical-align: baseline; white-space: nowrap; }
+.key-state { background: rgb(var(--wash) / .6); border: 1px solid var(--line-strong); }
+.key-culture { background: rgb(var(--wash) / .2); border: 1px solid var(--line); }
+.key-approximate { border: 1px solid var(--line); }
+.map-key p { margin: 12px 14px; line-height: 1.5; }
+.card .source-ref { display: inline-flex; align-items: center; justify-content: center; min-width: 26px; min-height: 26px; font-size: 12.5px; vertical-align: baseline; white-space: nowrap; }
 @media (max-width: 560px) {
-  /* one line on a phone: tighter type, and on the narrowest screens the
-     end of the name gives way rather than the bar scrolling sideways */
-  .bar .brand { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px; letter-spacing: .02em; }
-  .bar-tools { flex: 0 0 auto; }
-  .bar .chip { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; }
+  /* on a phone the title sets in two lines, as a cartouche does, and the
+     chips tighten so nothing scrolls sideways */
+  .bar .brand { flex: 1 1 auto; min-width: 0; white-space: normal; font-size: 11.5px; letter-spacing: .12em; line-height: 1.25; }
+  .bar-tools { flex: 0 0 auto; gap: 6px; }
+  .bar .chip { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 6px 10px; font-size: 11.5px; letter-spacing: .08em; }
   .bar .iconbtn { width: 44px; height: 44px; flex-shrink: 0; }
 }
