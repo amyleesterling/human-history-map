@@ -24,6 +24,12 @@ The current branch adds detailed runtime cards for Samoa, Fiji, Tonga, the later
 
 Independent assessment of identity, chronology, material evidence, ordinary life, endings, navigation and geometry remains outstanding. The full-inventory completion and deployment goal remains active.
 
+## Further Pacific additions
+
+The `islands-depth-02` and `new-zealand-depth` packets add Vanuatu, Solomon Islands and New Zealand. They contain 35 entries, 23 source references and six dated phases. Vanuatu separates Teouma archaeology from the later colonial condominium and independent state. Solomon Islands distinguishes museum collection dates from object manufacture and identifies the 1978 independence instrument. New Zealand separates gradual constitutional independence from Maori histories and authority, with examples of carving, petitions, refrigerated transport, housing and scientific work.
+
+Browser checks at 1,440 pixels for Vanuatu and 390 pixels for Solomon Islands and New Zealand found no horizontal overflow, failed resources, broken source anchors, undersized functional text or console errors. Body copy measured 16 pixels. New Zealand at 1947 displayed the constitutional-change phase. After these three cards and the subsequent Uganda packet, strict validation reports 121 runtime cards and 2,924 missing, with zero errors or warnings. This is a progress checkpoint, not a claim of full coverage or independent approval.
+
 ## Australian community additions
 
 The `australia-depth-01` packet adds Gunaikurnai (`kurnai`), Wurundjeri, Wadawurrung (`wathaurong`) and Ngarrindjeri. These are living peoples, not states with an 1815 fall date. Imported map intervals remain available-map coverage. Public names follow the communities' own organizations, with older search names retained as aliases.
