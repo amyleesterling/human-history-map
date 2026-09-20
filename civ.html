@@ -7,12 +7,15 @@
 <meta name="description" content="What one kingdom or civilization made: its inventions, science, arts and ideas, when it fell and to whom.">
 <meta name="theme-color" content="#0b1220">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="site.css?v=depth-2">
+<link rel="preload" href="vendor/fonts/patrick-hand-sc/patrick-hand-sc-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="vendor/scifi-ui/hologram.css">
+<link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">
+<link rel="stylesheet" href="site.css?v=ink-1">
 </head>
 <body class="card">
 
 <header class="bar">
-  <a class="brand" href="./">Human History Map</a>
+  <a class="brand holounder" href="./">Human History Map</a>
   <div class="bar-tools">
     <a id="globeLink" class="chip" href="./">On the globe</a>
     <button id="shareBtn" class="chip" type="button" title="Share this page">Share</button>
@@ -25,7 +28,7 @@
   <p class="dates num" id="dates"></p>
   <ul class="facts" id="facts"></ul>
 
-  <div class="hero" id="hero">
+  <div class="hero holopanel" id="hero">
     <a class="minimap" id="minimapLink" href="./" aria-label="Open this polity on the interactive globe"><canvas id="minimap"></canvas></a>
     <div class="hero-foot"><span id="heroCaption"></span><a class="btn" id="heroOpen" href="./">Open on the globe</a></div>
   </div>
@@ -35,7 +38,7 @@
   <div id="sections"></div>
   <section id="fallSection" hidden>
     <h2>The end</h2>
-    <div class="fall"><div id="fallText"></div><div class="to" id="fallTo"></div></div>
+    <div class="fall holopanel"><div id="fallText"></div><div class="to" id="fallTo"></div></div>
   </section>
   <section id="chainSection" hidden>
     <h2>Before and after</h2>
@@ -51,6 +54,6 @@
 <script src="vendor/d3/d3-array.min.js"></script>
 <script src="vendor/d3/d3-geo.min.js"></script>
 <script src="vendor/topojson/topojson-client.min.js"></script>
-<script type="module" src="js/card.js?v=depth-1"></script>
+<script type="module" src="js/card.js?v=ink-1"></script>
 </body>
 </html>

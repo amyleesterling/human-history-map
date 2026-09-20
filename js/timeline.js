@@ -30,13 +30,28 @@ export function formatSpan(from, to, { circa = false } = {}) {
 
 // A society's first and last imported map appearances are not its founding
 // and fall. Reviewed historical dates can explicitly replace that basis.
-export function formatCivSpan(civ) {
+export function hasCoverageDates(civ) {
   const importedCoverage = !!civ.circa ||
     String(civ.generated || '').startsWith('natural-earth');
-  const coverage = civ.dateBasis === 'map_coverage' ||
+  return civ.dateBasis === 'map_coverage' ||
     (civ.dateBasis !== 'historical' && importedCoverage);
+}
+
+export function formatCivSpan(civ) {
   const span = formatSpan(civ.from, civ.to, { circa: !!civ.circa });
-  return coverage ? `Map coverage: ${span}` : span;
+  return hasCoverageDates(civ) ? `Map coverage: ${span}` : span;
+}
+
+// "427 years": how long a polity stood, counted on the clock (no year zero,
+// so 27 BCE to 476 CE is 502 years), and for one still standing, to this
+// year. Coverage dates say when the maps show it, not how long it lived,
+// so they get no duration.
+export function formatCivDuration(civ, now = new Date().getFullYear()) {
+  if (hasCoverageDates(civ) || !Number.isFinite(civ.from)) return '';
+  const end = civ.to == null ? now : civ.to;
+  const n = yearToTick(end) - yearToTick(civ.from);
+  if (n < 1) return '';
+  return `${n} ${n === 1 ? 'year' : 'years'}`;
 }
 
 // Recorded history is lopsided: three thousand years of a handful of river

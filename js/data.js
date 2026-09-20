@@ -56,6 +56,45 @@ export function rewind(geometry) {
   return geometry;
 }
 
+// words of two letters or more, lower case, apostrophes kept inside them
+const tokens = (text) => text.toLowerCase().split(/[^\p{L}\p{N}']+/u).filter((w) => w.length >= 2);
+
+// true when b is a with one letter changed, dropped or added
+function oneEditApart(a, b) {
+  if (a === b) return true;
+  const la = a.length, lb = b.length;
+  if (Math.abs(la - lb) > 1) return false;
+  let i = 0, j = 0, edits = 0;
+  while (i < la && j < lb) {
+    if (a[i] === b[j]) { i++; j++; continue; }
+    if (++edits > 1) return false;
+    if (la > lb) i++; else if (lb > la) j++; else { i++; j++; }
+  }
+  return edits + (la - i) + (lb - j) <= 1;
+}
+
+// where the first of the matched words begins in the text, or -1
+function firstMention(text, matched) {
+  const lower = text.toLowerCase();
+  let at = -1;
+  for (const w of matched) {
+    const i = lower.search(new RegExp('(^|[^\\p{L}\\p{N}])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'u'));
+    if (i >= 0 && (at < 0 || i < at)) at = i;
+  }
+  return at;
+}
+
+// the stretch of a summary around the first matched word, cut at word
+// boundaries to about 110 characters
+function snippetAround(text, matched) {
+  const at = firstMention(text, matched);
+  if (at < 0) return text.slice(0, 110).trim();
+  let start = Math.max(0, at - 40), end = Math.min(text.length, at + 70);
+  if (start > 0) { const sp = text.lastIndexOf(' ', start); start = sp > 0 && sp > start - 15 ? sp + 1 : start; }
+  if (end < text.length) { const sp = text.indexOf(' ', end); end = sp > 0 && sp < end + 15 ? sp : end; }
+  return (start > 0 ? '\u2026' : '') + text.slice(start, end).trim() + (end < text.length ? '\u2026' : '');
+}
+
 export class HistoryData {
   constructor(base = '') {
     this.base = base;
@@ -110,10 +149,10 @@ export class HistoryData {
     this.summaryFiles = Array.isArray(m.summaries) ? m.summaries : (m.summaries ? [m.summaries] : []);
     this._summaries = null;
 
-    // priority 1 marks a researched border file: where a polity has both a
-    // researched and an imported border for a year, only the researched one
-    // draws (the imported snapshots are not edited by hand, so this is how
-    // a researched border replaces one)
+    // priority 1 marks a researched border file: coarse extents that fill
+    // the years the imported snapshots lack. Where a polity has both for a
+    // year, the imported outline draws (see polities); a wrong snapshot is
+    // fixed in the importer's tables, never by drawing over it
     this.files = (m.borders || []).map((b) => ({
       file: b.file, from: b.from, to: b.to, priority: b.priority || 0, state: 'idle', promise: null, features: [],
     }));
@@ -314,7 +353,7 @@ export class HistoryData {
   }
 
   // Border features on the map in `year`, largest first.
-  // A polity with a researched border in that year shows only that one.
+  // A polity with an imported border in that year shows only that one.
   polities(year) {
     const active = this.features.filter((f) => activeAt(drawableInterval(f), year));
     // researched polities alive this year with no shape yet: their earliest
@@ -328,10 +367,22 @@ export class HistoryData {
       if (!reach.has(c.id) || a < reach.get(c.id)) reach.set(c.id, a);
     }
     if (reach.size) for (const f of this.features) if (reach.get(f._civ.id) === f.properties.from) active.push(f);
-    const researched = new Set();
-    for (const f of active) if (f._priority > 0) researched.add(f._civ.id);
-    if (!researched.size) return active;
-    return active.filter((f) => f._priority > 0 || !researched.has(f._civ.id));
+    // where the import and a researched file both draw a polity this year,
+    // the import's outline was traced from an atlas and the researched shape
+    // is a coarse extent, so the import draws and the researched shape fills
+    // only the years the import lacks (Amy saw Qwen's Western Zhou hexagon
+    // sitting in a hole in the Sinic ring where the imported Zhou belonged).
+    // The exception is a researched shape marked `over`: the snapshot is
+    // wrong for those years and nothing in the importer's tables can mend
+    // it (the 1200 map gives the Southern Song all of China), so the
+    // researched shape draws instead
+    const imported = new Set(), over = new Set();
+    for (const f of active) {
+      if (!(f._priority > 0)) imported.add(f._civ.id);
+      else if (f.properties.over) over.add(f._civ.id);
+    }
+    if (!imported.size) return active;
+    return active.filter((f) => (f._priority > 0 ? f.properties.over || !imported.has(f._civ.id) : !over.has(f._civ.id)));
   }
 
   // The features of one polity in a given year (a kingdom can be several
@@ -387,6 +438,73 @@ export class HistoryData {
       if (starts.length >= limit) break;
     }
     return [...starts, ...contains].slice(0, limit);
+  }
+
+  // The text too, so a king finds his kingdom: "genghis" finds the Mongol
+  // Empire through its figures and the khanates through the sentences that
+  // name him. Each polity's figures, capital, region and summaries (its own
+  // and the quoted one, fetched on first use) are split into words once; a
+  // query word matches a word by prefix or, from five letters, with one
+  // letter wrong, missing or extra, so a common misspelling still lands.
+  // Every word of the query must match in the same polity. A match among
+  // the figures or the capital ranks first, then an early mention in the
+  // summary before a late one. Polities already found by name are left out.
+  async searchText(q, limit = 8, exclude = new Set()) {
+    const words = tokens(q);
+    if (!words.length) return [];
+    const index = await this._textIndex();
+    if (!index) return [];
+    let ids = null;
+    const matched = [];
+    for (const w of words) {
+      const hits = new Set();
+      for (const [word, set] of index.words) {
+        if (word.startsWith(w) || (w.length >= 5 && oneEditApart(w, word))) {
+          matched.push(word);
+          for (const id of set) hits.add(id);
+        }
+      }
+      ids = ids ? new Set([...ids].filter((id) => hits.has(id))) : hits;
+      if (!ids.size) return [];
+    }
+    const out = [];
+    for (const id of ids) {
+      if (exclude.has(id)) continue;
+      const civ = this.civs.get(id);
+      if (!civ) continue;
+      const entry = index.texts.get(id);
+      const at = firstMention(entry.text, matched);
+      const inFacts = firstMention(entry.facts, matched) >= 0;
+      out.push({ civ, snippet: inFacts ? entry.facts : snippetAround(entry.text, matched), score: (inFacts ? 0 : 1e6) + (at < 0 ? 1e5 : at) });
+    }
+    out.sort((a, b) => a.score - b.score);
+    return out.slice(0, limit).map(({ civ, snippet }) => ({ civ, snippet }));
+  }
+
+  _textIndex() {
+    if (this._textIndexPromise) return this._textIndexPromise;
+    const quoted = this.summaryFiles.length ? this.loadSummaries() : Promise.resolve({});
+    this._textIndexPromise = quoted.then((all) => {
+      const words = new Map(), texts = new Map();
+      const add = (id, text) => {
+        for (const w of tokens(text)) {
+          let set = words.get(w);
+          if (!set) words.set(w, (set = new Set()));
+          set.add(id);
+        }
+      };
+      for (const c of this.civList) {
+        const facts = [c.figures && c.figures.length ? `Figures: ${c.figures.join(', ')}` : '', c.capital ? `Capital: ${c.capital}` : '', c.region || ''].filter(Boolean).join(' \u00b7 ');
+        const own = c.summary || '';
+        const q = all && all[c.id] && all[c.id].summary ? all[c.id].summary : '';
+        if (!facts && !own && !q) continue;
+        const text = own && q && own !== q ? `${own} ${q}` : own || q;
+        texts.set(c.id, { facts, text });
+        add(c.id, `${facts} ${text}`);
+      }
+      return { words, texts };
+    }).catch(() => null);
+    return this._textIndexPromise;
   }
 
   // How many polities the index says existed in each of `bins` slices of the

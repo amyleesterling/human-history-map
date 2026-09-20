@@ -65,9 +65,11 @@ link by it. If two polities could share a name, add the period or region:
   that working set are released. Split big datasets by era (or
   by region, or by polity; any split works as long as each entry's
   `from`/`to` covers its features). An entry with `"priority": 1` holds
-  researched borders: where a polity has both a researched and an imported
-  border for a year, only the researched one draws, which is how a
-  researched border replaces an imported snapshot without editing it.
+  researched borders: coarse extents drawn from the written record to fill
+  the years the imported snapshots lack. Where a polity has both an
+  imported and a researched border for a year, only the imported one draws,
+  since a traced snapshot is the better outline; a wrong snapshot is fixed
+  in the importer's tables, never by drawing over it.
 - `speeds` are playback rates in years per second.
 
 ## `data/civilizations*.json`: the polity index
@@ -102,6 +104,7 @@ tooltip is built from this entry alone, so keep it complete.
 | `id`, `name`, `from`, `to` | yes | `to` may be `null` for a polity still on the map. |
 | `aliases` | no | Other names people search for. |
 | `capital`, `region` | no | Shown under the name. |
+| `figures` | no | Founders, rulers and other people the polity is known by ("Genghis Khan", "Ashoka"), shown on the card page and found by search, so a name finds its kingdom. Only people the sources name; a list, not a history. |
 | `color` | no | `#rrggbb`. Leave it out and the map picks one that differs from every contemporary neighbour. |
 | `summary` | no, but wanted | The tooltip text. Without it the tooltip says "Summary coming soon." |
 | `fell` | no | `to` is a list: an id links to that polity on the globe at the year of the fall; any other string is shown as a plain name. `year` defaults to `to`. |
@@ -142,7 +145,8 @@ colonies carrying a `label`.
 | --- | --- | --- |
 | `civ` | yes | An id from the polity index. Unknown ids are skipped with a console warning. |
 | `from`, `to` | yes | The years this shape is on the map (`to` exclusive). Default to the polity's own range if omitted, which is right for a polity drawn once. |
-| `precision` | no | `1` approximate (drawn dashed), `2` moderately precise, `3` fixed by treaty or modern survey. |
+| `precision` | no | `1` approximate (drawn fainter), `2` moderately precise, `3` fixed by treaty or modern survey. |
+| `over` | no | `true` on a researched shape that must draw instead of the imported outline for its years, because the snapshot is wrong there and none of the importer's tables (rename, split, carry, drop) can mend it: the 1200 map gives the Southern Song all of China. Rare, and only in a `"priority": 1` file. |
 | `label` | no | The name drawn on this shape when it is not the polity's own: a colony, a province, a tetrarch's share. Tapping it opens the polity's card headed by the label ("Angola, held by Portugal in 1914"). |
 | `note` | no | Free text for the researchers; not shown. |
 
@@ -177,7 +181,12 @@ shape at all, `data/civilizations-seams.json` and
 `data/borders/china-seams.geojson` carry entries and coarse extents drawn
 by the site after Tan Qixiang's Historical Atlas of China: the Three
 Kingdoms, the eastern and western successors of the Northern Wei, and the
-Five Dynasties. Each is `precision: 1`, dashed, and its `note` says so.
+Five Dynasties. Each is `precision: 1`, drawn fainter, and its `note` says
+so. Three of them carry `over`, because the 1100 and 1200 maps keep the
+Song over all of China until 1279 and hold the Jurchen Jin to Manchuria:
+the Southern Song south of the Huai and the Qinling from 1127, the Jin
+north of that line from 1115, and the Mongol Empire in its place from
+1234 until the Yuan is proclaimed in 1271.
 
 ## `data/cards/<id>.json`: the info cards
 
@@ -293,10 +302,12 @@ decision per batch.
 
 The same id in a later `civilizations` file replaces the fields it names,
 so a researched entry can correct an imported one without editing
-`data/hb/`. A border in a file listed with `"priority": 1` replaces the
-imported border of the same polity for the years it covers; outside those
-years the imported border still shows, so a researched border for one
-period sits beside imported ones for the rest of a polity's life.
+`data/hb/`. A border in a file listed with `"priority": 1` fills the years
+in which the same polity has no imported border; in a year that has one,
+the imported border draws and the researched one does not, so a researched
+extent for a founding or a seam sits beside the imported snapshots for the
+rest of a polity's life without covering them. An imported border that is
+wrong is renamed, split, carried or dropped in the importer's tables.
 
 ## Period-specific context and endings
 

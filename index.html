@@ -11,15 +11,16 @@
 <meta property="og:description" content="Every known kingdom and civilization on one globe, from the first cities to the present.">
 <meta name="theme-color" content="#0b1220">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="vendor/fonts/patrick-hand-sc/patrick-hand-sc-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="vendor/scifi-ui/hologram.css">
 <link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">
-<link rel="stylesheet" href="vendor/scifi-ui/scan-pass.css">
-<link rel="stylesheet" href="site.css?v=holo-1">
+<link rel="stylesheet" href="vendor/scifi-ui/converge-swarm.css">
+<link rel="stylesheet" href="site.css?v=ink-1">
 </head>
 <body class="explorer">
 
 <header class="bar">
-  <a class="brand" href="./">Human History Map</a>
+  <a class="brand holounder" href="./">Human History Map</a>
   <div class="bar-tools">
     <button id="searchBtn" class="iconbtn" type="button" aria-label="Search for a kingdom or country" aria-expanded="false" aria-controls="search">
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -31,7 +32,7 @@
 
 <main id="stage" class="stage">
   <canvas id="globe" role="img" aria-label="Interactive globe showing the borders of kingdoms and countries in the selected year. Drag to turn, pinch to zoom, tap a border to learn about it."></canvas>
-  <details class="map-key">
+  <details class="map-key holopanel">
     <summary>Map key</summary>
     <ul>
       <li><span class="key-state" aria-hidden="true"></span>State or political territory</li>
@@ -41,17 +42,16 @@
     <p>Historical outlines are source snapshots, not surveyed frontiers. Cultural ranges do not necessarily mark state borders. Unmarked boundaries are not automatically precise.</p>
   </details>
 
-  <div id="search" class="search" hidden>
+  <div id="search" class="search holopanel" hidden>
     <input id="searchInput" type="search" placeholder="Find a kingdom, empire or country" autocomplete="off" spellcheck="false" aria-label="Find a kingdom, empire or country" aria-controls="searchResults">
     <ul id="searchResults" role="listbox" aria-label="Matches"></ul>
   </div>
 
   <div id="loading" class="loading num" hidden>loading borders</div>
-  <div id="hint" class="hint" hidden></div>
-  <div id="notice" class="notice" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
+  <div id="hint" class="hint holopanel" hidden></div>
+  <div id="notice" class="notice holopanel" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
 
   <aside id="tip" class="tip holopanel holoframe" hidden role="dialog" aria-labelledby="tipName">
-    <span class="tip-scan holoscan" aria-hidden="true"><span class="holoscan-line"></span></span>
     <span class="hud" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></span>
     <button class="tip-head" id="tipToggle" type="button" aria-expanded="false" aria-controls="tipBody" title="Show more, or drag to move">
       <span class="swatch" id="tipSwatch" aria-hidden="true"></span>
@@ -70,7 +70,7 @@
         <p class="tip-source" id="tipSource" hidden></p>
       </div>
       <div class="tip-actions">
-        <a id="tipMore" class="btn" href="#">More info</a>
+        <a id="tipMore" class="btn" href="#" target="_blank" rel="noopener">More info</a>
         <button id="tipZoom" class="btn ghost" type="button">Zoom to</button>
       </div>
     </div>
@@ -99,6 +99,7 @@
 <script src="vendor/d3/d3-geo.min.js"></script>
 <script src="vendor/topojson/topojson-client.min.js"></script>
 <script src="vendor/scifi-ui/hologram-tap.js"></script>
-<script type="module" src="js/app.js?v=holo-1"></script>
+<script src="vendor/scifi-ui/converge-swarm.js"></script>
+<script type="module" src="js/app.js?v=ink-1"></script>
 </body>
 </html>

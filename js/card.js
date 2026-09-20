@@ -6,7 +6,7 @@
 
 import { HistoryData } from './data.js?v=depth-1';
 import { Globe } from './globe.js?v=depth-1';
-import { TimeScale, formatYear, formatCivSpan, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+import { TimeScale, formatYear, formatCivSpan, formatCivDuration, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
 
 import { matchingPeriods, partitionItems, endingFor } from './card-periods.js?v=depth-1';
 
@@ -80,7 +80,8 @@ async function main() {
   document.title = `${civ.name}, ${formatCivSpan(civ)}: Human History Map`;
   $('swatch').style.background = civ.color;
   $('nameText').textContent = civ.name;
-  $('dates').textContent = formatCivSpan(civ);
+  const duration = formatCivDuration(civ);
+  $('dates').textContent = duration ? `${formatCivSpan(civ)} · ${duration}` : formatCivSpan(civ);
   $('crumbYear').textContent = formatYear(year);
   $('globeLink').href = globeURL(civ.id, year);
   $('heroOpen').href = globeURL(civ.id, year);
@@ -94,6 +95,7 @@ async function main() {
   if (civ.kind === 'culture') fact('Kind', 'a people or culture, not a state');
   fact('Capital', civ.capital);
   fact('Region', civ.region);
+  if (civ.figures && civ.figures.length) fact('Figures', civ.figures.join(', '));
   if (civ.aliases && civ.aliases.length) fact('Also called', civ.aliases.join(', '));
 
   // the extent map, drawn once the borders for that year are in
@@ -155,7 +157,7 @@ async function main() {
   else if (quoted) { lead.textContent = quoted.text; quotedSource = quoted.source; }
   else { lead.textContent = 'The summary for this polity has not been written yet.'; lead.classList.add('pending'); }
 
-  const context = el('section', 'period-context');
+  const context = el('section', 'period-context holopanel');
   context.appendChild(el('h2', null, `In ${formatYear(year)}`));
   const periods = matchingPeriods(card, year);
   if (periods.length) {
