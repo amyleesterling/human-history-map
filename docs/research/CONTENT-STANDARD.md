@@ -16,6 +16,10 @@ For instance, imported beads demonstrate exchange networks; alone they do not pr
 
 Use at least two substantial concrete examples when the evidence permits. This is a research target, not a quota to fill with unsupported claims. For recent states, archival records, buildings, objects and documented practices may be more informative than excavations. Include ordinary people's work, households, food and institutions alongside elite art and famous inventions. Distinguish invention from adoption, refinement and surviving attestation.
 
+Amy also wants children and families to find memorable details about ordinary life: family relationships, social gatherings, learning, food, healthcare, sanitation and toilets, where evidence survives. Explain a specific practice, object or account in approachable language. Light humour is welcome, but never invent a custom for a joke or make suffering, disability or a community the punchline. Historical remedies are described as historical beliefs or practices, not medical advice. Keep dates, local variation and source references visible. A useful example is the Barbadian chattel house: moving house could mean relocating the building itself.
+
+Publish checked batches periodically while the larger coverage project continues, as Amy requested. Report actual coverage and verify the deployed pages; do not describe a batch release as completion of the whole atlas.
+
 ## Endings and continuity on every page
 
 A page must explicitly address its appropriate ending or continuity, even when the answer is uncertain:
