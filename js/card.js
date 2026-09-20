@@ -4,11 +4,11 @@
 // top is the same renderer as the globe, frozen on the polity's borders in
 // the requested year, and tapping it opens the explorer at that moment.
 
-import { HistoryData } from './data.js?v=depth-1';
-import { Globe } from './globe.js?v=depth-1';
-import { TimeScale, formatYear, formatCivSpan, formatCivDuration, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+import { HistoryData } from './data.js?v=cards-6';
+import { Globe } from './globe.js?v=cards-6';
+import { TimeScale, formatYear, formatCivSpan, formatCivDuration, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=cards-6';
 
-import { matchingPeriods, partitionItems, endingFor } from './card-periods.js?v=depth-1';
+import { matchingPeriods, partitionItems, endingFor } from './card-periods.js?v=cards-6';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -21,8 +21,8 @@ const data = new HistoryData();
 // data-skin="scifi" on the root, and its links and its lifebar follow.
 const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'scifi' ? 'scifi' : 'atlas';
 const LIFEBAR = SKIN === 'atlas'
-  ? { track: 'rgba(35,41,58,.08)', marker: '#23293a', font: '11px "EB Garamond", Garamond, "Times New Roman", serif', label: 'rgba(35,41,58,.6)' }
-  : { track: 'rgba(255,255,255,.07)', marker: '#fff', font: '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace', label: 'rgba(236,231,220,.5)' };
+  ? { track: 'rgba(35,41,58,.08)', marker: '#23293a', font: '14px "EB Garamond", Garamond, "Times New Roman", serif', label: '#505666' }
+  : { track: 'rgba(255,255,255,.07)', marker: '#fff', font: '12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace', label: '#a9b1bf' };
 
 function globeURL(civId, year) {
   return `${SKIN === 'scifi' ? 'scifi.html' : './'}?civ=${encodeURIComponent(civId)}&y=${year}`;
@@ -103,6 +103,7 @@ async function main() {
     const li = el('li'); li.append(el('b', null, label + ' '), document.createTextNode(value)); facts.appendChild(li);
   };
   if (civ.kind === 'culture') fact('Kind', 'a people or culture, not a state');
+  if (civ.kind === 'region') fact('Kind', 'geographic region');
   fact('Capital', civ.capital);
   fact('Region', civ.region);
   if (civ.figures && civ.figures.length) fact('Figures', civ.figures.join(', '));
@@ -158,6 +159,9 @@ async function main() {
   await drawMap();
 
   drawLifebar(scale, civ, year);
+  // Redraw at the displayed width so timeline labels do not shrink on resize.
+  const timelineSize = new ResizeObserver(() => drawLifebar(scale, civ, year));
+  timelineSize.observe($('lifebar'));
 
   const card = await data.card(civ.id);
   const lead = $('lead');
@@ -272,7 +276,7 @@ async function main() {
 // chosen year marked
 function drawLifebar(scale, civ, year) {
   const c = $('lifebarCanvas'), dpr = Math.min(2, window.devicePixelRatio || 1);
-  const w = c.parentElement.clientWidth, h = 22;
+  const w = c.parentElement.clientWidth, h = 38;
   c.width = w * dpr; c.height = h * dpr;
   const ctx = c.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -287,8 +291,9 @@ function drawLifebar(scale, civ, year) {
   ctx.font = LIFEBAR.font;
   ctx.fillStyle = LIFEBAR.label;
   ctx.textBaseline = 'middle';
-  ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 11);
-  ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 11);
+  // Put labels below the track so recent-state colors cannot obscure them.
+  ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 29);
+  ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 29);
 }
 
 document.getElementById('shareBtn').addEventListener('click', () => {

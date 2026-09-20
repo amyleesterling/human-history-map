@@ -1,0 +1,7 @@
+# Ndongo research checkpoint
+
+Eleven entries, five sources and six interpretive phases cover Kwanza markets, navigation, local sobas, revenue collectors, provisioning, the lunga authority symbol, displacement, Njinga's alliances and royal exiles after conquest. Ndongo and Matamba are distinguished. Sanctuary for people escaping slavery is discussed alongside Njinga's own participation in captive trading. No chair-and-servant anecdote or unsupported origin myth is repeated.
+
+The national Kwanza heritage submission is explicitly a tentative-list source, not a UNESCO inscription. Its speculative migration narrative is excluded. Lara's abstract and introduction differ about the month of the 1671 capture, so the card uses the supported year without choosing a day. The 1671 conquest is distinct from Njinga's death in Matamba in 1663. The imported Ndongo map interval (1492 to 1530) does not cover the documented later kingdom; it is not treated as a verified lifetime.
+
+Strict validation passes with 143 runtime cards, zero errors and zero warnings. The atlas page at 1440 pixels and year 1622 has eleven entries and five sources, 16-pixel prose, valid citations and no detected overflow, undersized text or failed resources. Source-checked draft awaiting independent historical review and depth certification. Geometry remains unverified. Full inventory completion and deployment remain outstanding.

@@ -6,7 +6,7 @@ import { readFile } from 'node:fs/promises';
 import * as timeline from '../js/timeline.js';
 import { matchingPeriods } from '../js/card-periods.js';
 const source = (await readFile(new URL('../js/app.js', import.meta.url), 'utf8'))
-  .replace(/^import .*;\n/gm, '').replace(/\nmain\(\);\s*$/, '');
+  .replace(/^import .*;\r?\n/gm, '').replace(/\r?\nmain\(\);\s*$/, '');
 function harness() {
   const nodes = new Map();
   const node = () => ({ hidden: false, textContent: '', href: '', style: {}, dataset: {}, childNodes: [],

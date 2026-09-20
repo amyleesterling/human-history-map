@@ -1,0 +1,7 @@
+# Zayyanid Tlemcen research checkpoint
+
+Twelve entries and ten sources cover the inscribed bazaar measure, textile work, two architectural examples, learning, coin attribution and loss of independence. The well-coping catalogue was excluded because its find context was insufficiently clear. The 1550 versus 1554 dating in Qantara is recorded; the card uses an explicitly approximate endpoint. Reconstructed decoration is distinguished from medieval fabric, and rival coin attributions are attributed to the scholar who evaluated them.
+
+Strict validation passes with 158 runtime cards, zero errors and zero warnings. Temporal checks pass. The atlas card at year 1328 and 1440 pixels has twelve entries, ten sources, 16-pixel prose, valid references and no detected overflow, undersized text or failed resources. Screenshot inspected for legibility; browser error report is empty.
+
+Qantara explicitly identifies the Abdalwadids and Zayyanids as the same dynasty. The later imported Zayyanid Caliphate ID now loads this narrative through a declared shared-card association, retaining its original map interval and polygon. Its atlas page at year 1517 and phone width selects the supported late phase, shows all twelve entries and ten sources, and has no overflow, bad references, failed resources or browser errors. Screenshot inspected. No successor navigation or verified lifetime is inferred from the source map interval. The association is source-checked, not independently certified. Independent historical review, full coverage and deployment remain outstanding.

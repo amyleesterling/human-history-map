@@ -110,7 +110,7 @@ tooltip is built from this entry alone, so keep it complete.
 | `fell` | no | `to` is a list: an id links to that polity on the globe at the year of the fall; any other string is shown as a plain name. `year` defaults to `to`. |
 | `predecessors`, `successors` | no | Ids. Shown as "Before" and "After" chips on the card. |
 | `card` | no | Path relative to `data/` if the card is not at `cards/<id>.json`. |
-| `kind` | no | `"state"` (default) or `"culture"` for a people, a hunter-gatherer range or a farming culture: drawn as a faint wash under the states, labelled only when there is room. |
+| `kind` | no | `"state"` (default), `"culture"` for a people, a hunter-gatherer range or a farming culture, or `"region"` for a geographic area such as Antarctica. Cultures are drawn as a faint wash under the states and labelled only when there is room. Regions retain the ordinary map rendering but are explicitly identified as geographic regions in cards and tooltips; their outlines do not imply unified sovereignty. |
 | `circa` | no | `true` when `from` and `to` are only as fine as the source's snapshots; dates then print as "c. 1000 to 1100 CE". |
 | `dateBasis` | no | `"map_coverage"` labels the interval as available map coverage, not a researched lifetime. `"historical"` is for source-supported historical dates, including explicitly approximate dates. Snapshot records default to map coverage when `circa` is true; generated Natural Earth records also default to map coverage. |
 | `summarySource` | no | `{ "name", "title", "url", "license" }` when `summary` is quoted; the pages show the link. |
@@ -223,6 +223,13 @@ believed and ate. War belongs only in the fall.
 - Suggested section titles, in this order: Inventions, Science, Technology,
   Arts, Ideas and beliefs, Daily life, Trade and exchange, Legacy. Use the
   ones that apply; add others if the civilization calls for it.
+- Several map records may share a card only after checking that they describe
+  the same subject. Keep the primary `id` on the card, declare every destination
+  in `appliesTo: ["primary-id", "other-id"]`, and set the other record's `card`
+  path to the primary file in `data/researched-overrides.json`. Record the identity
+  evidence in the research packet. The validator checks every association and
+  includes all destinations in the card index. Shared prose does not merge
+  polygons, change snapshot dates or certify historical identity or geometry.
 - An item is one or two sentences with a fact in it. `year` is optional,
   `circa: true` prints "c." before it. `link` adds a "See on the globe" link
   to another polity at a year.

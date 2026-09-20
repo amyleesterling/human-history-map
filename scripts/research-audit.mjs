@@ -21,10 +21,11 @@ for(const file of packetRoots.filter(d=>fs.existsSync(path.join(root,d))).flatMa
     let cardPath=entity.cardFile||entity.cardPath||entity.card||entity.proposedCard||entity.proposedCardPath||entity.path;
     if(!cardPath){errors.push(`${file}: no card path for ${entity.id}`);continue;}
     if(!fs.existsSync(path.join(root,cardPath))) cardPath=path.join(path.dirname(file),cardPath);
+    cardPath=cardPath.replaceAll('\\','/');
     if(!fs.existsSync(path.join(root,cardPath))){errors.push(`${file}: absent card ${cardPath}`);continue;}
     const bytes=fs.readFileSync(path.join(root,cardPath));
     const card=JSON.parse(bytes);
-    if(card.id!==entity.id)errors.push(`${file}: card ID mismatch for ${entity.id}`);
+    if(card.id!==entity.id&&!(Array.isArray(card.appliesTo)&&card.appliesTo.includes(entity.id)))errors.push(`${file}: card ID mismatch for ${entity.id}`);
     const claims=[];
     for(const claim of entity.claims||[]){
       const p=claim.pointer||claim.path||claim.cardPath;

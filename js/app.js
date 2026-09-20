@@ -3,11 +3,11 @@
 // a function of (year, view, selected polity), and all three live in the
 // query string so any moment can be shared.
 
-import { HistoryData } from './data.js?v=depth-1';
-import { Globe } from './globe.js?v=depth-1';
-import { TimeScale, formatYear, formatCivSpan, formatCivDuration, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+import { HistoryData } from './data.js?v=cards-6';
+import { Globe } from './globe.js?v=cards-6';
+import { TimeScale, formatYear, formatCivSpan, formatCivDuration, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=cards-6';
 
-import { matchingPeriods } from './card-periods.js?v=depth-1';
+import { matchingPeriods } from './card-periods.js?v=cards-6';
 
 const $ = (id) => document.getElementById(id);
 const els = {
@@ -430,6 +430,7 @@ function showTip(civ, anchor, feature) {
   const meta = [];
   if (possession) meta.push(`${civ.name}: ${span}`);
   if (civ.kind === 'culture') meta.push('A people or culture, not a state');
+  if (civ.kind === 'region') meta.push('Geographic region');
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
   if (civ.region) meta.push(civ.region);
   const drawn = data.featuresOf(civ.id, state.year).length > 0;
@@ -519,6 +520,7 @@ function syncTipTime(civ) {
   els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : spanWithDuration(civ);
   const meta = [];
   if (civ.kind === 'culture') meta.push('A people or culture, not a state');
+  if (civ.kind === 'region') meta.push('Geographic region');
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
   if (civ.region) meta.push(civ.region);
   if (data.yearStatus(state.year).state === 'error') meta.push(`Borders could not load for ${formatYear(state.year)}.`);

@@ -95,6 +95,16 @@ field by field in **`DATA-FORMAT.md`**. What is there now:
   discoveries and what they reveal, alongside cultural life and a sourced
   account of how a polity ended or a culture continued.
 
+To work through every missing More info card, run
+`node scripts/research-coverage.mjs`. Alongside the coverage report it writes
+`data/research/missing-cards.json`, with one entry per unfilled map record,
+regional ownership, available draft paths and source leads. Check each
+source's identity before using it: an imported article match may concern a
+different period or subject. Existing draft paths are not publication approval.
+`node scripts/research-coverage.mjs --require-cards` exits unsuccessfully
+while any card is absent; passing this check would establish file coverage,
+not source accuracy or completion of the content-depth standard.
+
 To regenerate everything (needs `npm install` once, for the TopoJSON tools):
 
 ```
