@@ -9,18 +9,18 @@
 <meta property="og:site_name" content="Human History Map">
 <meta property="og:title" content="Human History Map">
 <meta property="og:description" content="Every known kingdom and civilization on one globe, from the first cities to the present.">
-<meta name="theme-color" content="#0b1220">
+<meta name="theme-color" content="#e9e3d3">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preload" href="vendor/fonts/patrick-hand-sc/patrick-hand-sc-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="vendor/scifi-ui/hologram.css">
-<link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">
+<link rel="preload" href="vendor/fonts/cinzel/cinzel-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="vendor/fonts/eb-garamond/eb-garamond-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="vendor/fonts/eb-garamond/eb-garamond-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="vendor/scifi-ui/converge-swarm.css">
-<link rel="stylesheet" href="site.css?v=ink-1">
+<link rel="stylesheet" href="site.css?v=paper-1">
 </head>
 <body class="explorer">
 
 <header class="bar">
-  <a class="brand holounder" href="./">Human History Map</a>
+  <a class="brand" href="./">Human History Map</a>
   <div class="bar-tools">
     <button id="searchBtn" class="iconbtn" type="button" aria-label="Search for a kingdom or country" aria-expanded="false" aria-controls="search">
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -32,7 +32,7 @@
 
 <main id="stage" class="stage">
   <canvas id="globe" role="img" aria-label="Interactive globe showing the borders of kingdoms and countries in the selected year. Drag to turn, pinch to zoom, tap a border to learn about it."></canvas>
-  <details class="map-key holopanel">
+  <details class="map-key sheet">
     <summary>Map key</summary>
     <ul>
       <li><span class="key-state" aria-hidden="true"></span>State or political territory</li>
@@ -42,17 +42,16 @@
     <p>Historical outlines are source snapshots, not surveyed frontiers. Cultural ranges do not necessarily mark state borders. Unmarked boundaries are not automatically precise.</p>
   </details>
 
-  <div id="search" class="search holopanel" hidden>
+  <div id="search" class="search sheet" hidden>
     <input id="searchInput" type="search" placeholder="Find a kingdom, empire or country" autocomplete="off" spellcheck="false" aria-label="Find a kingdom, empire or country" aria-controls="searchResults">
     <ul id="searchResults" role="listbox" aria-label="Matches"></ul>
   </div>
 
   <div id="loading" class="loading num" hidden>loading borders</div>
-  <div id="hint" class="hint holopanel" hidden></div>
-  <div id="notice" class="notice holopanel" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
+  <div id="hint" class="hint sheet" hidden></div>
+  <div id="notice" class="notice sheet" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
 
-  <aside id="tip" class="tip holopanel holoframe" hidden role="dialog" aria-labelledby="tipName">
-    <span class="hud" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></span>
+  <aside id="tip" class="tip sheet" hidden role="dialog" aria-labelledby="tipName">
     <button class="tip-head" id="tipToggle" type="button" aria-expanded="false" aria-controls="tipBody" title="Show more, or drag to move">
       <span class="swatch" id="tipSwatch" aria-hidden="true"></span>
       <span class="tip-title">
@@ -98,8 +97,7 @@
 <script src="vendor/d3/d3-array.min.js"></script>
 <script src="vendor/d3/d3-geo.min.js"></script>
 <script src="vendor/topojson/topojson-client.min.js"></script>
-<script src="vendor/scifi-ui/hologram-tap.js"></script>
 <script src="vendor/scifi-ui/converge-swarm.js"></script>
-<script type="module" src="js/app.js?v=ink-1"></script>
+<script type="module" src="js/app.js?v=paper-1"></script>
 </body>
 </html>

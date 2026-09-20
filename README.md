@@ -36,9 +36,9 @@ data/hb/                 fifty imported world snapshots (borders, polities, summ
 data/curated.json        hand-written entries merged onto the imported ones
 data/cards/              the info cards
 base/                    coastlines, lakes and rivers (Natural Earth, public domain)
-vendor/                  d3-geo, d3-array, topojson-client, the five scifi-ui
-                         files the panels are built on, and the Patrick Hand SC
-                         face the map is lettered in, all unmodified
+vendor/                  d3-geo, d3-array, topojson-client, the scifi-ui swarm
+                         the card opens with, and the Cinzel and EB Garamond
+                         faces the chart is lettered in, all unmodified
 scripts/build-base.mjs   rebuilds base/ and the present-day border file
 scripts/import-historical-basemaps.mjs   converts the historical-basemaps snapshots
 scripts/integrate-asia.mjs    turns Qwen's Asia batches into data/civilizations-asia.json

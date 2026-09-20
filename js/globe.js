@@ -20,19 +20,23 @@ const d3 = globalThis.d3;
 // on top. Nothing here is warm: the paper is a grey cream, the ink a blue
 // black, by Amy's rule that nothing on the site is orange.
 const STYLE = {
-  paperInner: '#e4e3da', paperOuter: '#c8c9bd',
-  flatPaper: '#dcdcd1',
-  land: '#efeadc', ink: '35, 42, 58',
+  paperInner: '#e6e4da', paperOuter: '#cbcabe',
+  flatPaper: '#e0dfd3',
+  land: '#f1ecdf', ink: '35, 41, 58',
   lake: '#d3d9d8', river: 'rgba(70,95,130,.55)',
-  glow: 'rgba(120,170,240,.22)', ring: 'rgba(170,205,255,.35)',
-  label: '#1f2533', halo: 'rgba(240,236,226,.92)',
+  label: '#1f2533', halo: 'rgba(241,236,226,.92)',
   select: '#1b2230',
 };
 const ink = (alpha) => `rgba(${STYLE.ink},${alpha})`;
 
-// the lettering: a hand-written small-caps face (vendor/fonts), with the
-// platform's own hand faces behind it while it loads
-const LABEL_FACE = '"Patrick Hand SC", "Segoe Print", "Bradley Hand", "Chalkboard SE", cursive';
+// The lettering of an engraved chart: states in spaced Roman capitals, a
+// people's range in spaced italic capitals, the way the classical maps set
+// GERMANIA beside the Roman Empire (vendor/fonts, both SIL OFL). Each has
+// the platform's serifs behind it while it loads.
+const STATE_FACE = '"Cinzel", "Trajan Pro", "Times New Roman", Georgia, serif';
+const PEOPLE_FACE = '"EB Garamond", Garamond, "Times New Roman", Georgia, serif';
+const labelFont = (fs, culture) => (culture ? `italic ${fs}px ${PEOPLE_FACE}` : `600 ${fs}px ${STATE_FACE}`);
+const LABEL_SPACING = { state: '0.12em', culture: '0.08em' };
 
 // The grain of laid paper: a tile of sparse dark and light flecks, drawn
 // once from a fixed seed so the sheet is the same on every visit.
@@ -120,10 +124,11 @@ export class Globe {
     this._ro = new ResizeObserver(() => this.resize());
     this._ro.observe(canvas.parentElement || canvas);
     this.resize();
-    // once the lettering face arrives, the measured widths are stale and the
-    // names are drawn again in it
+    // once the lettering faces arrive, the measured widths are stale and the
+    // names are drawn again in them
     if (typeof document !== 'undefined' && document.fonts && document.fonts.load) {
-      document.fonts.load(`12px ${LABEL_FACE}`).then(() => { this._textWidths.clear(); this.render(); }).catch(() => {});
+      Promise.all([document.fonts.load(labelFont(12, false)), document.fonts.load(labelFont(12, true))])
+        .then(() => { this._textWidths.clear(); this.render(); }).catch(() => {});
     }
   }
 
@@ -335,6 +340,18 @@ export class Globe {
     ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
 
+    // a soft shadow under the disc, a little to the lower right, so the
+    // globe sits on the page's paper rather than in it
+    if (this.mode === 'globe') {
+      const R = this.R, cx = w / 2 + R * 0.02, cy = h / 2 + R * 0.035;
+      const sh = ctx.createRadialGradient(cx, cy, R * 0.94, cx, cy, R * 1.07);
+      sh.addColorStop(0, ink(0.26));
+      sh.addColorStop(1, ink(0));
+      ctx.beginPath();
+      ctx.arc(cx, cy, R * 1.07, 0, Math.PI * 2);
+      ctx.fillStyle = sh;
+      ctx.fill();
+    }
     // the sheet, lit from the upper left so the disc still reads as a sphere
     ctx.beginPath();
     path(this.sphere);
@@ -530,7 +547,6 @@ export class Globe {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.lineJoin = 'round';
-    if ('letterSpacing' in ctx) ctx.letterSpacing = '0.05em';
 
     // selected first so it always gets its label, then states before
     // peoples (a people's range often rings a state, and its centroid can
@@ -554,12 +570,15 @@ export class Globe {
       const isSel = f._civ.id === this.selectedId;
       const culture = f._civ.kind === 'culture';
       const name = (f.properties.label || f._civ.name).toUpperCase();
+      // spaced capitals; the measured widths are cached by font, and the
+      // font says which spacing was in force
+      if ('letterSpacing' in ctx) ctx.letterSpacing = culture ? LABEL_SPACING.culture : LABEL_SPACING.state;
       // an empire's name is lettered a little larger than a city state's;
       // a people's name is context, not a border, so it needs more room
       const big = Math.round(base * Math.min(1.35, Math.max(1, side / 180)));
       const small = Math.max(9, Math.round(base) - 3);
       const room = isSel ? Infinity : side * (culture ? 1.05 : 1.7);
-      const fit = this._fitName(ctx, name, big, side, room) || (big > small && this._fitName(ctx, name, small, side, room));
+      const fit = this._fitName(ctx, name, big, side, room, culture) || (big > small && this._fitName(ctx, name, small, side, room, culture));
       if (!fit) continue;
       const { lines, width, fs, font } = fit;
       const lh = fs * 1.1;
@@ -582,8 +601,8 @@ export class Globe {
   // the name at one size: on one line, or two when it is wider than its
   // polity and breaks well at a word; null when it is still wider than the
   // room it has
-  _fitName(ctx, name, fs, side, room) {
-    const font = `${fs}px ${LABEL_FACE}`;
+  _fitName(ctx, name, fs, side, room, culture) {
+    const font = labelFont(fs, culture);
     let lines = [name];
     let width = this._textWidth(ctx, name, font);
     if (width > side * 1.15 && name.includes(' ')) {
@@ -603,16 +622,8 @@ export class Globe {
 
   _drawRim(ctx) {
     const R = this.R, cx = this.width / 2, cy = this.height / 2;
-    // a soft haze just outside the disc, the inked limb, and a thin ring a
-    // little outside it, the meridian ring of a desk globe
-    const g = ctx.createRadialGradient(cx, cy, R, cx, cy, R * 1.07);
-    g.addColorStop(0, STYLE.glow);
-    g.addColorStop(1, 'rgba(120,170,240,0)');
-    ctx.beginPath();
-    ctx.arc(cx, cy, R * 1.07, 0, Math.PI * 2);
-    ctx.arc(cx, cy, R, 0, Math.PI * 2, true);
-    ctx.fillStyle = g;
-    ctx.fill();
+    // the inked limb, and a thin ring a little outside it, the meridian
+    // ring of a desk globe
     ctx.beginPath();
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
     ctx.lineWidth = 1.4;
@@ -621,7 +632,7 @@ export class Globe {
     ctx.beginPath();
     ctx.arc(cx, cy, R + 3.5, 0, Math.PI * 2);
     ctx.lineWidth = 0.8;
-    ctx.strokeStyle = STYLE.ring;
+    ctx.strokeStyle = ink(0.3);
     ctx.stroke();
   }
 
