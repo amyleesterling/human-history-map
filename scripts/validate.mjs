@@ -15,6 +15,7 @@ import { spawnSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { feature as topoFeature } from 'topojson-client';
+import { cardAssociationErrors } from './lib/card-associations.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
@@ -203,10 +204,10 @@ for (const c of civs.values()) {
   const rel = 'data/' + (c.card || pattern.replace('{id}', c.id));
   if (!existsSync(join(root, rel))) continue;
   cardCount++;
-  if (!c.card) cardIds.push(c.id);
+  cardIds.push(c.id);
   const card = readJSON(rel);
   if (!card) continue;
-  if (card.id && card.id !== c.id) err(`${rel}: id "${card.id}" does not match the file's polity ${c.id}`);
+  for (const message of cardAssociationErrors(card, c, civs, pattern)) err(`${rel}: ${message}`);
   checkCopy(`${rel}.overview`, card.overview);
   const sourceIds = new Set();
   for (const source of card.sources || []) {

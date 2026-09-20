@@ -100,6 +100,7 @@ const total = {
   indexedRecords:records.length,
   summaries:records.filter(r=>r.content.summary!=='missing').length,
   cards:records.filter(r=>r.content.card).length,
+  uniqueCardFiles:new Set(records.map(r=>r.content.card).filter(Boolean)).size,
   missingCards:records.filter(r=>!r.content.card).length,
   independentlyReviewedNarratives:records.filter(r=>r.content.review==='accepted').length,
   reviewedIdentities:records.filter(r=>r.identityReview==='accepted').length,

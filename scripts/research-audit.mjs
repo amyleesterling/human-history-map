@@ -25,7 +25,7 @@ for(const file of packetRoots.filter(d=>fs.existsSync(path.join(root,d))).flatMa
     if(!fs.existsSync(path.join(root,cardPath))){errors.push(`${file}: absent card ${cardPath}`);continue;}
     const bytes=fs.readFileSync(path.join(root,cardPath));
     const card=JSON.parse(bytes);
-    if(card.id!==entity.id)errors.push(`${file}: card ID mismatch for ${entity.id}`);
+    if(card.id!==entity.id&&!(Array.isArray(card.appliesTo)&&card.appliesTo.includes(entity.id)))errors.push(`${file}: card ID mismatch for ${entity.id}`);
     const claims=[];
     for(const claim of entity.claims||[]){
       const p=claim.pointer||claim.path||claim.cardPath;

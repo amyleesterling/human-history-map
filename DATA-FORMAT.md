@@ -223,6 +223,13 @@ believed and ate. War belongs only in the fall.
 - Suggested section titles, in this order: Inventions, Science, Technology,
   Arts, Ideas and beliefs, Daily life, Trade and exchange, Legacy. Use the
   ones that apply; add others if the civilization calls for it.
+- Several map records may share a card only after checking that they describe
+  the same subject. Keep the primary `id` on the card, declare every destination
+  in `appliesTo: ["primary-id", "other-id"]`, and set the other record's `card`
+  path to the primary file in `data/researched-overrides.json`. Record the identity
+  evidence in the research packet. The validator checks every association and
+  includes all destinations in the card index. Shared prose does not merge
+  polygons, change snapshot dates or certify historical identity or geometry.
 - An item is one or two sentences with a fact in it. `year` is optional,
   `circa: true` prints "c." before it. `link` adds a "See on the globe" link
   to another polity at a year.
