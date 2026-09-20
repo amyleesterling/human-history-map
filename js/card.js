@@ -272,7 +272,7 @@ async function main() {
 // chosen year marked
 function drawLifebar(scale, civ, year) {
   const c = $('lifebarCanvas'), dpr = Math.min(2, window.devicePixelRatio || 1);
-  const w = c.parentElement.clientWidth, h = 22;
+  const w = c.parentElement.clientWidth, h = 38;
   c.width = w * dpr; c.height = h * dpr;
   const ctx = c.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -287,8 +287,9 @@ function drawLifebar(scale, civ, year) {
   ctx.font = LIFEBAR.font;
   ctx.fillStyle = LIFEBAR.label;
   ctx.textBaseline = 'middle';
-  ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 11);
-  ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 11);
+  // Put labels below the track so recent-state colors cannot obscure them.
+  ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 29);
+  ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 29);
 }
 
 document.getElementById('shareBtn').addEventListener('click', () => {
