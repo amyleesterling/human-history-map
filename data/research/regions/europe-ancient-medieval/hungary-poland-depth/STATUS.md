@@ -9,3 +9,5 @@ Strict validation passes for 131 runtime cards with zero errors and warnings. Te
 Browser checks: Hungary, atlas skin, 390 pixels, year 1450; Poland, dark skin, 1440 pixels, year 1300. Each renders 12 entries, nine sources, the expected phase and working citation anchors. No horizontal overflow, functional text below 12 pixels, failed resources or console errors was reported. The Hungary mobile screenshot was inspected.
 
 Full coverage, independent historical review and deployment remain outstanding.
+
+Later chronology pass: Poland now has six shorter phases, so the 1320 coronation and 1364 and 1400 university charters do not appear as completed events for earlier selected years. Hungary's late-medieval material phase begins around 1480, matching the reviewed collection context; earlier unresearched years retain an explicit research gap. The 1526 phase no longer anticipates the 1541 occupation. Strict and temporal checks pass after these changes.
