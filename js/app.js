@@ -28,7 +28,7 @@ const state = {
   selected: null, mode: 'globe', tipAnchor: null,
   // the chip opens into the full card only when asked, and stays the way
   // the visitor left it from one tap to the next
-  tipOpen: false,
+  tipOpen: false, tipPos: null,
 };
 let data, globe, scale, manifest, speeds, eras = [], ticks = [];
 let rafId = 0, lastTick = 0, urlTimer = 0, navigationVersion = 0;
@@ -222,7 +222,43 @@ function bindControls() {
 
   els.shareBtn.addEventListener('click', share);
   els.tipClose.addEventListener('click', () => { closeTip(); deselect(); });
-  els.tipToggle.addEventListener('click', () => setTipOpen(!state.tipOpen));
+  // The head opens the card, and on a wide screen it is also the handle: a
+  // drag moves the card and pins it where it is dropped, so the next tap
+  // opens it there rather than beside the finger. The phone sheet is pinned
+  // by the stylesheet and never drags. The pointer is captured so the drag
+  // survives leaving the card, and the click a browser fires after a drag
+  // is ignored by a deadline rather than a flag, the way scifi-ui's rail
+  // does it: a drag that ends off the head fires no click to consume a flag.
+  let drag = null, clickDeadline = 0;
+  const now = () => (window.performance ? performance.now() : Date.now());
+  const sheet = () => matchMedia('(max-width: 640px)').matches;
+  els.tipToggle.addEventListener('pointerdown', (e) => {
+    if (sheet() || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    const r = els.tip.getBoundingClientRect(), st = els.stage.getBoundingClientRect();
+    drag = { id: e.pointerId, dx: e.clientX - r.left, dy: e.clientY - r.top, ox: st.left, oy: st.top, x0: e.clientX, y0: e.clientY, moved: false };
+    try { els.tipToggle.setPointerCapture(e.pointerId); } catch (err) { /* older browsers */ }
+  });
+  els.tipToggle.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    if (!drag.moved && Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) < 4) return;
+    drag.moved = true;
+    els.tip.classList.add('is-dragging');
+    state.tipAnchor = null;
+    moveTip(e.clientX - drag.ox - drag.dx, e.clientY - drag.oy - drag.dy);
+    e.preventDefault();
+  });
+  const endDrag = (e) => {
+    if (!drag || (e && e.pointerId !== undefined && e.pointerId !== drag.id)) return;
+    try { els.tipToggle.releasePointerCapture(drag.id); } catch (err) { /* already released */ }
+    els.tip.classList.remove('is-dragging');
+    if (drag.moved) clickDeadline = now() + 300;
+    drag = null;
+  };
+  els.tipToggle.addEventListener('pointerup', endDrag);
+  els.tipToggle.addEventListener('pointercancel', endDrag);
+  els.tipToggle.addEventListener('lostpointercapture', endDrag);
+  els.tipToggle.addEventListener('click', () => { if (now() < clickDeadline) return; setTipOpen(!state.tipOpen); });
+  window.addEventListener('resize', () => { if (!els.tip.hidden) placeTip(); });
   els.tipZoom.addEventListener('click', () => {
     if (!state.selected) return;
     const feats = data.featuresOf(state.selected, state.year);
@@ -399,8 +435,13 @@ function showTip(civ, anchor, feature) {
   });
   syncTipTime(civ);
   els.tipZoom.hidden = !drawn;
-  state.tipAnchor = anchor || null;
+  state.tipAnchor = state.tipPos ? null : (anchor || null);
   els.tip.hidden = false;
+  // the panel's materialise plays on every arrival: the class comes off, one
+  // reflow, and back on, which is the only way to restart a CSS animation
+  els.tip.classList.remove('is-in');
+  void els.tip.offsetWidth;
+  els.tip.classList.add('is-in');
   setTipOpen(state.tipOpen);
 }
 
@@ -467,8 +508,10 @@ function setTipOpen(open) {
 }
 
 // by the finger on a wide screen (the stylesheet turns it into a bottom
-// sheet on phones, where these coordinates are overridden)
+// sheet on phones, where these coordinates are overridden); once dragged, the
+// card keeps its place and only stays clamped to the stage
 function placeTip() {
+  if (state.tipPos) { moveTip(state.tipPos.x, state.tipPos.y); return; }
   const a = state.tipAnchor;
   if (!a) return;
   const sw = els.stage.clientWidth, sh = els.stage.clientHeight;
@@ -482,8 +525,20 @@ function placeTip() {
   els.tip.style.top = `${Math.round(y)}px`;
 }
 
+// a dragged card: kept inside the stage with an 8px margin, and remembered
+function moveTip(x, y) {
+  const sw = els.stage.clientWidth, sh = els.stage.clientHeight;
+  const tw = els.tip.offsetWidth, th = els.tip.offsetHeight;
+  x = Math.max(8, Math.min(sw - tw - 8, x));
+  y = Math.max(8, Math.min(sh - th - 8, y));
+  state.tipPos = { x, y };
+  els.tip.style.left = `${Math.round(x)}px`;
+  els.tip.style.top = `${Math.round(y)}px`;
+}
+
 function closeTip() {
   els.tip.hidden = true;
+  els.tip.classList.remove('is-in');
   state.tipAnchor = null;
 }
 
