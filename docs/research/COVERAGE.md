@@ -10,8 +10,8 @@ QWEN owns Asia. Codex handles the other regional queues and integration. Cross-c
 | --- | ---: |
 | indexedRecords | 3045 |
 | summaries | 2394 |
-| cards | 150 |
-| missingCards | 2895 |
+| cards | 153 |
+| missingCards | 2892 |
 | independentlyReviewedNarratives | 53 |
 | reviewedIdentities | 11 |
 | reviewedChronologies | 0 |
@@ -23,10 +23,10 @@ QWEN owns Asia. Codex handles the other regional queues and integration. Cross-c
 | Africa | 255 | 30 | 19 |
 | Asia | 485 | 48 | 0 |
 | Europe | 368 | 32 | 21 |
-| North America | 995 | 18 | 10 |
+| North America | 995 | 20 | 10 |
 | Oceania | 399 | 13 | 3 |
 | South America | 452 | 4 | 3 |
-| Unlocated | 109 | 9 | 1 |
+| Unlocated | 109 | 10 | 1 |
 
 Geographic rows overlap for records found in several regions. Centroid routing is approximate and may leave island or large multi-part societies unlocated. These are work queues, not historical classifications.
 
