@@ -457,6 +457,7 @@ function showTip(civ, anchor, feature) {
   els.tipZoom.hidden = !drawn;
   state.tipAnchor = state.tipPos ? null : (anchor || null);
   els.tip.hidden = false;
+  syncCardRect();
   // the card's materialise plays on every arrival: the class comes off, one
   // reflow, and back on, which is the only way to restart a CSS animation
   els.tip.classList.remove('is-in');
@@ -550,6 +551,14 @@ function placeTip() {
   if (y < 8) y = 8;
   els.tip.style.left = `${Math.round(x)}px`;
   els.tip.style.top = `${Math.round(y)}px`;
+  syncCardRect();
+}
+
+// where the card is, in the stage's pixels, for the sci-fi leader line
+function syncCardRect() {
+  if (els.tip.hidden) { globe.setCardRect(null); return; }
+  const s = els.stage.getBoundingClientRect(), t = els.tip.getBoundingClientRect();
+  globe.setCardRect({ x: t.left - s.left, y: t.top - s.top, w: t.width, h: t.height });
 }
 
 // a dragged card: kept inside the stage with an 8px margin, and remembered
@@ -561,12 +570,14 @@ function moveTip(x, y) {
   state.tipPos = { x, y };
   els.tip.style.left = `${Math.round(x)}px`;
   els.tip.style.top = `${Math.round(y)}px`;
+  syncCardRect();
 }
 
 function closeTip() {
   els.tip.hidden = true;
   els.tip.classList.remove('is-in');
   state.tipAnchor = null;
+  globe.setCardRect(null);
 }
 
 // Go to a polity: pick a year it existed, load that year's borders, turn the
