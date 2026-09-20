@@ -3,11 +3,11 @@
 // a function of (year, view, selected polity), and all three live in the
 // query string so any moment can be shared.
 
-import { HistoryData } from './data.js?v=depth-1';
-import { Globe } from './globe.js?v=depth-1';
-import { TimeScale, formatYear, formatCivSpan, formatCivDuration, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+import { HistoryData } from './data.js?v=cards-6';
+import { Globe } from './globe.js?v=cards-6';
+import { TimeScale, formatYear, formatCivSpan, formatCivDuration, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=cards-6';
 
-import { matchingPeriods } from './card-periods.js?v=depth-1';
+import { matchingPeriods } from './card-periods.js?v=cards-6';
 
 const $ = (id) => document.getElementById(id);
 const els = {
@@ -19,6 +19,7 @@ const els = {
   playBtn: $('playBtn'), yearOut: $('yearOut'), eraOut: $('eraOut'), speedBtn: $('speedBtn'),
   slider: $('slider'), track: $('trackCanvas'),
   searchBtn: $('searchBtn'), search: $('search'), searchInput: $('searchInput'), searchResults: $('searchResults'),
+  skinBtn: $('skinBtn'),
   viewBtn: $('viewBtn'), shareBtn: $('shareBtn'),
 };
 
@@ -64,6 +65,9 @@ async function main() {
   syncViewButton();
   data.onChange = () => { refreshPolities(); updateLoading(); };
   bindControls();
+  // on a wide screen the card opens with its paragraph showing; on a phone
+  // it stays the chip, since a full card hid the globe (both Amy's asks)
+  state.tipOpen = wide();
   drawTrack();
   window.addEventListener('resize', drawTrack);
 
@@ -72,6 +76,7 @@ async function main() {
 
   if (url.civ) jumpToCiv(url.civ, url.year);
   else if (url.play || tl.autoplay) play();
+  writeURL();
 
   if (manifest.notice && !sessionStorage.getItem('hhm-notice')) {
     els.noticeText.textContent = manifest.notice;
@@ -317,10 +322,12 @@ function syncViewButton() {
 // era bands, a histogram of how many polities the index knows in each slice
 // of the timeline (so the empty stretches are visibly empty), and tick years
 
-// The skin: the default pages are the black sci-fi ones; the generated
-// atlas.html sets data-skin="atlas" on the root and everything drawn on a
+// The skin: the default pages are the atlas, ink on paper; the generated
+// scifi.html sets data-skin="scifi" on the root and everything drawn on a
 // canvas or linked from here follows it.
-const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'atlas' ? 'atlas' : 'scifi';
+const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'scifi' ? 'scifi' : 'atlas';
+// a wide screen, where the card is a docked panel rather than a bottom sheet
+const wide = () => typeof matchMedia === 'function' && matchMedia('(min-width: 641px)').matches;
 // the track's paint in each skin: parchment on the dark instrument, or ink
 // and Garamond figures on the sheet
 const TRACK = SKIN === 'atlas' ? {
@@ -456,12 +463,12 @@ function showTip(civ, anchor, feature) {
   els.tipZoom.hidden = !drawn;
   state.tipAnchor = state.tipPos ? null : (anchor || null);
   els.tip.hidden = false;
-  // the panel's materialise plays on every arrival: the class comes off, one
+  syncCardRect();
+  // the card's materialise plays on every arrival: the class comes off, one
   // reflow, and back on, which is the only way to restart a CSS animation
   els.tip.classList.remove('is-in');
   void els.tip.offsetWidth;
   els.tip.classList.add('is-in');
-  materialise();
   setTipOpen(state.tipOpen);
 }
 
@@ -472,26 +479,6 @@ function spanWithDuration(civ) {
   return duration ? `${formatCivSpan(civ)} · ${duration}` : formatCivSpan(civ);
 }
 
-// The card arrives out of particles: the library's swarm streams in from the
-// panel's edges and gathers on the name, then fades; a burst, not a loop.
-// Under reduced motion start() declines and the panel simply appears.
-let swarm = null, swarmTimers = [];
-function materialise() {
-  if (!swarm) swarm = window.holoconverge ? window.holoconverge(els.tip, els.tipName) : null;
-  if (!swarm) return;
-  dematerialise();
-  if (!swarm.start()) return;
-  swarmTimers = [
-    setTimeout(() => { const c = els.tip.querySelector('.holoconverge-canvas'); if (c) c.classList.remove('is-on'); }, 1100),
-    setTimeout(() => swarm.stop(), 1450),
-  ];
-}
-function dematerialise() {
-  for (const t of swarmTimers) clearTimeout(t);
-  swarmTimers = [];
-  if (swarm) swarm.stop();
-}
-
 function syncTipTime(civ) {
   const periods = state.tipCardId === civ.id ? matchingPeriods(state.tipCard, state.year) : [];
   const summary = state.tipSummary;
@@ -499,7 +486,10 @@ function syncTipTime(civ) {
     const text = periods.length ? periods.map(p => p.summary).join(' ') : summary.text;
     els.tipSummary.textContent = periods.length ? `In ${formatYear(state.year)}: ${text}` : `Across its history: ${text}`;
     els.tipSummary.classList.remove('pending');
-    els.tipLine.textContent = firstSentence(text);
+    // the chip's one line says first when its polity is not on the map this
+    // year, since the card can outlive a turn of the globe and the clock
+    const onMap = data.featuresOf(civ.id, state.year).length > 0;
+    els.tipLine.textContent = onMap ? firstSentence(text) : `Not on the map in ${formatYear(state.year)}. ${firstSentence(text)}`;
     els.tipLine.classList.remove('pending');
     els.tipSource.replaceChildren();
     if (periods.length) {
@@ -537,7 +527,7 @@ function syncTipTime(civ) {
   else if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
   els.tipMeta.textContent = meta.join(' · ');
   els.tipMeta.hidden = !meta.length;
-  els.tipMore.href = `${SKIN === 'atlas' ? 'atlas-civ.html' : 'civ.html'}?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
+  els.tipMore.href = `${SKIN === 'scifi' ? 'scifi-civ.html' : 'civ.html'}?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
   els.tipZoom.hidden = !drawn;
 }
 
@@ -560,6 +550,15 @@ function setTipOpen(open) {
 // card keeps its place and only stays clamped to the stage
 function placeTip() {
   if (state.tipPos) { moveTip(state.tipPos.x, state.tipPos.y); return; }
+  // on a wide screen the card is docked at the top left until it is dragged
+  // (Amy asked for it there rather than by the finger), clear of the
+  // atlas's graduated border
+  if (wide()) {
+    els.tip.style.left = '22px';
+    els.tip.style.top = '22px';
+    syncCardRect();
+    return;
+  }
   const a = state.tipAnchor;
   if (!a) return;
   const sw = els.stage.clientWidth, sh = els.stage.clientHeight;
@@ -571,6 +570,14 @@ function placeTip() {
   if (y < 8) y = 8;
   els.tip.style.left = `${Math.round(x)}px`;
   els.tip.style.top = `${Math.round(y)}px`;
+  syncCardRect();
+}
+
+// where the card is, in the stage's pixels, for the sci-fi leader line
+function syncCardRect() {
+  if (els.tip.hidden) { globe.setCardRect(null); return; }
+  const s = els.stage.getBoundingClientRect(), t = els.tip.getBoundingClientRect();
+  globe.setCardRect({ x: t.left - s.left, y: t.top - s.top, w: t.width, h: t.height });
 }
 
 // a dragged card: kept inside the stage with an 8px margin, and remembered
@@ -582,13 +589,14 @@ function moveTip(x, y) {
   state.tipPos = { x, y };
   els.tip.style.left = `${Math.round(x)}px`;
   els.tip.style.top = `${Math.round(y)}px`;
+  syncCardRect();
 }
 
 function closeTip() {
   els.tip.hidden = true;
   els.tip.classList.remove('is-in');
-  dematerialise();
   state.tipAnchor = null;
+  globe.setCardRect(null);
 }
 
 // Go to a polity: pick a year it existed, load that year's borders, turn the
@@ -735,6 +743,8 @@ function writeURL() {
   if (state.playing) p.set('play', '1');
   const next = `${location.pathname}?${p}`;
   if (next !== location.pathname + location.search) history.replaceState(null, '', next);
+  // the other skin's explorer, opened on this same view
+  if (els.skinBtn) els.skinBtn.href = `${SKIN === 'scifi' ? './' : 'scifi.html'}?${p}`;
 }
 
 main();

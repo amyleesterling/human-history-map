@@ -43,17 +43,25 @@ footnote. That is the whole brief; keep every change in its service.
 - **Shared CSS lives in `site.css`.** Both pages load it; nothing is pasted
   twice.
 - **Two skins, one set of pages.** `index.html` and `civ.html` are the
-  black sci-fi skin (site.css, the scifi-ui panels); `atlas.html` and
-  `atlas-civ.html` are the same markup as ink on paper (atlas.css), in the
-  manner of an engraved world map, and are generated from the first two by
-  `scripts/build-atlas.mjs`, never edited by hand; the validator fails
-  when they are stale. The scripts read `data-skin` on the root and follow
-  it for links and canvas paint. In the sci-fi skin body text is
-  sans-serif and years, readouts and ticks are monospace via `.num`; the
-  atlas sets its page in EB Garamond with Cinzel capitals. The map itself
-  is lettered classically in both: states in Cinzel capitals, a people's
-  range in Garamond italic capitals (both faces vendored under
-  `vendor/fonts/`, SIL OFL). Nothing is orange in either.
+  atlas, ink on paper in the manner of an engraved world map (site.css for
+  layout, atlas.css for paint); `scifi.html` and `scifi-civ.html` are the
+  same markup in the black sci-fi skin (site.css alone, with the scifi-ui
+  panels) and are generated from the first two by
+  `scripts/build-scifi.mjs`, never edited by hand; the validator fails
+  when they are stale. The moon in the bar leads to the sci-fi pages and
+  the sun leads back, on the same view. The scripts read `data-skin` on
+  the root and follow it for links and canvas paint. The atlas sets its
+  page in EB Garamond with Cinzel capitals; the sci-fi skin keeps
+  sans-serif body text with monospace readouts via `.num`. The renderer
+  has a style table per skin: the atlas globe is paper and ink with a
+  hand's wobble on every line; the sci-fi globe is dark, crisp, lit at the
+  coasts, its polities translucent panes with lit edges, and it carries
+  the lock-on (`_drawLock` in `js/globe.js`): HUD brackets that converge
+  on the chosen polity, a scan that sweeps it once, and a leader from the
+  brackets to the card, which `js/app.js` reports through `setCardRect`.
+  The map itself is lettered classically in both: states in Cinzel
+  capitals, a people's range in Garamond italic capitals (both faces
+  vendored under `vendor/fonts/`, SIL OFL). Nothing is orange in either.
 - **`vendor/` and `base/` are never edited by hand.** Vendor files are copied
   down from upstream with a `SOURCE.txt`; `base/` is rebuilt by
   `scripts/build-base.mjs`.
@@ -89,9 +97,20 @@ footnote. That is the whole brief; keep every change in its service.
   and fetches the quoted summaries only when one is first needed.
 - `js/globe.js` draws on a canvas: the base (ocean, graticule, land, lakes,
   rivers) is cached offscreen until the view moves; polities and labels draw
-  every frame. Gestures are hand-written pointer events. `hitTest` uses
-  `d3.geoContains` on the sphere. The same class draws the card page's
-  small extent map with `interactive: false`.
+  every frame. The zoom runs to 96 (a phone then shows about a degree and
+  a half across, enough for the small German states of 1831): the
+  projection is clipped to the viewport and, from zoom 3, land parts,
+  polities and labels outside the visible lon/lat window are skipped, so a
+  frame costs no more at depth than at world scale; at depth a name sits on
+  the centroid of the part on screen. The source polygons are rough at the
+  coasts, so each state's wash reaches 25 km past its edge into unclaimed
+  land and sea (the land mask cuts the sea off) and polity ink is drawn
+  only inland of a 25 km coastal band, where the coastline is the border
+  (`REACH_KM`). A ring with no area is dropped on load, since d3 would fill
+  the whole hemisphere with it; the importer and `build-base` drop them at
+  the source and the validator warns on any it finds. Gestures are
+  hand-written pointer events. `hitTest` uses `d3.geoContains` on the sphere. The same class
+  draws the card page's small extent map with `interactive: false`.
 - `js/app.js` owns the clock (years per second, rAF), the stretched time
   axis from `js/timeline.js`, the tooltip, search, and the URL
   (`?y=&lon=&lat=&z=&civ=&view=`), which is the share format.

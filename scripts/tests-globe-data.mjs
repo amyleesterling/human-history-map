@@ -59,6 +59,16 @@ assert.deepEqual(both.featuresOf('zhou', -1020).map((f) => f._priority), [1], 't
 both.features[1].properties.over = true;
 assert.deepEqual(both.featuresOf('zhou', -900).map((f) => f._priority), [1], 'unless the researched shape is marked over');
 
+// a ring with no area is dropped before it can fill the hemisphere
+const { dropFlatRings } = await import('../js/data.js');
+const flatPieces = { type: 'MultiPolygon', coordinates: [[[[10, 10], [10, 10], [10, 10], [10, 10]]], [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]] };
+assert.equal(dropFlatRings(flatPieces), true);
+assert.equal(flatPieces.coordinates.length, 1, 'the flat piece goes, the good one stays');
+assert.equal(dropFlatRings({ type: 'Polygon', coordinates: [[[5, 5], [5, 5], [5, 5], [5, 5]]] }), false, 'a shape with nothing left is dropped');
+await data.ensureYear(1637, 150);
+await Promise.all(data.files.filter((f) => f.state === 'loading').map((f) => f.promise));
+assert.ok(data.polities(1637).every((f) => f._area > 0), 'no drawn polity in 1637 has a ring without area');
+
 // a duration counts the clock, which has no year zero
 const { formatCivDuration } = await import('../js/timeline.js');
 assert.equal(formatCivDuration({ from: 224, to: 651, dateBasis: 'historical' }), '427 years');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-skin="atlas">
+<!-- generated from civ.html by scripts/build-scifi.mjs; edit civ.html, then run it -->
+<html lang="en" data-skin="scifi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -15,36 +16,37 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The globe of the Human History Map, drawn as an engraved chart: kingdoms in colour washes on paper, with a graduated border and a compass rose.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#e9e3d3">
+<meta name="theme-color" content="#0b1220">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preload" href="vendor/fonts/cinzel/cinzel-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="vendor/fonts/eb-garamond/eb-garamond-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="vendor/fonts/eb-garamond/eb-garamond-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="vendor/scifi-ui/hologram.css">
+<link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">
 <link rel="stylesheet" href="site.css?v=cards-6">
-<link rel="stylesheet" href="atlas.css?v=cards-6">
 </head>
 <body class="card">
 
 <header class="bar">
-  <a class="brand" href="./">Human History Map</a>
+  <a class="brand holounder" href="scifi.html">Human History Map</a>
   <div class="bar-tools">
-    <a id="skinBtn" class="iconbtn" href="scifi-civ.html" title="The dark, sci-fi look" aria-label="Switch to the dark, sci-fi look">
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14.5 3.5a8.5 8.5 0 1 0 6 14.3A9 9 0 0 1 14.5 3.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    <a id="skinBtn" class="iconbtn" href="civ.html" title="The atlas look" aria-label="Switch to the atlas look">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </a>
-    <a id="globeLink" class="chip" href="./">On the globe</a>
+    <a id="globeLink" class="chip" href="scifi.html">On the globe</a>
     <button id="shareBtn" class="chip" type="button" title="Share this page">Share</button>
   </div>
 </header>
 
 <main class="wrap" id="card">
-  <p class="crumbs"><a href="./">Globe</a> / <span id="crumbYear" class="num"></span></p>
+  <p class="crumbs"><a href="scifi.html">Globe</a> / <span id="crumbYear" class="num"></span></p>
   <h1 id="name"><span class="swatch" id="swatch" aria-hidden="true"></span><span id="nameText">Loading</span></h1>
   <p class="dates num" id="dates"></p>
   <ul class="facts" id="facts"></ul>
 
   <div class="hero holopanel" id="hero">
-    <a class="minimap" id="minimapLink" href="./" aria-label="Open this polity on the interactive globe"><canvas id="minimap"></canvas></a>
-    <div class="hero-foot"><span id="heroCaption"></span><a class="btn" id="heroOpen" href="./">Open on the globe</a></div>
+    <a class="minimap" id="minimapLink" href="scifi.html" aria-label="Open this polity on the interactive globe"><canvas id="minimap"></canvas></a>
+    <div class="hero-foot"><span id="heroCaption"></span><a class="btn" id="heroOpen" href="scifi.html">Open on the globe</a></div>
   </div>
   <div class="lifebar" id="lifebar" aria-hidden="true"><canvas id="lifebarCanvas"></canvas></div>
 

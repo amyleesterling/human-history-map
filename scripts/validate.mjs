@@ -18,6 +18,15 @@ import { feature as topoFeature } from 'topojson-client';
 import { cardAssociationErrors } from './lib/card-associations.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+// a ring with no area: fewer than three distinct positions, or a planar
+// area of nothing; d3 fills such a ring as the whole visible hemisphere
+function flatRing(ring) {
+  if (new Set(ring.map((c) => c.join(','))).size < 3) return true;
+  let a = 0;
+  for (let i = 0, n = ring.length - 1; i < n; i++) a += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+  return Math.abs(a) < 1e-9;
+}
 const strict = process.argv.includes('--strict');
 const errors = [], warnings = [];
 const err = (m) => errors.push(m);
@@ -162,6 +171,8 @@ for (const b of manifest.borders || []) {
       drawn.set(p.civ, seen);
     }
     if (p.precision != null && ![1, 2, 3].includes(p.precision)) err(`${where} (${p.civ}): precision must be 1, 2 or 3`);
+    const polys = f.geometry?.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry?.type === 'MultiPolygon' ? f.geometry.coordinates : [];
+    if (polys.some((rings) => rings.some(flatRing))) warn(`${where} (${p.civ}): a ring with no area, which d3 would fill as the whole hemisphere`);
     if (p.over != null && (typeof p.over !== 'boolean' || !(b.priority > 0))) err(`${where} (${p.civ}): over must be true or absent, and only in a researched file`);
     checkCopy(`${where}.label`, p.label); checkCopy(`${where}.note`, p.note);
     const g = f.geometry;
@@ -281,10 +292,10 @@ function report() {
   for (const e of errors) console.log('ERROR:', e);
   console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${withSummary} with summaries, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
 }
-// the atlas pages are generated from index.html and civ.html; a page
+// the sci-fi pages are generated from index.html and civ.html; a page
 // edited without a rebuild ships two explorers that disagree
-const atlas = spawnSync(process.execPath, [join(root, 'scripts', 'build-atlas.mjs'), '--check'], { encoding: 'utf8' });
-if (atlas.status !== 0) err((atlas.stderr || atlas.stdout || 'atlas pages are stale').trim());
+const scifi = spawnSync(process.execPath, [join(root, 'scripts', 'build-scifi.mjs'), '--check'], { encoding: 'utf8' });
+if (scifi.status !== 0) err((scifi.stderr || scifi.stdout || 'sci-fi pages are stale').trim());
 
 report();
 process.exit(errors.length || (strict && warnings.length) ? 1 : 0);

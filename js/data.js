@@ -48,6 +48,27 @@ function rewindRing(ring, isHole) {
   const area = geo.geoArea({ type: 'Polygon', coordinates: [ring] });
   if ((area > HALF_SPHERE) !== isHole) ring.reverse();
 }
+// A ring with no area (a tiny shape quantized to one point) makes d3 fill
+// the whole visible hemisphere with it; the importer drops such rings now,
+// but any file may carry one, so they go here too. False when nothing is
+// left of the geometry.
+export function dropFlatRings(geometry) {
+  if (!geometry) return false;
+  const flat = (ring) => ring.length < 4 || geo.geoArea({ type: 'Polygon', coordinates: [ring] }) < 1e-12;
+  const clean = (rings) => (flat(rings[0]) ? null : [rings[0], ...rings.slice(1).filter((r) => !flat(r))]);
+  if (geometry.type === 'Polygon') {
+    const c = clean(geometry.coordinates);
+    if (!c) return false;
+    geometry.coordinates = c;
+    return true;
+  }
+  if (geometry.type === 'MultiPolygon') {
+    geometry.coordinates = geometry.coordinates.map(clean).filter(Boolean);
+    return geometry.coordinates.length > 0;
+  }
+  return true;
+}
+
 export function rewind(geometry) {
   if (!geometry) return geometry;
   if (geometry.type === 'Polygon') geometry.coordinates.forEach((r, i) => rewindRing(r, i > 0));
@@ -93,6 +114,20 @@ function snippetAround(text, matched) {
   if (start > 0) { const sp = text.lastIndexOf(' ', start); start = sp > 0 && sp > start - 15 ? sp + 1 : start; }
   if (end < text.length) { const sp = text.indexOf(' ', end); end = sp > 0 && sp < end + 15 ? sp : end; }
   return (start > 0 ? '\u2026' : '') + text.slice(start, end).trim() + (end < text.length ? '\u2026' : '');
+}
+
+// the biggest polygon of a MultiPolygon feature, by spherical area; any
+// other geometry is its own biggest piece
+function largestPiece(feat) {
+  const g = feat.geometry;
+  if (!g || g.type !== 'MultiPolygon' || g.coordinates.length < 2) return feat;
+  let best = null, bestArea = -1;
+  for (const coordinates of g.coordinates) {
+    const piece = { type: 'Polygon', coordinates };
+    const a = geo.geoArea(piece);
+    if (a > bestArea) { bestArea = a; best = piece; }
+  }
+  return best || feat;
 }
 
 export class HistoryData {
@@ -244,10 +279,14 @@ export class HistoryData {
         if (typeof p.to !== 'number') p.to = civ.to == null ? Infinity : civ.to;
         feat.properties = p;
         rewind(feat.geometry);
+        if (!dropFlatRings(feat.geometry)) continue;
         // spherical area (steradians) orders drawing big-to-small so small
-        // polities stay tappable inside large ones; the centroid anchors the label
+        // polities stay tappable inside large ones; the centroid anchors the
+        // label, and for a polity in several pieces it is the centroid of the
+        // largest piece, so Prussia's name sits in Prussia and not in the
+        // small states between its halves
         feat._area = geo.geoArea(feat);
-        feat._centroid = geo.geoCentroid(feat);
+        feat._centroid = geo.geoCentroid(largestPiece(feat));
         feat._civ = civ;
         feat._priority = f.priority;
         feats.push(feat);

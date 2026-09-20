@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-skin="atlas">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,20 +9,28 @@
 <meta property="og:site_name" content="Human History Map">
 <meta property="og:title" content="Human History Map">
 <meta property="og:description" content="Every known kingdom and civilization on one globe, from the first cities to the present.">
-<meta name="theme-color" content="#0b1220">
+<meta property="og:url" content="https://amyleesterling.github.io/human-history-map/">
+<meta property="og:image" content="https://amyleesterling.github.io/human-history-map/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The globe of the Human History Map, drawn as an engraved chart: kingdoms in colour washes on paper, with a graduated border and a compass rose.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#e9e3d3">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preload" href="vendor/fonts/cinzel/cinzel-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="vendor/fonts/eb-garamond/eb-garamond-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="vendor/scifi-ui/hologram.css">
-<link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">
-<link rel="stylesheet" href="vendor/scifi-ui/converge-swarm.css">
-<link rel="stylesheet" href="site.css?v=skin-1">
+<link rel="preload" href="vendor/fonts/eb-garamond/eb-garamond-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css?v=cards-6">
+<link rel="stylesheet" href="atlas.css?v=cards-6">
 </head>
 <body class="explorer">
 
 <header class="bar">
-  <a class="brand holounder" href="./">Human History Map</a>
+  <a class="brand" href="./">Human History Map</a>
   <div class="bar-tools">
+    <a id="skinBtn" class="iconbtn" href="scifi.html" title="The dark, sci-fi look" aria-label="Switch to the dark, sci-fi look">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14.5 3.5a8.5 8.5 0 1 0 6 14.3A9 9 0 0 1 14.5 3.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </a>
     <button id="searchBtn" class="iconbtn" type="button" aria-label="Search for a kingdom or country" aria-expanded="false" aria-controls="search">
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
@@ -99,8 +107,6 @@
 <script src="vendor/d3/d3-array.min.js"></script>
 <script src="vendor/d3/d3-geo.min.js"></script>
 <script src="vendor/topojson/topojson-client.min.js"></script>
-<script src="vendor/scifi-ui/hologram-tap.js"></script>
-<script src="vendor/scifi-ui/converge-swarm.js"></script>
-<script type="module" src="js/app.js?v=regions-1"></script>
+<script type="module" src="js/app.js?v=cards-6"></script>
 </body>
 </html>
