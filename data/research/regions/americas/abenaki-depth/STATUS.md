@@ -1,0 +1,7 @@
+# Abenaki research checkpoint
+
+Thirteen entries and twelve sources cover seasonal food work, three documented finds at Odanak, basket-making households, language resources, film and community research. The two Fort Odanak exhibition pages are treated as one work for the paraphrase budget, totalling 184 words including source notes. A coin's mint date is not a settlement date; a filmmaker's Abenaki identity is distinguished from her Kanien’kéhaka subjects.
+
+Strict validation passes with 157 runtime cards, zero errors and zero warnings. Temporal checks pass. The dark card at year 1704 and 390 pixels has readable 16-pixel prose, thirteen entries, twelve sources, valid references and no detected overflow, undersized text or failed resources. Screenshot inspected and browser errors empty.
+
+The imported Abnaki record is a related identity candidate requiring separate reconciliation. No alias or duplicate card has been claimed as completed. Independent historical review and depth certification remain outstanding, as do full coverage and deployment. Imported geometry is unchanged and unverified.
