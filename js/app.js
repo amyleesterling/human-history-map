@@ -480,7 +480,10 @@ function syncTipTime(civ) {
     const text = periods.length ? periods.map(p => p.summary).join(' ') : summary.text;
     els.tipSummary.textContent = periods.length ? `In ${formatYear(state.year)}: ${text}` : `Across its history: ${text}`;
     els.tipSummary.classList.remove('pending');
-    els.tipLine.textContent = firstSentence(text);
+    // the chip's one line says first when its polity is not on the map this
+    // year, since the card can outlive a turn of the globe and the clock
+    const onMap = data.featuresOf(civ.id, state.year).length > 0;
+    els.tipLine.textContent = onMap ? firstSentence(text) : `Not on the map in ${formatYear(state.year)}. ${firstSentence(text)}`;
     els.tipLine.classList.remove('pending');
     els.tipSource.replaceChildren();
     if (periods.length) {

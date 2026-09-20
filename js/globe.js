@@ -99,10 +99,16 @@ const wobble = d3.geoTransform({
 });
 
 // zoom (relative to the fitted globe) past which the 1:50m coastline is worth
-// its download, and the zoom range gestures are allowed
+// its download, and the zoom range gestures are allowed. At 96 a phone shows
+// about a degree and a half across, enough to read the names of the small
+// German states of 1831 (Amy could not at 16), and the projection is clipped
+// to the viewport and the geometry culled by bounding box so the frame cost
+// does not grow with the zoom.
 const HI_ZOOM = 2.6;
 const MIN_ZOOM = 1;
-const MAX_ZOOM = 16;
+const MAX_ZOOM = 96;
+// zoom from which geometry outside the viewport is skipped before drawing
+const CULL_ZOOM = 3;
 
 const clampLat = (lat) => Math.max(-90, Math.min(90, lat));
 const wrapLon = (lon) => ((((lon + 180) % 360) + 360) % 360) - 180;
@@ -258,7 +264,9 @@ export class Globe {
     if (!list.length) return;
     const fc = { type: 'FeatureCollection', features: list };
     const c = d3.geoCentroid(fc);
-    const target = { lon: c[0], lat: c[1], zoom: zoom ?? Math.min(this.fitZoomFor(list), 6) };
+    // a small state is shown at half the viewport like any other, up to a
+    // zoom that still shows its neighbours
+    const target = { lon: c[0], lat: c[1], zoom: zoom ?? Math.min(this.fitZoomFor(list), 40) };
     if (animate) this.animateTo(target);
     else this.setView(target);
   }
@@ -291,6 +299,9 @@ export class Globe {
     if (!w || !h) return;
     const v = this.view;
     const p = this.projection;
+    // the fit below measures the whole sphere; the viewport clip goes back
+    // on at the end
+    p.clipExtent(null);
     if (this.mode === 'globe') {
       // the fitted globe nearly fills the short side of the viewport, which
       // on a phone in portrait is its width
@@ -320,11 +331,77 @@ export class Globe {
       this.R = k;
       this._flatArea = this.measurePath.area(this.sphere);
     }
+    // only what is on screen is resampled and drawn, whatever the zoom; the
+    // margin keeps strokes at the edge whole
+    const m = 40;
+    p.clipExtent([[-m, -m], [w + m, h + m]]);
+    this._window = this._visibleWindow();
     this.baseDirty = true;
     if (v.zoom >= HI_ZOOM && !this.landHi && !this._askedHi && this.onNeedLandHi) {
       this._askedHi = true;
       this.onNeedLandHi();
     }
+  }
+
+  // The lon/lat window the viewport shows, once the zoom is deep enough for
+  // culling to pay: the corners and edge midpoints inverted, with a margin.
+  // Null at world scale, when a corner is off the globe, or when the window
+  // would cross the antimeridian, so everything draws as before.
+  _visibleWindow() {
+    const v = this.view, w = this.width, h = this.height;
+    if (v.zoom < CULL_ZOOM) return null;
+    let lon0 = Infinity, lon1 = -Infinity, lat0 = Infinity, lat1 = -Infinity;
+    for (const [x, y] of [[0, 0], [w, 0], [0, h], [w, h], [w / 2, 0], [w / 2, h], [0, h / 2], [w, h / 2], [w / 2, h / 2]]) {
+      const ll = this.projection.invert([x, y]);
+      if (!ll || Number.isNaN(ll[0]) || Number.isNaN(ll[1])) return null;
+      lon0 = Math.min(lon0, ll[0]); lon1 = Math.max(lon1, ll[0]);
+      lat0 = Math.min(lat0, ll[1]); lat1 = Math.max(lat1, ll[1]);
+    }
+    if (lon1 - lon0 > 180 || lat1 - lat0 > 90) return null;
+    const ml = (lon1 - lon0) * 0.15 + 0.2, mt = (lat1 - lat0) * 0.15 + 0.2;
+    return { lon0: lon0 - ml, lon1: lon1 + ml, lat0: lat0 - mt, lat1: lat1 + mt };
+  }
+
+  // whether a feature's bounding box touches the window; a box that crosses
+  // the antimeridine is always drawn
+  _inWindow(f) {
+    const win = this._window;
+    if (!win) return true;
+    if (!f._bbox) f._bbox = d3.geoBounds(f);
+    const [[x0, y0], [x1, y1]] = f._bbox;
+    if (x0 > x1) return true;
+    return x1 >= win.lon0 && x0 <= win.lon1 && y1 >= win.lat0 && y0 <= win.lat1;
+  }
+
+  // a base layer as a list of features with bounding boxes, split once so
+  // the land's many polygons can be culled one by one
+  _parts(layer) {
+    if (!layer) return null;
+    if (!this._partsOf) this._partsOf = new WeakMap();
+    let parts = this._partsOf.get(layer);
+    if (parts) return parts;
+    parts = [];
+    const push = (geometry) => {
+      if (!geometry) return;
+      if (geometry.type === 'MultiPolygon') for (const c of geometry.coordinates) parts.push({ type: 'Feature', geometry: { type: 'Polygon', coordinates: c } });
+      else if (geometry.type === 'MultiLineString') for (const c of geometry.coordinates) parts.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: c } });
+      else if (geometry.type === 'GeometryCollection') geometry.geometries.forEach(push);
+      else parts.push({ type: 'Feature', geometry });
+    };
+    if (layer.type === 'FeatureCollection') for (const f of layer.features) push(f.geometry);
+    else if (layer.type === 'Feature') push(layer.geometry);
+    else push(layer);
+    for (const f of parts) f._bbox = d3.geoBounds(f);
+    this._partsOf.set(layer, parts);
+    return parts;
+  }
+
+  // the part of a base layer worth streaming for this view
+  _visible(layer) {
+    if (!this._window) return layer;
+    const parts = this._parts(layer);
+    if (!parts) return layer;
+    return { type: 'FeatureCollection', features: parts.filter((f) => this._inWindow(f)) };
   }
 
   resize() {
@@ -424,7 +501,7 @@ export class Globe {
     mask.clearRect(0, 0, w, h);
 
     if (this.base) {
-      const land = this.landHi && this.view.zoom >= HI_ZOOM ? this.landHi : this.base.land;
+      const land = this._visible(this.landHi && this.view.zoom >= HI_ZOOM ? this.landHi : this.base.land);
       ctx.beginPath();
       pen(land);
       // water lining: a few widening strokes along the coast, the landward
@@ -449,15 +526,16 @@ export class Globe {
       mask.fill();
 
       if (this.base.lakes) {
+        const lakes = this._visible(this.base.lakes);
         ctx.beginPath();
-        pen(this.base.lakes);
+        pen(lakes);
         ctx.fillStyle = S.lake;
         ctx.fill();
         ctx.lineWidth = 0.6;
         ctx.strokeStyle = ink(S.edge * 0.7);
         ctx.stroke();
         mask.beginPath();
-        this.maskPenPath(this.base.lakes);
+        this.maskPenPath(lakes);
         mask.globalCompositeOperation = 'destination-out';
         mask.fill();
         mask.globalCompositeOperation = 'source-over';
@@ -465,7 +543,7 @@ export class Globe {
       const rivers = this.view.zoom < 1.8 && this.base.riversMajor ? this.base.riversMajor : this.base.rivers;
       if (rivers) {
         ctx.beginPath();
-        pen(rivers);
+        pen(this._visible(rivers));
         ctx.lineWidth = Math.min(1.6, 0.55 + 0.18 * this.view.zoom);
         ctx.strokeStyle = S.river;
         ctx.lineJoin = 'round';
@@ -533,6 +611,7 @@ export class Globe {
     const selected = [];
     for (const f of this.polities) {
       if (f._civ.id === this.selectedId) { selected.push(f); continue; }
+      if (this._window && !this._inWindow(f)) continue;
       this._drawPolity(ctx, path, f, false);
     }
     for (const f of selected) this._drawPolity(ctx, path, f, true);
@@ -643,17 +722,30 @@ export class Globe {
     const order = this.polities.slice().sort((a, b) => rank(b) - rank(a) || b._area - a._area);
 
     for (const f of order) {
-      const c = f._centroid;
-      let cosd = 1;
-      if (this.mode === 'globe') {
-        const d = d3.geoDistance(c, centre);
-        if (d > Math.PI / 2 - 0.08) continue;
-        cosd = Math.cos(d);
+      if (this._window && !this._inWindow(f)) continue;
+      let pt, side;
+      if (this._window) {
+        // zoomed in, the name goes on the centroid of the part on screen,
+        // sized by that part, from the clipped projection: a polity that
+        // fills the view with its centroid beyond it still carries its name
+        const a = this.measurePath.area(f);
+        if (!(a > 0)) continue;
+        pt = this.measurePath.centroid(f);
+        if (!pt || Number.isNaN(pt[0])) continue;
+        side = Math.sqrt(a);
+      } else {
+        const c = f._centroid;
+        let cosd = 1;
+        if (this.mode === 'globe') {
+          const d = d3.geoDistance(c, centre);
+          if (d > Math.PI / 2 - 0.08) continue;
+          cosd = Math.cos(d);
+        }
+        pt = this.projection(c);
+        if (!pt || Number.isNaN(pt[0])) continue;
+        if (pt[0] < -20 || pt[0] > w + 20 || pt[1] < -20 || pt[1] > h + 20) continue;
+        side = Math.sqrt(Math.max(0, f._area * pxPerSr * cosd));
       }
-      const pt = this.projection(c);
-      if (!pt || Number.isNaN(pt[0])) continue;
-      if (pt[0] < -20 || pt[0] > w + 20 || pt[1] < -20 || pt[1] > h + 20) continue;
-      const side = Math.sqrt(Math.max(0, f._area * pxPerSr * cosd));
       const isSel = f._civ.id === this.selectedId;
       const culture = f._civ.kind === 'culture';
       const name = (f.properties.label || f._civ.name).toUpperCase();
@@ -669,6 +761,11 @@ export class Globe {
       if (!fit) continue;
       const { lines, width, fs, font } = fit;
       const lh = fs * 1.1;
+      // zoomed in, a name near the edge is kept whole on screen
+      if (this._window) {
+        pt[0] = Math.max(width / 2 + 6, Math.min(w - width / 2 - 6, pt[0]));
+        pt[1] = Math.max((lh * lines.length) / 2 + 6, Math.min(h - (lh * lines.length) / 2 - 6, pt[1]));
+      }
       const box = { x0: pt[0] - width / 2 - 3, x1: pt[0] + width / 2 + 3, y0: pt[1] - (lh * lines.length) / 2 - 2, y1: pt[1] + (lh * lines.length) / 2 + 2 };
       if (placed.some((b) => b.x0 < box.x1 && b.x1 > box.x0 && b.y0 < box.y1 && b.y1 > box.y0)) continue;
       placed.push(box);
