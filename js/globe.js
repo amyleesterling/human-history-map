@@ -14,23 +14,31 @@ import { withAlpha, tint } from './palette.js';
 
 const d3 = globalThis.d3;
 
-// A chart drawn by hand: paper, one ink, and washes of colour that stop at
-// the coast. The sea is a cooler, darker sheet than the land so the shore
-// reads from the tone alone, with the inked coastline and its water lining
-// on top. Nothing here is warm: the paper is a grey cream, the ink a blue
-// black, by Amy's rule that nothing on the site is orange.
-const STYLE = {
-  paperInner: '#e6e4da', paperOuter: '#cbcabe',
-  flatPaper: '#e0dfd3',
-  land: '#f1ecdf', ink: '35, 41, 58',
-  lake: '#d3d9d8', river: 'rgba(70,95,130,.55)',
-  label: '#1f2533', halo: 'rgba(241,236,226,.92)',
-  select: '#1b2230',
-  // the sci-fi skin's haze outside the disc; the atlas skin has an ink
-  // shadow instead (see _drawBase and _drawRim)
-  glow: 'rgba(120,170,240,.22)', ring: 'rgba(170,205,255,.35)',
+// Two skins, one renderer. The atlas is a chart drawn by hand: paper, one
+// ink, and washes of colour that stop at the coast; the sea a cooler,
+// darker sheet than the land, the coastline inked with a water lining. The
+// sci-fi globe is a dark projection: a deep sea lit from the upper left,
+// slate land with a cold light along its coasts, polities as translucent
+// panes with a lit edge, and a haze outside the disc. Nothing in either is
+// warm, by Amy's rule that nothing on the site is orange.
+const STYLES = {
+  atlas: {
+    seaInner: '#e6e4da', seaOuter: '#cbcabe', flatSea: '#e0dfd3',
+    land: '#f1ecdf', ink: '35, 41, 58', edge: 0.72,
+    lake: '#d3d9d8', river: 'rgba(70,95,130,.55)', graticule: 0.09,
+    label: '#1f2533', halo: 'rgba(241,236,226,.92)', people: 'rgba(35,41,58,.62)', selectedLabel: '#000000',
+    select: '#1b2230', lining: 'rgba(35,41,58,', grain: true, wobble: true, blend: 'multiply',
+  },
+  scifi: {
+    seaInner: '#1c3752', seaOuter: '#0a1729', flatSea: '#0f2136',
+    land: '#2f333a', ink: '226, 236, 250', edge: 0.3,
+    lake: '#153052', river: 'rgba(120,170,220,.55)', graticule: 0.07,
+    label: '#f5f1e8', halo: 'rgba(8,10,14,.8)', people: 'rgba(245,241,232,.72)', selectedLabel: '#ffffff',
+    select: '#ffffff', lining: 'rgba(120,170,240,', grain: false, wobble: false, blend: 'source-over',
+    glow: 'rgba(120,170,240,.22)', ring: 'rgba(170,205,255,.35)', hud: '126, 224, 255',
+  },
 };
-const ink = (alpha) => `rgba(${STYLE.ink},${alpha})`;
+const inkOf = (S, alpha) => `rgba(${S.ink},${alpha})`;
 
 // The seas named as the engraved charts name them, lettered faintly into
 // the sheet of the atlas skin (ornament, so drawn with the cached base);
@@ -111,6 +119,13 @@ export class Globe {
     this.labels = opts.labels !== false;
     // 'atlas' (the default pages) or 'scifi' (the generated sci-fi pages)
     this.skin = opts.skin === 'scifi' ? 'scifi' : 'atlas';
+    this.S = STYLES[this.skin];
+    // the sci-fi lock-on: which polity the brackets hold, since when, and
+    // where the card is so the leader can reach it
+    this._lockId = null;
+    this._lockT0 = 0;
+    this._cardRect = null;
+    this._reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.mode = opts.mode === 'flat' ? 'flat' : 'globe';
     this.view = { lon: 30, lat: 25, zoom: 1, ...(opts.view || {}) };
     this.polities = [];
@@ -162,6 +177,9 @@ export class Globe {
     this.render();
   }
   setSelected(id) { this.selectedId = id; this.render(); }
+  // the card's box in canvas pixels (or null when it is closed), for the
+  // sci-fi leader line
+  setCardRect(rect) { this._cardRect = rect || null; if (this.skin === 'scifi') this.render(); }
 
   setMode(mode) {
     mode = mode === 'flat' ? 'flat' : 'globe';
@@ -254,8 +272,11 @@ export class Globe {
     this.path = d3.geoPath(this.projection, this.ctx);
     this.basePath = d3.geoPath(this.projection, this.baseCtx);
     // the pen: the same projection with the wobble on every point, for all
-    // that a hand would draw; the sphere and the graticule keep the ruler
-    const pen = { stream: (s) => this.projection.stream(wobble.stream(s)) };
+    // that a hand would draw; the sphere and the graticule keep the ruler.
+    // The sci-fi projection is drawn by a machine and has no wobble.
+    const pen = this.S.wobble
+      ? { stream: (s) => this.projection.stream(wobble.stream(s)) }
+      : { stream: (s) => this.projection.stream(s) };
     this.basePenPath = d3.geoPath(pen, this.baseCtx);
     this.maskPenPath = d3.geoPath(pen, this.maskCtx);
     this.washPenPath = d3.geoPath(pen, this.washCtx);
@@ -346,10 +367,12 @@ export class Globe {
     this._drawWashes();
     if (this.labels) this._drawLabels(ctx);
     if (this.mode === 'globe') this._drawRim(ctx);
+    if (this.skin === 'scifi') this._drawLock(ctx);
   }
 
   _drawBase() {
     const ctx = this.baseCtx, w = this.width, h = this.height, path = this.basePath, pen = this.basePenPath;
+    const S = this.S, ink = (a) => inkOf(S, a);
     ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
 
@@ -365,31 +388,33 @@ export class Globe {
       ctx.fillStyle = sh;
       ctx.fill();
     }
-    // the sheet, lit from the upper left so the disc still reads as a sphere
+    // the sea, lit from the upper left so the disc reads as a sphere
     ctx.beginPath();
     path(this.sphere);
     if (this.mode === 'globe') {
       const R = this.R, cx = w / 2, cy = h / 2;
       const g = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.4, R * 0.05, cx, cy, R);
-      g.addColorStop(0, STYLE.paperInner);
-      g.addColorStop(1, STYLE.paperOuter);
+      g.addColorStop(0, S.seaInner);
+      g.addColorStop(1, S.seaOuter);
       ctx.fillStyle = g;
     } else {
-      ctx.fillStyle = STYLE.flatPaper;
+      ctx.fillStyle = S.flatSea;
     }
     ctx.fill();
     // the grain of the paper, kept to the sheet
-    ctx.save();
-    ctx.clip();
-    if (!this._grain) this._grain = makeGrain();
-    ctx.fillStyle = ctx.createPattern(this._grain, 'repeat');
-    ctx.fillRect(0, 0, w, h);
-    ctx.restore();
+    if (S.grain) {
+      ctx.save();
+      ctx.clip();
+      if (!this._grain) this._grain = makeGrain();
+      ctx.fillStyle = ctx.createPattern(this._grain, 'repeat');
+      ctx.fillRect(0, 0, w, h);
+      ctx.restore();
+    }
 
     ctx.beginPath();
     path(this.graticule());
     ctx.lineWidth = 1;
-    ctx.strokeStyle = ink(0.09);
+    ctx.strokeStyle = ink(S.graticule);
     ctx.stroke();
 
     if (this.skin === 'atlas') this._drawSeas(ctx);
@@ -402,19 +427,20 @@ export class Globe {
       const land = this.landHi && this.view.zoom >= HI_ZOOM ? this.landHi : this.base.land;
       ctx.beginPath();
       pen(land);
-      // water lining: a few widening strokes of thin ink along the coast,
-      // the landward half of each then covered by the land, so the sea
-      // darkens as it meets the shore the way a pen hatches it
+      // water lining: a few widening strokes along the coast, the landward
+      // half of each then covered by the land. On paper it is thin ink, the
+      // sea darkening at the shore the way a pen hatches it; on the dark
+      // globe it is a cold light the coast gives off.
       ctx.lineJoin = 'round';
       for (const [width, alpha] of [[9, 0.05], [5, 0.09], [2.4, 0.16]]) {
         ctx.lineWidth = width;
-        ctx.strokeStyle = ink(alpha);
+        ctx.strokeStyle = `${S.lining}${alpha})`;
         ctx.stroke();
       }
-      ctx.fillStyle = STYLE.land;
+      ctx.fillStyle = S.land;
       ctx.fill();
       ctx.lineWidth = 0.9;
-      ctx.strokeStyle = ink(0.72);
+      ctx.strokeStyle = ink(S.edge);
       ctx.stroke();
 
       mask.beginPath();
@@ -425,10 +451,10 @@ export class Globe {
       if (this.base.lakes) {
         ctx.beginPath();
         pen(this.base.lakes);
-        ctx.fillStyle = STYLE.lake;
+        ctx.fillStyle = S.lake;
         ctx.fill();
         ctx.lineWidth = 0.6;
-        ctx.strokeStyle = ink(0.5);
+        ctx.strokeStyle = ink(S.edge * 0.7);
         ctx.stroke();
         mask.beginPath();
         this.maskPenPath(this.base.lakes);
@@ -441,7 +467,7 @@ export class Globe {
         ctx.beginPath();
         pen(rivers);
         ctx.lineWidth = Math.min(1.6, 0.55 + 0.18 * this.view.zoom);
-        ctx.strokeStyle = STYLE.river;
+        ctx.strokeStyle = S.river;
         ctx.lineJoin = 'round';
         ctx.stroke();
       }
@@ -451,7 +477,7 @@ export class Globe {
       ctx.beginPath();
       path(this.sphere);
       ctx.lineWidth = 1.4;
-      ctx.strokeStyle = ink(0.85);
+      ctx.strokeStyle = this.skin === 'atlas' ? ink(0.85) : S.ring;
       ctx.stroke();
     }
     this.baseDirty = false;
@@ -465,7 +491,7 @@ export class Globe {
     ctx.font = labelFont(fs, true);
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillStyle = ink(0.3);
+    ctx.fillStyle = inkOf(this.S, 0.3);
     if ('letterSpacing' in ctx) ctx.letterSpacing = '0.3em';
     for (const [name, lon, lat] of SEAS) {
       if (this.mode === 'globe' && d3.geoDistance([lon, lat], [v.lon, v.lat]) > Math.PI / 2 - 0.2) continue;
@@ -495,7 +521,7 @@ export class Globe {
     }
     const out = this.ctx;
     out.setTransform(1, 0, 0, 1, 0, 0);
-    out.globalCompositeOperation = 'multiply';
+    out.globalCompositeOperation = this.S.blend;
     out.drawImage(this.washCanvas, 0, 0);
     out.globalCompositeOperation = 'source-over';
     out.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
@@ -516,8 +542,34 @@ export class Globe {
     const color = f._civ.color;
     const culture = f._civ.kind === 'culture';
     const precision = f.properties.precision || 1;
+    const S = this.S;
     ctx.beginPath();
     path(f);
+    if (this.skin === 'scifi') {
+      // on the dark globe a state is a translucent pane with a lit edge in
+      // its own colour, an approximate border (precision 1) lit less; a
+      // people's range is a faint pane with a faint edge
+      ctx.fillStyle = withAlpha(color, isSelected ? 0.7 : culture ? 0.2 : 0.55);
+      ctx.fill();
+      if (isSelected) {
+        ctx.save();
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 14;
+        ctx.lineWidth = 2.2;
+        ctx.strokeStyle = S.select;
+        ctx.stroke();
+        ctx.restore();
+      } else if (culture) {
+        ctx.lineWidth = 0.8;
+        ctx.strokeStyle = withAlpha(color, 0.35);
+        ctx.stroke();
+      } else {
+        ctx.lineWidth = precision >= 3 ? 1.6 : precision === 2 ? 1.3 : 1;
+        ctx.strokeStyle = withAlpha(color, precision >= 3 ? 0.9 : precision === 2 ? 0.75 : 0.6);
+        ctx.stroke();
+      }
+      return;
+    }
     // a people's range is a faint see-through wash; a state is a solid wash
     // of a lightened colour, so where two source polygons overlap the
     // smaller, drawn later, simply covers the larger, as one colour laid
@@ -534,12 +586,13 @@ export class Globe {
     // then the ink: an approximate border (precision 1) is drawn lighter
     // than one fixed by treaty or survey, so the map never claims more
     // certainty than its sources have
+    const ink = (a) => inkOf(S, a);
     if (isSelected) {
       ctx.save();
       ctx.shadowColor = color;
       ctx.shadowBlur = 12;
       ctx.lineWidth = 2;
-      ctx.strokeStyle = STYLE.select;
+      ctx.strokeStyle = S.select;
       ctx.stroke();
       ctx.restore();
     } else if (culture) {
@@ -621,8 +674,8 @@ export class Globe {
       placed.push(box);
       ctx.font = font;
       ctx.lineWidth = 3;
-      ctx.strokeStyle = STYLE.halo;
-      ctx.fillStyle = isSel ? '#000000' : culture ? ink(0.62) : STYLE.label;
+      ctx.strokeStyle = this.S.halo;
+      ctx.fillStyle = isSel ? this.S.selectedLabel : culture ? this.S.people : this.S.label;
       lines.forEach((line, i) => {
         const y = pt[1] + (i - (lines.length - 1) / 2) * lh;
         ctx.strokeText(line, pt[0], y);
@@ -656,11 +709,11 @@ export class Globe {
 
   _drawRim(ctx) {
     const R = this.R, cx = this.width / 2, cy = this.height / 2;
-    const atlas = this.skin === 'atlas';
+    const S = this.S, atlas = this.skin === 'atlas';
     // the sci-fi skin has a soft blue haze just outside the disc
     if (!atlas) {
       const g = ctx.createRadialGradient(cx, cy, R, cx, cy, R * 1.07);
-      g.addColorStop(0, STYLE.glow);
+      g.addColorStop(0, S.glow);
       g.addColorStop(1, 'rgba(120,170,240,0)');
       ctx.beginPath();
       ctx.arc(cx, cy, R * 1.07, 0, Math.PI * 2);
@@ -668,18 +721,98 @@ export class Globe {
       ctx.fillStyle = g;
       ctx.fill();
     }
-    // the inked limb, and a thin ring a little outside it, the meridian
-    // ring of a desk globe
+    // the limb, and a thin ring a little outside it, the meridian ring of
+    // a desk globe
     ctx.beginPath();
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
     ctx.lineWidth = 1.4;
-    ctx.strokeStyle = ink(0.85);
+    ctx.strokeStyle = atlas ? inkOf(S, 0.85) : 'rgba(170,205,255,.5)';
     ctx.stroke();
     ctx.beginPath();
     ctx.arc(cx, cy, R + 3.5, 0, Math.PI * 2);
     ctx.lineWidth = 0.8;
-    ctx.strokeStyle = atlas ? ink(0.3) : STYLE.ring;
+    ctx.strokeStyle = atlas ? inkOf(S, 0.3) : S.ring;
     ctx.stroke();
+  }
+
+  // The lock-on, the sci-fi skin's own instrument: when a polity is chosen,
+  // four HUD brackets converge on it from outside and hold its bounds as
+  // the globe turns, a scan sweeps once across it, and a leader runs from
+  // the nearest bracket to the card, wherever the card has been put, so the
+  // card is tied to the land it describes. Reduced motion lands the
+  // brackets at once and skips the sweep.
+  _drawLock(ctx) {
+    const id = this.selectedId;
+    if (!id) { this._lockId = null; return; }
+    const feats = this.polities.filter((f) => f._civ.id === id);
+    if (!feats.length) return;
+    const b = this.measurePath.bounds({ type: 'FeatureCollection', features: feats });
+    if (!b || !Number.isFinite(b[0][0]) || !Number.isFinite(b[1][0]) || b[1][0] <= b[0][0]) return;
+    const now = performance.now();
+    if (this._lockId !== id) { this._lockId = id; this._lockT0 = now; }
+    const age = now - this._lockT0;
+    const u = this._reduced ? 1 : Math.min(1, age / 420);
+    const k = 1 - Math.pow(1 - u, 3);
+    const spread = 6 + 40 * (1 - k);
+    const w = this.width, h = this.height;
+    const x0 = Math.max(-40, b[0][0]) - spread, y0 = Math.max(-40, b[0][1]) - spread;
+    const x1 = Math.min(w + 40, b[1][0]) + spread, y1 = Math.min(h + 40, b[1][1]) + spread;
+    const L = Math.max(8, Math.min(22, Math.min(x1 - x0, y1 - y0) * 0.25));
+    const hud = `rgba(${this.S.hud},`;
+    ctx.save();
+    ctx.lineWidth = 1.5;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = `${hud}${0.95 * k})`;
+    ctx.shadowColor = `${hud}0.8)`;
+    ctx.shadowBlur = 8;
+    ctx.beginPath();
+    for (const [x, y, sx, sy] of [[x0, y0, 1, 1], [x1, y0, -1, 1], [x0, y1, 1, -1], [x1, y1, -1, -1]]) {
+      ctx.moveTo(x, y + sy * L); ctx.lineTo(x, y); ctx.lineTo(x + sx * L, y);
+    }
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    // the sweep: one line down the polity, kept to its shape
+    if (!this._reduced && age < 700) {
+      const t = age / 700;
+      ctx.save();
+      ctx.beginPath();
+      for (const f of feats) this.path(f);
+      ctx.clip();
+      const y = b[0][1] + (b[1][1] - b[0][1]) * t;
+      ctx.beginPath();
+      ctx.moveTo(b[0][0], y); ctx.lineTo(b[1][0], y);
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = `${hud}${0.85 * (1 - t)})`;
+      ctx.stroke();
+      ctx.restore();
+    }
+    // the leader: from the bracket corner nearest the card to the card's
+    // nearest edge, unless the card sits over the polity
+    const r = this._cardRect;
+    if (r && k > 0.6) {
+      const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+      const px = Math.max(r.x, Math.min(r.x + r.w, cx)), py = Math.max(r.y, Math.min(r.y + r.h, cy));
+      const inside = px > x0 && px < x1 && py > y0 && py < y1;
+      if (!inside) {
+        let best = null, bd = Infinity;
+        for (const c of [[x0, y0], [x1, y0], [x0, y1], [x1, y1]]) {
+          const d = Math.hypot(c[0] - px, c[1] - py);
+          if (d < bd) { bd = d; best = c; }
+        }
+        const a = Math.min(1, (k - 0.6) / 0.4) * 0.6;
+        ctx.strokeStyle = `${hud}${a})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(best[0], best[1]); ctx.lineTo(px, py);
+        ctx.stroke();
+        ctx.fillStyle = `${hud}${a * 1.4})`;
+        ctx.beginPath();
+        ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    ctx.restore();
+    if (!this._reduced && age < 700) this.render();
   }
 
   // ---- picking --------------------------------------------------------

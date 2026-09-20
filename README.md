@@ -31,7 +31,8 @@ site.css                 everything both pages share, and the sci-fi paint
 atlas.css                the atlas paint, loaded after site.css by the default pages
 share.jpg                the preview image links to the site show (og:image)
 js/app.js                the explorer: clock, timeline, tooltip, search, URL state
-js/globe.js              the canvas renderer: projection, gestures, labels, hit testing
+js/globe.js              the canvas renderer: projection, gestures, labels, hit
+                         testing, a style per skin, and the sci-fi lock-on
 js/data.js               loads the manifest, polities, borders (lazily by era), cards
 js/timeline.js           years, BCE/CE formatting, the stretched time axis
 js/palette.js            polity colours

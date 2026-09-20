@@ -52,10 +52,16 @@ footnote. That is the whole brief; keep every change in its service.
   the sun leads back, on the same view. The scripts read `data-skin` on
   the root and follow it for links and canvas paint. The atlas sets its
   page in EB Garamond with Cinzel capitals; the sci-fi skin keeps
-  sans-serif body text with monospace readouts via `.num`. The map itself
-  is lettered classically in both: states in Cinzel capitals, a people's
-  range in Garamond italic capitals (both faces vendored under
-  `vendor/fonts/`, SIL OFL). Nothing is orange in either.
+  sans-serif body text with monospace readouts via `.num`. The renderer
+  has a style table per skin: the atlas globe is paper and ink with a
+  hand's wobble on every line; the sci-fi globe is dark, crisp, lit at the
+  coasts, its polities translucent panes with lit edges, and it carries
+  the lock-on (`_drawLock` in `js/globe.js`): HUD brackets that converge
+  on the chosen polity, a scan that sweeps it once, and a leader from the
+  brackets to the card, which `js/app.js` reports through `setCardRect`.
+  The map itself is lettered classically in both: states in Cinzel
+  capitals, a people's range in Garamond italic capitals (both faces
+  vendored under `vendor/fonts/`, SIL OFL). Nothing is orange in either.
 - **`vendor/` and `base/` are never edited by hand.** Vendor files are copied
   down from upstream with a `SOURCE.txt`; `base/` is rebuilt by
   `scripts/build-base.mjs`.

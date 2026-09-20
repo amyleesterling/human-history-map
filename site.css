@@ -153,6 +153,19 @@ button { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) { .chip, .iconbtn, .btn { transition: none; } .btn:hover, .btn:focus-visible, .btn:active { transform: none; } }
 
 /* ---- the explorer ------------------------------------------------------- */
+/* the sci-fi stage is a projection: a cold glow rises from the projector at
+   the foot of the stage and fine scan lines lie across the whole picture;
+   both stay under the panels and above the map, and take no pointer */
+html[data-skin="scifi"] .stage::before, html[data-skin="scifi"] .stage::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3;
+}
+html[data-skin="scifi"] .stage::before {
+  background: radial-gradient(60% 34% at 50% 100%, rgb(var(--holo-cyan) / .16), rgb(var(--holo-cyan) / 0) 70%);
+}
+html[data-skin="scifi"] .stage::after {
+  background: repeating-linear-gradient(180deg, rgba(0, 0, 0, .13) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+}
 body.explorer {
   height: 100vh; height: 100dvh;
   display: flex; flex-direction: column; overflow: hidden;
