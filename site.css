@@ -222,22 +222,17 @@ body.explorer {
 /* the tooltip: a slim chip (name, dates, one line) so the globe stays in
    view, with an arrow that opens the summary and the buttons. A card by the
    finger on wide screens; a bar along the bottom on phones. */
-/* The card is a scifi-ui panel (vendor/scifi-ui): .holopanel gives it the
-   gradient surface, the lit top hairline and the materialise that plays each
-   time it opens; .holoframe gives it the four HUD corner brackets that push
-   outward on hover or tap; and as it arrives the converge swarm streams
-   particles in from its edges to gather on the name (js/app.js starts it and
-   stops it). Only the layout is ours. */
+/* In the sci-fi skin the card is a scifi-ui panel (vendor/scifi-ui):
+   .holopanel gives it the gradient surface, the lit top hairline and the
+   materialise that plays each time it opens (js/app.js replays is-in);
+   .holoframe gives it the four HUD corner brackets that push outward on
+   hover or tap. Only the layout is ours. */
 .tip {
   position: absolute; z-index: 6; width: 340px; max-width: calc(100% - 24px);
   margin: 0; /* .holoframe sets a figure's vertical margin; a card has none */
   padding: 10px 12px 10px 14px; border-radius: 14px;
 }
-/* the swarm's canvas sits at z-index 5 over the panel; the text rides above
-   it, so the particles pass behind the name they gather on */
-.tip > .holoconverge-canvas { border-radius: inherit; }
-.tip > .tip-head, .tip > .tip-line, .tip > .tip-body { position: relative; z-index: 6; }
-.tip > .tip-close { z-index: 6; } /* stays absolute, top right */
+.tip > .tip-head, .tip > .tip-line, .tip > .tip-body { position: relative; }
 .tip-head {
   display: flex; align-items: center; gap: 10px; width: calc(100% - 26px);
   background: none; border: 0; padding: 0; text-align: left; cursor: pointer; color: inherit;

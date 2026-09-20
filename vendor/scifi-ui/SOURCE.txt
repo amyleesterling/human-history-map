@@ -1,5 +1,5 @@
-Copied unmodified from Amy's scifi-ui library on 2026-09-19 and 2026-09-20,
-at commit 43857a2 (2026-09-15):
+Copied unmodified from Amy's scifi-ui library on 2026-09-19, at commit
+43857a2 (2026-09-15):
 
   https://github.com/amyleesterling/scifi-ui
 
@@ -13,24 +13,20 @@ at commit 43857a2 (2026-09-15):
                       on any page that loads any part of the library.
   panel-surface.css   .holopanel, the dark gradient panel with the lit top
                       hairline and the materialise entrance (is-in)
-  converge-swarm.css  the canvas the swarm draws on (components/ upstream)
-  converge-swarm.js   holoconverge(host, target): particles stream in from
-                      the host's edges and gather on the target
-                      (components/ upstream)
 
-Consumers: the generated sci-fi pages (scifi.html loads all five;
+Consumers: only the generated sci-fi pages (scifi.html loads all three;
 scifi-civ.html loads hologram.css and panel-surface.css). The default
-pages, index.html and civ.html (the atlas, ink on paper), load only the
-swarm, whose three tints they set to ink through the --holo-* tokens in
-atlas.css. The polity card (#tip) is built on .holopanel and
-.holoframe, carries the frame's four HUD brackets, plays the materialise
-each time it opens (js/app.js adds is-in) and, as it arrives, a short
-burst of the converge swarm gathering on its name (js/app.js starts it
-and stops it after about a second and a half). The map key, the notice,
-the hint, the search panel and the card page's hero, ending and period
-boxes are .holopanel surfaces; the brand is a .holounder. site.css
-redefines the tokens for this palette, with no warm accent at all: Amy's
-rule is no orange anywhere.
+pages, index.html and civ.html (the atlas, ink on paper), load no part of
+the library. On the sci-fi pages the polity card (#tip) is built on
+.holopanel and .holoframe, carries the frame's four HUD brackets and
+plays the materialise each time it opens (js/app.js replays is-in); the
+map key, the notice, the hint, the search panel and the card page's
+hero, ending and period boxes are .holopanel surfaces; the brand is a
+.holounder. site.css redefines the tokens for this palette, with no warm
+accent at all: Amy's rule is no orange anywhere. The library's converge
+swarm was used on the card from 2026-09-20 and removed the same day:
+Amy found the particles distracting and meant the box itself to
+materialise.
 
-Do not edit these files. To upgrade, copy the same five down from a newer
-commit and update the commit above. Licence: see the repository.
+Do not edit these files. To upgrade, copy the same three down from a
+newer commit and update the commit above. Licence: see the repository.
