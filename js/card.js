@@ -100,6 +100,7 @@ async function main() {
     const li = el('li'); li.append(el('b', null, label + ' '), document.createTextNode(value)); facts.appendChild(li);
   };
   if (civ.kind === 'culture') fact('Kind', 'a people or culture, not a state');
+  if (civ.kind === 'region') fact('Kind', 'geographic region');
   fact('Capital', civ.capital);
   fact('Region', civ.region);
   if (civ.figures && civ.figures.length) fact('Figures', civ.figures.join(', '));

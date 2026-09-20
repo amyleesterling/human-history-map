@@ -423,6 +423,7 @@ function showTip(civ, anchor, feature) {
   const meta = [];
   if (possession) meta.push(`${civ.name}: ${span}`);
   if (civ.kind === 'culture') meta.push('A people or culture, not a state');
+  if (civ.kind === 'region') meta.push('Geographic region');
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
   if (civ.region) meta.push(civ.region);
   const drawn = data.featuresOf(civ.id, state.year).length > 0;
@@ -529,6 +530,7 @@ function syncTipTime(civ) {
   els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : spanWithDuration(civ);
   const meta = [];
   if (civ.kind === 'culture') meta.push('A people or culture, not a state');
+  if (civ.kind === 'region') meta.push('Geographic region');
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
   if (civ.region) meta.push(civ.region);
   if (data.yearStatus(state.year).state === 'error') meta.push(`Borders could not load for ${formatYear(state.year)}.`);
