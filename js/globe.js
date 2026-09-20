@@ -107,6 +107,13 @@ const wobble = d3.geoTransform({
 const HI_ZOOM = 2.6;
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 96;
+// How far a state's wash reaches past its drawn edge into unclaimed land
+// and sea (the land mask cuts the sea off), and how far inside the coast
+// the polity ink stops. The sources' coasts are rough by their own account:
+// Amy saw Egypt stop a strip short of the Mediterranean and run into the
+// Red Sea, with its own edge inked inland of the shore. Within this
+// distance of the sea the coastline is the border.
+const REACH_KM = 25;
 // zoom from which geometry outside the viewport is skipped before drawing
 const CULL_ZOOM = 3;
 
@@ -147,6 +154,14 @@ export class Globe {
     this.maskCtx = this.maskCanvas.getContext('2d');
     this.washCanvas = document.createElement('canvas');
     this.washCtx = this.washCanvas.getContext('2d');
+    // the land shrunk by the coast reach, which masks the ink; the reach
+    // itself; and the ink (see _drawWashes)
+    this.erodedCanvas = document.createElement('canvas');
+    this.erodedCtx = this.erodedCanvas.getContext('2d');
+    this.reachCanvas = document.createElement('canvas');
+    this.reachCtx = this.reachCanvas.getContext('2d');
+    this.inkCanvas = document.createElement('canvas');
+    this.inkCtx = this.inkCanvas.getContext('2d');
     this.baseDirty = true;
     this._raf = 0;
     this._anim = null;
@@ -288,6 +303,9 @@ export class Globe {
     this.basePenPath = d3.geoPath(pen, this.baseCtx);
     this.maskPenPath = d3.geoPath(pen, this.maskCtx);
     this.washPenPath = d3.geoPath(pen, this.washCtx);
+    this.erodedPenPath = d3.geoPath(pen, this.erodedCtx);
+    this.reachPenPath = d3.geoPath(pen, this.reachCtx);
+    this.inkPenPath = d3.geoPath(pen, this.inkCtx);
     this.measurePath = d3.geoPath(this.projection);
     this.graticule = d3.geoGraticule().step([15, 15]);
     this.sphere = { type: 'Sphere' };
@@ -331,9 +349,12 @@ export class Globe {
       this.R = k;
       this._flatArea = this.measurePath.area(this.sphere);
     }
+    // the coast reach in pixels at this scale (the projection's scale is
+    // pixels per Earth radius on the globe, and near enough on the flat map)
+    this._reach = REACH_KM * p.scale() / 6371;
     // only what is on screen is resampled and drawn, whatever the zoom; the
-    // margin keeps strokes at the edge whole
-    const m = 40;
+    // margin keeps strokes at the edge whole, the reach included
+    const m = Math.max(40, Math.ceil(this._reach) + 8);
     p.clipExtent([[-m, -m], [w + m, h + m]]);
     this._window = this._visibleWindow();
     this.baseDirty = true;
@@ -413,7 +434,7 @@ export class Globe {
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     if (w === this.width && h === this.height && dpr === this.dpr) return;
     this.width = w; this.height = h; this.dpr = dpr;
-    for (const c of [this.canvas, this.baseCanvas, this.maskCanvas, this.washCanvas]) {
+    for (const c of [this.canvas, this.baseCanvas, this.maskCanvas, this.washCanvas, this.erodedCanvas, this.reachCanvas, this.inkCanvas]) {
       c.width = Math.round(w * dpr);
       c.height = Math.round(h * dpr);
     }
@@ -496,9 +517,11 @@ export class Globe {
 
     if (this.skin === 'atlas') this._drawSeas(ctx);
 
-    const mask = this.maskCtx;
+    const mask = this.maskCtx, er = this.erodedCtx;
     mask.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     mask.clearRect(0, 0, w, h);
+    er.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    er.clearRect(0, 0, w, h);
 
     if (this.base) {
       const land = this._visible(this.landHi && this.view.zoom >= HI_ZOOM ? this.landHi : this.base.land);
@@ -525,8 +548,8 @@ export class Globe {
       mask.fillStyle = '#fff';
       mask.fill();
 
-      if (this.base.lakes) {
-        const lakes = this._visible(this.base.lakes);
+      const lakes = this.base.lakes ? this._visible(this.base.lakes) : null;
+      if (lakes) {
         ctx.beginPath();
         pen(lakes);
         ctx.fillStyle = S.lake;
@@ -539,6 +562,21 @@ export class Globe {
         mask.globalCompositeOperation = 'destination-out';
         mask.fill();
         mask.globalCompositeOperation = 'source-over';
+      }
+      // the land shrunk by the reach (REACH_KM): the polity ink is drawn
+      // only inside it, since that close to the water the coast is the border
+      er.setTransform(1, 0, 0, 1, 0, 0);
+      er.drawImage(this.maskCanvas, 0, 0);
+      er.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+      if (this._reach > 0.3) {
+        er.globalCompositeOperation = 'destination-out';
+        er.lineWidth = this._reach * 2;
+        er.lineJoin = 'round';
+        er.beginPath();
+        this.erodedPenPath(land);
+        if (lakes) this.erodedPenPath(lakes);
+        er.stroke();
+        er.globalCompositeOperation = 'source-over';
       }
       const rivers = this.view.zoom < 1.8 && this.base.riversMajor ? this.base.riversMajor : this.base.rivers;
       if (rivers) {
@@ -585,27 +623,47 @@ export class Globe {
   // source polygon that runs into the sea leaves the sea clear), and the
   // layer is multiplied onto the paper so the grain and the ink show
   // through as they do under watercolour.
+  // The polities go on in three layers. The washes: every polity's fill,
+  // then each state's reach (REACH_KM past its edge, only where nothing is
+  // painted, so a shape that stops short of the coast fills to it and its
+  // neighbours are untouched), the whole cut at the coast by the land mask
+  // (a hand colouring a chart stops at the shore, and a rough source
+  // polygon that runs into the sea leaves the sea clear). The ink: every
+  // polity's border, cut by the land shrunk by the reach, so a border is
+  // drawn only inland and the coastline, already inked, is the border at
+  // the shore. On paper the washes are multiplied onto the sheet so the
+  // grain and the ink show through.
   _drawWashes() {
-    const ctx = this.washCtx, w = this.width, h = this.height;
-    ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    ctx.clearRect(0, 0, w, h);
-    ctx.lineJoin = 'round';
-    this._drawPolities(ctx);
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    const w = this.width, h = this.height;
+    const wash = this.washCtx, ink = this.inkCtx;
+    for (const c of [wash, ink]) {
+      c.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+      c.clearRect(0, 0, w, h);
+      c.lineJoin = 'round';
+    }
+    this._drawPolities(wash);
+    this._drawReach();
+    this._drawInk(ink);
+    wash.setTransform(1, 0, 0, 1, 0, 0);
+    ink.setTransform(1, 0, 0, 1, 0, 0);
     if (this.base) {
-      ctx.globalCompositeOperation = 'destination-in';
-      ctx.drawImage(this.maskCanvas, 0, 0);
-      ctx.globalCompositeOperation = 'source-over';
+      wash.globalCompositeOperation = 'destination-in';
+      wash.drawImage(this.maskCanvas, 0, 0);
+      wash.globalCompositeOperation = 'source-over';
+      ink.globalCompositeOperation = 'destination-in';
+      ink.drawImage(this.erodedCanvas, 0, 0);
+      ink.globalCompositeOperation = 'source-over';
     }
     const out = this.ctx;
     out.setTransform(1, 0, 0, 1, 0, 0);
     out.globalCompositeOperation = this.S.blend;
     out.drawImage(this.washCanvas, 0, 0);
     out.globalCompositeOperation = 'source-over';
+    out.drawImage(this.inkCanvas, 0, 0);
     out.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
   }
 
-  // every polity in order, the selected one last so it sits on top
+  // every polity's wash in order, the selected one last so it sits on top
   _drawPolities(ctx) {
     const path = this.washPenPath;
     const selected = [];
@@ -617,72 +675,105 @@ export class Globe {
     for (const f of selected) this._drawPolity(ctx, path, f, true);
   }
 
+  // the reach: a wide stroke of each state's own wash colour along its
+  // edge, with every polity's interior then cut out, so only the outward
+  // half is left; it goes behind the washes
+  _drawReach() {
+    const reach = this._reach;
+    if (!(reach > 0.3) || !this.polities.length) return;
+    const ctx = this.reachCtx, path = this.reachPenPath, w = this.width, h = this.height;
+    ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = reach * 2;
+    const shown = this.polities.filter((f) => !this._window || this._inWindow(f));
+    for (const f of shown) {
+      if (f._civ.kind === 'culture') continue;
+      ctx.beginPath();
+      path(f);
+      ctx.strokeStyle = this._washColor(f, f._civ.id === this.selectedId);
+      ctx.stroke();
+    }
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = '#000';
+    for (const f of shown) { ctx.beginPath(); path(f); ctx.fill(); }
+    ctx.globalCompositeOperation = 'source-over';
+    const wash = this.washCtx;
+    wash.setTransform(1, 0, 0, 1, 0, 0);
+    wash.globalCompositeOperation = 'destination-over';
+    wash.drawImage(this.reachCanvas, 0, 0);
+    wash.globalCompositeOperation = 'source-over';
+    wash.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+  }
+
+  // every polity's border in order, the selected one last
+  _drawInk(ctx) {
+    const path = this.inkPenPath;
+    const selected = [];
+    for (const f of this.polities) {
+      if (f._civ.id === this.selectedId) { selected.push(f); continue; }
+      if (this._window && !this._inWindow(f)) continue;
+      this._drawPolityInk(ctx, path, f, false);
+    }
+    for (const f of selected) this._drawPolityInk(ctx, path, f, true);
+  }
+
+  // a people's range is a faint see-through wash; a state is a solid wash
+  // of a lightened colour on paper, so where two source polygons overlap
+  // the smaller, drawn later, simply covers the larger, as one colour laid
+  // over another on a chart would (Amy saw the Tang and Tibet mixing where
+  // the 700 map runs them into each other); on the dark globe a state is a
+  // translucent pane
+  _washColor(f, isSelected) {
+    const color = f._civ.color, culture = f._civ.kind === 'culture';
+    if (this.skin === 'scifi') return withAlpha(color, isSelected ? 0.7 : culture ? 0.2 : 0.55);
+    return culture ? withAlpha(color, 0.18) : tint(color, isSelected ? 0.4 : 0.52);
+  }
+
   _drawPolity(ctx, path, f, isSelected) {
+    ctx.beginPath();
+    path(f);
+    ctx.fillStyle = this._washColor(f, isSelected);
+    ctx.fill();
+    // on paper the paint pools a little along a state's edge
+    if (this.skin === 'atlas' && f._civ.kind !== 'culture') {
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = withAlpha(tint(f._civ.color, 0.2), 0.7);
+      ctx.stroke();
+    }
+  }
+
+  // the border: an approximate one (precision 1) is drawn lighter than one
+  // fixed by treaty or survey, so the map never claims more certainty than
+  // its sources have; on the dark globe it is a lit edge in the polity's
+  // own colour, on paper it is ink
+  _drawPolityInk(ctx, path, f, isSelected) {
     const color = f._civ.color;
     const culture = f._civ.kind === 'culture';
     const precision = f.properties.precision || 1;
     const S = this.S;
     ctx.beginPath();
     path(f);
-    if (this.skin === 'scifi') {
-      // on the dark globe a state is a translucent pane with a lit edge in
-      // its own colour, an approximate border (precision 1) lit less; a
-      // people's range is a faint pane with a faint edge
-      ctx.fillStyle = withAlpha(color, isSelected ? 0.7 : culture ? 0.2 : 0.55);
-      ctx.fill();
-      if (isSelected) {
-        ctx.save();
-        ctx.shadowColor = color;
-        ctx.shadowBlur = 14;
-        ctx.lineWidth = 2.2;
-        ctx.strokeStyle = S.select;
-        ctx.stroke();
-        ctx.restore();
-      } else if (culture) {
-        ctx.lineWidth = 0.8;
-        ctx.strokeStyle = withAlpha(color, 0.35);
-        ctx.stroke();
-      } else {
-        ctx.lineWidth = precision >= 3 ? 1.6 : precision === 2 ? 1.3 : 1;
-        ctx.strokeStyle = withAlpha(color, precision >= 3 ? 0.9 : precision === 2 ? 0.75 : 0.6);
-        ctx.stroke();
-      }
-      return;
-    }
-    // a people's range is a faint see-through wash; a state is a solid wash
-    // of a lightened colour, so where two source polygons overlap the
-    // smaller, drawn later, simply covers the larger, as one colour laid
-    // over another on a chart would (Amy saw the Tang and Tibet mixing
-    // where the 700 map runs them into each other); the paint pools a
-    // little along a state's edge
-    ctx.fillStyle = culture ? withAlpha(color, 0.18) : tint(color, isSelected ? 0.4 : 0.52);
-    ctx.fill();
-    if (!culture) {
-      ctx.lineWidth = 3;
-      ctx.strokeStyle = withAlpha(tint(color, 0.2), 0.7);
-      ctx.stroke();
-    }
-    // then the ink: an approximate border (precision 1) is drawn lighter
-    // than one fixed by treaty or survey, so the map never claims more
-    // certainty than its sources have
-    const ink = (a) => inkOf(S, a);
     if (isSelected) {
       ctx.save();
       ctx.shadowColor = color;
-      ctx.shadowBlur = 12;
-      ctx.lineWidth = 2;
+      ctx.shadowBlur = this.skin === 'scifi' ? 14 : 12;
+      ctx.lineWidth = this.skin === 'scifi' ? 2.2 : 2;
       ctx.strokeStyle = S.select;
       ctx.stroke();
       ctx.restore();
-    } else if (culture) {
-      ctx.lineWidth = 0.7;
-      ctx.strokeStyle = ink(0.22);
-      ctx.stroke();
-    } else {
-      ctx.lineWidth = precision >= 2 ? 1 : 0.9;
-      ctx.strokeStyle = ink(precision >= 3 ? 0.8 : precision === 2 ? 0.65 : 0.45);
-      ctx.stroke();
+      return;
     }
+    if (this.skin === 'scifi') {
+      if (culture) { ctx.lineWidth = 0.8; ctx.strokeStyle = withAlpha(color, 0.35); }
+      else { ctx.lineWidth = precision >= 3 ? 1.6 : precision === 2 ? 1.3 : 1; ctx.strokeStyle = withAlpha(color, precision >= 3 ? 0.9 : precision === 2 ? 0.75 : 0.6); }
+      ctx.stroke();
+      return;
+    }
+    const ink = (a) => inkOf(S, a);
+    if (culture) { ctx.lineWidth = 0.7; ctx.strokeStyle = ink(0.22); }
+    else { ctx.lineWidth = precision >= 2 ? 1 : 0.9; ctx.strokeStyle = ink(precision >= 3 ? 0.8 : precision === 2 ? 0.65 : 0.45); }
+    ctx.stroke();
   }
 
   _textWidth(ctx, text, font) {

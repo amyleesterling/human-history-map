@@ -32,7 +32,7 @@ import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { topology } from 'topojson-server';
 import { presimplify, simplify, sphericalTriangleArea } from 'topojson-simplify';
-import { quantize } from 'topojson-client';
+import { quantize, feature as topoFeature } from 'topojson-client';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -190,6 +190,16 @@ const DROPS = [
   ['Great Khanate', 1400],
 ];
 const splitFor = (name, year) => SPLITS.find(([n, y]) => n === name && y === year);
+
+// whether a ring of the quantized topology has no area: fewer than three
+// distinct positions, or a planar area of nothing (collinear points)
+function ringIsFlat(t, arcs) {
+  const ring = topoFeature(t, { type: 'Polygon', arcs: [arcs] }).geometry.coordinates[0];
+  if (new Set(ring.map((c) => c.join(','))).size < 3) return true;
+  let a = 0;
+  for (let i = 0, n = ring.length - 1; i < n; i++) a += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+  return Math.abs(a) < 1e-9;
+}
 
 const spellings = new Map();
 function canonical(name, year) {
@@ -419,6 +429,27 @@ perSnap.forEach((shapes, i) => {
   t = presimplify(t, sphericalTriangleArea);
   t = simplify(t, SIMPLIFY_WEIGHT);
   t = quantize(t, QUANTIZATION);
+  // simplifying can collapse a tiny shape to a ring with no area (its points
+  // all the same once quantized), and d3 fills such a ring as the whole
+  // visible hemisphere: Amy saw the Old World painted one colour in the
+  // 1630s by an Athabascan sliver. Those rings go, and a shape with nothing
+  // left goes with them.
+  let flat = 0;
+  const cleanRings = (rings) => {
+    if (ringIsFlat(t, rings[0])) { flat++; return null; }
+    return rings.filter((r, k) => { if (k === 0 || !ringIsFlat(t, r)) return true; flat++; return false; });
+  };
+  for (const g of t.objects.borders.geometries) {
+    if (g.type === 'Polygon') { const r = cleanRings(g.arcs); if (r) g.arcs = r; else g.type = null; }
+    else if (g.type === 'MultiPolygon') {
+      const kept = g.arcs.map(cleanRings).filter(Boolean);
+      if (!kept.length) g.type = null;
+      else if (kept.length === 1) { g.type = 'Polygon'; g.arcs = kept[0]; }
+      else g.arcs = kept;
+    }
+  }
+  t.objects.borders.geometries = t.objects.borders.geometries.filter((g) => g.type !== null);
+  if (flat) process.stderr.write(`${tagOf(from)}: dropped ${flat} ring(s) with no area\n`);
   const rel = `borders/world-${tagOf(from)}.json`;
   const text = JSON.stringify(t);
   totalBytes += text.length;

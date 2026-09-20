@@ -65,6 +65,9 @@ async function main() {
   syncViewButton();
   data.onChange = () => { refreshPolities(); updateLoading(); };
   bindControls();
+  // on a wide screen the card opens with its paragraph showing; on a phone
+  // it stays the chip, since a full card hid the globe (both Amy's asks)
+  state.tipOpen = wide();
   drawTrack();
   window.addEventListener('resize', drawTrack);
 
@@ -323,6 +326,8 @@ function syncViewButton() {
 // scifi.html sets data-skin="scifi" on the root and everything drawn on a
 // canvas or linked from here follows it.
 const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'scifi' ? 'scifi' : 'atlas';
+// a wide screen, where the card is a docked panel rather than a bottom sheet
+const wide = () => typeof matchMedia === 'function' && matchMedia('(min-width: 641px)').matches;
 // the track's paint in each skin: parchment on the dark instrument, or ink
 // and Garamond figures on the sheet
 const TRACK = SKIN === 'atlas' ? {
@@ -543,6 +548,15 @@ function setTipOpen(open) {
 // card keeps its place and only stays clamped to the stage
 function placeTip() {
   if (state.tipPos) { moveTip(state.tipPos.x, state.tipPos.y); return; }
+  // on a wide screen the card is docked at the top left until it is dragged
+  // (Amy asked for it there rather than by the finger), clear of the
+  // atlas's graduated border
+  if (wide()) {
+    els.tip.style.left = '22px';
+    els.tip.style.top = '22px';
+    syncCardRect();
+    return;
+  }
   const a = state.tipAnchor;
   if (!a) return;
   const sw = els.stage.clientWidth, sh = els.stage.clientHeight;

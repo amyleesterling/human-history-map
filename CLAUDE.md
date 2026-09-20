@@ -102,8 +102,14 @@ footnote. That is the whole brief; keep every change in its service.
   projection is clipped to the viewport and, from zoom 3, land parts,
   polities and labels outside the visible lon/lat window are skipped, so a
   frame costs no more at depth than at world scale; at depth a name sits on
-  the centroid of the part on screen. Gestures are hand-written pointer
-  events. `hitTest` uses `d3.geoContains` on the sphere. The same class
+  the centroid of the part on screen. The source polygons are rough at the
+  coasts, so each state's wash reaches 25 km past its edge into unclaimed
+  land and sea (the land mask cuts the sea off) and polity ink is drawn
+  only inland of a 25 km coastal band, where the coastline is the border
+  (`REACH_KM`). A ring with no area is dropped on load, since d3 would fill
+  the whole hemisphere with it; the importer and `build-base` drop them at
+  the source and the validator warns on any it finds. Gestures are
+  hand-written pointer events. `hitTest` uses `d3.geoContains` on the sphere. The same class
   draws the card page's small extent map with `interactive: false`.
 - `js/app.js` owns the clock (years per second, rAF), the stretched time
   axis from `js/timeline.js`, the tooltip, search, and the URL

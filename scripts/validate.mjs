@@ -17,6 +17,15 @@ import { fileURLToPath } from 'node:url';
 import { feature as topoFeature } from 'topojson-client';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+// a ring with no area: fewer than three distinct positions, or a planar
+// area of nothing; d3 fills such a ring as the whole visible hemisphere
+function flatRing(ring) {
+  if (new Set(ring.map((c) => c.join(','))).size < 3) return true;
+  let a = 0;
+  for (let i = 0, n = ring.length - 1; i < n; i++) a += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+  return Math.abs(a) < 1e-9;
+}
 const strict = process.argv.includes('--strict');
 const errors = [], warnings = [];
 const err = (m) => errors.push(m);
@@ -161,6 +170,8 @@ for (const b of manifest.borders || []) {
       drawn.set(p.civ, seen);
     }
     if (p.precision != null && ![1, 2, 3].includes(p.precision)) err(`${where} (${p.civ}): precision must be 1, 2 or 3`);
+    const polys = f.geometry?.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry?.type === 'MultiPolygon' ? f.geometry.coordinates : [];
+    if (polys.some((rings) => rings.some(flatRing))) warn(`${where} (${p.civ}): a ring with no area, which d3 would fill as the whole hemisphere`);
     if (p.over != null && (typeof p.over !== 'boolean' || !(b.priority > 0))) err(`${where} (${p.civ}): over must be true or absent, and only in a researched file`);
     checkCopy(`${where}.label`, p.label); checkCopy(`${where}.note`, p.note);
     const g = f.geometry;
