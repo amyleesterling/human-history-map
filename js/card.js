@@ -17,18 +17,18 @@ const yearParam = params.has('year') ? parseInt(params.get('year'), 10) : NaN;
 
 const data = new HistoryData();
 
-// The skin: civ.html is the black sci-fi page; the generated atlas-civ.html
-// sets data-skin="atlas" on the root, and its links and its lifebar follow.
-const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'atlas' ? 'atlas' : 'scifi';
+// The skin: civ.html is the atlas page; the generated scifi-civ.html sets
+// data-skin="scifi" on the root, and its links and its lifebar follow.
+const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'scifi' ? 'scifi' : 'atlas';
 const LIFEBAR = SKIN === 'atlas'
   ? { track: 'rgba(35,41,58,.08)', marker: '#23293a', font: '11px "EB Garamond", Garamond, "Times New Roman", serif', label: 'rgba(35,41,58,.6)' }
   : { track: 'rgba(255,255,255,.07)', marker: '#fff', font: '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace', label: 'rgba(236,231,220,.5)' };
 
 function globeURL(civId, year) {
-  return `${SKIN === 'atlas' ? 'atlas.html' : './'}?civ=${encodeURIComponent(civId)}&y=${year}`;
+  return `${SKIN === 'scifi' ? 'scifi.html' : './'}?civ=${encodeURIComponent(civId)}&y=${year}`;
 }
 function cardURL(civId, year) {
-  return `${SKIN === 'atlas' ? 'atlas-civ.html' : 'civ.html'}?id=${encodeURIComponent(civId)}${Number.isFinite(year) ? `&year=${year}` : ''}`;
+  return `${SKIN === 'scifi' ? 'scifi-civ.html' : 'civ.html'}?id=${encodeURIComponent(civId)}${Number.isFinite(year) ? `&year=${year}` : ''}`;
 }
 
 function el(tag, cls, text) {
@@ -91,6 +91,9 @@ async function main() {
   $('dates').textContent = duration ? `${formatCivSpan(civ)} · ${duration}` : formatCivSpan(civ);
   $('crumbYear').textContent = formatYear(year);
   $('globeLink').href = globeURL(civ.id, year);
+  // the other skin's card for this same polity and year
+  const skinBtn = $('skinBtn');
+  if (skinBtn) skinBtn.href = `${SKIN === 'scifi' ? 'civ.html' : 'scifi-civ.html'}${location.search}`;
   $('heroOpen').href = globeURL(civ.id, year);
   $('minimapLink').href = globeURL(civ.id, year);
 

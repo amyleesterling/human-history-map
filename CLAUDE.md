@@ -43,14 +43,16 @@ footnote. That is the whole brief; keep every change in its service.
 - **Shared CSS lives in `site.css`.** Both pages load it; nothing is pasted
   twice.
 - **Two skins, one set of pages.** `index.html` and `civ.html` are the
-  black sci-fi skin (site.css, the scifi-ui panels); `atlas.html` and
-  `atlas-civ.html` are the same markup as ink on paper (atlas.css), in the
-  manner of an engraved world map, and are generated from the first two by
-  `scripts/build-atlas.mjs`, never edited by hand; the validator fails
-  when they are stale. The scripts read `data-skin` on the root and follow
-  it for links and canvas paint. In the sci-fi skin body text is
-  sans-serif and years, readouts and ticks are monospace via `.num`; the
-  atlas sets its page in EB Garamond with Cinzel capitals. The map itself
+  atlas, ink on paper in the manner of an engraved world map (site.css for
+  layout, atlas.css for paint); `scifi.html` and `scifi-civ.html` are the
+  same markup in the black sci-fi skin (site.css alone, with the scifi-ui
+  panels) and are generated from the first two by
+  `scripts/build-scifi.mjs`, never edited by hand; the validator fails
+  when they are stale. The moon in the bar leads to the sci-fi pages and
+  the sun leads back, on the same view. The scripts read `data-skin` on
+  the root and follow it for links and canvas paint. The atlas sets its
+  page in EB Garamond with Cinzel capitals; the sci-fi skin keeps
+  sans-serif body text with monospace readouts via `.num`. The map itself
   is lettered classically in both: states in Cinzel capitals, a people's
   range in Garamond italic capitals (both faces vendored under
   `vendor/fonts/`, SIL OFL). Nothing is orange in either.

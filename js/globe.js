@@ -109,8 +109,8 @@ export class Globe {
     this.onViewChange = opts.onViewChange || null;
     this.onNeedLandHi = opts.onNeedLandHi || null;
     this.labels = opts.labels !== false;
-    // 'scifi' (the default pages) or 'atlas' (the generated atlas pages)
-    this.skin = opts.skin === 'atlas' ? 'atlas' : 'scifi';
+    // 'atlas' (the default pages) or 'scifi' (the generated sci-fi pages)
+    this.skin = opts.skin === 'scifi' ? 'scifi' : 'atlas';
     this.mode = opts.mode === 'flat' ? 'flat' : 'globe';
     this.view = { lon: 30, lat: 25, zoom: 1, ...(opts.view || {}) };
     this.polities = [];

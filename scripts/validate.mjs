@@ -280,10 +280,10 @@ function report() {
   for (const e of errors) console.log('ERROR:', e);
   console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${withSummary} with summaries, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
 }
-// the atlas pages are generated from index.html and civ.html; a page
+// the sci-fi pages are generated from index.html and civ.html; a page
 // edited without a rebuild ships two explorers that disagree
-const atlas = spawnSync(process.execPath, [join(root, 'scripts', 'build-atlas.mjs'), '--check'], { encoding: 'utf8' });
-if (atlas.status !== 0) err((atlas.stderr || atlas.stdout || 'atlas pages are stale').trim());
+const scifi = spawnSync(process.execPath, [join(root, 'scripts', 'build-scifi.mjs'), '--check'], { encoding: 'utf8' });
+if (scifi.status !== 0) err((scifi.stderr || scifi.stdout || 'sci-fi pages are stale').trim());
 
 report();
 process.exit(errors.length || (strict && warnings.length) ? 1 : 0);

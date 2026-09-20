@@ -19,6 +19,7 @@ const els = {
   playBtn: $('playBtn'), yearOut: $('yearOut'), eraOut: $('eraOut'), speedBtn: $('speedBtn'),
   slider: $('slider'), track: $('trackCanvas'),
   searchBtn: $('searchBtn'), search: $('search'), searchInput: $('searchInput'), searchResults: $('searchResults'),
+  skinBtn: $('skinBtn'),
   viewBtn: $('viewBtn'), shareBtn: $('shareBtn'),
 };
 
@@ -72,6 +73,7 @@ async function main() {
 
   if (url.civ) jumpToCiv(url.civ, url.year);
   else if (url.play || tl.autoplay) play();
+  writeURL();
 
   if (manifest.notice && !sessionStorage.getItem('hhm-notice')) {
     els.noticeText.textContent = manifest.notice;
@@ -317,10 +319,10 @@ function syncViewButton() {
 // era bands, a histogram of how many polities the index knows in each slice
 // of the timeline (so the empty stretches are visibly empty), and tick years
 
-// The skin: the default pages are the black sci-fi ones; the generated
-// atlas.html sets data-skin="atlas" on the root and everything drawn on a
+// The skin: the default pages are the atlas, ink on paper; the generated
+// scifi.html sets data-skin="scifi" on the root and everything drawn on a
 // canvas or linked from here follows it.
-const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'atlas' ? 'atlas' : 'scifi';
+const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'scifi' ? 'scifi' : 'atlas';
 // the track's paint in each skin: parchment on the dark instrument, or ink
 // and Garamond figures on the sheet
 const TRACK = SKIN === 'atlas' ? {
@@ -535,7 +537,7 @@ function syncTipTime(civ) {
   else if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
   els.tipMeta.textContent = meta.join(' · ');
   els.tipMeta.hidden = !meta.length;
-  els.tipMore.href = `${SKIN === 'atlas' ? 'atlas-civ.html' : 'civ.html'}?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
+  els.tipMore.href = `${SKIN === 'scifi' ? 'scifi-civ.html' : 'civ.html'}?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
   els.tipZoom.hidden = !drawn;
 }
 
@@ -733,6 +735,8 @@ function writeURL() {
   if (state.playing) p.set('play', '1');
   const next = `${location.pathname}?${p}`;
   if (next !== location.pathname + location.search) history.replaceState(null, '', next);
+  // the other skin's explorer, opened on this same view
+  if (els.skinBtn) els.skinBtn.href = `${SKIN === 'scifi' ? './' : 'scifi.html'}?${p}`;
 }
 
 main();
