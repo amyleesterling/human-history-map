@@ -62,6 +62,24 @@ function roundGeometry(g, decimals = 3) {
   return { ...g, coordinates: roundCoords(g.coordinates, k) };
 }
 
+// a ring with no area: fewer than three distinct positions, or a planar
+// area of nothing; a geometry with nothing left comes back null
+function flatRing(ring) {
+  if (new Set(ring.map((c) => c.join(','))).size < 3) return true;
+  let a = 0;
+  for (let i = 0, n = ring.length - 1; i < n; i++) a += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+  return Math.abs(a) < 1e-9;
+}
+function dropFlatRings(geometry) {
+  const clean = (rings) => (flatRing(rings[0]) ? null : [rings[0], ...rings.slice(1).filter((r) => !flatRing(r))]);
+  if (geometry.type === 'Polygon') { const c = clean(geometry.coordinates); return c ? { type: 'Polygon', coordinates: c } : null; }
+  if (geometry.type === 'MultiPolygon') {
+    const c = geometry.coordinates.map(clean).filter(Boolean);
+    return c.length ? { type: 'MultiPolygon', coordinates: c } : null;
+  }
+  return geometry;
+}
+
 function slug(s) {
   return s.normalize('NFKD').replace(/[̀-ͯ]/g, '')
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -138,10 +156,14 @@ async function main() {
       summary: null,
       generated: 'natural-earth-110m',
     });
+    // rounding can collapse an islet to a ring with no area, which d3 fills
+    // as the whole visible hemisphere (North Korea's did); such rings go
+    const geometry = dropFlatRings(roundGeometry(f.geometry));
+    if (!geometry) continue;
     features.push({
       type: 'Feature',
       properties: { civ: id, from: MODERN_FROM, to: MODERN_TO, precision: 3 },
-      geometry: roundGeometry(f.geometry),
+      geometry,
     });
   }
   polities.sort((a, b) => a.name.localeCompare(b.name));
