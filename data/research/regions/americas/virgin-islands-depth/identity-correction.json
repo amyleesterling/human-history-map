@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "checkedAt": "2026-09-20",
+  "researcher": "Codex",
+  "id": "virgin-islands-danemark",
+  "originalLabel": "Virgin Islands (Danemark)",
+  "correctedLabel": "Puerto Rico",
+  "status": "source_checked_pending_independent_review",
+  "finding": "The sole imported geometry for this ID is the main island of Puerto Rico, not the Danish Virgin Islands. Preserve the stable ID and generated geometry, but override its public name and summary. Do not associate it with the U.S. Virgin Islands card.",
+  "geometryEvidence": {
+    "historicalFile": "data/hb/borders/world-1715.json",
+    "historicalBounds": [-67.21087210872108, 17.93643990184684, -65.7240572405724, 18.545754567761577],
+    "comparisonFile": "data/borders/modern.geojson",
+    "comparisonId": "puerto-rico",
+    "comparisonBounds": [-67.242, 17.947, -65.591, 18.521],
+    "separateVirginIslandsFile": "data/hb/borders/world-1878.json",
+    "separateVirginIslandsId": "united-states-virgin-islands",
+    "separateVirginIslandsBounds": [-65.02565025650256, 17.677099895155308, -64.56484564845648, 18.37728489662389],
+    "method": "Decode TopoJSON with topojson-client, compare coordinate bounds with Natural Earth-derived modern Puerto Rico and the separate 1878 Virgin Islands outline, then use planar ray casting at interior points. The polygons are small, far from the antimeridian and suitable for this limited identity comparison.",
+    "interiorChecks": [
+      {"point": [-66.5, 18.2], "historicalPuertoRico": true, "modernPuertoRico": true, "virginIslands1878": false},
+      {"point": [-65, 18.35], "historicalPuertoRico": false, "modernPuertoRico": false, "virginIslands1878": true},
+      {"point": [-64.75, 17.75], "historicalPuertoRico": false, "modernPuertoRico": false, "virginIslands1878": true}
+    ],
+    "limitation": "This establishes island identity only. It does not certify exact coastline accuracy, every dependency or the source's precision rating. No border coordinates or coverage dates are changed."
+  },
+  "historicalEvidence": {
+    "title": "National Park Service, San Juan Throughout Time",
+    "url": "https://www.nps.gov/saju/learn/historyculture/history.htm",
+    "locator": "Defense of the First Order: Spanish fortification programme in the seventeenth and eighteenth centuries, O'Reilly's 1765 reforms and the 1898 transfer.",
+    "claim": "Puerto Rico was under Spanish rule in the period represented by the 1715 snapshot. The Danish colonial label is not a valid political identity for this outline.",
+    "limitation": "The source's broad Spanish administrative sequence supports this period identification. Unrelated date errors and its Eurocentric discovery wording are not adopted."
+  },
+  "proposedOverride": {
+    "id": "virgin-islands-danemark",
+    "name": "Puerto Rico",
+    "aliases": ["Puerto Rico under Spanish rule"],
+    "kind": "region",
+    "region": "North America",
+    "dateBasis": "map_coverage",
+    "summary": "This outline represents Puerto Rico under Spanish rule in the eighteenth century. Its imported label incorrectly named the Danish Virgin Islands, a different island group farther east. The displayed dates describe this map snapshot, not Puerto Rico's historical lifetime.",
+    "fell": null,
+    "successors": []
+  }
+}
