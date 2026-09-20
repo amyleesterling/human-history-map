@@ -16,7 +16,7 @@ for(const name of fs.readdirSync(path.join(root,'data/research/reviews')).filter
  for(const r of doc.records||doc.cards||doc.reviews||[]){
   const c=byId.get(r.id);
   if(!c)continue;
-  const cardPath=r.reviewedFile||r.card||r.path||c.cardPath;
+  const cardPath=r.reviewedFile||r.cardPath||r.card||r.path||c.cardPath;
   if(!fs.existsSync(path.join(root,cardPath)))continue;
   const hash=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,cardPath))).digest('hex');
   const expected=r.reviewedFileSha256||r.cardSha256;

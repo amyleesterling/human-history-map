@@ -146,6 +146,9 @@ async function main() {
   await drawMap();
 
   drawLifebar(scale, civ, year);
+  // Redraw at the displayed width so timeline labels do not shrink on resize.
+  const timelineSize = new ResizeObserver(() => drawLifebar(scale, civ, year));
+  timelineSize.observe($('lifebar'));
 
   const card = await data.card(civ.id);
   const lead = $('lead');
@@ -272,8 +275,8 @@ function drawLifebar(scale, civ, year) {
   ctx.fillRect(x0, 7, Math.max(2, x1 - x0), 8);
   ctx.fillStyle = '#fff';
   ctx.fillRect(X(year) - 1, 3, 2, 16);
-  ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
-  ctx.fillStyle = 'rgba(236,231,220,.5)';
+  ctx.font = '12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+  ctx.fillStyle = '#a9b1bf';
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 11);
   ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 11);
