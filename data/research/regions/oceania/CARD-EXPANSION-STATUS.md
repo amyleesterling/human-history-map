@@ -23,3 +23,11 @@ The current branch adds detailed runtime cards for Samoa, Fiji, Tonga, the later
 - Screenshot inspection found timeline text obscured by the colored range. Labels now occupy their own line beneath the track, verified in both checked layouts.
 
 Independent assessment of identity, chronology, material evidence, ordinary life, endings, navigation and geometry remains outstanding. The full-inventory completion and deployment goal remains active.
+
+## Australian community additions
+
+The `australia-depth-01` packet adds Gunaikurnai (`kurnai`), Wurundjeri, Wadawurrung (`wathaurong`) and Ngarrindjeri. These are living peoples, not states with an 1815 fall date. Imported map intervals remain available-map coverage. Public names follow the communities' own organizations, with older search names retained as aliases.
+
+The four cards contain 44 entries. Examples include Cloggs Cave's worked wood and the study's attributed ritual interpretation; Mount William's quarry and Barak's 1899 drawing; Wurdi Youang's surveyed alignments with an explicitly unknown construction date; and a 1920s feather bouquet alongside Unaipon's patent and funding correspondence. The Ngarrindjeri Sea Country Plan has a 2006 copyright and foreword but a 2007 inner title page, which the source note preserves.
+
+Strict validation now reports 116 runtime cards with zero errors or warnings. The inventory has 2,929 missing cards, 148 research packets and 1,053 claim mappings. Existing review hashes remain valid; none certifies these new texts. Desktop Ngarrindjeri and mobile Wadawurrung checks show 16-pixel body text, no horizontal overflow, no undersized functional text, no failed resources, no broken citation anchors and no console errors. At 1700, both pages correctly retain the notice that no separately dated account for that exact period has been supplied; the later evidence is not assigned invented earlier dates.
