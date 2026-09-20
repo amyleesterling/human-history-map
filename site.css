@@ -1,9 +1,10 @@
 /* Human History Map: the rules both pages share, and the paint of the
-   default skin, the black sci-fi one: dark ocean, parchment text, holographic
-   panels from vendor/scifi-ui; body text is sans-serif, years and readouts
-   are monospace via .num. The atlas skin (atlas.css, loaded only by the
-   generated atlas.html and atlas-civ.html) repaints everything as ink on
-   paper; the layout rules here are shared by both. */
+   black sci-fi skin: dark ocean, parchment text, holographic panels from
+   vendor/scifi-ui; body text is sans-serif, years and readouts are monospace
+   via .num. The default pages (index.html, civ.html) are the atlas: they
+   load atlas.css after this file, which repaints everything as ink on
+   paper. The generated scifi.html and scifi-civ.html load this file alone,
+   with the library. The layout rules here are shared by both skins. */
 
 /* the faces the map is lettered in, in both skins (vendor/fonts, SIL Open
    Font License): Cinzel capitals for states, EB Garamond italic capitals
@@ -393,7 +394,10 @@ body.card { min-height: 100vh; }
 .explorer .retry-map { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); z-index: 25; min-height: 44px; border: 1px solid var(--accent); border-radius: 10px; padding: 9px 14px; background: var(--bg-2); color: var(--ink); cursor: pointer; }
 .card .retry-map { min-height: 44px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg-2); color: var(--ink); padding: 8px 12px; cursor: pointer; }
 .map-key { position: absolute; top: 12px; right: 12px; z-index: 4; max-width: min(260px, calc(100vw - 24px)); color: var(--ink-dim); font-size: 12px; }
-.map-key summary { min-height: 44px; padding: 13px 12px; cursor: pointer; }
+.map-key summary { display: flex; align-items: center; gap: 7px; min-height: 44px; box-sizing: border-box; padding: 0 12px; cursor: pointer; list-style: none; }
+.map-key summary::-webkit-details-marker { display: none; }
+.map-key summary::before { content: "\25B8"; font-size: 12px; }
+.map-key[open] summary::before { content: "\25BE"; }
 .map-key ul { padding: 0 12px; margin: 0; list-style: none; }
 .map-key li { display: flex; align-items: center; gap: 8px; margin: 9px 0; }
 .map-key li span { display: inline-block; width: 20px; height: 14px; flex-shrink: 0; border-radius: 3px; }
