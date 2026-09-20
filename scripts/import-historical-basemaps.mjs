@@ -106,6 +106,12 @@ const MERGES = [
   [['Tang Empire'], 'Tang', 'tang'],
   [['Song Empire'], 'Song', 'song-dynasty'],
   [['Koguryo'], 'Goguryeo', 'goguryeo'],
+  // the source's word for the Semitic-speaking peoples of Arabia before any
+  // state was there; "Semites" reads today as a racial label, and the
+  // Wikipedia article of that name is about the term, not the people
+  [['Semites'], 'Semitic-speaking peoples', 'semites'],
+  [['Vedic Aryans'], 'Vedic Indo-Aryans', 'vedic-aryans'],
+  [['Proto-Slavs'], 'Early Slavs', 'proto-slavs'],
   // the Khitan realm of the 900 map is the Liao of 1000 and 1100; the 1200
   // map's "Liao" sits in Manchuria and north China, which was Jurchen Jin
   [['Khitans'], 'Liao', 'liao', { to: 1100 }],
@@ -133,6 +139,17 @@ const MERGES = [
 const CULTURE_TYPES = new Set(['hunter-gatherers', 'farmers', 'pastoral nomads', 'rice farmers', 'pastoralists',
   'taiga hunter-gatherers', 'transhumant pastoralists', 'cultures', 'culture', 'N. European Bronze Age cultures']);
 const CULTURE_NAME = /hunter|gatherer|farmers|foraging|fishers|fichers|nomads|pastoral|shellfish|chiefdoms|societies|tribes$|peoples$|cultures?$|neolithic|bronze age|hunters$/i;
+// the early maps label whole regions by language family or archaeological
+// culture where no state existed (Bantu, Khoisan, Austronesians, Jōmon,
+// Afanasevo). The source gives them no type, so by canonical name: drawn as
+// a faint wash under the states, labelled only when there is room, and the
+// chip says "a people or culture, not a state"
+const CULTURE_NAMES = new Set(['Aboriginal Tasmanians', 'Ainu', 'Ainus', 'Austronesians', 'Bantu', 'Cycladic',
+  'Dravidians', 'Jōmon', 'Khoisan', 'Namazga', 'Norte Chico', 'Semitic-speaking peoples', 'Valdivia', 'Afanasevo',
+  'Andronovo', 'Beaker', 'Koreans', 'Oxus', 'Sintashta', 'Thai', 'Tibeto-Burmanese', 'Únětice', 'Arameans',
+  'Berbers', 'Burmese', 'Celtiberians', 'Chinchoros', 'Chorrera', 'Cimerians', 'El Paraiso', 'Guanches',
+  'Illyrians', 'Paleo-Koreans', 'Phrygians', 'Saami', 'Sinic', 'Vedic Indo-Aryans', 'Paleo-Inuit', 'Early Slavs',
+  'Celts', 'Scythians', 'Tungus', 'Dacians', 'Papuans', 'Polynesians', 'Siberians', 'Bedouins', 'Tuaregs', 'Cushites']);
 
 const slug = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const yearOf = (file) => { const m = /world_(bc)?(\d+)/.exec(basename(file)); return m ? (m[1] ? -Number(m[2]) : Number(m[2])) : null; };
@@ -223,7 +240,7 @@ const perSnap = snaps.map((s) => {
       const ruler = canonical(p.SUBJECTO, s.year);
       if (ruler.name !== self.name && names.has(ruler.name)) { owner = ruler; label = p.NAME.trim(); }
     }
-    const kind = CULTURE_TYPES.has(p.TYPE) || CULTURE_NAME.test(self.name) ? 'culture' : 'state';
+    const kind = CULTURE_TYPES.has(p.TYPE) || CULTURE_NAME.test(self.name) || CULTURE_NAMES.has(self.name) ? 'culture' : 'state';
     const abbrev = p.ABBREVN ? String(p.ABBREVN).trim().replace(/\s*[\u2013\u2014]\s*/g, '-') : null;
     shapes.push({ owner, self, label, kind, precision: [1, 2, 3].includes(p.BORDERPRECISION) ? p.BORDERPRECISION : 1, abbrev, geometry: f.geometry });
   }

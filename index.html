@@ -11,7 +11,10 @@
 <meta property="og:description" content="Every known kingdom and civilization on one globe, from the first cities to the present.">
 <meta name="theme-color" content="#0b1220">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="site.css?v=depth-2">
+<link rel="stylesheet" href="vendor/scifi-ui/hologram.css">
+<link rel="stylesheet" href="vendor/scifi-ui/panel-surface.css">
+<link rel="stylesheet" href="vendor/scifi-ui/scan-pass.css">
+<link rel="stylesheet" href="site.css?v=holo-1">
 </head>
 <body class="explorer">
 
@@ -47,8 +50,10 @@
   <div id="hint" class="hint" hidden></div>
   <div id="notice" class="notice" hidden><span id="noticeText"></span><button id="noticeClose" type="button" aria-label="Dismiss">Got it</button></div>
 
-  <aside id="tip" class="tip" hidden role="dialog" aria-labelledby="tipName">
-    <button class="tip-head" id="tipToggle" type="button" aria-expanded="false" aria-controls="tipBody" title="Show more">
+  <aside id="tip" class="tip holopanel holoframe" hidden role="dialog" aria-labelledby="tipName">
+    <span class="tip-scan holoscan" aria-hidden="true"><span class="holoscan-line"></span></span>
+    <span class="hud" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></span>
+    <button class="tip-head" id="tipToggle" type="button" aria-expanded="false" aria-controls="tipBody" title="Show more, or drag to move">
       <span class="swatch" id="tipSwatch" aria-hidden="true"></span>
       <span class="tip-title">
         <h2 id="tipName"></h2>
@@ -93,6 +98,7 @@
 <script src="vendor/d3/d3-array.min.js"></script>
 <script src="vendor/d3/d3-geo.min.js"></script>
 <script src="vendor/topojson/topojson-client.min.js"></script>
-<script type="module" src="js/app.js?v=depth-1"></script>
+<script src="vendor/scifi-ui/hologram-tap.js"></script>
+<script type="module" src="js/app.js?v=holo-1"></script>
 </body>
 </html>

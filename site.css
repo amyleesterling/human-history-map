@@ -16,6 +16,15 @@
   --blue: #7fb2e6;
   --safe-b: env(safe-area-inset-bottom, 0px);
   --safe-t: env(safe-area-inset-top, 0px);
+  /* the scifi-ui tokens (vendor/scifi-ui), read by the polity card's surface
+     and brackets, mapped onto this palette: a cool field, one warm accent */
+  --holo-line: 196 214 240;
+  --holo-beam: 178 216 248;
+  --holo-glow: 127 178 230;
+  --holo-warm: 224 164 88;
+  --holo-ink: 236 231 220;
+  --holo-dim: 169 177 191;
+  --holo-panel: 16 24 40;
 }
 
 html, body { margin: 0; padding: 0; }
@@ -128,20 +137,40 @@ body.explorer {
 /* the tooltip: a slim chip (name, dates, one line) so the globe stays in
    view, with an arrow that opens the summary and the buttons. A card by the
    finger on wide screens; a bar along the bottom on phones. */
+/* The card is a scifi-ui panel (vendor/scifi-ui): .holopanel gives it the
+   gradient surface, the lit top hairline and the materialise that plays each
+   time it opens; .holoframe gives it the four HUD corner brackets that push
+   outward on hover or tap, and the scan line passes once as it arrives. Only
+   the layout is ours. */
 .tip {
-  position: absolute; z-index: 6; width: 320px; max-width: calc(100% - 24px);
-  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
-  padding: 8px 10px 8px 12px; box-shadow: 0 12px 34px rgba(0,0,0,.45);
-  backdrop-filter: blur(8px);
+  position: absolute; z-index: 6; width: 340px; max-width: calc(100% - 24px);
+  margin: 0; /* .holoframe sets a figure's vertical margin; a card has none */
+  padding: 10px 12px 10px 14px; border-radius: 14px;
 }
+/* the scan line rides in its own clipped layer, so the brackets, which push
+   out past the edge, are not clipped along with it */
+.tip-scan { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none; z-index: 1; }
+.tip > .tip-head, .tip > .tip-line, .tip > .tip-body { position: relative; z-index: 2; }
+.tip > .tip-close { z-index: 2; } /* stays absolute, top right */
+.tip.is-in > .tip-scan > .holoscan-line,
+.tip:hover > .tip-scan > .holoscan-line,
+.tip:focus-within > .tip-scan > .holoscan-line,
+.tip.holo-on > .tip-scan > .holoscan-line { animation: holoscan-pass 1600ms cubic-bezier(.22, .9, .28, 1); }
 .tip-head {
   display: flex; align-items: center; gap: 10px; width: calc(100% - 26px);
   background: none; border: 0; padding: 0; text-align: left; cursor: pointer; color: inherit;
   touch-action: manipulation;
 }
+/* on a wide screen the head is also the handle: drag the card where you want
+   it and it stays there for the next tap */
+@media (min-width: 641px) {
+  .tip-head { cursor: grab; touch-action: none; }
+  .tip.is-dragging, .tip.is-dragging .tip-head { cursor: grabbing; }
+  .tip.is-dragging { user-select: none; }
+}
 .tip-title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .tip-head h2 { margin: 0; font-size: 16px; font-weight: 650; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.tip-span { font-size: 12px; color: var(--ink-dim); letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-span { font-size: 11px; color: rgb(var(--holo-line) / .82); letter-spacing: .05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tip-chevron { flex: none; color: var(--ink-dim); transition: transform .18s ease; }
 .tip[data-open="true"] .tip-chevron { transform: rotate(180deg); }
 .tip-head:hover .tip-chevron { color: var(--ink); }
@@ -163,6 +192,12 @@ body.explorer {
 .tip-source { margin: 6px 0 0; font-size: 11.5px; color: var(--ink-faint); }
 .tip-source a { color: var(--ink-faint); }
 .tip-actions { display: flex; gap: 8px; margin-top: 12px; flex: none; }
+.tip .btn { transition: box-shadow .25s ease, transform .25s ease; }
+.tip .btn:hover, .tip .btn:focus-visible { box-shadow: 0 0 18px rgb(var(--holo-warm) / .35); transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) {
+  .tip > .tip-scan > .holoscan-line { animation: none; opacity: 0; }
+  .tip .btn { transition: none; }
+}
 @media (max-width: 640px) {
   .tip {
     left: 8px !important; right: 8px !important; top: auto !important; bottom: 8px !important;
