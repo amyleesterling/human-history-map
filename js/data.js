@@ -95,6 +95,20 @@ function snippetAround(text, matched) {
   return (start > 0 ? '\u2026' : '') + text.slice(start, end).trim() + (end < text.length ? '\u2026' : '');
 }
 
+// the biggest polygon of a MultiPolygon feature, by spherical area; any
+// other geometry is its own biggest piece
+function largestPiece(feat) {
+  const g = feat.geometry;
+  if (!g || g.type !== 'MultiPolygon' || g.coordinates.length < 2) return feat;
+  let best = null, bestArea = -1;
+  for (const coordinates of g.coordinates) {
+    const piece = { type: 'Polygon', coordinates };
+    const a = geo.geoArea(piece);
+    if (a > bestArea) { bestArea = a; best = piece; }
+  }
+  return best || feat;
+}
+
 export class HistoryData {
   constructor(base = '') {
     this.base = base;
@@ -245,9 +259,12 @@ export class HistoryData {
         feat.properties = p;
         rewind(feat.geometry);
         // spherical area (steradians) orders drawing big-to-small so small
-        // polities stay tappable inside large ones; the centroid anchors the label
+        // polities stay tappable inside large ones; the centroid anchors the
+        // label, and for a polity in several pieces it is the centroid of the
+        // largest piece, so Prussia's name sits in Prussia and not in the
+        // small states between its halves
         feat._area = geo.geoArea(feat);
-        feat._centroid = geo.geoCentroid(feat);
+        feat._centroid = geo.geoCentroid(largestPiece(feat));
         feat._civ = civ;
         feat._priority = f.priority;
         feats.push(feat);

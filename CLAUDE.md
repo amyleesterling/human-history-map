@@ -97,9 +97,14 @@ footnote. That is the whole brief; keep every change in its service.
   and fetches the quoted summaries only when one is first needed.
 - `js/globe.js` draws on a canvas: the base (ocean, graticule, land, lakes,
   rivers) is cached offscreen until the view moves; polities and labels draw
-  every frame. Gestures are hand-written pointer events. `hitTest` uses
-  `d3.geoContains` on the sphere. The same class draws the card page's
-  small extent map with `interactive: false`.
+  every frame. The zoom runs to 96 (a phone then shows about a degree and
+  a half across, enough for the small German states of 1831): the
+  projection is clipped to the viewport and, from zoom 3, land parts,
+  polities and labels outside the visible lon/lat window are skipped, so a
+  frame costs no more at depth than at world scale; at depth a name sits on
+  the centroid of the part on screen. Gestures are hand-written pointer
+  events. `hitTest` uses `d3.geoContains` on the sphere. The same class
+  draws the card page's small extent map with `interactive: false`.
 - `js/app.js` owns the clock (years per second, rAF), the stretched time
   axis from `js/timeline.js`, the tooltip, search, and the URL
   (`?y=&lon=&lat=&z=&civ=&view=`), which is the share format.
