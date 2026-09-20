@@ -17,11 +17,18 @@ const yearParam = params.has('year') ? parseInt(params.get('year'), 10) : NaN;
 
 const data = new HistoryData();
 
+// The skin: civ.html is the black sci-fi page; the generated atlas-civ.html
+// sets data-skin="atlas" on the root, and its links and its lifebar follow.
+const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'atlas' ? 'atlas' : 'scifi';
+const LIFEBAR = SKIN === 'atlas'
+  ? { track: 'rgba(35,41,58,.08)', marker: '#23293a', font: '11px "EB Garamond", Garamond, "Times New Roman", serif', label: 'rgba(35,41,58,.6)' }
+  : { track: 'rgba(255,255,255,.07)', marker: '#fff', font: '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace', label: 'rgba(236,231,220,.5)' };
+
 function globeURL(civId, year) {
-  return `./?civ=${encodeURIComponent(civId)}&y=${year}`;
+  return `${SKIN === 'atlas' ? 'atlas.html' : './'}?civ=${encodeURIComponent(civId)}&y=${year}`;
 }
 function cardURL(civId, year) {
-  return `civ.html?id=${encodeURIComponent(civId)}${Number.isFinite(year) ? `&year=${year}` : ''}`;
+  return `${SKIN === 'atlas' ? 'atlas-civ.html' : 'civ.html'}?id=${encodeURIComponent(civId)}${Number.isFinite(year) ? `&year=${year}` : ''}`;
 }
 
 function el(tag, cls, text) {
@@ -99,7 +106,7 @@ async function main() {
   if (civ.aliases && civ.aliases.length) fact('Also called', civ.aliases.join(', '));
 
   // the extent map, drawn once the borders for that year are in
-  const mini = new Globe($('minimap'), { interactive: false, labels: true, view: manifest.view || {} });
+  const mini = new Globe($('minimap'), { interactive: false, labels: true, skin: SKIN, view: manifest.view || {} });
   data.loadBase().then((b) => mini.setBase(b)).catch(console.error);
   let failedMapYear = year;
   async function drawMap() {
@@ -267,15 +274,15 @@ function drawLifebar(scale, civ, year) {
   const ctx = c.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   const X = (yr) => scale.toT(yr) * w;
-  ctx.fillStyle = 'rgba(35,41,58,.08)';
+  ctx.fillStyle = LIFEBAR.track;
   ctx.fillRect(0, 8, w, 6);
   const x0 = X(civ.from), x1 = X(civ.to == null ? scale.end : civ.to);
   ctx.fillStyle = civ.color;
   ctx.fillRect(x0, 7, Math.max(2, x1 - x0), 8);
-  ctx.fillStyle = '#23293a';
+  ctx.fillStyle = LIFEBAR.marker;
   ctx.fillRect(X(year) - 1, 3, 2, 16);
-  ctx.font = '11px "EB Garamond", Garamond, "Times New Roman", serif';
-  ctx.fillStyle = 'rgba(35,41,58,.6)';
+  ctx.font = LIFEBAR.font;
+  ctx.fillStyle = LIFEBAR.label;
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 11);
   ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 11);

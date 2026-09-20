@@ -11,6 +11,7 @@
 // "fell to" that names nobody we know, a dash in the copy, a huge file).
 
 import { readFileSync, writeFileSync, statSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { feature as topoFeature } from 'topojson-client';
@@ -279,5 +280,10 @@ function report() {
   for (const e of errors) console.log('ERROR:', e);
   console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${withSummary} with summaries, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
 }
+// the atlas pages are generated from index.html and civ.html; a page
+// edited without a rebuild ships two explorers that disagree
+const atlas = spawnSync(process.execPath, [join(root, 'scripts', 'build-atlas.mjs'), '--check'], { encoding: 'utf8' });
+if (atlas.status !== 0) err((atlas.stderr || atlas.stdout || 'atlas pages are stale').trim());
+
 report();
 process.exit(errors.length || (strict && warnings.length) ? 1 : 0);

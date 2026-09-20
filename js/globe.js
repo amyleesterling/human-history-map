@@ -26,8 +26,19 @@ const STYLE = {
   lake: '#d3d9d8', river: 'rgba(70,95,130,.55)',
   label: '#1f2533', halo: 'rgba(241,236,226,.92)',
   select: '#1b2230',
+  // the sci-fi skin's haze outside the disc; the atlas skin has an ink
+  // shadow instead (see _drawBase and _drawRim)
+  glow: 'rgba(120,170,240,.22)', ring: 'rgba(170,205,255,.35)',
 };
 const ink = (alpha) => `rgba(${STYLE.ink},${alpha})`;
+
+// The seas named as the engraved charts name them, lettered faintly into
+// the sheet of the atlas skin (ornament, so drawn with the cached base);
+// [name, lon, lat]
+const SEAS = [
+  ['Oceanus Atlanticus', -33, 12], ['Oceanus Pacificus', -150, -8], ['Oceanus Pacificus', 158, 20],
+  ['Oceanus Indicus', 80, -24], ['Oceanus Arcticus', 0, 82], ['Oceanus Australis', 15, -62],
+];
 
 // The lettering of an engraved chart: states in spaced Roman capitals, a
 // people's range in spaced italic capitals, the way the classical maps set
@@ -98,6 +109,8 @@ export class Globe {
     this.onViewChange = opts.onViewChange || null;
     this.onNeedLandHi = opts.onNeedLandHi || null;
     this.labels = opts.labels !== false;
+    // 'scifi' (the default pages) or 'atlas' (the generated atlas pages)
+    this.skin = opts.skin === 'atlas' ? 'atlas' : 'scifi';
     this.mode = opts.mode === 'flat' ? 'flat' : 'globe';
     this.view = { lon: 30, lat: 25, zoom: 1, ...(opts.view || {}) };
     this.polities = [];
@@ -340,9 +353,9 @@ export class Globe {
     ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
 
-    // a soft shadow under the disc, a little to the lower right, so the
-    // globe sits on the page's paper rather than in it
-    if (this.mode === 'globe') {
+    // in the atlas skin, a soft shadow under the disc, a little to the lower
+    // right, so the globe sits on the page's paper rather than in it
+    if (this.mode === 'globe' && this.skin === 'atlas') {
       const R = this.R, cx = w / 2 + R * 0.02, cy = h / 2 + R * 0.035;
       const sh = ctx.createRadialGradient(cx, cy, R * 0.94, cx, cy, R * 1.07);
       sh.addColorStop(0, ink(0.26));
@@ -378,6 +391,8 @@ export class Globe {
     ctx.lineWidth = 1;
     ctx.strokeStyle = ink(0.09);
     ctx.stroke();
+
+    if (this.skin === 'atlas') this._drawSeas(ctx);
 
     const mask = this.maskCtx;
     mask.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
@@ -440,6 +455,25 @@ export class Globe {
       ctx.stroke();
     }
     this.baseDirty = false;
+  }
+
+  // the names of the seas, in spaced italic capitals at a whisper, where an
+  // engraved chart puts them; only where the point faces the viewer
+  _drawSeas(ctx) {
+    const v = this.view, w = this.width, h = this.height;
+    const fs = Math.round(Math.min(24, 12 + v.zoom * 2.5));
+    ctx.font = labelFont(fs, true);
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = ink(0.3);
+    if ('letterSpacing' in ctx) ctx.letterSpacing = '0.3em';
+    for (const [name, lon, lat] of SEAS) {
+      if (this.mode === 'globe' && d3.geoDistance([lon, lat], [v.lon, v.lat]) > Math.PI / 2 - 0.2) continue;
+      const pt = this.projection([lon, lat]);
+      if (!pt || Number.isNaN(pt[0]) || pt[0] < 0 || pt[0] > w || pt[1] < 0 || pt[1] > h) continue;
+      ctx.fillText(name.toUpperCase(), pt[0], pt[1]);
+    }
+    if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
   }
 
   // The washes go on a layer of their own, which the land mask then cuts at
@@ -622,6 +656,18 @@ export class Globe {
 
   _drawRim(ctx) {
     const R = this.R, cx = this.width / 2, cy = this.height / 2;
+    const atlas = this.skin === 'atlas';
+    // the sci-fi skin has a soft blue haze just outside the disc
+    if (!atlas) {
+      const g = ctx.createRadialGradient(cx, cy, R, cx, cy, R * 1.07);
+      g.addColorStop(0, STYLE.glow);
+      g.addColorStop(1, 'rgba(120,170,240,0)');
+      ctx.beginPath();
+      ctx.arc(cx, cy, R * 1.07, 0, Math.PI * 2);
+      ctx.arc(cx, cy, R, 0, Math.PI * 2, true);
+      ctx.fillStyle = g;
+      ctx.fill();
+    }
     // the inked limb, and a thin ring a little outside it, the meridian
     // ring of a desk globe
     ctx.beginPath();
@@ -632,7 +678,7 @@ export class Globe {
     ctx.beginPath();
     ctx.arc(cx, cy, R + 3.5, 0, Math.PI * 2);
     ctx.lineWidth = 0.8;
-    ctx.strokeStyle = ink(0.3);
+    ctx.strokeStyle = atlas ? ink(0.3) : STYLE.ring;
     ctx.stroke();
   }
 

@@ -57,7 +57,7 @@ async function main() {
   const view = { lon: url.lon ?? mv.lon ?? 30, lat: url.lat ?? mv.lat ?? 25, zoom: url.zoom ?? mv.zoom ?? 1 };
 
   globe = new Globe(els.globe, {
-    mode: state.mode, view, onTap,
+    mode: state.mode, view, onTap, skin: SKIN,
     onViewChange: () => { queueURL(); if (state.tipAnchor) placeTip(); },
     onNeedLandHi: () => data.loadLandHi().then((l) => l && globe.setLandHi(l)),
   });
@@ -317,6 +317,24 @@ function syncViewButton() {
 // era bands, a histogram of how many polities the index knows in each slice
 // of the timeline (so the empty stretches are visibly empty), and tick years
 
+// The skin: the default pages are the black sci-fi ones; the generated
+// atlas.html sets data-skin="atlas" on the root and everything drawn on a
+// canvas or linked from here follows it.
+const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'atlas' ? 'atlas' : 'scifi';
+// the track's paint in each skin: parchment on the dark instrument, or ink
+// and Garamond figures on the sheet
+const TRACK = SKIN === 'atlas' ? {
+  bandA: 'rgba(35,41,58,.04)', bandB: 'rgba(35,41,58,.085)',
+  eraFont: '600 9.5px "Cinzel", "Times New Roman", serif', era: 'rgba(35,41,58,.6)',
+  density: 'rgba(47,79,127,.32)',
+  tickFont: '11px "EB Garamond", Garamond, "Times New Roman", serif', tick: 'rgba(35,41,58,.42)', tickLabel: 'rgba(35,41,58,.75)',
+} : {
+  bandA: 'rgba(255,255,255,.035)', bandB: 'rgba(255,255,255,.07)',
+  eraFont: '600 9.5px "Segoe UI", system-ui, sans-serif', era: 'rgba(236,231,220,.5)',
+  density: 'rgba(127,178,230,.42)',
+  tickFont: '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace', tick: 'rgba(236,231,220,.35)', tickLabel: 'rgba(236,231,220,.6)',
+};
+
 function drawTrack() {
   const c = els.track, dpr = Math.min(2, window.devicePixelRatio || 1);
   const rect = c.getBoundingClientRect();
@@ -333,10 +351,10 @@ function drawTrack() {
 
   eras.forEach((e, i) => {
     const x0 = X(Math.max(e.from, scale.start)), x1 = X(Math.min(e.to, scale.end));
-    ctx.fillStyle = i % 2 ? 'rgba(35,41,58,.04)' : 'rgba(35,41,58,.085)';
+    ctx.fillStyle = i % 2 ? TRACK.bandA : TRACK.bandB;
     ctx.fillRect(x0, 0, x1 - x0, bandH);
-    ctx.font = '600 9.5px "Cinzel", "Times New Roman", serif';
-    ctx.fillStyle = 'rgba(35,41,58,.6)';
+    ctx.font = TRACK.eraFont;
+    ctx.fillStyle = TRACK.era;
     ctx.textAlign = 'center'; ctx.textBaseline = 'top';
     const name = e.name.toUpperCase();
     if (ctx.measureText(name).width < x1 - x0 - 8) ctx.fillText(name, (x0 + x1) / 2, 4);
@@ -345,25 +363,25 @@ function drawTrack() {
   const bins = Math.max(20, Math.floor(tw / 3));
   const dens = data.density(scale, bins);
   const max = Math.max(1, ...dens);
-  ctx.fillStyle = 'rgba(47,79,127,.32)';
+  ctx.fillStyle = TRACK.density;
   for (let i = 0; i < bins; i++) {
     if (!dens[i]) continue;
     const hh = 2 + 16 * Math.log1p(dens[i]) / Math.log1p(max);
     ctx.fillRect(pad + (i / bins) * tw, bandH - hh, tw / bins + 0.5, hh);
   }
 
-  ctx.font = '11px "EB Garamond", Garamond, "Times New Roman", serif';
+  ctx.font = TRACK.tickFont;
   ctx.textAlign = 'center'; ctx.textBaseline = 'top';
   let lastRight = -Infinity;
   for (const yr of ticks) {
     const x = X(yr);
-    ctx.fillStyle = 'rgba(35,41,58,.42)';
+    ctx.fillStyle = TRACK.tick;
     ctx.fillRect(x - 0.5, bandH, 1, 5);
     const label = formatYear(yr);
     const lw = ctx.measureText(label).width;
     if (x - lw / 2 < lastRight + 8) continue;
     if (x - lw / 2 < 0 || x + lw / 2 > w) continue;
-    ctx.fillStyle = 'rgba(35,41,58,.75)';
+    ctx.fillStyle = TRACK.tickLabel;
     ctx.fillText(label, x, bandH + 7);
     lastRight = x + lw / 2;
   }
@@ -517,7 +535,7 @@ function syncTipTime(civ) {
   else if (!drawn) meta.push(`No border drawn for ${formatYear(state.year)} yet.`);
   els.tipMeta.textContent = meta.join(' · ');
   els.tipMeta.hidden = !meta.length;
-  els.tipMore.href = `civ.html?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
+  els.tipMore.href = `${SKIN === 'atlas' ? 'atlas-civ.html' : 'civ.html'}?id=${encodeURIComponent(civ.id)}&year=${state.year}`;
   els.tipZoom.hidden = !drawn;
 }
 
