@@ -11,6 +11,7 @@
 // "fell to" that names nobody we know, a dash in the copy, a huge file).
 
 import { readFileSync, writeFileSync, statSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { feature as topoFeature } from 'topojson-client';
@@ -82,6 +83,8 @@ for (const rel of civFiles) {
     if (c.dateBasis != null && !['historical', 'map_coverage'].includes(c.dateBasis)) err(`${where} (${c.id}): dateBasis must be "historical" or "map_coverage"`);
     for (const k of ['name', 'summary', 'capital', 'region']) checkCopy(`${where} (${c.id}).${k}`, c[k]);
     (c.aliases || []).forEach((a) => checkCopy(`${where} (${c.id}).aliases`, a));
+    if (c.figures != null && (!Array.isArray(c.figures) || !c.figures.every((f) => typeof f === 'string' && f.trim()))) err(`${where} (${c.id}): figures must be a list of names`);
+    (c.figures || []).forEach((f) => checkCopy(`${where} (${c.id}).figures`, f));
     if (c.fell) {
       if (c.fell.year != null && !isInt(c.fell.year)) err(`${where} (${c.id}).fell.year must be an integer`);
       if (c.fell.to != null && !Array.isArray(c.fell.to)) err(`${where} (${c.id}).fell.to must be an array`);
@@ -149,14 +152,16 @@ for (const b of manifest.borders || []) {
       const seen = drawn.get(p.civ) || [];
       // several shapes with the same dates are one polity in pieces (an
       // empire and its colonies); only different, overlapping ranges within
-      // the same priority are odd (a researched border over an imported one
-      // is the intended way to replace it)
+      // the same priority are odd (a researched border beside an imported one
+      // is fine: the imported one draws where both exist, the researched one
+      // fills the rest)
       const prio = b.priority || 0;
       if (!imported) for (const [f0, t0, p0] of seen) if (p0 === prio && from < t0 && f0 < to && !(f0 === from && t0 === to)) { warn(`${where} (${p.civ}): overlaps another border of the same polity (${f0}..${t0}); both will draw`); break; }
       seen.push([from, to, prio]);
       drawn.set(p.civ, seen);
     }
     if (p.precision != null && ![1, 2, 3].includes(p.precision)) err(`${where} (${p.civ}): precision must be 1, 2 or 3`);
+    if (p.over != null && (typeof p.over !== 'boolean' || !(b.priority > 0))) err(`${where} (${p.civ}): over must be true or absent, and only in a researched file`);
     checkCopy(`${where}.label`, p.label); checkCopy(`${where}.note`, p.note);
     const g = f.geometry;
     if (!g) return err(`${where} (${p.civ}): no geometry`);
@@ -275,5 +280,10 @@ function report() {
   for (const e of errors) console.log('ERROR:', e);
   console.log(`\n${civs.size} polities, ${drawn.size} with borders, ${withSummary} with summaries, ${cardCount} cards; ${errors.length} errors, ${warnings.length} warnings`);
 }
+// the atlas pages are generated from index.html and civ.html; a page
+// edited without a rebuild ships two explorers that disagree
+const atlas = spawnSync(process.execPath, [join(root, 'scripts', 'build-atlas.mjs'), '--check'], { encoding: 'utf8' });
+if (atlas.status !== 0) err((atlas.stderr || atlas.stdout || 'atlas pages are stale').trim());
+
 report();
 process.exit(errors.length || (strict && warnings.length) ? 1 : 0);

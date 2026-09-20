@@ -1,5 +1,5 @@
-Copied unmodified from Amy's scifi-ui library on 2026-09-19, at commit
-43857a2 (2026-09-15):
+Copied unmodified from Amy's scifi-ui library on 2026-09-19 and 2026-09-20,
+at commit 43857a2 (2026-09-15):
 
   https://github.com/amyleesterling/scifi-ui
 
@@ -8,18 +8,28 @@ Copied unmodified from Amy's scifi-ui library on 2026-09-19, at commit
                       the top (site.css redefines the tokens for this
                       site's palette; the file itself is untouched)
   hologram-tap.js     the tap layer that puts .holo-on on anything with a
-                      hover treatment, so the brackets and the scan pass
-                      are reachable on a screen with no pointer. The
-                      library's rule: load it on any page that loads any
-                      part of the library.
+                      hover treatment, so the brackets are reachable on a
+                      screen with no pointer. The library's rule: load it
+                      on any page that loads any part of the library.
   panel-surface.css   .holopanel, the dark gradient panel with the lit top
                       hairline and the materialise entrance (is-in)
-  scan-pass.css       .holoscan, a scan line that passes once
+  converge-swarm.css  the canvas the swarm draws on (components/ upstream)
+  converge-swarm.js   holoconverge(host, target): particles stream in from
+                      the host's edges and gather on the target
+                      (components/ upstream)
 
-Consumers: index.html only. The polity card (#tip) is built on .holopanel
-and .holoframe, carries the frame's four HUD brackets and a scan line, and
-plays the materialise each time it opens (js/app.js adds is-in). civ.html
-loads none of this.
+Consumers: index.html loads all five; civ.html loads hologram.css and
+panel-surface.css. The generated atlas pages (atlas.html, atlas-civ.html,
+the ink-on-paper skin) load only the swarm, whose three tints they set to
+ink through the --holo-* tokens in atlas.css. The polity card (#tip) is built on .holopanel and
+.holoframe, carries the frame's four HUD brackets, plays the materialise
+each time it opens (js/app.js adds is-in) and, as it arrives, a short
+burst of the converge swarm gathering on its name (js/app.js starts it
+and stops it after about a second and a half). The map key, the notice,
+the hint, the search panel and the card page's hero, ending and period
+boxes are .holopanel surfaces; the brand is a .holounder. site.css
+redefines the tokens for this palette, with no warm accent at all: Amy's
+rule is no orange anywhere.
 
-Do not edit these files. To upgrade, copy the same four down from a newer
+Do not edit these files. To upgrade, copy the same five down from a newer
 commit and update the commit above. Licence: see the repository.

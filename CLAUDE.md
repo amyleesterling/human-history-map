@@ -42,8 +42,18 @@ footnote. That is the whole brief; keep every change in its service.
   read so they never request a card that is not there.
 - **Shared CSS lives in `site.css`.** Both pages load it; nothing is pasted
   twice.
-- **Body text is sans-serif; years, readouts and ticks are monospace** via
-  `.num`.
+- **Two skins, one set of pages.** `index.html` and `civ.html` are the
+  black sci-fi skin (site.css, the scifi-ui panels); `atlas.html` and
+  `atlas-civ.html` are the same markup as ink on paper (atlas.css), in the
+  manner of an engraved world map, and are generated from the first two by
+  `scripts/build-atlas.mjs`, never edited by hand; the validator fails
+  when they are stale. The scripts read `data-skin` on the root and follow
+  it for links and canvas paint. In the sci-fi skin body text is
+  sans-serif and years, readouts and ticks are monospace via `.num`; the
+  atlas sets its page in EB Garamond with Cinzel capitals. The map itself
+  is lettered classically in both: states in Cinzel capitals, a people's
+  range in Garamond italic capitals (both faces vendored under
+  `vendor/fonts/`, SIL OFL). Nothing is orange in either.
 - **`vendor/` and `base/` are never edited by hand.** Vendor files are copied
   down from upstream with a `SOURCE.txt`; `base/` is rebuilt by
   `scripts/build-base.mjs`.

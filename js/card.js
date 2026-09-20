@@ -6,7 +6,7 @@
 
 import { HistoryData } from './data.js?v=depth-1';
 import { Globe } from './globe.js?v=depth-1';
-import { TimeScale, formatYear, formatCivSpan, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+import { TimeScale, formatYear, formatCivSpan, formatCivDuration, formatSpan, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
 
 import { matchingPeriods, partitionItems, endingFor } from './card-periods.js?v=depth-1';
 
@@ -17,11 +17,18 @@ const yearParam = params.has('year') ? parseInt(params.get('year'), 10) : NaN;
 
 const data = new HistoryData();
 
+// The skin: civ.html is the black sci-fi page; the generated atlas-civ.html
+// sets data-skin="atlas" on the root, and its links and its lifebar follow.
+const SKIN = typeof document !== 'undefined' && document.documentElement && document.documentElement.dataset.skin === 'atlas' ? 'atlas' : 'scifi';
+const LIFEBAR = SKIN === 'atlas'
+  ? { track: 'rgba(35,41,58,.08)', marker: '#23293a', font: '14px "EB Garamond", Garamond, "Times New Roman", serif', label: '#505666' }
+  : { track: 'rgba(255,255,255,.07)', marker: '#fff', font: '12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace', label: '#a9b1bf' };
+
 function globeURL(civId, year) {
-  return `./?civ=${encodeURIComponent(civId)}&y=${year}`;
+  return `${SKIN === 'atlas' ? 'atlas.html' : './'}?civ=${encodeURIComponent(civId)}&y=${year}`;
 }
 function cardURL(civId, year) {
-  return `civ.html?id=${encodeURIComponent(civId)}${Number.isFinite(year) ? `&year=${year}` : ''}`;
+  return `${SKIN === 'atlas' ? 'atlas-civ.html' : 'civ.html'}?id=${encodeURIComponent(civId)}${Number.isFinite(year) ? `&year=${year}` : ''}`;
 }
 
 function el(tag, cls, text) {
@@ -80,7 +87,8 @@ async function main() {
   document.title = `${civ.name}, ${formatCivSpan(civ)}: Human History Map`;
   $('swatch').style.background = civ.color;
   $('nameText').textContent = civ.name;
-  $('dates').textContent = formatCivSpan(civ);
+  const duration = formatCivDuration(civ);
+  $('dates').textContent = duration ? `${formatCivSpan(civ)} · ${duration}` : formatCivSpan(civ);
   $('crumbYear').textContent = formatYear(year);
   $('globeLink').href = globeURL(civ.id, year);
   $('heroOpen').href = globeURL(civ.id, year);
@@ -94,10 +102,11 @@ async function main() {
   if (civ.kind === 'culture') fact('Kind', 'a people or culture, not a state');
   fact('Capital', civ.capital);
   fact('Region', civ.region);
+  if (civ.figures && civ.figures.length) fact('Figures', civ.figures.join(', '));
   if (civ.aliases && civ.aliases.length) fact('Also called', civ.aliases.join(', '));
 
   // the extent map, drawn once the borders for that year are in
-  const mini = new Globe($('minimap'), { interactive: false, labels: true, view: manifest.view || {} });
+  const mini = new Globe($('minimap'), { interactive: false, labels: true, skin: SKIN, view: manifest.view || {} });
   data.loadBase().then((b) => mini.setBase(b)).catch(console.error);
   let failedMapYear = year;
   async function drawMap() {
@@ -158,7 +167,7 @@ async function main() {
   else if (quoted) { lead.textContent = quoted.text; quotedSource = quoted.source; }
   else { lead.textContent = 'The summary for this polity has not been written yet.'; lead.classList.add('pending'); }
 
-  const context = el('section', 'period-context');
+  const context = el('section', 'period-context sheet');
   context.appendChild(el('h2', null, `In ${formatYear(year)}`));
   const periods = matchingPeriods(card, year);
   if (periods.length) {
@@ -268,15 +277,15 @@ function drawLifebar(scale, civ, year) {
   const ctx = c.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   const X = (yr) => scale.toT(yr) * w;
-  ctx.fillStyle = 'rgba(255,255,255,.07)';
+  ctx.fillStyle = LIFEBAR.track;
   ctx.fillRect(0, 8, w, 6);
   const x0 = X(civ.from), x1 = X(civ.to == null ? scale.end : civ.to);
   ctx.fillStyle = civ.color;
   ctx.fillRect(x0, 7, Math.max(2, x1 - x0), 8);
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = LIFEBAR.marker;
   ctx.fillRect(X(year) - 1, 3, 2, 16);
-  ctx.font = '12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
-  ctx.fillStyle = '#a9b1bf';
+  ctx.font = LIFEBAR.font;
+  ctx.fillStyle = LIFEBAR.label;
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'left'; ctx.fillText(formatYear(scale.start), 0, 11);
   ctx.textAlign = 'right'; ctx.fillText(formatYear(scale.end), w, 11);

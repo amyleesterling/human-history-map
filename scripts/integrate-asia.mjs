@@ -11,9 +11,10 @@
 //   id (ID_MAP): Qwen's "maurya" is the site's "maurya-empire".
 // - Skips entries that are phases of a polity the site already treats as
 //   one (SKIP): Western and Eastern Han are the Han Dynasty.
-// - For polities with a hand-checked entry in data/curated.json, takes only
-//   Qwen's aliases (the native scripts) and fills capital and region if
-//   missing; the checked summary, dates and fall stay.
+// - For polities with a hand-checked entry in data/curated.json (one that
+//   says more than a Wikipedia pin or a list of figures), takes only Qwen's
+//   aliases (the native scripts) and fills capital and region if missing;
+//   the checked summary, dates and fall stay.
 // - Resolves fall targets: an id the index knows stays a link; anything
 //   else becomes a plain name. Predecessor and successor lists keep only
 //   known ids.
@@ -61,7 +62,10 @@ for (const rel of manifest.civilizations) {
   if (rel === 'civilizations-asia.json') continue;
   for (const c of read(join(root, 'data', rel))) known.set(c.id, Object.assign(known.get(c.id) || {}, c));
 }
-const curated = new Set(read(join(root, 'data', 'curated.json')).map((c) => c.id));
+// a curated entry that only pins a Wikipedia title or names figures to
+// search for is not a hand-checked record: Qwen's dates and text still land
+const curated = new Set(read(join(root, 'data', 'curated.json'))
+  .filter((c) => Object.keys(c).some((k) => !['id', 'wikipedia', 'figures'].includes(k))).map((c) => c.id));
 
 const batches = readdirSync(dir).filter((f) => /^batch-\d+-civilizations\.json$/.test(f)).sort();
 const merged = new Map();

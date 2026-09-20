@@ -1,14 +1,14 @@
 // Each polity gets a stable colour: the one its data entry names, or one
 // hashed from its id so a kingdom keeps its colour across sessions, files and
 // pages without anyone having to assign it. The palette is deliberately
-// muted; the fills sit at half opacity over dark land and need to stay apart
-// from the ocean blue and the parchment text.
+// muted; the fills are washes over paper and need to stay apart from the ink
+// and from each other, and none of them is orange, by Amy's rule.
 
 export const PALETTE = [
-  '#e0a458', '#c96a5b', '#7fa66a', '#5f9ec9', '#b07dc4', '#d8c15a',
-  '#6bbcb0', '#d98fb0', '#9c8f6a', '#e28a4c', '#8ea3d9', '#a4c66a',
-  '#c9806a', '#6f9fb0', '#c1a2e6', '#b8b26f', '#e6a0a0', '#7cb7a4',
-  '#d9b07a', '#9fb6c7',
+  '#8fa3c7', '#c4606a', '#7fa66a', '#5f9ec9', '#b07dc4', '#d8c15a',
+  '#6bbcb0', '#d98fb0', '#9c8f6a', '#9fb3a0', '#8ea3d9', '#a4c66a',
+  '#6aa3a8', '#6f9fb0', '#c1a2e6', '#b8b26f', '#e6a0a0', '#7cb7a4',
+  '#c9a0b8', '#9fb6c7',
 ];
 
 function hash(s) {
@@ -31,6 +31,16 @@ export function withAlpha(hex, alpha) {
   if (!m) return hex;
   const n = parseInt(m[1], 16);
   return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
+}
+
+// the colour mixed toward white by `amount` (0 keeps it, 1 is white): a
+// wash of it on paper, once multiplied with the sheet
+export function tint(hex, amount) {
+  const m = /^#?([0-9a-f]{6})$/i.exec(hex);
+  if (!m) return hex;
+  const n = parseInt(m[1], 16);
+  const mix = (c) => Math.round(c + (255 - c) * amount);
+  return `rgb(${mix((n >> 16) & 255)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
 }
 
 // black or white text, whichever reads on this colour (used for the swatch

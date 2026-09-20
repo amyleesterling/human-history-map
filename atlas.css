@@ -1,0 +1,208 @@
+/* The atlas skin: the same two pages as ink on paper, in the manner of an
+   engraved world map. Loaded only by atlas.html and atlas-civ.html (both
+   generated from index.html and civ.html by scripts/build-atlas.mjs), after
+   site.css, whose layout it keeps and whose paint it replaces. The
+   holographic library is not loaded on these pages, so the .holopanel
+   class in the markup is a plain hook here, painted as a sheet.
+
+   The manner is the one Amy pointed at, the world maps of Ortelius, Blaeu,
+   Hondius and Speed: a graduated border of alternating black and white
+   degrees around the map, a strapwork cartouche for the title, a compass
+   rose in the sea, the seas named in spaced italic capitals, kingdoms in
+   spaced Roman capitals, and washes of colour that pool along the borders.
+   One ink, one paper, nothing that glows, nothing orange. */
+
+:root {
+  --paper: #e9e3d3;        /* the sheet the page is */
+  --paper-2: #f3efe4;      /* a lighter sheet laid on it: panels, cards */
+  --paper-3: #ddd6c4;      /* a darker sheet: hover, the track */
+  --ink: #23293a;          /* the one ink */
+  --ink-dim: #4f5566;
+  --ink-faint: #7d8292;
+  --line: rgba(35, 41, 58, .28);
+  --line-strong: rgba(35, 41, 58, .62);
+  --blue: #2f4f7f;         /* the sea's ink: links and the active state */
+  --wash: 127 158 196;     /* the key's sample of a polity wash */
+  --serif: "EB Garamond", Garamond, "Times New Roman", Georgia, serif;
+  --caps: "Cinzel", "Trajan Pro", "Times New Roman", Georgia, serif;
+  /* the site.css tokens the shared rules read */
+  --bg: var(--paper); --bg-2: var(--paper-2); --panel: var(--paper-2);
+  --accent: var(--blue); --accent-ink: var(--paper-2);
+  /* the converge swarm (vendor/scifi-ui) reads these three for its
+     particles: all ink here, so the card gathers out of ink */
+  --holo-line: 35 41 58;
+  --holo-beam: 47 79 127;
+  --holo-cyan: 35 41 58;
+}
+
+/* the sheet: paper with a faint grain, made once by the browser from noise */
+html {
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .16 0 0 0 0 .22 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+body { background: transparent; color: var(--ink); font-family: var(--serif); font-size: 17px; }
+.num, .mono, output { font-family: var(--serif); font-variant-numeric: lining-nums tabular-nums; letter-spacing: .02em; }
+a { color: var(--blue); }
+
+/* ---- header bar: the title in a cartouche ------------------------------ */
+.bar::after, .controls::before { left: 0; right: 0; background: var(--line); box-shadow: none; }
+.bar::after { bottom: -4px; }
+.controls::before { top: -4px; }
+.bar { padding: calc(8px + var(--safe-t)) 16px 8px; border-bottom: 1px solid var(--line-strong); background: transparent; }
+.brand {
+  font-family: var(--caps); font-size: 14px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink); text-shadow: none; text-decoration: none;
+  padding: 5px 16px; border: 1px solid var(--line-strong); border-radius: 3px;
+  box-shadow: inset 0 0 0 2px var(--paper), inset 0 0 0 3px var(--line);
+}
+.brand:hover, .brand:focus-visible { color: var(--blue); }
+/* controls are inked outlines on the paper: spaced capitals in a pill, filled
+   with ink while pressed, hovered or on */
+.chip, .iconbtn {
+  background: transparent; border: 1px solid var(--line-strong); color: var(--ink); box-shadow: none;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.chip { font-family: var(--serif); font-size: 12.5px; letter-spacing: .12em; padding: 6px 13px; text-decoration: none; display: inline-block; }
+.chip:hover, .chip:focus-visible, .chip:active, .chip[aria-pressed="true"],
+.iconbtn:hover, .iconbtn:focus-visible, .iconbtn:active, .iconbtn[aria-expanded="true"] {
+  background: var(--ink); color: var(--paper-2); border-color: var(--ink); box-shadow: none;
+}
+.chip:focus-visible, .iconbtn:focus-visible, .btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.btn {
+  background: var(--ink); color: var(--paper-2); border: 1px solid var(--ink); border-radius: 5px; padding: 7px 14px;
+  font-family: var(--serif); font-size: 15px; font-weight: 400; letter-spacing: .04em; text-shadow: none; box-shadow: none;
+}
+.btn:hover, .btn:focus-visible, .btn:active { background: var(--blue); border-color: var(--blue); color: #fff; box-shadow: none; transform: none; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.btn.ghost:hover, .btn.ghost:focus-visible, .btn.ghost:active { background: var(--paper-3); border-color: var(--ink); color: var(--ink); }
+
+/* a smaller sheet laid on the page: lighter paper, an ink edge, and the
+   double rule of a chart's frame drawn just inside it */
+.holopanel {
+  background: var(--paper-2); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: 4px;
+  box-shadow: inset 0 0 0 3px var(--paper-2), inset 0 0 0 4px var(--line), 0 2px 0 rgba(35, 41, 58, .08), 0 10px 26px rgba(35, 41, 58, .16);
+}
+.tip .hud { display: none; }
+
+/* ---- the explorer: the graduated border and the compass rose ----------- */
+/* the border of an engraved map: a band of alternating black and white
+   degrees between two rules, laid over the edge of the stage; the panels
+   sit above it, the map below */
+.stage::before, .stage::after { content: ""; position: absolute; pointer-events: none; z-index: 3; }
+.stage::before {
+  inset: 10px; box-shadow: 0 0 0 1px var(--line-strong);
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 12px, transparent 12px 24px) top / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--ink) 0 12px, transparent 12px 24px) bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(180deg, var(--ink) 0 12px, transparent 12px 24px) left / 5px 100% no-repeat,
+    repeating-linear-gradient(180deg, var(--ink) 0 12px, transparent 12px 24px) right / 5px 100% no-repeat;
+  opacity: .8;
+}
+.stage::after {
+  inset: 15px; box-shadow: 0 0 0 1px var(--line-strong); opacity: .8;
+  /* the compass rose, in the sea at the lower left */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%2323293a'%3E%3Ccircle cx='50' cy='50' r='44' stroke-width='.8'/%3E%3Ccircle cx='50' cy='50' r='38' stroke-width='.5'/%3E%3Ccircle cx='50' cy='50' r='6' stroke-width='.8'/%3E%3Cg stroke-width='.6'%3E%3Cpath d='M50 6 54 46 50 50Z' fill='%2323293a'/%3E%3Cpath d='M50 6 46 46 50 50Z'/%3E%3Cpath d='M94 50 54 54 50 50Z' fill='%2323293a'/%3E%3Cpath d='M94 50 54 46 50 50Z'/%3E%3Cpath d='M50 94 46 54 50 50Z' fill='%2323293a'/%3E%3Cpath d='M50 94 54 54 50 50Z'/%3E%3Cpath d='M6 50 46 46 50 50Z' fill='%2323293a'/%3E%3Cpath d='M6 50 46 54 50 50Z'/%3E%3Cpath d='M76 24 53 47 50 50Z' fill='%2323293a'/%3E%3Cpath d='M76 24 47 53 50 50Z' opacity='0'/%3E%3Cpath d='M76 24 50 50 53 53Z'/%3E%3Cpath d='M76 76 53 53 50 50Z' fill='%2323293a'/%3E%3Cpath d='M76 76 50 50 47 53Z'/%3E%3Cpath d='M24 76 47 53 50 50Z' fill='%2323293a'/%3E%3Cpath d='M24 76 50 50 47 47Z'/%3E%3Cpath d='M24 24 47 47 50 50Z' fill='%2323293a'/%3E%3Cpath d='M24 24 50 50 53 47Z'/%3E%3C/g%3E%3Cpath d='M50 3v-2M50 1l-2 2M50 1l2 2' stroke-width='.8'/%3E%3C/svg%3E") no-repeat left 22px bottom 22px / 96px 96px;
+}
+@media (max-width: 640px) {
+  .stage::before { inset: 6px; background-size: 100% 4px, 100% 4px, 4px 100%, 4px 100%; }
+  .stage::after { inset: 10px; background: none; }
+}
+
+.loading { font-size: 12px; color: var(--ink-dim); background: var(--paper-2); border: 1px solid var(--line-strong); }
+.loading::after { background: var(--ink); box-shadow: none; }
+.hint { font-size: 14.5px; color: var(--ink-dim); padding: 9px 13px; }
+.notice { font-size: 14.5px; color: var(--ink-dim); padding: 9px 9px 9px 14px; max-width: 540px; }
+.notice button { background: transparent; border: 1px solid var(--line-strong); border-radius: 4px; padding: 4px 10px; color: var(--ink); font-size: 14.5px; }
+.notice button:hover, .notice button:focus-visible { background: var(--ink); color: var(--paper-2); border-color: var(--ink); box-shadow: none; }
+@media (max-width: 640px) { .notice { font-size: 13.5px; } }
+.search { padding: 10px; }
+.search input { font-size: 16.5px; background: rgba(255, 255, 255, .55); color: var(--ink); border: 1px solid var(--line-strong); border-radius: 4px; padding: 8px 11px; }
+.search input:focus { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(47, 79, 127, .2); }
+.search li { border-radius: 4px; }
+.search li:hover, .search li[aria-selected="true"] { background: var(--paper-3); }
+.search li .name { font-size: 16px; }
+.search li .span { font-size: 13px; }
+.search .empty { font-size: 14.5px; }
+.search li .hit { font-size: 13px; }
+.swatch { border-radius: 3px; box-shadow: inset 0 0 0 1px rgba(35, 41, 58, .4); }
+
+/* the card: a sheet that rises as it arrives; the swarm gathers ink on the name */
+.tip { padding: 12px 14px 12px 16px; border-radius: 4px; }
+.tip.is-in { animation: sheet-in 380ms cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes sheet-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.tip-title { gap: 2px; }
+.tip-head h2 { font-family: var(--caps); font-size: 14.5px; font-weight: 600; letter-spacing: .05em; line-height: 1.25; }
+.tip-span { font-size: 12.5px; color: var(--ink-dim); }
+.tip-close { top: 6px; right: 8px; }
+.tip-line { margin-top: 7px; font-size: 15px; }
+.tip-meta { font-size: 13.5px; }
+.tip-summary { font-size: 15.5px; }
+.tip-source { font-size: 12.5px; }
+@media (prefers-reduced-motion: reduce) { .tip.is-in { animation: none; } }
+
+/* ---- the controls ------------------------------------------------------- */
+.controls { padding: 9px 16px calc(10px + var(--safe-b)); border-top: 1px solid var(--line-strong); background: transparent; }
+/* the play button is an inked ring that fills while time runs */
+.play {
+  color: var(--ink); border: 1.5px solid var(--ink); background: var(--paper-2);
+  box-shadow: 0 1px 0 rgba(35, 41, 58, .15);
+  transition: background-color .2s ease, color .2s ease;
+}
+.play:hover, .play:focus-visible, .play[aria-pressed="true"] { background: var(--ink); color: var(--paper-2); border-color: var(--ink); transform: none; box-shadow: 0 1px 0 rgba(35, 41, 58, .15); }
+.play:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+/* the year is the page's one big readout, in the chart's capitals */
+.year output { font-family: var(--caps); font-size: 26px; font-weight: 600; letter-spacing: .04em; color: var(--ink); text-shadow: none; }
+.play[aria-pressed="true"] + .year output { color: var(--ink); text-shadow: none; }
+.year .era { font-size: 12px; color: var(--ink-dim); }
+@media (max-width: 380px) { .year output { font-size: 20px; } }
+.track input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--blue); }
+/* the thumb is an ink lozenge with a paper rim */
+.track input[type="range"]::-webkit-slider-thumb { background: var(--ink); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink); }
+.track input[type="range"]::-moz-range-thumb { background: var(--ink); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink); }
+
+/* ---- the card page ------------------------------------------------------ */
+.card .wrap { padding: 24px 18px 70px; }
+body.card { --ink-faint: #505666; }
+.card .crumbs { font-size: 1rem; }
+.card h1 { font-family: var(--caps); font-size: 28px; line-height: 1.2; font-weight: 600; letter-spacing: .04em; }
+.card h1 .swatch { border-radius: 4px; }
+.card .dates { font-size: 16px; }
+.card .facts { font-size: 15px; }
+/* the extent map sits inside the sheet's double rule */
+.card .hero { padding: 6px; border-radius: 4px; }
+.card .hero .minimap { border: 1px solid var(--line); }
+.card .hero .hero-foot { padding: 9px 8px 4px; font-size: 14px; border-top: 0; }
+.card .hero .hero-foot .btn { padding: 6px 12px; font-size: 1rem; }
+.card .lead { font-size: 18.5px; }
+/* a section is headed the way a chart labels a region: spaced capitals
+   with a rule running out from them */
+.card section h2 { font-family: var(--caps); font-size: 1.125rem; letter-spacing: .02em; color: var(--ink-dim); display: flex; align-items: center; gap: 12px; }
+.card section h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.card .items li { padding: 9px 12px; background: var(--paper-2); border: 1px solid var(--line); border-radius: 4px; font-size: 1rem; }
+.card .items li .when { font-size: .875rem; }
+.card .fall { padding: 14px 16px; font-size: 1rem; }
+.card .pill { padding: 5px 11px; border: 1px solid var(--line-strong); background: var(--paper-2); color: var(--ink); font-size: 1rem; }
+.card .pill:hover { border-color: var(--blue); color: var(--blue); }
+.card .sources { font-size: 14.5px; }
+.card .foot { font-size: .875rem; border-top: 1px solid var(--line); }
+.card .period-context { padding: 16px 18px; }
+.card .history-context { font-size: 14px; }
+.card .item-period-label { font-size: .875rem; }
+.card .source-refs { font-size: 13px; }
+.card .source-ref { font-size: 12.5px; }
+.explorer .retry-map, .card .retry-map { border: 1px solid var(--ink); border-radius: 5px; background: var(--paper-2); color: var(--ink); }
+.map-key { color: var(--ink-dim); font-size: 13.5px; }
+.map-key summary { padding: 13px 14px; }
+.map-key ul { padding: 0 14px; }
+.map-key p { margin: 12px 14px; }
+.key-state { background: rgb(var(--wash) / .6); border: 1px solid var(--line-strong); }
+.key-culture { background: rgb(var(--wash) / .2); border: 1px solid var(--line); }
+.key-approximate { border: 1px solid var(--line); }
+@media (max-width: 560px) {
+  /* on a phone the title sets in two lines, as a cartouche does, and the
+     chips tighten so nothing scrolls sideways */
+  .bar .brand { white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 10px; }
+  .bar-tools { gap: 6px; }
+  .bar .chip { padding: 6px 10px; font-size: 1rem; letter-spacing: .02em; }
+}
