@@ -5,7 +5,7 @@
 
 import { HistoryData } from './data.js?v=depth-1';
 import { Globe } from './globe.js?v=depth-1';
-import { TimeScale, formatYear, formatCivSpan, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
+import { TimeScale, formatYear, formatCivSpan, formatCivDuration, defaultTicks, yearToTick, tickToYear, normalizeYear, advanceYear } from './timeline.js?v=depth-1';
 
 import { matchingPeriods } from './card-periods.js?v=depth-1';
 
@@ -345,7 +345,7 @@ function drawTrack() {
   const bins = Math.max(20, Math.floor(tw / 3));
   const dens = data.density(scale, bins);
   const max = Math.max(1, ...dens);
-  ctx.fillStyle = 'rgba(224,164,88,.45)';
+  ctx.fillStyle = 'rgba(127,178,230,.42)';
   for (let i = 0; i < bins; i++) {
     if (!dens[i]) continue;
     const hh = 2 + 16 * Math.log1p(dens[i]) / Math.log1p(max);
@@ -400,7 +400,7 @@ function showTip(civ, anchor, feature) {
   const possession = label && label !== civ.name;
   els.tipSwatch.style.background = civ.color;
   els.tipName.textContent = label || civ.name;
-  const span = formatCivSpan(civ);
+  const span = spanWithDuration(civ);
   els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : span;
   const meta = [];
   if (possession) meta.push(`${civ.name}: ${span}`);
@@ -442,7 +442,35 @@ function showTip(civ, anchor, feature) {
   els.tip.classList.remove('is-in');
   void els.tip.offsetWidth;
   els.tip.classList.add('is-in');
+  materialise();
   setTipOpen(state.tipOpen);
+}
+
+// "224 to 651 CE · 427 years": the dates and how long that is, when the
+// dates are a polity's own rather than the reach of the maps
+function spanWithDuration(civ) {
+  const duration = formatCivDuration(civ);
+  return duration ? `${formatCivSpan(civ)} · ${duration}` : formatCivSpan(civ);
+}
+
+// The card arrives out of particles: the library's swarm streams in from the
+// panel's edges and gathers on the name, then fades; a burst, not a loop.
+// Under reduced motion start() declines and the panel simply appears.
+let swarm = null, swarmTimers = [];
+function materialise() {
+  if (!swarm) swarm = window.holoconverge ? window.holoconverge(els.tip, els.tipName) : null;
+  if (!swarm) return;
+  dematerialise();
+  if (!swarm.start()) return;
+  swarmTimers = [
+    setTimeout(() => { const c = els.tip.querySelector('.holoconverge-canvas'); if (c) c.classList.remove('is-on'); }, 1100),
+    setTimeout(() => swarm.stop(), 1450),
+  ];
+}
+function dematerialise() {
+  for (const t of swarmTimers) clearTimeout(t);
+  swarmTimers = [];
+  if (swarm) swarm.stop();
 }
 
 function syncTipTime(civ) {
@@ -480,7 +508,7 @@ function syncTipTime(civ) {
   const label = state.tipLabel;
   const possession = label && label !== civ.name && data.featuresOf(civ.id, state.year).some(f => f.properties.label === label);
   els.tipName.textContent = possession ? label : civ.name;
-  els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : formatCivSpan(civ);
+  els.tipSpan.textContent = possession ? `Held by ${civ.name} in ${formatYear(state.year)}` : spanWithDuration(civ);
   const meta = [];
   if (civ.kind === 'culture') meta.push('A people or culture, not a state');
   if (civ.capital) meta.push(`Capital: ${civ.capital}`);
@@ -539,6 +567,7 @@ function moveTip(x, y) {
 function closeTip() {
   els.tip.hidden = true;
   els.tip.classList.remove('is-in');
+  dematerialise();
   state.tipAnchor = null;
 }
 
@@ -558,18 +587,31 @@ async function jumpToCiv(id, year) {
   await data.ensureYear(yr);
   if (navigationVersion !== requestVersion) return;
   let feats = data.featuresOf(id, yr);
-  if (!feats.length && !Number.isFinite(year)) {
+  // nothing drawn that year: an undated request moves the clock to the
+  // nearest year with a border; a dated one keeps its year but still turns
+  // the globe to where the polity's nearest border is, so the visitor is
+  // looking at the right place while the card says no border is drawn yet
+  // (Amy followed the Parthians' fall to the Sasanians and landed on an
+  // empty steppe)
+  let where = feats;
+  if (!feats.length) {
     const near = data.nearestDrawnYear(id, yr);
     if (near != null && near !== yr) {
-      setYear(scale.clamp(near), { force: true });
-      requestVersion = navigationVersion;
-      await data.ensureYear(state.year);
-      if (navigationVersion !== requestVersion) return;
-      feats = data.featuresOf(id, state.year);
+      if (!Number.isFinite(year)) {
+        setYear(scale.clamp(near), { force: true });
+        requestVersion = navigationVersion;
+        await data.ensureYear(state.year);
+        if (navigationVersion !== requestVersion) return;
+        feats = where = data.featuresOf(id, state.year);
+      } else {
+        await data.ensureYear(near, 0);
+        if (navigationVersion !== requestVersion) return;
+        where = data.featuresOf(id, near);
+      }
     }
   }
   select(id);
-  if (feats.length) globe.focusFeatures(feats);
+  if (where.length) globe.focusFeatures(where);
   showTip(civ, { x: els.stage.clientWidth / 2, y: els.stage.clientHeight * 0.25 }, feats[0]);
 }
 
@@ -596,21 +638,34 @@ function renderSearch() {
     els.searchResults.innerHTML = `<li class="empty">${data.civList.length} kingdoms, empires and countries to find.</li>`;
     return;
   }
-  if (!results.length) {
-    els.searchResults.innerHTML = '<li class="empty">Nothing by that name yet.</li>';
+  const seq = ++searchSeq;
+  results.forEach((c, i) => addSearchResult(c, i === 0));
+  // then the summaries, so a king finds his kingdom: "genghis" brings up the
+  // Mongol Empire and its khanates through the sentences that name him
+  if (q.trim().length < 3) {
+    if (!results.length) els.searchResults.innerHTML = '<li class="empty">Nothing by that name yet.</li>';
     return;
   }
-  results.forEach((c, i) => {
-    const li = document.createElement('li');
-    li.dataset.id = c.id;
-    li.setAttribute('role', 'option');
-    li.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
-    const sw = document.createElement('span'); sw.className = 'swatch'; sw.style.background = c.color;
-    const nm = document.createElement('span'); nm.className = 'name'; nm.textContent = c.name;
-    const sp = document.createElement('span'); sp.className = 'span num'; sp.textContent = formatCivSpan(c);
-    li.append(sw, nm, sp);
-    els.searchResults.appendChild(li);
+  if (!results.length) els.searchResults.innerHTML = '<li class="empty">Looking through the summaries</li>';
+  data.searchText(q, 10 - results.length, new Set(results.map((c) => c.id))).then((more) => {
+    if (seq !== searchSeq) return;
+    if (!results.length) els.searchResults.innerHTML = more.length ? '' : '<li class="empty">Nothing by that name yet.</li>';
+    more.forEach((m, i) => addSearchResult(m.civ, !results.length && i === 0, m.snippet));
   });
+}
+
+let searchSeq = 0;
+function addSearchResult(c, first, snippet) {
+  const li = document.createElement('li');
+  li.dataset.id = c.id;
+  li.setAttribute('role', 'option');
+  li.setAttribute('aria-selected', first ? 'true' : 'false');
+  const sw = document.createElement('span'); sw.className = 'swatch'; sw.style.background = c.color;
+  const nm = document.createElement('span'); nm.className = 'name'; nm.textContent = c.name;
+  const sp = document.createElement('span'); sp.className = 'span num'; sp.textContent = formatCivSpan(c);
+  li.append(sw, nm, sp);
+  if (snippet) { const hit = document.createElement('span'); hit.className = 'hit'; hit.textContent = snippet; li.append(hit); }
+  els.searchResults.appendChild(li);
 }
 
 // ---- hints, sharing, URL ----------------------------------------------

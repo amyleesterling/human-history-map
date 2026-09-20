@@ -133,6 +133,11 @@ const MERGES = [
   [['Sultanate of Delhi'], 'Delhi Sultanate', 'delhi-sultanate'],
   [['Srivijaya Empire'], 'Srivijaya', 'srivijaya'],
   [['Cholas', 'Chola Empire'], 'Chola Empire', 'chola-empire'],
+  // the 300 map still calls Persia Parthian and the 400 map calls it Persia,
+  // seventy and a hundred and seventy years after Ardashir took it in 224;
+  // both are the Sasanian Empire, whose first map under its own name is 500
+  [['Parthian Empire'], 'Sasanian Empire', 'sasanian-empire', { from: 300, to: 400 }],
+  [['Persia'], 'Sasanian Empire', 'sasanian-empire', { from: 400, to: 400 }],
   [['Parthia', 'Parthian Empire'], 'Parthian Empire', 'parthian-empire'],
 ];
 
@@ -194,7 +199,9 @@ function canonical(name, year) {
     const hit = variants instanceof RegExp ? variants.test(n) : variants.includes(n);
     if (!hit) continue;
     if (bounds && ((bounds.from != null && year < bounds.from) || (bounds.to != null && year > bounds.to))) continue;
-    return { name: canon, id: id || null };
+    // a dated rename corrects a mislabel in one map ("Parthian Empire" at
+    // 300 is the Sasanian Empire); the mislabel is not another name for it
+    return { name: canon, id: id || null, dated: !!bounds };
   }
   const key = slug(n);
   if (!spellings.has(key)) spellings.set(key, n);
@@ -257,7 +264,7 @@ perSnap.forEach((shapes, i) => {
       e.indices.add(i);
       e.kinds.set(sh.kind, (e.kinds.get(sh.kind) || 0) + 1);
       // a subject's own name is its label, never an alias of its ruler
-      if (sh.abbrev && sh.abbrev !== who.name && !sh.label && !/\(/.test(sh.abbrev)) e.aliases.add(sh.abbrev);
+      if (sh.abbrev && sh.abbrev !== who.name && !sh.label && !sh.self.dated && !/\(/.test(sh.abbrev)) e.aliases.add(sh.abbrev);
     }
   }
 });
@@ -270,7 +277,7 @@ for (const s of snaps) for (const f of s.fc.features) {
   const e = presence.get(c.name);
   // "Rome (Galerius)" is a tetrarch's share, not another name for Rome
   const spelled = p.NAME.trim().replace(/\s*[\u2013\u2014]\s*/g, '-');
-  if (e && c.name !== spelled && !/\(/.test(spelled)) e.aliases.add(spelled);
+  if (e && !c.dated && c.name !== spelled && !/\(/.test(spelled)) e.aliases.add(spelled);
 }
 
 const polities = [];
@@ -328,9 +335,10 @@ for (const c of curated) {
     else p[k] = v;
   }
   if (c.from != null || c.to != null) p.circa = false;
-  // a curated entry that only pins a Wikipedia title leaves the record a
-  // generated one; the marker tells the coverage report what is researched
-  if (Object.keys(c).some((k) => k !== 'id' && k !== 'wikipedia')) delete p.generated;
+  // a curated entry that only pins a Wikipedia title or names the figures
+  // to search for leaves the record a generated one; the marker tells the
+  // coverage report what is researched
+  if (Object.keys(c).some((k) => !['id', 'wikipedia', 'figures'].includes(k))) delete p.generated;
 }
 
 // ---- pass 4: present-day countries join the polities alive in 2010 ---------

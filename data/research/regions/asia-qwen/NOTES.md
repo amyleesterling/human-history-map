@@ -422,3 +422,28 @@ Mongolia.
 - The Later Liang, Liu Song and Northern Wei cards now link their
   successors by id; the Sixteen Kingdoms carry curated dates (304 to 439)
   so they no longer overlap the Northern Wei.
+- **Imported outlines now win** (2026-09-20): where a snapshot and a
+  researched file both draw a polity in a year, the snapshot draws and the
+  researched extent fills only the years the snapshot lacks. Amy saw the
+  Western Zhou hexagon sitting in a hole in the Sinic ring at 1000 BCE
+  where the 1000 BCE map's Zhou belonged. A researched shape can still
+  override a snapshot with `"over": true` in its properties, used only
+  where the snapshot is wrong and the importer's tables cannot mend it.
+- **Southern Song, Jurchen Jin and the Mongols in China** are three such
+  `over` seams in `data/borders/china-seams.geojson`: the 1100 and 1200
+  maps keep the Song over all of China until 1279 and hold the Jin to
+  Manchuria. The seams put the Song south of the Huai and the Qinling from
+  1127, the Jin north of that line from 1115 to 1234, and the Mongol Empire
+  in the Jin's, Xixia's and Mongolia's place from 1234 to 1271, after which
+  the Yuan's own 1279 shape reaches back to 1271.
+- **Sasanian**: the 300 map still names Persia "Parthian Empire" and the
+  400 map names it "Persia"; both are renamed to the Sasanian Empire in the
+  importer, so the polity now runs from the 300 map and reaches back to 224
+  through the founding backfill. The card link from the Parthians' fall
+  used to land on an empty steppe. A side effect: the Qajar-era "Persia"
+  run (1783 to 1914) is now the first run of that name, so its id changed
+  from `persia-1783` to `persia`; nothing referenced the old id.
+- **Tang at 700 to 800**: the 700 map's Tang (its "Sui", renamed) runs into
+  its Tibetan Empire, Uyghurs and Karluks. That is the snapshot's own
+  overlap; the globe now paints states as solid washes with the smaller
+  polygon on top, so the overlap no longer shows as a mixed colour.

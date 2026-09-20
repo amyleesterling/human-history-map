@@ -10,20 +10,70 @@
 // is still, so each frame costs only the borders on the map that year, and a
 // phone keeps up.
 
-import { withAlpha } from './palette.js';
+import { withAlpha, tint } from './palette.js';
 
 const d3 = globalThis.d3;
 
+// A chart drawn by hand: paper, one ink, and washes of colour that stop at
+// the coast. The sea is a cooler, darker sheet than the land so the shore
+// reads from the tone alone, with the inked coastline and its water lining
+// on top. Nothing here is warm: the paper is a grey cream, the ink a blue
+// black, by Amy's rule that nothing on the site is orange.
 const STYLE = {
-  oceanInner: '#1c3752', oceanOuter: '#0a1729',
-  flatOcean: '#0f2136',
-  land: '#2f333a', landEdge: 'rgba(210,220,235,.16)',
-  lake: '#153052', river: 'rgba(120,170,220,.55)',
-  graticule: 'rgba(255,255,255,.055)',
-  rim: 'rgba(170,205,255,.45)', glow: 'rgba(120,170,240,.22)',
-  label: '#f5f1e8', halo: 'rgba(8,10,14,.75)',
-  select: '#ffffff',
+  paperInner: '#e4e3da', paperOuter: '#c8c9bd',
+  flatPaper: '#dcdcd1',
+  land: '#efeadc', ink: '35, 42, 58',
+  lake: '#d3d9d8', river: 'rgba(70,95,130,.55)',
+  glow: 'rgba(120,170,240,.22)', ring: 'rgba(170,205,255,.35)',
+  label: '#1f2533', halo: 'rgba(240,236,226,.92)',
+  select: '#1b2230',
 };
+const ink = (alpha) => `rgba(${STYLE.ink},${alpha})`;
+
+// the lettering: a hand-written small-caps face (vendor/fonts), with the
+// platform's own hand faces behind it while it loads
+const LABEL_FACE = '"Patrick Hand SC", "Segoe Print", "Bradley Hand", "Chalkboard SE", cursive';
+
+// The grain of laid paper: a tile of sparse dark and light flecks, drawn
+// once from a fixed seed so the sheet is the same on every visit.
+function makeGrain() {
+  const size = 160;
+  const c = document.createElement('canvas');
+  c.width = c.height = size;
+  const g = c.getContext('2d');
+  const img = g.createImageData(size, size);
+  let seed = 20260920;
+  const rnd = () => (seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 4294967296;
+  for (let i = 0; i < img.data.length; i += 4) {
+    const v = rnd();
+    const dark = v < 0.05, light = v > 0.93;
+    img.data[i] = img.data[i + 1] = img.data[i + 2] = dark ? 60 : 255;
+    img.data[i + 3] = dark ? 22 : light ? 44 : 0;
+  }
+  g.putImageData(img, 0, 0);
+  return c;
+}
+
+// A pen never draws a perfectly smooth line. Every projected point is nudged
+// by a little value noise keyed to where it lands on screen: under a pixel,
+// the same for every shape that shares a border, and still from frame to
+// frame while the view is still.
+const WOBBLE = 1.0, CELL = 7;
+function corner(i, j) {
+  let n = (Math.imul(i, 374761393) + Math.imul(j, 668265263)) | 0;
+  n = Math.imul(n ^ (n >>> 13), 1274126177);
+  return ((n ^ (n >>> 16)) >>> 0) / 2147483647.5 - 1;
+}
+function noise(x, y) {
+  const x0 = Math.floor(x / CELL), y0 = Math.floor(y / CELL);
+  let fx = x / CELL - x0, fy = y / CELL - y0;
+  fx = fx * fx * (3 - 2 * fx); fy = fy * fy * (3 - 2 * fy);
+  const a = corner(x0, y0), b = corner(x0 + 1, y0), c = corner(x0, y0 + 1), d = corner(x0 + 1, y0 + 1);
+  return (a + (b - a) * fx) * (1 - fy) + (c + (d - c) * fx) * fy;
+}
+const wobble = d3.geoTransform({
+  point(x, y) { this.stream.point(x + noise(x, y) * WOBBLE, y + noise(y + 311, x + 97) * WOBBLE); },
+});
 
 // zoom (relative to the fitted globe) past which the 1:50m coastline is worth
 // its download, and the zoom range gestures are allowed
@@ -53,6 +103,12 @@ export class Globe {
     this.width = 0; this.height = 0; this.dpr = 1;
     this.baseCanvas = document.createElement('canvas');
     this.baseCtx = this.baseCanvas.getContext('2d');
+    // the land as a mask, kept with the base, and a layer the washes are
+    // painted on each frame before the mask cuts them at the coast
+    this.maskCanvas = document.createElement('canvas');
+    this.maskCtx = this.maskCanvas.getContext('2d');
+    this.washCanvas = document.createElement('canvas');
+    this.washCtx = this.washCanvas.getContext('2d');
     this.baseDirty = true;
     this._raf = 0;
     this._anim = null;
@@ -64,6 +120,11 @@ export class Globe {
     this._ro = new ResizeObserver(() => this.resize());
     this._ro.observe(canvas.parentElement || canvas);
     this.resize();
+    // once the lettering face arrives, the measured widths are stale and the
+    // names are drawn again in it
+    if (typeof document !== 'undefined' && document.fonts && document.fonts.load) {
+      document.fonts.load(`12px ${LABEL_FACE}`).then(() => { this._textWidths.clear(); this.render(); }).catch(() => {});
+    }
   }
 
   destroy() {
@@ -174,6 +235,12 @@ export class Globe {
       : d3.geoNaturalEarth1().precision(0.4);
     this.path = d3.geoPath(this.projection, this.ctx);
     this.basePath = d3.geoPath(this.projection, this.baseCtx);
+    // the pen: the same projection with the wobble on every point, for all
+    // that a hand would draw; the sphere and the graticule keep the ruler
+    const pen = { stream: (s) => this.projection.stream(wobble.stream(s)) };
+    this.basePenPath = d3.geoPath(pen, this.baseCtx);
+    this.maskPenPath = d3.geoPath(pen, this.maskCtx);
+    this.washPenPath = d3.geoPath(pen, this.washCtx);
     this.measurePath = d3.geoPath(this.projection);
     this.graticule = d3.geoGraticule().step([15, 15]);
     this.sphere = { type: 'Sphere' };
@@ -230,7 +297,7 @@ export class Globe {
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     if (w === this.width && h === this.height && dpr === this.dpr) return;
     this.width = w; this.height = h; this.dpr = dpr;
-    for (const c of [this.canvas, this.baseCanvas]) {
+    for (const c of [this.canvas, this.baseCanvas, this.maskCanvas, this.washCanvas]) {
       c.width = Math.round(w * dpr);
       c.height = Math.round(h * dpr);
     }
@@ -258,56 +325,89 @@ export class Globe {
     ctx.clearRect(0, 0, w, h);
     if (this.baseDirty) this._drawBase();
     ctx.drawImage(this.baseCanvas, 0, 0, w, h);
-    this._drawPolities(ctx);
+    this._drawWashes();
     if (this.labels) this._drawLabels(ctx);
     if (this.mode === 'globe') this._drawRim(ctx);
   }
 
   _drawBase() {
-    const ctx = this.baseCtx, w = this.width, h = this.height, path = this.basePath;
+    const ctx = this.baseCtx, w = this.width, h = this.height, path = this.basePath, pen = this.basePenPath;
     ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
 
-    // the ocean, lit from the upper left so the disc reads as a sphere
+    // the sheet, lit from the upper left so the disc still reads as a sphere
     ctx.beginPath();
     path(this.sphere);
     if (this.mode === 'globe') {
       const R = this.R, cx = w / 2, cy = h / 2;
       const g = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.4, R * 0.05, cx, cy, R);
-      g.addColorStop(0, STYLE.oceanInner);
-      g.addColorStop(1, STYLE.oceanOuter);
+      g.addColorStop(0, STYLE.paperInner);
+      g.addColorStop(1, STYLE.paperOuter);
       ctx.fillStyle = g;
     } else {
-      ctx.fillStyle = STYLE.flatOcean;
+      ctx.fillStyle = STYLE.flatPaper;
     }
     ctx.fill();
+    // the grain of the paper, kept to the sheet
+    ctx.save();
+    ctx.clip();
+    if (!this._grain) this._grain = makeGrain();
+    ctx.fillStyle = ctx.createPattern(this._grain, 'repeat');
+    ctx.fillRect(0, 0, w, h);
+    ctx.restore();
 
     ctx.beginPath();
     path(this.graticule());
     ctx.lineWidth = 1;
-    ctx.strokeStyle = STYLE.graticule;
+    ctx.strokeStyle = ink(0.09);
     ctx.stroke();
+
+    const mask = this.maskCtx;
+    mask.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    mask.clearRect(0, 0, w, h);
 
     if (this.base) {
       const land = this.landHi && this.view.zoom >= HI_ZOOM ? this.landHi : this.base.land;
       ctx.beginPath();
-      path(land);
+      pen(land);
+      // water lining: a few widening strokes of thin ink along the coast,
+      // the landward half of each then covered by the land, so the sea
+      // darkens as it meets the shore the way a pen hatches it
+      ctx.lineJoin = 'round';
+      for (const [width, alpha] of [[9, 0.05], [5, 0.09], [2.4, 0.16]]) {
+        ctx.lineWidth = width;
+        ctx.strokeStyle = ink(alpha);
+        ctx.stroke();
+      }
       ctx.fillStyle = STYLE.land;
       ctx.fill();
-      ctx.lineWidth = 0.8;
-      ctx.strokeStyle = STYLE.landEdge;
+      ctx.lineWidth = 0.9;
+      ctx.strokeStyle = ink(0.72);
       ctx.stroke();
+
+      mask.beginPath();
+      this.maskPenPath(land);
+      mask.fillStyle = '#fff';
+      mask.fill();
 
       if (this.base.lakes) {
         ctx.beginPath();
-        path(this.base.lakes);
+        pen(this.base.lakes);
         ctx.fillStyle = STYLE.lake;
         ctx.fill();
+        ctx.lineWidth = 0.6;
+        ctx.strokeStyle = ink(0.5);
+        ctx.stroke();
+        mask.beginPath();
+        this.maskPenPath(this.base.lakes);
+        mask.globalCompositeOperation = 'destination-out';
+        mask.fill();
+        mask.globalCompositeOperation = 'source-over';
       }
       const rivers = this.view.zoom < 1.8 && this.base.riversMajor ? this.base.riversMajor : this.base.rivers;
       if (rivers) {
         ctx.beginPath();
-        path(rivers);
+        pen(rivers);
         ctx.lineWidth = Math.min(1.6, 0.55 + 0.18 * this.view.zoom);
         ctx.strokeStyle = STYLE.river;
         ctx.lineJoin = 'round';
@@ -318,17 +418,42 @@ export class Globe {
     if (this.mode === 'flat') {
       ctx.beginPath();
       path(this.sphere);
-      ctx.lineWidth = 1;
-      ctx.strokeStyle = STYLE.rim;
+      ctx.lineWidth = 1.4;
+      ctx.strokeStyle = ink(0.85);
       ctx.stroke();
     }
     this.baseDirty = false;
   }
 
-  _drawPolities(ctx) {
-    const path = this.path;
-    const selected = [];
+  // The washes go on a layer of their own, which the land mask then cuts at
+  // the coast (a hand colouring a chart stops at the shore, and a rough
+  // source polygon that runs into the sea leaves the sea clear), and the
+  // layer is multiplied onto the paper so the grain and the ink show
+  // through as they do under watercolour.
+  _drawWashes() {
+    const ctx = this.washCtx, w = this.width, h = this.height;
+    ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
     ctx.lineJoin = 'round';
+    this._drawPolities(ctx);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    if (this.base) {
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.drawImage(this.maskCanvas, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+    }
+    const out = this.ctx;
+    out.setTransform(1, 0, 0, 1, 0, 0);
+    out.globalCompositeOperation = 'multiply';
+    out.drawImage(this.washCanvas, 0, 0);
+    out.globalCompositeOperation = 'source-over';
+    out.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+  }
+
+  // every polity in order, the selected one last so it sits on top
+  _drawPolities(ctx) {
+    const path = this.washPenPath;
+    const selected = [];
     for (const f of this.polities) {
       if (f._civ.id === this.selectedId) { selected.push(f); continue; }
       this._drawPolity(ctx, path, f, false);
@@ -342,26 +467,37 @@ export class Globe {
     const precision = f.properties.precision || 1;
     ctx.beginPath();
     path(f);
-    // a people's range is a wash, a state is a fill; an approximate border
-    // (precision 1) is drawn lighter than one fixed by treaty or survey, so
-    // the map never claims more certainty than its sources have
-    ctx.fillStyle = withAlpha(color, isSelected ? 0.74 : culture ? 0.2 : 0.52);
+    // a people's range is a faint see-through wash; a state is a solid wash
+    // of a lightened colour, so where two source polygons overlap the
+    // smaller, drawn later, simply covers the larger, as one colour laid
+    // over another on a chart would (Amy saw the Tang and Tibet mixing
+    // where the 700 map runs them into each other); the paint pools a
+    // little along a state's edge
+    ctx.fillStyle = culture ? withAlpha(color, 0.18) : tint(color, isSelected ? 0.4 : 0.52);
     ctx.fill();
+    if (!culture) {
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = withAlpha(tint(color, 0.2), 0.7);
+      ctx.stroke();
+    }
+    // then the ink: an approximate border (precision 1) is drawn lighter
+    // than one fixed by treaty or survey, so the map never claims more
+    // certainty than its sources have
     if (isSelected) {
       ctx.save();
       ctx.shadowColor = color;
-      ctx.shadowBlur = 14;
-      ctx.lineWidth = 2.2;
+      ctx.shadowBlur = 12;
+      ctx.lineWidth = 2;
       ctx.strokeStyle = STYLE.select;
       ctx.stroke();
       ctx.restore();
     } else if (culture) {
-      ctx.lineWidth = 0.8;
-      ctx.strokeStyle = withAlpha(color, 0.3);
+      ctx.lineWidth = 0.7;
+      ctx.strokeStyle = ink(0.22);
       ctx.stroke();
     } else {
       ctx.lineWidth = precision >= 2 ? 1 : 0.9;
-      ctx.strokeStyle = withAlpha(color, precision >= 3 ? 0.95 : precision === 2 ? 0.8 : 0.6);
+      ctx.strokeStyle = ink(precision >= 3 ? 0.8 : precision === 2 ? 0.65 : 0.45);
       ctx.stroke();
     }
   }
@@ -381,23 +517,27 @@ export class Globe {
   // for its name, and never on top of each other. On-screen size comes from
   // the spherical area scaled to pixels (foreshortened by the angle from the
   // view centre on the globe), which is far cheaper than measuring the drawn
-  // path and accurate enough to decide whether a word fits.
+  // path and accurate enough to decide whether a word fits. Amy wanted the
+  // names shown more readily, so a name may run a good way past its polity,
+  // and one that will not fit at its size tries the smallest legible size
+  // before giving up.
   _drawLabels(ctx) {
     const w = this.width, h = this.height, v = this.view;
-    const fs = Math.round(Math.min(15, 11 + v.zoom * 0.8));
-    const font = `600 ${fs}px "Segoe UI", system-ui, -apple-system, sans-serif`;
+    const base = Math.min(15, 11 + v.zoom * 0.8);
     const placed = [];
     const centre = [v.lon, v.lat];
     const pxPerSr = this.mode === 'globe' ? this.R * this.R : this._flatArea / (4 * Math.PI);
-    ctx.font = font;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.lineJoin = 'round';
-    if ('letterSpacing' in ctx) ctx.letterSpacing = '0.06em';
+    if ('letterSpacing' in ctx) ctx.letterSpacing = '0.05em';
 
-    // selected first so it always gets its label
-    const order = this.polities.slice().sort((a, b) =>
-      (b._civ.id === this.selectedId) - (a._civ.id === this.selectedId) || b._area - a._area);
+    // selected first so it always gets its label, then states before
+    // peoples (a people's range often rings a state, and its centroid can
+    // land inside the hole where the state sits: the state's name goes
+    // there), largest first within each
+    const rank = (f) => (f._civ.id === this.selectedId ? 2 : f._civ.kind === 'culture' ? 0 : 1);
+    const order = this.polities.slice().sort((a, b) => rank(b) - rank(a) || b._area - a._area);
 
     for (const f of order) {
       const c = f._centroid;
@@ -414,30 +554,22 @@ export class Globe {
       const isSel = f._civ.id === this.selectedId;
       const culture = f._civ.kind === 'culture';
       const name = (f.properties.label || f._civ.name).toUpperCase();
-      let lines = [name];
-      let width = this._textWidth(ctx, name, font);
-      if (width > side * 1.15 && name.includes(' ')) {
-        // break a long name in two roughly at the middle word
-        const words = name.split(' ');
-        let best = 1, bestDiff = Infinity;
-        for (let i = 1; i < words.length; i++) {
-          const a = words.slice(0, i).join(' '), b = words.slice(i).join(' ');
-          const diff = Math.abs(this._textWidth(ctx, a, font) - this._textWidth(ctx, b, font));
-          if (diff < bestDiff) { bestDiff = diff; best = i; }
-        }
-        lines = [words.slice(0, best).join(' '), words.slice(best).join(' ')];
-        width = Math.max(...lines.map((l) => this._textWidth(ctx, l, font)));
-      }
-      // a people's name only when there is plenty of room: it is context, not a border
-      if (!isSel && width > side * (culture ? 0.7 : 1.3)) continue;
-      const lh = fs * 1.15;
+      // an empire's name is lettered a little larger than a city state's;
+      // a people's name is context, not a border, so it needs more room
+      const big = Math.round(base * Math.min(1.35, Math.max(1, side / 180)));
+      const small = Math.max(9, Math.round(base) - 3);
+      const room = isSel ? Infinity : side * (culture ? 1.05 : 1.7);
+      const fit = this._fitName(ctx, name, big, side, room) || (big > small && this._fitName(ctx, name, small, side, room));
+      if (!fit) continue;
+      const { lines, width, fs, font } = fit;
+      const lh = fs * 1.1;
       const box = { x0: pt[0] - width / 2 - 3, x1: pt[0] + width / 2 + 3, y0: pt[1] - (lh * lines.length) / 2 - 2, y1: pt[1] + (lh * lines.length) / 2 + 2 };
       if (placed.some((b) => b.x0 < box.x1 && b.x1 > box.x0 && b.y0 < box.y1 && b.y1 > box.y0)) continue;
       placed.push(box);
       ctx.font = font;
       ctx.lineWidth = 3;
       ctx.strokeStyle = STYLE.halo;
-      ctx.fillStyle = isSel ? '#ffffff' : culture ? 'rgba(245,241,232,.7)' : STYLE.label;
+      ctx.fillStyle = isSel ? '#000000' : culture ? ink(0.62) : STYLE.label;
       lines.forEach((line, i) => {
         const y = pt[1] + (i - (lines.length - 1) / 2) * lh;
         ctx.strokeText(line, pt[0], y);
@@ -447,9 +579,32 @@ export class Globe {
     if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
   }
 
+  // the name at one size: on one line, or two when it is wider than its
+  // polity and breaks well at a word; null when it is still wider than the
+  // room it has
+  _fitName(ctx, name, fs, side, room) {
+    const font = `${fs}px ${LABEL_FACE}`;
+    let lines = [name];
+    let width = this._textWidth(ctx, name, font);
+    if (width > side * 1.15 && name.includes(' ')) {
+      const words = name.split(' ');
+      let best = 1, bestDiff = Infinity;
+      for (let i = 1; i < words.length; i++) {
+        const a = words.slice(0, i).join(' '), b = words.slice(i).join(' ');
+        const diff = Math.abs(this._textWidth(ctx, a, font) - this._textWidth(ctx, b, font));
+        if (diff < bestDiff) { bestDiff = diff; best = i; }
+      }
+      lines = [words.slice(0, best).join(' '), words.slice(best).join(' ')];
+      width = Math.max(...lines.map((l) => this._textWidth(ctx, l, font)));
+    }
+    if (width > room) return null;
+    return { lines, width, fs, font };
+  }
+
   _drawRim(ctx) {
     const R = this.R, cx = this.width / 2, cy = this.height / 2;
-    // a thin bright limb and a soft haze just outside it
+    // a soft haze just outside the disc, the inked limb, and a thin ring a
+    // little outside it, the meridian ring of a desk globe
     const g = ctx.createRadialGradient(cx, cy, R, cx, cy, R * 1.07);
     g.addColorStop(0, STYLE.glow);
     g.addColorStop(1, 'rgba(120,170,240,0)');
@@ -460,8 +615,13 @@ export class Globe {
     ctx.fill();
     ctx.beginPath();
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
-    ctx.lineWidth = 1.2;
-    ctx.strokeStyle = STYLE.rim;
+    ctx.lineWidth = 1.4;
+    ctx.strokeStyle = ink(0.85);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cx, cy, R + 3.5, 0, Math.PI * 2);
+    ctx.lineWidth = 0.8;
+    ctx.strokeStyle = STYLE.ring;
     ctx.stroke();
   }
 

@@ -116,6 +116,7 @@ async function lookup(name, kind, span) {
     r = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : await finish(file, ...(await find(q, kind)));
   } catch (e) {
     failures++;
+    console.error(`  lookup failed for "${name}": ${e.message}`);
     return { title: null };
   }
   if (r.title || !r.ambiguous) return r;
@@ -125,6 +126,7 @@ async function lookup(name, kind, span) {
     return await finish(file2, await resolveAmbiguous(q, span));
   } catch (e) {
     failures++;
+    console.error(`  lookup failed for "${name}" (${span ? span.join("..") : ""}): ${e.message}`);
     return { title: null };
   }
 }
@@ -187,6 +189,7 @@ async function lookupExact(q) {
     return await finish(file, s && s.type === 'standard' && s.extract.length > 40 ? s : null);
   } catch (e) {
     failures++;
+    console.error(`  lookup failed for "${q}": ${e.message}`);
     return { title: null };
   }
 }

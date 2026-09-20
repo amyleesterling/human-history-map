@@ -46,6 +46,33 @@ backfill.features[0]._civ.dateBasis = 'historical';
 backfill.features[0].properties.from = 600;
 assert.equal(backfill.featuresOf('ming', 380).length, 0, 'and a shape more than 150 years away stays put');
 
+// where the import and a researched file both draw a polity in a year, the
+// imported outline draws; the researched extent fills the years the import lacks
+const both = new HistoryData();
+const zhou = { id: 'zhou', from: -1046, to: -771, dateBasis: 'historical' };
+both.features = [
+  { properties: { from: -1000, to: -700 }, _civ: zhou, _priority: 0 },
+  { properties: { from: -1046, to: -771 }, _civ: zhou, _priority: 1 },
+];
+assert.deepEqual(both.featuresOf('zhou', -900).map((f) => f._priority), [0], 'the imported outline wins the year it exists');
+assert.deepEqual(both.featuresOf('zhou', -1020).map((f) => f._priority), [1], 'the researched extent fills the founding years');
+both.features[1].properties.over = true;
+assert.deepEqual(both.featuresOf('zhou', -900).map((f) => f._priority), [1], 'unless the researched shape is marked over');
+
+// a duration counts the clock, which has no year zero
+const { formatCivDuration } = await import('../js/timeline.js');
+assert.equal(formatCivDuration({ from: 224, to: 651, dateBasis: 'historical' }), '427 years');
+assert.equal(formatCivDuration({ from: -27, to: 476, dateBasis: 'historical' }), '502 years');
+assert.equal(formatCivDuration({ from: -509, to: -27, dateBasis: 'historical' }), '482 years');
+assert.equal(formatCivDuration({ from: 1947, to: null, dateBasis: 'historical' }, 2026), '79 years');
+assert.equal(formatCivDuration({ from: 1000, to: 1100, dateBasis: 'map_coverage' }), '', 'coverage dates get no duration');
+
+// a king finds his kingdom through the summaries, misspelt or not
+const khan = await data.searchText('gengis', 8);
+assert.ok(khan.length && khan.every((h) => /genghis/i.test(h.snippet)), 'gengis matches Genghis in the summaries');
+assert.ok(khan.some((h) => /mongol|horde|khanate/.test(h.civ.id)), 'and brings up the Mongol polities');
+assert.equal((await data.searchText('genghis khan', 8)).length > 0, true, 'every word must match the same summary');
+
 const failing = new HistoryData();
 failing.dataDir = '';
 failing.files = [{ file: 'test', from: 1, to: 100, state: 'idle', features: [] }];
@@ -87,4 +114,4 @@ for (const year of [1860, 1900, 1938, 1960, 2000, 2026]) {
   assert.ok(retained.length <= current.length + 2);
   assert.ok(retained.filter((f) => !current.includes(f)).reduce((n, f) => n + f.positions, 0) <= 120000);
 }
-console.log('Passed: multipart drawing, historical/coverage dates, founding backfill, nearest year, failure/retry, stale requests and bounded prefetch.');
+console.log('Passed: multipart drawing, historical/coverage dates, founding backfill, imported-over-researched, durations, summary search, nearest year, failure/retry, stale requests and bounded prefetch.');
