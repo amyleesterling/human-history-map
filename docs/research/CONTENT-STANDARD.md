@@ -24,6 +24,10 @@ Prioritize large and influential polities among missing cards, then work toward 
 
 Publish checked batches periodically while the larger coverage project continues, as Amy requested. Report actual coverage and verify the deployed pages; do not describe a batch release as completion of the whole atlas.
 
+Amy has requested parallel research to improve throughput. Divide the queue into disjoint batches of related records and keep multiple researchers active when available. Each researcher stages cards, sources, proposed overrides and identity notes in a separate directory. One integrator owns shared indexes, audits, commits and deployment, so research can continue while a checked batch publishes. Check identity before sharing a card across imported labels, and retain the same evidence standard for every batch.
+
+Keep browser use lightweight. Research with web/source tools where possible, reuse a single verification tab, and close automation tabs and browser sessions after their checks. Do not leave background Chrome sessions running between batches. Preserve the user's own browser tabs.
+
 ## Endings and continuity on every page
 
 A page must explicitly address its appropriate ending or continuity, even when the answer is uncertain:
