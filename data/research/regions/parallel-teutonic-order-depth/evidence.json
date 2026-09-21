@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex integrator research, separately reviewed by african_cards",
+  "checkedAt": "2026-09-21",
+  "sources": [
+    {
+      "id": "tk-unesco",
+      "title": "UNESCO: Castle of the Teutonic Order in Malbork",
+      "url": "https://whc.unesco.org/en/list/847",
+      "note": "1309 transfer, Gothic brick construction, crusades and forced conversion, conservation and wartime restoration."
+    },
+    {
+      "id": "tk-toilet",
+      "title": "Malbork Castle Museum: Gdanisko",
+      "url": "https://zamek.malbork.pl/wnetrze/gdanisko/",
+      "note": "Medieval latrine tower above running water, defensive refuge, early movable wooden passage and later masonry corridor."
+    },
+    {
+      "id": "tk-heat",
+      "title": "Malbork Castle Museum: Medieval heating system",
+      "url": "https://zamek.malbork.pl/wnetrze/sredniowieczny-system-grzewczy-zamku-malborskiego/",
+      "note": "Fieldstone heat storage, floor outlets and covers, fuel economy; most surviving stoves rebuilt in nineteenth century."
+    },
+    {
+      "id": "tk-discovery",
+      "title": "Malbork Castle Museum: Discovered hypocaust-type furnace",
+      "url": "https://zamek.malbork.pl/odkryty-piec-ziemny-typu-hypocaustum/",
+      "note": "Excavated furnace at new research centre; among earliest at castle, report supplies no precise date. Previously known example under Great Refectory dated 1330s."
+    },
+    {
+      "id": "tk-infirmary",
+      "title": "Malbork Castle Museum: Infirmary",
+      "url": "https://zamek.malbork.pl/wnetrze/infirmeria/",
+      "note": "Care for old/infirm knights, separate dining room/chapel/bath, sickroom with adjoining toilet; later Polish use and twentieth-century restorations."
+    },
+    {
+      "id": "tk-kitchen",
+      "title": "Malbork Castle Museum: Kitchen and cook’s chamber",
+      "url": "https://zamek.malbork.pl/wnetrze/kuchnia-i-izba-kucharza/",
+      "note": "Kitchen north of Great Refectory, large hearth and hood, cook’s room and store; early twentieth-century painted drapery."
+    },
+    {
+      "id": "tk-rooms",
+      "title": "Malbork Castle Museum: High Castle interiors",
+      "url": "https://zamek.malbork.pl/wnetrza/zamek-wysoki/",
+      "note": "Convent room music gallery, treasury suite, surviving mill equipment; modern door inscription copied from Margat is not used as a medieval Malbork witness."
+    },
+    {
+      "id": "tk-book",
+      "title": "Bavarian State Library: Petrus de Dusburg, Chronicon Prussiae",
+      "url": "https://www.digitale-sammlungen.de/en/details/bsb10000801",
+      "note": "1679 printed edition, author fourteenth-century Peter of Dusburg, subject chronology 1205-1325, shelfmark 4 Bor.14. Sample uses actual short printed title and identifies later edition."
+    },
+    {
+      "id": "tk-livonia",
+      "title": "National History Museum of Latvia: Courland, Semigallia and Lithuania exhibition",
+      "url": "https://lnvm.gov.lv/en/events/izstade-kurzemes-un-zemgales-hercogiste-un-lietuvas-dizkunigaitija-1561-1795-g/",
+      "note": "Livonia multiple centres, Order’s Livonian branch;1561 submission and Kettler’s duchy."
+    },
+    {
+      "id": "tk-end",
+      "title": "Polish Integrated Education Platform: European Power, lesson plan",
+      "url": "https://zpe.gov.pl/a/lesson-plan-polish/D143c9XwB",
+      "note": "1519-1521 war; Albert adopted Lutheranism and transformed Prussian monastic state into secular duchy;1525 homage."
+    },
+    {
+      "id": "tk-order",
+      "title": "Teutonic Order: Our roots",
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "note": "Institutional history of hospital origins near Acre 1190 and continuing religious/social work. Promotional claims about first field hospital are not adopted."
+    }
+  ],
+  "entities": [
+    {
+      "id": "teutonic-knights",
+      "card": "data/cards/teutonic-knights.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tk-unesco",
+            "tk-livonia",
+            "tk-rooms",
+            "tk-heat"
+          ],
+          "locator": "1309 transfer, Gothic brick construction, crusades and forced conversion, conservation and wartime restoration. Livonia multiple centres, Order’s Livonian branch;1561 submission and Kettler’s duchy. Convent room music gallery, treasury suite, surviving mill equipment; modern door inscription copied from Margat is not used as a medieval Malbork witness. Fieldstone heat storage, floor outlets and covers, fuel economy; most surviving stoves rebuilt in nineteenth century.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tk-order",
+            "tk-unesco"
+          ],
+          "locator": "Institutional history of hospital origins near Acre 1190 and continuing religious/social work. Promotional claims about first field hospital are not adopted. 1309 transfer, Gothic brick construction, crusades and forced conversion, conservation and wartime restoration.",
+          "dateScope": {
+            "from": 1190,
+            "to": 1309
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tk-unesco",
+            "tk-livonia"
+          ],
+          "locator": "1309 transfer, Gothic brick construction, crusades and forced conversion, conservation and wartime restoration. Livonia multiple centres, Order’s Livonian branch;1561 submission and Kettler’s duchy.",
+          "dateScope": {
+            "from": 1309,
+            "to": 1525
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tk-end",
+            "tk-livonia"
+          ],
+          "locator": "1519-1521 war; Albert adopted Lutheranism and transformed Prussian monastic state into secular duchy;1525 homage. Livonia multiple centres, Order’s Livonian branch;1561 submission and Kettler’s duchy.",
+          "dateScope": {
+            "from": 1525,
+            "to": 1561
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tk-toilet"
+          ],
+          "locator": "Gdanisko, first paragraph",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tk-toilet"
+          ],
+          "locator": "Gdanisko, defensive function and second paragraph",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tk-heat"
+          ],
+          "locator": "Heating system, first five paragraphs",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tk-heat"
+          ],
+          "locator": "Floor outlets, covers and restoration warning",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tk-discovery"
+          ],
+          "locator": "Opening discovery and dating discussion",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tk-kitchen"
+          ],
+          "locator": "Kitchen function and adjoining rooms",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tk-kitchen"
+          ],
+          "locator": "Cook’s room decoration paragraph",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tk-rooms"
+          ],
+          "locator": "Izba Konwentu entry",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tk-infirmary"
+          ],
+          "locator": "First paragraph, purpose and facilities",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tk-infirmary"
+          ],
+          "locator": "Sickroom and toilet; restoration paragraph",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "tk-rooms"
+          ],
+          "locator": "Komnaty dostojników and Kuchnia konwentu entries",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tk-unesco"
+          ],
+          "locator": "Description and conservation history",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tk-book"
+          ],
+          "locator": "Catalog title, author, date and manufacturing type",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tk-livonia"
+          ],
+          "locator": "Historical introduction and 1561 Treaty of Submission",
+          "dateScope": {
+            "year": 1561
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tk-end",
+            "tk-livonia",
+            "tk-order"
+          ],
+          "locator": "1519-1521 war; Albert adopted Lutheranism and transformed Prussian monastic state into secular duchy;1525 homage. Livonia multiple centres, Order’s Livonian branch;1561 submission and Kettler’s duchy. Institutional history of hospital origins near Acre 1190 and continuing religious/social work. Promotional claims about first field hospital are not adopted.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "teutonic-knights",
+        "name": "Teutonic Order in Prussia and Livonia",
+        "regions": [
+          "Europe"
+        ],
+        "from": 1279,
+        "to": 1530,
+        "circa": true,
+        "dateBasis": "map_coverage",
+        "card": "cards/teutonic-knights.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "teutonic-knights",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            18.2827828278283,
+            53.10030727639298,
+            27.664476644766467,
+            59.16937114771568
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "teutonic-knights",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            18.2827828278283,
+            53.10030727639298,
+            27.664476644766467,
+            59.176283521145436
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "teutonic-knights",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            18.2827828278283,
+            53.10091493860327,
+            27.70047700477005,
+            59.49408928111329
+          ]
+        },
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "teutonic-knights",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            18.2827828278283,
+            53.100307276581816,
+            27.70047700477005,
+            59.49425269911404
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "teutonic-knights",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            18.2827828278283,
+            53.10091493860327,
+            27.930879308793095,
+            59.49408928111329
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "ids": [
+        "teutonic-knights"
+      ],
+      "note": "Decoded 1279,1400 and 1500 features span about 18.28-27.93 E and 53.10-59.49 N, combining Prussia and Livonia. This requires separate 1525 Prussian and 1561 Livonian endings. Coarse map boundaries do not resolve other Livonian authorities; no polygon certified or changed. Most daily-life evidence concerns Malbork’s elite religious household, not all Baltic families."
+    }
+  ]
+}

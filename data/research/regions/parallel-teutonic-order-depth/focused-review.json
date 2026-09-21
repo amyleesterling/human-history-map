@@ -1,0 +1,94 @@
+{
+  "reviewer": "african_cards",
+  "scope": "Focused source review of Gdanisko toilet/refuge, heating and excavated furnace, 1679 title sample, Prussia/Livonia endings, and independently decoded 1279/1400/1500 geometry. Other passages not independently rechecked.",
+  "result": "Pass with two small wording improvements; no substantive historical blocker found in checked scope.",
+  "findings": [
+    {
+      "severity": "minor",
+      "pointer": "/drafts/0/sections/0/items/1/text",
+      "finding": "The museum describes a final defensive refuge and raisable passage, not an escape route. The joke is grounded, but 'defensive escape plan' may suggest an unsupported second exit.",
+      "action": "Replace 'A toilet with a defensive escape plan' with 'A toilet that doubled as a last defensive refuge'; the occupied joke can remain.",
+      "source": "https://zamek.malbork.pl/wnetrze/gdanisko/",
+      "locator": "Two paragraphs under Gdanisko: wieża ostatecznej obrony and część ganku była zwodzona."
+    },
+    {
+      "severity": "minor",
+      "pointer": "/drafts/0/sections/0/items/4/text",
+      "finding": "The 2024 museum report calls the newly discovered furnace the oldest or one of the oldest, but supplies no precise date. 'Its exact date remained uncertain' infers wider scholarly uncertainty from that omission.",
+      "action": "Use 'The museum report does not give it a precise date.'",
+      "source": "https://zamek.malbork.pl/odkryty-piec-ziemny-typu-hypocaustum/",
+      "locator": "3 May 2024 article, second paragraph."
+    },
+    {
+      "severity": "editorial",
+      "pointer": "/sources/3/note",
+      "finding": "Compressed decade spacing: '1330 s'.",
+      "action": "Use '1330s'."
+    }
+  ],
+  "checks": [
+    {
+      "source": "https://zamek.malbork.pl/wnetrze/gdanisko/",
+      "checked": "Main medieval toilet; water under arches removed waste; defensive refuge; initial wooden passage partly raisable, later masonry corridor. All confirmed directly in Polish museum text."
+    },
+    {
+      "source": "https://zamek.malbork.pl/wnetrze/sredniowieczny-system-grzewczy-zamku-malborskiego/",
+      "checked": "Fieldstones above fire chamber, floor channels, ceramic/metal covers regulating heat, local scarcity of wood, and most remaining furnaces rebuilt in nineteenth century. Confirmed."
+    },
+    {
+      "source": "https://zamek.malbork.pl/odkryty-piec-ziemny-typu-hypocaustum/",
+      "checked": "Furnace discovered during work at research centre, classified oldest or among oldest; earlier known Great Refectory furnace dated to 1330s. Confirmed, with date-uncertainty wording improvement above."
+    },
+    {
+      "source": "https://www.digitale-sammlungen.de/en/details/bsb10000801",
+      "checked": "Direct page only partially exposes metadata, but indexed official full record verifies Chronicon Prussiae, Petrus de Dusburg, 1679, print, BSB shelfmark 4 Bor.14. Latin short title and translation are sound; draft explicitly identifies later witness."
+    },
+    {
+      "source": "https://digital.ub.uni-paderborn.de/eab/content/titleinfo/756661",
+      "checked": "Independent university catalogue for the same 1679 edition (VD17 3:008282V) transcribes full Latin printed title including Chronicon Prussiae. Supports attested title rather than a modern invented translation. Scan pixels not inspected."
+    },
+    {
+      "source": "https://lnvm.gov.lv/en/events/izstade-kurzemes-un-zemgales-hercogiste-un-lietuvas-dizkunigaitija-1561-1795-g/",
+      "checked": "Museum historical introduction verifies multiple Livonian centres, strongest local Teutonic branch, Kettler, 1561 Pacta subiectionis and Courland/Semigallia. Confirmed."
+    },
+    {
+      "source": "https://zpe.gov.pl/a/lesson-plan-polish/D143c9XwB",
+      "checked": "European Power abstract verifies 1519 to 1521 war, Albert's Lutheranism, secular duchy and 1525 homage. Source elsewhere has an apparent erroneous 1109 foundation date, which draft does not repeat."
+    }
+  ],
+  "geometry": {
+    "method": "Decoded TopoJSON delta arcs using scale and translate; no polygons changed.",
+    "snapshots": [
+      {
+        "year": 1279,
+        "bbox": [
+          18.2828,
+          53.1003,
+          27.6645,
+          59.1694
+        ]
+      },
+      {
+        "year": 1400,
+        "bbox": [
+          18.2828,
+          53.1009,
+          27.7005,
+          59.4941
+        ]
+      },
+      {
+        "year": 1500,
+        "bbox": [
+          18.2828,
+          53.1009,
+          27.9309,
+          59.4941
+        ]
+      }
+    ],
+    "assessment": "The imported feature spans Prussian and Livonian territories, consistent with separate 1525 and 1561 regional endings. Bounding boxes do not certify internal border accuracy or exclusive authority."
+  },
+  "accessLimits": "No browser opened. BSB metadata independently supported by indexed official record and Paderborn catalogue; medieval autograph not inspected or claimed. No full audit of unrequested kitchen/infirmary/music passages.",
+  "resolution": "Applied both wording improvements and corrected decade spacing before integration."
+}
