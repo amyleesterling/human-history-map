@@ -10,9 +10,9 @@ QWEN owns Asia. Codex handles the other regional queues and integration. Cross-c
 | --- | ---: |
 | indexedRecords | 3045 |
 | summaries | 2397 |
-| cards | 349 |
-| uniqueCardFiles | 285 |
-| missingCards | 2696 |
+| cards | 350 |
+| uniqueCardFiles | 286 |
+| missingCards | 2695 |
 | independentlyReviewedNarratives | 53 |
 | reviewedIdentities | 11 |
 | reviewedChronologies | 0 |
@@ -23,7 +23,7 @@ QWEN owns Asia. Codex handles the other regional queues and integration. Cross-c
 | --- | ---: | ---: | ---: |
 | Africa | 255 | 72 | 19 |
 | Asia | 485 | 49 | 0 |
-| Europe | 367 | 47 | 21 |
+| Europe | 367 | 48 | 21 |
 | North America | 994 | 79 | 10 |
 | Oceania | 399 | 28 | 3 |
 | South America | 452 | 33 | 3 |
