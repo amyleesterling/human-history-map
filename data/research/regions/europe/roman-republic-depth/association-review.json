@@ -1,0 +1,184 @@
+{
+  "status": "approve-with-copy-adjustments",
+  "scope": "Independent historical identity and scope assessment, not a fresh audit of every existing Roman Republic passage.",
+  "index": [
+    {
+      "id": "rome",
+      "name": "Rome",
+      "from": -500,
+      "to": -100,
+      "circa": true,
+      "generated": "historical-basemaps"
+    },
+    {
+      "id": "roman-republic",
+      "name": "Roman Republic",
+      "aliases": [
+        "Rome"
+      ],
+      "from": -400,
+      "to": -1,
+      "circa": true,
+      "generated": "historical-basemaps",
+      "figures": [
+        "Scipio Africanus",
+        "Cicero",
+        "Julius Caesar"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "file": "world-bc100.json",
+      "properties": {
+        "civ": "roman-republic",
+        "from": -100,
+        "to": -1,
+        "precision": 1
+      },
+      "bbox": [
+        26.062,
+        36.078,
+        32.949,
+        40.503
+      ]
+    },
+    {
+      "file": "world-bc100.json",
+      "properties": {
+        "civ": "roman-republic",
+        "from": -100,
+        "to": -1,
+        "precision": 1
+      },
+      "bbox": [
+        -9.549,
+        32.918,
+        34.04,
+        46.899
+      ]
+    },
+    {
+      "file": "world-bc200.json",
+      "properties": {
+        "civ": "rome",
+        "from": -200,
+        "to": -100,
+        "precision": 1
+      },
+      "bbox": [
+        -7.011,
+        36.007,
+        20.882,
+        46.899
+      ]
+    },
+    {
+      "file": "world-bc300.json",
+      "properties": {
+        "civ": "roman-republic",
+        "from": -300,
+        "to": -200,
+        "precision": 1
+      },
+      "bbox": [
+        11.104,
+        40.767,
+        16.422,
+        43.408
+      ]
+    },
+    {
+      "file": "world-bc323.json",
+      "properties": {
+        "civ": "rome",
+        "from": -323,
+        "to": -300,
+        "precision": 1
+      },
+      "bbox": [
+        11.104,
+        40.767,
+        14.103,
+        43.408
+      ]
+    },
+    {
+      "file": "world-bc400.json",
+      "properties": {
+        "civ": "roman-republic",
+        "from": -400,
+        "to": -323,
+        "precision": 1
+      },
+      "bbox": [
+        11.907,
+        40.767,
+        14.391,
+        42.357
+      ]
+    },
+    {
+      "file": "world-bc500.json",
+      "properties": {
+        "civ": "rome",
+        "from": -500,
+        "to": -400,
+        "precision": 1
+      },
+      "bbox": [
+        12.177,
+        41.674,
+        12.591,
+        41.981
+      ]
+    }
+  ],
+  "conclusion": "The two imported labels represent interleaved coverage of the Roman republican state. A shared card is historically justified. Association does not authenticate every imported territorial edge and does not include Roman Empire records.",
+  "requiredAdjustments": [
+    {
+      "location": "overview",
+      "action": "Mention both Rome (500 to 100 BCE) and Roman Republic (400 to 1 BCE) as imported map labels with interleaved snapshots, rather than implying the shared map coverage begins only in 400 BCE."
+    },
+    {
+      "location": "first period summary",
+      "action": "Replace This phase precedes the map’s Republic coverage with wording stating that this early phase overlaps the Rome label and precedes the Roman Republic label."
+    },
+    {
+      "location": "ending and final period",
+      "action": "Retain the conventional 27 BCE regime transition and distinguish it from both imported end dates. The Rome record ending in 100 BCE is not a historical fall or a separate predecessor state."
+    },
+    {
+      "location": "appliesTo and overrides",
+      "action": "Use explicit appliesTo [roman-republic, rome] and the same card path; keep map_coverage date basis. Do not extend this association to Roman Empire or overwrite polygon coordinates."
+    }
+  ],
+  "scopeNotes": [
+    "The tiny Latium feature at 500 BCE is compatible with the early republican core; Cambridge describes Rome around 509 BCE as a city in Latium. Exact foundation year remains approximate.",
+    "Central Italian and later Italian/Iberian expansion is consistent with republican history. A bounding box is insufficient to certify exact sovereignty over all enclosed territory, especially Rome200BCE longitude -7.01; keep this as an imported geometry limitation.",
+    "The 46 BCE coin sample and other late Republican examples follow the Rome label’s 100 BCE endpoint but belong to the same continuing polity. The shared card is a diachronic narrative; dated objects must retain their dates."
+  ],
+  "sourcesChecked": [
+    {
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-companion-to-the-roman-republic/early-republic/1F63DA0D193385BD34D5290C840D59BC",
+      "locator": "Chapter summary, lines 482 to 485",
+      "finding": "Early republican Latium and growth to control of peninsular Italy by 264 BCE; later literary evidence is uncertain."
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-roman-republic",
+      "locator": "Main essay, lines 63 to 68",
+      "finding": "Republican government from traditional 509 BCE; expansion beyond Italy and eventual civil-war transition."
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+      "locator": "Julio-Claudian opening, line 213",
+      "finding": "27 BCE Augustus settlement supplies conventional distinction from imperial phase."
+    }
+  ],
+  "filesRead": [
+    "data/cards/roman-republic.json",
+    "data/research/regions/europe/roman-republic-depth/evidence.json",
+    "data/hb/civilizations-hb.json",
+    "data/hb/borders/*"
+  ]
+}
