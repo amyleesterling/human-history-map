@@ -1,0 +1,166 @@
+{
+  "reviewer": "Codex parallel African/North African researcher",
+  "checkedAt": "2026-09-21",
+  "target": ".cache/parallel-northwest/bundle.json",
+  "targetSha256": "ae87bc7aa4810689ffdfe115e269266f26f101c84fcfba8d7de8fb3451510a30",
+  "scope": "Focused independent review of all eight original writing samples, the 1961 Irish farm-dwelling water/bath counts, and the Stong regional activity interpretation. This is not a complete audit of identity, chronology, geometry or all other passages.",
+  "result": "No blocking content error found within the checked scope. One bibliographic correction and one optional source-URL repair are actionable below.",
+  "findings": [
+    {
+      "priority": "minor",
+      "sourceId": "nw-iceland-environment",
+      "pointer": "/sources/[id=nw-iceland-environment]/note",
+      "issue": "The source note calls this Geoarchaeology research, but the repository identifies the journal as Arctic Anthropology.",
+      "action": "Replace 'Peer-reviewed Geoarchaeology research' with 'Peer-reviewed Arctic Anthropology 44(1), 2007, pages 1 to 11'. The public interpretation and numerical methods claims may remain.",
+      "evidenceUrl": "https://iris.landsbokasafn.is/en/publications/abandoned-farms-volcanic-impacts-and-woodland-management-revisiti/",
+      "locator": "Publication metadata and recommended citation immediately below the abstract."
+    },
+    {
+      "priority": "optional",
+      "sourceId": "nw-scots-deer-study",
+      "pointer": "/sources/[id=nw-scots-deer-study]/url",
+      "issue": "The supplied DSpace download URL returned a textless HTML shell in this review. Its underlying repository content endpoint returned the complete PDF successfully.",
+      "action": "Prefer https://udspace.udel.edu/server/api/core/bitstreams/ccd1ff77-45dd-42ac-9f90-e9fa23e6be51/content as the readable source URL.",
+      "evidenceUrl": "https://udspace.udel.edu/server/api/core/bitstreams/ccd1ff77-45dd-42ac-9f90-e9fa23e6be51/content",
+      "locator": "List of figures, figure 12, identifies the In principio page as Book of Deer folio 42r."
+    }
+  ],
+  "checks": [
+    {
+      "id": "scots",
+      "pointer": "/sections/2/items/2/text",
+      "status": "supported",
+      "sample": "In principio",
+      "assessment": "The repository PDF identifies figure 12 as the In principio initial page, Cambridge Ii.6.32, folio 42r. The rendering 'In the beginning' is accurate. The card appropriately calls it Latin, not Gaelic.",
+      "sourcesChecked": [
+        "https://udspace.udel.edu/server/api/core/bitstreams/ccd1ff77-45dd-42ac-9f90-e9fa23e6be51/content"
+      ],
+      "access": "Full PDF text accessed through repository content endpoint; this review did not undertake fresh palaeographic transcription from the manuscript image."
+    },
+    {
+      "id": "scotland",
+      "pointer": "/sections/2/items/4/text",
+      "status": "supported",
+      "sample": "propter libertatem solummodo",
+      "assessment": "The NRS Latin paragraph beginning Non enim contains the exact three words; its paired translation gives 'for freedom alone'. NRS explicitly distinguishes the scholarly reconstruction from an exact reading of the surviving SP13/7 document, a distinction correctly preserved in the card.",
+      "sourcesChecked": [
+        "https://www.nrscotland.gov.uk/learning-and-events/the-declaration-of-arbroath/transcription-of-the-declaration-of-arbroath/"
+      ],
+      "access": "Full official HTML text and editorial notice read."
+    },
+    {
+      "id": "irlanda",
+      "pointer": "/sections/3/items/0/text",
+      "status": "supported",
+      "sample": "Messe ocus Pangur Bán",
+      "assessment": "Exact opening verified in both Georgetown and UCC CELT editions. Georgetown includes a prose rendering consistent with 'I and white Pangur'. UCC identifies the continental Codex Sancti Pauli manuscript and dates creation approximately 800 to 850; its programme also places the poem under ninth-century monastic poems. The card does not confuse a continental manuscript with an Irish household excavation.",
+      "sourcesChecked": [
+        "https://faculty.georgetown.edu/jod/pangur.html",
+        "https://celt.ucc.ie/document/G400001/",
+        "https://www.ucc.ie/en/media/academic/seanmeanghaeilge/newsitems/PoetryReading-DetailedProgramme-EILSymposium.pdf"
+      ],
+      "access": "Full HTML editions and PDF programme read."
+    },
+    {
+      "id": "welsh",
+      "pointer": "/sections/2/items/3/text",
+      "status": "supported",
+      "sample": "CONBELIN P[O]SUIT HANC CRUCM",
+      "assessment": "Coflein prints this exact portion of the inscription and translates it as Conbelin erecting the cross. The bracketed restored letter, nonclassical CRUCM spelling, Latin language and damaged remainder are all retained or explained correctly.",
+      "sourcesChecked": [
+        "https://coflein.gov.uk/en/sites/301359"
+      ],
+      "access": "Full official site record, description and inscription read."
+    },
+    {
+      "id": "ireland",
+      "pointer": "/sections/2/items/1/text",
+      "status": "supported",
+      "sample": "Travels into Several Remote Nations of the World",
+      "assessment": "Trinity College Dublin's Swift study supplies this title and 1726 date. The explanatory gloss on remote is accurate. The card presents an English literary example without claiming that everyone in Ireland spoke English.",
+      "sourcesChecked": [
+        "https://www.tcd.ie/trinitywriters/writers/jonathan-swift/"
+      ],
+      "access": "Full institutional scholarly essay read; original title-page typography not independently compared."
+    },
+    {
+      "id": "ireland-1938",
+      "pointer": "/sections/0/items/2/text",
+      "status": "supported",
+      "sample": "Éire is ainm don Stát",
+      "assessment": "Exact Irish wording verified in the official source's indexed Article 4 and its PDF text. The translation is accurate. The official English landing page and Irish PDF notice explicitly say the Irish text has been adapted to modern standardised Irish, matching the card's qualification.",
+      "sourcesChecked": [
+        "https://www.irishstatutebook.ie/eli/cons/ga/html",
+        "https://www.irishstatutebook.ie/eli/cons/en/html",
+        "https://www.irishstatutebook.ie/pdf/ga.cons.pdf"
+      ],
+      "access": "Direct open of Irish HTML returned an error; official indexed Article 4 and introductory notice recovered through targeted web search."
+    },
+    {
+      "id": "denmark",
+      "pointer": "/sections/2/items/1/text",
+      "status": "supported_with_access_limitation",
+      "sample": "Mæth logh skall land bygges",
+      "assessment": "The indexed Lund catalogue explicitly supplies the exact incipit, folio 2r and Denmark, fifteenth to mid-sixteenth-century date. The translation is consistent with the University of Copenhagen's explanation of the corresponding opening in another Jutland Law manuscript. The card correctly distinguishes the later copy from the 1241 law.",
+      "sourcesChecked": [
+        "https://www.alvin-portal.org/alvin/attachment/document/alvin-record%3A14619/ATTACHMENT-0272.pdf",
+        "https://manuscript.ku.dk/motm/medieval-law-with-a-contemporary-explanation/"
+      ],
+      "access": "Direct Lund PDF retrieval failed with cache miss; targeted search returned the complete catalogue header and prologue incipit. No manuscript-image comparison performed."
+    },
+    {
+      "id": "icelandic-commonwealth",
+      "pointer": "/sections/2/items/3/text",
+      "status": "supported",
+      "sample": "Hinn góði maður",
+      "assessment": "The Arni Magnusson Institute page begins its quoted passage with exactly these words and identifies AM 677 4to, Christian translations from Latin, and approximately 1200. 'The good person' is a reasonable translation. The card correctly distinguishes the modernised displayed quotation from the medieval manuscript's spelling and abbreviations.",
+      "sourcesChecked": [
+        "https://arnastofnun.is/is/frettir/nyutgefid-handrit-am-677-4deg-geymir-andlegar-krasir"
+      ],
+      "access": "Full institutional HTML read, including discussion of medieval spelling and the abbreviation for madur."
+    },
+    {
+      "id": "ireland-1938",
+      "pointers": [
+        "/sections/1/items/3/text",
+        "/sections/1/items/4/text"
+      ],
+      "status": "supported_with_access_limitation",
+      "assessment": "Table 33, printed page 161, has the exact totals stated: 301774 farm dwellings; 237904 in the well/fountain/pump/other-source category; 30943 with use of a fixed bath; 31500 with use of a hot-water tap. The remaining water categories are public-main taps inside and outside the building and private piped supply, confirming the card's contrast. The card correctly restricts the figures to farm dwellings and uses 'use of' for amenities.",
+      "sourcesChecked": [
+        "https://www.cso.ie/en/media/csoie/census/census1961results/volume6/C_1961_Vol_6.pdf"
+      ],
+      "locator": "Table 33, printed page 161, column headings and TOTAL row.",
+      "access": "Direct PDF open was blocked by the web tool's size limit (10603374 bytes). Targeted search returned the indexed official table including all headers and the full total row. The scanned page image was not independently inspected."
+    },
+    {
+      "id": "icelandic-commonwealth",
+      "pointers": [
+        "/sections/1/items/2/text",
+        "/sections/1/items/3/text"
+      ],
+      "status": "supported",
+      "assessment": "The paper's abstract explicitly describes nine soil profiles, 92 tephra layers and continued human activity in the area for two centuries after 1104, with change after the 1300 fallout. The card carefully limits its conclusion to the wider valley and does not claim continuous occupation of the particular Stong farmhouse.",
+      "sourcesChecked": [
+        "https://iris.landsbokasafn.is/en/publications/abandoned-farms-volcanic-impacts-and-woodland-management-revisiti/"
+      ],
+      "access": "Full repository abstract and bibliographic metadata read; underlying article and archaeological site plan not re-audited."
+    }
+  ],
+  "outOfScope": [
+    "All other northwest card claims and endings",
+    "Imported map identity and boundary accuracy",
+    "Fresh palaeographic readings of manuscript and inscription images",
+    "Project-wide validation or publication status"
+  ],
+  "browserUse": "No browser or Chrome session opened.",
+  "integration": {
+    "date": "2026-09-21",
+    "resolutions": [
+      "Corrected Iceland study journal to Arctic Anthropology.",
+      "Replaced Deer repository shell URL with the checked direct content endpoint.",
+      "Modern Ireland override replaces the erroneous Kingdom of Ireland alias with Republic of Ireland and Éire; loader Object.assign replaces the array."
+    ],
+    "scope": "Focused review only; runtime records remain pending comprehensive independent review."
+  }
+}
