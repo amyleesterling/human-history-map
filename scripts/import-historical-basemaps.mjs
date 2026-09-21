@@ -170,6 +170,9 @@ const tagOf = (year) => (year < 0 ? `bc${-year}` : String(year));
 // created if the index does not have it, with the segment's years as its
 // coverage; curated or researched dates then narrow the drawing.
 const SPLITS = [
+  // The remaining Commonwealth ended with the third partition in 1795.
+  // See data/research/regions/europe/commonwealth-depth/evidence.json.
+  ['Poland', 1783, [{ id: 'poland-1783', to: 1795 }]],
   ['Jin', 400, [{ id: 'jin-dynasty', to: 420 }, { id: 'liu-song', name: 'Liu Song' }]],
   ['Jin', 500, [{ id: 'southern-qi', name: 'Southern Qi', to: 502 }, { id: 'liang-dynasty', name: 'Liang', to: 557 }, { id: 'chen-dynasty', name: 'Chen' }]],
   ['Yamato', 700, [{ id: 'yamato', to: 710 }, { id: 'nara-japan', name: 'Nara' }]],
