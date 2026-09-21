@@ -18,6 +18,10 @@ Use at least two substantial concrete examples when the evidence permits. This i
 
 Amy also wants children and families to find memorable details about ordinary life: family relationships, social gatherings, learning, food, healthcare, sanitation and toilets, where evidence survives. Explain a specific practice, object or account in approachable language. Light humour is welcome, but never invent a custom for a joke or make suffering, disability or a community the punchline. Historical remedies are described as historical beliefs or practices, not medical advice. Keep dates, local variation and source references visible. A useful example is the Barbadian chattel house: moving house could mean relocating the building itself.
 
+When a civilization has an attested written language, include a short sample from a specific surviving inscription, manuscript or object, in the original script when it can be rendered reliably. Give a clear translation and identify the artifact, approximate date, and source. Distinguish the language from the script, and a later copy of a text from an original ancient inscription. Do not invent reconstructed phrases or imply that everyone in the society could read.
+
+Prioritize large and influential polities among missing cards, then work toward smaller entries. Preserve existing research assignments and check for overlap before claiming a record. Card depth and source checks remain the same regardless of size.
+
 Publish checked batches periodically while the larger coverage project continues, as Amy requested. Report actual coverage and verify the deployed pages; do not describe a batch release as completion of the whole atlas.
 
 ## Endings and continuity on every page
