@@ -1,101 +1,446 @@
 {
-  "id": "carthaginian-empire",
+  "version": 1,
   "region": "Africa: North and Northeast",
-  "researcher": "africa-north-east",
-  "checkedOn": "2026-09-19",
-  "status": "source_checked",
-  "independentReview": "pending",
-  "cardFile": "data/cards/carthaginian-empire.json",
-  "runtime": true,
-  "coverage": "Initial thematic card. Does not constitute exhaustive polity, chronology or boundary research.",
+  "researcher": "Codex",
+  "checkedAt": "2026-09-21",
   "sources": [
     {
-      "id": "carthage",
+      "id": "unesco",
       "title": "UNESCO, Archaeological Site of Carthage",
-      "url": "https://whc.unesco.org/en/list/37/",
-      "access": "page_text_read"
+      "url": "https://whc.unesco.org/en/list/37",
+      "note": "English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE."
+    },
+    {
+      "id": "rome",
+      "title": "British Museum, Introduction to ancient Rome",
+      "url": "https://www.britishmuseum.org/exhibitions/nero-man-behind-myth/introduction-to-ancient-rome",
+      "note": "Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city."
+    },
+    {
+      "id": "kerkuane",
+      "title": "UNESCO, Punic Town of Kerkuane and its Necropolis",
+      "url": "https://whc.unesco.org/en/list/332",
+      "note": "Brief synthesis and criterion iii: nearby Punic town, shops, workshops, street plan and late-fourth to early-third-century BCE remains; abandoned by mid-third century."
+    },
+    {
+      "id": "icom",
+      "title": "ICOMOS, Kerkuane World Heritage evaluation",
+      "url": "https://whc.unesco.org/document/153208",
+      "note": "Evaluation page 2: rectangular houses, entrance corridors, courtyards, wells, washbasins, baths and rooms; Kerkuane rather than Carthage."
+    },
+    {
+      "id": "latrines",
+      "title": "Boutheina Maraoui Telmini, Punic latrines at Carthage, BABESCH 86 (2011)",
+      "url": "https://poj.peeters-leuven.be/content.php?id=2128091&journal_code=BAB&url=article",
+      "note": "Published abstract: Bir Massouda excavations, two domestic latrines and one public latrine, late fifth or early fourth century BCE."
+    },
+    {
+      "id": "louvre",
+      "title": "Musée du Louvre, Punic stela catalogue 1372 (AO 5175)",
+      "url": "https://livres.louvre.fr/steles-puniques-carthage/catalogue/1372/",
+      "note": "Catalogue lines 65–76: Punic inscription transliteration LRBT LTNT PN BʿL and translation; final expression undeciphered."
+    },
+    {
+      "id": "louvre-essay",
+      "title": "Musée du Louvre, study of Carthaginian tophet inscriptions",
+      "url": "https://livres.louvre.fr/steles-puniques-carthage/prints/essai-etude-epigraphique/index.html",
+      "note": "Paragraphs 5–10 and 40–43: common dedication formulas, names of Tanit and Baal Hammon; the deities are better attested than their full character is understood."
+    },
+    {
+      "id": "tariff",
+      "title": "DEAPS, KAI 074 Carthage tariff",
+      "url": "https://deaps.osu.edu/text_objects/11514",
+      "note": "Ohio State digital edition, general notes and Donner–Röllig translation lines 1–7: Carthage inscription specifies priestly shares and exemption for a worshipper poor in livestock."
+    },
+    {
+      "id": "coin",
+      "title": "British Museum, Money Gallery large-print guide",
+      "url": "https://www.britishmuseum.org/sites/default/files/2021-05/Money_Gallery_LPG_2020_Room_68.pdf",
+      "note": "Case 2, Communicating through coins: Carthaginian coins minted in Sicily c.400–300 BCE, military pay and Punic inscriptions."
+    },
+    {
+      "id": "government",
+      "title": "Generals and judges: command, constitution and fate of Carthage, Libyan Studies",
+      "url": "https://www.cambridge.org/core/journals/libyan-studies/article/generals-and-judges-command-constitution-and-the-fate-of-carthage/757F46BAE0CA1A08373A15D1E497198F",
+      "note": "Constitution and command section: elected shofetim, councils and assemblies; reconstructed mainly from literary sources with epigraphic support."
+    },
+    {
+      "id": "mago",
+      "title": "James L. Zainaldin, Gargilius Martialis: The Agricultural Fragments, Cambridge excerpt",
+      "url": "https://assets.cambridge.org/97811087/18622/excerpt/9781108718622_excerpt.pdf",
+      "note": "Introduction page 10: Mago associated with a 28-book Punic agricultural work, Greek and Latin translation and later Roman use; authorship/person uncertain."
+    },
+    {
+      "id": "feeding",
+      "title": "The World of Ancient Carthage, Cambridge frontmatter",
+      "url": "https://assets.cambridge.org/97811070/55278/frontmatter/9781107055278_frontmatter.pdf",
+      "note": "List of figures 7.21, page 140: spouted Punic feeding bottle from Carthage, first half of third century BCE, Carthage MN 896.13."
     }
   ],
-  "claims": [
+  "entities": [
     {
-      "cardPath": "/overview",
-      "sourceIds": [
-        "carthage"
+      "id": "carthaginian-empire",
+      "card": "data/cards/carthaginian-empire.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "unesco",
+            "rome"
+          ],
+          "locator": "English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE. Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "unesco"
+          ],
+          "locator": "English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE.",
+          "dateScope": {
+            "from": -900,
+            "to": -600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "unesco",
+            "government"
+          ],
+          "locator": "English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE. Constitution and command section: elected shofetim, councils and assemblies; reconstructed mainly from literary sources with epigraphic support.",
+          "dateScope": {
+            "from": -600,
+            "to": -264
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "rome",
+            "coin"
+          ],
+          "locator": "Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city. Case 2, Communicating through coins: Carthaginian coins minted in Sicily c.400–300 BCE, military pay and Punic inscriptions.",
+          "dateScope": {
+            "from": -264,
+            "to": -241
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "rome"
+          ],
+          "locator": "Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city.",
+          "dateScope": {
+            "from": -241,
+            "to": -201
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "rome",
+            "unesco"
+          ],
+          "locator": "Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city. English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE.",
+          "dateScope": {
+            "from": -201,
+            "to": -146
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "unesco",
+            "rome"
+          ],
+          "locator": "English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE. Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city.",
+          "dateScope": {
+            "from": -146,
+            "to": null
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "unesco"
+          ],
+          "locator": "Outstanding Universal Value, brief synthesis and criterion ii: Punic ports and long Mediterranean exchange. No exact fleet size or harbour plan asserted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "coin"
+          ],
+          "locator": "Money Gallery guide, Case 2, Carthage Sicily coin captions and inscription translations; date span from exhibit, not particular coin fixed to a single year.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "government"
+          ],
+          "locator": "Constitution and command: annual shofetim, councils, popular assemblies, literary and epigraphic limits. No modern voting rights inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "louvre",
+            "tariff"
+          ],
+          "locator": "Louvre catalogue 1372 personal dedication; DEAPS KAI 074 general notes and translation, not general religious census.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "icom",
+            "kerkuane"
+          ],
+          "locator": "ICOMOS evaluation page 2, late-fourth/early-third-century Kerkuane house plan; UNESCO brief synthesis for site and period.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "kerkuane"
+          ],
+          "locator": "UNESCO brief synthesis and criterion iii, shops/workshops, dating and non-rebuilding. Does not infer occupations of named residents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "latrines"
+          ],
+          "locator": "Maraoui Telmini 2011 published abstract, Bir Massouda, two domestic and one public latrine, dating from fills and structures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "latrines"
+          ],
+          "locator": "Published abstract identifies first documented Punic latrines and waste-collection evidence; absence of earlier finds is not absence of ancient latrines.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "feeding"
+          ],
+          "locator": "Cambridge frontmatter list of figures 7.21, Carthage MN 896.13, first half of third century BCE. Catalogue identification, not observed feeding contents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "louvre",
+            "louvre-essay"
+          ],
+          "locator": "Louvre catalogue 1372 lines 65–74 gives LRBT LTNT and translation; Unicode letter-by-letter mapping of transliteration, not a claim to reproduce stone letterforms or ancient vowels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "louvre"
+          ],
+          "locator": "Catalogue lines 67–76, translation and explicit uncertainty about final phrase. No inference about dedicator’s social class or occupation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tariff"
+          ],
+          "locator": "DEAPS KAI 074 general notes and Donner–Röllig translation, line 6; text fragmentary, interpretation restricted to this tariff.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mago"
+          ],
+          "locator": "Cambridge excerpt introduction p.10 and note 34, 28-book tradition, later translations, arboricultural use and authorship uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "rome"
+          ],
+          "locator": "British Museum introduction, coin caption and Punic Wars section; 218–201 second war and 146 destruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "rome",
+            "unesco",
+            "louvre-essay"
+          ],
+          "locator": "British Museum conquest and slavery; UNESCO mixed-period site and refoundation; Louvre essay later Punic/Neo-Punic cult attestations in North Africa. No salted-earth myth or universal continuity claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "rome",
+            "unesco",
+            "louvre-essay"
+          ],
+          "locator": "Punic-war paragraphs and silver coin caption: 264–146 BCE conflict, Hannibal in 218, Roman conquest, enslaved survivors and later Roman city. English introduction and Outstanding Universal Value, brief synthesis and criteria ii–iii: foundation, ports, tophet, Magon, Punic and Roman phases, destruction in 146 BCE. Paragraphs 5–10 and 40–43: common dedication formulas, names of Tanit and Baal Hammon; the deities are better attested than their full character is understood.",
+          "dateScope": {
+            "year": -146
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
       ],
-      "locator": "Synthesis of the specific sections identified below",
-      "status": "source_checked"
-    },
-    {
-      "cardPath": "/sections/0/items/0/text",
-      "sourceIds": [
-        "carthage"
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Carthaginian-empire and carthage are two imported labels for one polity. First label covers an early coarse 500–200 BCE map span, with map_coverage retained so its 200 BCE endpoint does not misleadingly assert conquest. Later alias covers a coarse 200–100 BCE span; historical -146 cutoff prevents the page displaying as a living Punic state at 100 BCE. No borders edited or certified.",
+        "UNESCO English brief synthesis has a 146 AD typo; its introductory language versions, British Museum, and standard chronology give 146 BCE. Dido is named only as legend. The mixed-period UNESCO property includes Roman monuments, which are explicitly excluded from Punic attribution.",
+        "Kerkuane is a separate Punic town and illustrative comparison, not a claimed Carthage house excavation. Its visible houses are late fourth/early third century BCE and local bath features cannot be generalized to all Punic homes. Bir Massouda latrines are structures interpreted in a published excavation abstract; no flush mechanism or prevalence invented.",
+        "Louvre AO5175 inscription is attested in Latin-letter epigraphic transliteration. The Phoenician Unicode letter sequence in the card is a letter-for-letter modern rendering of the first two words, with vowels omitted, not a facsimile of stone letter shapes. The final inscription words remain undeciphered. Reading a formal stela does not imply mass literacy.",
+        "Cambridge book frontmatter figure catalogue identifies a feeding bottle but gives no residue analysis, user identity, or typical childcare practice. Mago’s 28-book original is lost and authorship uncertain; the card does not claim the original manuscript survives. KAI074 is a fragmentary tariff translated by DEAPS, not a comprehensive account of Punic worship.",
+        "No exact Roman Republic successor link was added because imported event-year geometry and annexation associations require separate verification. Conquest and subsequent Roman city are narrated with sources. Source-checked author draft remains pending independent review."
       ],
-      "locator": "Brief synthesis: ports; criterion ii",
-      "status": "source_checked"
-    },
-    {
-      "cardPath": "/sections/1/items/0/text",
-      "sourceIds": [
-        "carthage"
-      ],
-      "locator": "Criterion ii: tophet and stelae",
-      "status": "source_checked"
-    },
-    {
-      "cardPath": "/sections/2/items/0/text",
-      "sourceIds": [
-        "carthage"
-      ],
-      "locator": "Brief synthesis: Magon and Hannon",
-      "status": "source_checked"
-    },
-    {
-      "cardPath": "/sections/3/items/0/text",
-      "sourceIds": [
-        "carthage"
-      ],
-      "locator": "English introduction; list of successive archaeological periods",
-      "status": "source_checked"
-    },
-    {
-      "cardPath": "/fall",
-      "sourceIds": [
-        "carthage"
-      ],
-      "locator": "English introductory description",
-      "status": "source_checked"
+      "proposedOverrides": {
+        "id": "carthaginian-empire",
+        "kind": "state",
+        "region": "Africa",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "Punic Carthage grew into a major western Mediterranean trading and naval power. Its houses, writing, coins and sanitation reveal more than Hannibal’s wars. Rome destroyed the city in 146 BCE; a Roman city later rose on the site, while Punic traditions did not disappear with one capital.",
+        "summarySource": null,
+        "card": "cards/carthaginian-empire.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified."
     }
   ],
-  "identityAndDateCaveats": [
-    "carthaginian-empire and carthage are consecutive imported labels, not two independently counted civilizations.",
-    "UNESCO English lead gives destruction in 146 BC; synthesis has a conflicting 146 AD typo. The correct BCE statement is used.",
-    "Do not treat every feature in the UNESCO mixed-period property as Punic."
-  ],
-  "proposedOverrides": [
+  "sharedAssociations": [
     {
-      "action": "unify_identity_preserve_alias",
-      "ids": [
-        "carthaginian-empire",
-        "carthage"
-      ]
-    },
-    {
-      "action": "correct_terminal_date",
-      "ids": [
-        "carthaginian-empire",
-        "carthage"
-      ],
-      "proposedEnd": -146
+      "id": "carthage",
+      "card": "data/cards/carthaginian-empire.json",
+      "basis": "The two imported labels represent consecutive map slices of the same Punic Carthage, with a historically attested political ending in 146 BCE. Shared narrative is not a claim that the imported polygons are exact borders.",
+      "proposedOverrides": {
+        "id": "carthage",
+        "kind": "state",
+        "region": "Africa",
+        "dateBasis": "historical",
+        "to": -146,
+        "fell": null,
+        "successors": [],
+        "summary": "Punic Carthage grew into a major western Mediterranean trading and naval power. Its houses, writing, coins and sanitation reveal more than Hannibal’s wars. Rome destroyed the city in 146 BCE; a Roman city later rose on the site, while Punic traditions did not disappear with one capital.",
+        "summarySource": null,
+        "card": "cards/carthaginian-empire.json"
+      }
     }
   ],
-  "borders": {
-    "status": "not_researched",
-    "rule": "Archaeological property boundaries are not political frontiers."
-  },
-  "remainingWork": [
-    "Independent claim review",
-    "Expand primary and specialist sources",
-    "Date each cultural development by phase",
-    "Research political transitions and defensible map geometry"
+  "overrideClaims": [
+    {
+      "id": "carthaginian-empire",
+      "pointer": "/summary",
+      "text": "Punic Carthage grew into a major western Mediterranean trading and naval power. Its houses, writing, coins and sanitation reveal more than Hannibal’s wars. Rome destroyed the city in 146 BCE; a Roman city later rose on the site, while Punic traditions did not disappear with one capital.",
+      "sourceIds": [
+        "unesco",
+        "rome",
+        "latrines"
+      ],
+      "locator": "UNESCO foundation/ports/end; British Museum war sequence; Bir Massouda latrine abstract."
+    },
+    {
+      "id": "carthage",
+      "pointer": "/summary",
+      "text": "Punic Carthage grew into a major western Mediterranean trading and naval power. Its houses, writing, coins and sanitation reveal more than Hannibal’s wars. Rome destroyed the city in 146 BCE; a Roman city later rose on the site, while Punic traditions did not disappear with one capital.",
+      "sourceIds": [
+        "unesco",
+        "rome",
+        "latrines"
+      ],
+      "locator": "Same shared historical entity and attested ending; alias uses dateBasis historical to stop in 146 BCE."
+    }
+  ],
+  "identityEvidence": [
+    {
+      "id": "carthaginian-empire",
+      "year": -400,
+      "properties": {
+        "civ": "carthaginian-empire",
+        "from": -400,
+        "to": -323,
+        "precision": 1
+      },
+      "bounds": [
+        -7.227072270722715,
+        29.798696444845447,
+        19.125191251912526,
+        41.18475795835366
+      ],
+      "assessment": "Imported snapshot position and dates document the label association only; political borders are not independently verified."
+    },
+    {
+      "id": "carthaginian-empire",
+      "year": -300,
+      "properties": {
+        "civ": "carthaginian-empire",
+        "from": -300,
+        "to": -200,
+        "precision": 1
+      },
+      "bounds": [
+        -7.227072270722715,
+        29.798696444845447,
+        19.125191251912526,
+        41.18475795835366
+      ],
+      "assessment": "Imported snapshot position and dates document the label association only; political borders are not independently verified."
+    },
+    {
+      "id": "carthage",
+      "year": -200,
+      "properties": {
+        "civ": "carthage",
+        "from": -200,
+        "to": -100,
+        "precision": 1
+      },
+      "bounds": [
+        7.914679146791485,
+        32.917559336355225,
+        11.125911259112598,
+        37.282031919908576
+      ],
+      "assessment": "Imported snapshot position and dates document the label association only; political borders are not independently verified."
+    }
   ]
 }
