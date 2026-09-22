@@ -77,7 +77,7 @@ const records = [...civs.values()].sort((a,b)=>a.id.localeCompare(b.id)).map(c =
   const currentHash = hasCard ? crypto.createHash('sha256').update(fs.readFileSync(path.join(root, cardPath))).digest('hex') : null;
   const accepted = currentHash && currentHash === review?.reviewedFileSha256 ? review : null;
   const packet = explicit.get(c.id);
-  const owner = packet?.owner || (suggested.length === 1 && suggested[0] === 'Asia' ? 'QWEN' : 'Unassigned regional queue');
+  const owner = packet?.owner || 'Unassigned regional queue';
   return {
     id:c.id, name:c.name, from:c.from, to:c.to, kind:c.kind || 'state',
     datesApproximate:!!c.circa,
@@ -120,7 +120,7 @@ const result = {
   version:1,
   scope:'Inventory of current repository records, not a complete census of human civilizations. Missing and conflated identities remain to be added or corrected.',
   routingMethod:'Geographic hints use historical feature centroids inside modern country geometry. Hints can be incomplete or cross continental boundaries; they do not establish historical identity, origin, sovereignty or territorial validity.',
-  asiaOwner:'QWEN', totals:total, queues, records
+  totals:total, queues, records
 };
 fs.writeFileSync(path.join(root,'data/research/coverage.json'),JSON.stringify(result,null,2)+'\n');
 // Keep every unfilled More info destination in a worklist. Source links and
