@@ -1,0 +1,289 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel thai-kingdoms research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "thk-atlas",
+      "title": "Human History Map: Thai Kingdoms imported index and geometry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Local index and world-600/world-700 decoded; metadata only. Polygon contains Kunming, Dien Bien and Luang Prabang diagnostic points, excludes Dali, Hanoi and Chiang Mai. Not reconstructed ethnic borders."
+    },
+    {
+      "id": "thk-loans",
+      "title": "Pittayawat Pittayaporn, Layers of Chinese Loanwords in Proto-Southwestern Tai (2014)",
+      "url": "https://doi.org/10.1163/26659077-01703004",
+      "note": "Manusya 17(3), pp.47 to68. Original publisher abstract directly read through indexed DOI page: four layers and proposed eighth-to-tenth-century dispersal. Full PDF unavailable; no individual loanword claims taken from inaccessible tables."
+    },
+    {
+      "id": "thk-proto",
+      "title": "Pittayawat Pittayaporn, The Phonology of Proto-Tai (Cornell, 2009)",
+      "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/6af02aa7-c444-481c-8d1b-ac0c25346f20/content",
+      "note": "Original indexed dissertation abstract and printed p.110, Table3-26 checked. Comparative reconstruction, not surviving ancient speech recording or manuscript."
+    },
+    {
+      "id": "thk-rice",
+      "title": "Laurent Sagart, How Many Independent Rice Vocabularies in Asia? (2011)",
+      "url": "https://link.springer.com/article/10.1007/s12284-011-9077-8",
+      "note": "Direct full text, Austronesian and Tai-Kadai section. Uses paddy-field and dehusked-rice reconstructions, and proposes Tai-to-Chinese borrowing. Wider macrofamily hypothesis is contested and not presented as fact."
+    },
+    {
+      "id": "thk-loom",
+      "title": "Christopher D. Buckley and colleagues, Kra-Dai languages and weaving technologies (2025)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5A71D64485DC03FB5D238DA9789C3E33/S2513843X2510008Xa_hi.pdf/contrasting-modes-of-cultural-evolution-kra-dai-languages-and-weaving-technologies.pdf",
+      "note": "Full paper read: pp.2 to5, Figure1, and p.20 loom word. Proto-Tai weave reconstruction is indirect evidence; contemporary family transmission and ceremonial skirt are explicitly later comparisons, not dated600to800."
+    },
+    {
+      "id": "thk-stele",
+      "title": "Tateishi Kenji, The Acceptance of Han Culture during the Tang to Wu Zhou Period in Yunnan (2021)",
+      "url": "https://www.u-tokai.ac.jp/uploads/sites/8/2022/03/9fe60819025d0930609fbdd2916a20ca-1-1.pdf",
+      "note": "Tokai University, pp.75 to91, DOI10.18995/24344710.6.75. Full PDF read. Heading 大周故河東州刺史之碑 and Japanese translation. English abstract mistakenly says Annan/Dongzhou and gives February3,698; Japanese body consistently Anning/Hedong and November14,698. Public uses year698 only. Death-year conversion in body also inconsistent; excluded. No Tai attribution established."
+    },
+    {
+      "id": "thk-debate",
+      "title": "Academia Sinica, The historical debate over Dai and Tai kingdoms",
+      "url": "https://ethno.ihp.sinica.edu.tw/en/southwest/main_DA-07.html",
+      "note": "Direct academic project page, final Academic Debate concerning Nanzhao section only. It rejects Dai/Tai ruling-family identification and notes Bai/Yi discussion. Earlier sections contain legendary and anachronistic Lanna chronology; none used."
+    },
+    {
+      "id": "thk-history",
+      "title": "Chris Baker and Pasuk Phongpaichit, A History of Thailand, second edition (2009)",
+      "url": "https://api.pageplace.de/preview/DT0400.9781107299368_A23760643/preview-9781107299368_A23760643.pdf",
+      "note": "Direct publisher/distributor preview, printed pp.4 to8. Valley cultivation and mueang model are broad historical synthesis, not specifically attested600to800 institutions. Thai written evidence thirteenth century. Later city-state comparison explicitly labeled."
+    }
+  ],
+  "entities": [
+    {
+      "id": "thai-kingdoms",
+      "card": "data/cards/thai-kingdoms.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "thk-atlas",
+            "thk-loans"
+          ],
+          "locator": "Local index and world-600/world-700 decoded; metadata only. Polygon contains Kunming, Dien Bien and Luang Prabang diagnostic points, excludes Dali, Hanoi and Chiang Mai. Not reconstructed ethnic borders. Manusya 17(3), pp.47 to68. Original publisher abstract directly read through indexed DOI page: four layers and proposed eighth-to-tenth-century dispersal. Full PDF unavailable; no individual loanword claims taken from inaccessible tables.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "thk-atlas"
+          ],
+          "locator": "Local index and world-600/world-700 decoded; metadata only. Polygon contains Kunming, Dien Bien and Luang Prabang diagnostic points, excludes Dali, Hanoi and Chiang Mai. Not reconstructed ethnic borders.",
+          "dateScope": {
+            "from": 600,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "thk-loans"
+          ],
+          "locator": "2014 article abstract, four loanword layers and eighth-to-tenth-century proposal",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "thk-debate"
+          ],
+          "locator": "Academic Debate concerning the Nanzhao Kingdom, final paragraphs",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "thk-rice"
+          ],
+          "locator": "Austronesian and Tai-Kadai section, paddy field and dehusked rice",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "thk-rice"
+          ],
+          "locator": "Same section, Chinese 秈 and proposed borrowing; explicit indica/japonica caution",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "thk-loom"
+          ],
+          "locator": "Buckley et al., printed p.5 weave and p.20 loom etymon",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "thk-proto"
+          ],
+          "locator": "Dissertation printed p.110, Table3-26, to bathe *ʔa:pD",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "thk-stele"
+          ],
+          "locator": "Tateishi printed pp.76 to78, monument date, office and family",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "thk-stele"
+          ],
+          "locator": "Printed pp.76 to78, excavation, Liu tile, joint burial and Wang Shanbao",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "thk-stele"
+          ],
+          "locator": "Printed pp.75 to76, heading 大周故河東州刺史之碑 and translated title",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "thk-stele"
+          ],
+          "locator": "Printed pp.79 to81, author Lüqiu Jun, cited classics and Buddhist images",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "thk-history"
+          ],
+          "locator": "Baker and Phongpaichit, printed pp.4 and6; broad historical synthesis",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "thk-history"
+          ],
+          "locator": "Printed pp.5 to8, mueang and later confederations",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "thk-loom"
+          ],
+          "locator": "Printed pp.2 to3 and Figure1; contemporary/collection example, no ancient date",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "thk-loom"
+          ],
+          "locator": "Printed pp.2 to3, transmission of designs and loom technologies",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "thk-history"
+          ],
+          "locator": "Printed p.4, known written Thai evidence; scoped statement of packet research",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "thk-loans",
+            "thk-atlas"
+          ],
+          "locator": "Manusya 17(3), pp.47 to68. Original publisher abstract directly read through indexed DOI page: four layers and proposed eighth-to-tenth-century dispersal. Full PDF unavailable; no individual loanword claims taken from inaccessible tables. Local index and world-600/world-700 decoded; metadata only. Polygon contains Kunming, Dien Bien and Luang Prabang diagnostic points, excludes Dali, Hanoi and Chiang Mai. Not reconstructed ethnic borders.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "thai-kingdoms",
+        "name": "Early Tai networks and their regional setting",
+        "from": 600,
+        "to": 800,
+        "circa": true,
+        "dateBasis": "map_coverage",
+        "kind": "culture",
+        "region": "Asia",
+        "summary": "An uncertain early atlas label, explored through language reconstruction and carefully distinguished regional evidence.",
+        "card": "cards/thai-kingdoms.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-600.json",
+          "properties": {
+            "civ": "thai-kingdoms",
+            "from": 600,
+            "to": 700,
+            "precision": 1
+          },
+          "bounds": [
+            100.12240122401226,
+            19.47852291420695,
+            106.42966429664295,
+            26.056337469970913
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "thai-kingdoms",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            100.12240122401226,
+            19.47852291420695,
+            106.42966429664295,
+            26.056337469970913
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "thai-kingdoms",
+      "note": "Exact ID only; no sharing. Imported name Thai Kingdoms is not support for centralized rule600to800. Two identical features600to700/700to800, bbox100.1224,19.4785,106.4297,26.0563. Anning material is Tang/Wu Zhou-associated and NOT ethnically assigned as Tai. Sukhothai, kingdom-of-sukhotai, Ayutthaya, lan-na, Thailand, Dvaravati, Nanzhao and earlier Thai culture records remain separate. Parent explicitly approved cautious regional-context approach following identity alert. No fabricated ancient Thai script or later institutions projected backwards."
+    }
+  ]
+}
