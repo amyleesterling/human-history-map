@@ -1,0 +1,106 @@
+{
+  "reviewer": "iberian_cards",
+  "scope": "Independent focused review of all 63 public passages, five writing witnesses and selected household or numerical claims. This is not certification of all 52 cited sources or every historical boundary.",
+  "result": "No substantive unsupported writing or household claim found in the checked scope. Two small provenance/wording refinements and public punctuation cleanup recommended before integration.",
+  "findings": [
+    {
+      "id": "helvetic-republic",
+      "pointer": "sections[1].items[1]",
+      "severity": "minor",
+      "finding": "The questionnaire asks whether the teacher has a family and how many children. Spouses are not separately named in its question III.11.e.",
+      "action": "Replace spouses and children with families and children.",
+      "url": "https://www.stapferenquete.ch/db/browse/fragen"
+    },
+    {
+      "id": "batavian-republic",
+      "pointer": "source eun-br-tree; sections[1].items[0]",
+      "severity": "provenance",
+      "finding": "January celebration and twig are correct, independently confirmed by object NG-KOG-1204-1. The current topic page exposes little explanatory text.",
+      "action": "Prefer the direct object record as source URL and add object number to locator. Do not substitute the National Archives' different June twig.",
+      "url": "https://www.rijksmuseum.nl/nl/collectie/object/Takje-van-een-vrijheidsboom--9dfd8164320994904e7c0c6f10edd5f5"
+    },
+    {
+      "id": "all",
+      "pointer": "public overviews, periods and passages",
+      "severity": "editorial",
+      "finding": "Public prose still contains long dashes, including Krakow overview and orchard passage, Seven Zenden writing passage and date ranges.",
+      "action": "Follow root's plain punctuation convention while preserving quoted originals and URLs."
+    }
+  ],
+  "writingChecks": [
+    {
+      "sourceId": "eun-ku-writing",
+      "access": "Direct archival page and full transcription",
+      "confirmed": "1521-03-28 copy, exact five-word Swedish excerpt, proper names and translation."
+    },
+    {
+      "sourceId": "eun-br-revolution",
+      "access": "Direct National Archives page, Article 1 draft and final Article 3 comparison",
+      "confirmed": "Exact Dutch excerpt and translation; draft distinction and 1806 transformation."
+    },
+    {
+      "sourceId": "eun-hr-poster",
+      "access": "Direct National Museum text",
+      "confirmed": "Bauma 1798 board, four-word German excerpt/translation; 22 August 1798 ceremony, 1525 oath-takers and children representation."
+    },
+    {
+      "sourceId": "eun-kr-straszewski",
+      "access": "Direct getHtml failed; indexed full municipal original plus same text at municipal parks department zzm.krakow.pl/edukacja/zielony-bohater-krakowa/756-florian-straszewski-wspoltworca-krakowskich-plant.html",
+      "confirmed": "1838 medal commission and five-word inscription/translation; post 1826 Wawel vineyards and peach orchards. Did not inspect the physical medal."
+    },
+    {
+      "sourceId": "eun-sz-recipe",
+      "access": "Direct Culinary Heritage historical recipe paragraph plus FHNW edition metadata",
+      "confirmed": "Exact three-word early German excerpt/translation, ingredients and baking; FHNW title establishes 1581 manuscript date and 2001 edition. Full scholarly edition not inspected."
+    }
+  ],
+  "additionalCheckedSources": [
+    {
+      "sourceId": "eun-ku-school",
+      "access": "Indexed full Swedish original and English museum equivalent",
+      "confirmed": "1430 named schoolmaster, trade/craft education, further study and means-related hospice payment."
+    },
+    {
+      "sourceId": "eun-ku-fish",
+      "access": "Direct Lund University report",
+      "confirmed": "Barrel, estimated two-meter sturgeon, DNA identification and royal 1495 voyage context."
+    },
+    {
+      "sourceId": "eun-br-meter",
+      "access": "Direct Rijksmuseum curator transcript 00:01:50 and 00:02:42",
+      "confirmed": "1799 iron bar, wooden red-velvet-lined case, absence of subdivisions."
+    },
+    {
+      "sourceId": "eun-br-tree",
+      "access": "Direct museum topic and linked object record",
+      "confirmed": "January 21, 1795 twig object, saved souvenir and renamed square. Different from June 1795 twig at National Archives."
+    },
+    {
+      "sourceId": "eun-hr-survey",
+      "access": "Direct scholarly questionnaire transcription",
+      "confirmed": "Family/children, other employment, grain/wood pay, school condition and seasonal attendance. Minor wording refinement above."
+    },
+    {
+      "sourceId": "eun-hr-coins",
+      "access": "Direct primary cantonal archaeology PDF text",
+      "confirmed": "173 recovered silver coins in 1987, mostly French/Bernese, youngest 1798 Helvetic 40-batzen coin. Not evidence of an exact burial year or complete original hoard."
+    },
+    {
+      "sourceId": "eun-kr-school",
+      "access": "Direct school institutional history",
+      "confirmed": "1839 Senate-order construction paid by inhabitants; distinct agricultural school 1860."
+    },
+    {
+      "sourceId": "eun-sz-school",
+      "access": "Direct Jesuit institutional history, Brig section",
+      "confirmed": "1673 building, boarding provision, 1686 agreement, 80–150 pupils before 1738."
+    },
+    {
+      "sourceId": "eun-sz-vex",
+      "access": "Direct preservation association account",
+      "confirmed": "1453 foundation act, 1476 agreement, 12 km route and multiple jurisdictions. Both pre-republic infrastructure dates are disclosed in public prose."
+    }
+  ],
+  "limits": "All narratives were read for obvious anachronisms. Other source citations, full manuscript or object photographs, biographies and detailed political institutional dates were not independently exhaustively rechecked. Author checks.json reports maximum 180 Unicode words per URL including period titles; root should run the global budget and runtime validators after any integration summaries are added. No bundle or runtime files edited by reviewer.",
+  "browserSessionsOpened": 0
+}
