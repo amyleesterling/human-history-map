@@ -40,6 +40,20 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Four Tangut characters on the Xixia card. Subset from Google's Noto Serif
+   Tangut; SIL OFL 1.1 license is beside the font file. */
+@font-face {
+  font-family: 'Noto Serif Tangut'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(vendor/fonts/noto-serif-tangut/NotoSerifTangut-4glyphs.ttf) format('truetype');
+  unicode-range: U+17D50, U+183E8, U+1852D, U+18736;
+}
+/* Six attested South Arabian letters on the Saba card, also under SIL OFL. */
+@font-face {
+  font-family: 'Noto Sans Old South Arabian'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(vendor/fonts/noto-sans-old-south-arabian/NotoSansOldSouthArabian-6glyphs.ttf) format('truetype');
+  unicode-range: U+10A63, U+10A67, U+10A68, U+10A6A, U+10A6B, U+10A71;
+}
+
 :root {
   --bg: #0b1220;
   --bg-2: #101a2c;
@@ -71,7 +85,7 @@ html, body { margin: 0; padding: 0; }
 html { background: var(--bg); }
 body {
   background: var(--bg); color: var(--ink);
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Segoe UI", 'Noto Serif Tangut', 'Noto Sans Old South Arabian', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   line-height: 1.45;
 }
