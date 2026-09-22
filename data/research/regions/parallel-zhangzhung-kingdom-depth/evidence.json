@@ -1,0 +1,350 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel zhangzhung-kingdom research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "zhangzhung-atlas",
+      "title": "Historical atlas: western plateau snapshot at 400 BCE",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Local index and all five identical/coarse Zhangzhung features decoded: 400 to 1 BCE, bounds 74.227,27.389,84.397,37.538. These are atlas metadata, not independently dated frontiers. See identities.json."
+    },
+    {
+      "id": "zhangzhung-history",
+      "title": "George van Driem, Zhangzhung and its next of kin in the Himalayas (2001)",
+      "url": "https://www.isw.unibe.ch/e41142/e41180/e523709/e547095/2001a_ger.pdf",
+      "note": "Direct university-hosted paper, printed pages 31 to 32: western plateau polity, probable conquest 644/645 and uncertainty in older chronologies; royal marriage narrative treated as a story, not an independently verified causal account. Pages 36 to 39 distinguish later religious glossaries and disputed Dunhuang medical-language identification."
+    },
+    {
+      "id": "zhangzhung-survey",
+      "title": "John Vincent Bellezza, Antiquities of Zhang Zhung, Volume I: Archaic Residential Monuments (2010)",
+      "url": "https://texts.mandala.library.virginia.edu/text/volume-i-archaic-residential-monuments-antiquities-zhang-zhung",
+      "note": "University of Virginia/THL scholarly field inventory. Direct page extraction minimal, but full institutional indexed original read through exact queries. Introduction on mostly post-eleventh-century Bon sources; typology I.1a on stone roofs; Gekhö Kharlung A-89 and note 2 on wood sample Beta 200752. Date belongs to a loose small wood round, not all standing walls. Entire volume and subpages grouped as one work."
+    },
+    {
+      "id": "zhangzhung-crops",
+      "title": "Li Tang and colleagues, Prehistoric agricultural decision making in the western Himalayas (2022)",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/prehistoric-agricultural-decision-making-in-the-western-himalayas-ecological-and-social-variables/C3E2CB6790A2236E22C5309FBFF95804",
+      "note": "Direct full Antiquity paper, DOI 10.15184/aqy.2022.80. Excavations section: Jiweng 391 to 208 cal BCE, Piyang 396 to 212 cal BCE, Dingdong about 348 BCE to 541 CE. Discussion/results on hearth grains and hulled/naked barley. No assignment of individual sites to documented royal subjects."
+    },
+    {
+      "id": "zhangzhung-labor",
+      "title": "Melissa M. Ritchey and colleagues, Into thin air: prehistoric intensive crop management in high altitude western Tibet (2024)",
+      "url": "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2024.1398209/full",
+      "note": "Direct original research article, site descriptions and discussion sections 7.1 and 7.2. Stable-isotope interpretation of water and soil nutrients; natural influences and small sample size retained. Dingdong late samples extend into fifth/sixth century CE, explicitly outside the atlas span."
+    },
+    {
+      "id": "zhangzhung-burials",
+      "title": "Institute of Archaeology, CASS and colleagues, Gurugyam and Chuvthag Cemeteries in Ngari Prefecture, Tibet (2016)",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3Ae87ce384-c638-4aa2-9550-ff9e305b52ba/files/m3d600ee5cd74d492c629d9f21bc59fa1",
+      "note": "Primary excavation report translated by Anke Hein, Chinese Archaeology 16, 27 to 48, DOI 10.1515/char-2016-0003. Oxford original PDF full indexed pages 32,41,47 checked; direct PDF fetch failed. Zone II is earlier, M3 2250±25 BP and M5 2150±25 BP as reported, not silently treated as calibrated exact years. M4:9 repaired painted tray and M3 right:15 wooden basin; M4 not independently radiocarbon dated. All versions one work."
+    },
+    {
+      "id": "zhangzhung-language",
+      "title": "James A. Matisoff, The interest of Zhangzhung for comparative Tibeto-Burman (2001)",
+      "url": "https://stedt.berkeley.edu/pdf/JAM/Matisoff_2001_Zhangzhung-comparative-TB.pdf",
+      "note": "Direct Berkeley-hosted scholarly paper, author-copy pages 2 and 3: 1965 Bon-po Association bilingual dictionary; WATER entry 4 gives Zhangzhung ting. Modern Tibetan rendering supplied transparently from that verified scholarly transliteration; not a contemporary BCE inscription. This paper and its dictionary discussion are treated as one source work."
+    }
+  ],
+  "entities": [
+    {
+      "id": "zhangzhung-kingdom",
+      "card": "data/cards/zhangzhung-kingdom.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "zhangzhung-atlas",
+            "zhangzhung-history"
+          ],
+          "locator": "Local index and all five identical/coarse Zhangzhung features decoded: 400 to 1 BCE, bounds 74.227,27.389,84.397,37.538. These are atlas metadata, not independently dated frontiers. See identities.json. Direct university-hosted paper, printed pages 31 to 32: western plateau polity, probable conquest 644/645 and uncertainty in older chronologies; royal marriage narrative treated as a story, not an independently verified causal account. Pages 36 to 39 distinguish later religious glossaries and disputed Dunhuang medical-language identification.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "zhangzhung-atlas"
+          ],
+          "locator": "Local index and all five identical/coarse Zhangzhung features decoded: 400 to 1 BCE, bounds 74.227,27.389,84.397,37.538. These are atlas metadata, not independently dated frontiers. See identities.json.",
+          "dateScope": {
+            "from": -400,
+            "to": -1
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "zhangzhung-survey"
+          ],
+          "locator": "Introduction, criteria for identifying archaic monuments, subsection 1 on Bon literature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "zhangzhung-crops"
+          ],
+          "locator": "Excavations at high-elevation sites, Jiweng paragraph; interpretation attributed.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "zhangzhung-labor"
+          ],
+          "locator": "Site description of Dingdong, drawing on prior excavations; eleven structures and three excavated spaces not added as fourteen.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "zhangzhung-crops"
+          ],
+          "locator": "Discussion, Barley cultivation in the higher river valleys; no recipe or identified cook claimed.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "zhangzhung-crops"
+          ],
+          "locator": "Discussion on barley phenotypes, processing labor and uncertainty of hulled crop importance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "zhangzhung-crops"
+          ],
+          "locator": "Excavations section, Piyang paragraph and Table 1.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "zhangzhung-labor"
+          ],
+          "locator": "Section 7.1; alternatives of irrigation and strategic planting in wetter areas; sampled sequence crosses BCE/CE boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "zhangzhung-labor"
+          ],
+          "locator": "Section 7.2, likely manuring and natural influences; agricultural interpretation not sanitation or germ theory.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "zhangzhung-burials"
+          ],
+          "locator": "Printed page 41, 2014M4:9, Figure 38; page 32 locates 2014M4 in earlier Zone II; no precise date assigned to the individual tray.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "zhangzhung-burials"
+          ],
+          "locator": "Printed page 41, twenty wooden basins and example 2014M3 right:15; collection spans graves, not all assigned one date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "zhangzhung-burials"
+          ],
+          "locator": "Printed page 47, chronology and qualified clan-cemetery inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "zhangzhung-survey"
+          ],
+          "locator": "A-89 Gekhö Kharlung, note 2, sample Beta 200752: round wood found sheltered in dependency structure; contextual limit retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "zhangzhung-survey"
+          ],
+          "locator": "Typology I.1a, corbels/bridging stones/sheathing and small-room plans; chronology explicitly limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "zhangzhung-history"
+          ],
+          "locator": "Printed pages 31 to 32, royal marriages, story caveat and wider expansion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "zhangzhung-language"
+          ],
+          "locator": "Author-copy page 2, 1965 dictionary and scholarly comparison; later publication date explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "zhangzhung-language"
+          ],
+          "locator": "Author-copy page 3, entry [4] WATER: Zh. ting; modern rendering distinguished from source transliteration and ancient witness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "zhangzhung-history"
+          ],
+          "locator": "Direct university-hosted paper, printed pages 31 to 32: western plateau polity, probable conquest 644/645 and uncertainty in older chronologies; royal marriage narrative treated as a story, not an independently verified causal account. Pages 36 to 39 distinguish later religious glossaries and disputed Dunhuang medical-language identification.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "zhangzhung-kingdom",
+        "name": "Zhangzhung and early western plateau communities",
+        "region": "Asia",
+        "card": "cards/zhangzhung-kingdom.json",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "Early western plateau archaeology and later Zhangzhung history, with uncertain royal boundaries and carefully dated traditions."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "zhangzhung-kingdom",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            74.22734227342275,
+            27.389043067229522,
+            84.39744397443974,
+            37.53778973680987
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "zhangzhung-kingdom",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            74.22734227342275,
+            27.389043067229522,
+            84.39744397443974,
+            37.53778973680987
+          ]
+        },
+        {
+          "file": "world-bc300.json",
+          "properties": {
+            "civ": "zhangzhung-kingdom",
+            "from": -300,
+            "to": -200,
+            "precision": 1
+          },
+          "bounds": [
+            74.22734227342275,
+            27.389043067229522,
+            84.39744397443974,
+            37.53778973680987
+          ]
+        },
+        {
+          "file": "world-bc323.json",
+          "properties": {
+            "civ": "zhangzhung-kingdom",
+            "from": -323,
+            "to": -300,
+            "precision": 1
+          },
+          "bounds": [
+            74.22734227342275,
+            27.389043067229522,
+            84.39744397443974,
+            37.53778973680987
+          ]
+        },
+        {
+          "file": "world-bc400.json",
+          "properties": {
+            "civ": "zhangzhung-kingdom",
+            "from": -400,
+            "to": -323,
+            "precision": 1
+          },
+          "bounds": [
+            74.22734227342275,
+            27.389043067229522,
+            84.39744397443974,
+            37.53778973680987
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "zhangzhung-kingdom",
+      "decision": "One exact indexed record; no aliases.",
+      "mapInterval": {
+        "from": -400,
+        "to": -1,
+        "circa": true
+      },
+      "bounds": [
+        74.227,
+        27.389,
+        84.397,
+        37.538
+      ],
+      "related": [
+        "tibetan-empire",
+        "tibet"
+      ],
+      "limits": "Atlas span precedes secure seventh-century political narrative by centuries. Early material culture is regional, not proven royal jurisdiction. Mostly later Bon literary traditions are not treated as contemporary histories. Some sites/objects extend into CE periods, which public copy states. No invented hospital, school attendance, toilet practice, exact dynasty founder or ancient script. 2001 scholarly word sample uses explicitly modern Tibetan-script rendering, not an ancient inscription. No successor link because Tibetan Empire indexed geometry begins 700, after probable 644/645 annexation."
+    }
+  ]
+}
