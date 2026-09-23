@@ -1,0 +1,807 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel mon-states research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "monr-atlas",
+      "title": "Human History Map, imported Mon records and decoded Lower Myanmar outlines",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon."
+    },
+    {
+      "id": "monr-history",
+      "title": "Donald M. Stadtner, The Mon of Lower Burma (2008), Journal of the Siam Society 96",
+      "url": "https://thesiamsociety.org/wp-content/uploads/2008/03/JSS_096_0g_Stadtner_MonOfLowerBurma.pdf",
+      "note": "Original scholarly PDF read directly. Pages 193-194 distinguish later conquest tradition from evidence of Mon influence; page 198 Winka monastery and disputed date of tablet WK 6, Mathias Jenny reading in footnote 4; page 202 Kyanzittha inscriptions including 1098; page 203 and figure 9 page 215 Mahajanaka scenes. The paper contests Aung-Thwin; its ethnic attribution of all archaeology is not adopted."
+    },
+    {
+      "id": "monr-tablets",
+      "title": "Khin Ma Ma Mu, Terracotta Votive Tablets from Catubhummika Hngak Twin Monastery, Thaton (2018)",
+      "url": "https://www.spafajournal.org/index.php/spafajournal/article/view/159",
+      "note": "Original journal abstract fully readable in indexed results; direct page fails. Reproducible exact-title query plus 1350. Original article text additionally indexed on ResearchGate, same work not separate budget. Abstract says over 2000 total and 1350 good condition; introduction says 1350 complete plus 2000 fragments, so no exact total asserted. Stylistic eighth/ninth-eleventh century range, no Mon/Pyu inscription in this particular assemblage."
+    },
+    {
+      "id": "monr-ceramics",
+      "title": "Kaushik Gangopadhyay and colleagues, Finding Historical Linkages between India and Myanmar through Archaeological and Physicochemical Analysis of Ceramics (2024)",
+      "url": "https://orca.cardiff.ac.uk/id/eprint/173900/1/JASREP%20Paper%20(Kamalika).pdf",
+      "note": "Original Cardiff repository manuscript read directly, pages 8-10 and Table 4 for Lower Myanmar ceramics; abstract and analysis for chemical comparisons. Entire study first century BCE to thirteenth century CE; limited site dating and no claim every pot belongs in 800-1279. Rice-husk FTIR suggestion not used as diet evidence. DOI 10.1016/j.jasrep.2024.104828."
+    },
+    {
+      "id": "monr-bricks",
+      "title": "U Aung Myint and Elizabeth Moore, Finger-Marked Designs on Ancient Bricks in Myanmar (1991)",
+      "url": "https://thesiamsociety.org/wp-content/uploads/1991/03/JSS_079_2i_MyintMoore_FingerMarkedBricksInMyanmar.pdf",
+      "note": "Original scholarly PDF read directly. Pages 81 and 91-93, Kyaikkatha marks/aerial discovery and Thaton laterite-faced moat/1986 brick discoveries. Regionally widespread technology not ethnic fingerprint. Pyu rice-husk samples and Thagara evidence excluded."
+    },
+    {
+      "id": "monr-water",
+      "title": "Elizabeth Moore, U San Win and Pyiet Phyo Kyaw, Water Management in the Urban Cultural Heritage of Myanmar (2016)",
+      "url": "https://www.cambridge.org/core/journals/trans-trans-regional-and-national-studies-of-southeast-asia/article/water-management-in-the-urban-cultural-heritage-of-myanmar/D8FC4F75C83338FCE2624A44C0D8C6EE",
+      "note": "Original full scholarly HTML read directly, Kyaikkatha section and Plate 3. Seasonal ponds, lake/reservoir chain, roughly one-kilometer canal. Authors explicitly state canal unexcavated/undated and infer first-millennium association from role in settlement. Later local lake names not assigned ancient dates. No household toilet inference."
+    },
+    {
+      "id": "monr-queen",
+      "title": "H. L. Shorto, The Kyaikmaraw Inscriptions (1958)",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/kyaikmaraw-inscriptions/3B408434C4315EEAAD8E096E7CAABBF0",
+      "note": "Original publisher extract read directly: Kyaikmaraw I, Queen Baña Thau/Shin Sawbu land dedication 1455, earliest dated Middle Mon inscription in author assessment. Shrine southeast of Moulmein, outside imported polygon and after all atlas intervals; explicitly later comparison. No full-paywalled-text claim."
+    },
+    {
+      "id": "monr-archive",
+      "title": "British Library, Wat Cet Riw Collection, EAP1123/1",
+      "url": "https://searcharchives.bl.uk/catalog/032-003708950",
+      "note": "Original archival description read directly: late nineteenth/early twentieth-century collection, three medical texts, Mon/Pali/Thai, accordion paper books, multiple hands and doodles, local migration memories and donor box dated 1918. That box date is not manuscript date. Modern Mon community in Samut Sakhon, Thailand, outside polygon."
+    }
+  ],
+  "entities": [
+    {
+      "id": "mon-state",
+      "card": "data/cards/mon-state.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Original journal abstract fully readable in indexed results; direct page fails. Reproducible exact-title query plus 1350. Original article text additionally indexed on ResearchGate, same work not separate budget. Abstract says over 2000 total and 1350 good condition; introduction says 1350 complete plus 2000 fragments, so no exact total asserted. Stylistic eighth/ninth-eleventh century range, no Mon/Pyu inscription in this particular assemblage.",
+          "dateScope": {
+            "from": 800,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Pages 193-194 and 202; conquest narrative explicitly later/disputed, 1098 inscription securely dated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 198, Winka excavation description; first-millennium context, no universal school or exact foundation date inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Original journal abstract, total deliberately avoided because abstract and introduction enumerate fragments differently; comparative stylistic dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Abstract, three groups and geographic comparisons; movement of specific people left unproven.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "monr-bricks"
+          ],
+          "locator": "Pages 81 and 91-93; aerial identification 1976 and ground investigation 1981, marks and broad regional distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "monr-ceramics"
+          ],
+          "locator": "Manuscript pages 8-10, Table 4; functions presented generally, no residue-derived menu. Study dates span first century BCE to thirteenth century CE.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "monr-ceramics"
+          ],
+          "locator": "Abstract and laboratory discussion; similarity interpreted as possible technological/exchange connection, not automatic ethnic identification or precise trade itinerary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "monr-water"
+          ],
+          "locator": "Kyaikkatha section, Plate 3; lake In-kalain, reservoir chain and canal paragraph. First-millennium association inferred, not established by dated canal excavation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "monr-bricks"
+          ],
+          "locator": "Page 93, Thaton enclosure and San Win’s 1986 discoveries; no inference of universal toilets or sanitation network.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "monr-water"
+          ],
+          "locator": "Kyaikkatha reservoir list: In Nhamagyi, In Nhamalay and Aingma; explicit later-attestation limit, no ancient naming claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 203 and figure 9 page 215; iconographic story, not a record of an actual local shipwreck or school curriculum.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 198, WK 6 tablet table line 3 and footnote 4; December 2007 Jenny reading. Original script not reproduced; dating and provenance debate stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "monr-queen"
+          ],
+          "locator": "Original publisher extract, Kyaikmaraw I, queen’s alternate name Baña Thau, 1455 dedication. Later and outside-polygon limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "monr-archive"
+          ],
+          "locator": "Scope and Content plus catalogue date range and place of origin; historical medical belief, no therapeutic recommendation. Individual manuscripts can have differing dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "monr-archive"
+          ],
+          "locator": "Custodial history, donor box and community oral information, catalogued in 2019. No specific medieval ancestry line or exact migration year asserted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "monr-queen",
+            "monr-archive"
+          ],
+          "locator": "Original publisher extract read directly: Kyaikmaraw I, Queen Baña Thau/Shin Sawbu land dedication 1455, earliest dated Middle Mon inscription in author assessment. Shrine southeast of Moulmein, outside imported polygon and after all atlas intervals; explicitly later comparison. No full-paywalled-text claim. Original archival description read directly: late nineteenth/early twentieth-century collection, three medical texts, Mon/Pali/Thai, accordion paper books, multiple hands and doodles, local migration memories and donor box dated 1918. That box date is not manuscript date. Modern Mon community in Samut Sakhon, Thailand, outside polygon.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "mon-state",
+        "name": "Mon state",
+        "from": 800,
+        "to": 900,
+        "circa": true,
+        "kind": "culture",
+        "region": "Asia",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "card": "cards/mon-state.json",
+        "summary": "A shared regional history for three Lower Myanmar atlas records. Their repeated outline does not establish one continuously independent kingdom; local settlements, Pagan-era connections and later Mon communities are distinguished."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "mon-state",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            94.14274142741431,
+            15.678100002522385,
+            97.73557735577356,
+            19.199263027644463
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mon-states",
+      "card": "data/cards/mon-state.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Original journal abstract fully readable in indexed results; direct page fails. Reproducible exact-title query plus 1350. Original article text additionally indexed on ResearchGate, same work not separate budget. Abstract says over 2000 total and 1350 good condition; introduction says 1350 complete plus 2000 fragments, so no exact total asserted. Stylistic eighth/ninth-eleventh century range, no Mon/Pyu inscription in this particular assemblage.",
+          "dateScope": {
+            "from": 800,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Pages 193-194 and 202; conquest narrative explicitly later/disputed, 1098 inscription securely dated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 198, Winka excavation description; first-millennium context, no universal school or exact foundation date inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Original journal abstract, total deliberately avoided because abstract and introduction enumerate fragments differently; comparative stylistic dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Abstract, three groups and geographic comparisons; movement of specific people left unproven.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "monr-bricks"
+          ],
+          "locator": "Pages 81 and 91-93; aerial identification 1976 and ground investigation 1981, marks and broad regional distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "monr-ceramics"
+          ],
+          "locator": "Manuscript pages 8-10, Table 4; functions presented generally, no residue-derived menu. Study dates span first century BCE to thirteenth century CE.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "monr-ceramics"
+          ],
+          "locator": "Abstract and laboratory discussion; similarity interpreted as possible technological/exchange connection, not automatic ethnic identification or precise trade itinerary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "monr-water"
+          ],
+          "locator": "Kyaikkatha section, Plate 3; lake In-kalain, reservoir chain and canal paragraph. First-millennium association inferred, not established by dated canal excavation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "monr-bricks"
+          ],
+          "locator": "Page 93, Thaton enclosure and San Win’s 1986 discoveries; no inference of universal toilets or sanitation network.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "monr-water"
+          ],
+          "locator": "Kyaikkatha reservoir list: In Nhamagyi, In Nhamalay and Aingma; explicit later-attestation limit, no ancient naming claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 203 and figure 9 page 215; iconographic story, not a record of an actual local shipwreck or school curriculum.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 198, WK 6 tablet table line 3 and footnote 4; December 2007 Jenny reading. Original script not reproduced; dating and provenance debate stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "monr-queen"
+          ],
+          "locator": "Original publisher extract, Kyaikmaraw I, queen’s alternate name Baña Thau, 1455 dedication. Later and outside-polygon limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "monr-archive"
+          ],
+          "locator": "Scope and Content plus catalogue date range and place of origin; historical medical belief, no therapeutic recommendation. Individual manuscripts can have differing dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "monr-archive"
+          ],
+          "locator": "Custodial history, donor box and community oral information, catalogued in 2019. No specific medieval ancestry line or exact migration year asserted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "monr-queen",
+            "monr-archive"
+          ],
+          "locator": "Original publisher extract read directly: Kyaikmaraw I, Queen Baña Thau/Shin Sawbu land dedication 1455, earliest dated Middle Mon inscription in author assessment. Shrine southeast of Moulmein, outside imported polygon and after all atlas intervals; explicitly later comparison. No full-paywalled-text claim. Original archival description read directly: late nineteenth/early twentieth-century collection, three medical texts, Mon/Pali/Thai, accordion paper books, multiple hands and doodles, local migration memories and donor box dated 1918. That box date is not manuscript date. Modern Mon community in Samut Sakhon, Thailand, outside polygon.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "mon-states",
+        "name": "Mon States",
+        "from": 900,
+        "to": 1000,
+        "circa": true,
+        "kind": "culture",
+        "region": "Asia",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "card": "cards/mon-state.json",
+        "summary": "A shared regional history for three Lower Myanmar atlas records. Their repeated outline does not establish one continuously independent kingdom; local settlements, Pagan-era connections and later Mon communities are distinguished."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "mon-states",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            94.14274142741431,
+            15.678100002522385,
+            97.73557735577356,
+            19.199263027644463
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mon-state-1100",
+      "card": "data/cards/mon-state.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Original journal abstract fully readable in indexed results; direct page fails. Reproducible exact-title query plus 1350. Original article text additionally indexed on ResearchGate, same work not separate budget. Abstract says over 2000 total and 1350 good condition; introduction says 1350 complete plus 2000 fragments, so no exact total asserted. Stylistic eighth/ninth-eleventh century range, no Mon/Pyu inscription in this particular assemblage.",
+          "dateScope": {
+            "from": 800,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "monr-atlas"
+          ],
+          "locator": "Own project factual-data exception. Three missing IDs, four decoded snapshots, identical tested Lower Myanmar coverage. Index intervals retained individually; full evidence in identity.json and point-checks.json. No historical ethnic or sovereign boundary inferred from polygon.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Pages 193-194 and 202; conquest narrative explicitly later/disputed, 1098 inscription securely dated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 198, Winka excavation description; first-millennium context, no universal school or exact foundation date inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Original journal abstract, total deliberately avoided because abstract and introduction enumerate fragments differently; comparative stylistic dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "monr-tablets"
+          ],
+          "locator": "Abstract, three groups and geographic comparisons; movement of specific people left unproven.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "monr-bricks"
+          ],
+          "locator": "Pages 81 and 91-93; aerial identification 1976 and ground investigation 1981, marks and broad regional distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "monr-ceramics"
+          ],
+          "locator": "Manuscript pages 8-10, Table 4; functions presented generally, no residue-derived menu. Study dates span first century BCE to thirteenth century CE.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "monr-ceramics"
+          ],
+          "locator": "Abstract and laboratory discussion; similarity interpreted as possible technological/exchange connection, not automatic ethnic identification or precise trade itinerary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "monr-water"
+          ],
+          "locator": "Kyaikkatha section, Plate 3; lake In-kalain, reservoir chain and canal paragraph. First-millennium association inferred, not established by dated canal excavation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "monr-bricks"
+          ],
+          "locator": "Page 93, Thaton enclosure and San Win’s 1986 discoveries; no inference of universal toilets or sanitation network.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "monr-water"
+          ],
+          "locator": "Kyaikkatha reservoir list: In Nhamagyi, In Nhamalay and Aingma; explicit later-attestation limit, no ancient naming claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 203 and figure 9 page 215; iconographic story, not a record of an actual local shipwreck or school curriculum.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "monr-history"
+          ],
+          "locator": "Page 198, WK 6 tablet table line 3 and footnote 4; December 2007 Jenny reading. Original script not reproduced; dating and provenance debate stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "monr-queen"
+          ],
+          "locator": "Original publisher extract, Kyaikmaraw I, queen’s alternate name Baña Thau, 1455 dedication. Later and outside-polygon limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "monr-archive"
+          ],
+          "locator": "Scope and Content plus catalogue date range and place of origin; historical medical belief, no therapeutic recommendation. Individual manuscripts can have differing dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "monr-archive"
+          ],
+          "locator": "Custodial history, donor box and community oral information, catalogued in 2019. No specific medieval ancestry line or exact migration year asserted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "monr-queen",
+            "monr-archive"
+          ],
+          "locator": "Original publisher extract read directly: Kyaikmaraw I, Queen Baña Thau/Shin Sawbu land dedication 1455, earliest dated Middle Mon inscription in author assessment. Shrine southeast of Moulmein, outside imported polygon and after all atlas intervals; explicitly later comparison. No full-paywalled-text claim. Original archival description read directly: late nineteenth/early twentieth-century collection, three medical texts, Mon/Pali/Thai, accordion paper books, multiple hands and doodles, local migration memories and donor box dated 1918. That box date is not manuscript date. Modern Mon community in Samut Sakhon, Thailand, outside polygon.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "mon-state-1100",
+        "name": "Mon state",
+        "from": 1100,
+        "to": 1279,
+        "circa": true,
+        "kind": "culture",
+        "region": "Asia",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "card": "cards/mon-state.json",
+        "summary": "A shared regional history for three Lower Myanmar atlas records. Their repeated outline does not establish one continuously independent kingdom; local settlements, Pagan-era connections and later Mon communities are distinguished."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "mon-state-1100",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            94.14274142741431,
+            15.678100002522385,
+            97.73557735577356,
+            19.199263027644463
+          ]
+        },
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "mon-state-1100",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            94.14274142741431,
+            15.678100002522385,
+            97.73557735577356,
+            19.199263027644463
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "ids": [
+        "mon-state",
+        "mon-states",
+        "mon-state-1100"
+      ],
+      "decision": "Shared regional narrative, explicitly not one continuously sovereign kingdom",
+      "indexedSpans": [
+        [
+          800,
+          900
+        ],
+        [
+          900,
+          1000
+        ],
+        [
+          1100,
+          1279
+        ]
+      ],
+      "geometry": "Four snapshots repeat the same Lower Myanmar coverage. Thaton, Winka, Bago, Kyaikkatha and Pathein are inside. Pagan, central Thai Dvaravati, Mawlamyine and Kawgun are outside. Site points and full decoded coordinates saved separately.",
+      "related": "No Dvaravati or Pagan association. mon-states includes imported Thaton Kingdom hint, but later Mon label cannot establish continued Thaton independence. Hanthawaddy and living Mon communities explicitly later/distinct; no modern Mon State boundary substitution.",
+      "dateResolution": "Original override spans retained; card includes the intervening 1000-1100 context as a gap in these map records, not a gap in settlement. No fabricated fall year or successor link.",
+      "writing": "Winka WK 6 actual Mon fragment, Jenny Roman transcription with gloss, disputed proposed sixth-century date explicitly disclosed. It does not claim securely contemporaneous 800-1279 words or pretend Roman letters reproduce original script.",
+      "limits": "No early household family-size, formal education system, menu, remedy or toilet evidence established. Monastic residences and pictorial religious narrative provide bounded daily/learning evidence; Thai-Mon medical books and migration memory are explicitly later comparative continuity."
+    }
+  ]
+}
