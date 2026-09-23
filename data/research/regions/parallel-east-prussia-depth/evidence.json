@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel east-prussia research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "eprus-atlas",
+      "title": "Human History Map: indexed East Prussia and decoded 1920/1930 geometry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Own-project index and decoded border files, checked locally. See identities.json and geometry-checks.json. The 1920 southern omissions are not treated as accurate historical boundaries."
+    },
+    {
+      "id": "eprus-archive",
+      "title": "Geheimes Staatsarchiv: Kingdom of Prussia and province of East Prussia, 1701 to 1945",
+      "url": "https://gsta.preussischer-kulturbesitz.de/recherche/thematischer-wegweiser/preussen-koenigreich-und-provinz-ostpreussen-1701-1945.html",
+      "note": "Direct institutional text checked. Use administrative chronology and archival holdings; do not repeat its oversimplified assertion that Versailles affected only Memel."
+    },
+    {
+      "id": "eprus-region",
+      "title": "East Prussian State Museum: National history",
+      "url": "https://www.ostpreussisches-landesmuseum.de/en/exhibitions/permanent-exhibition/landesgeschichte/",
+      "note": "Direct full exhibition account checked, especially Weimar isolation, Nazi persecution and the province’s destruction and population displacement."
+    },
+    {
+      "id": "eprus-city",
+      "title": "City of Olsztyn: History",
+      "url": "https://olsztyn.eu/o-olsztynie/tozsamosc-miasta/historia.html",
+      "note": "Direct official city history checked: hospital 1867, railway 1872, utilities, 1920 plebiscite, capture in 1945. Avoid treating its general Warmia sentence as every village voting identically."
+    },
+    {
+      "id": "eprus-diplomat",
+      "title": "US State Department: 1945 briefing on East Prussia, attachment to document 513",
+      "url": "https://history.state.gov/historicaldocuments/frus1945Berlinv01/d513",
+      "note": "Indexed full original attachment read: after Versailles German sovereignty but physically separated; boundaries fixed 16 August 1920 after plebiscites. Its 1945 recommendations are not cited as completed decisions; contested ethnicity counts are not repeated."
+    },
+    {
+      "id": "eprus-wash",
+      "title": "Maria Dembińska: Jakie źródło, taka woda, in Olsztynek museum Zeszyty Naukowe 8 (2017)",
+      "url": "https://muzeumolsztynek.pl/wp-content/uploads/2021/04/Zeszyt-8.pdf",
+      "note": "Downloaded institutional PDF and directly extracted selected text. Printed pages 110 to 111 share human PDF page 56. The article distinguishes original structures, replicas and museum arrangements. Nowe Kawkowo interior explicitly represents the 1920s and 1930s; no claim all objects stayed in original locations."
+    },
+    {
+      "id": "eprus-churn",
+      "title": "Museum of Warmia and Masuria: Maselnica na biegunach (2025)",
+      "url": "https://muzeum.olsztyn.pl/8052%2Cmaselnica-na-biegunach.html",
+      "note": "Full indexed original museum entry read; object dated 1880, from near Pisz, wooden rocking churn without nails. Modern price jokes in source not used."
+    },
+    {
+      "id": "eprus-food",
+      "title": "Masurian Museum in Szczytno: Kultura ludowa Mazurów",
+      "url": "https://szczytno.muzeum.olsztyn.pl/1075%2CKultura-ludowa-Mazurow-wystawa-stala.html",
+      "note": "Full indexed original permanent-exhibition description checked. Published 2010, updated 2023; objects collectively illustrate traditional regional household crafts, but individual object dates generally absent. Public text keeps this as retrospective material context."
+    },
+    {
+      "id": "eprus-water",
+      "title": "Olsztyn Water and Sewerage Company: History",
+      "url": "https://pwik.olsztyn.pl/historia/",
+      "note": "Full indexed official text checked. Epidemics motivated 1893 water project; construction began 1897; pump/treatment rebuilding 1927 to 1935. No assertion that safe water reached every household."
+    },
+    {
+      "id": "eprus-sewage",
+      "title": "State Archive in Olsztyn: Municipal infrastructure in Warmia and Masuria before 1945",
+      "url": "https://olsztyn.ap.gov.pl/przemysl-komunalny-na-warmii-i-mazurach-do-1945-r",
+      "note": "Direct full original text: water, sanitation and caption 15 for late nineteenth-century toilet advertisements; 1898 Shone pneumatic system; Pisz lacked modern sewer enterprise in 1945."
+    },
+    {
+      "id": "eprus-school",
+      "title": "Yad Vashem: Album of a Jewish school in Königsberg",
+      "url": "https://wwv.yadvashem.org/yv/de/exhibitions/our_collections/konigsberg.asp",
+      "note": "Direct full museum account checked; Kaelter family archive P.46, school founded 28 April 1935 with 82 pupils, family gatherings, Nazi pogrom and 1942 deportations. All passages charged to this one work."
+    },
+    {
+      "id": "eprus-newspaper",
+      "title": "Gazeta Olsztyńska, no. 260, 6 November 1924, page 1",
+      "url": "https://wmbc.olsztyn.pl/Content/4217/nr_260_go_1924.pdf",
+      "note": "Original four-page digitized issue downloaded and page 1 rendered and visually inspected. Masthead GAZETA OLSZTYŃSKA and printed date 6 listopada 1924 verified. Title given in ordinary title case; literal English translation supplied. Editorial nationality statistics not adopted as neutral evidence."
+    },
+    {
+      "id": "eprus-polishschool",
+      "title": "Museum Dom Gazety Olsztyńskiej: Exhibitions",
+      "url": "https://gazeta.muzeum.olsztyn.pl/wystawy",
+      "note": "Direct exhibition listing checked: Polish schools in Warmia and Masuria, 1929 to 1939, preserving Polish identity; Gazeta Olsztyńska 1886 to 1939. Listing only, not a full pupil census or classroom inspection."
+    },
+    {
+      "id": "eprus-birds",
+      "title": "Wolfgang Fiedler: Wann und wohin? Vogelwanderungen auf der Spur, Max Planck Yearbook 2006/2007",
+      "url": "https://www.mpg.de/452087/forschungsSchwerpunkt.pdf",
+      "note": "Indexed original PDF text checked, printed page 2/8: Thienemann from 1901 developed large-scale marking at Rossitten after Mortensen’s early success. Avoid sole-inventor claim; broader modern research statistics not backdated. HTML and PDF are one work."
+    },
+    {
+      "id": "eprus-poland",
+      "title": "United States Holocaust Memorial Museum: Poland in 1945",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/poland-in-1945",
+      "note": "Indexed original museum account checked: southern East Prussia assigned to Poland, Soviet retention of formerly Polish eastern territory, Potsdam border settlement."
+    },
+    {
+      "id": "eprus-memory",
+      "title": "East Prussian State Museum: History of the museum",
+      "url": "https://www.ostpreussisches-landesmuseum.de/en/museum/geschichte-des-museums/",
+      "note": "Direct institutional history read: refugees and expellees, Lüneburg, hunting museum founded 1958, rebuilt collections and widening later historical remit."
+    }
+  ],
+  "entities": [
+    {
+      "id": "east-prussia",
+      "card": "data/cards/east-prussia.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "eprus-atlas",
+            "eprus-region"
+          ],
+          "locator": "Own-project index and decoded border files, checked locally. See identities.json and geometry-checks.json. The 1920 southern omissions are not treated as accurate historical boundaries. Direct full exhibition account checked, especially Weimar isolation, Nazi persecution and the province’s destruction and population displacement.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "eprus-archive"
+          ],
+          "locator": "Direct institutional text checked. Use administrative chronology and archival holdings; do not repeat its oversimplified assertion that Versailles affected only Memel.",
+          "dateScope": {
+            "from": 1772,
+            "to": 1878
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "eprus-archive",
+            "eprus-city"
+          ],
+          "locator": "Direct institutional text checked. Use administrative chronology and archival holdings; do not repeat its oversimplified assertion that Versailles affected only Memel. Direct official city history checked: hospital 1867, railway 1872, utilities, 1920 plebiscite, capture in 1945. Avoid treating its general Warmia sentence as every village voting identically.",
+          "dateScope": {
+            "from": 1878,
+            "to": 1920
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "eprus-diplomat"
+          ],
+          "locator": "Indexed full original attachment read: after Versailles German sovereignty but physically separated; boundaries fixed 16 August 1920 after plebiscites. Its 1945 recommendations are not cited as completed decisions; contested ethnicity counts are not repeated.",
+          "dateScope": {
+            "from": 1920,
+            "to": 1933
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "eprus-region"
+          ],
+          "locator": "Direct full exhibition account checked, especially Weimar isolation, Nazi persecution and the province’s destruction and population displacement.",
+          "dateScope": {
+            "from": 1933,
+            "to": 1945
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "eprus-region",
+            "eprus-archive"
+          ],
+          "locator": "Direct full exhibition account checked, especially Weimar isolation, Nazi persecution and the province’s destruction and population displacement. Direct institutional text checked. Use administrative chronology and archival holdings; do not repeat its oversimplified assertion that Versailles affected only Memel.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1948
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "eprus-atlas"
+          ],
+          "locator": "Decoded point tests in geometry-checks.json; 1920 and 1930 border files.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "eprus-archive"
+          ],
+          "locator": "Institutional guide, historical introduction paragraphs 2 and 3.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "eprus-diplomat",
+            "eprus-city"
+          ],
+          "locator": "State Department document 513, East Prussia attachment, Basic Data; city history, postwar plebiscite paragraph.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "eprus-region"
+          ],
+          "locator": "Permanent exhibition, Weimar paragraph.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "eprus-wash"
+          ],
+          "locator": "Dembińska, printed page 111, human PDF page 56, interwar hygiene and Nowe Kawkowo paragraph.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "eprus-wash"
+          ],
+          "locator": "Dembińska, printed page 111, human PDF page 56, laundry paragraph; not claiming universal ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "eprus-churn"
+          ],
+          "locator": "Museum object entry, date, construction, rocking action and patterned butter molds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "eprus-food"
+          ],
+          "locator": "Exhibition paragraphs on storage, measures, bread and cheese; dating limitation explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "eprus-food"
+          ],
+          "locator": "Exhibition textile-production paragraph; scoped to retrospective regional collection, not universal interwar practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "eprus-city"
+          ],
+          "locator": "Official city history, nineteenth-century development paragraph.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "eprus-water"
+          ],
+          "locator": "Official history opening and first dated development bullet.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "eprus-sewage"
+          ],
+          "locator": "Kanalizacja section, Shone ejector chambers and compressed air, 1898.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "eprus-sewage"
+          ],
+          "locator": "Introduction, Wodociągi and Kanalizacja sections; illustration 15 toilet advertisements; no universal household claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "eprus-school"
+          ],
+          "locator": "Yad Vashem, founding section; archive P.46 and school opening/curriculum.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "eprus-school"
+          ],
+          "locator": "Yad Vashem, Friday Shabbat hour and emigrant correspondence paragraphs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "eprus-polishschool"
+          ],
+          "locator": "Direct museum exhibitions list, Polish schools 1929 to 1939.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "eprus-newspaper"
+          ],
+          "locator": "Original PDF page 1, masthead and date line visually inspected; title case normalized from capitals, literal translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "eprus-birds",
+            "eprus-atlas"
+          ],
+          "locator": "Fiedler PDF page 2/8; decoded Rossitten point outside both outlines. Mortensen name follows the scholarly source.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "eprus-school"
+          ],
+          "locator": "Yad Vashem, Jewish school 1938 to 1942 section; concise age-appropriate account without graphic detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "eprus-region",
+            "eprus-poland",
+            "eprus-archive"
+          ],
+          "locator": "Museum national-history final paragraphs; USHMM Poland in 1945; GStA postwar division.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "eprus-memory"
+          ],
+          "locator": "Museum institutional history, 1950s settlement, 1958 foundation and later widening.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "eprus-archive",
+            "eprus-region"
+          ],
+          "locator": "Direct institutional text checked. Use administrative chronology and archival holdings; do not repeat its oversimplified assertion that Versailles affected only Memel. Direct full exhibition account checked, especially Weimar isolation, Nazi persecution and the province’s destruction and population displacement.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "east-prussia",
+        "name": "East Prussia",
+        "region": "Europe",
+        "card": "cards/east-prussia.json",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "A Baltic province of Prussia and Germany, shown in an incomplete interwar atlas window."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "east-prussia",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            19.83439834398345,
+            54.36886300696242,
+            22.826028260282612,
+            55.28076543560626
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "east-prussia",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            18.765187651876516,
+            53.23631649910613,
+            22.826028260282612,
+            55.28076543560626
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "east-prussia",
+      "decision": "Distinct provincial card; no alias with Prussia, Germany, Poland, Lithuania, occupied Polish territories or displaced communities.",
+      "map": "Indexed 1920 to 1938. Southern omissions in 1920 and Rossitten omission in both are public. Memel and Danzig excluded; later annexations not smuggled into the interwar outline.",
+      "writing": "Original 6 November 1924 newspaper masthead visually read; Polish Latin alphabet, title case normalization and literal translation.",
+      "sourceLimits": "Museum reconstruction and retrospective collection evidence explicitly distinguished from unchanged original interiors. Copernico ending essay blocked and not used; Yad Vashem article, not every attachment, directly read."
+    }
+  ]
+}
