@@ -1,7 +1,7 @@
 {
   "version": 1,
   "region": "Asia",
-  "researcher": "Codex parallel dai-viet research, integrated by Codex",
+  "researcher": "Codex parallel annam-medieval research, integrated by Codex",
   "checkedAt": "2026-09-22",
   "sources": [
     {
@@ -475,8 +475,7 @@
         "New text needs independent review; earlier hashes do not certify it.",
         "Map endpoints are not historical founding or extinction dates.",
         "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
-        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts.",
-        "Claims and sources refreshed after the annam-medieval shared-card upgrade; this legacy dossier now maps the complete current card."
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
       ],
       "proposedOverrides": {
         "id": "ai-viet",
@@ -488,7 +487,9 @@
         "dateBasis": "map_coverage",
         "summary": "Successive Vietnamese royal states connected the Red River heartland with changing southern territories, through periods of unity and divided rule.",
         "summarySource": null,
-        "card": "cards/ai-viet.json"
+        "card": "cards/ai-viet.json",
+        "fell": null,
+        "successors": []
       },
       "geometryStatus": "Imported polygons unchanged and unverified.",
       "identityEvidence": [
@@ -703,12 +704,409 @@
           ]
         }
       ]
+    },
+    {
+      "id": "annam",
+      "card": "data/cards/ai-viet.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "anm-atlas"
+          ],
+          "locator": "Own-project factual-data exception. Exact annam1000-1100 is northern/central outline, near-identical to ai-viet1100 geometry; public southern-edge caution. annam-1920 remains separate colonial identity. Decoded complete features in identity.json.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "anm-diplomacy"
+          ],
+          "locator": "Original Sejarah28(1):1-13, direct full PDF. Printed7-10, dynastic transition and diplomacy. Used only broad supported transition and tribute/recognition distinct from direct administration. Excluded errors about dates, monastic parentage, battle spikes, giraffes, and sweeping universal Sinicization claims.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1009
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "dv-capital"
+          ],
+          "locator": "Historian’s conference study, reprinted by Vietnam National Museum of History. Direct text: opening chronology, 1010 move, Lý/Trần/Hồ/Ming/Lê/Mạc phases and 1802 Huế capital. Dates describe different regimes and functions, not continuous independent rule. Do not reuse its incorrect square-meter rendering of the site area.",
+          "dateScope": {
+            "from": 1009,
+            "to": 1226
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "dv-capital"
+          ],
+          "locator": "Historian’s conference study, reprinted by Vietnam National Museum of History. Direct text: opening chronology, 1010 move, Lý/Trần/Hồ/Ming/Lê/Mạc phases and 1802 Huế capital. Dates describe different regimes and functions, not continuous independent rule. Do not reuse its incorrect square-meter rendering of the site area.",
+          "dateScope": {
+            "from": 1226,
+            "to": 1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "dv-capital",
+            "dv-restoration"
+          ],
+          "locator": "Historian’s conference study, reprinted by Vietnam National Museum of History. Direct text: opening chronology, 1010 move, Lý/Trần/Hồ/Ming/Lê/Mạc phases and 1802 Huế capital. Dates describe different regimes and functions, not continuous independent rule. Do not reuse its incorrect square-meter rendering of the site area. Direct account: December 1427 agreement, supplies for departing army, final January 1428 departure and Lê establishment. No reproduction of nationalistic rhetoric or unverified army totals.",
+          "dateScope": {
+            "from": 1400,
+            "to": 1428
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "dv-restoration"
+          ],
+          "locator": "Direct account: December 1427 agreement, supplies for departing army, final January 1428 departure and Lê establishment. No reproduction of nationalistic rhetoric or unverified army totals.",
+          "dateScope": {
+            "from": 1428,
+            "to": 1527
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "dv-mac",
+            "dv-division"
+          ],
+          "locator": "Museum historian’s direct article. Used retrospective bias toward Hồ/Mạc/Tây Sơn and Mạc continuation of examinations. Erroneous name of the king deposed in 1527, sweeping prosperity claims and questionable shipwreck dating are not adopted. Direct opening and 1786 to 1789 political narrative: Trịnh/Nguyễn warfare, divided north/south, Tây Sơn overthrow of Trịnh and Quang Trung’s defeat of Qing army. No army totals, disputed calendar conversions or claim of stable nationwide unification in 1786.",
+          "dateScope": {
+            "from": 1527,
+            "to": 1802
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "dv-transition"
+          ],
+          "locator": "Direct scholarly article hosted by national archives. Opening paragraphs: Nguyễn Phúc Ánh reunification in 1802, name Việt Nam in 1804 and Gia Long reign 1802 to 1820. Later Minh Mạng administrative reforms are outside this imported record and omitted.",
+          "dateScope": {
+            "from": 1802,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "anm-diplomacy",
+            "dv-name"
+          ],
+          "locator": "Ku Boon Dar printed7-8, transition and1054; Phan Huy Le chronology and existing museum1054 witness. No precise royal-birth legend adopted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "anm-move"
+          ],
+          "locator": "Exhibition Dời đô section and river-route paragraph. Historical journey described, not claim of discovered fleet.",
+          "dateScope": {
+            "year": 1010
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "anm-diplomacy"
+          ],
+          "locator": "Ku Boon Dar printed7-10, tributary relations and conclusion; distinguishes recognition from direct administration, without adopting article’s sweeping judgments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "anm-exhibit"
+          ],
+          "locator": "Museum exhibition Topic2 subsection2, three dates. Do not call1076 a modern public university or imply universal schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "anm-edict",
+            "anm-move"
+          ],
+          "locator": "Academy Hán văn paragraph2 and translation; heritage exhibit corroborates1010 edict context. Exact6-character sample; no contemporary autograph claimed.",
+          "dateScope": {
+            "year": 1010
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "dv-name"
+          ],
+          "locator": "Section Những năm Ngọ ý nghĩa về nội trị, paragraphs beginning Vào năm and Quốc hiệu. Only name adoption and Hồ exception used.",
+          "dateScope": {
+            "year": 1054
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "dv-citadel"
+          ],
+          "locator": "Outstanding Universal Value, brief summary and integrity; early fortress distinguished from Lý construction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "dv-mongol"
+          ],
+          "locator": "Paragraphs on Trần Khánh Dư’s grain-convoy attack and Bạch Đằng tidal stakes; no archaeological stakes assigned to a specific battle without dating evidence.",
+          "dateScope": {
+            "year": 1288
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "dv-restoration"
+          ],
+          "locator": "Paragraphs after Hội thề: 29 December 1427 withdrawal, provisions and 3 January 1428 final contingent; dynasty conclusion.",
+          "dateScope": {
+            "year": 1428
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "dv-mac"
+          ],
+          "locator": "Opening historiography discussion, examination evidence and 1527 foundation; does not copy incorrect deposed-king name.",
+          "dateScope": {
+            "year": 1527
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "dv-division"
+          ],
+          "locator": "Opening division paragraph and 1786 to 1789 sequence; no instant durable reunification claim or army totals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "dv-wells"
+          ],
+          "locator": "Ancient wells paragraphs on surface Lý brick layers above Đại La wells and palace context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "dv-wells"
+          ],
+          "locator": "Trần herringbone construction paragraphs and final small-diameter ritual interpretation. No claim of scientifically proven water purity or sewer function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "dv-pottery"
+          ],
+          "locator": "Opening paragraph, lò gốm and phế vật including chồng dính bát đĩa; eleventh to fourteenth century context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "dv-pottery"
+          ],
+          "locator": "Bát subsection: 16.5 cm diameter, 6 cm height, flower relief and five dấu kê. Height omitted; metaphor explicitly not literal fingerprints.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "dv-dish"
+          ],
+          "locator": "Accession 1995-02504, date field and descriptive paragraphs. Trade statement concerns Vietnamese wares generally, not this object’s undocumented voyage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/5/text",
+          "sourceIds": [
+            "dv-capital"
+          ],
+          "locator": "Phan Huy Le archaeological discussion: Trong tầng văn hoá Lý ... hệ thống thoát nước, giếng nước. Lý-period scope1009-1226, not exactly dated to first century.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/6/text",
+          "sourceIds": [
+            "anm-exhibit"
+          ],
+          "locator": "Museum exhibition Topic4. Material survival Ly onward is broad; later social ritual explicitly later, no health benefit or advice to chew betel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "dv-exams"
+          ],
+          "locator": "UNESCO nomination PDF pages 1 and 3: date ranges and inscription contents; page 6 Tiến sĩ. Does not equate qualification with a modern research doctorate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "dv-writing"
+          ],
+          "locator": "Chinese original paragraph, 皇上特念人才國家之元氣; Vietnamese translation Nay Hoàng thượng... nhân tài là nguyên khí; concluding 1484 erection statement.",
+          "dateScope": {
+            "year": 1484
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "dv-writing"
+          ],
+          "locator": "Opening examination/awards paragraphs and admonitions beginning Kẻ sĩ may mắn. Original says more than 1,400; translation rounds to 1,400, so public about 1,400.",
+          "dateScope": {
+            "year": 1463
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "dv-hoian"
+          ],
+          "locator": "UNESCO brief synthesis, timber buildings and street/river access; authenticity paragraph on nineteenth-century renewal. No claim every extant building is seventeenth century.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "dv-medicine"
+          ],
+          "locator": "Sections Từ chí làm quan and nickname explanation; family obligations explicitly biographical, not generalized to every household.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "dv-medicine"
+          ],
+          "locator": "Y tông tâm lĩnh section: school and Hội y, 28 tập/66 quyển contents, student manuscript copying. Numerical totals and problematic court-visit/first-printing dates omitted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "dv-transition",
+            "dv-capital"
+          ],
+          "locator": "Direct scholarly article hosted by national archives. Opening paragraphs: Nguyễn Phúc Ánh reunification in 1802, name Việt Nam in 1804 and Gia Long reign 1802 to 1820. Later Minh Mạng administrative reforms are outside this imported record and omitted. Historian’s conference study, reprinted by Vietnam National Museum of History. Direct text: opening chronology, 1010 move, Lý/Trần/Hồ/Ming/Lê/Mạc phases and 1802 Huế capital. Dates describe different regimes and functions, not continuous independent rule. Do not reuse its incorrect square-meter rendering of the site area.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "annam",
+        "name": "Annam",
+        "kind": "state",
+        "region": "Asia",
+        "from": 1000,
+        "to": 1100,
+        "circa": true,
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "card": "cards/ai-viet.json",
+        "summary": "The Early Lê and Lý phase of Vietnamese royal history, before the atlas switches to its Đại Việt label."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "annam",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            103.05643056430563,
+            16.053504193206436,
+            107.46647466474667,
+            22.919476881704682
+          ]
+        }
+      ]
     }
   ],
   "batchIdentityNotes": [
     {
-      "id": "ai-viet",
-      "finding": "Exact indexed ID Đại Việt, alias Annam, imported 1100 to 1815. Missing in runtime/overrides and no staged collision at claim. Decoded snapshots saved in identities.json. Identical broad 1530 to 1815 footprint masks rival governments and warfare; public overview warns against unified-territory interpretation. Dynastic sequence is a narrative for this imported label, not an assertion of one unbroken polity. No aliasing to modern Viet Nam, Champa, or separately indexed dynasties. From/to remain map coverage, ending is transformation; fell and successors omitted to preserve any curated transition."
+      "ids": [
+        "annam",
+        "ai-viet"
+      ],
+      "decision": "Shared-card upgrade, one newly covered ID, preserve canonical ai-viet and both exact imported windows.",
+      "geometry": "Annam1000 and ai-viet1100 outline extents agree to quantization tolerances. Southern reach16.05N not validated as a fixed frontier throughout1000-1100. No sovereignty inferred from full polygon. Full decoded geometry in identity.json.",
+      "periods": "Early Le1000-1009; Ly1009-1226 then existing later phases. Original ai-viet override retains1100-1815, annam1000-1100. No political fall1100.",
+      "excluded": [
+        "annam-1920",
+        "annam-1815",
+        "vietnam"
+      ],
+      "exclusionReason": "Colonial and modern records have distinct political scope and wider outlines. No inherited practice indiscriminately generalized across eight centuries.",
+      "writing": "New early transmitted1010 edict excerpt plus preserved independently rechecked1484 examination stele. Different witnesses and dates explicit.",
+      "limits": "Retained medicine/family examples belong to eighteenth century. Early evidence gives elite education, water management, material culture and social objects, not universal household medicine/toilet practice."
     }
   ]
 }
