@@ -1,0 +1,299 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel archaic-amerindian research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "aahg-atlas",
+      "title": "Human History Map, imported 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Local current index, manifest and decoded TopoJSON inspected. One MultiPolygon with from -2000 and to -1500; continental bounds and point tests saved in identity.json and point-checks.json. This source supports map metadata only."
+    },
+    {
+      "id": "aahg-riverton",
+      "title": "Bruce D. Smith and Richard A. Yarnell, Initial formation of an indigenous crop complex in eastern North America at 3800 B.P. (2009)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2666091/",
+      "note": "Original PNAS 106:6561-6566, DOI 10.1073/pnas.0901846106. Direct PMC is intermittently challenged; full indexed original text retrieved with query site:pmc.ncbi.nlm.nih.gov/articles/PMC2666091 Riverton occupation. Checked Riverton section, Figure 2 and Developmental Context. Paper explicitly specifies 3800 calendar years BP, approximately 1850 BCE. Family organization is the authors’ interpretation, not a census."
+    },
+    {
+      "id": "aahg-shell-rings",
+      "title": "Michael Russo, Archaic Shell Rings of the Southeast U.S., National Park Service (2006)",
+      "url": "https://www.npshistory.com/publications/nhl/theme-studies/archaic-shell-rings.pdf",
+      "note": "Original NPS historic-context PDF directly read on archival mirror: printed pages 31-35 pottery/cooking, Figure 12 on page 32, pages 46-48 mortuary limitations, page 88 Sapelo inventory. No claims adopted from speculative gender assignments or universal first-pottery language. Whole 171-page work counted together."
+    },
+    {
+      "id": "aahg-sapelo-social",
+      "title": "Victor D. Thompson, Questioning Complexity: The Prehistoric Hunter-Gatherers of Sapelo Island, Georgia (2006)",
+      "url": "https://uknowledge.uky.edu/gradschool_diss/245/",
+      "note": "Institutional dissertation abstract directly read. Geophysical, distributional, radiocarbon and shell-seasonality evidence; large aggregate population, some year-round residents, and qualified egalitarian interpretation. Later 2022 chronology takes precedence for specific date estimates."
+    },
+    {
+      "id": "aahg-sapelo-harvest",
+      "title": "C. Fred T. Andrus and Victor D. Thompson, Determining the habitats of mollusk collection at the Sapelo Island shell ring complex (2012)",
+      "url": "https://www.sciencedirect.com/science/article/pii/S030544031100272X",
+      "note": "Original Journal of Archaeological Science 39:215-228, DOI 10.1016/j.jas.2011.08.002. Full publisher abstract indexed and read; direct page returns 403. 41 clam and 17 oyster valves; oxygen isotope/salinity comparison suggests broad collection habitats. Authors explicitly cannot estimate precise travel distance."
+    },
+    {
+      "id": "aahg-sapelo-vessels",
+      "title": "Bronwyn Paige Matlick, Understanding Change in Vessel Technology at the Sapelo Shell Ring Complex (2025)",
+      "url": "https://openscholar.uga.edu/record/27045?v=pdf",
+      "note": "University of Georgia original thesis abstract and metadata read. Late Archaic complex with habitation outside rings; significant vessel-size changes interpreted in relation to group size/environment. This is a master’s study and its social explanation is attributed. No specific educational institution or child pottery exercise claimed."
+    },
+    {
+      "id": "aahg-cabecuda",
+      "title": "Eduardo Q. Alves and colleagues, Assessing the radiocarbon marine reservoir effect: Cabeçuda shell mound (2023; online 2022)",
+      "url": "https://doi.org/10.1017/RDC.2022.75",
+      "note": "Publisher abstract directly read; original author-uploaded full article text accessed at https://www.researchgate.net/publication/366017157_ASSESSING_THE_C_MARINE_RESERVOIR_EFFECT_IN_ARCHAEOLOGICAL_CONTEXTS_DATA_FROM_THE_CABECUDA_SHELL_MOUND_IN_SOUTHERN_BRAZIL . Printed pages 18-19 diet/model and Conclusions: sampled burials 4200-3600 cal BP, explicitly not whole site. Marine fish and C3 plants inferred as major calorie sources; collagen marine percentage not converted to total dietary percentage."
+    },
+    {
+      "id": "aahg-brazil-landscape",
+      "title": "Paulo DeBlasis and colleagues, Sambaquis e paisagem: dinâmica natural e arqueologia regional no litoral do sul do Brasil (2007)",
+      "url": "https://worldarchaeologicalcongress.com/wp-content/uploads/2008/05/RAS_3_1_2007.pdf",
+      "note": "Original Arqueologia Sul-Americana 3(1):29-61 directly read in complete issue PDF. Abstract pages 29-30, pages 43-45 dated landscape model and dry-ground foundations, pages 53-54 social/memory interpretation. Whole work/issue URL counted together. Regional 6000-1500 BP study used with explicit local scope, no direct equation to Tupi or later Guarani."
+    },
+    {
+      "id": "aahg-sapelo-change",
+      "title": "University of Georgia, UGA study shows resilience of early coastal communities in Georgia (2022)",
+      "url": "https://research.uga.edu/news/uga-study-shows-resilience-of-early-coastal-communities-in-georgia/",
+      "note": "Research team’s institutional account directly/indexed read in full. Source paper DOI 10.1371/journal.pone.0258979 identified; publisher page currently exposes metadata/references rather than all prose, so claims here derive from the university account. Three overlapping villages circa 4250-3755 BP; gradual adaptation, lower sea levels/salinity and shrinking oysters. These mechanisms are research interpretations, not one proven cause of abandonment."
+    }
+  ],
+  "entities": [
+    {
+      "id": "archaic-amerindian-hunter-gatherers",
+      "card": "data/cards/archaic-amerindian-hunter-gatherers.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "aahg-atlas"
+          ],
+          "locator": "Local current index, manifest and decoded TopoJSON inspected. One MultiPolygon with from -2000 and to -1500; continental bounds and point tests saved in identity.json and point-checks.json. This source supports map metadata only.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "aahg-sapelo-social",
+            "aahg-cabecuda"
+          ],
+          "locator": "Institutional dissertation abstract directly read. Geophysical, distributional, radiocarbon and shell-seasonality evidence; large aggregate population, some year-round residents, and qualified egalitarian interpretation. Later 2022 chronology takes precedence for specific date estimates. Publisher abstract directly read; original author-uploaded full article text accessed at https://www.researchgate.net/publication/366017157_ASSESSING_THE_C_MARINE_RESERVOIR_EFFECT_IN_ARCHAEOLOGICAL_CONTEXTS_DATA_FROM_THE_CABECUDA_SHELL_MOUND_IN_SOUTHERN_BRAZIL . Printed pages 18-19 diet/model and Conclusions: sampled burials 4200-3600 cal BP, explicitly not whole site. Marine fish and C3 plants inferred as major calorie sources; collagen marine percentage not converted to total dietary percentage.",
+          "dateScope": {
+            "from": -2000,
+            "to": -1800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "aahg-riverton",
+            "aahg-sapelo-change",
+            "aahg-brazil-landscape"
+          ],
+          "locator": "Original PNAS 106:6561-6566, DOI 10.1073/pnas.0901846106. Direct PMC is intermittently challenged; full indexed original text retrieved with query site:pmc.ncbi.nlm.nih.gov/articles/PMC2666091 Riverton occupation. Checked Riverton section, Figure 2 and Developmental Context. Paper explicitly specifies 3800 calendar years BP, approximately 1850 BCE. Family organization is the authors’ interpretation, not a census. Research team’s institutional account directly/indexed read in full. Source paper DOI 10.1371/journal.pone.0258979 identified; publisher page currently exposes metadata/references rather than all prose, so claims here derive from the university account. Three overlapping villages circa 4250-3755 BP; gradual adaptation, lower sea levels/salinity and shrinking oysters. These mechanisms are research interpretations, not one proven cause of abandonment. Original Arqueologia Sul-Americana 3(1):29-61 directly read in complete issue PDF. Abstract pages 29-30, pages 43-45 dated landscape model and dry-ground foundations, pages 53-54 social/memory interpretation. Whole work/issue URL counted together. Regional 6000-1500 BP study used with explicit local scope, no direct equation to Tupi or later Guarani.",
+          "dateScope": {
+            "from": -1800,
+            "to": -1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "aahg-riverton"
+          ],
+          "locator": "The Riverton Site and an Initial Crop Complex; Figure 2; Developmental Context, PNAS pages 6562-6565.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "aahg-riverton"
+          ],
+          "locator": "Riverton seed assemblage and reanalysis; Developmental Context. Four named species, with two cultivated chenopod forms.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "aahg-riverton"
+          ],
+          "locator": "Figure 2 plant remains and Developmental Context discussion of aquatic foods, deer and nut-dominated assemblages.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "aahg-sapelo-social"
+          ],
+          "locator": "Dissertation abstract, final three sentences; interpretation explicitly qualified. Specific chronology supplied separately by 2022 study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "aahg-shell-rings"
+          ],
+          "locator": "Printed pages 34-35 indirect cooking; page 88 Sapelo 1 inventory of baked clay fragments and fiber-tempered pottery.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "aahg-sapelo-harvest"
+          ],
+          "locator": "Original abstract and Highlights; sample counts, salinity tolerances and explicit travel-distance limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "aahg-sapelo-vessels"
+          ],
+          "locator": "Institutional thesis abstract; last sentences on vessel size and interpretation. Learning sentence is a bounded inference from manufacture, not a documented classroom.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "aahg-cabecuda"
+          ],
+          "locator": "Printed pages 18-19, dating and diet section. Isotope mixing model assumptions retained; no invented food percentage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "aahg-cabecuda"
+          ],
+          "locator": "Printed page 19, Figure 9 and Conclusions: approximately 4200-3600 calibrated years BP, reference year 1950, explicitly not entire site.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "aahg-brazil-landscape"
+          ],
+          "locator": "Abstract printed pages 29-30; Sambaquis, memória e paisagem on printed pages 54-55. Regional interpretation, not evidence for one state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/6/text",
+          "sourceIds": [
+            "aahg-brazil-landscape"
+          ],
+          "locator": "Printed pages 43-45, especially dry-ground foundation paragraph continuing onto page 44; paleolagoon model is approximate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "aahg-sapelo-change"
+          ],
+          "locator": "University account: three villages circa 4250-3755 BP, decreasing sea/salinity and gradual decline. Date rounded from 3755 BP; causes presented as interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "aahg-shell-rings"
+          ],
+          "locator": "Printed page 32, Figure 12 and regional pottery discussion. Bounded absence in the consulted artifact evidence; not a universal claim that every society under this umbrella lacked writing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "aahg-shell-rings"
+          ],
+          "locator": "Printed pages 46-48, Changing Mortuary Practices and Table 7. Explicit limits of selected evidence, no claim that communities lacked care or sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "aahg-atlas",
+            "aahg-sapelo-change",
+            "aahg-brazil-landscape"
+          ],
+          "locator": "Local current index, manifest and decoded TopoJSON inspected. One MultiPolygon with from -2000 and to -1500; continental bounds and point tests saved in identity.json and point-checks.json. This source supports map metadata only. Research team’s institutional account directly/indexed read in full. Source paper DOI 10.1371/journal.pone.0258979 identified; publisher page currently exposes metadata/references rather than all prose, so claims here derive from the university account. Three overlapping villages circa 4250-3755 BP; gradual adaptation, lower sea levels/salinity and shrinking oysters. These mechanisms are research interpretations, not one proven cause of abandonment. Original Arqueologia Sul-Americana 3(1):29-61 directly read in complete issue PDF. Abstract pages 29-30, pages 43-45 dated landscape model and dry-ground foundations, pages 53-54 social/memory interpretation. Whole work/issue URL counted together. Regional 6000-1500 BP study used with explicit local scope, no direct equation to Tupi or later Guarani.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "archaic-amerindian-hunter-gatherers",
+        "name": "Archaic Amerindian hunter-gatherers",
+        "kind": "culture",
+        "from": -2000,
+        "to": -1500,
+        "circa": true,
+        "region": "North America",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "A continental atlas umbrella for varied American communities, illustrated through dated homes, native crops, coastal fishing and shell-mound archaeology.",
+        "card": "cards/archaic-amerindian-hunter-gatherers.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc2000.json",
+          "properties": {
+            "civ": "archaic-amerindian-hunter-gatherers",
+            "from": -2000,
+            "to": -1500,
+            "precision": 1
+          },
+          "bounds": [
+            -166.1905545780713,
+            -55.070042051117994,
+            -34.890200906549296,
+            64.83475241095016
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "archaic-amerindian-hunter-gatherers",
+      "decision": "New umbrella narrative, no shared identities or aliases.",
+      "region": "North America is the required single filter value; the record also covers South America, which is explicitly stated publicly. The filter is not a historical boundary.",
+      "index": {
+        "from": -2000,
+        "to": -1500,
+        "kind": "culture",
+        "circa": true
+      },
+      "geometry": "One MultiPolygon in hb/borders/world-bc2000.json; bbox [-166.19055,-55.07004,-34.89020,64.83475]. Approximate Riverton, Sapelo and Cabeçuda site points all lie inside. Guana test point lies outside and is not a local case.",
+      "boundaries": "No unitary state, ethnic group, migration or shared language inferred. Early horticulture is explicitly included as a limitation of the atlas label. No associations to existing Poverty Point, Valdivia, Andean or living-nation cards.",
+      "chronology": "Riverton circa 3800 calendar BP (~1850 BCE); Sapelo latest study approximately 4250-3755 BP (~2300-1800 BCE), earlier portion partly outside this record; sampled Cabeçuda burials 4200-3600 cal BP (~2250-1650 BCE), not the entire site. Broader regional studies explicitly labeled. No artificial exact item years.",
+      "writing": "No secure sentence attributable to the selected communities/centuries established by reviewed sources. Regional pottery surface designs described as visual evidence without a semantic translation."
+    }
+  ]
+}
