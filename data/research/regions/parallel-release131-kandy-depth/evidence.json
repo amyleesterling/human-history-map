@@ -1,0 +1,968 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release131-kandy research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "kan-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository row checked for id kandy, label Kandy, circa 1650 to 1815, historical-basemaps provenance and the absence of aliases or an authored link."
+    },
+    {
+      "id": "kan-summary",
+      "title": "Human History Map imported summary ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Kandy summary checked for its city-versus-kingdom conflation and its inaccurate 1469 to 1818 monarchy wording; it is audited, not adopted as authority."
+    },
+    {
+      "id": "kan-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage record checked for state kind, five border files, five observed intervals, missing card, imported summary, approximate dates and unreviewed identity, chronology and border fields."
+    },
+    {
+      "id": "kan-map1600",
+      "title": "Human History Map world-1600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Decoded predecessor seam checked: the target is absent and the broad imported saylan feature owns the audited inland points despite a historically established Kandyan capital."
+    },
+    {
+      "id": "kan-map1650",
+      "title": "Human History Map world-1650 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Decoded exact target geometry, point ownership, raw arcs, bounds, coordinate hash and shared boundaries with ceylon and ceylon-dutch at the atlas start."
+    },
+    {
+      "id": "kan-map1700",
+      "title": "Human History Map world-1700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Decoded exact target layer checked for an unchanged coordinate geometry, altered topology arc numbers, shared neighbors and twenty point tests."
+    },
+    {
+      "id": "kan-map1715",
+      "title": "Human History Map world-1715 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Decoded exact target layer checked for its main seventeen-position polygon, separate four-position northwestern fragment, both hashes, raw arcs and Dutch and Ceylon neighbors."
+    },
+    {
+      "id": "kan-map1783",
+      "title": "Human History Map world-1783 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Decoded target geometry checked for its fifteen positions, slightly shifted southern bound, exact hash, raw arcs, point ownership and Ceylon Dutch neighbor."
+    },
+    {
+      "id": "kan-map1800",
+      "title": "Human History Map world-1800 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Decoded last target layer checked for the same coordinate geometry as 1783, new raw arc numbers, point ownership and ceylon-dutch-1800 boundary."
+    },
+    {
+      "id": "kan-map1815",
+      "title": "Human History Map world-1815 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Decoded endpoint seam checked: kandy is absent and ceylon-1815 owns every audited inland point, matching annexation at the snapshot boundary."
+    },
+    {
+      "id": "kan-map1878",
+      "title": "Human History Map world-1878 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1878.json",
+      "note": "Decoded later comparison checked for continued target absence and ownership by a Ceylon successor feature rather than a revived sovereign Kandy polygon."
+    },
+    {
+      "id": "kan-unesco",
+      "title": "Sacred City of Kandy, UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/450",
+      "note": "Authoritative heritage summary checked for Senkadagalapura, the last royal capital, British occupation in 1815, the Temple of the Tooth and continuing pilgrimage importance."
+    },
+    {
+      "id": "kan-archives-report",
+      "title": "A Report from the Archives of Sri Lanka, Itinerario",
+      "url": "https://www.cambridge.org/core/journals/itinerario/article/report-from-the-archives-of-sri-lanka/2A424583C40E3736FDF728363EFD9DE7",
+      "note": "Cambridge archival report checked for Portuguese and Dutch coastal chronology, the survival of an inland kingdom and British annexation in 1815."
+    },
+    {
+      "id": "kan-jaffna",
+      "title": "Distribution of Authority and Co-existence of Multiple Identities in the Kandyan Kingdom",
+      "url": "https://noolaham.net/project/738/73782/73782.pdf",
+      "note": "University of Jaffna Chancellor's Lecture checked for Vimaladharmasuriya's rise, Dona Catarina marriage, Danture victory, consolidation and the kingdom's plural political relationships."
+    },
+    {
+      "id": "kan-navy",
+      "title": "Military strategies and war tactics of the Kandyan Kingdom, Sri Lanka Navy Journal",
+      "url": "https://www.navy.lk/assets/files/Navy_Journal/PDF/journal_2016_july_uploaded_2022_mar_16.pdf",
+      "note": "Official military journal article checked for Danture in 1594, Balana pass watches, deception, jungle warfare and the larger sequence of Portuguese-Kandyan battles."
+    },
+    {
+      "id": "kan-treaty1638",
+      "title": "A legal analysis of the 1638 Westerwolt Treaty, University of Colombo",
+      "url": "https://archive.cmb.ac.lk/items/cfefa83e-9c9a-4347-b8ed-4edf76e763c0",
+      "note": "University symposium research checked for the 1638 agreement between Rajasinghe II and the VOC: Dutch help against Portugal in exchange for extensive trading advantages."
+    },
+    {
+      "id": "kan-dewaraja",
+      "title": "A Study of the Political, Administrative, and Social Structure of the Kandyan Kingdom, 1707 to 1760",
+      "url": "https://books.google.com/books/about/A_Study_of_the_Political_Administrative.html?hl=en&id=j5w5AQAAIAAJ&output=html_text",
+      "note": "Lorna Dewaraja's historical study checked for the Nayakkar succession, nobility, central and provincial offices, court ceremony and religion-politics in eighteenth-century Kandy."
+    },
+    {
+      "id": "kan-dangerous",
+      "title": "Dangerous Friendships in Eighteenth-Century Buddhist Laṅkā and Siam",
+      "url": "https://www.cambridge.org/core/journals/itinerario/article/dangerous-friendships-in-eighteenthcentury-buddhist-lanka-and-siam/DD5EE4788B71CEE0A19E04868447910F",
+      "note": "Open peer-reviewed article checked for Kandyan-Siamese-VOC diplomacy, cinnamon labor, coastal power, the 1753 ordination mission and political intrigue around the Nayakkar court."
+    },
+    {
+      "id": "kan-syam",
+      "title": "A new reading of the 1756 A.D. Syāmasandesa",
+      "url": "https://jocbs.org/index.php/jocbs/article/download/246/340",
+      "note": "Philological article checked for the dated palm-leaf letter, Pali formulas, Sinhala and Siamese documentary traditions, the 1753 mission and manuscripts made around Kandy."
+    },
+    {
+      "id": "kan-icomos",
+      "title": "Sacred City of Kandy ICOMOS evaluation",
+      "url": "https://whc.unesco.org/document/153507",
+      "note": "ICOMOS evaluation checked for Kandy's 1592 capital status, palace-temple ensemble, Tooth Temple building phases, materials, decoration, lake, audience hall and bathing house."
+    },
+    {
+      "id": "kan-rijks",
+      "title": "Restitution: War booty from Kandy, Rijksmuseum",
+      "url": "https://www.rijksmuseum.nl/en/research/our-research/overarching/provenance-research-colonial-collections/restitution",
+      "note": "Museum provenance research checked for the 1765 Dutch capture and plunder, six seized weapons, Lewke's decorated cannon, royal workshop craft and their 2023 restitution."
+    },
+    {
+      "id": "kan-museum",
+      "title": "Six Kandyan artefacts to return home, Department of National Museums Sri Lanka",
+      "url": "https://www.museum.gov.lk/v1/news/e3e2ecbf-6bf6-4e5e-9b19-8e84abd12b53",
+      "note": "National museum account checked for the 1765 palace siege, golden and silver swords, knife, wall guns, cannon, royal workshops, materials, decoration and provenance."
+    },
+    {
+      "id": "kan-met-dancer",
+      "title": "Temple Dancer, Kandy region, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/789044",
+      "note": "Museum object record checked for an eighteenth-century ivory temple panel, a female dancer's pose, dress, carved border and comparison with Embekke woodwork."
+    },
+    {
+      "id": "kan-met-knife",
+      "title": "Knife, Kandyan Type, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/37528",
+      "note": "Museum record checked for an eighteenth-century Kandyan-type knife of ivory and silver, with dimensions and classification used to bound material-culture claims."
+    },
+    {
+      "id": "kan-doyly-constitution",
+      "title": "A Sketch of the Constitution of the Kandyan Kingdom",
+      "url": "https://www.cambridge.org/core/journals/transactions-of-the-royal-asiatic-society-of-great-britain-and-ireland/article/abs/xa-sketch-of-the-constitution-of-the-kandyan-kingdom/04D82050CC8FDD1D42649128CA6C59B7",
+      "note": "Near-contemporary post-conquest account checked for kingship, adigars, disavas, provincial administration and service relationships, while treating D'Oyly as an interested British official."
+    },
+    {
+      "id": "kan-material-pluralism",
+      "title": "Material Pluralism and Symbolic Violence: Palm Leaf Deeds and Paper Land Grants in Colonial Sri Lanka, 1680 to 1795",
+      "url": "https://www.cambridge.org/core/journals/law-and-history-review/article/material-pluralism-and-symbolic-violence-palm-leaf-deeds-and-paper-land-grants-in-colonial-sri-lanka-16801795/B25D892807C74DCA1B997453C0EBE9E1",
+      "note": "Peer-reviewed legal history checked for rajakariya, local scribes, palm-leaf deeds, Kandy's lekam miti registers, land, taxes and documentary continuity."
+    },
+    {
+      "id": "kan-rajakariya",
+      "title": "Organization of Work and Indigenous Human Resource Management",
+      "url": "https://nsbmjm.sljol.info/articles/38/files/submission/proof/38-1-93-1-10-20220414.pdf",
+      "note": "Peer-reviewed management-history article checked for land tenure, caste-linked rajakariya, public and military labor, roads and bridges, taxes and state or temple service."
+    },
+    {
+      "id": "kan-polyandry",
+      "title": "Persecuted or permitted? Fraternal polyandry in Sri Lanka, seventeenth and eighteenth centuries",
+      "url": "https://www.cambridge.org/core/journals/continuity-and-change/article/persecuted-or-permitted-fraternal-polyandry-in-a-calvinist-colony-sri-lanka-ceylon-seventeenth-and-eighteenth-centuries/776BA529370E5DF4F1D4FCD0E301A485",
+      "note": "Peer-reviewed family-history article checked for historically documented Kandyan polyandry, household property and labor logic, regional variation and colonial misreadings."
+    },
+    {
+      "id": "kan-lawnet",
+      "title": "Jayasinghe v. Kiribindu and Others, Supreme Court of Sri Lanka",
+      "url": "https://www.lawnet.gov.lk/wp-content/uploads/2016/11/001-SLLR-SLLR-1997-2-JAYASINGHE-V.-KIRIBINDU-AND-OTHERS.pdf",
+      "note": "Official judgment checked for the historical legal distinction between diga and binna marriage, residence, mulgedera ties and different succession consequences."
+    },
+    {
+      "id": "kan-built",
+      "title": "Kandyan Elitism and Kandyan Elite Domestic Architecture",
+      "url": "https://besl.sljol.info/articles/3062/files/submission/proof/3062-1-10672-1-10-20110513.pdf",
+      "note": "Built Environment Sri Lanka article checked for vernacular and elite houses, wattle and daub, thatch, courtyards, rice bins, kitchens, workshops, stables and status privileges."
+    },
+    {
+      "id": "kan-knox",
+      "title": "An Historical Relation of the Island Ceylon, Robert Knox",
+      "url": "https://www.gutenberg.org/files/14346/14346-h/14346-h.htm",
+      "note": "Primary 1681 captive account checked for rice terraces, foods, household work, children's songs, palm-leaf writing, medicine, washing and sanitation; outsider prejudice and overgeneralization are flagged."
+    },
+    {
+      "id": "kan-ola",
+      "title": "Utilization of Ola Leaf and Handwritten Manuscripts for Research, University of Colombo",
+      "url": "https://archive.cmb.ac.lk/items/d926c3b0-29f1-4372-b5c7-840001927d0d",
+      "note": "University research checked for oral and palm-leaf transmission of indigenous medical knowledge, herbal remedies, diagnostics and the limits of surviving manuscript collections."
+    },
+    {
+      "id": "kan-ritual",
+      "title": "Singing, drumming and dancing of Kandyan ritual Towilaya, University of Peradeniya",
+      "url": "https://ir.lib.pdn.ac.lk/items/30081b49-dabb-47cc-92f4-84f27bf00339",
+      "note": "University research checked for continuing Kandyan healing-ritual lineages joining verse, drumming, dance, astrology and medicine; used as later continuity, not a dated palace performance."
+    },
+    {
+      "id": "kan-lordnorth",
+      "title": "Lord North and the Kandyan Kingdom, 1798 to 1805",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/lord-north-and-the-kandyan-kingdom-17981805/3E1C58D42BAB7438C7BFCEC28546852F",
+      "note": "Historical article checked for British efforts to impose a subsidiary alliance, the independent kingdom, court diplomacy and cautions against simple treason stories about Kandyan ministers."
+    },
+    {
+      "id": "kan-land",
+      "title": "Tales of the Land: British Geography and Kandyan Resistance in Sri Lanka, c. 1803 to 1850",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/tales-of-the-land-british-geography-and-kandyan-resistance-in-sri-lanka-c-18031850/211C185693C1680BF1406B530E1685A6",
+      "note": "Historical geography article checked for the 1803 British defeat, Kandyan landscape knowledge, boundary books and verses, and the political use of topographic information."
+    },
+    {
+      "id": "kan-archives-convention",
+      "title": "1815 Convention, Sri Lanka National Archives",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention",
+      "note": "National archive exhibit checked for coastal succession, political maneuvering, the March 1815 Convention, transfer of sovereignty in Article 4 and promise about Buddhism in Article 5."
+    },
+    {
+      "id": "kan-archives-doyly",
+      "title": "Sir John D'Oyly, the Strategist, Sri Lanka National Archives",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/d-oyly",
+      "note": "National archive exhibit checked for D'Oyly's Sinhala study, monastic and literary contacts, intelligence work, efforts to divide king and nobles and drafting of the Convention."
+    },
+    {
+      "id": "kan-archives-rebellion",
+      "title": "Freedom Struggle, 1818, Sri Lanka National Archives",
+      "url": "https://www.archives.gov.lk/English/online_exhibits/path_to_freedom/freedom_struggle",
+      "note": "National archive exhibit checked for deterioration after occupation and the uprising that began in 1817, explicitly after the kingdom had ended."
+    },
+    {
+      "id": "kan-reappropriation",
+      "title": "Reappropriation, Resistance, and British Autocracy in Sri Lanka, 1820 to 1850",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/reappropriation-resistance-and-british-autocracy-in-sri-lanka-18201850/00161056F351BFB9C4785916B3862769",
+      "note": "Peer-reviewed article checked for Kandy's fall in 1815, defeat of the later rebellion and creative reuse of royal ritual, law and political traditions under colonial rule."
+    },
+    {
+      "id": "kan-wikisource",
+      "title": "1815 Udarata Givisuma, Sinhala Wikisource transcription",
+      "url": "https://wikisource.org/wiki/%E0%B6%8B%E0%B6%A9%E0%B6%BB%E0%B6%A7_%E0%B6%9C%E0%B7%92%E0%B7%80%E0%B7%92%E0%B7%83%E0%B7%94%E0%B6%B8",
+      "note": "Full Sinhala transcription checked against the archive context for the date, venue, signatories and Article 5 wording used in the carefully labeled language sample."
+    }
+  ],
+  "entities": [
+    {
+      "id": "kandy",
+      "card": "data/cards/kandy.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "kan-unesco",
+            "kan-archives-report"
+          ],
+          "locator": "Authoritative heritage summary checked for Senkadagalapura, the last royal capital, British occupation in 1815, the Temple of the Tooth and continuing pilgrimage importance. Cambridge archival report checked for Portuguese and Dutch coastal chronology, the survival of an inland kingdom and British annexation in 1815.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "kan-jaffna"
+          ],
+          "locator": "University of Jaffna Chancellor's Lecture checked for Vimaladharmasuriya's rise, Dona Catarina marriage, Danture victory, consolidation and the kingdom's plural political relationships.",
+          "dateScope": {
+            "from": 1590,
+            "to": 1638
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "kan-treaty1638"
+          ],
+          "locator": "University symposium research checked for the 1638 agreement between Rajasinghe II and the VOC: Dutch help against Portugal in exchange for extensive trading advantages.",
+          "dateScope": {
+            "from": 1638,
+            "to": 1658
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "kan-dewaraja"
+          ],
+          "locator": "Lorna Dewaraja's historical study checked for the Nayakkar succession, nobility, central and provincial offices, court ceremony and religion-politics in eighteenth-century Kandy.",
+          "dateScope": {
+            "from": 1658,
+            "to": 1739
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "kan-dewaraja"
+          ],
+          "locator": "Lorna Dewaraja's historical study checked for the Nayakkar succession, nobility, central and provincial offices, court ceremony and religion-politics in eighteenth-century Kandy.",
+          "dateScope": {
+            "from": 1739,
+            "to": 1753
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "kan-dangerous"
+          ],
+          "locator": "Open peer-reviewed article checked for Kandyan-Siamese-VOC diplomacy, cinnamon labor, coastal power, the 1753 ordination mission and political intrigue around the Nayakkar court.",
+          "dateScope": {
+            "from": 1753,
+            "to": 1766
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "kan-doyly-constitution"
+          ],
+          "locator": "Near-contemporary post-conquest account checked for kingship, adigars, disavas, provincial administration and service relationships, while treating D'Oyly as an interested British official.",
+          "dateScope": {
+            "from": 1766,
+            "to": 1796
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "kan-lordnorth"
+          ],
+          "locator": "Historical article checked for British efforts to impose a subsidiary alliance, the independent kingdom, court diplomacy and cautions against simple treason stories about Kandyan ministers.",
+          "dateScope": {
+            "from": 1796,
+            "to": 1803
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "kan-land"
+          ],
+          "locator": "Historical geography article checked for the 1803 British defeat, Kandyan landscape knowledge, boundary books and verses, and the political use of topographic information.",
+          "dateScope": {
+            "from": 1803,
+            "to": 1815
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "kan-index",
+            "kan-summary",
+            "kan-coverage"
+          ],
+          "locator": "Exact index, summary and coverage rows: id, label, dates, flags, source, interval count and missing-review state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "kan-map1600",
+            "kan-map1650"
+          ],
+          "locator": "Decoded predecessor absence plus exact 1650 type, label, component, position count and bbox.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "kan-map1650",
+            "kan-map1700"
+          ],
+          "locator": "Exact hashes, raw arc arrays and shared-arc neighbor properties for 1650 and 1700.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "kan-map1715"
+          ],
+          "locator": "Both exact 1715 features: statistics, bounds, hashes, point tests and raw arcs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "kan-map1783",
+            "kan-map1800",
+            "kan-map1815",
+            "kan-map1878"
+          ],
+          "locator": "Exact final-layer geometry and decoded target absence at both successor snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "kan-map1650",
+            "kan-map1700",
+            "kan-map1715",
+            "kan-map1783",
+            "kan-map1800"
+          ],
+          "locator": "Twenty named point tests repeated at every exact target layer and compared across geometry changes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "kan-jaffna"
+          ],
+          "locator": "University lecture discussion of Vimaladharmasuriya, royal marriage, Danture and consolidation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "kan-navy"
+          ],
+          "locator": "Official military-history discussion of Danture, Balana watch villages, withdrawal, deception and jungle tactics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "kan-syam"
+          ],
+          "locator": "Philological reconstruction of missions, letters, manuscripts and travel between Kandy and Siam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "kan-archives-rebellion"
+          ],
+          "locator": "National Archives sequence from occupation through deteriorating relations and the 1817 to 18 struggle.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "kan-doyly-constitution"
+          ],
+          "locator": "Near-contemporary constitutional sketch of the court and provincial office hierarchy, read with its British political interest flagged.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "kan-rajakariya"
+          ],
+          "locator": "Peer-reviewed summary of the three service categories, land and caste connections, and public works.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "kan-material-pluralism"
+          ],
+          "locator": "Court registers, village scribes, ola manufacture, land transactions and colonial continuities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "kan-dewaraja"
+          ],
+          "locator": "Historical analysis of nobility, appointment, court factions and the administrative structure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "kan-doyly-constitution"
+          ],
+          "locator": "Near-contemporary office hierarchy used with its post-conquest authorship and administrative purpose foregrounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "kan-treaty1638"
+          ],
+          "locator": "University legal-history abstract on treaty parties, anti-Portuguese purpose and trading exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "kan-dangerous"
+          ],
+          "locator": "Peer-reviewed analysis of cinnamon labor, frontier recruitment, trade incentives and VOC policy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "kan-rijks"
+          ],
+          "locator": "Museum provenance record of capture, plunder, objects and later custody.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "kan-lordnorth"
+          ],
+          "locator": "Historical reassessment of alliance plans, independent status and disputed ministerial intent.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "kan-land"
+          ],
+          "locator": "Historical geography study of the 1803 defeat, landscape knowledge and political mapping.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "kan-icomos"
+          ],
+          "locator": "ICOMOS building sequence, palace-temple relationship, materials and royal association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "kan-dangerous"
+          ],
+          "locator": "Open article's reconstruction of the 1753 mission, actors, transport and competing motives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "kan-syam"
+          ],
+          "locator": "Philological reading of the dated letter, languages, formulas, manuscript transmission and pronunciation issue.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "kan-met-dancer"
+          ],
+          "locator": "Met object date, region, material, depicted pose, dress, architectural function and stylistic comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "kan-museum",
+            "kan-met-knife"
+          ],
+          "locator": "National Museum provenance and workshop analysis paired with the Met's material and date record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "kan-lawnet"
+          ],
+          "locator": "Official judgment's historical definitions and inheritance consequences, grounded in early legal authorities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "kan-polyandry"
+          ],
+          "locator": "Peer-reviewed historical treatment of forms, property logic, variation and colonial regulation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "kan-lawnet"
+          ],
+          "locator": "Official judgment's historical marriage and succession authorities, with the limits of legal evidence stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "kan-knox"
+          ],
+          "locator": "Primary account passages on songs, neighboring sleep, speech training and washing play, with author position.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "kan-built"
+          ],
+          "locator": "Architectural study's courtyard, rooms, gendered use, childbirth, storage and evidence-sample limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "kan-material-pluralism"
+          ],
+          "locator": "Peer-reviewed evidence for village scribes and court records, with household learning clearly marked as inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "kan-syam"
+          ],
+          "locator": "Dated mission documents, ordination scholarship and manuscript catalogues around Kandy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "kan-material-pluralism"
+          ],
+          "locator": "Peer-reviewed account of ola preparation, professional inscribers, deeds, registers and legal value.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "kan-ola"
+          ],
+          "locator": "University study of oral and manuscript transmission, content categories, collections and dating limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "kan-ritual"
+          ],
+          "locator": "University documentation of named Kandyan healing-ritual practices and contemporary lineage evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "kan-knox"
+          ],
+          "locator": "Primary passages on terraced irrigation, cooperative work, rice, plant foods, jackfruit and betel sociability.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "kan-rajakariya"
+          ],
+          "locator": "Work-organization analysis of agricultural, craft, fiscal, public and military obligations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "kan-built"
+          ],
+          "locator": "Vernacular materials, annual thatch repair, storage and status-specific domestic additions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "kan-museum"
+          ],
+          "locator": "National Museum analysis of wall guns, cannon, decoration, mobility and royal workshop origin.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "kan-treaty1638"
+          ],
+          "locator": "Treaty analysis of military assistance, coastal objectives and commercial privilege, with small trade left unquantified.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "kan-built"
+          ],
+          "locator": "Architectural comparison of vernacular, sub-elite and elite forms plus preservation caveats.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "kan-ola"
+          ],
+          "locator": "University medical-manuscript evidence used to correct overgeneralized primary testimony.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "kan-icomos"
+          ],
+          "locator": "ICOMOS evidence for lake date, palace water features and bathing house, separated from household inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "kan-knox"
+          ],
+          "locator": "Primary washing and after-stool passages paired with explicit negative-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "kan-icomos"
+          ],
+          "locator": "ICOMOS inventory of structures, materials and decoration, with representativeness bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "kan-archives-convention",
+            "kan-wikisource"
+          ],
+          "locator": "National Archives document context checked against Sinhala Wikisource Article 5 transcription; genre and register labeled.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "kan-land"
+          ],
+          "locator": "Historical geography account of failed occupation, resistance and British knowledge-building.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "kan-archives-doyly"
+          ],
+          "locator": "National Archives biographical evidence for language study, contacts, spying and drafting role.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "kan-map1815",
+            "kan-archives-convention"
+          ],
+          "locator": "Exact atlas handoff paired with National Archives explanation of Convention Articles 4 and 5.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "kan-archives-rebellion",
+            "kan-reappropriation"
+          ],
+          "locator": "National Archives chronology paired with peer-reviewed analysis of post-1815 political reappropriation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "kan-archives-convention",
+            "kan-reappropriation"
+          ],
+          "locator": "National archive exhibit checked for coastal succession, political maneuvering, the March 1815 Convention, transfer of sovereignty in Article 4 and promise about Buddhism in Article 5. Peer-reviewed article checked for Kandy's fall in 1815, defeat of the later rebellion and creative reuse of royal ritual, law and political traditions under colonial rule.",
+          "dateScope": {
+            "year": 1815
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "kandy",
+        "card": "cards/kandy.json",
+        "dateBasis": "map_coverage",
+        "summary": "The atlas begins Kandy late in 1650 but ends it correctly in 1815, when British invasion and the Kandyan Convention terminated the sovereign kingdom.",
+        "summarySource": null,
+        "fell": {
+          "year": 1815,
+          "to": [
+            "ceylon-1815"
+          ],
+          "text": "British forces occupied Kandy and the Kandyan Convention of 2 March 1815 transferred sovereignty to the British Crown."
+        },
+        "successors": [
+          "ceylon-1815"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "kandy",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            80.03420034200343,
+            6.473453302778211,
+            81.39501395013951,
+            8.86864347057223
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "kandy",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            80.03420034200343,
+            6.473453302778211,
+            81.39501395013951,
+            8.86864347057223
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "kandy",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            80.03420034200343,
+            6.473453302778211,
+            81.39501395013951,
+            8.833360215975837
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "kandy",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            80.50220502205025,
+            8.78450647884236,
+            80.62100621006209,
+            8.86864347057223
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "kandy",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            80.03420034200343,
+            6.472753338276618,
+            81.39501395013951,
+            8.868633898640546
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "kandy",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            80.03420034200343,
+            6.472753338276618,
+            81.39501395013951,
+            8.868633898640546
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target id kandy is indexed as Kandy, circa 1650 to 1815, with no aliases or authored link; the card distinguishes city, capital and sovereign Kingdom of Kandy.",
+    "The imported summary's monarchy dates 1469 to 1818 are not adopted. Kandy's secure capital era is treated from the 1590s, sovereign rule ends in 1815, and the 1817 to 1818 uprising is post-annexation resistance.",
+    "At 1650 and 1700 the exact shape is one unlabeled 15-position Polygon with bbox 80.03420034200343,6.473453302778211 to 81.39501395013951,8.86864347057223 and SHA-256 8b64cda6d8a63220de0678596bee707fe2601a72c341f8f2be1b5054809f57b3.",
+    "At 1715 the target splits into a 17-position main polygon (SHA-256 9173f390e8cb00c01398edc1ea6ba2647a53d6dbacd364ab62dc721f4dac53f1) and a four-position northwestern fragment (SHA-256 8ed3c680f28e1d76cedf9089a25763ac110a005ce8ae8fe8f8662c36e2a4ebf2).",
+    "At 1783 and 1800 one 15-position Polygon has bbox 80.03420034200343,6.472753338276618 to 81.39501395013951,8.868633898640546 and SHA-256 ccb3a56e28ae27d146190ababfdc054d296157c4749fdf9a9208daf573633ff7.",
+    "The main shape consistently includes Kandy, Matale, Dambulla, Nuwara Eliya, Badulla, Mahiyangana, Kurunegala, Anuradhapura and Polonnaruwa, while excluding Ratnapura and Kegalle as well as all audited coastal points; it is a broad inland locator with historical overreach and omissions.",
+    "At 1600 the target is absent under a broad saylan feature; at 1815 it disappears into ceylon-1815 and remains absent in 1878. The exact endpoint aligns with annexation even though the start is late.",
+    "Daily-life evidence distinguishes eyewitness description, architecture, legal history, manuscripts, museum objects and later continuity. Family forms, schooling, medicine and sanitation are presented with regional and source limits.",
+    "The language sample is exact formal Sinhala from Article 5 of the bilingual Kandyan Convention, dated 2 March 1815, with original script, scholarly-style transliteration, translation and explicit warning that it is legal language rather than ordinary speech.",
+    "A direct atlas successor to ceylon-1815 is used because the 1815 seam and historical annexation agree; this does not imply cultural disappearance."
+  ]
+}

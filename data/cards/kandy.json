@@ -1,0 +1,658 @@
+{
+  "id": "kandy",
+  "overview": "Picture a hill capital where drums rolled past the Temple of the Tooth, rice terraces stepped down wet valleys, and guards watched narrow forest passes. This was the Kingdom of Kandy, also called Senkadagala, Sri Lanka's last independent royal state. Its best-documented capital era began in the 1590s, about sixty years before the atlas first colors `kandy` in 1650. Kandyan rulers defeated Portuguese invasions, invited Dutch help and then resisted Dutch coastal power, while chiefs, monks, farmers and artisans held together an unequal service-based state. Monks crossed the ocean to Siam; royal workshops made carved guns, ivory panels and jeweled blades; household life revolved around land, kin, rice and water. British troops entered Kandy in 1803 but failed to hold it. In 1815, British invasion, court divisions and the Kandyan Convention ended the kingdom exactly where the atlas polygon stops. Rebellion in 1817 to 1818 continued resistance under colonial rule, not the monarchy. The map is a useful inland locator, but its broad northern reach and missing Sabaragamuwa areas are not a measured border.",
+  "periods": [
+    {
+      "from": 1590,
+      "to": 1638,
+      "circa": true,
+      "title": "A highland capital and hard-won consolidation",
+      "summary": "Vimaladharmasuriya I established Kandy as a royal capital in the 1590s, married Dona Catarina and defeated a Portuguese invasion at Danture in 1594. Later rulers continued the struggle through guarded passes and shifting alliances.",
+      "sourceIds": [
+        "kan-jaffna"
+      ]
+    },
+    {
+      "from": 1638,
+      "to": 1658,
+      "title": "A Dutch alliance drives out Portugal",
+      "summary": "Rajasinghe II agreed in 1638 that the VOC would fight Portugal for trading privileges. Dutch forces expelled Portugal from its last major coastal possessions by 1658, then kept the forts and sea trade Kandy wanted.",
+      "sourceIds": [
+        "kan-treaty1638"
+      ]
+    },
+    {
+      "from": 1658,
+      "to": 1739,
+      "title": "An inland kingdom beside a Dutch-controlled coast",
+      "summary": "Kandy remained sovereign inland while the VOC ruled much of the littoral. Rajasinghe II and his successors bargained, fought and traded across a porous frontier; the atlas finally begins its Kandy polygon in 1650, late for this history.",
+      "sourceIds": [
+        "kan-dewaraja"
+      ]
+    },
+    {
+      "from": 1739,
+      "to": 1753,
+      "title": "Nayakkar succession and a Buddhist royal court",
+      "summary": "Sri Vijaya Rajasinha began the Nayakkar dynasty in 1739. South Indian kinship did not simply replace Kandyan kingship: rulers worked through Sinhala-speaking chiefs, Buddhist institutions and court ceremonies while maintaining ties across the Palk Strait.",
+      "sourceIds": [
+        "kan-dewaraja"
+      ]
+    },
+    {
+      "from": 1753,
+      "to": 1766,
+      "title": "Ordination voyages, rebellion and war with the VOC",
+      "summary": "Monks brought from Siam restored higher ordination in 1753 under Kirti Sri Rajasinha. Friendship with the VOC masked trade rivalry and intrigue; war followed, Dutch troops plundered Kandy in 1765, and a 1766 settlement tightened coastal control.",
+      "sourceIds": [
+        "kan-dangerous"
+      ]
+    },
+    {
+      "from": 1766,
+      "to": 1796,
+      "title": "A landlocked court rich in ceremony and craft",
+      "summary": "The Dutch coastal ring constrained foreign trade but did not erase Kandyan authority. Kings, chiefs, monks, artisans and cultivators maintained an inland state whose diplomacy, religious patronage, workshops and service obligations linked palace and provinces.",
+      "sourceIds": [
+        "kan-doyly-constitution"
+      ]
+    },
+    {
+      "from": 1796,
+      "to": 1803,
+      "title": "Britain takes the coast and tests Kandyan independence",
+      "summary": "Britain took the former Dutch coast in 1796. Governor Frederick North sought a subsidiary alliance rather than treating Kandy as already conquered; diplomacy, rival court plans and military pressure ended in the First Kandyan War of 1803.",
+      "sourceIds": [
+        "kan-lordnorth"
+      ]
+    },
+    {
+      "from": 1803,
+      "to": 1815,
+      "title": "A failed occupation, then annexation through invasion and elite pact",
+      "summary": "British troops entered Kandy in 1803 but could not hold the kingdom. In 1815, conflict between Sri Vikrama Rajasinha and leading chiefs, British intelligence and a new invasion ended sovereign rule; the Convention transferred authority to the British Crown.",
+      "sourceIds": [
+        "kan-land"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "First decode the atlas label, shape and date seams",
+      "items": [
+        {
+          "text": "The exact indexed id is `kandy`, displayed simply as “Kandy,” circa 1650 to 1815. There is no alias or authored link. Coverage calls it a state with five border files and five observed intervals, but the imported summary switches between city and kingdom and says the monarchy lasted to 1818. This card keeps the database id while correcting the polity and its 1815 ending.",
+          "sourceIds": [
+            "kan-index",
+            "kan-summary",
+            "kan-coverage"
+          ]
+        },
+        {
+          "text": "At 1600 the exact target is absent; one sweeping imported `saylan` feature owns the inland audit points even though Kandy was already a royal capital. At 1650 `kandy` appears as one unlabeled Polygon with one ring and fifteen positions. Its bounds are 80.03420034200343° to 81.39501395013951° east and 6.473453302778211° to 8.86864347057223° north.",
+          "sourceIds": [
+            "kan-map1600",
+            "kan-map1650"
+          ]
+        },
+        {
+          "text": "The 1650 coordinate-array SHA-256 is `8b64cda6d8a63220de0678596bee707fe2601a72c341f8f2be1b5054809f57b3`; 1700 has exactly the same decoded shape. Their raw arcs differ, `[[659,-659]]` and `[[698,-698]]`, because topology files encode shared lines independently. Both touch features called `ceylon` and `ceylon-dutch`, showing a digital inland/coastal seam rather than a surveyed treaty frontier.",
+          "sourceIds": [
+            "kan-map1650",
+            "kan-map1700"
+          ]
+        },
+        {
+          "text": "The 1715 layer unexpectedly splits Kandy into two exact features: a main seventeen-position polygon with hash `9173f390e8cb00c01398edc1ea6ba2647a53d6dbacd364ab62dc721f4dac53f1`, plus a four-position northwestern sliver with hash `8ed3c680f28e1d76cedf9089a25763ac110a005ce8ae8fe8f8662c36e2a4ebf2`. None of the twenty named audit points lands in that tiny fragment, so it should not be spun into a historical enclave without evidence.",
+          "sourceIds": [
+            "kan-map1715"
+          ]
+        },
+        {
+          "text": "At 1783 and 1800 the target returns to one fifteen-position polygon, with bounds 80.03420034200343,6.472753338276618 to 81.39501395013951,8.868633898640546 and hash `ccb3a56e28ae27d146190ababfdc054d296157c4749fdf9a9208daf573633ff7`. It vanishes at 1815 and stays absent in 1878, when Ceylon successor features cover the highlands.",
+          "sourceIds": [
+            "kan-map1783",
+            "kan-map1800",
+            "kan-map1815",
+            "kan-map1878"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Read the colored area as a locator, then meet the kingdom",
+      "items": [
+        {
+          "text": "Across all five exact layers, the main polygon contains Kandy, Matale, Dambulla, Nuwara Eliya, Badulla, Mahiyangana, Kurunegala, Anuradhapura and Polonnaruwa. It excludes every coastal test point, which captures the inland-versus-littoral story in broad strokes. Yet it also excludes Ratnapura and Kegalle, historically important Kandyan zones, while stretching far north and east beyond equally secure administration.",
+          "sourceIds": [
+            "kan-map1650",
+            "kan-map1700",
+            "kan-map1715",
+            "kan-map1783",
+            "kan-map1800"
+          ]
+        },
+        {
+          "text": "Senkadagalapura, the city now called Kandy, became the capital in the 1590s under Vimaladharmasuriya I. His marriage to Dona Catarina reinforced a royal claim, and victory over Portugal at Danture in 1594 helped consolidate power. The atlas start of 1650 therefore misses roughly six decades of the best-documented independent highland kingdom.",
+          "sourceIds": [
+            "kan-jaffna"
+          ]
+        },
+        {
+          "text": "Kandyan defense used narrow approaches, watched passes, forests and deception. At Danture, troops let an invading Portuguese force enter, disrupted its support and struck in difficult country. Terrain mattered because people knew how to use it; mountains were not magic walls. The city was entered or captured more than once, including by Dutch troops in 1765 and British troops in 1803.",
+          "sourceIds": [
+            "kan-navy"
+          ]
+        },
+        {
+          "text": "The kingdom was never isolated from the sea. Monks and envoys sailed between Kandy and Siam carrying letters, texts and ritual knowledge, while intermediaries crossed several political jurisdictions. Coastal forts could restrict routes, but the court still used gifts, religious ties and foreign partners to seek room for action in a connected Indian Ocean world.",
+          "sourceIds": [
+            "kan-syam"
+          ]
+        },
+        {
+          "text": "The historical endpoint really is 1815. British forces occupied the capital, Sri Vikrama Rajasinha was deposed, and chiefs signed a Convention on 2 March that transferred sovereignty. The Uva-Wellassa uprising began in 1817 under colonial rule. Calling that rebellion a kingdom lasting to 1818 confuses resistance in Kandy's name with continued sovereign monarchy.",
+          "sourceIds": [
+            "kan-archives-rebellion"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "A king ruled through chiefs, land records and required service",
+      "items": [
+        {
+          "text": "The king stood at the center of court and sacred authority, but government worked through powerful officials. Two leading adigars advised, judged and commanded; disavas managed outer provinces; rate mahatmayas headed districts nearer the capital; village headmen and scribes handled local business. Offices created ladders of access, obligation and rivalry, not a modern ministry with identical desks everywhere.",
+          "sourceIds": [
+            "kan-doyly-constitution"
+          ]
+        },
+        {
+          "text": "Land and labor were tied together through rajakariya, literally royal work. Depending on status and tenure, people owed public labor, military service, specialized craft work, produce or payments to crown, chiefs or temples. Roads, bridges and campaigns did not build themselves. The system also fixed unequal caste duties, so a glittering palace rested on compulsory work that children should not mistake for volunteering.",
+          "sourceIds": [
+            "kan-rajakariya"
+          ]
+        },
+        {
+          "text": "Palm-leaf `lēkam miti` registers tracked land, taxes and services at court, while village scribes cut deeds for property and inheritance onto prepared ola leaves. Local chiefs authenticated documents. This paper trail was literally leafy: useful enough that Portuguese and Dutch administrators adapted it, even while trying to make people accept colonial paper records.",
+          "sourceIds": [
+            "kan-material-pluralism"
+          ]
+        },
+        {
+          "text": "Provincial chiefs possessed influence, followers and revenue, yet their authority depended on royal appointment, local networks and their ability to deliver services. Kings balanced noble families; nobles could bargain, obstruct or rebel. The fall of 1815 grew from this political structure and British intervention, so “the people suddenly chose Britain” is much too simple for a divided court and many communities.",
+          "sourceIds": [
+            "kan-dewaraja"
+          ]
+        },
+        {
+          "text": "Caste and rank shaped occupations, marriage, service and even privileges such as clothing or architecture. Yet the official hierarchy was not a frozen diagram: rulers depended on chiefs, headmen, farmers, monks, artisans and soldiers across distant provinces. D'Oyly recorded offices after conquest for a British audience, so his tidy constitutional ladder reveals structure more clearly than local bargaining or low-status voices.",
+          "sourceIds": [
+            "kan-doyly-constitution"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fight, bargain, trade, and watch allies become rivals",
+      "items": [
+        {
+          "text": "Rajasinghe II's 1638 treaty invited the VOC to attack Portuguese positions. Kandy expected recovered strongholds; the Dutch expected repayment and commercial privilege. After Portugal was expelled, the Company kept coastal forts and lucrative routes. The deal solved one danger while creating another, a useful lesson that allies can agree on an enemy without agreeing on the world afterward.",
+          "sourceIds": [
+            "kan-treaty1638"
+          ]
+        },
+        {
+          "text": "Cinnamon connected highland politics with coastal labor and global commerce. VOC officials wanted access to cinnamon lands and feared that peelers might flee toward Kandy. The court could influence people in contested zones and use that leverage in diplomacy. Pepper, areca, elephants, textiles, salt and other goods also moved, but exact cargoes and royal income changed over time.",
+          "sourceIds": [
+            "kan-dangerous"
+          ]
+        },
+        {
+          "text": "In 1765 Dutch troops captured the city and looted palaces and temples. A gold sabre, silver sabre, dagger, two wall guns and Lewke's cannon became war booty. Their survival proves a sack, not permanent Dutch rule over the highlands: troops withdrew, Kandy continued as a kingdom, and a new settlement reshaped the coastal boundary in 1766.",
+          "sourceIds": [
+            "kan-rijks"
+          ]
+        },
+        {
+          "text": "When Britain took the Dutch coast in 1796, Governor North first sought a subsidiary alliance that would have limited Kandyan freedom. Court figures pursued competing strategies, and historians warn that calling one minister simply a traitor flattens uncertain evidence. Diplomacy failed; the British marched into Kandy in 1803, then lost control of the capital and much of the expedition.",
+          "sourceIds": [
+            "kan-lordnorth"
+          ]
+        },
+        {
+          "text": "Kandyan resistance depended on information as much as ambushes: routes, river crossings, food supplies, village obligations and remembered boundaries. British officers tried to turn that knowledge into surveys and administrative geography after 1803. A mountain pass on a map is only a line; to soldiers carrying equipment in rain, watched by local forces, it could decide whether an army ate, moved or escaped.",
+          "sourceIds": [
+            "kan-land"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Tooth Relic, ocean-crossing monks and brilliant craft",
+      "items": [
+        {
+          "text": "The palace and Temple of the Tooth stood side by side because custody of the Buddha's tooth relic strengthened royal legitimacy. The first Kandyan shrine was built around 1603, destroyed in 1637 and rebuilt in 1697; major surviving work belongs to Kirti Sri Rajasinha's eighteenth-century rebuilding. Granite, limestone, wood, terracotta, metal and ivory carried painted and carved decoration.",
+          "sourceIds": [
+            "kan-icomos"
+          ]
+        },
+        {
+          "text": "Kandyan monks sought a valid higher-ordination lineage overseas. After dangerous negotiations and voyages, Siamese monks led by Upali arrived and ordinations were restored in 1753. This religious project was also diplomacy: Kandy, Ayutthaya and the VOC each had goals, and ships carrying monks, books and ritual objects could become channels for friendship, dependence and political spying.",
+          "sourceIds": [
+            "kan-dangerous"
+          ]
+        },
+        {
+          "text": "A 1756 palm-leaf letter connected Kandy and Siam in Pali, Sinhala and Southeast Asian manuscript worlds. Its surviving formulas discuss refuge and ordination pronunciation, while catalogues record related Sinhala accounts. Learning lived in performed sound as well as writing: getting a syllable right mattered because communities believed the validity of ordination depended on correct recitation.",
+          "sourceIds": [
+            "kan-syam"
+          ]
+        },
+        {
+          "text": "An eighteenth-century ivory panel from the Kandy region shows a female temple dancer in a carefully posed movement, framed by carved plantlike and diamond patterns. It proves skilled carving and a dance image in sacred architecture. It does not identify the model or prove that every village performed the same steps, costume or music.",
+          "sourceIds": [
+            "kan-met-dancer"
+          ]
+        },
+        {
+          "text": "Royal workshops made or finished prestige objects with iron, wood, silver, gold, ivory and gems. Wall guns combined defense with carved and engraved ornament; a small Kandyan-type knife survives in ivory and silver. Such costly objects reveal specialists and court display, but an aristocrat's blade is poor evidence for the tools or clothing of a rice-farming household.",
+          "sourceIds": [
+            "kan-museum",
+            "kan-met-knife"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Families could arrange residence, property and work in several ways",
+      "items": [
+        {
+          "text": "Kandyan customary law distinguished `diga` marriage, in which a woman generally joined her husband's household, from `binna` marriage, in which a husband joined the wife's home or `mulgedera`. Residence affected inheritance and family land. These were legal-social patterns with exceptions and arguments, not two buttons that automatically determined every couple's happiness or power.",
+          "sourceIds": [
+            "kan-lawnet"
+          ]
+        },
+        {
+          "text": "Fraternal polyandry, brothers sharing a wife, was documented in some Kandyan households and could keep land and labor together. It was neither universal nor uniquely Kandyan, and colonial writers often treated unfamiliar families as scandalous curiosities. The careful question is where and why a household used the arrangement, not whether all people inside the atlas polygon lived that way.",
+          "sourceIds": [
+            "kan-polyandry"
+          ]
+        },
+        {
+          "text": "Marriage form affected a woman's ties to her natal home and her claims within family property: diga and binna arrangements carried different expectations, while actual cases produced exceptions and arguments. Legal records make property rules visible far more often than women's own explanations of work, affection, conflict or ambition, so a rule book cannot stand in for every life.",
+          "sourceIds": [
+            "kan-lawnet"
+          ]
+        },
+        {
+          "text": "A seventeenth-century outsider observed children learning songs at bedtime, visiting neighboring houses to sleep when homes were crowded, practicing formal errands and sometimes splashing in a bowl while being washed. Robert Knox watched Kandyan life for years but wrote through captivity and European prejudice, so these vivid scenes are clues, not a census of every childhood.",
+          "sourceIds": [
+            "kan-knox"
+          ]
+        },
+        {
+          "text": "House layout could organize family life. A central court and veranda provided light, air, cooking, work and social space; darker rooms stored cloth and sometimes sheltered childbirth or sleeping. Rice bins advertised household security. The architectural study mostly reconstructs free farmers, sub-elites and elites, so the poorest laborers' shelters and enslaved people's spaces remain less visible.",
+          "sourceIds": [
+            "kan-built"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Learning moved through voices, sand, leaves and specialists",
+      "items": [
+        {
+          "text": "Children likely learned farming, cooking, craft and etiquette within households and work groups, although direct childhood records are scarce. Specialized literacy belonged to scribes, monks, officials and some families. Palm-leaf deeds and court registers prove trained writers worked at village and royal levels; they do not supply a school census or literacy percentage for girls, boys or castes.",
+          "sourceIds": [
+            "kan-material-pluralism"
+          ]
+        },
+        {
+          "text": "Monasteries and court circles sustained Pali and Sinhala textual learning, religious recitation and copying. The 1750s missions required envoys, interpreters, monks and people able to compare formulas across languages and scripts. Weliwita Saranankara's reform world was scholarly and political, but there was no universal classroom system reaching children of every gender, caste and province.",
+          "sourceIds": [
+            "kan-syam"
+          ]
+        },
+        {
+          "text": "Palm-leaf documents were made objects, not loose notebook paper. Leaves were dried and cut, letters incised, pigment rubbed in, and boards or cord protected a bundle. Village scribes recorded property while court registers tracked dues. Reading and writing therefore joined craft skill, memory and authority: a small mark could affect land or labor for a family.",
+          "sourceIds": [
+            "kan-material-pluralism"
+          ]
+        },
+        {
+          "text": "Medical knowledge also traveled orally and on ola manuscripts. Surviving collections preserve herbal remedies, diagnostic ideas and treatment instructions, but most catalogued leaves are not securely dated to one Kandyan reign. They show a durable tradition of recording care; they cannot name the healer in a particular 1700 village or prove every remedy worked.",
+          "sourceIds": [
+            "kan-ola"
+          ]
+        },
+        {
+          "text": "Education included performance. Temple images preserve dancers; monastic ritual required exact recitation; court and festival processions used drums and movement. A modern University of Peradeniya study records Kandyan healing lineages joining song, drumming, dance, astrology and medicine. That is evidence of continuity, not permission to project every modern step unchanged back to 1650.",
+          "sourceIds": [
+            "kan-ritual"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Rice terraces, jackfruit, workshops and market journeys",
+      "items": [
+        {
+          "text": "Rice fields climbed hills in level steps that shared water from springs, channels and ponds. Communities coordinated planting and harvest; women transplanted and weeded in Knox's account. Meals centered on rice with greens, pepper, citrus, coconut, roots or jackfruit, while fish or meat varied by wealth and place. Betel chewing turned visits and news-sharing into a very long snack break.",
+          "sourceIds": [
+            "kan-knox"
+          ]
+        },
+        {
+          "text": "Rajakariya organized more than royal pageantry. Cultivators supplied produce and labor; craftspeople owed specialized service; people repaired routes or served in wartime according to tenure and status. Household work also remained essential. Calling the economy merely “self-sufficient farming” misses redistribution, compulsory service, temple lands, provincial officials and goods moving across political borders.",
+          "sourceIds": [
+            "kan-rajakariya"
+          ]
+        },
+        {
+          "text": "Ordinary and sub-elite houses used nearby timber, clay, straw and plant fibers. Wattle-and-daub walls and thatched roofs needed repair; rice bins, mortars, cooking areas and work space mattered more than decorative symmetry. Better houses might add carved timbers, tiles, limewash, extra courts, kitchens, granaries, stables and cattle sheds, but some features required royal privilege.",
+          "sourceIds": [
+            "kan-built"
+          ]
+        },
+        {
+          "text": "Metalworkers and woodcarvers could turn a weapon into both tool and artwork. The two heavy wall guns seized in 1765 had carved wood and engraved symbols; Lewke's cannon carried gold, silver, gems and Kandyan motifs. These objects also expose unequal resources: court workshops concentrated materials and labor that most families could never wear or display.",
+          "sourceIds": [
+            "kan-museum"
+          ]
+        },
+        {
+          "text": "The 1638 bargain itself shows why access to coastal forts, ships and overseas commerce mattered to Kandy. The court exchanged trading advantages for Dutch military help against Portugal, but the partners later disputed control of captured ports. Records illuminate valuable routes and official privileges far better than the small loads carried by unnamed market traders.",
+          "sourceIds": [
+            "kan-treaty1638"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Homes, medicine, water and an honest toilet report",
+      "items": [
+        {
+          "text": "Most dwellings were low, single-storey and built of timber, clay and thatch; elite manor houses repeated courtyard units and gained tiled roofs, limewash, carving or extra buildings. Surviving grand houses create a preservation trap: durable status architecture is easier to study than a poor family's repaired walls, smoky cooking corner or temporary shelter.",
+          "sourceIds": [
+            "kan-built"
+          ]
+        },
+        {
+          "text": "Healing mixed household plant knowledge, specialist traditions, Buddhist or deity ritual and written medical recipes. Knox said people used leaves and bark for purging, wounds and eyes; modern manuscript collections preserve broader indigenous systems. His claim that everyone was their own physician is an outsider's exaggeration, and neither source proves equal access or safe results.",
+          "sourceIds": [
+            "kan-ola"
+          ]
+        },
+        {
+          "text": "The city complex included ponds, channels and a royal bathing house, while Sri Vikrama Rajasinha created the artificial lake between 1803 and 1807. Rural rice cultivation demanded careful control of spring, rain and channel water. Royal waterworks could impress visitors, but they do not prove piped household supply, and diverting labor or water could burden cultivators.",
+          "sourceIds": [
+            "kan-icomos"
+          ]
+        },
+        {
+          "text": "Knox reports frequent body washing, hand and mouth washing around meals, and using water after defecation. That is useful seventeenth-century practice evidence. Checked sources do not supply a kingdom-wide map of latrines, drains or sewage disposal. We have a bathing house and washing habits, not a royal toilet census, an amusing gap, but one that must stay a gap.",
+          "sourceIds": [
+            "kan-knox"
+          ]
+        },
+        {
+          "text": "The palace-temple ensemble used granite bases, timber, stone, terracotta, metal and ivory, with painted ceilings and carved dancers, acrobats and animals. Construction demanded quarrying, carpentry, transport and maintenance as well as artists. The monument tells us what royal and sacred patronage could assemble; it should never be used as the standard bedroom of a farmer.",
+          "sourceIds": [
+            "kan-icomos"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Read the ending in Sinhala, then trace what continued",
+      "items": [
+        {
+          "text": "The written sample comes from Article 5 of the Sinhala Kandyan Convention, signed at Kandy on 2 March 1815. Original script: `බුද්ධ ශාසනයද දෙවාගමද කඩකල නොහැකිව පවත්වන්ඩ ඕනෑවා`. Transliteration: `buddha śāsanayada dēvāgamada kaḍakala nohækiva pavatvanḍa ōnǣvā`. Translation: “The Buddha's dispensation and worship of the gods must be maintained inviolate.” This is formal legal Sinhala from a bilingual annexation instrument, not ordinary conversation.",
+          "sourceIds": [
+            "kan-archives-convention",
+            "kan-wikisource"
+          ]
+        },
+        {
+          "text": "In 1803 British troops occupied the capital but could not secure the countryside or sustain their position. That failure revealed the difference between entering Kandy and controlling the kingdom. Twelve years later Britain combined larger forces, local alliances and accumulated geographic knowledge. The ending was therefore neither an inevitable stroll through hills nor a single battle won by superior weapons.",
+          "sourceIds": [
+            "kan-land"
+          ]
+        },
+        {
+          "text": "John D'Oyly learned Sinhala, consulted monks and writers, built networks and worked as an intelligence agent who encouraged division between king and nobles. He also drafted the Convention. Language learning can create understanding and trust, but in this case it served imperial conquest too, a sharp example of knowledge carrying political power.",
+          "sourceIds": [
+            "kan-archives-doyly"
+          ]
+        },
+        {
+          "text": "Sovereign Kandy ended in 1815, exactly where the atlas polygon disappears. The Convention deposed Sri Vikrama Rajasinha, transferred authority to the British Crown and promised protection for Buddhism. The direct map successor is `ceylon-1815`; that database arrow describes annexation, not an instant erasure of Kandyan communities, law or memory.",
+          "sourceIds": [
+            "kan-map1815",
+            "kan-archives-convention"
+          ]
+        },
+        {
+          "text": "Rebellion began in 1817 across former Kandyan regions, after annexation. Colonial forces defeated it, but royal ceremonies, legal concepts and claims to kingship were later reworked in petitions and resistance. Dating the kingdom to 1818 confuses post-conquest struggle with monarchy; continuity means people adapting older institutions and symbols under new rule.",
+          "sourceIds": [
+            "kan-archives-rebellion",
+            "kan-reappropriation"
+          ]
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "status": "conquest",
+    "year": 1815,
+    "circa": false,
+    "text": "British forces occupied Kandy, deposed Sri Vikrama Rajasinha and secured the Kandyan chiefs' Convention on 2 March 1815, transferring sovereignty to the British Crown. The 1817 to 1818 uprising was resistance after annexation, not evidence that the kingdom survived to 1818. Kandyan religious, legal, artistic and political traditions continued under new rule.",
+    "sourceIds": [
+      "kan-archives-convention",
+      "kan-reappropriation"
+    ]
+  },
+  "sources": [
+    {
+      "id": "kan-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json"
+    },
+    {
+      "id": "kan-summary",
+      "title": "Human History Map imported summary ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json"
+    },
+    {
+      "id": "kan-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json"
+    },
+    {
+      "id": "kan-map1600",
+      "title": "Human History Map world-1600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json"
+    },
+    {
+      "id": "kan-map1650",
+      "title": "Human History Map world-1650 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json"
+    },
+    {
+      "id": "kan-map1700",
+      "title": "Human History Map world-1700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json"
+    },
+    {
+      "id": "kan-map1715",
+      "title": "Human History Map world-1715 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json"
+    },
+    {
+      "id": "kan-map1783",
+      "title": "Human History Map world-1783 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json"
+    },
+    {
+      "id": "kan-map1800",
+      "title": "Human History Map world-1800 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json"
+    },
+    {
+      "id": "kan-map1815",
+      "title": "Human History Map world-1815 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json"
+    },
+    {
+      "id": "kan-map1878",
+      "title": "Human History Map world-1878 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1878.json"
+    },
+    {
+      "id": "kan-unesco",
+      "title": "Sacred City of Kandy, UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/450"
+    },
+    {
+      "id": "kan-archives-report",
+      "title": "A Report from the Archives of Sri Lanka, Itinerario",
+      "url": "https://www.cambridge.org/core/journals/itinerario/article/report-from-the-archives-of-sri-lanka/2A424583C40E3736FDF728363EFD9DE7"
+    },
+    {
+      "id": "kan-jaffna",
+      "title": "Distribution of Authority and Co-existence of Multiple Identities in the Kandyan Kingdom",
+      "url": "https://noolaham.net/project/738/73782/73782.pdf"
+    },
+    {
+      "id": "kan-navy",
+      "title": "Military strategies and war tactics of the Kandyan Kingdom, Sri Lanka Navy Journal",
+      "url": "https://www.navy.lk/assets/files/Navy_Journal/PDF/journal_2016_july_uploaded_2022_mar_16.pdf"
+    },
+    {
+      "id": "kan-treaty1638",
+      "title": "A legal analysis of the 1638 Westerwolt Treaty, University of Colombo",
+      "url": "https://archive.cmb.ac.lk/items/cfefa83e-9c9a-4347-b8ed-4edf76e763c0"
+    },
+    {
+      "id": "kan-dewaraja",
+      "title": "A Study of the Political, Administrative, and Social Structure of the Kandyan Kingdom, 1707 to 1760",
+      "url": "https://books.google.com/books/about/A_Study_of_the_Political_Administrative.html?hl=en&id=j5w5AQAAIAAJ&output=html_text"
+    },
+    {
+      "id": "kan-dangerous",
+      "title": "Dangerous Friendships in Eighteenth-Century Buddhist Laṅkā and Siam",
+      "url": "https://www.cambridge.org/core/journals/itinerario/article/dangerous-friendships-in-eighteenthcentury-buddhist-lanka-and-siam/DD5EE4788B71CEE0A19E04868447910F"
+    },
+    {
+      "id": "kan-syam",
+      "title": "A new reading of the 1756 A.D. Syāmasandesa",
+      "url": "https://jocbs.org/index.php/jocbs/article/download/246/340"
+    },
+    {
+      "id": "kan-icomos",
+      "title": "Sacred City of Kandy ICOMOS evaluation",
+      "url": "https://whc.unesco.org/document/153507"
+    },
+    {
+      "id": "kan-rijks",
+      "title": "Restitution: War booty from Kandy, Rijksmuseum",
+      "url": "https://www.rijksmuseum.nl/en/research/our-research/overarching/provenance-research-colonial-collections/restitution"
+    },
+    {
+      "id": "kan-museum",
+      "title": "Six Kandyan artefacts to return home, Department of National Museums Sri Lanka",
+      "url": "https://www.museum.gov.lk/v1/news/e3e2ecbf-6bf6-4e5e-9b19-8e84abd12b53"
+    },
+    {
+      "id": "kan-met-dancer",
+      "title": "Temple Dancer, Kandy region, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/789044"
+    },
+    {
+      "id": "kan-met-knife",
+      "title": "Knife, Kandyan Type, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/37528"
+    },
+    {
+      "id": "kan-doyly-constitution",
+      "title": "A Sketch of the Constitution of the Kandyan Kingdom",
+      "url": "https://www.cambridge.org/core/journals/transactions-of-the-royal-asiatic-society-of-great-britain-and-ireland/article/abs/xa-sketch-of-the-constitution-of-the-kandyan-kingdom/04D82050CC8FDD1D42649128CA6C59B7"
+    },
+    {
+      "id": "kan-material-pluralism",
+      "title": "Material Pluralism and Symbolic Violence: Palm Leaf Deeds and Paper Land Grants in Colonial Sri Lanka, 1680 to 1795",
+      "url": "https://www.cambridge.org/core/journals/law-and-history-review/article/material-pluralism-and-symbolic-violence-palm-leaf-deeds-and-paper-land-grants-in-colonial-sri-lanka-16801795/B25D892807C74DCA1B997453C0EBE9E1"
+    },
+    {
+      "id": "kan-rajakariya",
+      "title": "Organization of Work and Indigenous Human Resource Management",
+      "url": "https://nsbmjm.sljol.info/articles/38/files/submission/proof/38-1-93-1-10-20220414.pdf"
+    },
+    {
+      "id": "kan-polyandry",
+      "title": "Persecuted or permitted? Fraternal polyandry in Sri Lanka, seventeenth and eighteenth centuries",
+      "url": "https://www.cambridge.org/core/journals/continuity-and-change/article/persecuted-or-permitted-fraternal-polyandry-in-a-calvinist-colony-sri-lanka-ceylon-seventeenth-and-eighteenth-centuries/776BA529370E5DF4F1D4FCD0E301A485"
+    },
+    {
+      "id": "kan-lawnet",
+      "title": "Jayasinghe v. Kiribindu and Others, Supreme Court of Sri Lanka",
+      "url": "https://www.lawnet.gov.lk/wp-content/uploads/2016/11/001-SLLR-SLLR-1997-2-JAYASINGHE-V.-KIRIBINDU-AND-OTHERS.pdf"
+    },
+    {
+      "id": "kan-built",
+      "title": "Kandyan Elitism and Kandyan Elite Domestic Architecture",
+      "url": "https://besl.sljol.info/articles/3062/files/submission/proof/3062-1-10672-1-10-20110513.pdf"
+    },
+    {
+      "id": "kan-knox",
+      "title": "An Historical Relation of the Island Ceylon, Robert Knox",
+      "url": "https://www.gutenberg.org/files/14346/14346-h/14346-h.htm"
+    },
+    {
+      "id": "kan-ola",
+      "title": "Utilization of Ola Leaf and Handwritten Manuscripts for Research, University of Colombo",
+      "url": "https://archive.cmb.ac.lk/items/d926c3b0-29f1-4372-b5c7-840001927d0d"
+    },
+    {
+      "id": "kan-ritual",
+      "title": "Singing, drumming and dancing of Kandyan ritual Towilaya, University of Peradeniya",
+      "url": "https://ir.lib.pdn.ac.lk/items/30081b49-dabb-47cc-92f4-84f27bf00339"
+    },
+    {
+      "id": "kan-lordnorth",
+      "title": "Lord North and the Kandyan Kingdom, 1798 to 1805",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/lord-north-and-the-kandyan-kingdom-17981805/3E1C58D42BAB7438C7BFCEC28546852F"
+    },
+    {
+      "id": "kan-land",
+      "title": "Tales of the Land: British Geography and Kandyan Resistance in Sri Lanka, c. 1803 to 1850",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/tales-of-the-land-british-geography-and-kandyan-resistance-in-sri-lanka-c-18031850/211C185693C1680BF1406B530E1685A6"
+    },
+    {
+      "id": "kan-archives-convention",
+      "title": "1815 Convention, Sri Lanka National Archives",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention"
+    },
+    {
+      "id": "kan-archives-doyly",
+      "title": "Sir John D'Oyly, the Strategist, Sri Lanka National Archives",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/d-oyly"
+    },
+    {
+      "id": "kan-archives-rebellion",
+      "title": "Freedom Struggle, 1818, Sri Lanka National Archives",
+      "url": "https://www.archives.gov.lk/English/online_exhibits/path_to_freedom/freedom_struggle"
+    },
+    {
+      "id": "kan-reappropriation",
+      "title": "Reappropriation, Resistance, and British Autocracy in Sri Lanka, 1820 to 1850",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/reappropriation-resistance-and-british-autocracy-in-sri-lanka-18201850/00161056F351BFB9C4785916B3862769"
+    },
+    {
+      "id": "kan-wikisource",
+      "title": "1815 Udarata Givisuma, Sinhala Wikisource transcription",
+      "url": "https://wikisource.org/wiki/%E0%B6%8B%E0%B6%A9%E0%B6%BB%E0%B6%A7_%E0%B6%9C%E0%B7%92%E0%B7%80%E0%B7%92%E0%B7%83%E0%B7%94%E0%B6%B8"
+    }
+  ]
+}
