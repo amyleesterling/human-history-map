@@ -1,0 +1,812 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release135-blue-horde research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "bh-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entries checked for blue-horde, its Golden Horde alias and circa 1400 to 1492 dates; predecessor khanate-of-the-golden-horde, eastern white-horde, replacement golden-horde and later Nogai, Kazan and Sibir ids remain distinct. The index contains no medieval Uzbek, Great Horde, Crimean or Astrakhan id."
+    },
+    {
+      "id": "bh-map1300",
+      "title": "Human History Map world-1300 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Decoded predecessor seam. The blue-horde id is absent. A large khanate-of-the-golden-horde polygon spans tested western and eastern locations, while another feature with the same id carries the label Ryazan."
+    },
+    {
+      "id": "bh-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded sole target feature: one Polygon, one part and ring, 193 positions, bbox 29.122491 to 50.207902 E and 42.438692 to 62.208866 N, raw coordinate SHA-256 3573797e9dc494d7e4cef9b9d8c8e8b392a27fee6ef6692bdb9cf6a4ea27abee. Point tests include Sarai, Astrakhan, Crimea, Azov and Moscow, but exclude Kyiv, Kazan, Bolgar, Orenburg, Oral, Sighnaq, Saryarka and Mangystau."
+    },
+    {
+      "id": "bh-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded target endpoint seam. The exact blue-horde id is absent. A separate golden-horde polygon covers Sarai, Astrakhan, Kazan, Bolgar and Oral; Ottoman geometry covers Crimea and Azov; Muscovy and Poland-Lithuania cover other western test points."
+    },
+    {
+      "id": "bh-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded post-target snapshot. Blue-horde remains absent and golden-horde persists with a changed coordinate count and northern edge. This confirms an identifier and geometry handoff rather than a one-day political collapse."
+    },
+    {
+      "id": "bh-map1530",
+      "title": "Human History Map world-1530 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded later seam. Blue-horde and golden-horde are absent. Nogai-horde features cover the lower Volga and much of the western steppe, one carrying the label Astrakhan Khanate; separate Kazan and Sibir ids appear, while Crimea remains Ottoman in this layer."
+    },
+    {
+      "id": "bh-overview",
+      "title": "Marie Favereau and Roman Pochekaev, The Golden Horde, c. 1260 to 1502",
+      "url": "https://publications.hse.ru/en/chapters/898350958",
+      "note": "Cambridge History of the Mongol Empire chapter record checked as the overview spine for Jochid Eurasian connections, institutions, political transformations, fragmentation and successor-state legacies. It is not used to turn the atlas color label into an uncontested medieval state name."
+    },
+    {
+      "id": "bh-wings",
+      "title": "Takushi Kawaguchi and Hiroyuki Nagamine, Rethinking the Political System of the Jöchid",
+      "url": "https://real.mtak.hu/38023/",
+      "note": "Peer-reviewed Acta Orientalia study checked for the durable Right and Left Wing structure and late-fourteenth-century Jochid usage in which the Right Wing or whole realm could be White Horde and the Left Wing Blue Horde, reversing a common modern convention."
+    },
+    {
+      "id": "bh-may",
+      "title": "Timothy May, White Horde, The Encyclopedia of Empire",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118455074.wbeoe367",
+      "note": "Scholarly encyclopedia entry checked as independent evidence that the eastern ulus of Orda appears under both White Horde and Blue Horde labels in modern reference traditions. Used to make the naming conflict visible rather than selecting one color scheme as timeless."
+    },
+    {
+      "id": "bh-iranica",
+      "title": "Peter Jackson, Golden Horde, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/golden-horde/",
+      "note": "Scholarly reference checked for Batu and Orda, Sarai, Islam among the khans, the 1359 dynastic crisis, Tokhtamysh’s reunification, conflict with Timur and fifteenth-century dissolution into smaller states."
+    },
+    {
+      "id": "bh-turmoil",
+      "title": "Ishayahu Landa, Jochid elites in the Time of Troubles, 1359 to circa 1380",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/between-the-chinggisid-principle-loyalty-and-selfaggrandisement-jochid-elites-in-the-time-of-troubles-1359-to-circa-1380/AEB03260F727D9147A9043682A24804B",
+      "note": "Peer-reviewed Journal of the Royal Asiatic Society study checked for Chinggisid legitimacy, elite coalitions, rival throne claimants, socioeconomic damage and the limits of outsider-heavy narrative sources."
+    },
+    {
+      "id": "bh-cambridge-west",
+      "title": "Allen J. Frank, The western steppe: Volga-Ural region, Siberia and the Crimea",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-inner-asia/western-steppe-volgaural-region-siberia-and-the-crimea/DB26B77ED4D3AB3405F62FE800BC1F96",
+      "note": "Cambridge History of Inner Asia chapter checked for Timur’s 1395 defeat of Tokhtamysh, struggles involving Tokhtamysh’s heirs and Edigü, loss of western Jochid political unity and the emergence of Crimean, Kazan, Astrakhan, Siberian, Nogai and Great Horde successor projects."
+    },
+    {
+      "id": "bh-letter1428",
+      "title": "Nagy Pienaru, Relations of Murad II with Uluğ Mehmed",
+      "url": "https://www.iini.ro/sites/default/files/Gabriela/Arhiv%C4%83%20SMIM/Studii%20%C8%99i%20Materiale%20de%20Istorie%20Medie,%20vol.%20XX,%202002.pdf",
+      "note": "Scholarly study and edition checked for Ulugh Muhammad’s surviving Topkapı letter of 14 March 1428, its Golden Horde chancery context, envoys, gifts, ortaq merchants, routes by land and water, and the ruler’s recent struggle with Barak and Mansur."
+    },
+    {
+      "id": "bh-crimea",
+      "title": "Dariusz Kołodziejczyk, The Crimean Khanate and Poland-Lithuania",
+      "url": "https://shron1.chtyvo.org.ua/Kolodzeichyk_Dariiush/The_Crimean_Khanate_and_Poland-Lithuania_international_diplomacy_on_the_European_periphery_15th__en.pdf",
+      "note": "Scholarly diplomatic history checked for the Crimean khanate’s separate fifteenth-century trajectory, its relations with Poland-Lithuania, the Great Horde and the Ottoman sphere, and the need to avoid treating every western Jochid policy as one unchanged state."
+    },
+    {
+      "id": "bh-ugra",
+      "title": "The Agony of the Yoke: The Great Horde as a Fading Threat to Muscovite Rus",
+      "url": "https://link.springer.com/article/10.1134/S1019331622110119",
+      "note": "Peer-reviewed study checked for Ahmad Khan’s 1480 Ugra campaign, failed Polish-Lithuanian support, retreat, later accounts and competing Russian, Tatar and Polish interpretations. Used to avoid presenting the standoff as a simple single-battle ending."
+    },
+    {
+      "id": "bh-mongols",
+      "title": "Peter Jackson and Michael Knüppel, Mongols, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/mongols-2/",
+      "note": "Scholarly reference checked for the western Jochid polity’s survival to 1502 and longer continuity through Crimean and other successor institutions. Used for the post-1492 conclusion, not for an exact claim that one state held every atlas coordinate."
+    },
+    {
+      "id": "bh-unesco-bolgar",
+      "title": "UNESCO World Heritage Centre, Bolgar Historical and Archaeological Complex",
+      "url": "https://whc.unesco.org/en/list/981",
+      "note": "Official heritage dossier checked for Bolgar’s Golden Horde and Kazan phases, crossroads role, interaction of nomadic and urban cultures, mosque, mausoleums, khan’s structures and bathhouses. Individual remains are not all assigned to 1400 to 1492."
+    },
+    {
+      "id": "bh-bolgar-water",
+      "title": "UNESCO nomination dossier for Bolgar Historical and Archaeological Complex",
+      "url": "https://whc.unesco.org/uploads/nominations/981rev.pdf",
+      "note": "Official nomination dossier checked for Golden Horde urban growth, craft areas, public bath, mosque, fountains, aqueducts and open water containers. These amenities do not by themselves prove household plumbing or toilets."
+    },
+    {
+      "id": "bh-baths",
+      "title": "Emma Zilivinskaya, The Golden Horde Baths",
+      "url": "https://emono.unibas.ch/sonderpublikationen-abbs/catalog/book/106/chapter/472",
+      "note": "Archaeological conference paper hosted by Basel-Stadt checked for 25 excavated Golden Horde bathhouses, including 14 communal and 11 private examples, and their relationship to Islamic ablution and urban building traditions."
+    },
+    {
+      "id": "bh-children",
+      "title": "Emma Zilivinskaya, Elusive Traces: Children in the Golden Horde",
+      "url": "https://www.e-anthropology.com/English/Catalog/Archaeology/STM_DWL_37zU_SKANwH6CCpQ6.aspx",
+      "note": "Peer-reviewed Stratum Plus study checked for child mortality, changing sleeping platforms, a child-marked room at Sarai, ceramic whistles, toy vessels and figures, balls, astragali, and comparative cradle reconstructions using potties and urinal tubes. Provenience varies across the wider Golden Horde."
+    },
+    {
+      "id": "bh-ibnbattuta",
+      "title": "UC Berkeley ORIAS, Ibn Battuta in the Lands of the Golden Horde",
+      "url": "https://orias.berkeley.edu/node/170",
+      "note": "University teaching resource quoting the fourteenth-century traveler checked for felt-covered wagon homes, millet and milk dishes, meat, elite women’s property and authority, servants and enslaved attendants. His court-centered observations predate the atlas slice and cannot stand for every household."
+    },
+    {
+      "id": "bh-crafts",
+      "title": "Yaroslav Pylypchuk, Trade and Crafts in Dasht-i Qipchaq",
+      "url": "https://oriental-world.org.ua/index.php/journal/article/view/593",
+      "note": "Peer-reviewed Oriental World article checked for pastoral products, barter, local clothing, footwear, tools and weapons, imported luxury textiles and jewelry, source-reported gendered craft patterns, and the coercive trade in captives."
+    },
+    {
+      "id": "bh-trade",
+      "title": "XIII to XIV Century Northern Silk Road and Golden Horde Trade Policies",
+      "url": "https://dergipark.org.tr/tr/pub/avrasya/article/392421",
+      "note": "Scholarly article checked for revived northern-route commerce and travel by Byzantine, Italian, Armenian and other merchants under Golden Horde trade policies. Used as inherited context, with no claim that routes operated unchanged during every fifteenth-century conflict."
+    },
+    {
+      "id": "bh-islam",
+      "title": "A. C. S. Peacock, Islamisation in the Golden Horde and Anatolia",
+      "url": "https://research-portal.st-andrews.ac.uk/en/publications/islamisation-in-the-golden-horde-and-anatolia-some-remarks-on-tra/",
+      "note": "Peer-reviewed review article checked for connected processes of Islamisation, traveling scholars and texts across the Golden Horde and Anatolia. Used to describe networks and uneven access, not universal belief or schooling."
+    },
+    {
+      "id": "bh-chancery",
+      "title": "The chancellery of the Golden Horde’s Khans",
+      "url": "https://dspace.kpfu.ru/xmlui/handle/net/157701",
+      "note": "Kazan Federal University repository record checked for the work of bitikchi scribes and their need to master Turkic and Mongolian languages and the Uyghur script. Used for elite documentary learning, not general literacy estimates."
+    },
+    {
+      "id": "bh-coin",
+      "title": "Oriental Numismatic Society Newsletter 212, Ulugh Muhammad coin study",
+      "url": "https://www.orientalnumismaticsociety.org/archive/ONS_212.pdf",
+      "note": "Specialist numismatic study checked for Ulugh Muhammad’s small silver Caffa issues, their Genoese-facing Latin side, tamgha and Arabic royal legend al-sultan al-adil Muhammad khan. The displayed Unicode is a normalized reading, not a facsimile of a worn die."
+    },
+    {
+      "id": "bh-coincheck",
+      "title": "Steve Album, Checklist of Islamic Coins, third edition",
+      "url": "https://irannumismatics.com/wp-content/uploads/2023/10/ChecklistOfIslamicCoins3rdEdition2011Free.pdf",
+      "note": "Specialist reference checked for Ulugh Muhammad’s reign phases, principal mints at Hajji Tarkhan, Ordu Bazar and Sarai, Caffa’s bilingual issues, and the fact that the epithet Ulugh does not appear on his coins."
+    },
+    {
+      "id": "bh-medicine",
+      "title": "L. F. Abzalov, Hot Spring from the Steep of Diseases: Hydrotherapy in the Golden Horde",
+      "url": "https://goldhorde.ru/RU/stati2017-4-4/",
+      "note": "Peer-reviewed Golden Horde Review article checked for reports of mineral springs and water treatment, possible use of baths in healing, and strong regional variation. It does not provide a universal household medicine manual or prove modern clinical effectiveness."
+    }
+  ],
+  "entities": [
+    {
+      "id": "blue-horde",
+      "card": "data/cards/blue-horde.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "bh-overview",
+            "bh-index",
+            "bh-map1400",
+            "bh-map1492"
+          ],
+          "locator": "Cambridge History of the Mongol Empire chapter record checked as the overview spine for Jochid Eurasian connections, institutions, political transformations, fragmentation and successor-state legacies. It is not used to turn the atlas color label into an uncontested medieval state name. Exact repository entries checked for blue-horde, its Golden Horde alias and circa 1400 to 1492 dates; predecessor khanate-of-the-golden-horde, eastern white-horde, replacement golden-horde and later Nogai, Kazan and Sibir ids remain distinct. The index contains no medieval Uzbek, Great Horde, Crimean or Astrakhan id. Decoded sole target feature: one Polygon, one part and ring, 193 positions, bbox 29.122491 to 50.207902 E and 42.438692 to 62.208866 N, raw coordinate SHA-256 3573797e9dc494d7e4cef9b9d8c8e8b392a27fee6ef6692bdb9cf6a4ea27abee. Point tests include Sarai, Astrakhan, Crimea, Azov and Moscow, but exclude Kyiv, Kazan, Bolgar, Orenburg, Oral, Sighnaq, Saryarka and Mangystau. Decoded target endpoint seam. The exact blue-horde id is absent. A separate golden-horde polygon covers Sarai, Astrakhan, Kazan, Bolgar and Oral; Ottoman geometry covers Crimea and Azov; Muscovy and Poland-Lithuania cover other western test points.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "bh-wings"
+          ],
+          "locator": "Peer-reviewed Acta Orientalia study checked for the durable Right and Left Wing structure and late-fourteenth-century Jochid usage in which the Right Wing or whole realm could be White Horde and the Left Wing Blue Horde, reversing a common modern convention.",
+          "dateScope": {
+            "from": 1227,
+            "to": 1359
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "bh-turmoil"
+          ],
+          "locator": "Peer-reviewed Journal of the Royal Asiatic Society study checked for Chinggisid legitimacy, elite coalitions, rival throne claimants, socioeconomic damage and the limits of outsider-heavy narrative sources.",
+          "dateScope": {
+            "from": 1359,
+            "to": 1378
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "bh-iranica"
+          ],
+          "locator": "Scholarly reference checked for Batu and Orda, Sarai, Islam among the khans, the 1359 dynastic crisis, Tokhtamysh’s reunification, conflict with Timur and fifteenth-century dissolution into smaller states.",
+          "dateScope": {
+            "from": 1378,
+            "to": 1395
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "bh-cambridge-west",
+            "bh-map1300"
+          ],
+          "locator": "Cambridge History of Inner Asia chapter checked for Timur’s 1395 defeat of Tokhtamysh, struggles involving Tokhtamysh’s heirs and Edigü, loss of western Jochid political unity and the emergence of Crimean, Kazan, Astrakhan, Siberian, Nogai and Great Horde successor projects. Decoded predecessor seam. The blue-horde id is absent. A large khanate-of-the-golden-horde polygon spans tested western and eastern locations, while another feature with the same id carries the label Ryazan.",
+          "dateScope": {
+            "from": 1395,
+            "to": 1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "bh-cambridge-west"
+          ],
+          "locator": "Cambridge History of Inner Asia chapter checked for Timur’s 1395 defeat of Tokhtamysh, struggles involving Tokhtamysh’s heirs and Edigü, loss of western Jochid political unity and the emergence of Crimean, Kazan, Astrakhan, Siberian, Nogai and Great Horde successor projects.",
+          "dateScope": {
+            "from": 1400,
+            "to": 1419
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "bh-letter1428"
+          ],
+          "locator": "Scholarly study and edition checked for Ulugh Muhammad’s surviving Topkapı letter of 14 March 1428, its Golden Horde chancery context, envoys, gifts, ortaq merchants, routes by land and water, and the ruler’s recent struggle with Barak and Mansur.",
+          "dateScope": {
+            "from": 1419,
+            "to": 1437
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "bh-crimea",
+            "bh-ugra"
+          ],
+          "locator": "Scholarly diplomatic history checked for the Crimean khanate’s separate fifteenth-century trajectory, its relations with Poland-Lithuania, the Great Horde and the Ottoman sphere, and the need to avoid treating every western Jochid policy as one unchanged state. Peer-reviewed study checked for Ahmad Khan’s 1480 Ugra campaign, failed Polish-Lithuanian support, retreat, later accounts and competing Russian, Tatar and Polish interpretations. Used to avoid presenting the standoff as a simple single-battle ending.",
+          "dateScope": {
+            "from": 1437,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "bh-mongols",
+            "bh-map1492"
+          ],
+          "locator": "Scholarly reference checked for the western Jochid polity’s survival to 1502 and longer continuity through Crimean and other successor institutions. Used for the post-1492 conclusion, not for an exact claim that one state held every atlas coordinate. Decoded target endpoint seam. The exact blue-horde id is absent. A separate golden-horde polygon covers Sarai, Astrakhan, Kazan, Bolgar and Oral; Ottoman geometry covers Crimea and Azov; Muscovy and Poland-Lithuania cover other western test points.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1502
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "bh-index"
+          ],
+          "locator": "Exact target entry, coverage state, alias and indexed dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "bh-map1300"
+          ],
+          "locator": "Decoded predecessor ids, duplicate feature label and point ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "bh-map1400"
+          ],
+          "locator": "Exact geometry type, coordinate count, bounds and audited point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "bh-map1400"
+          ],
+          "locator": "Point-in-polygon controls show Moscow included and Kazan and Bolgar excluded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "bh-map1492",
+            "bh-map1500",
+            "bh-map1530"
+          ],
+          "locator": "Decoded endpoint, immediate replacement and later successor feature ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "bh-map1400",
+            "bh-may"
+          ],
+          "locator": "Atlas east-west placement compared with the encyclopedia’s account of disputed colors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "bh-wings"
+          ],
+          "locator": "Article conclusion on Right and Left Wings and competing color assignments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "bh-may"
+          ],
+          "locator": "Source-critical synthesis keeps the target useful without resolving disputed nomenclature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "bh-index"
+          ],
+          "locator": "Related civilization-index entries and confirmed absence of several expected medieval ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "bh-turmoil"
+          ],
+          "locator": "Study discussion of sparse, outsider-heavy evidence and elite-centered narratives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "bh-iranica"
+          ],
+          "locator": "Reference account of Jochi, Batu, Orda and the Jochid territorial division.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "bh-unesco-bolgar"
+          ],
+          "locator": "Official dossier on Bolgar, urban-nomadic interaction and Golden Horde structures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "bh-islam",
+            "bh-iranica"
+          ],
+          "locator": "Islamisation networks and the reference chronology of Muslim Jochid rulers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "bh-turmoil"
+          ],
+          "locator": "Chinggisid legitimacy, factional elites and socioeconomic effects of the succession crisis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "bh-iranica",
+            "bh-map1400"
+          ],
+          "locator": "Tokhtamysh reunification and Timurid invasion placed against the target start seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "bh-turmoil",
+            "bh-cambridge-west"
+          ],
+          "locator": "Chinggisid principle and Edigü’s dominance through allied royal claimants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "bh-cambridge-west"
+          ],
+          "locator": "Chapter summary of Tokhtamysh’s heirs, Edigü and cross-border rival alliances.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "bh-wings"
+          ],
+          "locator": "Political-system analysis of wings and negotiated regional authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "bh-unesco-bolgar"
+          ],
+          "locator": "UNESCO continuity, urban archaeology and successive political phases at Bolgar.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "bh-chancery"
+          ],
+          "locator": "University repository findings on chancery specialists, languages, script and mobile government.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "bh-letter1428"
+          ],
+          "locator": "Letter text, date and editorial discussion of the 1420s throne struggle.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "bh-letter1428"
+          ],
+          "locator": "Lines concerning earlier friendship, envoys, presents, ortaq merchants and routes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "bh-crimea",
+            "bh-index"
+          ],
+          "locator": "Successor-state context compared with the atlas’s separate eastern and later ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "bh-crimea",
+            "bh-map1492"
+          ],
+          "locator": "Crimean diplomatic trajectory and the 1492 Ottoman ownership of Crimea and Azov.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "bh-ugra"
+          ],
+          "locator": "Peer-reviewed analysis of the Ugra standoff, withdrawal and competing memories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "bh-crafts"
+          ],
+          "locator": "Study synthesis of pastoral products, barter and locally made necessities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "bh-unesco-bolgar",
+            "bh-bolgar-water"
+          ],
+          "locator": "Official site description and nomination evidence for structures and craft zones.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "bh-trade"
+          ],
+          "locator": "Article abstract and conclusions on revived routes and foreign merchant travel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "bh-coincheck"
+          ],
+          "locator": "Checklist entries for reign phases, mints and bilingual Caffa dirhams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "bh-trade",
+            "bh-bolgar-water"
+          ],
+          "locator": "Trade-network study and archaeological evidence for urban infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "bh-ibnbattuta"
+          ],
+          "locator": "Court eyewitness evidence for royal, official, attendant and enslaved ranks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "bh-children"
+          ],
+          "locator": "Article discussion of household traces and archaeological limits for childhood.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "bh-ibnbattuta"
+          ],
+          "locator": "Traveler passages on khatuns, property, ceremony, attendants and slavery.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "bh-children"
+          ],
+          "locator": "Golden Horde childhood archaeology, Sarai room and mortality evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "bh-chancery",
+            "bh-islam"
+          ],
+          "locator": "Elite scribal skills and wider scholar networks, with explicit limits on generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "bh-ibnbattuta"
+          ],
+          "locator": "Traveler description of felt-covered wagon dwellings and large mobile households.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "bh-ibnbattuta"
+          ],
+          "locator": "Food passages for millet, milk and meat, framed by travel-account limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "bh-crafts"
+          ],
+          "locator": "Article findings on local necessities, imported luxuries and source-reported labor patterns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "bh-crafts"
+          ],
+          "locator": "Craft and trade evidence including livestock products, barter and enslaved captives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "bh-children"
+          ],
+          "locator": "Survey of toys, miniature vessels, figurines, balls and astragali, with provenience cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "bh-islam"
+          ],
+          "locator": "Peer-reviewed synthesis of connected, gradual Islamisation and traveling scholars.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "bh-unesco-bolgar",
+            "bh-baths"
+          ],
+          "locator": "Official religious monuments and archaeological bath interpretation, with scope limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "bh-chancery"
+          ],
+          "locator": "Kazan Federal University findings on chancery personnel, languages and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "bh-letter1428",
+            "bh-chancery"
+          ],
+          "locator": "Original-document context, date, seals, content and chancery-language caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "bh-coin"
+          ],
+          "locator": "ONS 212 specimen catalogue and normal Arabic reverse legend for Ulugh Muhammad.",
+          "dateScope": {
+            "year": 1421
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "bh-medicine"
+          ],
+          "locator": "Peer-reviewed hydrotherapy analysis and its stated evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "bh-bolgar-water"
+          ],
+          "locator": "Official nomination evidence for water installations and urban planning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "bh-baths"
+          ],
+          "locator": "Published excavation count, public-private split and interpretation of hammam traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "bh-children",
+            "bh-bolgar-water"
+          ],
+          "locator": "Comparative potty evidence and explicit distinction between water supply and sewerage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "bh-map1492",
+            "bh-mongols"
+          ],
+          "locator": "Immediate identifier replacement and scholarly continuity beyond the atlas endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "bh-map1492",
+            "bh-map1530",
+            "bh-mongols"
+          ],
+          "locator": "Decoded target endpoint seam. The exact blue-horde id is absent. A separate golden-horde polygon covers Sarai, Astrakhan, Kazan, Bolgar and Oral; Ottoman geometry covers Crimea and Azov; Muscovy and Poland-Lithuania cover other western test points. Decoded later seam. Blue-horde and golden-horde are absent. Nogai-horde features cover the lower Volga and much of the western steppe, one carrying the label Astrakhan Khanate; separate Kazan and Sibir ids appear, while Crimea remains Ottoman in this layer. Scholarly reference checked for the western Jochid polity’s survival to 1502 and longer continuity through Crimean and other successor institutions. Used for the post-1492 conclusion, not for an exact claim that one state held every atlas coordinate.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "blue-horde",
+        "card": "cards/blue-horde.json",
+        "dateBasis": "map_coverage",
+        "summary": "Atlas window only.",
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "blue-horde",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            29.122491224912267,
+            42.438691842983644,
+            50.20790207902081,
+            62.20886598088225
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Initial audit verified blue-horde is indexed, live and missing before drafting.",
+    "The target exists in world-1400 only; its 1492 endpoint is an identifier handoff to golden-horde and other shapes.",
+    "Atlas Blue Horde is western while the separate White Horde is eastern, but Jochid-internal terminology can reverse those colors.",
+    "No medieval Uzbek, Great Horde, Crimean or Astrakhan civilization id exists in the current index; these historical actors are named without inventing records.",
+    "Geometry is treated as display coverage, never as exact sovereignty, ethnicity, migration or a modern boundary."
+  ]
+}
