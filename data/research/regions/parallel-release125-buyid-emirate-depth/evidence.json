@@ -1,0 +1,857 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release125-buyid-emirate research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "be-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported identities and indexed coverage for all three differently named Buyid-related atlas ids."
+    },
+    {
+      "id": "be-map900",
+      "title": "Human History Map 900 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded predecessor snapshot used to check exact absence and ownership of named test points."
+    },
+    {
+      "id": "be-map1000",
+      "title": "Human History Map 1000 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded target and simultaneous Buwayhid geometries, coordinate hashes, bounds, topology, and point tests."
+    },
+    {
+      "id": "be-map1100",
+      "title": "Human History Map 1100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Decoded successor snapshot used to test exact target absence and the atlas Seljuk handoff."
+    },
+    {
+      "id": "be-map1200",
+      "title": "Human History Map 1200 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded anachronistic Buwayhid and Buyid Dynasty features used only for identity warnings."
+    },
+    {
+      "id": "be-buyids",
+      "title": "Tilman Nagel: Buyids",
+      "url": "https://www.iranicaonline.org/articles/buyids/",
+      "note": "Authoritative dynasty overview for origins, related principalities, Baghdad rule, fragmentation, and final dates."
+    },
+    {
+      "id": "be-deylamites",
+      "title": "Wilferd Madelung: Deylamites",
+      "url": "https://www.iranicaonline.org/articles/deylamites/",
+      "note": "Daylamite military origins, Buyid conquests, settlement through military grants, and overthrow by 1062."
+    },
+    {
+      "id": "be-baghdad",
+      "title": "Encyclopaedia Iranica: Baghdad and the Iranian connection",
+      "url": "https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-i-pr-mongol/",
+      "note": "Buyid Baghdad rulers, locally recruited administrators, imported workers, palaces, and political changes."
+    },
+    {
+      "id": "be-divan",
+      "title": "C. E. Bosworth: Divan, government office",
+      "url": "https://www.iranicaonline.org/articles/divan/divan-ii-government-office/",
+      "note": "Administrative continuity and finance, correspondence, and army offices under the Buyid confederacy."
+    },
+    {
+      "id": "be-eqta",
+      "title": "Encyclopaedia Iranica: Eqta",
+      "url": "https://www.iranicaonline.org/articles/eqta/",
+      "note": "Buyid military revenue assignments, their reassignment, fiscal valuation, and limits on jurisdiction."
+    },
+    {
+      "id": "be-abbasid",
+      "title": "Encyclopaedia Iranica: Abbasid Caliphate",
+      "url": "https://www.iranicaonline.org/articles/abbasid-caliphate/",
+      "note": "Caliphal moral authority under Buyid political control and Seljuk entry into Baghdad in 1055."
+    },
+    {
+      "id": "be-iran-history",
+      "title": "Encyclopaedia Iranica: Islamic-period Iranian history",
+      "url": "https://www.iranicaonline.org/articles/iran-ii2-islamic-period-page-2/",
+      "note": "Buyid family conflicts, cultural policy, Arabic letters, and the Seljuk end of Baghdad rule."
+    },
+    {
+      "id": "be-fars",
+      "title": "C. E. Bosworth: Fars in the Islamic period",
+      "url": "https://www.iranicaonline.org/articles/fars-iii/",
+      "note": "Prosperity under Adud al-Dawla followed by fragmentation, unrest, and revenue abuse in Fars."
+    },
+    {
+      "id": "be-kakuyids",
+      "title": "C. E. Bosworth: Kakuyids",
+      "url": "https://www.iranicaonline.org/articles/kuyids-dynasty/",
+      "note": "Buyid-linked local rule, Isfahan and Hamadan changes, and the 1029 Ghaznavid seizure of Ray."
+    },
+    {
+      "id": "be-isfahan",
+      "title": "Encyclopaedia Iranica: Isfahan, medieval period",
+      "url": "https://www.iranicaonline.org/articles/isfahan-vi-medieval-period/",
+      "note": "Buyid coin years, courtly learning, political decline, and Seljuk conquest and rebuilding of Isfahan."
+    },
+    {
+      "id": "be-capitals",
+      "title": "C. E. Bosworth: Capital cities",
+      "url": "https://www.iranicaonline.org/articles/capital-cities/",
+      "note": "Buyid family confederation with several provincial capitals rather than a single permanent center."
+    },
+    {
+      "id": "be-courts",
+      "title": "C. E. Bosworth: Courts and courtiers before the Mongols",
+      "url": "https://www.iranicaonline.org/articles/courts-and-courtiers-iii/",
+      "note": "Court hierarchy, rulers, retainers, ceremonial settings, and Iranian mountain-warrior political culture."
+    },
+    {
+      "id": "be-azod",
+      "title": "Bürgel and Mottahedeh: Adud al-Dawla",
+      "url": "https://www.iranicaonline.org/articles/azod-al-dawla-abu-soja/",
+      "note": "Detailed reign, administration, family politics, public works, festivals, libraries, learning, and hospitals."
+    },
+    {
+      "id": "be-band",
+      "title": "Judith A. Lerner: Band-e Amir in Iran",
+      "url": "https://www.iranicaonline.org/articles/band-e-amir-the-amirs-dike-or-band-e-azodi-a-dam-or-weir-constructed-across-the-kor-river-at-the-southeast-end-of-the-m/",
+      "note": "Construction, bridge, water wheels, irrigation function, villages, and later repairs of the Buyid weir."
+    },
+    {
+      "id": "be-shiraz",
+      "title": "Encyclopaedia Iranica: Shiraz, history to 1940",
+      "url": "https://www.iranicaonline.org/articles/shiraz-i-history-to-1940/",
+      "note": "Medieval gardens, fruit and vegetables, mountain-spring water, qanat, Buyid buildings, and library."
+    },
+    {
+      "id": "be-archaeology",
+      "title": "Robert Hillenbrand: Archaeology of Islamic Iran",
+      "url": "https://www.iranicaonline.org/articles/archaeology-vi/",
+      "note": "Excavated Siraf houses, shops, streets, drains, rubbish, mosque latrines, crafts, and evidentiary limits."
+    },
+    {
+      "id": "be-baths",
+      "title": "Encyclopaedia Iranica: Bathhouses, general",
+      "url": "https://www.iranicaonline.org/articles/bathhouses/bathhouses-i-general/",
+      "note": "Excavated pre-1050 Siraf bath plan, latrine, drains, heated rooms, furnace, and water supply."
+    },
+    {
+      "id": "be-bips",
+      "title": "Encyclopaedia Iranica: British Institute of Persian Studies",
+      "url": "https://www.iranicaonline.org/articles/great-britain/great-britain-xii-2/",
+      "note": "Siraf excavation history, mosque, bazaar, rich residences, cemeteries, defenses, and overseas trade."
+    },
+    {
+      "id": "be-siraf-report",
+      "title": "David Whitehouse: Excavations at Siraf, Third Interim Report",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/05786967.1970.11834785",
+      "note": "Peer-reviewed excavation report for individual houses, rooms, streets, drainage pits, and interpretation limits."
+    },
+    {
+      "id": "be-pot",
+      "title": "British Museum: Siraf cooking pots",
+      "url": "https://www.britishmuseum.org/collection/term/x293739",
+      "note": "Museum catalogue group of ninth- and tenth-century Indian cooking pots excavated at Siraf."
+    },
+    {
+      "id": "be-coin",
+      "title": "Ashmolean Museum: Buyid silver dirham HCR14387",
+      "url": "https://hcr.ashmus.ox.ac.uk/coin/hcr14387",
+      "note": "Exact Arabic inscriptions, translations, rulers, mint, metal, diameter, weight, and 959 to 960 date."
+    },
+    {
+      "id": "be-coins",
+      "title": "Encyclopaedia Iranica: Coins and coinage",
+      "url": "https://www.iranicaonline.org/articles/coins-and-coinage/",
+      "note": "Political meaning of dynastic names on coins alongside continued acknowledgment of Abbasid caliphs."
+    },
+    {
+      "id": "be-epigraphy",
+      "title": "Encyclopaedia Iranica: Arabic inscriptions in Persia",
+      "url": "https://www.iranicaonline.org/articles/epigraphy-iii/",
+      "note": "Buyid commemorative inscriptions at Persepolis, including Adud al-Dawla’s dated Persian-name text."
+    },
+    {
+      "id": "be-ewer",
+      "title": "Smithsonian National Museum of Asian Art: gold ewer F1943.1",
+      "url": "https://asia.si.edu/explore-art-culture/collections/search/edanmdm%3Afsg_F1943.1/",
+      "note": "Gold vessel naming Buyid Bakhtiyar, translated blessing, relief technique, authenticity caution, and later handle."
+    },
+    {
+      "id": "be-silk",
+      "title": "Metropolitan Museum: disputed Buyid silk 30.67",
+      "url": "https://www.metmuseum.org/art/collection/search/448375",
+      "note": "Museum redating of a once-attributed Buyid textile, demonstrating limits on clothing reconstruction."
+    },
+    {
+      "id": "be-astrolabe",
+      "title": "Qatar Museums: Planispheric Astrolabe SI.5.1999",
+      "url": "https://collections.qm.org.qa/en/objects/planispheric-astrolabe-si51999",
+      "note": "Signed 984 to 985 Buyid-period instrument with thirty-three star pointers and decorative birds’ heads."
+    },
+    {
+      "id": "be-sufi",
+      "title": "Paul Kunitzsch: Abd al-Rahman al-Sufi",
+      "url": "https://www.iranicaonline.org/articles/abd-al-rahman-b-omar-sufi/",
+      "note": "Buyid court astronomer, observations, constellation drawings, and star tables calculated for 964."
+    },
+    {
+      "id": "be-shiites",
+      "title": "Encyclopaedia Iranica: Shiites of Iraq",
+      "url": "https://www.iranicaonline.org/articles/iraq-x-shiites-of-iraq/",
+      "note": "Buyid patronage, Baghdad scholarly life, the Karkh library, multiple communities, and sectarian conflict."
+    },
+    {
+      "id": "be-bimarestan",
+      "title": "Encyclopaedia Iranica: Bimarestan",
+      "url": "https://www.iranicaonline.org/articles/bimarestan-hospital/",
+      "note": "Buyid hospitals and endowed teaching in medicine, astronomy, philosophy, and mathematics at Shiraz."
+    },
+    {
+      "id": "be-hospital",
+      "title": "D. M. Dunlop: Ibn Marzuban",
+      "url": "https://www.iranicaonline.org/articles/ebn-marzoban/",
+      "note": "Buyid-period scholar, judge, and hospital superintendent with clearer administrative than clinical evidence."
+    },
+    {
+      "id": "be-medical",
+      "title": "US National Library of Medicine: al-Majusi medical encyclopedia",
+      "url": "https://www.nlm.nih.gov/hmd/arabic/E5_E6.html",
+      "note": "Catalogue evidence for the Buyid-dedicated medical work and a surviving manuscript copied in 1208."
+    },
+    {
+      "id": "be-arrajan",
+      "title": "Encyclopaedia Iranica: Arrajan",
+      "url": "https://www.iranicaonline.org/articles/arrajan-medieval-city-and-province-in-southwestern-iran-between-kuzestan-and-fars/",
+      "note": "Buyid-era trade and exports including syrups, oil, soap, cloth, dates, nuts, grapes, and citrus."
+    },
+    {
+      "id": "be-sirafi",
+      "title": "Encyclopaedia Iranica: Abu Said al-Sirafi",
+      "url": "https://www.iranicaonline.org/articles/sirafi/",
+      "note": "Tenth-century Siraf-born grammarian, converted family background, studies, teaching, and Baghdad career."
+    },
+    {
+      "id": "be-sayyida",
+      "title": "Wilferd Madelung: Al-e Bavand",
+      "url": "https://www.iranicaonline.org/articles/al-e-bavand/",
+      "note": "Dynastic background of Sayyida, Buyid queen mother and effective ruler at Ray after 997."
+    }
+  ],
+  "entities": [
+    {
+      "id": "buyid-emirate",
+      "card": "data/cards/buyid-emirate.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "be-iran-history",
+            "be-map1000"
+          ],
+          "locator": "Buyid family conflicts, cultural policy, Arabic letters, and the Seljuk end of Baghdad rule. Decoded target and simultaneous Buwayhid geometries, coordinate hashes, bounds, topology, and point tests.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "be-deylamites"
+          ],
+          "locator": "Daylamite military origins, Buyid conquests, settlement through military grants, and overthrow by 1062.",
+          "dateScope": {
+            "from": 932,
+            "to": 945
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "be-baghdad"
+          ],
+          "locator": "Buyid Baghdad rulers, locally recruited administrators, imported workers, palaces, and political changes.",
+          "dateScope": {
+            "from": 945,
+            "to": 976
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "be-azod"
+          ],
+          "locator": "Detailed reign, administration, family politics, public works, festivals, libraries, learning, and hospitals.",
+          "dateScope": {
+            "from": 976,
+            "to": 983
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "be-fars"
+          ],
+          "locator": "Prosperity under Adud al-Dawla followed by fragmentation, unrest, and revenue abuse in Fars.",
+          "dateScope": {
+            "from": 983,
+            "to": 997
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "be-sayyida",
+            "be-kakuyids"
+          ],
+          "locator": "Dynastic background of Sayyida, Buyid queen mother and effective ruler at Ray after 997. Buyid-linked local rule, Isfahan and Hamadan changes, and the 1029 Ghaznavid seizure of Ray.",
+          "dateScope": {
+            "from": 997,
+            "to": 1029
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "be-isfahan"
+          ],
+          "locator": "Buyid coin years, courtly learning, political decline, and Seljuk conquest and rebuilding of Isfahan.",
+          "dateScope": {
+            "from": 1029,
+            "to": 1055
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "be-fars"
+          ],
+          "locator": "Prosperity under Adud al-Dawla followed by fragmentation, unrest, and revenue abuse in Fars.",
+          "dateScope": {
+            "from": 1055,
+            "to": 1062
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "be-index",
+            "be-map1000"
+          ],
+          "locator": "Exact index row and decoded world-1000 target geometry, topology counts and bounding box.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "be-map1000"
+          ],
+          "locator": "Point-in-polygon tests recorded in identity.json for the exact target feature.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "be-map1000"
+          ],
+          "locator": "Simultaneous related feature stats and point tests in decoded world-1000.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "be-map900",
+            "be-map1100"
+          ],
+          "locator": "Exact-civ scan and point owners in decoded predecessor and successor snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "be-index",
+            "be-map1200"
+          ],
+          "locator": "Related index rows, 1200 decoded geometries, card index and override audit.",
+          "dateScope": {
+            "year": 1200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "be-deylamites"
+          ],
+          "locator": "Sections on the three brothers’ service, conquests and separate centers during the 930s.",
+          "dateScope": {
+            "year": 932
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "be-capitals"
+          ],
+          "locator": "Buyid family confederation and provincial capital list in the capital-cities article.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "be-abbasid"
+          ],
+          "locator": "Discussion of Abbasid moral authority and Buyid political tutelage in Baghdad.",
+          "dateScope": {
+            "year": 945
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "be-sayyida"
+          ],
+          "locator": "Buyid queen mother’s Bavandid background and regency after Fakhr al-Dawla’s death.",
+          "dateScope": {
+            "year": 997
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "be-azod"
+          ],
+          "locator": "Lines on family precedence, the 976 succession agreement and renewed fighting among cousins.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "be-divan"
+          ],
+          "locator": "Administrative-continuity section naming the principal Buyid capitals and government offices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "be-eqta"
+          ],
+          "locator": "Buyid eqta section on salary purpose, reassignment, valuation and lack of judicial rights.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "be-coin"
+          ],
+          "locator": "Ashmolean HCR14387 authority list, mint, date, dimensions, weight and material.",
+          "dateScope": {
+            "year": 960
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "be-courts"
+          ],
+          "locator": "Early Islamic court structure and ceremonial hierarchy under Iranian dynasties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "be-baghdad"
+          ],
+          "locator": "Baghdad article on soldiers, local bureaucracy and imported palace workers under Muizz al-Dawla.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "be-archaeology"
+          ],
+          "locator": "Siraf domestic-architecture section on courtyards, upper floors, storage and possible poorer tenants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "be-siraf-report"
+          ],
+          "locator": "Excavated house sequence, street alignment, neighborhood plans and small work spaces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "be-shiites"
+          ],
+          "locator": "Buyid patronage, Karkh library, continued Abbasid setting and sectarian tensions.",
+          "dateScope": {
+            "year": 992
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "be-shiraz"
+          ],
+          "locator": "Shiraz history on religious communities, calendars, festivals and Buyid patronage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "be-capitals",
+            "be-siraf-report"
+          ],
+          "locator": "Inference bounded by family-confederation evidence and excavated domestic plans; no universal household model supplied.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "be-arrajan"
+          ],
+          "locator": "Buyid-era prosperity, port trade, agricultural exports and named crops in Arrajan province.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "be-pot"
+          ],
+          "locator": "Catalogue group x293739, India manufacture, Siraf findspot and ninth-to-tenth-century dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "be-bips"
+          ],
+          "locator": "BIPS excavation summary on the bazaar, residential wealth and overseas Sirafi trade.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "be-archaeology"
+          ],
+          "locator": "Islamic-archaeology article on Siraf shops, ovens, metalworking and thirty pottery kilns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "be-ewer",
+            "be-silk"
+          ],
+          "locator": "Smithsonian ewer inscription and later handle; Metropolitan Museum redating of textile 30.67.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "be-band"
+          ],
+          "locator": "Construction, water wheels, irrigated settlements, bridge function and repair history of Band-e Amir.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "be-shiraz"
+          ],
+          "locator": "Medieval Shiraz spring supply, household gardens and Roknabad underground water channel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "be-siraf-report"
+          ],
+          "locator": "Excavation evidence for roof pipes, pits, drains, street rubbish and limited household sewage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "be-baths"
+          ],
+          "locator": "Excavated Siraf bath plan, pre-1050 date, room sequence, hypocaust, furnace, drains and latrine.",
+          "dateScope": {
+            "year": 1050
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "be-archaeology"
+          ],
+          "locator": "Siraf Great Mosque phases and identified ablution, latrine and storage facilities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "be-bimarestan"
+          ],
+          "locator": "Buyid hospital foundations and subjects taught in the endowed Shiraz complex.",
+          "dateScope": {
+            "year": 982
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "be-hospital"
+          ],
+          "locator": "Biographical evidence for Ibn Marzuban’s studies, judgeship and hospital superintendency.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "be-medical"
+          ],
+          "locator": "NLM catalogue title, dedication context, colophon date, scribe and manuscript limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "be-azod"
+          ],
+          "locator": "Learning, named sciences, Arabic teachers and subject-by-subject library lists in the ruler biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "be-sirafi"
+          ],
+          "locator": "Biography of the Siraf-born grammarian, family conversion, studies and Baghdad career.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "be-sufi"
+          ],
+          "locator": "Book contents, constellation images, observations, 964 coordinate epoch and later influence.",
+          "dateScope": {
+            "year": 964
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "be-astrolabe"
+          ],
+          "locator": "Qatar Museums object date, maker, Buyid association, functions, star count and decorative pointers.",
+          "dateScope": {
+            "year": 985
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "be-epigraphy"
+          ],
+          "locator": "Arabic epigraphy article on the dated Buyid Persepolis inscription and Persian personal names.",
+          "dateScope": {
+            "year": 956
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "be-coin"
+          ],
+          "locator": "Exact reverse text, museum transliteration context, translation, language, mint and date.",
+          "dateScope": {
+            "year": 960
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "be-coins"
+          ],
+          "locator": "Coinage article on autonomous dynasts’ names and continued Abbasid acknowledgment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "be-kakuyids"
+          ],
+          "locator": "1029 Ghaznavid conquest of Ray and the parallel Kakuyid regional trajectory.",
+          "dateScope": {
+            "year": 1029
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "be-isfahan"
+          ],
+          "locator": "Seljuk-conquest and recovery section, including siege, rebuilding, tax relief and returning residents.",
+          "dateScope": {
+            "year": 1051
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "be-abbasid",
+            "be-map1100"
+          ],
+          "locator": "Abbasid article on the 1055 entry plus decoded atlas successor feature.",
+          "dateScope": {
+            "year": 1055
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "be-deylamites"
+          ],
+          "locator": "Deylamites article on Buyid overthrow by 1062 and subsequent regional powers.",
+          "dateScope": {
+            "year": 1062
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "be-fars"
+          ],
+          "locator": "Regional survey of fragmentation, political transition and life under successive rulers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "be-buyids",
+            "be-map1000",
+            "be-map1100",
+            "be-map1200"
+          ],
+          "locator": "Authoritative dynasty overview for origins, related principalities, Baghdad rule, fragmentation, and final dates. Decoded target and simultaneous Buwayhid geometries, coordinate hashes, bounds, topology, and point tests. Decoded successor snapshot used to test exact target absence and the atlas Seljuk handoff. Decoded anachronistic Buwayhid and Buyid Dynasty features used only for identity warnings.",
+          "dateScope": {
+            "year": 1062
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "buyid-emirate",
+        "card": "cards/buyid-emirate.json",
+        "dateBasis": "map_coverage",
+        "summary": "A misplaced 1000-era atlas polygon tied to the historical Buyid family confederation, whose real centers lay far west and whose rule ended by 1062.",
+        "fell": {
+          "year": 1062,
+          "to": [
+            "seljuk-empire"
+          ],
+          "text": "The last Buyid branch in Fars fell around 1062 after Baghdad had passed to the Seljuks in 1055."
+        },
+        "successors": [
+          "seljuk-empire"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "buyid-emirate",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            63.60003600036001,
+            23.675122098835445,
+            71.4049140491405,
+            32.53211594659933
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target buyid-emirate is indexed circa 1000 to 1100 and was missing a card and override at initial audit.",
+    "Its only geometry is world-1000: one Polygon, one ring and 32 positions, bbox 63.600036 to 71.404914 east and 23.675122 to 32.532116 north.",
+    "Karachi, Hyderabad in Sindh, Thatta, Sukkur, Khuzdar and Uthal fall inside; every tested historical Buyid center from Baghdad to Kerman falls outside.",
+    "The simultaneous buwayhid-emirates MultiPolygon contains the tested Buyid centers. It already maps to the separate buyid-dynasty card and is not added to appliesTo here.",
+    "At 1100 the atlas assigns the historical Buyid zone to seljuk-empire. At 1200 it revives buwayhid-emirates and adds buyid-dynasty, both centuries too late.",
+    "Historical chronology begins in the 930s, ends Buyid Baghdad in 1055 and ends the last Fars branch around 1062. The 1000 to 1100 interval remains map coverage only."
+  ]
+}
