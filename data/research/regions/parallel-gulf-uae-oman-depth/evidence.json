@@ -1,0 +1,1086 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel gulf-uae-oman research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map, imported civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Directly checked the imported records: united-arab-emirates starts in 1945 with an open lifetime; oman-1945 starts in 1945 with an open lifetime and alias Sultanate of Oman. The distinct records trucial-oman-1938, muscat-and-oman and oman were also checked and are not merged."
+    },
+    {
+      "id": "atlas-borders",
+      "title": "Human History Map, imported historical border snapshots",
+      "url": "https://github.com/amyleesterling/human-history-map/tree/main/data/hb/borders",
+      "note": "All TopoJSON snapshots containing each ID were inspected and point-tested. Both have five broad snapshots, 1945-1960 through 2010-2020. The UAE polygon omits several emirate capitals and sweeps into disputed modern border space; Oman omits Muscat, Khasab and other coastal points in several snapshots. These are display shapes, not legal surveys."
+    },
+    {
+      "id": "uae-history",
+      "title": "United Arab Emirates Government, History of the UAE",
+      "url": "https://u.ae/en/about-the-uae/history",
+      "note": "Official overview checked for the 1892 Exclusive Agreements, the six rulers’ 18 July 1971 decision, federation on 2 December 1971 and Ras Al Khaimah joining on 10 February 1972. It is a state account; founding dates are used, celebratory judgments are not."
+    },
+    {
+      "id": "uae-recognition",
+      "title": "U.S. Office of the Historian, United Arab Emirates country history",
+      "url": "https://history.state.gov/countries/united-arab-emirates",
+      "note": "Official diplomatic chronology checked: seven Trucial sheikhdoms under British protection, termination of treaty relationships, UAE independence on 2 December 1971 and U.S. recognition on 3 December."
+    },
+    {
+      "id": "uae-founders",
+      "title": "United Arab Emirates Government, Founders of the Union",
+      "url": "https://u.ae/en/about-the-uae/founders-of-the-union",
+      "note": "Official account checked for the Abu Dhabi-Dubai union initiative, the federation process and the rulers associated with it. Political praise is not used as independent evaluation."
+    },
+    {
+      "id": "uae-loc-profile",
+      "title": "Library of Congress, Country Profile: United Arab Emirates",
+      "url": "https://tile.loc.gov/storage-services/master/frd/copr/UAE.pdf",
+      "note": "Original institutional profile checked for early oil exports, federation-era public investment and the division of powers between federal and emirate institutions. Dated profile figures are not presented as current."
+    },
+    {
+      "id": "uae-fnc",
+      "title": "United Arab Emirates Government, The Federal National Council",
+      "url": "https://u.ae/en/about-the-uae/the-uae-government/the-federal-national-council-",
+      "note": "Official institutional description checked: 40 members, half appointed and half selected through emirate electoral colleges since 2006, consultation and legislative review, and the 2019 direction that women hold half the seats. Official design is distinguished from universal direct election."
+    },
+    {
+      "id": "uae-supreme-council",
+      "title": "United Arab Emirates Government, The Federal Supreme Council",
+      "url": "https://u.ae/about-the-uae/the-uae-government/the-federal-supreme-council",
+      "note": "Official description checked for the council of the seven rulers as highest constitutional authority and its election of Mohamed bin Zayed as president on 14 May 2022."
+    },
+    {
+      "id": "uae-constitution-ar",
+      "title": "UAE Legislation, official Arabic Constitution",
+      "url": "https://www.uaelegislation.gov.ae/ar/constitution",
+      "note": "Official Arabic text checked for Article 1 wording and Article 7, which makes Arabic the official language. The English translation in the card is a close editorial rendering of the quoted sentence."
+    },
+    {
+      "id": "uae-economy",
+      "title": "World Bank, Gulf Economic Update, October 2021",
+      "url": "https://www.worldbank.org/en/country/gcc/publication/economic-update-october-2021",
+      "note": "World Bank regional update checked for the UAE’s large non-hydrocarbon share alongside the continuing role of hydrocarbons in exports and public revenue. The finding is explicitly dated and not treated as a timeless statistic."
+    },
+    {
+      "id": "uae-space",
+      "title": "UAE Space Agency, Emirates Mars Mission observations across a full Martian year",
+      "url": "https://space.gov.ae/en/media-center/news/9/2/2024/emirates-mars-mission-publishes-observations-across-a-full-martian-year-5181fa49",
+      "note": "Official mission account checked for Hope as the first Arab interplanetary mission, its elliptical orbit and atmospheric observations, a full Martian year of data, and collaboration between the Mohammed Bin Rashid Space Centre and U.S. university partners."
+    },
+    {
+      "id": "uae-migrant-framework",
+      "title": "International Labour Organization, UAE regulatory framework governing migrant workers",
+      "url": "https://www.ilo.org/publications/united-arab-emirates-regulatory-framework-governing-migrant-workers",
+      "note": "ILO country legal map checked for recruitment costs, passport confiscation, working conditions, social protection, complaints and sponsorship rules. A legal map records protections and gaps; it does not prove equal enforcement or equal household security."
+    },
+    {
+      "id": "uae-alain",
+      "title": "UNESCO World Heritage Centre, Cultural Sites of Al Ain",
+      "url": "https://whc.unesco.org/en/list/1343",
+      "note": "UNESCO entry checked for Neolithic occupation, Bronze Age circular tombs around 2500 BCE and Iron Age aflaj. These are clearly labeled ancient antecedents on today’s UAE territory, not inventions of the 1971 federation."
+    },
+    {
+      "id": "uae-majlis",
+      "title": "UNESCO Intangible Heritage, Majlis, a cultural and social space",
+      "url": "https://ich.unesco.org/en/RL/majlis-a-cultural-and-social-space-01076",
+      "note": "UNESCO multinational entry checked for receiving guests, discussing community matters, coffee and cushions, weddings and condolences, children learning through observation, and women’s majlis spaces. It is presented as a living practice, not every family’s room plan."
+    },
+    {
+      "id": "uae-sadu",
+      "title": "UNESCO Intangible Heritage, Al Sadu traditional weaving in the UAE",
+      "url": "https://ich.unesco.org/en/RL/al-sadu-traditional-weaving-skills-in-the-united-arab-emirates-02223",
+      "note": "UNESCO entry checked for women spinning and weaving, conversation and poetry during gatherings, girls’ staged learning, uses of woven material and pressures associated with changing pastoral life. Safeguarding claims are kept distinct from universal participation."
+    },
+    {
+      "id": "uae-falconry",
+      "title": "UNESCO, Falconry nomination file: United Arab Emirates transmission",
+      "url": "https://ich.unesco.org/doc/src/17331-EN.pdf",
+      "note": "Original UNESCO nomination material checked for UAE families taking children into the desert, teaching handling and care, and building trust with birds. Falconry is identified as a transnational, much older practice rather than a modern UAE invention."
+    },
+    {
+      "id": "uae-education-law",
+      "title": "United Arab Emirates Government, Importance of education to the government",
+      "url": "https://u.ae/en/information-and-services/education/importance-of-education-to-the-government",
+      "note": "Official page checked for the 2022 compulsory-education law: citizen children through the end of school and resident non-citizen children through primary level, guardian duties, free public education for citizens and inclusion of children with disabilities."
+    },
+    {
+      "id": "uae-school-admission",
+      "title": "United Arab Emirates Government, Admission to government schools",
+      "url": "https://u.ae/en/information-and-services/education/school-education-k-12/admission-to-uae-government-schools",
+      "note": "Official admissions rules checked for free public places for citizens, conditional fee-paying access for eligible expatriate pupils and capacity limits. Rules can change; the card treats this as a current policy difference, not a measure of every child’s experience."
+    },
+    {
+      "id": "uae-antibullying",
+      "title": "UNICEF Gulf Area, Evidence to action: UAE anti-bullying programme",
+      "url": "https://www.unicef.org/gulf/evidence-action",
+      "note": "UNICEF account checked for the 2014-2023 pilot, 2023 evaluation, 2024 training in more than 190 Abu Dhabi schools and reported perceptions of improved safety. Survey perceptions are not presented as proof that bullying disappeared."
+    },
+    {
+      "id": "uae-vaccines",
+      "title": "United Arab Emirates Government, Health of vulnerable groups",
+      "url": "https://u.ae/en/information-and-services/health-and-fitness/health-of-vulnerable-groups",
+      "note": "Official service page checked for newborn screening and the national childhood vaccination schedule from birth through grade 11, free at government facilities. Service rules are distinguished from individual medical advice."
+    },
+    {
+      "id": "uae-primary-care",
+      "title": "World Health Organization, UAE action against noncommunicable diseases",
+      "url": "https://www.who.int/news-room/feature-stories/detail/from-soft-drink-taxes-to-detecting-people-at-risk-the-united-arab-emirates-is-promoting-health-by-beating-noncommunicable-diseases",
+      "note": "WHO 2017 feature checked for screening in 71 primary-care clinics, multidisciplinary diabetes care and taxes on tobacco and sugary drinks. It is a dated programme account, not a claim that chronic disease was solved."
+    },
+    {
+      "id": "uae-child-toilets",
+      "title": "UAE official children’s nursery premises standards: toilets and washrooms",
+      "url": "https://assets.u.ae/api/public/content/6bff53e20d9e45f3b491bdfa7f99ff58?v=c18d35e4",
+      "note": "Original official standards checked for one toilet and washbasin per eight children over age two, proximity to activity rooms, child-sized fixtures and separate hygienic diaper-changing arrangements. A standard is not proof of compliance at every nursery."
+    },
+    {
+      "id": "uae-wash",
+      "title": "World Health Organization, Global Health Observatory country details: UAE",
+      "url": "https://www.who.int/data/gho/data/countries/country-details/gho/united-arab-emirates",
+      "note": "WHO country indicators checked for 2022 estimates of safely managed drinking water, sanitation and treated domestic wastewater. Percentages are rounded and dated; household inequalities can be hidden by national totals."
+    },
+    {
+      "id": "uae-water-policy",
+      "title": "UAE Ministry of Energy and Infrastructure, Water security is a national priority",
+      "url": "https://moei.gov.ae/en/media-center/news/23/3/2025/water-security-is-a-national-priority-for-the-uae",
+      "note": "Official 2025 ministry account checked for aridity, desalination and treated-water reuse, more than 160 treatment plants, a reported 73 percent reuse rate and a 2036 target. Government targets are not described as already achieved."
+    },
+    {
+      "id": "oman-loc",
+      "title": "Library of Congress, Persian Gulf States: Country Studies, Oman chapters",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/pe/persiangulfstate00metz_0/persiangulfstate00metz_0.pdf",
+      "note": "Original institutional country study checked for Said bin Taymur’s restrictive rule, the interior conflict, Qaboos taking power in 1970, the Dhofar rebellion ending in 1975 and oil-funded development. Its early-1990s assessments are not treated as current."
+    },
+    {
+      "id": "oman-un-1970",
+      "title": "United Nations, Report of the Security Council, 16 June 1970-15 June 1971",
+      "url": "https://digitallibrary.un.org/record/722919/files/A_8423_Rev-1%5EVol-III%5E-EN.pdf",
+      "note": "Contemporary UN report checked for the 23 July 1970 change of ruler, Qaboos succeeding his father and the shortening of Sultanate of Muscat and Oman to Sultanate of Oman. “Coup” is used descriptively, not as a moral judgment."
+    },
+    {
+      "id": "oman-un-member",
+      "title": "United Nations, Member States",
+      "url": "https://www.un.org/about-us/member-states",
+      "note": "Official UN list checked for Oman’s admission date, 7 October 1971. Membership is an international milestone, not the beginning of Omani society or sovereignty."
+    },
+    {
+      "id": "oman-dhofar",
+      "title": "U.S. Office of the Historian, Memorandum on the Dhofar insurgency, 1975",
+      "url": "https://history.state.gov/historicaldocuments/frus1969-76ve09p2/d212",
+      "note": "Contemporary diplomatic document checked for the insurgency, external military support, rapid oil-funded development and heavy fiscal reliance on petroleum. It is a U.S. policy document with its own perspective, so only concrete contemporary observations are used."
+    },
+    {
+      "id": "oman-fm-history",
+      "title": "Oman Foreign Ministry, History of the Foreign Ministry",
+      "url": "https://www.fm.gov.om/en/ministry/about-us/history-of-the-foreign-ministry/",
+      "note": "Official account checked for the ministry’s creation in 1970, Oman’s “friend to all” policy, constructive neutrality during the Iran-Iraq war, GCC participation and mediation. It is used as evidence of stated policy and documented actions, not neutral praise."
+    },
+    {
+      "id": "oman-basiclaw-1996",
+      "title": "United Nations, Oman report on the 1996 Basic Law and Consultative Council",
+      "url": "https://digitallibrary.un.org/record/447601/files/A_56_127_Add.1--E_2001_101_Add.1-EN.pdf",
+      "note": "Original UN-hosted state report checked for the November 1996 Basic Law, the two councils and consultative development. Because it is Oman’s own report to the UN, institutional facts are used while self-evaluation is qualified."
+    },
+    {
+      "id": "oman-head-state",
+      "title": "Oman Foreign Ministry, Head of State",
+      "url": "https://www.fm.gov.om/en/about-oman/state/head-of-state/",
+      "note": "Official page checked for Sultan Haitham bin Tarik succeeding Qaboos on 11 January 2020 and the Al Bu Said dynasty’s continuity. Biographical praise is not used."
+    },
+    {
+      "id": "oman-basiclaw-2021",
+      "title": "Oman Foreign Ministry archive, Basic Law and Council of Oman decrees, 2021",
+      "url": "https://archive.fm.gov.om/en/1321/",
+      "note": "Official announcement checked for Royal Decrees 6/2021 and 7/2021, the new Basic Law, crown-prince provisions and the Council of Oman law. Promised principles are described as legal rules, not automatic social outcomes."
+    },
+    {
+      "id": "oman-government",
+      "title": "Oman Foreign Ministry, Constitution and system of government",
+      "url": "https://www.fm.gov.om/en/about-oman/government/constitution/",
+      "note": "Official English account checked for the Sultan’s executive role, Council of Ministers, appointed State Council and elected Shura Council. It describes constitutional design; the card does not convert an elected lower house into a claim of a parliamentary democracy."
+    },
+    {
+      "id": "oman-basiclaw-ar",
+      "title": "Oman Ministry of Justice and Legal Affairs, Royal Decree 6/2021 and official Arabic Basic Law",
+      "url": "https://www.mjla.gov.om/decrees/1/show/951",
+      "note": "Official Arabic decree and attached Basic Law checked for Article 1. The card quotes the Arabic sentence exactly and supplies a close editorial English translation."
+    },
+    {
+      "id": "oman-economy",
+      "title": "International Monetary Fund, Oman: 2025 Article IV Consultation",
+      "url": "https://www.elibrary.imf.org/view/journals/002/2026/004/article-A001-en.xml",
+      "note": "IMF staff report checked for non-hydrocarbon growth, continued oil-price exposure, diversification comparisons and youth unemployment. Figures are dated estimates; forecasts are not presented as completed outcomes."
+    },
+    {
+      "id": "oman-social-protection",
+      "title": "International Labour Organization, Far-reaching reforms in Oman set new benchmark for social protection",
+      "url": "https://www.ilo.org/resource/article/far-reaching-reforms-oman-set-new-benchmark-social-protection-region",
+      "note": "ILO account checked for the 2023 law, universal social-protection floor, 14 weeks of full-pay maternity leave and seven days of full-pay paternity leave for employed Omani and non-Omani parents. The article says key provisions are phased over three years and migrant-worker inclusion is gradual; legal adoption is not treated as full delivery."
+    },
+    {
+      "id": "oman-bat",
+      "title": "UNESCO World Heritage Centre, Archaeological Sites of Bat, Al-Khutm and Al-Ayn",
+      "url": "https://whc.unesco.org/en/list/434",
+      "note": "UNESCO entry checked for third-millennium BCE settlements and necropolises, monument types and links to copper-producing Magan in cuneiform evidence. These are ancient antecedents on modern Omani territory, not achievements of the post-1945 sultanate."
+    },
+    {
+      "id": "oman-aflaj",
+      "title": "UNESCO World Heritage Centre, Aflaj Irrigation Systems of Oman",
+      "url": "https://whc.unesco.org/en/list/1207",
+      "note": "UNESCO entry checked for about 3,000 systems still in use at nomination, gravity-fed channels, community time shares, sundials, ancient antecedents and threats from falling groundwater. Origin dates remain cautious because the entry itself distinguishes possible fifth-century CE origins from much earlier irrigation evidence."
+    },
+    {
+      "id": "oman-coffee",
+      "title": "UNESCO Intangible Heritage, Arabic coffee, a symbol of generosity",
+      "url": "https://ich.unesco.org/en/RL/arabic-coffee-a-symbol-of-generosity-02111",
+      "note": "UNESCO multinational entry checked for daily and ceremonial preparation, service to elders and guests first, use of the right hand and shaking the cup to signal “enough.” It is a regional practice with local variation, not an Omani invention."
+    },
+    {
+      "id": "oman-barah",
+      "title": "UNESCO Intangible Heritage, Al-Bar’ah music and dance of Oman’s Dhofari valleys",
+      "url": "https://ich.unesco.org/en/RL/al-barah-music-and-dance-of-oman-dhofari-valleys-00372",
+      "note": "UNESCO entry checked for the semicircle of performers, two male dancers with khanjars, drums and flute, weddings and festivities, and participation across age and social background. This is a Dhofari tradition, not a universal daily dance."
+    },
+    {
+      "id": "oman-khanjar",
+      "title": "UNESCO Intangible Heritage, Al-Khanjar craft skills and social practices",
+      "url": "https://ich.unesco.org/en/RL/al-khanjar-craft-skills-and-social-practices-01844",
+      "note": "UNESCO entry checked for component parts, wood/leather/cloth/silver crafts, formal occasions and intergenerational transmission. The khanjar is treated as a crafted ceremonial object, not a toy or proof that every man wears one daily."
+    },
+    {
+      "id": "oman-schools-history",
+      "title": "UNESCO-UNEVOC, Education policy and development in Oman",
+      "url": "https://unevoc.unesco.org/fileadmin/user_upload/docs/EPE_Component_One_ENG_14_July_2010.pdf",
+      "note": "Original UNESCO-UNEVOC report checked for the 1970 baseline of three schools and 909 male pupils and expansion by 2005. Historical figures are dated and access growth is distinguished from present-day learning quality."
+    },
+    {
+      "id": "oman-musandam-schools",
+      "title": "UNICEF Oman, Child-friendly education in Musandam schools",
+      "url": "https://www.unicef.org/oman/stories/unicef-and-cfa-visit-schools-implementing-child-friendly-education-model-musandam",
+      "note": "UNICEF field story checked for Kumzar’s boat-only access, Lima pupils’ hydroponic agriculture activity and child-friendly education observations. It is a set of examples, not a national survey."
+    },
+    {
+      "id": "oman-disability",
+      "title": "UNICEF Oman, Inclusion of children with disabilities",
+      "url": "https://www.unicef.org/oman/inclusion-children-disabilities",
+      "note": "UNICEF account checked for the 2023 estimate of roughly 16,000 children with disabilities, concentration of specialist services in urban areas and shortages of trained personnel and consistent data. The number is dated and approximate."
+    },
+    {
+      "id": "oman-child-health",
+      "title": "World Health Organization Eastern Mediterranean Region, Oman country health profile",
+      "url": "https://www.emro.who.int/countries/omn/index.html",
+      "note": "WHO country material checked for Oman’s integrated management of childhood illness programme from 1999 and primary-care approach. Programme adoption is not treated as equal access or guaranteed outcome for every child."
+    },
+    {
+      "id": "oman-nutrition",
+      "title": "UNICEF Oman, Oman National Nutrition Survey 2017",
+      "url": "https://www.unicef.org/oman/reports/oman-national-nutrition-survey-2017",
+      "note": "UNICEF survey page and report checked for a roughly 70 percent fall in child mortality since 1990 alongside continuing nutrition concerns measured in the 2017 survey. Mortality progress and nutrition problems are kept together rather than telling a triumph-only story."
+    },
+    {
+      "id": "oman-wash",
+      "title": "UNICEF Data, Sustainable Development Goals country profile: Oman",
+      "url": "https://data.unicef.org/sdgs/country/omn/",
+      "note": "UNICEF SDG profile checked for 2022 estimates of basic and safely managed drinking water, basic sanitation and zero reported open defecation, plus the latest handwashing estimate. National percentages do not guarantee identical rural or household service."
+    },
+    {
+      "id": "oman-school-toilets",
+      "title": "UNICEF Evaluation Office, Oman Child-Friendly Schools evaluation",
+      "url": "https://evaluationreports.unicef.org/GetDocument?documentID=133&fileID=35246",
+      "note": "Original evaluation report checked for observations and participant reports about labelled, clean pupil toilets and increased water-quality monitoring in evaluated schools. The card limits the finding to those schools; it does not claim every Omani school met the same condition."
+    }
+  ],
+  "entities": [
+    {
+      "id": "united-arab-emirates",
+      "card": "data/cards/united-arab-emirates.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-borders",
+            "uae-history"
+          ],
+          "locator": "Directly checked the imported records: united-arab-emirates starts in 1945 with an open lifetime; oman-1945 starts in 1945 with an open lifetime and alias Sultanate of Oman. The distinct records trucial-oman-1938, muscat-and-oman and oman were also checked and are not merged. All TopoJSON snapshots containing each ID were inspected and point-tested. Both have five broad snapshots, 1945-1960 through 2010-2020. The UAE polygon omits several emirate capitals and sweeps into disputed modern border space; Oman omits Muscat, Khasab and other coastal points in several snapshots. These are display shapes, not legal surveys. Official overview checked for the 1892 Exclusive Agreements, the six rulers’ 18 July 1971 decision, federation on 2 December 1971 and Ras Al Khaimah joining on 10 February 1972. It is a state account; founding dates are used, celebratory judgments are not.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "uae-recognition"
+          ],
+          "locator": "Official diplomatic chronology checked: seven Trucial sheikhdoms under British protection, termination of treaty relationships, UAE independence on 2 December 1971 and U.S. recognition on 3 December.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1971
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "uae-founders"
+          ],
+          "locator": "Official account checked for the Abu Dhabi-Dubai union initiative, the federation process and the rulers associated with it. Political praise is not used as independent evaluation.",
+          "dateScope": {
+            "from": 1971,
+            "to": 1972
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "uae-loc-profile"
+          ],
+          "locator": "Original institutional profile checked for early oil exports, federation-era public investment and the division of powers between federal and emirate institutions. Dated profile figures are not presented as current.",
+          "dateScope": {
+            "from": 1972,
+            "to": 2006
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "uae-fnc"
+          ],
+          "locator": "Official institutional description checked: 40 members, half appointed and half selected through emirate electoral colleges since 2006, consultation and legislative review, and the 2019 direction that women hold half the seats. Official design is distinguished from universal direct election.",
+          "dateScope": {
+            "from": 2006,
+            "to": 2022
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "uae-supreme-council"
+          ],
+          "locator": "Official description checked for the council of the seven rulers as highest constitutional authority and its election of Mohamed bin Zayed as president on 14 May 2022.",
+          "dateScope": {
+            "from": 2022,
+            "to": null
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "uae-recognition"
+          ],
+          "locator": "Official country chronology, sections on British protectorate, independence and recognition; atlas onset compared separately.",
+          "dateScope": {
+            "year": 1971
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "uae-founders"
+          ],
+          "locator": "Official Founders of the Union account, Abu Dhabi-Dubai initiative, six-member founding and Ras Al Khaimah accession.",
+          "dateScope": {
+            "year": 1972
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "uae-fnc"
+          ],
+          "locator": "Official FNC page, composition, selection from 2006, functions and 2019 women’s representation direction.",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "uae-supreme-council"
+          ],
+          "locator": "Official Supreme Council description and dated presidential election notice.",
+          "dateScope": {
+            "year": 2022
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "uae-constitution-ar"
+          ],
+          "locator": "Official Arabic Constitution, Articles 1 and 7; English is an editorial close translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "uae-loc-profile"
+          ],
+          "locator": "Library of Congress country profile, petroleum history, federation structure and development sections; historical profile only.",
+          "dateScope": {
+            "year": 1971
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "uae-economy"
+          ],
+          "locator": "World Bank October 2021 GCC update, UAE non-hydrocarbon share and hydrocarbon fiscal/export role; figure explicitly dated.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "uae-migrant-framework"
+          ],
+          "locator": "ILO UAE regulatory-framework publication, mapped legal topics and distinction between legal design and practical protection.",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "uae-space"
+          ],
+          "locator": "UAE Space Agency 2024 mission report, first Arab interplanetary mission, orbit, atmospheric coverage, full Martian year and institutional partners.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "uae-alain"
+          ],
+          "locator": "UNESCO Al Ain description, Neolithic occupation, Hafit-period tombs and Iron Age aflaj; antecedent dating explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "uae-majlis"
+          ],
+          "locator": "UNESCO majlis entry, functions, furnishings, children’s observational learning and women’s spaces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "uae-sadu"
+          ],
+          "locator": "UNESCO Al Sadu entry, materials and uses, women’s gatherings, staged learning and modern pressures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "uae-falconry"
+          ],
+          "locator": "UNESCO nomination file, UAE transmission examples involving children, desert trips, handling, care and trust; older transnational origin explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "uae-education-law"
+          ],
+          "locator": "Official education page, 2022 law, compulsory stages, guardian responsibility, disability inclusion and free citizen education.",
+          "dateScope": {
+            "year": 2022
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "uae-school-admission"
+          ],
+          "locator": "Official government-school admissions page, citizen/GCC eligibility and conditional fee-paying expatriate access; rules treated as current policy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "uae-antibullying"
+          ],
+          "locator": "UNICEF Evidence to Action account, pilot dates, 2023 evaluation, 2024 training reach and reported survey percentages.",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "uae-vaccines"
+          ],
+          "locator": "Official vulnerable-groups health page, newborn screening and free vaccination schedule from birth to grade 11.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "uae-primary-care"
+          ],
+          "locator": "WHO 2017 feature, primary-clinic screening, team-based diabetes care and tobacco/sugary-drink fiscal measures.",
+          "dateScope": {
+            "year": 2017
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/5/text",
+          "sourceIds": [
+            "uae-child-toilets"
+          ],
+          "locator": "Official childcare-premises standards, toilet/washbasin ratio, proximity, fixture size and diaper-changing separation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/6/text",
+          "sourceIds": [
+            "uae-wash"
+          ],
+          "locator": "WHO Global Health Observatory UAE country indicators, 2022 safely managed water, sanitation and wastewater estimates; rounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/7/text",
+          "sourceIds": [
+            "uae-water-policy"
+          ],
+          "locator": "UAE ministry 23 March 2025 account, aridity, treatment plants, reported reuse level and 2036 target; official self-report and target clearly labeled.",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-borders"
+          ],
+          "locator": "Directly checked the imported records: united-arab-emirates starts in 1945 with an open lifetime; oman-1945 starts in 1945 with an open lifetime and alias Sultanate of Oman. The distinct records trucial-oman-1938, muscat-and-oman and oman were also checked and are not merged. All TopoJSON snapshots containing each ID were inspected and point-tested. Both have five broad snapshots, 1945-1960 through 2010-2020. The UAE polygon omits several emirate capitals and sweeps into disputed modern border space; Oman omits Muscat, Khasab and other coastal points in several snapshots. These are display shapes, not legal surveys.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "united-arab-emirates",
+        "summary": "The UAE from Trucial sheikhdoms to a seven-emirate federation, with oil and trade, Mars science, migrant labour limits, ancient Al Ain heritage, majlis and weaving life, schools, medicine, children’s toilets and water reuse.",
+        "card": "cards/united-arab-emirates.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1945.json",
+          "properties": {
+            "civ": "united-arab-emirates",
+            "from": 1945,
+            "to": 1960,
+            "precision": 3
+          },
+          "bounds": [
+            51.11871118711187,
+            22.065501994596318,
+            56.40716407164072,
+            25.96586262999321
+          ]
+        },
+        {
+          "file": "world-1960.json",
+          "properties": {
+            "civ": "united-arab-emirates",
+            "from": 1960,
+            "to": 1994,
+            "precision": 3
+          },
+          "bounds": [
+            51.11871118711187,
+            22.065501994596318,
+            56.40716407164072,
+            25.96586262999321
+          ]
+        },
+        {
+          "file": "world-1994.json",
+          "properties": {
+            "civ": "united-arab-emirates",
+            "from": 1994,
+            "to": 2000,
+            "precision": 3
+          },
+          "bounds": [
+            51.11871118711187,
+            22.065452625049197,
+            56.40716407164072,
+            25.965825493659075
+          ]
+        },
+        {
+          "file": "world-2000.json",
+          "properties": {
+            "civ": "united-arab-emirates",
+            "from": 2000,
+            "to": 2010,
+            "precision": 3
+          },
+          "bounds": [
+            51.11871118711187,
+            22.065452625049197,
+            56.40716407164072,
+            25.965825493659075
+          ]
+        },
+        {
+          "file": "world-2010.json",
+          "properties": {
+            "civ": "united-arab-emirates",
+            "from": 2010,
+            "to": 2020,
+            "precision": 3
+          },
+          "bounds": [
+            51.11871118711187,
+            22.065452625049197,
+            56.40716407164072,
+            25.965825493659075
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oman-1945",
+      "card": "data/cards/oman-1945.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-borders"
+          ],
+          "locator": "Directly checked the imported records: united-arab-emirates starts in 1945 with an open lifetime; oman-1945 starts in 1945 with an open lifetime and alias Sultanate of Oman. The distinct records trucial-oman-1938, muscat-and-oman and oman were also checked and are not merged. All TopoJSON snapshots containing each ID were inspected and point-tested. Both have five broad snapshots, 1945-1960 through 2010-2020. The UAE polygon omits several emirate capitals and sweeps into disputed modern border space; Oman omits Muscat, Khasab and other coastal points in several snapshots. These are display shapes, not legal surveys.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "oman-loc"
+          ],
+          "locator": "Original institutional country study checked for Said bin Taymur’s restrictive rule, the interior conflict, Qaboos taking power in 1970, the Dhofar rebellion ending in 1975 and oil-funded development. Its early-1990s assessments are not treated as current.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1970
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "oman-un-1970",
+            "oman-dhofar"
+          ],
+          "locator": "Contemporary UN report checked for the 23 July 1970 change of ruler, Qaboos succeeding his father and the shortening of Sultanate of Muscat and Oman to Sultanate of Oman. “Coup” is used descriptively, not as a moral judgment. Contemporary diplomatic document checked for the insurgency, external military support, rapid oil-funded development and heavy fiscal reliance on petroleum. It is a U.S. policy document with its own perspective, so only concrete contemporary observations are used.",
+          "dateScope": {
+            "from": 1970,
+            "to": 1975
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "oman-fm-history",
+            "oman-schools-history",
+            "oman-child-health"
+          ],
+          "locator": "Official account checked for the ministry’s creation in 1970, Oman’s “friend to all” policy, constructive neutrality during the Iran-Iraq war, GCC participation and mediation. It is used as evidence of stated policy and documented actions, not neutral praise. Original UNESCO-UNEVOC report checked for the 1970 baseline of three schools and 909 male pupils and expansion by 2005. Historical figures are dated and access growth is distinguished from present-day learning quality. WHO country material checked for Oman’s integrated management of childhood illness programme from 1999 and primary-care approach. Programme adoption is not treated as equal access or guaranteed outcome for every child.",
+          "dateScope": {
+            "from": 1975,
+            "to": 1996
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "oman-basiclaw-1996"
+          ],
+          "locator": "Original UN-hosted state report checked for the November 1996 Basic Law, the two councils and consultative development. Because it is Oman’s own report to the UN, institutional facts are used while self-evaluation is qualified.",
+          "dateScope": {
+            "from": 1996,
+            "to": 2020
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "oman-head-state"
+          ],
+          "locator": "Official page checked for Sultan Haitham bin Tarik succeeding Qaboos on 11 January 2020 and the Al Bu Said dynasty’s continuity. Biographical praise is not used.",
+          "dateScope": {
+            "from": 2020,
+            "to": 2021
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "oman-basiclaw-2021"
+          ],
+          "locator": "Official announcement checked for Royal Decrees 6/2021 and 7/2021, the new Basic Law, crown-prince provisions and the Council of Oman law. Promised principles are described as legal rules, not automatic social outcomes.",
+          "dateScope": {
+            "from": 2021,
+            "to": null
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "oman-loc"
+          ],
+          "locator": "Library of Congress Oman chapters, Said bin Taymur, interior/Jabal Akhdar conflict, Dhofar and pre-1970 restrictions; atlas onset reviewed separately.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "oman-un-1970",
+            "oman-un-member"
+          ],
+          "locator": "UN Security Council annual report for July 1970 succession/name change; UN Member States list for 7 October 1971 admission.",
+          "dateScope": {
+            "year": 1971
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "oman-dhofar"
+          ],
+          "locator": "1975 FRUS memorandum, insurgency and allied support, oil-funded development, petroleum shares and strategic assessment; contemporary U.S. perspective noted.",
+          "dateScope": {
+            "year": 1975
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "oman-fm-history"
+          ],
+          "locator": "Official Foreign Ministry history, establishment, Iran-Iraq neutrality, GCC participation, border agreements and mediation; slogan attributed.",
+          "dateScope": {
+            "year": 1981
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "oman-government"
+          ],
+          "locator": "Official English constitution/system page, roles of sultan, ministers, appointed State Council and elected Shura Council; institutional inference stated cautiously.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/5/text",
+          "sourceIds": [
+            "oman-basiclaw-ar"
+          ],
+          "locator": "Official Ministry of Justice and Legal Affairs Arabic Basic Law, Article 1; close editorial English translation.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "oman-economy"
+          ],
+          "locator": "IMF 2025 Article IV staff report, non-hydrocarbon expansion, diversification comparison, youth unemployment estimate and oil-price exposure; dated finding.",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "oman-social-protection"
+          ],
+          "locator": "ILO reform account, 2023 law, universal floor, maternity/paternity provisions, non-Omani coverage and phased implementation.",
+          "dateScope": {
+            "year": 2023
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "oman-bat"
+          ],
+          "locator": "UNESCO Bat entry, third-millennium chronology, settlements/necropolises and Magan copper evidence; antecedent distinction explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "oman-aflaj"
+          ],
+          "locator": "UNESCO aflaj entry, operating-system count, gravity flow, time shares/sundials, cautious origin discussion and groundwater threats.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "oman-coffee"
+          ],
+          "locator": "UNESCO Arabic coffee entry, order of service, right-hand etiquette and cup-shaking signal; multinational ownership explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "oman-barah"
+          ],
+          "locator": "UNESCO Al-Bar’ah entry, Dhofari setting, performers, instruments, khanjar dancers, occasions and social participation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "oman-khanjar"
+          ],
+          "locator": "UNESCO khanjar entry, parts, materials, formal uses and intergenerational craft transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "oman-schools-history"
+          ],
+          "locator": "UNESCO-UNEVOC report, education expansion tables/text for 1970 and 2005; access distinguished from quality.",
+          "dateScope": {
+            "year": 2005
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "oman-musandam-schools"
+          ],
+          "locator": "UNICEF Musandam field story, Kumzar boat access and Lima hydroponics example; not generalized nationally.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "oman-disability"
+          ],
+          "locator": "UNICEF inclusion page, 2023 approximate population, urban service concentration, workforce and data/early-detection constraints.",
+          "dateScope": {
+            "year": 2023
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "oman-child-health"
+          ],
+          "locator": "WHO EMRO Oman materials, IMCI implementation from 1999 and integrated primary-child-care approach.",
+          "dateScope": {
+            "year": 1999
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "oman-nutrition"
+          ],
+          "locator": "UNICEF Oman National Nutrition Survey 2017 page/report, mortality progress since 1990 and continuing nutrition measurements.",
+          "dateScope": {
+            "year": 2017
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/5/text",
+          "sourceIds": [
+            "oman-wash"
+          ],
+          "locator": "UNICEF SDG Oman country indicators, 2022 water/sanitation estimates and open-defecation indicator; rounded and nationally aggregated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/6/text",
+          "sourceIds": [
+            "oman-school-toilets"
+          ],
+          "locator": "UNICEF evaluation report, school observations and participant reports on labelled/clean toilets and water-quality monitoring; scope limited to evaluated schools.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-borders"
+          ],
+          "locator": "Directly checked the imported records: united-arab-emirates starts in 1945 with an open lifetime; oman-1945 starts in 1945 with an open lifetime and alias Sultanate of Oman. The distinct records trucial-oman-1938, muscat-and-oman and oman were also checked and are not merged. All TopoJSON snapshots containing each ID were inspected and point-tested. Both have five broad snapshots, 1945-1960 through 2010-2020. The UAE polygon omits several emirate capitals and sweeps into disputed modern border space; Oman omits Muscat, Khasab and other coastal points in several snapshots. These are display shapes, not legal surveys.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "oman-1945",
+        "summary": "Modern Oman from the late Muscat-and-Oman sultanate through the 1970 transition and Haitham era, with Dhofar, diplomacy, oil limits, ancient copper and aflaj heritage, family coffee and craft, schools, health, toilets and water.",
+        "card": "cards/oman-1945.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1945.json",
+          "properties": {
+            "civ": "oman-1945",
+            "from": 1945,
+            "to": 1960,
+            "precision": 3
+          },
+          "bounds": [
+            51.80631806318064,
+            16.65325256817556,
+            59.837998379983816,
+            26.23664868211688
+          ]
+        },
+        {
+          "file": "world-1960.json",
+          "properties": {
+            "civ": "oman-1945",
+            "from": 1960,
+            "to": 1994,
+            "precision": 3
+          },
+          "bounds": [
+            51.80631806318064,
+            16.65325256817556,
+            59.837998379983816,
+            26.23664868211688
+          ]
+        },
+        {
+          "file": "world-1994.json",
+          "properties": {
+            "civ": "oman-1945",
+            "from": 1994,
+            "to": 2000,
+            "precision": 3
+          },
+          "bounds": [
+            51.80631806318064,
+            16.654086758288265,
+            59.837998379983816,
+            26.23674290737562
+          ]
+        },
+        {
+          "file": "world-2000.json",
+          "properties": {
+            "civ": "oman-1945",
+            "from": 2000,
+            "to": 2010,
+            "precision": 3
+          },
+          "bounds": [
+            51.80631806318064,
+            16.654086758288265,
+            59.837998379983816,
+            26.23674290737562
+          ]
+        },
+        {
+          "file": "world-2010.json",
+          "properties": {
+            "civ": "oman-1945",
+            "from": 2010,
+            "to": 2020,
+            "precision": 3
+          },
+          "bounds": [
+            51.80631806318064,
+            16.654086758288265,
+            59.837998379983816,
+            26.23674290737562
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "united-arab-emirates is the imported 1945-open atlas record, but the federation began on 2 December 1971. It follows the distinct trucial-oman-1938 record and must not be aliased to it. Five rough polygon snapshots end in 2020 and omit several emirate capitals under point testing; they remain unchanged and are described only as approximate display coverage.",
+    "oman-1945 continues the Sultanate of Muscat and Oman rather than beginning a new polity in 1945. It follows distinct muscat-and-oman and older oman records and must not share their card. The official short name became Sultanate of Oman in 1970. Five rough MultiPolygon snapshots end in 2020 and omit Muscat, Khasab and other coastal points under point testing; they remain unchanged."
+  ]
+}
