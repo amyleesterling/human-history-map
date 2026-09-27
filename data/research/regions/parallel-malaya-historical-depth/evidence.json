@@ -1,0 +1,863 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel malaya-historical research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "mal-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository index checked for exact id malaya: name Malaya, approximately 1650-1920. Separate records exist for Malacca, Malaysian Islamic states, Brunei and Malaysia, so this card does not merge their identities."
+    },
+    {
+      "id": "mal-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage checked before integration: id malaya had no card, review missing, ten border files and ten continuous observed intervals from 1650 to 1920, with no features outside its indexed lifetime."
+    },
+    {
+      "id": "mal-map1650",
+      "title": "Human History Map, world-1650 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Decoded with topojson-client. The exact malaya feature is a two-part MultiPolygon with 178 positions and bbox 100.1404,0.7264 to 119.0442,6.8996. It includes tested Malacca, Johor Bahru, Kuala Lumpur, Penang and Kota Kinabalu points, but excludes Kota Bharu, Kuala Terengganu, Singapore, Kuching and Bandar Seri Begawan."
+    },
+    {
+      "id": "mal-map1914",
+      "title": "Human History Map, world-1914 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Decoded with topojson-client. The 1914-1920 target repeats the same two-part, 178-position footprint as every earlier malaya interval. Static geometry cannot encode the period’s changing sultanates, colonies, protectorates, settlements or company rule."
+    },
+    {
+      "id": "mal-johor",
+      "title": "National Library Board Singapore, Old Johor kingdom",
+      "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=36c71e6b-bfee-43ba-bc5c-086c15cd0df4",
+      "note": "National Library reference article checked. Johor gained Dutch trade and military support after helping take Melaka in 1641; it remained powerful in the seventeenth century, faced a succession crisis after Mahmud II was killed in 1699, incorporated Bugis power, split between rival British- and Dutch-backed claimants after 1812, and was divided into spheres by the 1824 treaty."
+    },
+    {
+      "id": "mal-lingga",
+      "title": "National Library Board Singapore, Mother Island: Finding Singapore's Past in Pulau Lingga",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-17-issue-4-jan-to-mar-2022-pulau-lingga/",
+      "note": "Historian Faris Joraimi's article checked. It explains the Johor-Riau system of Malay sultans and Bugis viceroys, eighteenth-century Riau trade, the Dutch victory of 1784, the 1819 Singapore arrangement and 1824 partition. It also documents Orang Laut, Malay, Bugis and Teochew networks, fish traps, sago, houses, boats and pastimes while distinguishing present practice from direct period evidence."
+    },
+    {
+      "id": "mal-anglo-dutch",
+      "title": "National Library Board Singapore, On Paper: Singapore Before 1867",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-3-oct-dec-2019-singapore-before-1867/",
+      "note": "National Library exhibition article checked. It explains the rival British and Dutch claims surrounding Singapore, the 1824 treaty exchange, the split of the Johor-Riau Sultanate into European spheres and the treaty's long-lived border consequences."
+    },
+    {
+      "id": "mal-unesco",
+      "title": "UNESCO World Heritage Centre, Melaka and George Town",
+      "url": "https://whc.unesco.org/en/list/1223",
+      "note": "UNESCO property description checked. Melaka and George Town preserve five centuries of trading and cultural exchange and successive Malay, Portuguese, Dutch and British influences, including government buildings, religious structures, shophouses, townhouses, food, languages and festivals."
+    },
+    {
+      "id": "mal-hansard",
+      "title": "UK Parliament Hansard, Federation of Malaya Independence Bill, 12 July 1957",
+      "url": "https://hansard.parliament.uk/%E2%80%8CCommons/1957-07-12/debates/971c976e-80ba-4903-b49f-3dd8fa1b1157/FederationOfMalayaIndependenceBill",
+      "note": "Colonial Secretary's retrospective parliamentary account checked critically. It dates the Penang settlement to 1786, British acquisition of Melaka to 1824, treaties and advisers in Malay states from the 1870s, the four-state federation to 1896 and the nine Malay states as constitutionally distinct from the Straits Settlements. It also describes the 1957 independence legislation from the British government's viewpoint."
+    },
+    {
+      "id": "mal-braddell",
+      "title": "National Library Board Singapore, Thomas Braddell",
+      "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=6ecc7499-feb0-4099-91d3-f5f8b605701a",
+      "note": "National Library biography checked. It identifies Thomas Braddell as a colonial official involved in concluding the 1874 Pangkor Treaty. The page documents one British participant, not a neutral or complete account of Perak politics."
+    },
+    {
+      "id": "mal-causeway",
+      "title": "National Library Board Singapore, From Sea to Road: Building the Causeway",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-16-issue-2-jul-sep-2020-causeway/",
+      "note": "Archive-based article checked. It gives rubber and tin production near 1900, railway consolidation in 1906, the Gemas-Johor Bahru line in 1909, train-ferry traffic, construction beginning in 1919 and the Causeway foundation ceremony in April 1920. It distinguishes the project's later completion in 1924."
+    },
+    {
+      "id": "mal-railway",
+      "title": "National Library Board Singapore, Remembering Singapore's Railway Lines and Stations",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-7-issue-3-oct-dec-2011-singapore-railway-lines/",
+      "note": "Architecture historian Lai Chee Kien's article checked. It dates the Taiping-Port Weld railway to 1885, Kuala Lumpur-Klang to 1886, continuous public transport from Penang to Singapore to 1909, and notes Tamil railway labor and associated Hindu shrines. It also explains that rail served colonial tin and rubber economies."
+    },
+    {
+      "id": "mal-labor",
+      "title": "Cambridge University Press, Anti-colonial raced capitalism in Malaysia",
+      "url": "https://www.cambridge.org/core/journals/review-of-international-studies/article/anticolonial-raced-capitalism-in-malaysia-contested-logics-gendered-repertoires/00F8C324C1AA9CC86C1132FF75738690",
+      "note": "Peer-reviewed article checked at its colonial-economy discussion. It describes British protectorate treaties, Chinese and Indian migrant labor in mines and plantations, indenture until 1914, harsh conditions, Malay peasant food production and colonial devaluation of women's household work."
+    },
+    {
+      "id": "mal-sabah-history",
+      "title": "Sabah Government, People and History",
+      "url": "https://sabah.gov.my/people-history",
+      "note": "Official state overview checked. It identifies numerous Indigenous communities and languages; describes Kadazan-Dusun farming and fishing, Murut longhouses and agriculture, Bajau farming, fishing, diving and horsemanship; and dates North Borneo Chartered Company rule from 1881. The community descriptions are broad present-day summaries with historical continuity, not a 1900 census."
+    },
+    {
+      "id": "mal-sabah-charter",
+      "title": "Sabah State Attorney-General's Chambers, British North Borneo Company Charter, 1881",
+      "url": "https://sagc.sabah.gov.my/?q=en/content/charter-granted-british-north-borneo-company-westminister-november-1st-1881",
+      "note": "Official legal archive page checked for the royal charter granted to the British North Borneo Company on 1 November 1881. The charter is evidence of company authority claimed under British law, not proof that every Indigenous community consented or was effectively governed."
+    },
+    {
+      "id": "mal-sabah-print",
+      "title": "Sabah Government Printing Department, history",
+      "url": "https://jck.sabah.gov.my/sejarah.html",
+      "note": "Official department history checked. The company government established its press at Kudat in 1883 and issued the North Borneo Herald and Official Gazette; the press moved to Sandakan in 1885 and Jesselton in 1918. This documents colonial administration and print, not general literacy."
+    },
+    {
+      "id": "mal-kk",
+      "title": "Kota Kinabalu City Hall, early city history",
+      "url": "https://dbkk.sabah.gov.my/profil-dbkk",
+      "note": "Official municipal history checked. It records a pre-existing Bajau settlement at Gaya Bay, a company post founded in 1882, Mat Salleh's destruction of the Gaya settlement in 1897, and the subsequent move to mainland Api-Api/Jesselton as a port and railway stop."
+    },
+    {
+      "id": "mal-girdle",
+      "title": "British Museum, woman's girdle from Sabah, As1912,18",
+      "url": "https://www.britishmuseum.org/collection/object/A_As1912-18",
+      "note": "Museum catalogue checked. It dates a woman's rattan-and-brass girdle to the 1850s-1910 and records that a former Murut attribution was corrected to Dusun after consultation with Sabah Museum. The object is one collected garment component, not a universal costume."
+    },
+    {
+      "id": "mal-house",
+      "title": "Museum Volunteers, National Museum of Malaysia, Malay architecture and traditional houses",
+      "url": "https://museumvolunteersjmm.com/2022/02/14/malay-architecture-traditional-houses/",
+      "note": "Museum-volunteer report of architect Ahmad Najib Ariffin's 2022 talk checked. It describes raised, ventilated, modular timber houses; a main family and guest room, sleeping area and kitchen annex; and bathrooms and latrines placed away from the main house. It is a modern architectural interpretation of a varied vernacular tradition, not a household census for 1650-1920."
+    },
+    {
+      "id": "mal-hawkers",
+      "title": "National Library Board Singapore, Travelling hawkers",
+      "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=ede5738c-465b-49ce-9b3f-4001ad6826e5",
+      "note": "National Library reference article checked. It describes nineteenth- and early twentieth-century itinerant work, affordable meals, children selling snacks, vendors using baskets, yokes and carts, Malay, Javanese, Chinese and Indian foods, and licensing extended to day and itinerant hawkers in 1919. Most evidence is Singapore-specific and therefore regional context outside the polygon."
+    },
+    {
+      "id": "mal-sarong",
+      "title": "National Heritage Board Singapore, Terengganu sarong",
+      "url": "https://www.roots.gov.sg/Collection-landing/listing/1119595",
+      "note": "Asian Civilisations Museum object record checked. The late nineteenth- to early twentieth-century Terengganu sarong is a tubular lower-body garment made with weft ikat and gold supplementary-weft songket, with a front panel described for women. It is one museum object, not everybody's clothing."
+    },
+    {
+      "id": "mal-schoolbooks",
+      "title": "National Library Board Singapore, Malay school-book printing and publishing",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue4-jan-2009-emerging-centre-malay-school-book-printing/",
+      "note": "National Library research article checked. It gives Straits Settlements Malay vernacular enrollment of 22 percent for boys and 2 percent for girls in 1901, the Government Malay Press from 1885, school use of Malay newspapers and book distribution beyond the settlements to Malay states, Johor and Borneo."
+    },
+    {
+      "id": "mal-jawi-paper",
+      "title": "National Library Board Singapore, Jawi Peranakkan, 1876-1895",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue4-jan-2009-jawi-peranakkan-akbar-silam/",
+      "note": "National Library collection article checked. Jawi Peranakkan was a Malay weekly in Jawi script printed in Singapore, with news, advertising, government notices, poetry and school readers; circulation was limited and aimed largely at literate Arab, Indian and Baba Peranakan elites. It also records debates over health, education and language."
+    },
+    {
+      "id": "mal-bl-letter",
+      "title": "British Library, Johor letter to Napoleon III, Or 16126",
+      "url": "https://searcharchives.bl.uk/catalog/032-002404545",
+      "note": "British Library catalogue checked. The illuminated Malay letter in Jawi was sent by Temenggung Ibrahim of Johor in 1857. The catalogue supplies a Latin-script transliteration beginning Bahawa ini surat and an English translation beginning This is a letter; digital images are currently unavailable, so the sample is not presented as a facsimile."
+    },
+    {
+      "id": "mal-nursing",
+      "title": "National Library Board Singapore, Early nursing in Singapore",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-12-issue-2-jul-sep-2016-angels-in-white/",
+      "note": "Archive-based article checked. It documents limited colonial hospital access, home birth with Malay bidan, French nuns nursing from 1885, qualified nurses from 1900, Asian midwife training from 1910, household infant-health visits from 1911 and compulsory midwife registration in 1915. Evidence is mainly Singapore and must not be generalized across the peninsula or North Borneo."
+    },
+    {
+      "id": "mal-cholera",
+      "title": "National Library Board Singapore, Cholera in nineteenth-century Singapore",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-16-issue-2-jul-sep-2020-cholera/",
+      "note": "Archive-based article checked. It documents cholera, inadequate water and hospital capacity, lack of a sewage system in 1889, cesspits and bucket collection of night soil, and sanitation measures after the 1895 epidemic. These are Singapore-specific examples within the wider Straits world."
+    },
+    {
+      "id": "mal-imr",
+      "title": "Malaysia Institute for Medical Research, history",
+      "url": "https://imr.moh.gov.my/index.php/en/corporate-info/history",
+      "note": "Official institute history checked. A Pathological Institute was proposed in 1900 and opened in Kuala Lumpur in 1901 to research malaria, beri-beri and other diseases. Early work covered mosquitoes, malaria control, dysentery and later evidence that excessive rice milling contributed to beri-beri."
+    },
+    {
+      "id": "mal-vector",
+      "title": "NCBI Bookshelf, Mosquito utopias and dystopias",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK585174/?report=reader",
+      "note": "Scholarly chapter checked. Malcolm Watson began malaria-control work in Klang in 1900; drainage and environmental changes reduced cases in specific towns and protected port development. Results belong to targeted colonial projects and did not mean malaria or unequal medical access disappeared."
+    },
+    {
+      "id": "mal-malaysia-history",
+      "title": "Government of Malaysia, Malaysian history",
+      "url": "https://www.malaysia.gov.my/en/government/learn-about-malaysia/malaysian-history",
+      "note": "Official national summary checked for later chronology. The Federation of Malaya became independent in 1957 and joined Sabah, Sarawak and Singapore to form Malaysia in 1963. These later events show why the atlas's 1920 change from malaya to malaysia is anachronistic."
+    },
+    {
+      "id": "mal-later-formation",
+      "title": "National Archives of Malaysia, “Pemasyhuran Malaysia”: Lahirnya Sebuah Negara",
+      "url": "https://pustakailmu.arkib.gov.my/index.php/ms/pustaka-ilmu/imbasan-fakta/pemasyhuran-malaysia-lahirnya-sebuah-negara",
+      "note": "National Archives account checked for the 1957 independence proclamation and the agreement and proclamation that formed Malaysia with Sabah, Sarawak and Singapore on 16 September 1963. It is used only to distinguish those later milestones from the atlas's premature 1920 relabeling."
+    }
+  ],
+  "entities": [
+    {
+      "id": "malaya",
+      "card": "data/cards/malaya.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "mal-index",
+            "mal-map1650",
+            "mal-malaysia-history"
+          ],
+          "locator": "Repository index checked for exact id malaya: name Malaya, approximately 1650-1920. Separate records exist for Malacca, Malaysian Islamic states, Brunei and Malaysia, so this card does not merge their identities. Decoded with topojson-client. The exact malaya feature is a two-part MultiPolygon with 178 positions and bbox 100.1404,0.7264 to 119.0442,6.8996. It includes tested Malacca, Johor Bahru, Kuala Lumpur, Penang and Kota Kinabalu points, but excludes Kota Bharu, Kuala Terengganu, Singapore, Kuching and Bandar Seri Begawan. Official national summary checked for later chronology. The Federation of Malaya became independent in 1957 and joined Sabah, Sarawak and Singapore to form Malaysia in 1963. These later events show why the atlas's 1920 change from malaya to malaysia is anachronistic.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "mal-johor",
+            "mal-map1650"
+          ],
+          "locator": "National Library reference article checked. Johor gained Dutch trade and military support after helping take Melaka in 1641; it remained powerful in the seventeenth century, faced a succession crisis after Mahmud II was killed in 1699, incorporated Bugis power, split between rival British- and Dutch-backed claimants after 1812, and was divided into spheres by the 1824 treaty. Decoded with topojson-client. The exact malaya feature is a two-part MultiPolygon with 178 positions and bbox 100.1404,0.7264 to 119.0442,6.8996. It includes tested Malacca, Johor Bahru, Kuala Lumpur, Penang and Kota Kinabalu points, but excludes Kota Bharu, Kuala Terengganu, Singapore, Kuching and Bandar Seri Begawan.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1699
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "mal-johor",
+            "mal-lingga"
+          ],
+          "locator": "National Library reference article checked. Johor gained Dutch trade and military support after helping take Melaka in 1641; it remained powerful in the seventeenth century, faced a succession crisis after Mahmud II was killed in 1699, incorporated Bugis power, split between rival British- and Dutch-backed claimants after 1812, and was divided into spheres by the 1824 treaty. Historian Faris Joraimi's article checked. It explains the Johor-Riau system of Malay sultans and Bugis viceroys, eighteenth-century Riau trade, the Dutch victory of 1784, the 1819 Singapore arrangement and 1824 partition. It also documents Orang Laut, Malay, Bugis and Teochew networks, fish traps, sago, houses, boats and pastimes while distinguishing present practice from direct period evidence.",
+          "dateScope": {
+            "from": 1699,
+            "to": 1784
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "mal-anglo-dutch"
+          ],
+          "locator": "National Library exhibition article checked. It explains the rival British and Dutch claims surrounding Singapore, the 1824 treaty exchange, the split of the Johor-Riau Sultanate into European spheres and the treaty's long-lived border consequences.",
+          "dateScope": {
+            "from": 1784,
+            "to": 1824
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "mal-anglo-dutch"
+          ],
+          "locator": "National Library exhibition article checked. It explains the rival British and Dutch claims surrounding Singapore, the 1824 treaty exchange, the split of the Johor-Riau Sultanate into European spheres and the treaty's long-lived border consequences.",
+          "dateScope": {
+            "from": 1824,
+            "to": 1874
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "mal-braddell",
+            "mal-sabah-charter"
+          ],
+          "locator": "National Library biography checked. It identifies Thomas Braddell as a colonial official involved in concluding the 1874 Pangkor Treaty. The page documents one British participant, not a neutral or complete account of Perak politics. Official legal archive page checked for the royal charter granted to the British North Borneo Company on 1 November 1881. The charter is evidence of company authority claimed under British law, not proof that every Indigenous community consented or was effectively governed.",
+          "dateScope": {
+            "from": 1874,
+            "to": 1896
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "mal-hansard",
+            "mal-labor"
+          ],
+          "locator": "Colonial Secretary's retrospective parliamentary account checked critically. It dates the Penang settlement to 1786, British acquisition of Melaka to 1824, treaties and advisers in Malay states from the 1870s, the four-state federation to 1896 and the nine Malay states as constitutionally distinct from the Straits Settlements. It also describes the 1957 independence legislation from the British government's viewpoint. Peer-reviewed article checked at its colonial-economy discussion. It describes British protectorate treaties, Chinese and Indian migrant labor in mines and plantations, indenture until 1914, harsh conditions, Malay peasant food production and colonial devaluation of women's household work.",
+          "dateScope": {
+            "from": 1896,
+            "to": 1909
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "mal-railway",
+            "mal-causeway",
+            "mal-index"
+          ],
+          "locator": "Architecture historian Lai Chee Kien's article checked. It dates the Taiping-Port Weld railway to 1885, Kuala Lumpur-Klang to 1886, continuous public transport from Penang to Singapore to 1909, and notes Tamil railway labor and associated Hindu shrines. It also explains that rail served colonial tin and rubber economies. Archive-based article checked. It gives rubber and tin production near 1900, railway consolidation in 1906, the Gemas-Johor Bahru line in 1909, train-ferry traffic, construction beginning in 1919 and the Causeway foundation ceremony in April 1920. It distinguishes the project's later completion in 1924. Repository index checked for exact id malaya: name Malaya, approximately 1650-1920. Separate records exist for Malacca, Malaysian Islamic states, Brunei and Malaysia, so this card does not merge their identities.",
+          "dateScope": {
+            "from": 1909,
+            "to": 1920
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "mal-index",
+            "mal-coverage"
+          ],
+          "locator": "Exact index and coverage records; political identities are separated throughout the card.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "mal-map1650",
+            "mal-map1914"
+          ],
+          "locator": "Decoded first and final target topologies and point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "mal-map1650",
+            "mal-sabah-history",
+            "mal-sabah-charter"
+          ],
+          "locator": "Geometry point tests; official Sabah chronology; company charter context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "mal-map1650",
+            "mal-unesco"
+          ],
+          "locator": "Singapore point is outside; UNESCO describes connected trading towns and living multicultural heritage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "mal-index",
+            "mal-later-formation"
+          ],
+          "locator": "Atlas id transition compared with National Archives chronology for 1957 and 1963.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "mal-johor"
+          ],
+          "locator": "NLB Old Johor article, paragraphs on 1641 alliance, trade privileges and seventeenth-century power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "mal-johor",
+            "mal-lingga"
+          ],
+          "locator": "NLB Johor succession narrative and historian's account of Malayo-Bugis dual rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "mal-lingga"
+          ],
+          "locator": "BiblioAsia sections A Trading Power and Mother Island.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "mal-anglo-dutch"
+          ],
+          "locator": "National Library exhibition account of the competing claims, treaty exchange and division of Johor-Riau.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "mal-hansard",
+            "mal-braddell"
+          ],
+          "locator": "1957 Hansard retrospective lines 51-58, read critically; NLB identification of Pangkor participant.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mal-unesco"
+          ],
+          "locator": "UNESCO statement of Outstanding Universal Value and criteria ii-iv.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "mal-causeway",
+            "mal-labor"
+          ],
+          "locator": "Archive-based production estimates and peer-reviewed labor analysis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "mal-labor"
+          ],
+          "locator": "Cambridge article lines 555-566 on migrant labor, indenture, food production and gendered devaluation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "mal-railway"
+          ],
+          "locator": "BiblioAsia railway history lines 68-86.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "mal-causeway"
+          ],
+          "locator": "BiblioAsia construction, foundation-stone and completion chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "mal-house"
+          ],
+          "locator": "Architectural talk report lines 67-83; modern interpretive and regional limits stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "mal-house"
+          ],
+          "locator": "Architectural report lines 54-55 and 72-79; evidence limitation explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "mal-sarong"
+          ],
+          "locator": "Asian Civilisations Museum object date, technique, region and use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "mal-hawkers"
+          ],
+          "locator": "NLB hawker history lines 158-175, with Singapore geography and child-labor caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mal-lingga"
+          ],
+          "locator": "BiblioAsia pastimes and food sections, explicitly modern observation with historical framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "mal-sabah-charter"
+          ],
+          "locator": "Official charter date and legal powers; the limits of a charter as evidence of consent are stated explicitly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "mal-sabah-history"
+          ],
+          "locator": "Official Sabah community descriptions lines 161-178, treated as broad summaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "mal-kk"
+          ],
+          "locator": "Kota Kinabalu City Hall early-history lines 29-37.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "mal-sabah-print"
+          ],
+          "locator": "Sabah Government Printing Department chronology lines 1-17.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "mal-girdle"
+          ],
+          "locator": "British Museum object materials, date range and corrected cultural attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "mal-schoolbooks"
+          ],
+          "locator": "NLB education article lines 91-106 and table scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "mal-schoolbooks"
+          ],
+          "locator": "NLB article lines 107-122 on press, books, newspapers and distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "mal-jawi-paper"
+          ],
+          "locator": "NLB collection description, production, readership and contents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "mal-bl-letter"
+          ],
+          "locator": "British Library catalogue lines 25-47, script statement, transliteration and translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "mal-bl-letter"
+          ],
+          "locator": "British Library physical description and translated contents; elite genre limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "mal-nursing"
+          ],
+          "locator": "Early nursing article lines 34-59 and 75-81; Singapore scope retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mal-nursing"
+          ],
+          "locator": "NLB nursing chronology lines 68-85; interpretation distinguishes service and regulation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "mal-imr"
+          ],
+          "locator": "Official IMR founding and early-research chronology, with access limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "mal-vector"
+          ],
+          "locator": "NCBI scholarly chapter on Klang and Port Swettenham interventions; distribution caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "mal-house",
+            "mal-cholera"
+          ],
+          "locator": "House-plan interpretation and Singapore sanitation evidence lines 94-120, with geography limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "mal-unesco",
+            "mal-railway",
+            "mal-imr"
+          ],
+          "locator": "UNESCO cultural landscape, railway labor history and IMR institution, synthesized with attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "mal-labor",
+            "mal-schoolbooks",
+            "mal-cholera"
+          ],
+          "locator": "Peer-reviewed labor system, education rates and sanitation evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "mal-anglo-dutch",
+            "mal-sabah-history",
+            "mal-kk"
+          ],
+          "locator": "Treaty division plus Sabah community and settlement chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "mal-causeway",
+            "mal-index",
+            "mal-sabah-history"
+          ],
+          "locator": "1920 project status, index handoff and North Borneo chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "mal-later-formation"
+          ],
+          "locator": "National Archives later chronology, with discontinuity explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "mal-index",
+            "mal-hansard",
+            "mal-later-formation"
+          ],
+          "locator": "Repository index checked for exact id malaya: name Malaya, approximately 1650-1920. Separate records exist for Malacca, Malaysian Islamic states, Brunei and Malaysia, so this card does not merge their identities. Colonial Secretary's retrospective parliamentary account checked critically. It dates the Penang settlement to 1786, British acquisition of Melaka to 1824, treaties and advisers in Malay states from the 1870s, the four-state federation to 1896 and the nine Malay states as constitutionally distinct from the Straits Settlements. It also describes the 1957 independence legislation from the British government's viewpoint. National Archives account checked for the 1957 independence proclamation and the agreement and proclamation that formed Malaysia with Sabah, Sarawak and Singapore on 16 September 1963. It is used only to distinguish those later milestones from the atlas's premature 1920 relabeling.",
+          "dateScope": {
+            "year": 1920
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "malaya",
+        "card": "cards/malaya.json",
+        "summary": "A sourced 1650-1920 regional history separating states and colonies, with daily life, labor, Jawi writing, medicine, toilets and map warnings."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7263539483262562,
+            119.04419044190445,
+            6.8995664544424145
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7263539483262562,
+            119.04419044190445,
+            6.8995664544424145
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7263539483262562,
+            119.04419044190445,
+            6.8995664544424145
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903043017857,
+            119.04419044190445,
+            6.898410359128313
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903043017857,
+            119.04419044190445,
+            6.898410359128313
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903043017857,
+            119.04419044190445,
+            6.898410359128313
+          ]
+        },
+        {
+          "file": "world-1878.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1878,
+            "to": 1880,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903348486716,
+            119.04419044190445,
+            6.898410387399402
+          ]
+        },
+        {
+          "file": "world-1880.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1880,
+            "to": 1900,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903041575384,
+            119.04419044190445,
+            6.898410358994809
+          ]
+        },
+        {
+          "file": "world-1900.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1900,
+            "to": 1914,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903041575384,
+            119.04419044190445,
+            6.898410358994809
+          ]
+        },
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "malaya",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            100.14040140401403,
+            0.7256903041575384,
+            119.04419044190445,
+            6.898410358994809
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Targeted only exact id malaya: name Malaya, approximately 1650-1920, kind state, datesApproximate true, and missing a card before integration.",
+    "The exact target has ten observed intervals: 1650-1700, 1700-1715, 1715-1783, 1783-1800, 1800-1815, 1815-1878, 1878-1880, 1880-1900, 1900-1914 and 1914-1920.",
+    "All ten target features repeat the same two-part MultiPolygon with 178 coordinate positions and bounds approximately 100.1404,0.7264 to 119.0442,6.8996. Coordinate transform noise does not create meaningful border change.",
+    "Point tests place Malacca, Johor Bahru, Kuala Lumpur, Penang and Kota Kinabalu inside, but Kota Bharu, Kuala Terengganu, Singapore, Phuket, Pattani, Kuching and Bandar Seri Begawan outside. The feature combines western peninsular and North Borneo fragments while omitting connected territories.",
+    "The geometry cannot represent one historical polity. The card explicitly separates Johor-Riau, Malay sultanates, Straits Settlements, protected and federated states, and British North Borneo company rule.",
+    "Singapore evidence is used only as explicitly labeled regional Straits context because Singapore is outside the target polygon but historically central to treaty, port, print, rail, medical and migration networks.",
+    "Separate indexed records for malacca, malaysian-islamic-states, brunei and malaysia were inspected. No appliesTo field and no additional override are proposed.",
+    "The atlas transition from malaya to malaysia at 1920 is anachronistic. It is treated as a dataset handoff, not a political founding, collapse or independence event; official later milestones are 1957 and 1963."
+  ]
+}

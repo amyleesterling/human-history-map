@@ -1,0 +1,752 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel uyghurs-700 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "uy-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository index checked for exact id uyghurs: name Uyghurs, circa 700-1000, generated from historical basemaps. Separate records for the Göktürks, Western Göktürks, Karluks, Karakhanids and Xixia were audited so their histories are not folded into this card."
+    },
+    {
+      "id": "uy-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage record checked before integration: kind state, dates approximate, card null, review missing, three border files and exactly three observed intervals, 700-800, 800-900 and 900-1000, with no features outside the indexed lifetime."
+    },
+    {
+      "id": "uy-map700",
+      "title": "Human History Map, world-700 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded with topojson-client. The uyghurs feature is a 10-position Polygon, bbox 76.0921609,36.5023162 to 99.3519935,40.6290031. Point tests exclude Ordu-Baliq, Ulaanbaatar, Turfan, Bezeklik, Kucha, Ganzhou, Kashgar, Beshbalik and Bishkek; its bbox overlaps Tang, Göktürk, Karluk, Tibetan and Western Göktürk features."
+    },
+    {
+      "id": "uy-map800",
+      "title": "Human History Map, world-800 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded with topojson-client. The uyghurs feature is a 43-position Polygon, bbox 80.7182072,38.0078311 to 137.2567726,51.3293572. It contains the tested coordinates for Ordu-Baliq and Ulaanbaatar, but not Turfan, Bezeklik, Kucha, Ganzhou, Kashgar, Beshbalik or Bishkek."
+    },
+    {
+      "id": "uy-map900",
+      "title": "Human History Map, world-900 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded with topojson-client. The 23-position uyghurs Polygon still contains Ordu-Baliq and Ulaanbaatar after the 840 destruction of the imperial capital, but excludes tested coordinates for successor centers at Turfan, Ganzhou and Beshbalik. It is therefore a poor picture of the ninth- and tenth-century successor landscape."
+    },
+    {
+      "id": "uy-cambridge",
+      "title": "Colin Mackerras, The Uighurs, Cambridge History of Early Inner Asia",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-early-inner-asia/uighurs/5EDCA8414EB81B737294DA7F21575D72",
+      "note": "Cambridge chapter abstract and preview checked. It dates the empire 744-840, places the capital at Karabalghasun, describes the Uyghur-led coalition against the Eastern Türks in 742 and the qaghan title in 744, and records Uyghur aid to Tang during the An Lushan rebellion."
+    },
+    {
+      "id": "uy-mackerras",
+      "title": "Colin Mackerras, The Uighur Empire according to the T’ang dynastic histories",
+      "url": "https://openresearch-repository.anu.edu.au/items/a4b7f81a-b36a-410d-9e0b-2662f2aab27f",
+      "note": "Australian National University repository record and full translated-source study checked. Mackerras compares the Old and New Tang histories on Uyghur rulers, diplomacy, military aid, marriage alliances and trade. Chinese court histories have their own political viewpoint and are not a census of ordinary Uyghur life."
+    },
+    {
+      "id": "uy-collapse",
+      "title": "Nicola Di Cosmo, Sebastian Wagner and Ulf Büntgen, Climate and Environmental Aspects of the Early Medieval Uighur Transition, Journal of Interdisciplinary History",
+      "url": "https://doi.org/10.1162/JINH_a_01194",
+      "note": "Peer-reviewed 2018 article checked, especially pp. 311-319 and 328-329. It treats the 744-840 polity, stability after 795, horse-silk exchange, the 822/823 treaty, severe winter, animal losses, epidemic, famine, internal conflict and Kyrgyz attack. It explicitly rejects a simple drought-caused-collapse story."
+    },
+    {
+      "id": "uy-coup",
+      "title": "Yutaka Yoshida, Studies of the Karabalgasun Inscription: Edition of the Sogdian Version",
+      "url": "https://toyo-bunko.repo.nii.ac.jp/record/7313/files/MASR11-01.pdf",
+      "note": "Peer-reviewed epigraphic study checked at the discussion of Sogdian lines 16-17. It states that Bögü Qaghan, who had chosen Manichaeism as the state religion, was killed by his cousin in 779 and interprets the text as recording the seventh qaghan’s later revival of the religion."
+    },
+    {
+      "id": "uy-manichaeism",
+      "title": "Werner Sundermann, Manichaeism I: General Survey, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/manicheism-parent/manicheism-1-general-survey/",
+      "note": "Scholarly reference checked. It discusses Bögü Qaghan’s adoption of Manichaeism around 762, its later royal role at Qocho, and Manichaean book art and calligraphy. Court adoption is not treated as proof that every subject followed the religion."
+    },
+    {
+      "id": "uy-mission",
+      "title": "Werner Sundermann, Manichaeism V: Missionary Activity and Technique, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/manicheism-parent/manicheism-iv-missionary-activity-and-technique/",
+      "note": "Scholarly reference checked. It dates Bögü’s conversion to 762/763, follows state protection to 840, and describes Manichaeism in the later Qocho kingdom alongside the growth of Buddhism. This supports changing religious patronage, not a claim of uniform belief."
+    },
+    {
+      "id": "uy-marriage",
+      "title": "Aymira Taşbaş, Diplomatic Marriages Between the Tang and Uyghur Dynasties",
+      "url": "https://dergipark.org.tr/en/pub/jots/article/1590797",
+      "note": "Peer-reviewed Journal of Old Turkic Studies article checked for the 821 diplomatic marriage, its long negotiation and the large escort/delegation. It concerns an exceptional court alliance, so it cannot stand for marriage customs in ordinary households."
+    },
+    {
+      "id": "uy-tang-primary",
+      "title": "Tang Huiyao, chapter 98, Chinese Text Project edition",
+      "url": "https://ctext.org/wiki.pl?chapter=330976&if=gb&remap=gb",
+      "note": "Digitized primary Chinese court compilation checked at the passage naming Princess Taihe and her title as qatun/khatun after marriage. It supplies court terminology and must be read as a transmitted official record, not an eyewitness account of family life."
+    },
+    {
+      "id": "uy-east-turkestan",
+      "title": "Victor Mair and Prods Oktor Skjærvø, Chinese Turkestan II: In Pre-Islamic Times, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/chinese-turkestan-ii/",
+      "note": "Scholarly regional history checked for migrations after 840, the Uyghur center at Qocho and the Ganzhou polity, and tenth-century documents. It distinguishes successor states and communities from the destroyed Mongolian khaganate."
+    },
+    {
+      "id": "uy-uw",
+      "title": "Daniel C. Waugh, The Uighurs, University of Washington Silk Road Seattle",
+      "url": "https://depts.washington.edu/silkroad/exhibit/uighurs/essay.html",
+      "note": "University teaching essay checked for the 744-840 empire, Ordu-Baliq/Karabalghasun, Tang relations, the later Qocho kingdom, plural religions, mural art and the script’s legacy. Used as an accessible synthesis alongside specialist sources."
+    },
+    {
+      "id": "uy-karabalgasun",
+      "title": "Toshio Hayashi, Karabalgasun I: The Site, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/karabalgasun-the-site/",
+      "note": "Archaeological reference checked. It explains Ordu Balïq as royal camp/town, locates the capital in the Orkhon valley, and describes its walled fortress, broad urban zone, markets, agriculture and Uyghur, Chinese and Sogdian residents. Medieval travel reports are not precise population counts."
+    },
+    {
+      "id": "uy-dai-city",
+      "title": "Burkart Dähne, Karabalgasun: Stadt der Nomaden, German Archaeological Institute",
+      "url": "https://publications.dainst.org/books/dai/catalog/book/2054",
+      "note": "DAI archaeological monograph record and English summary pp. 157-163 checked. Survey and excavation reconstruct an unusually large urban center and relationships among mobile pastoralists, settlers, craftspeople and foreign communities; the author warns against a simple nomad-versus-city opposition."
+    },
+    {
+      "id": "uy-dai-citadel",
+      "title": "Christina Franken and others, Excavations in the Citadel of Karabalgasun, German Archaeological Institute",
+      "url": "https://publications.dainst.org/journals/efb/2158",
+      "note": "DAI excavation report checked. The eighth- to ninth-century citadel stood on an approximately ten-meter platform and included gates, a paved court, smaller buildings, a tower-like structure and a well more than ten meters deep; finds include jade texts, carved stone, gilded objects and a bronze bell."
+    },
+    {
+      "id": "uy-well",
+      "title": "Christina Franken and others, Water for the Khan: Unveiling the Hidden Well of Karabalgasun",
+      "url": "https://journal.num.edu.mn/MJAAE/article/view/11040",
+      "note": "Peer-reviewed 2026 archaeological study checked. The citadel well reached about thirteen meters, with a stone-lined shaft and wooden casing; ceramic water vessels, jade decree fragments and a gyrfalcon skeleton appeared in its fill. Deposit context does not mean every object was used together."
+    },
+    {
+      "id": "uy-animals",
+      "title": "Lea Kohlhage and Cheryl A. Makarewicz, Pastoral Provisioning of Uyghur Elites in an Urban Setting",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352226724000242",
+      "note": "Peer-reviewed 2024 zooarchaeological and isotope study checked. Bones from elite residential contexts show meat and milk economies, tethered and distant-grazed animals, household self-provisioning and exchange. The sample represents excavated elite contexts, not every meal in the empire."
+    },
+    {
+      "id": "uy-orkhon",
+      "title": "UNESCO World Heritage nomination, Orkhon Valley Cultural Landscape",
+      "url": "https://whc.unesco.org/uploads/nominations/1081rev.pdf",
+      "note": "UNESCO nomination dossier checked, especially descriptions of Khar Balgas and the Orkhon landscape. It connects abundant water and pasture with mobile pastoral life and explains cities, religious sites and administrative centers as fixed points within a mobile society."
+    },
+    {
+      "id": "uy-corridor",
+      "title": "UNESCO World Heritage Centre, Silk Roads: Chang’an-Tianshan Corridor",
+      "url": "https://whc.unesco.org/en/list/1442",
+      "note": "UNESCO property description checked. It identifies karez underground channels serving Qocho and deep wells at Yar, and relates water management to towns and agriculture. It does not document household latrines or prove universal access to clean water."
+    },
+    {
+      "id": "uy-bm",
+      "title": "British Museum, Silk Roads exhibition large-print guide",
+      "url": "https://www.britishmuseum.org/exhibitions/silk-roads/large-print-guide",
+      "note": "Museum guide checked at the Qocho objects: a tenth- to eleventh-century funerary banner commissioned by Kara Totok’s son, ninth- to tenth-century Manichaean clerics in white garments, and a teaching scene from Karashahr. Object dates and elite/religious contexts limit broader conclusions."
+    },
+    {
+      "id": "uy-turfan",
+      "title": "Berlin-Brandenburg Academy of Sciences, Turfan Studies project brochure",
+      "url": "https://turfan.bbaw.de/projekt-en/turfanbroschuere@set_language=en.html",
+      "note": "Academic project overview checked. The Turfan corpus includes dictionaries, grammatical lists, translated religious works, medical and astronomical texts, tax bills, corvée records, travel passes, legal notices and property documents. Much of the corpus is later than 1000, so only securely overlapping objects are used as period evidence."
+    },
+    {
+      "id": "uy-idp",
+      "title": "International Dunhuang Programme, IDP collections in Germany",
+      "url": "https://idp.bl.uk/blog/idp-collections-in-germany/",
+      "note": "International manuscript-project overview checked. It describes roughly six thousand Uighur fragments in Berlin and the expeditions and divisions that brought them there. The collection preserves many voices but also has a colonial excavation and dispersal history that must be stated."
+    },
+    {
+      "id": "uy-medicine",
+      "title": "Uğur Uzunkaya, A Few Fragments of Old Uyghur Medical Texts",
+      "url": "https://dergipark.org.tr/tr/pub/jss/article/1396985",
+      "note": "Peer-reviewed 2024 study checked. Four fragment groups name plants, animal and mineral substances, ailments and attempted treatments and reflect Syriac, Indian, Chinese and local traditions. Their dating is broader than the atlas window and their survival does not prove effectiveness or a public clinic system."
+    },
+    {
+      "id": "uy-crops",
+      "title": "Yi-Feng Yao and others, Archaeobotanical Evidence Reveals Human-Environment Interactions at Medieval Turpan",
+      "url": "https://agris.fao.org/search/en/providers/122535/records/65e0137490674e46e6547a2b",
+      "note": "Indexed peer-reviewed 2020 archaeobotanical study checked. Ninth- to thirteenth-century Turpan remains include grapes, millet, wheat and barley and document intensive oasis agriculture. Because the range extends beyond 1000, it supports foods and crops, not a single tenth-century menu."
+    },
+    {
+      "id": "uy-inscription",
+      "title": "Yutaka Yoshida, Karabalgasun II: The Inscription, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/karabalgasun-the-inscription/",
+      "note": "Scholarly epigraphic reference checked. The early ninth-century monument used Old Turkic runiform, Sogdian and Chinese texts and commemorated a qaghan’s political, military and religious program. Damage leaves major gaps, so it is evidence of multilingual display rather than a fully recoverable proclamation."
+    },
+    {
+      "id": "uy-unicode-turkic",
+      "title": "Unicode Standard, chapter 14: Old Turkic",
+      "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-14/",
+      "note": "Unicode character-standard chapter checked. It describes the early medieval Old Turkic runiform tradition, Orkhon inscriptions, right-to-left horizontal direction and later replacement by the Old Uyghur script. It supports encoding and reading direction, not linguistic translation by itself."
+    },
+    {
+      "id": "uy-suji",
+      "title": "Erhan Aydın, A New Suggestion on the First Line of the Suci Inscription",
+      "url": "https://www.acarindex.com/en/turkish-studies-elektronik/suci-yaziti-nin-ilk-satiriyla-ilgili-yeni-bir-oneri-141159",
+      "note": "Peer-reviewed epigraphic article checked for the Suci inscription’s opening and its Uyghur-period context. The Old Turkic runiform ethnonym shown in the card is only a short name sample, not a complete conversational sentence."
+    },
+    {
+      "id": "uy-old-uyghur",
+      "title": "Unicode proposal for encoding Old Uyghur, L2/19-405",
+      "url": "https://www.unicode.org/L2/L2019/19405-old-uyghur.pdf",
+      "note": "Unicode technical proposal checked for the Old Uyghur script’s development from cursive Sogdian during the eighth to ninth centuries, its vertical manuscript tradition and its relationship to later Mongolian writing. It distinguishes this script from Old Turkic runiform."
+    },
+    {
+      "id": "uy-unesco-history",
+      "title": "History of Civilizations of Central Asia, volume IV, part one, UNESCO",
+      "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ee5bd446-a11d-4a1a-b6ac-64b945c80037?_=111664engo.pdf",
+      "note": "UNESCO scholarly history checked at the Uighur chapter, pp. 191-206. It surveys the khaganate, Tang relations, Manichaeism, 840 collapse and successor polities. It is a broad synthesis; specific archaeological claims are sourced to excavation reports."
+    }
+  ],
+  "entities": [
+    {
+      "id": "uyghurs",
+      "card": "data/cards/uyghurs.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "uy-index",
+            "uy-unesco-history"
+          ],
+          "locator": "Repository index checked for exact id uyghurs: name Uyghurs, circa 700-1000, generated from historical basemaps. Separate records for the Göktürks, Western Göktürks, Karluks, Karakhanids and Xixia were audited so their histories are not folded into this card. UNESCO scholarly history checked at the Uighur chapter, pp. 191-206. It surveys the khaganate, Tang relations, Manichaeism, 840 collapse and successor polities. It is a broad synthesis; specific archaeological claims are sourced to excavation reports.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "uy-uw",
+            "uy-map700"
+          ],
+          "locator": "University teaching essay checked for the 744-840 empire, Ordu-Baliq/Karabalghasun, Tang relations, the later Qocho kingdom, plural religions, mural art and the script’s legacy. Used as an accessible synthesis alongside specialist sources. Decoded with topojson-client. The uyghurs feature is a 10-position Polygon, bbox 76.0921609,36.5023162 to 99.3519935,40.6290031. Point tests exclude Ordu-Baliq, Ulaanbaatar, Turfan, Bezeklik, Kucha, Ganzhou, Kashgar, Beshbalik and Bishkek; its bbox overlaps Tang, Göktürk, Karluk, Tibetan and Western Göktürk features.",
+          "dateScope": {
+            "from": 700,
+            "to": 742
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "uy-cambridge"
+          ],
+          "locator": "Cambridge chapter abstract and preview checked. It dates the empire 744-840, places the capital at Karabalghasun, describes the Uyghur-led coalition against the Eastern Türks in 742 and the qaghan title in 744, and records Uyghur aid to Tang during the An Lushan rebellion.",
+          "dateScope": {
+            "from": 742,
+            "to": 744
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "uy-cambridge",
+            "uy-karabalgasun"
+          ],
+          "locator": "Cambridge chapter abstract and preview checked. It dates the empire 744-840, places the capital at Karabalghasun, describes the Uyghur-led coalition against the Eastern Türks in 742 and the qaghan title in 744, and records Uyghur aid to Tang during the An Lushan rebellion. Archaeological reference checked. It explains Ordu Balïq as royal camp/town, locates the capital in the Orkhon valley, and describes its walled fortress, broad urban zone, markets, agriculture and Uyghur, Chinese and Sogdian residents. Medieval travel reports are not precise population counts.",
+          "dateScope": {
+            "from": 744,
+            "to": 755
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "uy-mackerras",
+            "uy-cambridge"
+          ],
+          "locator": "Australian National University repository record and full translated-source study checked. Mackerras compares the Old and New Tang histories on Uyghur rulers, diplomacy, military aid, marriage alliances and trade. Chinese court histories have their own political viewpoint and are not a census of ordinary Uyghur life. Cambridge chapter abstract and preview checked. It dates the empire 744-840, places the capital at Karabalghasun, describes the Uyghur-led coalition against the Eastern Türks in 742 and the qaghan title in 744, and records Uyghur aid to Tang during the An Lushan rebellion.",
+          "dateScope": {
+            "from": 755,
+            "to": 763
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "uy-mission",
+            "uy-manichaeism"
+          ],
+          "locator": "Scholarly reference checked. It dates Bögü’s conversion to 762/763, follows state protection to 840, and describes Manichaeism in the later Qocho kingdom alongside the growth of Buddhism. This supports changing religious patronage, not a claim of uniform belief. Scholarly reference checked. It discusses Bögü Qaghan’s adoption of Manichaeism around 762, its later royal role at Qocho, and Manichaean book art and calligraphy. Court adoption is not treated as proof that every subject followed the religion.",
+          "dateScope": {
+            "from": 763,
+            "to": 779
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "uy-coup",
+            "uy-mackerras"
+          ],
+          "locator": "Peer-reviewed epigraphic study checked at the discussion of Sogdian lines 16-17. It states that Bögü Qaghan, who had chosen Manichaeism as the state religion, was killed by his cousin in 779 and interprets the text as recording the seventh qaghan’s later revival of the religion. Australian National University repository record and full translated-source study checked. Mackerras compares the Old and New Tang histories on Uyghur rulers, diplomacy, military aid, marriage alliances and trade. Chinese court histories have their own political viewpoint and are not a census of ordinary Uyghur life.",
+          "dateScope": {
+            "from": 779,
+            "to": 795
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "uy-collapse",
+            "uy-inscription"
+          ],
+          "locator": "Peer-reviewed 2018 article checked, especially pp. 311-319 and 328-329. It treats the 744-840 polity, stability after 795, horse-silk exchange, the 822/823 treaty, severe winter, animal losses, epidemic, famine, internal conflict and Kyrgyz attack. It explicitly rejects a simple drought-caused-collapse story. Scholarly epigraphic reference checked. The early ninth-century monument used Old Turkic runiform, Sogdian and Chinese texts and commemorated a qaghan’s political, military and religious program. Damage leaves major gaps, so it is evidence of multilingual display rather than a fully recoverable proclamation.",
+          "dateScope": {
+            "from": 795,
+            "to": 821
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "uy-marriage",
+            "uy-collapse"
+          ],
+          "locator": "Peer-reviewed Journal of Old Turkic Studies article checked for the 821 diplomatic marriage, its long negotiation and the large escort/delegation. It concerns an exceptional court alliance, so it cannot stand for marriage customs in ordinary households. Peer-reviewed 2018 article checked, especially pp. 311-319 and 328-329. It treats the 744-840 polity, stability after 795, horse-silk exchange, the 822/823 treaty, severe winter, animal losses, epidemic, famine, internal conflict and Kyrgyz attack. It explicitly rejects a simple drought-caused-collapse story.",
+          "dateScope": {
+            "from": 821,
+            "to": 840
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "uy-uw",
+            "uy-map900"
+          ],
+          "locator": "University teaching essay checked for the 744-840 empire, Ordu-Baliq/Karabalghasun, Tang relations, the later Qocho kingdom, plural religions, mural art and the script’s legacy. Used as an accessible synthesis alongside specialist sources. Decoded with topojson-client. The 23-position uyghurs Polygon still contains Ordu-Baliq and Ulaanbaatar after the 840 destruction of the imperial capital, but excludes tested coordinates for successor centers at Turfan, Ganzhou and Beshbalik. It is therefore a poor picture of the ninth- and tenth-century successor landscape.",
+          "dateScope": {
+            "from": 840,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "uy-index",
+            "uy-cambridge"
+          ],
+          "locator": "Atlas index exact record; Cambridge chapter’s conventional 744-840 span.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "uy-map700"
+          ],
+          "locator": "Decoded world-700 feature: bbox and nine named point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "uy-map800",
+            "uy-orkhon"
+          ],
+          "locator": "Decoded world-800 point tests; UNESCO dossier on mobile landscape and fixed centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "uy-map900",
+            "uy-east-turkestan"
+          ],
+          "locator": "Decoded world-900 point tests; Iranica pre-Islamic regional history on successor centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "uy-index",
+            "uy-coverage"
+          ],
+          "locator": "Index related-record audit and coverage record; no appliesTo proposed.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "uy-cambridge"
+          ],
+          "locator": "Cambridge chapter: coalition in 742 and qaghan title in 744.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "uy-karabalgasun",
+            "uy-dai-city"
+          ],
+          "locator": "Iranica site etymology and layout; DAI monograph English summary pp. 157-163.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "uy-mackerras"
+          ],
+          "locator": "ANU translation and study of Tang dynastic histories, rebellion and alliance passages.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "uy-mission",
+            "uy-coup"
+          ],
+          "locator": "Iranica missionary chronology; Yoshida’s discussion of Sogdian lines 16-17 and the 779 coup.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "uy-mackerras"
+          ],
+          "locator": "Mackerras translation and discussion of Tang histories on ninth-century horse-silk exchanges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "uy-dai-city",
+            "uy-karabalgasun",
+            "uy-animals"
+          ],
+          "locator": "DAI urban survey; Iranica site entry; Archaeological Research in Asia description of workshop, household and market areas.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "uy-dai-citadel"
+          ],
+          "locator": "DAI e-Forschungsberichte citadel plan, architecture and find inventory.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "uy-well"
+          ],
+          "locator": "Mongolian Journal study: measurements, construction and excavated fill.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "uy-animals"
+          ],
+          "locator": "Archaeological Research in Asia: zooarchaeological contexts and isotope results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "uy-orkhon",
+            "uy-karabalgasun"
+          ],
+          "locator": "UNESCO nomination landscape analysis; Iranica markets and agriculture discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "uy-marriage",
+            "uy-tang-primary"
+          ],
+          "locator": "Marriage article on the 821 mission; Tang Huiyao passage naming Princess Taihe and her title.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "uy-bm"
+          ],
+          "locator": "British Museum large-print guide, Kara Totok funerary banner label and date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "uy-bm",
+            "uy-turfan"
+          ],
+          "locator": "British Museum Karashahr teaching object; BBAW list of pedagogical text genres.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "uy-crops",
+            "uy-animals"
+          ],
+          "locator": "Archaeobotanical study date range and crops; Karabalgasun animal-economy findings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "uy-bm",
+            "uy-turfan"
+          ],
+          "locator": "British Museum Qocho garment/object labels; BBAW daily-life and administrative document categories, with corpus date limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "uy-inscription"
+          ],
+          "locator": "Iranica inscription entry: languages, layout, patron and damaged state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "uy-suji",
+            "uy-unicode-turkic"
+          ],
+          "locator": "Ölmez on Suji line one and spelling; Unicode Old Turkic directionality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "uy-old-uyghur"
+          ],
+          "locator": "Unicode L2/19-405, script history, orientation and adaptation for Mongolian.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "uy-manichaeism",
+            "uy-mission"
+          ],
+          "locator": "Iranica general survey on book arts; missionary article on Qocho religious change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "uy-idp"
+          ],
+          "locator": "IDP collection history, fragment estimate, genres and dispersal across collections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "uy-medicine"
+          ],
+          "locator": "Journal of Social Sciences study of four Berlin medical fragment groups and their dating limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "uy-medicine",
+            "uy-turfan"
+          ],
+          "locator": "Medical article’s text categories; BBAW corpus overview. Inference explicitly bounded by missing institutional evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "uy-well",
+            "uy-dai-citadel"
+          ],
+          "locator": "Well construction study and citadel context in DAI report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "uy-corridor"
+          ],
+          "locator": "UNESCO corridor component descriptions for Qocho karez and Yar wells.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "uy-well",
+            "uy-corridor"
+          ],
+          "locator": "Explicit negative-evidence limit: neither cited site report supplies a household sanitation census.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "uy-collapse"
+          ],
+          "locator": "Journal of Interdisciplinary History, crisis narrative and anti-determinist conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "uy-east-turkestan"
+          ],
+          "locator": "Iranica migration and successor account after the 840 imperial collapse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "uy-uw"
+          ],
+          "locator": "University of Washington synthesis on Qocho, Ganzhou and changed successor settings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "uy-uw",
+            "uy-old-uyghur"
+          ],
+          "locator": "University of Washington art/legacy overview; Unicode script genealogy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "uy-index",
+            "uy-old-uyghur"
+          ],
+          "locator": "Atlas endpoint and Unicode script history as a documented strand of continuity beyond 1000.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "uy-collapse",
+            "uy-east-turkestan",
+            "uy-map900"
+          ],
+          "locator": "Peer-reviewed 2018 article checked, especially pp. 311-319 and 328-329. It treats the 744-840 polity, stability after 795, horse-silk exchange, the 822/823 treaty, severe winter, animal losses, epidemic, famine, internal conflict and Kyrgyz attack. It explicitly rejects a simple drought-caused-collapse story. Scholarly regional history checked for migrations after 840, the Uyghur center at Qocho and the Ganzhou polity, and tenth-century documents. It distinguishes successor states and communities from the destroyed Mongolian khaganate. Decoded with topojson-client. The 23-position uyghurs Polygon still contains Ordu-Baliq and Ulaanbaatar after the 840 destruction of the imperial capital, but excludes tested coordinates for successor centers at Turfan, Ganzhou and Beshbalik. It is therefore a poor picture of the ninth- and tenth-century successor landscape.",
+          "dateScope": {
+            "year": 840
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "uyghurs",
+        "card": "cards/uyghurs.json",
+        "summary": "Uyghur history from pre-imperial coalitions through the 744-840 Orkhon khaganate and its Qocho and Ganzhou successors, with map corrections, daily life, writing, medicine, water and cultural continuity."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "uyghurs",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            76.0921609216092,
+            36.502316197031135,
+            99.3519935199352,
+            40.62900313460058
+          ]
+        },
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "uyghurs",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            80.71820718207181,
+            38.00783113003385,
+            137.2567725677257,
+            51.32935720387613
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "uyghurs",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            80.71820718207181,
+            38.00783113003385,
+            117.51057510575106,
+            51.32935720387613
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Targeted only exact id uyghurs: name Uyghurs, circa 700-1000, kind state, datesApproximate true, and missing a card before integration.",
+    "The exact target intervals are 700-800, 800-900 and 900-1000. They use three unique Polygon footprints with respectively 10, 43 and 23 coordinate positions.",
+    "The world-700 target Polygon excludes every tested historical center, including Ordu-Baliq, Turfan, Ganzhou and Beshbalik. Its bbox overlaps the Tang, Göktürk, Karluk, Tibetan Empire and Western Göktürk features. It cannot safely represent Uyghur sovereignty or the later imperial core.",
+    "The world-800 target Polygon contains tested Ordu-Baliq and Ulaanbaatar coordinates but excludes Turfan, Bezeklik, Kucha, Ganzhou, Kashgar, Beshbalik and Bishkek. Its far-eastern reach is not treated as verified administration.",
+    "The world-900 target Polygon still contains tested Ordu-Baliq and Ulaanbaatar coordinates after the capital was destroyed in 840, while excluding successor centers at Turfan, Ganzhou and Beshbalik. It is not used as evidence for a surviving Mongolian khaganate.",
+    "The 744-840 Uyghur Khaganate is distinguished from pre-744 Uyghur coalitions and post-840 successor communities and states at Qocho/Turfan and Ganzhou. The atlas lifetime is broader than the imperial lifetime.",
+    "Separate indexed records for Göktürk, Western Göktürk, Karluks, Kimek-Kipchak, Karakhanids and Xixia were inspected. This bundle neither merges them with uyghurs nor claims their cards apply to this target.",
+    "No appliesTo field and no additional override are included because exactly one indexed id is being researched. The atlas’s 1000 endpoint is treated as a data cutoff, not an extinction date."
+  ]
+}
