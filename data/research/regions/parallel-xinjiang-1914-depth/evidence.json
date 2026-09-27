@@ -1,0 +1,906 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel xinjiang-1914 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "xj-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry: xinjiang, label Xinjiang, circa 1914 to 1960. This is an imported map identity, not proof of one continuous sovereign government."
+    },
+    {
+      "id": "xj-map-1900",
+      "title": "Human History Map, world-1900 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1900.json",
+      "note": "Decoded predecessor snapshot: target cities fall inside qing-dynasty. The label is an atlas simplification and the Qing itself fell in 1911."
+    },
+    {
+      "id": "xj-map-1914",
+      "title": "Human History Map, world-1914 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Decoded exact target feature: one Polygon, one ring, 197 positions, bbox about 73.6765 to 96.3388 east and 34.2001 to 49.2326 north."
+    },
+    {
+      "id": "xj-map-1930",
+      "title": "Human History Map, world-1930 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Decoded exact target feature for 1930 to 1938. Its coordinate JSON equals the 1920 target geometry and contains all eight audited regional city points."
+    },
+    {
+      "id": "xj-map-1945",
+      "title": "Human History Map, world-1945 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Decoded exact target feature for 1945 to 1960. The outline remains a single 197-position Polygon while political authority inside it was divided and then transformed."
+    },
+    {
+      "id": "xj-map-1960",
+      "title": "Human History Map, world-1960 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json",
+      "note": "At the 1960 seam, target cities move to the broad china atlas id. Xinjiang did not disappear; the map library changed identifiers."
+    },
+    {
+      "id": "xj-overview",
+      "title": "Justin M. Jacobs, Empire Besieged: The Preservation of Chinese Rule in Xinjiang, 1884 to 1971",
+      "url": "https://escholarship.org/uc/item/2wz654cn",
+      "note": "UC dissertation abstract and full text: provincial status, post-1911 weak central control, a small Han ruling class, foreign pressure, 1949 incorporation and continuity of Chinese sovereignty as an analytical question."
+    },
+    {
+      "id": "xj-jacobs-ch1",
+      "title": "Imperial Repertoires in Republican Xinjiang",
+      "url": "https://www.jstor.org/stable/j.ctvct01xm.6",
+      "note": "Open-access University of Washington Press chapter: Qing-trained officials, Yang Zengxin, indirect administration, differentiated rule and Xinjiang’s distance from Beijing during the early Republic."
+    },
+    {
+      "id": "xj-jacobs-ch2",
+      "title": "Collapse of Empires and the Nationalist Threat",
+      "url": "https://www.jstor.org/stable/j.ctvct01xm.7",
+      "note": "Open-access chapter: cross-border revolution, Soviet influence, local national movements, Yang’s political balancing and the transition after his 1928 assassination."
+    },
+    {
+      "id": "xj-jacobs-ch3",
+      "title": "Rise of the Ethnopopulists",
+      "url": "https://www.jstor.org/stable/j.ctvct01xm.8",
+      "note": "Open-access chapter: Jin Shuren, rebellion, Sheng Shicai, nationality policy, Soviet intervention, political coalitions and coercion in the 1930s."
+    },
+    {
+      "id": "xj-jacobs-ch4",
+      "title": "Raising the Stakes in Nationalist Xinjiang",
+      "url": "https://www.jstor.org/stable/j.ctvct01xm.9",
+      "note": "Open-access chapter: Sheng’s purges and geopolitical pivot, Nationalist re-entry, competing programs for local representation and the Ili crisis."
+    },
+    {
+      "id": "xj-jacobs-ch5",
+      "title": "The Birth Pangs of Chinese Affirmative Action",
+      "url": "https://uw.manifoldapp.org/read/92033abb-fc2e-4a70-8d93-113365cb4a02/section/44417c95-2b91-4144-9eeb-2a332a3ffc0b",
+      "note": "Open-access University of Washington Press chapter: 1949 transition, 1955 autonomous-region structure, nationality-linked subdivisions and the Production and Construction Corps."
+    },
+    {
+      "id": "xj-jacobs-conclusion",
+      "title": "Xinjiang and the Modern Chinese State, conclusion",
+      "url": "https://www.jstor.org/stable/j.ctvct01xm.15",
+      "note": "Open-access University of Washington Press conclusion: continuity and transformation across imperial, Republican and Communist frontier administration, including the limits of treating political seams as social endings."
+    },
+    {
+      "id": "xj-brophy-reform",
+      "title": "Uyghur Nation, chapter 3: Imperial and Islamic Reform between Turkistan and Turkey",
+      "url": "https://www.jstor.org/stable/j.ctvjghx68.9",
+      "note": "Open-access Harvard University Press chapter: Muslim reform networks, cross-border commerce, Jadid schooling and intellectual connections joining Xinjiang to Russian and Ottoman worlds."
+    },
+    {
+      "id": "xj-brophy-battle",
+      "title": "Uyghur Nation, chapter 8: The Battle for Xinjiang and the Uyghur Nation",
+      "url": "https://www.jstor.org/stable/j.ctvjghx68.14",
+      "note": "Open-access chapter: Yang’s autonomy from Nanjing, political movements in the 1920s and 1930s, conflict and the expanding use of Uyghur as a national name."
+    },
+    {
+      "id": "xj-wang",
+      "title": "Wang Ke, The East Turkestan Independence Movement, sample chapter",
+      "url": "https://cup.cuhk.edu.hk/image/data/preview/9789629967697_SampleChapter.pdf",
+      "note": "Chinese University of Hong Kong Press sample: 1933 to 34 movement, terminology, the Istqlāl newspaper, political factions and first-hand Chinese and Uyghur evidence with explicit debates over names."
+    },
+    {
+      "id": "xj-frus-1944",
+      "title": "U.S. Consul at Tihwa report on the Ining uprising, 10 December 1944",
+      "url": "https://history.state.gov/historicaldocuments/frus1944v06/d604",
+      "note": "Primary diplomatic report: uprising began 7 November, multiethnic participants, fighting around Ining and the consul’s cautious distinction between observed events, Chinese allegations and inference about Soviet help."
+    },
+    {
+      "id": "xj-frus-1947",
+      "title": "U.S. Consulate analysis of the Ili situation, 1947",
+      "url": "https://history.state.gov/historicaldocuments/frus1947v07/d489",
+      "note": "Primary diplomatic analysis: Ili conflict, Soviet material and advice, Chinese administration and the author’s admitted dependence on partly unverified or partisan reports."
+    },
+    {
+      "id": "xj-frus-1949",
+      "title": "U.S. Consulate report from Tihwa, June 1949",
+      "url": "https://history.state.gov/historicaldocuments/frus1949v09/d1017",
+      "note": "Primary report: trade negotiations, Nationalist preparations, roads and supply stations, strained relations with Ili representatives and uncertainty before the Communist takeover."
+    },
+    {
+      "id": "xj-mao-1949",
+      "title": "Mao Zedong, Telegram to Xinjiang Political and Military Authorities, 28 September 1949",
+      "url": "https://marxists.architexturez.net/reference/archive/mao/selected-works/volume-7/mswv7_002.htm",
+      "note": "Contemporary political text calling for order, unity and cooperation with the entering PLA. Used as evidence of official language, not as a neutral description of events."
+    },
+    {
+      "id": "xj-etrade",
+      "title": "Eurasian exchanges: pastoralists, markets and cross-border trade in the early twentieth century",
+      "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/eurasian-exchanges-central-asian-nomadic-pastoralists-mountain-ecosystems-and-market-economies-in-the-early-twentieth-century/E8AB807083BA94E9873E1FE9DC0F5CB2",
+      "note": "Journal of Global History article: tea, furs, scarves, Kashgar rugs and machinery at regional fairs; routes through Khorgos linked Ili, Kashgar, Aksu and Ghulja to wider markets."
+    },
+    {
+      "id": "xj-extraction",
+      "title": "Nationalism or Geopolitics: The Expansion of the Ili Rebellion, 1944 to 46",
+      "url": "https://www.cambridge.org/core/journals/social-science-history/article/nationalism-or-geopolitics-the-rise-of-guerillas-and-patterns-of-military-conflict-during-the-expansion-of-the-ili-rebellion-194446/A44019B5514041E39CF32D6675504B32",
+      "note": "Social Science History article: state purchase monopolies, sheep, furs, wool and livestock extraction, the 1942 trade crisis and pressures on nomadic communities that fed revolt."
+    },
+    {
+      "id": "xj-karez",
+      "title": "Karez water heritage and Republican-era repair in Xinjiang",
+      "url": "https://history.xju.edu.cn/__local/F/E3/4D/A823BDC4FBD12A7509BE23AAA2A_B4864890_1CBB9.pdf",
+      "note": "Xinjiang University history PDF: early Republican water reports, Yang Zengxin’s repair proposal, Turpan maintenance, 1,084 working karez in 1949 and 1,237 in 1957."
+    },
+    {
+      "id": "xj-jarring-memoir",
+      "title": "Gunnar Jarring, Return to Kashgar: Central Asian Memoirs in the Present",
+      "url": "https://pahar.in/pahar/Books%20and%20Articles/Central%20Asia/1986%20Return%20to%20Kashgar--Central%20Asian%20Memoirs%20in%20the%20Present%20by%20Jarring%20s.pdf",
+      "note": "Memoir of 1929 to 30 fieldwork: covered craft bazaars, bargaining, food stalls, pilaf, grilled meat, clothing and carpets. Valuable eyewitness detail, explicitly filtered through a foreign visitor’s memory."
+    },
+    {
+      "id": "xj-divorce",
+      "title": "Aysima Mirsultan, Divorce settlement among the Uyghurs during the Republican era in Xinjiang",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/02634937.2020.1796592",
+      "note": "Central Asian Survey article based on Khotan and Kashgar legal texts: Islamic-law divorce disputes, child custody, inheritance, village elders, fathers-in-law and women’s positions within varied households."
+    },
+    {
+      "id": "xj-waqf",
+      "title": "University of Hamburg CSMC, a Kashgar waqf document and everyday life",
+      "url": "https://www.csmc.uni-hamburg.de/publications/aom/mom/65-en.html",
+      "note": "Manuscript research note: a Chaghatay pious-endowment scroll, record forms and the archive’s limits for studying charitable, religious and economic life around Kashgar."
+    },
+    {
+      "id": "xj-meshrep",
+      "title": "UNESCO Intangible Cultural Heritage, Meshrep",
+      "url": "https://ich.unesco.org/en/USL/meshrep-00304",
+      "note": "Modern safeguarding description of Uyghur meshrep as music, dance, drama, oral literature, foods and games, plus moral mediation and informal learning. Used as continuity evidence, not a 1930 census."
+    },
+    {
+      "id": "xj-jarring-prints",
+      "title": "The Gunnar Jarring Central Eurasia Collection, Prints from the Swedish Mission in Kashgar",
+      "url": "https://www.jarringlibrary.lingfil.uu.se/kashgar/",
+      "note": "Catalog of 1892 to 1938 Eastern Turki publications: 1912 press, primers, geography, science, spelling, silk cultivation and history texts, hospitals, schools and explicit mission provenance."
+    },
+    {
+      "id": "xj-istiqlal",
+      "title": "The Gunnar Jarring Collection, 1933 Istïqlāl periodical record",
+      "url": "https://www.jarringlibrary.lingfil.uu.se/kashgar/1933-1/",
+      "note": "Catalog and digitized 74-page Kashgar publication: Eastern Turki language, Istïqlāl title, 1933 date, Mission Press publisher and periodical description and slogan."
+    },
+    {
+      "id": "xj-print-power",
+      "title": "Print and Power in the Communist Borderlands: The Rise of Uyghur National Culture",
+      "url": "https://dash.harvard.edu/bitstreams/85b1ff33-8ab6-4dd9-9c51-7cdcadd22018/download",
+      "note": "Harvard dissertation: southern Xinjiang print culture, single-text teaching, conflicts between secular and religious subjects, provincial publishing and post-1949 language institutions."
+    },
+    {
+      "id": "xj-education-prc",
+      "title": "Access to formal education in Xinjiang, 1949 to 1987",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10018501/",
+      "note": "UCL doctoral thesis: early PRC expansion, higher education, declared equality, unequal access, unified curriculum, language reform and political education across ethnic groups."
+    },
+    {
+      "id": "xj-script",
+      "title": "Farewell, My Uyghur Language: script changes and linguistic memory",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/farewell-my-uyghur-language-linguistic-anxiety-and-resistance-in-uyghur-poetry-and-songs-1990s2010s/31A4D6A7D9BF98130E27E9360925F98A",
+      "note": "Modern Asian Studies historical discussion: Arabic-derived writing before the mid-1950s, Cyrillic in the later 1950s and Latin-script reforms around the 1960 seam, with discontinuity for readers."
+    },
+    {
+      "id": "xj-medical-manuscripts",
+      "title": "A note on Eastern Turki medical manuscripts in the Gunnar Jarring Collection",
+      "url": "https://uu.diva-portal.org/smash/get/diva2%3A1616919/FULLTEXT01.pdf",
+      "note": "Uppsala scholarly study of medical manuscripts collected in 1929 to 30 and from missionaries: Eastern Turki remedies, humoral learning and the partial archive of local medical knowledge."
+    },
+    {
+      "id": "xj-mission-medicine",
+      "title": "Mission and Revolution in Eastern Turkestan, part 2",
+      "url": "https://equmeniakyrkan.se/wp-content/uploads/2019/12/mission-and-revolution-part-2-hultvall-eng.pdf",
+      "note": "Mission history using institutional records and memoirs: Kashgar hospital, dentistry, doctors and nurses. Useful for facilities and personnel, but written from a missionary perspective."
+    },
+    {
+      "id": "xj-soviet-medicine",
+      "title": "Everyday Life and Sanitary Culture of Xinjiang as Perceived by Soviet Medical Professionals, 1920 to 1940",
+      "url": "https://www.researchgate.net/publication/403540627_Everyday_Life_and_Sanitary_Culture_of_the_Peoples_of_Xinjiang_as_Perceived_by_Soviet_Medical_Professionals_1920-1940",
+      "note": "CC BY Quaestio Rossica article, DOI 10.15826/qr.2026.1.1046: Soviet medical reports, epidemic work, adaptation across communities and doctors’ political and cultural biases."
+    },
+    {
+      "id": "xj-health-1952",
+      "title": "People’s China, 1952 report on medical teams in minority areas",
+      "url": "https://www.massline.org/PeoplesChina/PC1952/PC1952-20-OCR-sm.pdf",
+      "note": "Contemporary PRC state magazine reporting free-treatment teams, hygiene instruction and maternity and child care in minority regions. Used as an official claim, not independent outcome evidence."
+    },
+    {
+      "id": "xj-toilet-1944",
+      "title": "TIME, High Wind in Tihwa, 3 July 1944",
+      "url": "https://time.com/archive/6789514/high-wind-in-tihwa/",
+      "note": "Contemporary publicity account of Henry Wallace’s visit and Governor Sheng displaying what was called the province’s only flush toilet. The boast is treated as anecdote, not census."
+    },
+    {
+      "id": "xj-bingtuan-cliff",
+      "title": "Refugees, Conscripts, and Constructors: Developmental Narratives and Subaltern Han in Xinjiang",
+      "url": "https://journals.sagepub.com/doi/pdf/10.1177/0097700420904020?download=true",
+      "note": "Modern China article: early PRC settlement, recruitment of young women, the 1954 construction unit and discrepancies between state development narratives and migrant experiences."
+    },
+    {
+      "id": "xj-pastoralism",
+      "title": "Racial Capitalism in an Ethnic Minority Border Region: Husbandry Development in Altay",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/BC7EDB74E7E3AE1EDA5030057535C03C/S1742058X24000109a.pdf/div-class-title-racial-capitalism-in-an-ethnic-minority-border-region-div.pdf",
+      "note": "China and Asia article: 1952 to 59 pastoral cooperatives and partnerships, state extraction, mobile Kazakh livelihood and the uneven approach to pastoral collectivization."
+    },
+    {
+      "id": "xj-collectivization",
+      "title": "Changing Agro-Pastoral Livelihoods under Collective and Private Land Use in Xinjiang",
+      "url": "https://www.mdpi.com/2071-1050/11/1/166",
+      "note": "Peer-reviewed historical overview and Nileke case study: land reform, 1953 to 57 cooperation, 1958 communes and consequences for household and pastoral organization."
+    },
+    {
+      "id": "xj-women-prc",
+      "title": "Muslim, Modern, Model Subjects: Writing Uyghur Women into the Chinese Nation, 1949 to 1966",
+      "url": "https://journals.openedition.org/sextant/782",
+      "note": "Open-access gender history: official portrayals, women performers, labor and education in the early PRC, and the gap between state model images and individual lives."
+    }
+  ],
+  "entities": [
+    {
+      "id": "xinjiang",
+      "card": "data/cards/xinjiang.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "xj-index",
+            "xj-overview"
+          ],
+          "locator": "Exact repository entry: xinjiang, label Xinjiang, circa 1914 to 1960. This is an imported map identity, not proof of one continuous sovereign government. UC dissertation abstract and full text: provincial status, post-1911 weak central control, a small Han ruling class, foreign pressure, 1949 incorporation and continuity of Chinese sovereignty as an analytical question.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "xj-jacobs-ch1",
+            "xj-jacobs-ch2"
+          ],
+          "locator": "Open-access University of Washington Press chapter: Qing-trained officials, Yang Zengxin, indirect administration, differentiated rule and Xinjiang’s distance from Beijing during the early Republic. Open-access chapter: cross-border revolution, Soviet influence, local national movements, Yang’s political balancing and the transition after his 1928 assassination.",
+          "dateScope": {
+            "from": 1914,
+            "to": 1928
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "xj-jacobs-ch2",
+            "xj-brophy-battle"
+          ],
+          "locator": "Open-access chapter: cross-border revolution, Soviet influence, local national movements, Yang’s political balancing and the transition after his 1928 assassination. Open-access chapter: Yang’s autonomy from Nanjing, political movements in the 1920s and 1930s, conflict and the expanding use of Uyghur as a national name.",
+          "dateScope": {
+            "from": 1928,
+            "to": 1931
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "xj-wang",
+            "xj-jacobs-ch3"
+          ],
+          "locator": "Chinese University of Hong Kong Press sample: 1933 to 34 movement, terminology, the Istqlāl newspaper, political factions and first-hand Chinese and Uyghur evidence with explicit debates over names. Open-access chapter: Jin Shuren, rebellion, Sheng Shicai, nationality policy, Soviet intervention, political coalitions and coercion in the 1930s.",
+          "dateScope": {
+            "from": 1931,
+            "to": 1934
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "xj-jacobs-ch3",
+            "xj-print-power"
+          ],
+          "locator": "Open-access chapter: Jin Shuren, rebellion, Sheng Shicai, nationality policy, Soviet intervention, political coalitions and coercion in the 1930s. Harvard dissertation: southern Xinjiang print culture, single-text teaching, conflicts between secular and religious subjects, provincial publishing and post-1949 language institutions.",
+          "dateScope": {
+            "from": 1934,
+            "to": 1937
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "xj-jacobs-ch4",
+            "xj-extraction"
+          ],
+          "locator": "Open-access chapter: Sheng’s purges and geopolitical pivot, Nationalist re-entry, competing programs for local representation and the Ili crisis. Social Science History article: state purchase monopolies, sheep, furs, wool and livestock extraction, the 1942 trade crisis and pressures on nomadic communities that fed revolt.",
+          "dateScope": {
+            "from": 1937,
+            "to": 1944
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "xj-frus-1944",
+            "xj-frus-1947"
+          ],
+          "locator": "Primary diplomatic report: uprising began 7 November, multiethnic participants, fighting around Ining and the consul’s cautious distinction between observed events, Chinese allegations and inference about Soviet help. Primary diplomatic analysis: Ili conflict, Soviet material and advice, Chinese administration and the author’s admitted dependence on partly unverified or partisan reports.",
+          "dateScope": {
+            "from": 1944,
+            "to": 1949
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "xj-mao-1949",
+            "xj-jacobs-ch5"
+          ],
+          "locator": "Contemporary political text calling for order, unity and cooperation with the entering PLA. Used as evidence of official language, not as a neutral description of events. Open-access University of Washington Press chapter: 1949 transition, 1955 autonomous-region structure, nationality-linked subdivisions and the Production and Construction Corps.",
+          "dateScope": {
+            "from": 1949,
+            "to": 1955
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "xj-jacobs-ch5",
+            "xj-collectivization"
+          ],
+          "locator": "Open-access University of Washington Press chapter: 1949 transition, 1955 autonomous-region structure, nationality-linked subdivisions and the Production and Construction Corps. Peer-reviewed historical overview and Nileke case study: land reform, 1953 to 57 cooperation, 1958 communes and consequences for household and pastoral organization.",
+          "dateScope": {
+            "from": 1955,
+            "to": 1960
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "xj-index",
+            "xj-map-1914"
+          ],
+          "locator": "Exact index record and decoded world-1914 target geometry statistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "xj-map-1930",
+            "xj-map-1945"
+          ],
+          "locator": "Decoded geometry comparison across world-1920, world-1930, world-1938 and world-1945 snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "xj-map-1900",
+            "xj-map-1914"
+          ],
+          "locator": "Point-in-polygon tests at eight cities plus the 1900 predecessor and 1914 target ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "xj-map-1960"
+          ],
+          "locator": "Decoded world-1960 owners for the same eight audited city points and absence of exact xinjiang.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "xj-wang"
+          ],
+          "locator": "Sample chapter discussion of changing regional names, self-identification and 1930s political terminology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "xj-jacobs-ch1"
+          ],
+          "locator": "Chapter sections on Qing-trained personnel, indirect administration, distance and Yang Zengxin’s governing strategy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "xj-brophy-reform",
+            "xj-brophy-battle"
+          ],
+          "locator": "Chapters on reform networks, oasis identities and expansion of Uyghur political terminology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "xj-wang"
+          ],
+          "locator": "Sample chapter account of the 1933 to 34 republic, factions, terminology and defeat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "xj-jacobs-ch3",
+            "xj-jacobs-ch4"
+          ],
+          "locator": "Open-access chapters on Sheng’s coalition, nationality program, security apparatus, Soviet support and purges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "xj-frus-1944"
+          ],
+          "locator": "Consular summary and discussion of observed fighting, Chinese claims, Soviet allegations and revolt against misrule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "xj-frus-1944",
+            "xj-extraction"
+          ],
+          "locator": "FRUS uprising report and Social Science History analysis of extraction, trade crisis and guerrilla expansion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "xj-frus-1947"
+          ],
+          "locator": "Diplomatic analysis of the Ili settlement, Soviet involvement, evidence limits and rival provincial claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "xj-frus-1949",
+            "xj-mao-1949"
+          ],
+          "locator": "June consular report and 28 September political telegram, each read as a situated primary source.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "xj-jacobs-ch5"
+          ],
+          "locator": "Chapter section and map on the 1955 region, nested nationality areas and centralized political limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "xj-bingtuan-cliff"
+          ],
+          "locator": "Modern China article on 1953 to 54 recruitment, women’s construction unit and the gap between official narrative and remembered experience.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "xj-karez",
+            "xj-pastoralism"
+          ],
+          "locator": "Karez irrigation history and Altay pastoralism study; crop examples bounded to oasis agriculture and mobile herding context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "xj-etrade"
+          ],
+          "locator": "Journal of Global History account of market goods, border customs and routes linking Xinjiang oases.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "xj-extraction"
+          ],
+          "locator": "Trade and Yuxin company sections on state monopoly, sheep, wool, furs and 1942 to 44 contraction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "xj-pastoralism"
+          ],
+          "locator": "Historical section on 1952 to 59 Altay cooperatives, partial preservation of mobility and administrative restructuring.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "xj-collectivization"
+          ],
+          "locator": "Historical overview of 1953 to 57 cooperatives, 1958 communes, work organization and agro-pastoral differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "xj-divorce",
+            "xj-pastoralism"
+          ],
+          "locator": "Republican Uyghur family-law corpus and Altay pastoral livelihood history; variation is the explicit conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "xj-divorce"
+          ],
+          "locator": "Article corpus, dispute types, Muslim judges, women, elders and the selection bias of litigation records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "xj-waqf"
+          ],
+          "locator": "CSMC manuscript description, waqf form, incomplete scroll and socioeconomic research limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "xj-women-prc"
+          ],
+          "locator": "Open-access gender-history analysis of model women, labor, education, performance and state representation, 1949 to 66.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "xj-meshrep"
+          ],
+          "locator": "UNESCO safeguarding description of meshrep forms and explicit present-day source limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "xj-jarring-memoir"
+          ],
+          "locator": "Memoir pages on food-bazaar stalls, listed foods and the observer’s later recollection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "xj-jarring-memoir"
+          ],
+          "locator": "Food-bazaar passage on customers, poverty and almsgiving, read as eyewitness evidence with class limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "xj-jarring-memoir"
+          ],
+          "locator": "Bazaar and textile passages, including local and mountain rug traditions and the observer’s clothing descriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "xj-meshrep"
+          ],
+          "locator": "UNESCO description of performance, participation, games, moral forum and multiple meshrep types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "xj-jarring-prints"
+          ],
+          "locator": "Catalog entries for primers, Bulbul story and school verses; oral play is presented cautiously as an archival limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "xj-brophy-reform"
+          ],
+          "locator": "Chapter on Jadid networks, merchant support, curriculum debates and coexistence with Islamic schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "xj-jarring-prints"
+          ],
+          "locator": "Collection history and dated bibliography of nonreligious and school publications, with provenance caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "xj-print-power"
+          ],
+          "locator": "Harvard dissertation passage on one-text instruction, adult and child learners, and secular-religious curricular conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "xj-istiqlal",
+            "xj-wang"
+          ],
+          "locator": "Digitized publication record and CUHK sample-chapter discussion of the Istïqlāl newspaper and its politics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "xj-education-prc",
+            "xj-script"
+          ],
+          "locator": "UCL education history and Modern Asian Studies chronology of script reform and reader discontinuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "xj-medical-manuscripts"
+          ],
+          "locator": "Study of Jarring medical manuscripts, contents, dates, language and collection limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "xj-mission-medicine"
+          ],
+          "locator": "Mission history sections on Kashgar hospital, medical staff and dentistry, read with institutional perspective explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "xj-soviet-medicine"
+          ],
+          "locator": "Quaestio Rossica analysis of interwar reports, epidemic care, geopolitical purpose, adaptation and medical gaze.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "xj-health-1952"
+          ],
+          "locator": "Contemporary People’s China report, treated as an official program claim with outcome limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "xj-medical-manuscripts",
+            "xj-soviet-medicine"
+          ],
+          "locator": "Combined evidence from manuscript and institutional medical archives; access comparison framed as documented source imbalance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "xj-karez"
+          ],
+          "locator": "Xinjiang University history of karez form, maintenance, Republican reports and community infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "xj-karez"
+          ],
+          "locator": "Republican repair proposal and 1949/1957 working-karez counts; domestic-water inference explicitly limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "xj-toilet-1944"
+          ],
+          "locator": "Contemporary TIME visit account; exaggeration and lack of household survey explicitly stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "xj-jarring-prints",
+            "xj-medical-manuscripts"
+          ],
+          "locator": "Synthesis of documented printing and medical-text practices, with irrigation established in the preceding sourced items; credit deliberately assigned to practitioners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "xj-map-1960",
+            "xj-jacobs-conclusion"
+          ],
+          "locator": "World-1960 id transition and scholarly conclusion on political continuity and transformation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "xj-map-1960",
+            "xj-jacobs-conclusion"
+          ],
+          "locator": "At the 1960 seam, target cities move to the broad china atlas id. Xinjiang did not disappear; the map library changed identifiers. Open-access University of Washington Press conclusion: continuity and transformation across imperial, Republican and Communist frontier administration, including the limits of treating political seams as social endings.",
+          "dateScope": {
+            "year": 1960
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "xinjiang",
+        "card": "cards/xinjiang.json",
+        "summary": "Xinjiang from 1914 to 1960 saw warlord rule, revolts, Soviet and Nationalist competition, Communist incorporation, new schools and print, changing family and working life, public-health experiments and enduring oasis and pastoral knowledge."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "xinjiang",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            73.67653676536767,
+            34.20007940656907,
+            96.33876338763389,
+            49.232566116934215
+          ]
+        },
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "xinjiang",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            73.67653676536767,
+            34.1994805002197,
+            96.33876338763389,
+            49.23260399846006
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "xinjiang",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            73.67653676536767,
+            34.1994805002197,
+            96.33876338763389,
+            49.23260399846006
+          ]
+        },
+        {
+          "file": "world-1938.json",
+          "properties": {
+            "civ": "xinjiang",
+            "from": 1938,
+            "to": 1945,
+            "precision": 3
+          },
+          "bounds": [
+            73.67653676536767,
+            34.1994805002197,
+            96.33876338763389,
+            49.23260399846006
+          ]
+        },
+        {
+          "file": "world-1945.json",
+          "properties": {
+            "civ": "xinjiang",
+            "from": 1945,
+            "to": 1960,
+            "precision": 3
+          },
+          "bounds": [
+            73.67653676536767,
+            34.200535907395434,
+            96.33876338763389,
+            49.23263341631264
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target xinjiang is indexed circa 1914 to 1960 and is missing before integration.",
+    "Every exact snapshot from 1914 through 1945 is one Polygon with one ring and 197 positions; geometry is stable apart from tiny TopoJSON transform differences.",
+    "Ürümqi, Kashgar, Hotan, Turpan, Yining, Altay, Hami and Aksu test inside every target snapshot.",
+    "The 1900 predecessor assigns those places to qing-dynasty; the 1960 successor assigns them to china.",
+    "The atlas id spans several governing regimes and rival administrations, so the card treats the outline only as a locator.",
+    "The 1960 endpoint is a map-library id handoff, not a historical end of Xinjiang or its communities.",
+    "No appliesTo linkage is used because the exact id has one indexed record and its card must preserve its own identity caveats."
+  ]
+}

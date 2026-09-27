@@ -1,0 +1,851 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel next-major-card-123b research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "man-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry: manchuria, named Manchuria, circa 1920 to 1960. The card treats this as map coverage rather than the lifetime of one polity."
+    },
+    {
+      "id": "man-map1914",
+      "title": "Human History Map world-1914 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Decoded predecessor snapshot. The core cities later assigned to manchuria sit inside an anachronistically named qing-dynasty feature for 1914 to 1920."
+    },
+    {
+      "id": "man-map1920",
+      "title": "Human History Map world-1920 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1920.json",
+      "note": "Decoded exact feature: one Polygon, one ring, 187 positions, covering 1920 to 1930 with Shenyang, Harbin, Changchun and Hailar inside."
+    },
+    {
+      "id": "man-map1930",
+      "title": "Human History Map world-1930 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Decoded exact feature for 1930 to 1938. Its coordinate JSON is exactly identical to the world-1920 target geometry."
+    },
+    {
+      "id": "man-map1938",
+      "title": "Human History Map world-1938 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "The exact id vanishes for 1938 to 1945; target core cities are instead contained by a japan-1914 feature. This is an atlas reassignment, not a valid claim that the region became Japan."
+    },
+    {
+      "id": "man-map1945",
+      "title": "Human History Map world-1945 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "The exact manchuria id returns for 1945 to 1960 as one ring with 187 positions and a near-identical bounding box to the prewar target."
+    },
+    {
+      "id": "man-map1960",
+      "title": "Human History Map world-1960 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json",
+      "note": "At the 1960 seam the core target cities are assigned to china. This is the atlas endpoint, not a disappearance of Northeast China or its communities."
+    },
+    {
+      "id": "man-overview",
+      "title": "The History of Manchuria, 1840 to 1948",
+      "url": "https://www.cambridge.org/core/books/history-of-manchuria-18401948/FC5D46167EE8766A1F1013D36B7127C0/listing",
+      "note": "Cambridge scholarly book listing and chapter descriptions cover Chinese migration, Russian and Japanese railways, Zhang rule, nationalism, conquest, industry, medicine and the post-1945 struggle."
+    },
+    {
+      "id": "man-loc",
+      "title": "Library of Congress, China: A Country Study",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ch/chinacountrystud00word/chinacountrystud00word.pdf",
+      "note": "Institutional country study, historical setting printed pages 31 to 39: warlord rivalry, Zhang Zuolin, the 1928 nominal reunification, Zhang Xueliang and Japanese seizure of Manchuria."
+    },
+    {
+      "id": "man-plague",
+      "title": "The Second Pneumonic Plague Epidemic in Manchuria, 1920 to 21",
+      "url": "https://kiss.kstudy.com/Detail/Ar?key=3759218",
+      "note": "Peer-reviewed English abstract: outbreak chronology, more than 9,300 deaths, over half in Harbin, and the city’s divided Russian and Chinese administrative spaces."
+    },
+    {
+      "id": "man-mukden",
+      "title": "Office of the Historian, The Mukden Incident and Stimson Doctrine",
+      "url": "https://history.state.gov/milestones/1921-1936/mukden-incident",
+      "note": "Official diplomatic history: railway explosion, Japanese army expansion, creation of Manchukuo, non-recognition and the League commission. It notes uncertainty over who planted the bomb."
+    },
+    {
+      "id": "man-frus1931",
+      "title": "U.S. Consul General at Mukden report, 26 September 1931",
+      "url": "https://history.state.gov/historicaldocuments/frus1931v03/d82",
+      "note": "Contemporary diplomatic report naming the rapid occupation of Mukden, Antung, Changchun, Kirin and railway centers after 18 September. Read as an observer report, not a neutral omniscient account."
+    },
+    {
+      "id": "man-lytton",
+      "title": "Library of Congress, Lytton Commission report on Manchuria",
+      "url": "https://www.loc.gov/item/2021666890/",
+      "note": "Digitized 1932 League of Nations inquiry. It rejected recognition of the new regime as a genuine spontaneous independence movement and proposed international settlement while preserving Chinese sovereignty."
+    },
+    {
+      "id": "man-duara",
+      "title": "New Imperialism and the Post-Colonial Developmental State: Manchukuo in Comparative Perspective",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/127ED75C0761D2FB6AF0442F213B96C5/S1557466006003925a.pdf/new_imperialism_and_the_postcolonial_developmental_state_manchukuo_in_comparative_perspective.pdf",
+      "note": "Open scholarly article on Japanese military domination, state-building, youth mobilization, planned industry, ethnic-harmony ideology and contradictions between development claims and imperial control."
+    },
+    {
+      "id": "man-fascism",
+      "title": "When fascism met empire in Japanese-occupied Manchuria",
+      "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/when-fascism-met-empire-in-japaneseoccupied-manchuria/4D050824AA8EA411A0D9B1884935FB23",
+      "note": "Journal of Global History article on the controlled economy, mass Japanese agrarian settlement, model cooperatives, rural crisis in Japan and dispossession in occupied Northeast China."
+    },
+    {
+      "id": "man-soy",
+      "title": "South Manchurian Railway and soybean freight before the 1920s",
+      "url": "https://cir.nii.ac.jp/crid/1390282680117825280?lang=en",
+      "note": "Human-geography article abstract: soybean production, competing railway gauges, station catchments, routes toward Dalian and the importance of the crop to early twentieth-century export trade."
+    },
+    {
+      "id": "man-village",
+      "title": "Formation of Southern Manchurian Villages and Farmer Life in the Manchukuo Period",
+      "url": "https://journal.kci.go.kr/manchuria/archive/articleView?artiId=ART002522430",
+      "note": "Peer-reviewed abstract on migrant farmers, insecure settlement, heavy security costs, landlord and colonial institutional ownership, protection rackets and rural households struggling to remain."
+    },
+    {
+      "id": "man-korean",
+      "title": "Korean collective farms in Manchukuo, 1932 to 1945",
+      "url": "https://peasantstudies.ru/en/eng/journal/2022-7-4-en/korean-collective-farms-in-manchukuo-1932-1945",
+      "note": "Peer-reviewed article page: Korean family migration, closed-village surveillance, agricultural production for Japan and the Kwantung Army, leases, loans and 24,000 collective-farm families by 1944."
+    },
+    {
+      "id": "man-settlers",
+      "title": "Victims of Colonialism? Japanese Agrarian Settlers in Manchukuo and Their Repatriation",
+      "url": "https://apjjf.org/mariko-asano-tamanoi/3032/article",
+      "note": "Academic article on Japanese settlement, difficult farm life, power over Chinese land, family memories, the Soviet invasion, abandonment, repatriation and Chinese families who raised left-behind children."
+    },
+    {
+      "id": "man-family-reg",
+      "title": "Identification of Japanese Subjects in Manchukuo",
+      "url": "https://www.jstage.jst.go.jp/article/asianstudies/56/3/56_1/_article",
+      "note": "Asian Studies abstract on overlapping Japanese koseki, Manchukuo minseki and residence-registration systems affecting Japanese, Korean and Taiwanese subjects in a purportedly multiethnic state."
+    },
+    {
+      "id": "man-everyday",
+      "title": "Everyday life in the puppet state: ordinary experiences in Manchukuo",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/22326/",
+      "note": "University of Sheffield dissertation record and full thesis: colonial schooling, rationing, housing and homelessness, sanitation, hygiene and ordinary strategies for surviving upheaval."
+    },
+    {
+      "id": "man-kang",
+      "title": "Traditional Manchu residence and the Wanzi kang",
+      "url": "https://www.jstage.jst.go.jp/article/aija/83/749/83_1193/_article/-char/en",
+      "note": "Architecture journal abstract: Northeast China’s long cold season and the heated kang platform as a center for meals, hospitality, togetherness and sleep in traditional Manchu houses."
+    },
+    {
+      "id": "man-dress",
+      "title": "Dressing up the Manchu Way: women’s hair and dress, 1850s to 1940s",
+      "url": "https://soas-repository.worktribe.com/output/846127",
+      "note": "SOAS doctoral-research record based on Chinese, English, Japanese and Manchu visual sources. Used to reject any single timeless costume and to frame dress as changing representation."
+    },
+    {
+      "id": "man-girls",
+      "title": "Secondary Education for Girls under Japanese Occupation: Mongols in Manchukuo",
+      "url": "https://www.waseda.jp/fedu/iase/assets/uploads/2022/03/174bd62afc28be7a53ebab8433a1176d.pdf",
+      "note": "University paper reading colonial newspapers critically: girls’ curricula, cleaning, repairing heated kangs, Japanese dance, gaoliang meals and propaganda expectations aimed through daughters at families."
+    },
+    {
+      "id": "man-school",
+      "title": "The Word Is Mightier than the Throne: Colonial Education in Manchukuo",
+      "url": "https://doi.org/10.1017/S002191180999009X",
+      "note": "Journal of Asian Studies article on colonial language educators, textbooks, daily-life lessons, unequal imperial rule and tensions between reform claims and militarizing orthodoxy."
+    },
+    {
+      "id": "man-radio",
+      "title": "Propaganda Warfare and Radio Broadcasting in Manchukuo",
+      "url": "https://journal.kci.go.kr/manchuria/archive/articleView?artiId=ART001517947",
+      "note": "Peer-reviewed abstract: dual-language broadcasting, state efforts to manufacture identity, limited reach and the intrusion of imperial propaganda into ordinary listening."
+    },
+    {
+      "id": "man-film",
+      "title": "Colonial Tactics and Everyday Life: Workers of the Manchuria Film Association",
+      "url": "https://www.jstor.org/stable/j.ctv310vq5k",
+      "note": "University-press book record: Chinese actors, writers, directors and technicians made Chinese-dialogue entertainment while navigating censorship, practical work, ideology and professional continuity after 1945."
+    },
+    {
+      "id": "man-writing",
+      "title": "National Library of China scan, Manchukuo State-Founding Proclamation",
+      "url": "https://commons.wikimedia.org/wiki/File:NLC462-h-008001-5543_%E6%BB%BF%E6%B4%B2%E5%9C%8B%E5%BB%BA%E5%9C%8B%E5%AE%A3%E8%A8%80.pdf",
+      "note": "Public-domain scan catalogued to the National Library of China, dated 1 March 1932. Supplies the exact traditional-Chinese phrase 創立滿洲國 in an official proclamation."
+    },
+    {
+      "id": "man-redcross",
+      "title": "The Manchukuo Red Cross Society and the Kwantung Army’s nation-building project",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EF5D77101BCB78F5D6C508F4427023A5/S1557466025100119a.pdf/manchukuo_red_cross_society_and_the_kwantung_armys_nationbuilding_project_in_manchuria_19381945.pdf",
+      "note": "Open scholarly article: hospitals, mobile clinics, maternity and child care, home nursing, primary-school nurses, welfare work, wartime propaganda and the 1945 refugee collapse."
+    },
+    {
+      "id": "man-colonial-med",
+      "title": "Bodies in the Service of the Japanese Empire: Colonial Medicine in Manchuria",
+      "url": "https://www.cambridge.org/core/journals/asia-pacific-journal/article/bodies-in-the-service-of-the-japanese-empire-colonial-medicine-in-manchuria/F4E3C80AF6E352AD7608DBD1EF941D44",
+      "note": "Open research article on unequal colonial medical education, exploitation of Chinese bodies, unethical experiments and institutional links preceding Unit 731."
+    },
+    {
+      "id": "man-unit731",
+      "title": "United States Responses to Japanese Wartime Inhuman Experimentation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4487829/",
+      "note": "Peer-reviewed medical-history article on Unit 731 near Harbin, deliberate infection and lethal experiments, the destruction of evidence and postwar U.S. decisions that shielded perpetrators."
+    },
+    {
+      "id": "man-frus1945",
+      "title": "Soviet statement on forces in Manchuria, 21 December 1945",
+      "url": "https://history.state.gov/historicaldocuments/frus1945v07/d591",
+      "note": "Primary diplomatic document on the Soviet offensive, disarming Japanese troops, prisoners sent to Soviet territory and contested schedules for withdrawal. Its claims are identified as a Soviet government statement."
+    },
+    {
+      "id": "man-frus1946",
+      "title": "U.S. Embassy report on Communist statement about Manchuria, February 1946",
+      "url": "https://history.state.gov/historicaldocuments/frus1946v09/d210",
+      "note": "Contemporary diplomatic document showing disputed claims, Communist armed organization and uncertainty around Soviet relationships as civil war returned to the Northeast."
+    },
+    {
+      "id": "man-worldbank",
+      "title": "World Bank, Chinese industrial technology in the First Five-Year Plan",
+      "url": "https://documents1.worldbank.org/curated/en/702781468215980760/pdf/multi0page.pdf",
+      "note": "Historical development study: Soviet-aid projects, expansion of Japanese-built Anshan steel and giant machinery plants in Shenyang, Harbin and other Northeast industrial cities."
+    },
+    {
+      "id": "man-health",
+      "title": "National Library of Medicine, Chinese public-health posters",
+      "url": "https://www.nlm.nih.gov/hmd/topics/chinese-posters/index.html",
+      "note": "Curated medical-history exhibition: 1950s Patriotic Health Campaigns, disease prevention, clean homes and neighborhoods, water quality, waste treatment, vaccination and poster education."
+    },
+    {
+      "id": "man-water",
+      "title": "Water Supply Improvement and Health Promotion Campaigns in Rural China, 1949 to 2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8393082/",
+      "note": "China CDC historical review: rural water improvement began within 1950s Patriotic Health Campaigns and linked safe household water with sanitation and hygiene education."
+    },
+    {
+      "id": "man-mortality",
+      "title": "An exploration of China’s mortality decline under Mao, 1950 to 80",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4331212/",
+      "note": "Provincial public-health study: early campaigns included trash removal, latrine building, night-soil composting, pest control, vaccination and midwife retraining; outcomes varied by place and program."
+    },
+    {
+      "id": "man-famine",
+      "title": "Food Availability, Entitlements and the Chinese Famine of 1959 to 61",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1468-0297.00494",
+      "note": "Economic Journal study on food decline and urban bias. Provincial comparisons find lower recorded mortality in much of the Northeast than in the worst-hit regions, without implying safety or absence of hunger."
+    }
+  ],
+  "entities": [
+    {
+      "id": "manchuria",
+      "card": "data/cards/manchuria.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "man-overview"
+          ],
+          "locator": "Cambridge scholarly book listing and chapter descriptions cover Chinese migration, Russian and Japanese railways, Zhang rule, nationalism, conquest, industry, medicine and the post-1945 struggle.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "man-loc",
+            "man-plague"
+          ],
+          "locator": "Institutional country study, historical setting printed pages 31 to 39: warlord rivalry, Zhang Zuolin, the 1928 nominal reunification, Zhang Xueliang and Japanese seizure of Manchuria. Peer-reviewed English abstract: outbreak chronology, more than 9,300 deaths, over half in Harbin, and the city’s divided Russian and Chinese administrative spaces.",
+          "dateScope": {
+            "from": 1920,
+            "to": 1928
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "man-loc"
+          ],
+          "locator": "Institutional country study, historical setting printed pages 31 to 39: warlord rivalry, Zhang Zuolin, the 1928 nominal reunification, Zhang Xueliang and Japanese seizure of Manchuria.",
+          "dateScope": {
+            "from": 1928,
+            "to": 1931
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "man-mukden",
+            "man-frus1931"
+          ],
+          "locator": "Official diplomatic history: railway explosion, Japanese army expansion, creation of Manchukuo, non-recognition and the League commission. It notes uncertainty over who planted the bomb. Contemporary diplomatic report naming the rapid occupation of Mukden, Antung, Changchun, Kirin and railway centers after 18 September. Read as an observer report, not a neutral omniscient account.",
+          "dateScope": {
+            "from": 1931,
+            "to": 1932
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "man-duara"
+          ],
+          "locator": "Open scholarly article on Japanese military domination, state-building, youth mobilization, planned industry, ethnic-harmony ideology and contradictions between development claims and imperial control.",
+          "dateScope": {
+            "from": 1932,
+            "to": 1937
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "man-fascism",
+            "man-redcross"
+          ],
+          "locator": "Journal of Global History article on the controlled economy, mass Japanese agrarian settlement, model cooperatives, rural crisis in Japan and dispossession in occupied Northeast China. Open scholarly article: hospitals, mobile clinics, maternity and child care, home nursing, primary-school nurses, welfare work, wartime propaganda and the 1945 refugee collapse.",
+          "dateScope": {
+            "from": 1937,
+            "to": 1945
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "man-frus1945",
+            "man-frus1946"
+          ],
+          "locator": "Primary diplomatic document on the Soviet offensive, disarming Japanese troops, prisoners sent to Soviet territory and contested schedules for withdrawal. Its claims are identified as a Soviet government statement. Contemporary diplomatic document showing disputed claims, Communist armed organization and uncertainty around Soviet relationships as civil war returned to the Northeast.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1949
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "man-worldbank",
+            "man-health"
+          ],
+          "locator": "Historical development study: Soviet-aid projects, expansion of Japanese-built Anshan steel and giant machinery plants in Shenyang, Harbin and other Northeast industrial cities. Curated medical-history exhibition: 1950s Patriotic Health Campaigns, disease prevention, clean homes and neighborhoods, water quality, waste treatment, vaccination and poster education.",
+          "dateScope": {
+            "from": 1949,
+            "to": 1958
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "man-famine"
+          ],
+          "locator": "Economic Journal study on food decline and urban bias. Provincial comparisons find lower recorded mortality in much of the Northeast than in the worst-hit regions, without implying safety or absence of hunger.",
+          "dateScope": {
+            "from": 1958,
+            "to": 1960
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "man-index",
+            "man-map1914",
+            "man-map1920",
+            "man-map1945"
+          ],
+          "locator": "Exact index entry, predecessor anomaly and target intervals in identity.json.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "man-map1920",
+            "man-map1930"
+          ],
+          "locator": "identity.json exact coordinate SHA and statistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "man-map1938",
+            "man-map1945"
+          ],
+          "locator": "identity.json pointOwners for 1938 and target return in 1945.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "man-map1920",
+            "man-soy"
+          ],
+          "locator": "identity.json Dalian point miss; soybean freight source establishes Dalian’s railway-port role.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "man-map1960"
+          ],
+          "locator": "identity.json pointOwners; terminology is an explicit editorial scope choice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "man-loc"
+          ],
+          "locator": "LOC historical setting on Zhang, Fengtian power and Japanese interests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "man-loc"
+          ],
+          "locator": "LOC historical setting on assassination, succession and northeast flag change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "man-mukden",
+            "man-frus1931"
+          ],
+          "locator": "Official history and contemporary consul report on incident and occupations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "man-lytton"
+          ],
+          "locator": "League inquiry conclusions and LOC item description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "man-duara"
+          ],
+          "locator": "Article on client state, state-building and ethnic-harmony contradiction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "man-lytton"
+          ],
+          "locator": "Commission chapters on public order, volunteer forces and competing labels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "man-duara"
+          ],
+          "locator": "Scholarly analysis of youth mobilization, state capacity and imperial contradiction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "man-fascism",
+            "man-settlers"
+          ],
+          "locator": "Agrarian settlement policy and settler/repatriation scholarship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "man-frus1945",
+            "man-settlers"
+          ],
+          "locator": "Primary Soviet statement paired with civilian-repatriation study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "man-frus1946"
+          ],
+          "locator": "1946 embassy report, explicitly preserving contemporary uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "man-soy"
+          ],
+          "locator": "Human-geography study of crop, freight catchments, gauges and Dalian route.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "man-fascism"
+          ],
+          "locator": "Journal article on controlled economy and imperial developmental project.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "man-village"
+          ],
+          "locator": "Peer-reviewed village-life abstract on ownership, costs and instability.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "man-korean"
+          ],
+          "locator": "Peasant Studies article on families, loans, closed design and production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "man-worldbank"
+          ],
+          "locator": "World Bank historical study on Northeast industrial projects; distribution caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "man-family-reg"
+          ],
+          "locator": "Registration scholarship establishes compound population and unequal legal categories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "man-family-reg"
+          ],
+          "locator": "JStage abstract on the three linked registration systems and nationality difficulty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "man-settlers"
+          ],
+          "locator": "Settlement and repatriation study on family migration and later memories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "man-korean"
+          ],
+          "locator": "Collective-farm article on Korean immigrant households and colonial conditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "man-everyday"
+          ],
+          "locator": "Dissertation housing and homelessness chapters; evidence-limit stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "man-kang"
+          ],
+          "locator": "Architecture abstract on winter, heating and domestic uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "man-everyday",
+            "man-soy"
+          ],
+          "locator": "Everyday-life thesis on rationing; freight study on soy, with no universal menu claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "man-girls"
+          ],
+          "locator": "Waseda paper’s quoted colonial-newspaper material and critical framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "man-dress"
+          ],
+          "locator": "SOAS research scope and visual-source method; conservative climate inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "man-radio",
+            "man-film"
+          ],
+          "locator": "Broadcasting study and film-labor book record on identity, audiences and workers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "man-school"
+          ],
+          "locator": "Journal of Asian Studies abstract on educators, daily-life texts and imperial tension.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "man-girls"
+          ],
+          "locator": "Education study on curriculum, chores, dance and family-directed ideology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "man-writing"
+          ],
+          "locator": "National Library of China scan, exact phrase in proclamation; translation and political caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "man-film"
+          ],
+          "locator": "University-press book description on labor, Chinese dialogue and postwar careers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "man-radio"
+          ],
+          "locator": "KCI article abstract on dual-language broadcasting, limited reach and everyday propaganda.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "man-plague"
+          ],
+          "locator": "Peer-reviewed plague abstract on chronology, mortality and divided city.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "man-redcross"
+          ],
+          "locator": "Cambridge article on medical, welfare and political functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "man-colonial-med"
+          ],
+          "locator": "Open research article on colleges, exploitation and progression to military experimentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "man-unit731"
+          ],
+          "locator": "Peer-reviewed history on facility, victims, methods and evidence destruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "man-unit731"
+          ],
+          "locator": "Article’s central analysis of postwar immunity and data acquisition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "man-everyday"
+          ],
+          "locator": "Dissertation sanitation, hygiene and housing analysis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "man-water"
+          ],
+          "locator": "China CDC review on 1950s water policy; regional inference limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "man-mortality"
+          ],
+          "locator": "Provincial health study on latrines, composting and pest control.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "man-health"
+          ],
+          "locator": "NLM exhibition on visual health education, sanitation, vaccination and limits inferred conservatively.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "man-famine"
+          ],
+          "locator": "Economic Journal analysis of food availability, entitlements, urban bias and regional mortality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "man-map1960",
+            "man-frus1945",
+            "man-famine"
+          ],
+          "locator": "At the 1960 seam the core target cities are assigned to china. This is the atlas endpoint, not a disappearance of Northeast China or its communities. Primary diplomatic document on the Soviet offensive, disarming Japanese troops, prisoners sent to Soviet territory and contested schedules for withdrawal. Its claims are identified as a Soviet government statement. Economic Journal study on food decline and urban bias. Provincial comparisons find lower recorded mortality in much of the Northeast than in the worst-hit regions, without implying safety or absence of hunger.",
+          "dateScope": {
+            "year": 1960
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "manchuria",
+        "card": "cards/manchuria.json",
+        "summary": "Northeast China passed from warlord rule through Japanese-controlled Manchukuo, Soviet invasion, civil war and early PRC industrialization; families built daily lives amid railways, migration, public-health work, propaganda, violence and famine."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "manchuria",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            115.59535595355953,
+            38.750613754354895,
+            134.71874718747188,
+            53.51002687585069
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "manchuria",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            115.59535595355953,
+            38.750613754354895,
+            134.71874718747188,
+            53.51002687585069
+          ]
+        },
+        {
+          "file": "world-1945.json",
+          "properties": {
+            "civ": "manchuria",
+            "from": 1945,
+            "to": 1960,
+            "precision": 3
+          },
+          "bounds": [
+            115.59535595355953,
+            38.75008874467858,
+            134.71874718747188,
+            53.50966439344566
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target manchuria is indexed circa 1920 to 1960 and is missing before integration.",
+    "Exact features appear only for 1920 to 1930, 1930 to 1938 and 1945 to 1960. The 1920 and 1930 decoded coordinate JSON is identical.",
+    "In 1938 to 1945 the target core is reassigned to japan-1914; that atlas gap does not establish annexation, consent or a separate historical endpoint.",
+    "The 1945 target has the same one-ring, 187-position topology dimensions and a near-identical bounding box; at 1960 the core passes to china.",
+    "Shenyang, Harbin, Changchun and Hailar fall inside target polygons. Dalian is excluded by coastal simplification despite its documented historical centrality.",
+    "The card treats Manchuria as a regional umbrella and uses no appliesTo alias or shared-card substitution."
+  ]
+}

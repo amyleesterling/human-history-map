@@ -1,0 +1,621 @@
+{
+  "id": "manchuria",
+  "overview": "This card follows Northeast China through forty years in which the map’s single word, “Manchuria,” conceals repeated upheaval. Zhang Zuolin and Zhang Xueliang built regional power around armies and railways; Japan’s 1931 invasion created the dependent state of Manchukuo; planned factories, schools, films and clinics grew beside dispossession, censorship, forced mobilization and Unit 731’s crimes. Chinese, Manchu, Korean, Mongol, Japanese and Russian families did not live one interchangeable life: they farmed soy and sorghum, slept on heated kangs, queued for scarce rooms and food, studied under unequal systems, listened to radio and argued with propaganda. Soviet invasion ended the colonial regime in 1945, civil war followed, and the People’s Republic turned the Northeast into a heavy-industry center while mass health campaigns tackled water, waste and disease. The atlas ends this regional id in 1960, during the Great Leap famine; Northeast China and its peoples continued.",
+  "periods": [
+    {
+      "from": 1920,
+      "to": 1928,
+      "circa": true,
+      "title": "Warlord government, railways and epidemic",
+      "summary": "Zhang Zuolin’s Fengtian regime used the Northeast as a military base while railways organized trade. The 1920 to 21 pneumonic plague exposed deadly inequalities in divided Harbin.",
+      "sourceIds": [
+        "man-loc",
+        "man-plague"
+      ]
+    },
+    {
+      "from": 1928,
+      "to": 1931,
+      "circa": true,
+      "title": "Nominal reunification under rising pressure",
+      "summary": "After Zhang Zuolin’s assassination, Zhang Xueliang changed allegiance to the Nationalist government. Political reunification remained incomplete, and conflict with Japanese military and railway interests sharpened.",
+      "sourceIds": [
+        "man-loc"
+      ]
+    },
+    {
+      "from": 1931,
+      "to": 1932,
+      "circa": false,
+      "title": "Mukden Incident and rapid conquest",
+      "summary": "After the railway explosion of 18 September 1931, the Kwantung Army seized major cities and expanded far beyond the damaged track, creating the conditions for a client state.",
+      "sourceIds": [
+        "man-mukden",
+        "man-frus1931"
+      ]
+    },
+    {
+      "from": 1932,
+      "to": 1937,
+      "circa": true,
+      "title": "Manchukuo and colonial state-building",
+      "summary": "Japan installed Manchukuo under Puyi while military officers retained decisive power. Planned development, youth mobilization and “ethnic harmony” rhetoric could not erase conquest or unequal sovereignty.",
+      "sourceIds": [
+        "man-duara"
+      ]
+    },
+    {
+      "from": 1937,
+      "to": 1945,
+      "circa": true,
+      "title": "Total war, settlement and harsher mobilization",
+      "summary": "Industry, farming, schools, welfare and media were redirected toward imperial war. Japanese settlement accelerated, surveillance tightened and medical institutions included both genuine care and terrible crimes.",
+      "sourceIds": [
+        "man-fascism",
+        "man-redcross"
+      ]
+    },
+    {
+      "from": 1945,
+      "to": 1949,
+      "circa": true,
+      "title": "Soviet invasion and Chinese civil war",
+      "summary": "Soviet forces destroyed Manchukuo’s military order in August 1945. Japanese families fled or were stranded, while Nationalist and Communist armies fought to control the region and its industrial base.",
+      "sourceIds": [
+        "man-frus1945",
+        "man-frus1946"
+      ]
+    },
+    {
+      "from": 1949,
+      "to": 1958,
+      "circa": true,
+      "title": "PRC reconstruction and heavy-industry drive",
+      "summary": "The new People’s Republic made the Northeast a center of Soviet-assisted steel, machinery and vehicle production while launching nationwide literacy, sanitation and disease-prevention campaigns.",
+      "sourceIds": [
+        "man-worldbank",
+        "man-health"
+      ]
+    },
+    {
+      "from": 1958,
+      "to": 1960,
+      "circa": true,
+      "title": "Great Leap and famine at the atlas seam",
+      "summary": "Radical mobilization disrupted farming and daily life as famine began. The Northeast generally recorded lower mortality than the worst-hit provinces, but “lower” did not mean unharmed or well fed.",
+      "sourceIds": [
+        "man-famine"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "How to read a region that keeps changing rulers",
+      "items": [
+        {
+          "text": "The exact id manchuria is an atlas umbrella from 1920 to 1960, not the name of one continuous state. In 1914 the same core sits inside the badly dated qing-dynasty record; later it covers a warlord base, Japanese-occupied Manchukuo, a Soviet invasion zone and PRC provinces. One color is doing the work of several governments.",
+          "sourceIds": [
+            "man-index",
+            "man-map1914",
+            "man-map1920",
+            "man-map1945"
+          ]
+        },
+        {
+          "text": "The 1920 and 1930 target polygons are byte-for-byte identical after TopoJSON decoding: one outer ring, 187 positions and the same bounding box. Armies, administrations and railway power changed during those eighteen years; the frozen outline does not. It is a locator, not a year-by-year border survey.",
+          "sourceIds": [
+            "man-map1920",
+            "man-map1930"
+          ]
+        },
+        {
+          "text": "The id disappears from the 1938 snapshot. Shenyang, Harbin, Changchun and Hailar are then swallowed into japan-1914, and manchuria returns in 1945. That bookkeeping choice must never be read as popular union with Japan. The card keeps Manchukuo’s colonial dependence and Chinese resistance explicit.",
+          "sourceIds": [
+            "man-map1938",
+            "man-map1945"
+          ]
+        },
+        {
+          "text": "Dalian fails every target point test even though its port and the South Manchuria Railway were central to the region’s history. Simplified coastal geometry clipped it away. When a map says a famous railway port is apparently swimming just outside its own story, trust the documented history rather than the pixel.",
+          "sourceIds": [
+            "man-map1920",
+            "man-soy"
+          ]
+        },
+        {
+          "text": "At the 1960 seam, the same core cities pass into the china polygon. Northeast China did not vanish, and people did not wake up with different grandparents because a JSON id changed. “Manchuria” can also carry imperial and outsider meanings, so the card uses “Northeast China” for the postwar region where useful.",
+          "sourceIds": [
+            "man-map1960"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Warlord power, invasion and a state built under occupation",
+      "items": [
+        {
+          "text": "Zhang Zuolin’s Fengtian clique ruled from Shenyang with an army funded by taxes, trade and access to a resource-rich region. Japanese railway and military interests both supported and constrained him. Calling this simply “independent Manchuria” would hide the Republic of China, local coercion and the foreign concessions crisscrossing its politics.",
+          "sourceIds": [
+            "man-loc"
+          ]
+        },
+        {
+          "text": "In 1928 Japanese officers bombed Zhang Zuolin’s train, hoping his death would help expand their control. His son Zhang Xueliang instead declared allegiance to the Nationalist government. A family succession therefore produced an outcome the plotters had not wanted: a stronger public claim that the Northeast belonged within China.",
+          "sourceIds": [
+            "man-loc"
+          ]
+        },
+        {
+          "text": "On 18 September 1931 a small explosion damaged South Manchuria Railway track near Mukden. Japanese army officers blamed Chinese forces and used it as the pretext for a sweeping operation. Contemporary reports show major cities taken within days. The speed and scale make “protecting one bit of track” a very unconvincing job description.",
+          "sourceIds": [
+            "man-mukden",
+            "man-frus1931"
+          ]
+        },
+        {
+          "text": "The 1932 Lytton Commission did not treat Manchukuo as the product of a genuine, spontaneous independence movement. It recognized China’s sovereignty while proposing a negotiated autonomous arrangement. The League could investigate and condemn, but it could not force the Kwantung Army to leave; Japan later withdrew from the organization.",
+          "sourceIds": [
+            "man-lytton"
+          ]
+        },
+        {
+          "text": "Puyi supplied imperial ceremony, while Japanese military and bureaucratic networks held decisive power. Manchukuo advertised harmony among peoples and a modern developmental state. That language mattered because officials, teachers and filmmakers repeated it; it did not make unequal rule equal, or conquest consensual.",
+          "sourceIds": [
+            "man-duara"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Resistance, total war and the violent 1945 break",
+      "items": [
+        {
+          "text": "Armed resistance did not end when the new flag went up. Chinese volunteer armies, Communist guerrillas and other local forces fought Japanese and Manchukuo troops, while civilians faced reprisals, policing and demands for supplies. “Bandit” in an official file might describe a robber, a guerrilla or simply someone the state wanted discredited.",
+          "sourceIds": [
+            "man-lytton"
+          ]
+        },
+        {
+          "text": "From 1937, Manchukuo became a deeper rear base for Japan’s war in China. State agencies pushed production, youth organizations and political ritual toward total mobilization. Some residents collaborated, some resisted, many adapted to survive, and the same person could make different choices as danger, hunger and family duties changed.",
+          "sourceIds": [
+            "man-duara"
+          ]
+        },
+        {
+          "text": "Japanese settlement was presented as peaceful pioneering, yet land acquisition and armed protection placed settlers inside a coercive colonial project. Settler families also endured harsh climates, debt and later abandonment. Recognizing their suffering does not erase the greater power that placed them on land taken from Chinese communities.",
+          "sourceIds": [
+            "man-fascism",
+            "man-settlers"
+          ]
+        },
+        {
+          "text": "In August 1945 the Soviet offensive shattered the regime. Soviet statements describe disarming Japanese forces and removing prisoners to the USSR; refugee research records confusion, flight, separation and death among civilians. Official military verbs such as “disarmed” fit neatly in a telegram. A lost child did not experience 1945 so neatly.",
+          "sourceIds": [
+            "man-frus1945",
+            "man-settlers"
+          ]
+        },
+        {
+          "text": "The end of Manchukuo did not create peace. Nationalist and Communist forces raced for railways, cities, weapons and factories. Contemporary U.S. reporting was full of claims about Soviet help and Communist organization that observers themselves could not always verify. The Northeast became a central theater of renewed Chinese civil war.",
+          "sourceIds": [
+            "man-frus1946"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Railways, soybeans, factories and who paid for growth",
+      "items": [
+        {
+          "text": "Railways did far more than carry passengers. Different gauges and competing lines channeled soybeans from station districts toward Dalian, shaped which market a village used and gave railway companies economic and political power. A soybean could become oil, animal feed or fertilizer after a journey organized by timetables, warehouses and empire.",
+          "sourceIds": [
+            "man-soy"
+          ]
+        },
+        {
+          "text": "Manchukuo’s planners built mines, steelworks, chemicals, dams and machine plants through a controlled economy dominated by Japanese military and corporate interests. These were substantial industrial achievements by engineers and workers. Calling them proof of benevolent rule would ignore expropriation, coercion and the war those factories supplied.",
+          "sourceIds": [
+            "man-fascism"
+          ]
+        },
+        {
+          "text": "Rural families often combined farming with migration, tenancy and side work. Research on southern villages finds high burdens from landlords, security charges and protection rackets, with households moving when survival became impossible. A model village on a poster could have straight roads while the family budget underneath it was thoroughly crooked.",
+          "sourceIds": [
+            "man-village"
+          ]
+        },
+        {
+          "text": "Korean “collective farms” supplied the Kwantung Army and Japanese markets. By 1944 they held about 24,000 immigrant families inside settlements designed for surveillance and control. Families hoped leased land might become theirs after debts were paid, but the same arrangement tied work, residence and policing tightly together.",
+          "sourceIds": [
+            "man-korean"
+          ]
+        },
+        {
+          "text": "After 1949 the PRC repaired and expanded inherited industry. Soviet-aid projects enlarged Anshan steel and built giant machinery works in Shenyang and Harbin. Workers gained technical skills and produced nationally important goods, while heavy-industry priority also directed housing, food and investment toward strategic cities rather than evenly across the countryside.",
+          "sourceIds": [
+            "man-worldbank"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Families, migration and social rank",
+      "items": [
+        {
+          "text": "No single “Manchurian family” existed. Han Chinese migrants, Manchu communities, Mongols, Koreans, Japanese settlers, Russians and others used different languages, religions and kinship customs. Class, city or village, gender and legal status often mattered as much as an ethnic label. The state’s harmony posters simplified households that were busy being complicated.",
+          "sourceIds": [
+            "man-family-reg"
+          ]
+        },
+        {
+          "text": "Paperwork could split neighbors into different political boxes. Japanese koseki, Manchukuo minseki and residence records overlapped awkwardly for Japanese, Korean and Taiwanese subjects. Registration affected who belonged where, while the regime never solved one clear nationality law. Even an empire can discover that families refuse to fit tidy filing drawers.",
+          "sourceIds": [
+            "man-family-reg"
+          ]
+        },
+        {
+          "text": "Japanese emigration campaigns recruited rural households and unmarried young men, then sought wives for settlement. Propaganda praised brave pioneer families; memory studies show hardship, abandoned women and children, and the unequal land system around them. Family was both a source of care and a tool through which the empire tried to plant permanence.",
+          "sourceIds": [
+            "man-settlers"
+          ]
+        },
+        {
+          "text": "Korean migrants were not merely an ethnic stripe on a poster. Many were farming families living under Japanese colonial subjecthood, company leases and anti-guerrilla surveillance. Some pursued land and stability; others met debt and exploitation. Their position differed from Japanese settlers and Chinese villagers, even when all worked the same cold soil.",
+          "sourceIds": [
+            "man-korean"
+          ]
+        },
+        {
+          "text": "Housing shortages and homelessness made official talk of modern cities feel remote to many urban residents. People shared rooms, moved repeatedly, relied on relatives or improvised shelter. The surviving study draws on later recollections and newspapers, so it cannot reconstruct every household; it does recover the constant work of finding somewhere to sleep.",
+          "sourceIds": [
+            "man-everyday"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Homes, meals, clothes and a little entertainment",
+      "items": [
+        {
+          "text": "Northeast winters could last for months, making the heated kang platform the warm heart of many traditional Manchu homes. People could eat, welcome visitors, talk and sleep on it. A kang was part bed, part bench and part radiator, excellent engineering, though anyone claiming the warmest spot probably inspired a family argument.",
+          "sourceIds": [
+            "man-kang"
+          ]
+        },
+        {
+          "text": "Food depended on place and purse. Sorghum, called gaoliang, appears in accounts of rural and school meals; soybeans were a major cash crop, while wheat, millet, maize and vegetables also mattered. Wartime rationing made staples and fuel harder to obtain. A railway full of export soy did not guarantee a full family bowl.",
+          "sourceIds": [
+            "man-everyday",
+            "man-soy"
+          ]
+        },
+        {
+          "text": "A girls’ school report described students and Japanese teachers eating gaoliang, living in mud houses and sleeping on kangs. The article came through a colonial newspaper eager to praise devotion, so its cozy details require caution. Students really did clean rooms and repair heating; propaganda decided what moral readers should extract from the chores.",
+          "sourceIds": [
+            "man-girls"
+          ]
+        },
+        {
+          "text": "Clothing changed with weather, work, fashion, income and politics. Visual research tracks representations of Manchu women’s hair and dress across Chinese, Japanese, Manchu and Western sources into the 1940s. That evidence warns against dressing everyone in one timeless costume. Padded winter layers were practical; identity was never stitched from one pattern.",
+          "sourceIds": [
+            "man-dress"
+          ]
+        },
+        {
+          "text": "Radio and film offered entertainment, jobs and propaganda at once. Listeners could hear more than one language; Chinese filmmakers made dialogue features for Chinese audiences while negotiating censorship and commercial taste. Viewers sometimes wanted a good story more than a lecture. Empires, like parents, can discover that a captive audience is still a critic.",
+          "sourceIds": [
+            "man-radio",
+            "man-film"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "School days, printed words and culture under supervision",
+      "items": [
+        {
+          "text": "School access was unequal by location, ethnicity, gender and family income. Colonial officials expanded institutions while also using classrooms to teach loyalty. Some Japanese educators promoted child-centered language lessons rooted in ordinary life; military orthodoxy kept pressing harder. A textbook about breakfast could still be part of an argument about empire.",
+          "sourceIds": [
+            "man-school"
+          ]
+        },
+        {
+          "text": "Girls’ secondary schooling mixed literacy and vocational training with lessons about domestic service, motherhood and sacrifice to the state. Mongol pupils were asked to clean, mend screens and repair kangs; teachers offered Japanese dances. The girls learned real skills, but the curriculum imagined their education flowing onward to husbands, fathers and children.",
+          "sourceIds": [
+            "man-girls"
+          ]
+        },
+        {
+          "text": "Authentic written sample: “創立滿洲國” (modern Mandarin pinyin: chuànglì Mǎnzhōuguó) means “establish the State of Manchuria.” It appears in the 1 March 1932 founding proclamation in traditional Chinese characters. This is the regime speaking in an official document, not proof that thirty million residents agreed with what the document claimed.",
+          "sourceIds": [
+            "man-writing"
+          ]
+        },
+        {
+          "text": "The Manchuria Film Association employed Chinese actors, writers, directors and technicians to make Chinese-language entertainment. They worked inside a Japanese-financed propaganda institution but still argued over stories, dialogue and technique. Skills and professional networks survived the regime; some workers continued in postwar socialist cinema after the studio changed political owners.",
+          "sourceIds": [
+            "man-film"
+          ]
+        },
+        {
+          "text": "Radio planners hoped dual-language broadcasting would make a new “Manchurian” identity, yet reception and participation fell short of official ambition. A family might hear music, news, advertising and orders from the same box. The technology widened a public sphere while giving the state another voice at the dinner table.",
+          "sourceIds": [
+            "man-radio"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doctors, nurses, plague control and medical crimes",
+      "items": [
+        {
+          "text": "Pneumonic plague began in the region in late 1920 and lasted into 1921. The historical study counts more than 9,300 deaths, over half in Harbin. Russian and Chinese districts had separate authorities, so disease control also became a struggle over jurisdiction, movement and whose neighborhood received which rules.",
+          "sourceIds": [
+            "man-plague"
+          ]
+        },
+        {
+          "text": "Manchukuo Red Cross hospitals offered mobile clinics, ambulances, home nursing, maternity and child care; nurses also served primary schools. Those services helped real patients. The organization simultaneously supported the Kwantung Army’s nation-building and later wartime mobilization, so a bandage and a propaganda poster could share an institution.",
+          "sourceIds": [
+            "man-redcross"
+          ]
+        },
+        {
+          "text": "Colonial medical colleges trained practitioners and produced research, but power shaped whose body counted as protected. Scholarship documents unethical experimentation and dissections involving Chinese people before Unit 731’s worst crimes. “Modern medicine” is not automatically humane; methods, consent and the value assigned to a patient’s life matter.",
+          "sourceIds": [
+            "man-colonial-med"
+          ]
+        },
+        {
+          "text": "Unit 731 near Harbin deliberately infected prisoners and civilians, conducted lethal experiments and developed biological weapons. Victims included Chinese people and others held without consent; accurate totals may never be known because evidence and prisoners were destroyed in 1945. This was organized atrocity, not an unfortunate medical mistake.",
+          "sourceIds": [
+            "man-unit731"
+          ]
+        },
+        {
+          "text": "After the war, U.S. officials traded protection from prosecution for data from Japanese biological-warfare researchers. That decision denied justice and helped bury victims’ stories. A scientific notebook produced through torture does not become ethical because another government wants its results; the cover-up belongs inside the history of medicine too.",
+          "sourceIds": [
+            "man-unit731"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Water, toilets, cleanliness and postwar campaigns",
+      "items": [
+        {
+          "text": "Manchukuo promoted modern avenues and showcase buildings, but ordinary accounts describe housing shortages, dirty water, waste and inadequate sanitation. Infrastructure differed sharply between planned districts and poorer neighborhoods. A grand boulevard is easy to photograph; the queue at a shared pump or latrine is where urban modernity receives its less glamorous exam.",
+          "sourceIds": [
+            "man-everyday"
+          ]
+        },
+        {
+          "text": "The early PRC made “water improvement” part of Patriotic Health Campaigns: protect household supplies, improve wells, spread hygiene information and reduce waterborne disease. The national review cannot prove identical implementation in every Northeast village, but it identifies the program residents encountered and the practical problem officials meant to solve.",
+          "sourceIds": [
+            "man-water"
+          ]
+        },
+        {
+          "text": "Campaigns also targeted rubbish, flies, rats, mosquitoes and toilets. Some communities built latrines and composted night soil before using it as fertilizer, reducing parasite exposure when done properly. That is not a glamorous discovery, but preventing feces from delivering yesterday’s dinner guests a fresh crop of worms is a serious public-health achievement.",
+          "sourceIds": [
+            "man-mortality"
+          ]
+        },
+        {
+          "text": "Posters taught families to clean homes and kitchens, stop spitting, vaccinate and recognize disease. Pictures could communicate where literacy was limited. Campaigns expanded prevention, yet politics and mass pressure shaped participation, and services remained uneven. Sweeping a lane helped; it could not substitute for trained staff, medicine or safe pipes.",
+          "sourceIds": [
+            "man-health"
+          ]
+        },
+        {
+          "text": "In 1958 the Great Leap pulled labor toward crash industrial and collective projects as food production and distribution deteriorated. The Northeast’s recorded famine mortality was generally below the worst-hit provinces, partly because strategic urban and industrial populations had stronger claims on grain. “Less catastrophic” remains a grim comparison, not a fun fact.",
+          "sourceIds": [
+            "man-famine"
+          ]
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "status": "transformation",
+    "year": 1960,
+    "text": "Nothing called “Manchuria” fell in 1960. The atlas merely merges this regional polygon into china. By then Liaoning, Jilin, Heilongjiang and adjoining areas were governed within the People’s Republic, families and factories continued, and the Great Leap famine was still unfolding. The earlier political ending came in 1945, when Soviet invasion destroyed Manchukuo; even that did not end the region’s communities or settle control, because civil war followed. Treat 1960 as a database handoff and 1945 as a regime collapse, not as the disappearance of a place or a people.",
+    "sourceIds": [
+      "man-map1960",
+      "man-frus1945",
+      "man-famine"
+    ]
+  },
+  "sources": [
+    {
+      "id": "man-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json"
+    },
+    {
+      "id": "man-map1914",
+      "title": "Human History Map world-1914 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json"
+    },
+    {
+      "id": "man-map1920",
+      "title": "Human History Map world-1920 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1920.json"
+    },
+    {
+      "id": "man-map1930",
+      "title": "Human History Map world-1930 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json"
+    },
+    {
+      "id": "man-map1938",
+      "title": "Human History Map world-1938 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json"
+    },
+    {
+      "id": "man-map1945",
+      "title": "Human History Map world-1945 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json"
+    },
+    {
+      "id": "man-map1960",
+      "title": "Human History Map world-1960 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json"
+    },
+    {
+      "id": "man-overview",
+      "title": "The History of Manchuria, 1840 to 1948",
+      "url": "https://www.cambridge.org/core/books/history-of-manchuria-18401948/FC5D46167EE8766A1F1013D36B7127C0/listing"
+    },
+    {
+      "id": "man-loc",
+      "title": "Library of Congress, China: A Country Study",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ch/chinacountrystud00word/chinacountrystud00word.pdf"
+    },
+    {
+      "id": "man-plague",
+      "title": "The Second Pneumonic Plague Epidemic in Manchuria, 1920 to 21",
+      "url": "https://kiss.kstudy.com/Detail/Ar?key=3759218"
+    },
+    {
+      "id": "man-mukden",
+      "title": "Office of the Historian, The Mukden Incident and Stimson Doctrine",
+      "url": "https://history.state.gov/milestones/1921-1936/mukden-incident"
+    },
+    {
+      "id": "man-frus1931",
+      "title": "U.S. Consul General at Mukden report, 26 September 1931",
+      "url": "https://history.state.gov/historicaldocuments/frus1931v03/d82"
+    },
+    {
+      "id": "man-lytton",
+      "title": "Library of Congress, Lytton Commission report on Manchuria",
+      "url": "https://www.loc.gov/item/2021666890/"
+    },
+    {
+      "id": "man-duara",
+      "title": "New Imperialism and the Post-Colonial Developmental State: Manchukuo in Comparative Perspective",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/127ED75C0761D2FB6AF0442F213B96C5/S1557466006003925a.pdf/new_imperialism_and_the_postcolonial_developmental_state_manchukuo_in_comparative_perspective.pdf"
+    },
+    {
+      "id": "man-fascism",
+      "title": "When fascism met empire in Japanese-occupied Manchuria",
+      "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/when-fascism-met-empire-in-japaneseoccupied-manchuria/4D050824AA8EA411A0D9B1884935FB23"
+    },
+    {
+      "id": "man-soy",
+      "title": "South Manchurian Railway and soybean freight before the 1920s",
+      "url": "https://cir.nii.ac.jp/crid/1390282680117825280?lang=en"
+    },
+    {
+      "id": "man-village",
+      "title": "Formation of Southern Manchurian Villages and Farmer Life in the Manchukuo Period",
+      "url": "https://journal.kci.go.kr/manchuria/archive/articleView?artiId=ART002522430"
+    },
+    {
+      "id": "man-korean",
+      "title": "Korean collective farms in Manchukuo, 1932 to 1945",
+      "url": "https://peasantstudies.ru/en/eng/journal/2022-7-4-en/korean-collective-farms-in-manchukuo-1932-1945"
+    },
+    {
+      "id": "man-settlers",
+      "title": "Victims of Colonialism? Japanese Agrarian Settlers in Manchukuo and Their Repatriation",
+      "url": "https://apjjf.org/mariko-asano-tamanoi/3032/article"
+    },
+    {
+      "id": "man-family-reg",
+      "title": "Identification of Japanese Subjects in Manchukuo",
+      "url": "https://www.jstage.jst.go.jp/article/asianstudies/56/3/56_1/_article"
+    },
+    {
+      "id": "man-everyday",
+      "title": "Everyday life in the puppet state: ordinary experiences in Manchukuo",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/22326/"
+    },
+    {
+      "id": "man-kang",
+      "title": "Traditional Manchu residence and the Wanzi kang",
+      "url": "https://www.jstage.jst.go.jp/article/aija/83/749/83_1193/_article/-char/en"
+    },
+    {
+      "id": "man-dress",
+      "title": "Dressing up the Manchu Way: women’s hair and dress, 1850s to 1940s",
+      "url": "https://soas-repository.worktribe.com/output/846127"
+    },
+    {
+      "id": "man-girls",
+      "title": "Secondary Education for Girls under Japanese Occupation: Mongols in Manchukuo",
+      "url": "https://www.waseda.jp/fedu/iase/assets/uploads/2022/03/174bd62afc28be7a53ebab8433a1176d.pdf"
+    },
+    {
+      "id": "man-school",
+      "title": "The Word Is Mightier than the Throne: Colonial Education in Manchukuo",
+      "url": "https://doi.org/10.1017/S002191180999009X"
+    },
+    {
+      "id": "man-radio",
+      "title": "Propaganda Warfare and Radio Broadcasting in Manchukuo",
+      "url": "https://journal.kci.go.kr/manchuria/archive/articleView?artiId=ART001517947"
+    },
+    {
+      "id": "man-film",
+      "title": "Colonial Tactics and Everyday Life: Workers of the Manchuria Film Association",
+      "url": "https://www.jstor.org/stable/j.ctv310vq5k"
+    },
+    {
+      "id": "man-writing",
+      "title": "National Library of China scan, Manchukuo State-Founding Proclamation",
+      "url": "https://commons.wikimedia.org/wiki/File:NLC462-h-008001-5543_%E6%BB%BF%E6%B4%B2%E5%9C%8B%E5%BB%BA%E5%9C%8B%E5%AE%A3%E8%A8%80.pdf"
+    },
+    {
+      "id": "man-redcross",
+      "title": "The Manchukuo Red Cross Society and the Kwantung Army’s nation-building project",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EF5D77101BCB78F5D6C508F4427023A5/S1557466025100119a.pdf/manchukuo_red_cross_society_and_the_kwantung_armys_nationbuilding_project_in_manchuria_19381945.pdf"
+    },
+    {
+      "id": "man-colonial-med",
+      "title": "Bodies in the Service of the Japanese Empire: Colonial Medicine in Manchuria",
+      "url": "https://www.cambridge.org/core/journals/asia-pacific-journal/article/bodies-in-the-service-of-the-japanese-empire-colonial-medicine-in-manchuria/F4E3C80AF6E352AD7608DBD1EF941D44"
+    },
+    {
+      "id": "man-unit731",
+      "title": "United States Responses to Japanese Wartime Inhuman Experimentation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4487829/"
+    },
+    {
+      "id": "man-frus1945",
+      "title": "Soviet statement on forces in Manchuria, 21 December 1945",
+      "url": "https://history.state.gov/historicaldocuments/frus1945v07/d591"
+    },
+    {
+      "id": "man-frus1946",
+      "title": "U.S. Embassy report on Communist statement about Manchuria, February 1946",
+      "url": "https://history.state.gov/historicaldocuments/frus1946v09/d210"
+    },
+    {
+      "id": "man-worldbank",
+      "title": "World Bank, Chinese industrial technology in the First Five-Year Plan",
+      "url": "https://documents1.worldbank.org/curated/en/702781468215980760/pdf/multi0page.pdf"
+    },
+    {
+      "id": "man-health",
+      "title": "National Library of Medicine, Chinese public-health posters",
+      "url": "https://www.nlm.nih.gov/hmd/topics/chinese-posters/index.html"
+    },
+    {
+      "id": "man-water",
+      "title": "Water Supply Improvement and Health Promotion Campaigns in Rural China, 1949 to 2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8393082/"
+    },
+    {
+      "id": "man-mortality",
+      "title": "An exploration of China’s mortality decline under Mao, 1950 to 80",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4331212/"
+    },
+    {
+      "id": "man-famine",
+      "title": "Food Availability, Entitlements and the Chinese Famine of 1959 to 61",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1468-0297.00494"
+    }
+  ]
+}
