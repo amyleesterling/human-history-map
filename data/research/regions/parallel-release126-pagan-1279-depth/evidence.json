@@ -1,0 +1,825 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release126-pagan-1279 research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "p1279-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository records checked: pagan (900 to 1100), bagan (1200 to 1279), and pagan-1279 (1279 to 1492) are three separate imported ids. The target is not aliased to either earlier record."
+    },
+    {
+      "id": "p1279-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact target record checked before writing: pagan-1279 is an approximate state record with three border intervals and no card; pagan and bagan already point to distinct cards."
+    },
+    {
+      "id": "p1279-map1100",
+      "title": "Human History Map world-1100 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Decoded predecessor seam. The exact target is absent; the separate earlier pagan record has already ended at this snapshot."
+    },
+    {
+      "id": "p1279-map1200",
+      "title": "Human History Map world-1200 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded predecessor seam. The exact target is absent and the separate bagan feature is present."
+    },
+    {
+      "id": "p1279-map1279",
+      "title": "Human History Map world-1279 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded exact target feature: one 72-position Polygon with a huge footprint containing Bagan, Ava, Pegu, Mrauk U, Chittagong and Mong Mao."
+    },
+    {
+      "id": "p1279-map1300",
+      "title": "Human History Map world-1300 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Decoded exact target feature: the same 72-position Polygon and coordinate hash as 1279, despite the conventional 1297 end of Pagan rule."
+    },
+    {
+      "id": "p1279-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded exact target feature: one 72-position Polygon with only tiny coordinate changes; the same audited centers remain inside."
+    },
+    {
+      "id": "p1279-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded ending seam. The exact target is absent and a separate pegu feature begins."
+    },
+    {
+      "id": "p1279-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded post-seam check. The exact target remains absent while the separately indexed pegu feature continues."
+    },
+    {
+      "id": "p1279-overview",
+      "title": "Michael Aung-Thwin: Myanmar in the Fifteenth Century",
+      "url": "https://uhpress.hawaii.edu/title/myanmar-in-the-fifteenth-century-a-tale-of-two-kingdoms/",
+      "note": "University of Hawai‘i Press description used only for the overview and short override summary: Pagan’s political decline, several successor centers, and the rise of inland Ava and maritime Pegu."
+    },
+    {
+      "id": "p1279-two-kingdoms",
+      "title": "A tale of two kingdoms: Ava and Pegu in the fifteenth century",
+      "url": "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/abs/tale-of-two-kingdoms-ava-and-pegu-in-the-fifteenth-century/EDEB898376FB52AC8A578E68799A6DE4",
+      "note": "Peer-reviewed Journal of Southeast Asian Studies synthesis used for Ava and Pegu chronology and the upstream agrarian versus downstream commercial relationship."
+    },
+    {
+      "id": "p1279-conquest",
+      "title": "Richard M. Cooler: Introduction to the Art and Culture of Burma",
+      "url": "https://seasite.niu.edu/burmese/Cooler/Intro/BurmaArt_Intro.htm",
+      "note": "Northern Illinois University art-history text used for the limited reach of the Mongol incursions, the political collapse, river transport, and irrigated dry-zone rice."
+    },
+    {
+      "id": "p1279-myin",
+      "title": "Aye Chan: Burma, Shan Domination in the Ava Period (c. AD 1310 to 1555)",
+      "url": "https://thesiamsociety.org/wp-content/uploads/2006/03/JSS_094_0d_AyeChan_BurmaShanDominationInAvaPeriod.pdf",
+      "note": "Peer-reviewed Journal of the Siam Society study used for the 1297 Myinsaing takeover, the 1301 siege and withdrawal, and the breakup of Pagan authority into successor centers."
+    },
+    {
+      "id": "p1279-thantun",
+      "title": "Than Tun: History of Burma, A.D. 1300 to 1400",
+      "url": "https://www.uclmyanmar.org/wp-content/uploads/2016/01/History-of-Burma-AD-1300-1400.pdf",
+      "note": "Inscription-based Journal of the Burma Research Society article, checked in the cached scan on printed pages 119 to 120 and 128 to 132, used for the 1297 ceremony and selected fourteenth-century food, famine and repair evidence."
+    },
+    {
+      "id": "p1279-indigenous",
+      "title": "Hla Pe: Observations on Indigenous Sources for Burmese History",
+      "url": "https://www.cambridge.org/core/books/abs/burma/observations-on-some-of-the-indigenous-sources-for-burmese-history-down-to-1886/1E1A08A01E5E024442BDC127F78214A6",
+      "note": "Cambridge/ISEAS chapter used for the Myinsaing to Sagaing to Pinya and Ava chronological divisions and for the elite, dedicatory bias of surviving inscriptions."
+    },
+    {
+      "id": "p1279-art",
+      "title": "Buddhist Art of Myanmar: After Pagan",
+      "url": "https://cdn.angkordatabase.asia/libs/docs/publications/buddhist-art-of-myanmar/Buddhist_Art_of_Myanmar_Asia_Society_2015.pdf",
+      "note": "Asia Society/Yale catalogue, especially printed pages 65 to 69, used for Bagan’s continued sacred role, Ava and Hanthawaddy art, Dhammazedi, trade goods and period-aware evidence limits."
+    },
+    {
+      "id": "p1279-faultless",
+      "title": "A Faultless Science: Dandin and Dharmadasa in Burma and Bengal",
+      "url": "https://academic.oup.com/book/45656/chapter/398026950",
+      "note": "Oxford Academic chapter used for the 1442 Pagan monastery inscription: the court-related donor couple, sale of the consort’s hair, several hundred donated texts, and works on grammar, poetics, medicine and other sciences."
+    },
+    {
+      "id": "p1279-pali-library",
+      "title": "Mabel Haynes Bode: The Pali Literature of Burma",
+      "url": "https://www.buddhismdata.org/files/download/ndoc1_file_8b487be204ce6452e2ae17049304b502.pdf",
+      "note": "Pali Text Society monograph used for the 1442 Pagan library donation, its royal donor couple, and its catalogued works on grammar, poetics, medicine and other branches of learning."
+    },
+    {
+      "id": "p1279-kalyani",
+      "title": "The Kalyānī inscriptions of King Dhammaceti: 1892 text and translation",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/The_Kaly%C4%81n%C4%AB_inscriptions_erected_by_King_Dhammaceti_at_Pegu_in_1476_A._D._Text_and_translation_%28IA_cu31924011724808%29.pdf",
+      "note": "Public-domain Government Printing edition used for the exact Pali opening and translation, the 1476 setting, novice literacy rules and the mission of twenty-two senior monks to Sri Lanka."
+    },
+    {
+      "id": "p1279-pali-arena",
+      "title": "Buddhist-Inflected Sovereignties across the Indian Ocean",
+      "url": "https://manifold.uhpress.hawaii.edu/system/actioncallout/4/6/6/4666f480-4a11-4701-b98c-2b3ba1adc22d/attachment/183b3676b0fe713737165dcf74fd4f45.pdf",
+      "note": "Open-access University of Hawai‘i Press scholarship used for the Kalyānī stones’ manuscript and stone-fragment validation, Haṃsavatī’s maritime links, and the Pali/Mon inscriptional context."
+    },
+    {
+      "id": "p1279-unesco-list",
+      "title": "UNESCO World Heritage Centre: Bagan",
+      "url": "https://whc.unesco.org/en/list/1588/",
+      "note": "World Heritage record used for continuing worship, merit-making, farming, living communities and the layered sacred landscape; modern continuity is not treated as proof of unchanged medieval government."
+    },
+    {
+      "id": "p1279-unesco-nomination",
+      "title": "UNESCO Bagan World Heritage nomination text",
+      "url": "https://whc.unesco.org/document/166328",
+      "note": "State Party nomination published by UNESCO used for the explicit archaeological limits at Bagan and evidence that Otein Taung supplied fourteenth-century inhabitants with household utensils, roof tiles and well linings."
+    },
+    {
+      "id": "p1279-latrine",
+      "title": "The Origins of Bagan: New Dates and Old Inhabitants",
+      "url": "https://core.ac.uk/download/pdf/5105415.pdf",
+      "note": "Peer-reviewed Asian Perspectives article used narrowly for the tentative interpretation of vertically stacked earthenware tubes as latrine linings and the absence of a secure target-period date."
+    },
+    {
+      "id": "p1279-twante",
+      "title": "NUS Museum: From the Ashes, Reviving Myanmar Celadon Ceramics",
+      "url": "https://nus.edu.sg/museum/pdf/2017/NUSM_FromTheAshes.pdf",
+      "note": "National University of Singapore Museum publication used for fifteenth-century Twante kiln technology, forms, river transport, huge production and far-reaching ceramic finds, with its dating cautions preserved."
+    },
+    {
+      "id": "p1279-earthenware",
+      "title": "Myo Thant Tyn and Thaw Kaung: Myanmar Historic Earthenware",
+      "url": "https://www.uclmyanmar.org/wp-content/uploads/2016/01/12-Myanmar-Historic-Earthenware.pdf",
+      "note": "Scholarly archaeological survey used for the 1362 dated glazed jar, kiln furniture, evolving production technology and glazed wares at fifteenth-century Mrauk U."
+    },
+    {
+      "id": "p1279-painting",
+      "title": "Richard M. Cooler: The Post Pagan Period, Part 1",
+      "url": "https://seasite.niu.edu/burmese/Cooler/Chapter_4/Part1/post_pagan_period__part_1.htm",
+      "note": "Northern Illinois University art-history text used for Ava’s location by the Kyaukse rice zone and for the qualified evidence of paintings showing station-marked dress and everyday work."
+    },
+    {
+      "id": "p1279-shwe-creek",
+      "title": "Preliminary Analysis of Earthenware Production from Shwe Creek",
+      "url": "https://so06.tci-thaijo.org/index.php/pub_jss/article/view/284585",
+      "note": "Peer-reviewed Journal of the Siam Society article used for standardized utilitarian pottery and the authors’ cautious models of attached and market production in eleventh- to fourteenth-century Bagan."
+    },
+    {
+      "id": "p1279-medicine",
+      "title": "Myanmar Ministry of Health: Milestones of Traditional Medicine",
+      "url": "https://www.dtm.gov.mm/sites/default/files/Book-%20Minlestones%20of%20TM%20in%20Myanmar%20%28eng%20version%29.pdf",
+      "note": "Government historical survey used alongside the 1442 inscription study for the narrow fact that Ava-era medicinal and astronomical treatises were recorded; it is not used to invent specific treatments or access."
+    },
+    {
+      "id": "p1279-shinsawbu",
+      "title": "Than Tun: The Royal Orders of Burma, A.D. 1598 to 1885, Part Two",
+      "url": "https://www.myanmar-law-library.org/IMG/pdf/than_tun-1985-royal_orders_of_burma-02-en_bu-red.pdf",
+      "note": "Scholarly compilation used only for its introductory chronology of Old Mon inscriptions recording Queen Shin Sawbu’s 1455 land donation and 1469 joint repairs with Dhammazedi."
+    }
+  ],
+  "entities": [
+    {
+      "id": "pagan-1279",
+      "card": "data/cards/pagan-1279.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "p1279-overview",
+            "p1279-index",
+            "p1279-map1279",
+            "p1279-map1492"
+          ],
+          "locator": "University of Hawai‘i Press description used only for the overview and short override summary: Pagan’s political decline, several successor centers, and the rise of inland Ava and maritime Pegu. Exact repository records checked: pagan (900 to 1100), bagan (1200 to 1279), and pagan-1279 (1279 to 1492) are three separate imported ids. The target is not aliased to either earlier record. Decoded exact target feature: one 72-position Polygon with a huge footprint containing Bagan, Ava, Pegu, Mrauk U, Chittagong and Mong Mao. Decoded ending seam. The exact target is absent and a separate pegu feature begins.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "p1279-conquest"
+          ],
+          "locator": "Northern Illinois University art-history text used for the limited reach of the Mongol incursions, the political collapse, river transport, and irrigated dry-zone rice.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1297
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "p1279-myin"
+          ],
+          "locator": "Peer-reviewed Journal of the Siam Society study used for the 1297 Myinsaing takeover, the 1301 siege and withdrawal, and the breakup of Pagan authority into successor centers.",
+          "dateScope": {
+            "from": 1297,
+            "to": 1313
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "p1279-indigenous"
+          ],
+          "locator": "Cambridge/ISEAS chapter used for the Myinsaing to Sagaing to Pinya and Ava chronological divisions and for the elite, dedicatory bias of surviving inscriptions.",
+          "dateScope": {
+            "from": 1313,
+            "to": 1364
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "p1279-two-kingdoms"
+          ],
+          "locator": "Peer-reviewed Journal of Southeast Asian Studies synthesis used for Ava and Pegu chronology and the upstream agrarian versus downstream commercial relationship.",
+          "dateScope": {
+            "from": 1364,
+            "to": 1426
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "p1279-two-kingdoms"
+          ],
+          "locator": "Peer-reviewed Journal of Southeast Asian Studies synthesis used for Ava and Pegu chronology and the upstream agrarian versus downstream commercial relationship.",
+          "dateScope": {
+            "from": 1426,
+            "to": 1472
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "p1279-pali-arena"
+          ],
+          "locator": "Open-access University of Hawai‘i Press scholarship used for the Kalyānī stones’ manuscript and stone-fragment validation, Haṃsavatī’s maritime links, and the Pali/Mon inscriptional context.",
+          "dateScope": {
+            "from": 1472,
+            "to": 1492
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "p1279-map1279"
+          ],
+          "locator": "Exact 1279 feature count, type, position count, decoded bounds and point-in-polygon audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "p1279-map1279",
+            "p1279-map1300"
+          ],
+          "locator": "Equal coordinate hash and point tests across 1279 and 1300; history is supported elsewhere.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "p1279-map1400"
+          ],
+          "locator": "Exact 1400 type, positions, coordinate hash and repeated point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "p1279-map1492",
+            "p1279-map1500"
+          ],
+          "locator": "Exact-id absence and separate pegu feature at the 1492 and 1500 seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "p1279-index",
+            "p1279-coverage",
+            "p1279-map1100",
+            "p1279-map1200"
+          ],
+          "locator": "Exact index lifetimes, coverage records, target card state and predecessor snapshot checks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "p1279-conquest"
+          ],
+          "locator": "NIU introduction on limited Mongol penetration, no occupation of Pagan and political effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "p1279-myin",
+            "p1279-thantun"
+          ],
+          "locator": "Aye Chan on Kyawswa’s titular rule and 1297 deposition; Than Tun printed pages 119 to 120 on recognition and the inscriptional ceremony date.",
+          "dateScope": {
+            "year": 1297
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "p1279-myin"
+          ],
+          "locator": "Journal of the Siam Society pages 35 to 36 on Myinsaing’s location, Kyaukse resources and the siege dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "p1279-indigenous"
+          ],
+          "locator": "Chapter chronology and explanation that period names are the cities from which dynasties began.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "p1279-indigenous"
+          ],
+          "locator": "Cambridge chapter on dedicatory inscriptions, religious motives and elite authorship; evidentiary inference labelled.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "p1279-painting",
+            "p1279-two-kingdoms"
+          ],
+          "locator": "NIU site explanation and peer-reviewed upstream-downstream political-economic comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "p1279-two-kingdoms"
+          ],
+          "locator": "Article synthesis of Ava as upstream continuation and Pegu as a distinct downstream kingdom.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "p1279-map1279",
+            "p1279-map1400"
+          ],
+          "locator": "Repeated point tests at 1279 and 1400, interpreted only as imported display geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "p1279-indigenous"
+          ],
+          "locator": "Cambridge source survey on the religious, dedicatory and elite bias of surviving inscriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "p1279-index",
+            "p1279-art"
+          ],
+          "locator": "Atlas lifetime paired with the catalogue’s multi-state successor framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "p1279-unesco-list"
+          ],
+          "locator": "UNESCO record on the living sacred landscape, communities and continuing merit-making traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "p1279-faultless"
+          ],
+          "locator": "Oxford chapter, paragraphs on the 1442 donors, monastery and purchase funded by the consort’s hair.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "p1279-faultless"
+          ],
+          "locator": "Oxford description of the monastery donation of lands, slaves and several hundred texts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "p1279-kalyani"
+          ],
+          "locator": "Kalyānī text pages 72 to 73 on the embassy, ships, gifts and reordination mission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "p1279-pali-arena"
+          ],
+          "locator": "Open-access analysis of ten stones, language division, local details and centralized ritual boundaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "p1279-conquest"
+          ],
+          "locator": "NIU introduction on dry-zone irrigation and Kyaukse’s agricultural importance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "p1279-thantun"
+          ],
+          "locator": "Printed pages 129 to 130 on famine, the widow’s distributions and measured rice meals.",
+          "dateScope": {
+            "year": 1375
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "p1279-thantun"
+          ],
+          "locator": "Printed pages 131 to 132 on transaction feasts and rice-and-curry provisions for monks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "p1279-unesco-nomination"
+          ],
+          "locator": "Nomination archaeology section on fourteenth-century inheritors, utensils, roof tiles and well linings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "p1279-shwe-creek"
+          ],
+          "locator": "Peer-reviewed preliminary pottery analysis supports both the material evidence and the stated limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "p1279-pali-library"
+          ],
+          "locator": "Pali Text Society account identifying both donors and their royal relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "p1279-shinsawbu"
+          ],
+          "locator": "Introductory Old Mon inscription chronology for the queen’s 1455 donation and 1469 repairs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "p1279-pali-library"
+          ],
+          "locator": "Pali Text Society account of the donors, library, endowed property and enslaved people; social limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "p1279-kalyani"
+          ],
+          "locator": "Printed pages 41 to 42 on candidates, parents, relatives, donors and royal enforcement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "p1279-medicine"
+          ],
+          "locator": "Medical-history source supports the textual tradition; undocumented household care is explicitly withheld.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "p1279-unesco-nomination"
+          ],
+          "locator": "Nomination statement that habitation excavation is limited, plus dated domestic and building supplies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "p1279-painting"
+          ],
+          "locator": "NIU discussion of local settings, status dress and commoner activities in Ava paintings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "p1279-shwe-creek"
+          ],
+          "locator": "Journal abstract on standardization and the two cautious production models.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "p1279-earthenware"
+          ],
+          "locator": "Printed page 97 on the dated jar, varied cross-draft kilns and firing supports.",
+          "dateScope": {
+            "year": 1362
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "p1279-twante"
+          ],
+          "locator": "NUS pages 14 to 15 on kiln construction, 54 forms, pontils and explicit dating caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "p1279-kalyani"
+          ],
+          "locator": "Printed pages 41 to 42, exact instruction for letters, refuges and precepts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "p1279-faultless"
+          ],
+          "locator": "Oxford paragraphs on the inventory, categories and intended learned readers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "p1279-pali-library",
+            "p1279-medicine"
+          ],
+          "locator": "1442 library categories corroborated by the ministry survey; clinical claims explicitly withheld.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "p1279-pali-library",
+            "p1279-painting"
+          ],
+          "locator": "Documented poetics and visual performance contexts; lack of secure children’s-game evidence made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "p1279-kalyani"
+          ],
+          "locator": "Opening Pali at printed page 1, translation page 46 and the inscription’s 1476 context.",
+          "dateScope": {
+            "year": 1476
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "p1279-art"
+          ],
+          "locator": "Catalogue printed page 66 list of export goods, Indian textiles and overland cotton and silk trade.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "p1279-twante"
+          ],
+          "locator": "NUS pages 14 to 15 on river access, production scale, Julfar and Pandanan finds and dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "p1279-earthenware"
+          ],
+          "locator": "Printed pages 97 to 98 on staged kiln evolution, dated jar and Mrauk U glazed architectural and domestic wares.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "p1279-pali-arena"
+          ],
+          "locator": "Open-access chapter on Pathein access, Coromandel contacts, ships, gifts and Kalyānī reordination.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "p1279-art"
+          ],
+          "locator": "Catalogue printed pages 68 to 69 on distinct Ava image style, marble and locally framed painting traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "p1279-conquest",
+            "p1279-unesco-nomination"
+          ],
+          "locator": "NIU river and irrigation overview paired with archaeological well-lining evidence; health limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "p1279-latrine"
+          ],
+          "locator": "Asian Perspectives Tiles and Tubes section on vertical stacks, measurements, interpretation and dating limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "p1279-unesco-nomination",
+            "p1279-latrine"
+          ],
+          "locator": "Nomination’s fragmentary habitation archaeology and the tentative undated latrine interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "p1279-medicine"
+          ],
+          "locator": "Ministry survey supports textual traditions; clinical and household details are explicitly left unresolved.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "p1279-thantun"
+          ],
+          "locator": "Printed pages 128 to 130 on earthquake repair, abandoned cultivation, starvation and organized feeding.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "p1279-unesco-list",
+            "p1279-map1492"
+          ],
+          "locator": "World Heritage record used for continuing worship, merit-making, farming, living communities and the layered sacred landscape; modern continuity is not treated as proof of unchanged medieval government. Decoded ending seam. The exact target is absent and a separate pegu feature begins.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "pagan-1279",
+        "card": "cards/pagan-1279.json",
+        "dateBasis": "map_coverage",
+        "summary": "A broad atlas umbrella outlives Pagan’s 1297 political end and covers several successor kingdoms; Bagan’s sacred and community life continued.",
+        "fell": 1297
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "pagan-1279",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            91.41031410314105,
+            15.678100002398878,
+            101.0080100801008,
+            25.976153938044163
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "pagan-1279",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            91.41031410314105,
+            15.678100002398878,
+            101.0080100801008,
+            25.976153938044163
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "pagan-1279",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            91.41031410314105,
+            15.677759727436893,
+            101.0080100801008,
+            25.976718525130337
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id pagan-1279 is indexed circa 1279 to 1492 and occurs in the 1279, 1300 and 1400 snapshots. It is absent at 1200 and at the 1492 endpoint seam.",
+    "The 1279 and 1300 features are the same 72-position Polygon with coordinate hash e35027568fbae9667c146ca1904f4fa442f45033f58e65fae3b4fe19ecfbab0e. The 1400 version still has 72 positions and differs only slightly, with hash 4bdfa26ae5d77ae0aabe3828d71aa923b7f3e7e2d1b7917025cb3a56b3dc2c47.",
+    "All three target geometries contain Bagan, Kyaukse, Myinsaing, Pinya, Sagaing, Ava, Tagaung, Bhamo, Taungoo, Pegu, Martaban, Mrauk U, Chittagong, Yangon and Mong Mao, but not Chiang Mai. This is far broader than any defensible continuous Pagan sovereignty.",
+    "The historical Pagan royal state ended conventionally in 1297. Myinsaing, Pinya, Sagaing, Ava, Hanthawaddy-Pegu, Mrauk U and other polities are narrated as successors or neighbors, not relabelled as one Pagan empire.",
+    "The separately indexed pagan and bagan records already have cards for earlier intervals. They remain distinct; no appliesTo alias is added. A separate pegu id begins at the 1492 seam and is not absorbed into this card.",
+    "All bounds, hashes and point tests describe imported display geometry only; none establishes sovereignty, ethnicity, language, migration or modern territorial claims."
+  ]
+}
