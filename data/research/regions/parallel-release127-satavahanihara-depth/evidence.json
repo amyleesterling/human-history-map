@@ -1,0 +1,997 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release127-satavahanihara research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "sv-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported Satavahanihara identity, alias, approximate interval and separately indexed neighboring identities."
+    },
+    {
+      "id": "sv-mapbc100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Decoded predecessor snapshot used to confirm that the exact target is absent before its atlas interval."
+    },
+    {
+      "id": "sv-mapbc1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded first target geometry, coordinate hash, topology and named point tests."
+    },
+    {
+      "id": "sv-map100",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Decoded target geometry and simultaneous Saka Kingdom ownership of western Satavahana centers."
+    },
+    {
+      "id": "sv-map200",
+      "title": "Human History Map 200 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Decoded target geometry near the historical end of Satavahana imperial power."
+    },
+    {
+      "id": "sv-map300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Decoded unchanged target geometry after the dynasty had fragmented."
+    },
+    {
+      "id": "sv-map400",
+      "title": "Human History Map 400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Decoded shrunken target geometry and competing Gupta assignment of western and eastern centers."
+    },
+    {
+      "id": "sv-map500",
+      "title": "Human History Map 500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Decoded first snapshot without the exact target and later Vakataka, Gupta and Pallava point ownership."
+    },
+    {
+      "id": "sv-map600",
+      "title": "Human History Map 600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded later Chalukya and Pallava point ownership used only as distant regional continuity."
+    },
+    {
+      "id": "sv-bm-term",
+      "title": "British Museum, Satavahana dynasty",
+      "url": "https://www.britishmuseum.org/collection/term/x333441",
+      "note": "Museum chronology placing the Satavahana dynasty broadly between the second century BCE and third century CE."
+    },
+    {
+      "id": "sv-overview",
+      "title": "INFLIBNET, Satavahanas: Political History",
+      "url": "https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000829IC/P000927/M014494/ET/1457346455ET10.pdf",
+      "note": "University teaching module on debated origins, chronology, rulers, inscriptions, expansion and political decline."
+    },
+    {
+      "id": "sv-outlines",
+      "title": "INFLIBNET, Sunga, Kanva and Satavahana dynasties",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/sunga-kanva-and-satavahana-dynasties/",
+      "note": "University history chapter on the final rulers, early third-century fragmentation and emerging regional principalities."
+    },
+    {
+      "id": "sv-ollett",
+      "title": "Andrew Ollett, Language of the Snakes",
+      "url": "https://webfiles.ucpress.edu/oa/9780520968813_WEB.pdf",
+      "note": "Open access scholarly study of Prakrit, Sanskrit and the Myakadoni inscription naming satavahanihara."
+    },
+    {
+      "id": "sv-mirashi",
+      "title": "V. V. Mirashi, History and Inscriptions of the Satavahanas and Western Kshatrapas",
+      "url": "https://sahitya.marathi.gov.in/scans/The%20History%20and%20Inscriptions%20of%20The%20Satavahanas%20and%20The%20Western%20Kshatrapas.pdf",
+      "note": "Epigraphic corpus discussing Satavahanihara as a territorial division and warning against a homeland inference from the name alone."
+    },
+    {
+      "id": "sv-myakadoni",
+      "title": "Archaeological Survey of India, Excavations at Satanikota",
+      "url": "https://ignca.gov.in/Asi_data/73063.pdf",
+      "note": "Official archaeological report discussing the Myakadoni record and Satavahanihara as Satavahana ahara, or district."
+    },
+    {
+      "id": "sv-hiraha",
+      "title": "DHARMA, Hirahadagalli plates of Siva-Skandavarman",
+      "url": "https://dharmalekha.info/texts/INSPallava00003",
+      "note": "Digital critical edition and translation naming the province of Satāhani and listing grant shares, officials and exemptions."
+    },
+    {
+      "id": "sv-kni8",
+      "title": "DHARMA, Kanaganahalli inscription of Dhammasiri",
+      "url": "https://dharmalekha.info/texts/INSKnI00008",
+      "note": "Critical edition of a Prakrit Southern Brahmi inscription dated to regnal year 35 of Vasisthiputra Siri Pulumavi."
+    },
+    {
+      "id": "sv-kni14",
+      "title": "DHARMA, Kanaganahalli inscription of a merchant family",
+      "url": "https://dharmalekha.info/texts/INSKnI00014",
+      "note": "Critical edition recording a merchant family donation made with a mother, brothers and sons."
+    },
+    {
+      "id": "sv-kanheri-water",
+      "title": "DHARMA, Kanheri Cave 2 cistern inscription",
+      "url": "https://dharmalekha.info/texts/INSKI00004",
+      "note": "Critical edition identifying a cistern gift by a market councillor from Kalyan."
+    },
+    {
+      "id": "sv-kanheri-family",
+      "title": "DHARMA, Kanheri Cave 74 inscription",
+      "url": "https://dharmalekha.info/texts/INSKI00041",
+      "note": "Critical edition recording a cave donation with father, mother, brother and elders in the donor group."
+    },
+    {
+      "id": "sv-gautamiputra",
+      "title": "DHARMA, Kanaganahalli Gautamiputra memorial inscription",
+      "url": "https://dharmalekha.info/texts/INSKnI00406",
+      "note": "Critical edition of a royal eulogy for Gautamiputra Satakarni, useful with explicit genre caution."
+    },
+    {
+      "id": "sv-ncert-states",
+      "title": "NCERT, Kings, Farmers and Towns",
+      "url": "https://sathee.iitk.ac.in/ncert-books/class-12/themes-in-indian-history/chapter-02-kings-farmers-and-towns-early-states-and-economies/",
+      "note": "National textbook chapter on Satavahana power, inscriptions, agriculture, towns, guilds, trade and coin evidence."
+    },
+    {
+      "id": "sv-ncert-society",
+      "title": "NCERT, Kinship, Caste and Class",
+      "url": "https://sathee.iitk.ac.in/sathee-clat/student-corner/ncert-books/class-12/themes-in-indian-history/chapter-03-kinship-caste-and-class-early-societies/",
+      "note": "National textbook discussion of Satavahana matronymics, patrilineal succession, queens, gotras and social ideals."
+    },
+    {
+      "id": "sv-ignou-economy",
+      "title": "IGNOU, Society and Economy in the Deccan",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/67704/1/Block-1.pdf",
+      "note": "University distance learning synthesis of landholders, traders, guilds, women donors and economic change."
+    },
+    {
+      "id": "sv-ignou-trade",
+      "title": "IGNOU, Trade and Urban Centres",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/99921/1/Unit-7.pdf",
+      "note": "University unit on sreni guilds, merchants, craft organization, towns and links with religious institutions."
+    },
+    {
+      "id": "sv-periplus",
+      "title": "University of Washington, Periplus of the Erythraean Sea",
+      "url": "https://depts.washington.edu/silkroad/texts/periplus/periplus.html",
+      "note": "Translation of a first-century merchant account describing Barygaza, dangerous tides, inland Paithana and Tagara, and traded goods."
+    },
+    {
+      "id": "sv-periplus-context",
+      "title": "University of Athens, Periplus of the Erythraean Sea introduction",
+      "url": "https://periplous.arch.uoa.gr/texts/peripl_erythr/intro_en.html",
+      "note": "Academic introduction dating and contextualizing the anonymous Greek merchant guide and its western Indian ports."
+    },
+    {
+      "id": "sv-peddabankur",
+      "title": "Archaeological Survey of India, Indian Archaeology 1974-75: A Review",
+      "url": "https://nmma.nic.in/nmma/NAS1/nmma_doc/IAR/Indian%20Archaeology%201974-75%20A%20Review.pdf",
+      "note": "Official excavation summary for Satavahana levels at Peddabankur, including brick enclosures, well and drainage evidence."
+    },
+    {
+      "id": "sv-mungi",
+      "title": "Archaeological Survey of India, Indian Archaeology 1976-77: A Review",
+      "url": "https://www.asiaurangabadcircle.com/assets/files/publications/1976-1977.pdf",
+      "note": "Official excavation report listing charred crops recovered from Satavahana levels at Mungi."
+    },
+    {
+      "id": "sv-museum",
+      "title": "Museums of India, State Museum Telangana collection",
+      "url": "https://shop.museumsofindia.org/node/746",
+      "note": "Government museum collection description for regional Satavahana finds including beads, implements, combs, dice, figurines and ornaments."
+    },
+    {
+      "id": "sv-nmma-beads",
+      "title": "National Mission on Monuments and Antiquities, Peddabankur beads",
+      "url": "https://nmma.nic.in/nmma/exploreObject.do?object=42&pager.offset=127000",
+      "note": "Government object catalogue record for beads excavated at Peddabankur."
+    },
+    {
+      "id": "sv-nmma-figurines",
+      "title": "National Mission on Monuments and Antiquities, Peddabankur figurines",
+      "url": "https://nmma.nic.in/nmma/exploreObject.do?object=101&pager.offset=39500",
+      "note": "Government object catalogue record for terracotta human figurine fragments from Peddabankur."
+    },
+    {
+      "id": "sv-bm-amaravati",
+      "title": "British Museum, Power and patronage at Amaravati",
+      "url": "https://www.britishmuseum.org/blog/power-patronage-great-shrine-amaravati",
+      "note": "Museum research on Amaravati construction, recarving, Prakrit Brahmi donations, trade and varied patrons."
+    },
+    {
+      "id": "sv-bm-guide",
+      "title": "British Museum, Ancient India living traditions large print guide",
+      "url": "https://www.britishmuseum.org/exhibitions/ancient-india-living-traditions/ancient-india-living-traditions-large-print-guide",
+      "note": "Accessible museum guide identifying women and multigenerational family donors at Amaravati."
+    },
+    {
+      "id": "sv-bm-slab",
+      "title": "British Museum, Amaravati drum slab",
+      "url": "https://www.britishmuseum.org/collection/object/A_1880-0709-80",
+      "note": "Collection record for a limestone narrative stupa slab dated about 200 to 240 CE."
+    },
+    {
+      "id": "sv-met-earring",
+      "title": "Metropolitan Museum of Art, Satavahana ear ornament",
+      "url": "https://www.metmuseum.org/art/collection/search/39676",
+      "note": "Collection record for a first-century gold ear ornament with granulation and animal decoration."
+    },
+    {
+      "id": "sv-bm-coin",
+      "title": "British Museum, coin of Satakarni",
+      "url": "https://www.britishmuseum.org/collection/object/C_1889-0105-938",
+      "note": "Collection record for a late first-century copper alloy coin with elephant, tree, fish or moat and Ujjain symbols."
+    },
+    {
+      "id": "sv-kanaganahalli",
+      "title": "Wiley, Kanaganahalli",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/9781119399919.eahaa00327",
+      "note": "Specialist reference on the stupa, its first-century BCE to third-century CE development, named rulers and nun patron Dhammasiri."
+    },
+    {
+      "id": "sv-kshatrapa",
+      "title": "INFLIBNET, Western Kshatrapa Coinage",
+      "url": "https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000829IC/P001738/M023990/ET/1507699214P09-M12-WesternKshatrapaCoinage-AnIntroduction-ET.pdf",
+      "note": "University module on Kshatrapa chronology and Gautamiputra overstrikes of Nahapana silver coins."
+    },
+    {
+      "id": "sv-rudradaman",
+      "title": "INFLIBNET, Junagadh inscription of Rudradaman",
+      "url": "https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000829IC/P001689/M022045/ET/1504072596P08-M29-JunagadhInscriptionofRudradaman-ET.pdf",
+      "note": "University module translating and contextualizing Rudradaman first and his boast of twice defeating a Satakarni."
+    },
+    {
+      "id": "sv-medicine",
+      "title": "Anatomy in ancient India: a focus on the Susruta Samhita",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3039177/",
+      "note": "Peer reviewed overview of early Indian medical teaching, surgery traditions and uncertain textual dates."
+    },
+    {
+      "id": "sv-map-model",
+      "title": "Monica L. Smith, Territories, corridors, and networks",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/cplx.20173",
+      "note": "Archaeological model explaining why ancient states often worked through nodes and corridors rather than fixed surveyed borders."
+    },
+    {
+      "id": "sv-vakataka",
+      "title": "Corpus Inscriptionum Indicarum, Inscriptions of the Vakatakas",
+      "url": "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0046916/TVA_BOK_0046916_Corpus_Inscriptionum_Indicarum_Vol_5_1963.pdf",
+      "note": "Epigraphic corpus for the later and separately documented Vakataka dynasty of the Deccan."
+    }
+  ],
+  "entities": [
+    {
+      "id": "satavahanihara",
+      "card": "data/cards/satavahanihara.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "sv-bm-term",
+            "sv-ollett",
+            "sv-mapbc1",
+            "sv-map400"
+          ],
+          "locator": "Museum chronology placing the Satavahana dynasty broadly between the second century BCE and third century CE. Open access scholarly study of Prakrit, Sanskrit and the Myakadoni inscription naming satavahanihara. Decoded first target geometry, coordinate hash, topology and named point tests. Decoded shrunken target geometry and competing Gupta assignment of western and eastern centers.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "sv-overview"
+          ],
+          "locator": "University teaching module on debated origins, chronology, rulers, inscriptions, expansion and political decline.",
+          "dateScope": {
+            "from": -150,
+            "to": -50
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "sv-ncert-states",
+            "sv-mapbc1"
+          ],
+          "locator": "National textbook chapter on Satavahana power, inscriptions, agriculture, towns, guilds, trade and coin evidence. Decoded first target geometry, coordinate hash, topology and named point tests.",
+          "dateScope": {
+            "from": -50,
+            "to": 25
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "sv-periplus-context",
+            "sv-periplus"
+          ],
+          "locator": "Academic introduction dating and contextualizing the anonymous Greek merchant guide and its western Indian ports. Translation of a first-century merchant account describing Barygaza, dangerous tides, inland Paithana and Tagara, and traded goods.",
+          "dateScope": {
+            "from": 25,
+            "to": 75
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "sv-kshatrapa",
+            "sv-gautamiputra"
+          ],
+          "locator": "University module on Kshatrapa chronology and Gautamiputra overstrikes of Nahapana silver coins. Critical edition of a royal eulogy for Gautamiputra Satakarni, useful with explicit genre caution.",
+          "dateScope": {
+            "from": 75,
+            "to": 125
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "sv-myakadoni",
+            "sv-kni8"
+          ],
+          "locator": "Official archaeological report discussing the Myakadoni record and Satavahanihara as Satavahana ahara, or district. Critical edition of a Prakrit Southern Brahmi inscription dated to regnal year 35 of Vasisthiputra Siri Pulumavi.",
+          "dateScope": {
+            "from": 125,
+            "to": 175
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "sv-rudradaman"
+          ],
+          "locator": "University module translating and contextualizing Rudradaman first and his boast of twice defeating a Satakarni.",
+          "dateScope": {
+            "from": 175,
+            "to": 225
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "sv-outlines",
+            "sv-map300"
+          ],
+          "locator": "University history chapter on the final rulers, early third-century fragmentation and emerging regional principalities. Decoded unchanged target geometry after the dynasty had fragmented.",
+          "dateScope": {
+            "from": 225,
+            "to": 300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "sv-hiraha"
+          ],
+          "locator": "Digital critical edition and translation naming the province of Satāhani and listing grant shares, officials and exemptions.",
+          "dateScope": {
+            "from": 300,
+            "to": 400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "sv-vakataka",
+            "sv-map400",
+            "sv-map500"
+          ],
+          "locator": "Epigraphic corpus for the later and separately documented Vakataka dynasty of the Deccan. Decoded shrunken target geometry and competing Gupta assignment of western and eastern centers. Decoded first snapshot without the exact target and later Vakataka, Gupta and Pallava point ownership.",
+          "dateScope": {
+            "from": 400,
+            "to": 500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "sv-index",
+            "sv-mapbc100"
+          ],
+          "locator": "Exact index row, aliases, interval, predecessor absence and search for related ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "sv-mirashi",
+            "sv-myakadoni"
+          ],
+          "locator": "Territorial-name discussion and explicit warning against homeland inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "sv-mapbc1",
+            "sv-map100",
+            "sv-map200",
+            "sv-map300"
+          ],
+          "locator": "Decoded topology, bounds and identical coordinate hashes in four snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "sv-mapbc1",
+            "sv-map-model"
+          ],
+          "locator": "Named point-in-polygon audit and archaeological warning about fixed territorial borders.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "sv-map100",
+            "sv-map300",
+            "sv-map400"
+          ],
+          "locator": "Simultaneous point-owner tables, target shrinkage and related geometry audit.",
+          "dateScope": {
+            "year": 400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "sv-overview"
+          ],
+          "locator": "Chronology and origin debate in the political-history module.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "sv-ncert-society"
+          ],
+          "locator": "Satavahana matronymics and patrilineal succession discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "sv-gautamiputra"
+          ],
+          "locator": "Genre and territorial praise in the Gautamiputra memorial inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "sv-kshatrapa"
+          ],
+          "locator": "Nahapana overstrikes, chronology and limits of coin evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "sv-rudradaman"
+          ],
+          "locator": "Junagadh inscription translation and political context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "sv-mirashi"
+          ],
+          "locator": "Epigraphic discussion of the Myakadoni inscription and territorial division.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "sv-myakadoni"
+          ],
+          "locator": "Myakadoni inscription discussion, variant readings and tank record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "sv-hiraha"
+          ],
+          "locator": "Hirahadagalli lines 1 to 7 listing officials and agents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "sv-hiraha"
+          ],
+          "locator": "Hirahadagalli lines 27 to 40 and English translation of exemptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "sv-bm-coin"
+          ],
+          "locator": "Museum object record, materials, weight, date and designs.",
+          "dateScope": {
+            "year": 75
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "sv-periplus-context"
+          ],
+          "locator": "Dating, authorship and commercial purpose of the Periplus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "sv-periplus"
+          ],
+          "locator": "Periplus sections on inland Paithana, Tagara, routes and goods.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "sv-ignou-trade"
+          ],
+          "locator": "Guild, merchant, town and monastery discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "sv-ncert-states"
+          ],
+          "locator": "Trade, transport, coin and urban evidence in the national textbook.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "sv-kni14"
+          ],
+          "locator": "Donor identity, kin group and dedication in the Kanaganahalli inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "sv-mungi"
+          ],
+          "locator": "Archaeobotanical crop list from the Mungi excavation report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "sv-ignou-economy"
+          ],
+          "locator": "Agrarian groups, labor, landholding and inequality discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "sv-peddabankur"
+          ],
+          "locator": "Official excavation summary for structures, well and drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "sv-myakadoni"
+          ],
+          "locator": "Tank donation, donor and regnal context in the Myakadoni record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "sv-museum",
+            "sv-nmma-beads"
+          ],
+          "locator": "Regional museum object groups and catalogued Peddabankur beads.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "sv-ncert-states"
+          ],
+          "locator": "Religious gifts, inscriptions and varied patrons in early historic India.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "sv-bm-amaravati"
+          ],
+          "locator": "Amaravati phases, donor records, language and recarving evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "sv-bm-slab"
+          ],
+          "locator": "Object record, material, date, function and provenance.",
+          "dateScope": {
+            "year": 220
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "sv-kanaganahalli"
+          ],
+          "locator": "Site chronology, named rulers, patronage and stupa program.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "sv-kanheri-water",
+            "sv-map100"
+          ],
+          "locator": "Cistern donor and place in the inscription, compared with atlas point test.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "sv-ncert-society"
+          ],
+          "locator": "Matronymics, patriliny, queens, gotra and marriage evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "sv-kanheri-family",
+            "sv-kni14"
+          ],
+          "locator": "Named relatives in two donor inscriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "sv-kanaganahalli",
+            "sv-ignou-economy"
+          ],
+          "locator": "Dhammasiri and broader evidence for women donors and unequal visibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "sv-bm-guide"
+          ],
+          "locator": "Exhibition entries for named women and multigenerational donors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "sv-ncert-society",
+            "sv-gautamiputra"
+          ],
+          "locator": "Varna claims compared with documented kinship and social practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "sv-ignou-economy"
+          ],
+          "locator": "Household and occupational organization, with explicit evidence limit for schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "sv-hiraha"
+          ],
+          "locator": "Closing formula naming writer, reader and listeners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "sv-kni8"
+          ],
+          "locator": "Opening formula, language and script metadata in the critical edition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "sv-kni8"
+          ],
+          "locator": "DHARMA edition and translation of the opening invocation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "sv-kni8"
+          ],
+          "locator": "Regnal date, donor, associated people and dedication in the inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "sv-mungi",
+            "sv-periplus"
+          ],
+          "locator": "Excavated plant remains compared with merchant cargo categories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "sv-periplus",
+            "sv-bm-amaravati"
+          ],
+          "locator": "Textile trade evidence and limits of sculptural representation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "sv-met-earring",
+            "sv-museum"
+          ],
+          "locator": "Museum date, technique and imagery compared with regional ornament materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "sv-peddabankur",
+            "sv-museum"
+          ],
+          "locator": "Settlement structures and mixed regional museum household objects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "sv-museum",
+            "sv-nmma-figurines"
+          ],
+          "locator": "Regional dice and figurines plus catalogued Peddabankur fragments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "sv-medicine"
+          ],
+          "locator": "Textual dating, medical content and teacher-pupil tradition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "sv-peddabankur",
+            "sv-kanheri-water"
+          ],
+          "locator": "Excavated well and drains compared with inscribed cave cistern.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "sv-peddabankur"
+          ],
+          "locator": "Official excavation report checked for sanitation features and interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "sv-outlines"
+          ],
+          "locator": "Early third-century fragmentation into regional principalities and social continuity.",
+          "dateScope": {
+            "year": 225
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "sv-map500",
+            "sv-map600",
+            "sv-vakataka"
+          ],
+          "locator": "Successor-snapshot point owners and separate dynastic inscription corpus.",
+          "dateScope": {
+            "year": 500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "sv-outlines",
+            "sv-map400",
+            "sv-map500"
+          ],
+          "locator": "University history chapter on the final rulers, early third-century fragmentation and emerging regional principalities. Decoded shrunken target geometry and competing Gupta assignment of western and eastern centers. Decoded first snapshot without the exact target and later Vakataka, Gupta and Pallava point ownership.",
+          "dateScope": {
+            "year": 225
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "satavahanihara",
+        "card": "cards/satavahanihara.json",
+        "dateBasis": "map_coverage",
+        "summary": "An epigraphically attested Satavahana district name that the atlas expands into an oversized 1 BCE to 500 CE polity, with dynasty, province and later regional continuity carefully separated.",
+        "fell": null,
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "satavahanihara",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            73.03213032130321,
+            12.975361991484434,
+            84.75384753847538,
+            21.35177611367314
+          ]
+        },
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "satavahanihara",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            73.03213032130321,
+            12.975361991484434,
+            84.75384753847538,
+            21.35177611367314
+          ]
+        },
+        {
+          "file": "world-300.json",
+          "properties": {
+            "civ": "satavahanihara",
+            "from": 300,
+            "to": 400,
+            "precision": 1
+          },
+          "bounds": [
+            73.03213032130321,
+            12.975361991484434,
+            84.75384753847538,
+            21.35177611367314
+          ]
+        },
+        {
+          "file": "world-400.json",
+          "properties": {
+            "civ": "satavahanihara",
+            "from": 400,
+            "to": 500,
+            "precision": 1
+          },
+          "bounds": [
+            73.03213032130321,
+            12.975361991484434,
+            81.33021330213302,
+            21.35177611367314
+          ]
+        },
+        {
+          "file": "world-bc1.json",
+          "properties": {
+            "civ": "satavahanihara",
+            "from": -1,
+            "to": 100,
+            "precision": 1
+          },
+          "bounds": [
+            73.03213032130321,
+            12.975361991484434,
+            84.75384753847538,
+            21.35177611367314
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target satavahanihara is indexed approximately 1 BCE to 500 CE, with label Satavahanihara and alias Satava.; it was missing a card and override at initial audit.",
+    "Satavahanihara is an epigraphically grounded territorial name related to Satavahana ahara, or district, and is not treated as a synonym for the entire Satavahana dynasty.",
+    "At 1 BCE, 100, 200 and 300 the target is the same one-part, one-ring, 51-position Polygon with SHA-256 3da3734817b8ece4c666ceffc6f5c91514af3339b827a2a388917e5db7bddfa4.",
+    "The repeated target includes Tagara, Nagardhan, Sannati, Amaravati, Nagarjunakonda, Kondapur and Kotalingala, but excludes Paithan, Nashik, Naneghat, Junnar, Karle, Kanheri, Sopara, Bharuch, Ujjain, Vidisha, Ajanta and Kanchipuram.",
+    "The atlas assigns much of the excluded western Satavahana core to saka-kingdom through 300. At 400 the target shrinks to 21 positions and Gupta takes western centers and Amaravati.",
+    "At 500 the target disappears; Vakataka, Gupta and Pallava polygons divide tested places. These are separately indexed and carded identities, not authorized aliases or one-to-one successors.",
+    "No appliesTo mapping is added. The override keeps atlas dateBasis, leaves fell null and has no successor ids because the exact district label has no documented single conquest or direct heir."
+  ]
+}
