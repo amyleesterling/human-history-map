@@ -1,0 +1,871 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release135-sikhs research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "sk-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, plural imported label, approximate 1800 to 1815 interval and historical-basemaps provenance."
+    },
+    {
+      "id": "sk-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Sikh-faith summary whose community scope does not match the territorial polygon and must be corrected."
+    },
+    {
+      "id": "sk-map1783",
+      "title": "Human History Map 1783 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Decoded preceding Lahore, Multan and neighboring features and point-owner tests before the target interval."
+    },
+    {
+      "id": "sk-map1800",
+      "title": "Human History Map 1800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Decoded exact Sikhs polygon, topology, bounds, coordinate hash, point tests and simultaneous neighboring layers."
+    },
+    {
+      "id": "sk-map1815",
+      "title": "Human History Map 1815 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Decoded disappearance of the exact id and historically impossible Maratha replacement across audited Punjab points."
+    },
+    {
+      "id": "sk-grewal",
+      "title": "J. S. Grewal, The Sikh Empire (1799-1849), Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/sikhs-of-the-punjab/sikh-empire-17991849/F392B4CF5D691DA781A20C00CCF5DC2A",
+      "note": "Authoritative synthesis of Ranjit Singh unification, government, army, revenue, trade, religious diversity and the state later history."
+    },
+    {
+      "id": "sk-anu-thesis",
+      "title": "The Punjab under Maharaja Ranjit Singh, Australian National University Open Research",
+      "url": "https://openresearch-repository.anu.edu.au/bitstreams/94db391c-091b-4326-b87a-643a006edb87/download",
+      "note": "Scholarly political chronology used for Kasur and the early consolidation sequence without relying on the atlas polygon."
+    },
+    {
+      "id": "sk-eos-misls",
+      "title": "Encyclopaedia of Sikhism, Misls",
+      "url": "https://eos.learnpunjabi.org/MISLS.html",
+      "note": "Punjabi University reference on the eighteenth-century Sikh misls, Lahore, Ranjit Singh entry in 1799 and regional trade."
+    },
+    {
+      "id": "sk-eos-khalsa",
+      "title": "Encyclopaedia of Sikhism, Khalsa",
+      "url": "https://eos.learnpunjabi.org/KHALSA.html",
+      "note": "Punjabi University reference distinguishing the initiated Khalsa collective and its 1699 origin from a later territorial state."
+    },
+    {
+      "id": "sk-eos-afghan",
+      "title": "Encyclopaedia of Sikhism, Afghan-Sikh Relations",
+      "url": "https://eos.learnpunjabi.org/AFGHAN-SIKH%20RELATIONS.html",
+      "note": "Chronology of Lahore, Attock, failed Multan campaigns through 1815 and later conquests of Multan, Kashmir and Peshawar."
+    },
+    {
+      "id": "sk-eos-treaty",
+      "title": "Encyclopaedia of Sikhism, Anglo-Sikh Treaty of Amritsar (1809)",
+      "url": "https://eos.learnpunjabi.org/ANGLO-SIKH%20TREATY%20%28AMRITSAR%2C%201809%29.html",
+      "note": "Date, terms and political consequences of the 1809 treaty separating Cis-Sutlej ambitions from northern consolidation."
+    },
+    {
+      "id": "sk-eos-darbar",
+      "title": "Encyclopaedia of Sikhism, Lahore Darbar",
+      "url": "https://eos.learnpunjabi.org/LAHORE%20DARBAR.html",
+      "note": "Punjabi University account of the State of Lahore, Sarkar Khalsaji, personalized rule and multi-faith officeholding."
+    },
+    {
+      "id": "sk-jras-identity",
+      "title": "Symbols, Community and Contest in the Politics of Sikh Identity, Journal of the Royal Asiatic Society",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/symbols-community-and-contest-jhatka-and-tobacco-in-the-politics-of-sikh-identity/5A06FCB259E75FC1E5D1FBC497177610",
+      "note": "Peer-reviewed analysis of cross-faith appointments, Muslim elites, shrine grants and state-building through religious patronage."
+    },
+    {
+      "id": "sk-eos-army",
+      "title": "Encyclopaedia of Sikhism, Army of Maharaja Ranjit Singh",
+      "url": "https://eos.learnpunjabi.org/ARMY%20OF%20MAHARAJA%20RANJIT%20SINGH.html",
+      "note": "Early infantry training, varied recruitment, gun manufacture, artillery and the chronology of later European officers."
+    },
+    {
+      "id": "sk-eos-records",
+      "title": "Encyclopaedia of Sikhism, Khalsa Darbar Records",
+      "url": "https://eos.learnpunjabi.org/KHALSA%20DARBAR%20RECORDS.html",
+      "note": "Surviving Persian official records from 1811, including early troop accounts, revenue categories and administrative documentation."
+    },
+    {
+      "id": "sk-eos-coins",
+      "title": "Encyclopaedia of Sikhism, Sikh Coins",
+      "url": "https://eos.learnpunjabi.org/SIKH%20COINS.html",
+      "note": "Chronology and interpretation of Lahore and Amritsar Nanakshahi coinage under Ranjit Singh."
+    },
+    {
+      "id": "sk-bm-coins",
+      "title": "Paramdip Kaur Khera, Catalogue of Sikh Coins in the British Museum",
+      "url": "https://library.gurmat.info/download/catalogue-of-sikh-coins-in-the-british-museum-paramdip-kaur-khera.pdf",
+      "note": "British Museum Research Publication 190 with catalogued legends, transliteration, translation, dates, weights and mints."
+    },
+    {
+      "id": "sk-eos-jagirdari",
+      "title": "Encyclopaedia of Sikhism, Jagirdari",
+      "url": "https://eos.learnpunjabi.org/JAGIRDARI.html",
+      "note": "Land-revenue assignments, collection in cash or kind, service obligations and limits of jagir tenure under Sikh rule."
+    },
+    {
+      "id": "sk-cambridge-economy",
+      "title": "British Punjab and the Dialectics of Primitive Accumulation, International Review of Social History",
+      "url": "https://www.cambridge.org/core/journals/international-review-of-social-history/article/british-punjab-and-the-dialectics-of-primitive-accumulation/D6821CE45282629E3177FCB152881B83",
+      "note": "Peer-reviewed account of Punjab agrarian relations, jagirdari, products, pastoral tribute and later colonial transformation."
+    },
+    {
+      "id": "sk-eos-gurmukhi",
+      "title": "Encyclopaedia of Sikhism, Gurmukhi",
+      "url": "https://eos.learnpunjabi.org/GURMUKHI.html",
+      "note": "History of the Gurmukhi script in scripture, community schooling and its administrative spread under Ranjit Singh."
+    },
+    {
+      "id": "sk-cambridge-education",
+      "title": "Empires, Languages, and Scripts in the Perso-Indian World, Comparative Studies in Society and History",
+      "url": "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/empires-languages-and-scripts-in-the-persoindian-world/FF8D806A9AE63CF6469126FBF3823F18",
+      "note": "Peer-reviewed study of multilingual Punjab education, institutional grants, Persian, Gurmukhi and commercial Landa schooling."
+    },
+    {
+      "id": "sk-pu-education",
+      "title": "Robina Shoeb, Refocusing on Education System under Sikh Rule, University of the Punjab",
+      "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/15_V-30-No2-Dec17.pdf",
+      "note": "Historical study of schools, home tutors, religious institutions, curricula and gender, used with retrospective evidence cautions."
+    },
+    {
+      "id": "sk-atwal",
+      "title": "Priya Atwal, Royals and Rebels: The Rise and Fall of the Sikh Empire, Oxford University Press",
+      "url": "https://academic.oup.com/book/31929",
+      "note": "Scholarly reconstruction of the ruling family, queens, princes, dynastic politics and gendered power beyond one-man biography."
+    },
+    {
+      "id": "sk-music",
+      "title": "Radha Kapuria, Of Music and the Maharaja, Modern Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/of-music-and-the-maharaja-gender-affect-and-power-in-ranjit-singhs-lahore/21BCA1452DFA61C8E16AB80316189D4B",
+      "note": "Peer-reviewed study of Lahore court music, female performers, gender, affect and power across Ranjit Singh reign."
+    },
+    {
+      "id": "sk-darbar-life",
+      "title": "Life at Lahore Darbar 1799-1839, University of the Punjab",
+      "url": "https://sasj.pu.edu.pk/9/article/view/675",
+      "note": "Court-specific study of palaces, ceremony, alms, music and sacred bathing, kept separate from ordinary household life."
+    },
+    {
+      "id": "sk-lahore-space",
+      "title": "Lahore: A Study in Space and Time, Pakistan Geographical Review",
+      "url": "https://pu.edu.pk/images/journal/geography/pdf/Pakistan%20Geographical%20Review%201977%20Vol.%2032%20No.%201.pdf",
+      "note": "University study of Lahore urban form, walls, rebuilding, settlement and later growth under Ranjit Singh."
+    },
+    {
+      "id": "sk-wallace-court",
+      "title": "The Lahore Darbar: the Court of Lahore, Wallace Collection",
+      "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/the-lahore-durbar-the-court-of-lahore/",
+      "note": "Museum essay on court exchange, gifts, textiles, metalwork, trade, havelis and the golden throne."
+    },
+    {
+      "id": "sk-wallace-army",
+      "title": "Ranjit Singh Army and His Firangis, Wallace Collection",
+      "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/sikh-arms-armour/ranjit-singhs-army-his-firangis/",
+      "note": "Museum chronology placing Allard, Ventura and the Fauj-i-Khas after 1822, outside the target map interval."
+    },
+    {
+      "id": "sk-met-bazaar",
+      "title": "Maharaja Ranjit Singh in a Bazaar, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/825673",
+      "note": "Museum record for a circa 1830 to 1840 Lahore painting and its reuse of stock figures rather than documentary street reportage."
+    },
+    {
+      "id": "sk-bl-album",
+      "title": "British Library Add Or 1397-1451, Trades and Occupations in Lahore",
+      "url": "https://searcharchives.bl.uk/catalog/032-003271255",
+      "note": "Catalogue of 55 circa 1860 Lahore drawings showing occupations, wells, irrigation, laundry, foods, toys and family groupings after annexation."
+    },
+    {
+      "id": "sk-nam-golden",
+      "title": "The Golden Temple at Amritsar, National Army Museum",
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1979-06-33-18",
+      "note": "Museum record identifying major marble and gold decoration during Ranjit Singh reign while preserving the shrine longer history."
+    },
+    {
+      "id": "sk-nam-first",
+      "title": "First Sikh War, National Army Museum",
+      "url": "https://www.nam.ac.uk/explore/first-sikh-war",
+      "note": "Museum military history of the kingdom after Ranjit Singh, army strength, regency conflict and the 1845 to 1846 war."
+    },
+    {
+      "id": "sk-nam-second",
+      "title": "Second Sikh War, National Army Museum",
+      "url": "https://www.nam.ac.uk/explore/second-sikh-war",
+      "note": "Museum military history of the 1848 to 1849 war and formal British annexation of Punjab on 29 March 1849."
+    },
+    {
+      "id": "sk-eos-honigberger",
+      "title": "Encyclopaedia of Sikhism, Doctor John Martin Honigberger",
+      "url": "https://eos.learnpunjabi.org/HONIGBERGER%20DOCTOR%20JOHN%20MARTIN%20%281795-1865%29.html",
+      "note": "Later court physician evidence for overlapping allopathic, homeopathic, Ayurvedic and Unani practice after 1829."
+    },
+    {
+      "id": "sk-gov-lahore",
+      "title": "History of Lahore, Government of the Punjab",
+      "url": "https://lahore.punjab.gov.pk/node/68",
+      "note": "Official city chronology placing a sanitation committee in 1858 and piped municipal waterworks in 1882, both later than the target."
+    },
+    {
+      "id": "sk-cambridge-sanitation",
+      "title": "Colonialism and Sanitary Medicine in Punjab, Modern Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/colonialism-and-sanitary-medicine-the-development-of-preventive-health-policy-in-the-punjab-1860-to-1900/72C654CB3DE9DCE37463DE03AAD54240",
+      "note": "Peer-reviewed chronology of formal preventive-health policy after 1860, useful for preventing back-projection into Sikh rule."
+    },
+    {
+      "id": "sk-eos-bhangian",
+      "title": "Encyclopaedia of Sikhism, Bhangian di Top",
+      "url": "https://eos.learnpunjabi.org/BHANGIAN%20DI%20TOP.html",
+      "note": "History of the Zamzama cannon, its capture at Amritsar and campaign use without turning one gun into the whole army."
+    },
+    {
+      "id": "sk-eos-bhandari",
+      "title": "Encyclopaedia of Sikhism, Bhandari Papers",
+      "url": "https://eos.learnpunjabi.org/BHANDARI%20PAPERS.html",
+      "note": "Description of thousands of Persian letters and legal, revenue, mortgage, grant and court documents from Sikh-period Punjab."
+    }
+  ],
+  "entities": [
+    {
+      "id": "sikhs",
+      "card": "data/cards/sikhs.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "sk-index",
+            "sk-map1800",
+            "sk-grewal"
+          ],
+          "locator": "Exact indexed id, plural imported label, approximate 1800 to 1815 interval and historical-basemaps provenance. Decoded exact Sikhs polygon, topology, bounds, coordinate hash, point tests and simultaneous neighboring layers. Authoritative synthesis of Ranjit Singh unification, government, army, revenue, trade, religious diversity and the state later history.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "sk-eos-misls"
+          ],
+          "locator": "Punjabi University reference on the eighteenth-century Sikh misls, Lahore, Ranjit Singh entry in 1799 and regional trade.",
+          "dateScope": {
+            "from": 1800,
+            "to": 1801
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "sk-eos-coins"
+          ],
+          "locator": "Chronology and interpretation of Lahore and Amritsar Nanakshahi coinage under Ranjit Singh.",
+          "dateScope": {
+            "from": 1801,
+            "to": 1802
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "sk-eos-bhangian"
+          ],
+          "locator": "History of the Zamzama cannon, its capture at Amritsar and campaign use without turning one gun into the whole army.",
+          "dateScope": {
+            "from": 1802,
+            "to": 1804
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "sk-eos-army"
+          ],
+          "locator": "Early infantry training, varied recruitment, gun manufacture, artillery and the chronology of later European officers.",
+          "dateScope": {
+            "from": 1804,
+            "to": 1806
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "sk-anu-thesis"
+          ],
+          "locator": "Scholarly political chronology used for Kasur and the early consolidation sequence without relying on the atlas polygon.",
+          "dateScope": {
+            "from": 1806,
+            "to": 1808
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "sk-eos-treaty"
+          ],
+          "locator": "Date, terms and political consequences of the 1809 treaty separating Cis-Sutlej ambitions from northern consolidation.",
+          "dateScope": {
+            "from": 1808,
+            "to": 1810
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "sk-eos-records"
+          ],
+          "locator": "Surviving Persian official records from 1811, including early troop accounts, revenue categories and administrative documentation.",
+          "dateScope": {
+            "from": 1810,
+            "to": 1813
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "sk-eos-afghan",
+            "sk-map1800"
+          ],
+          "locator": "Chronology of Lahore, Attock, failed Multan campaigns through 1815 and later conquests of Multan, Kashmir and Peshawar. Decoded exact Sikhs polygon, topology, bounds, coordinate hash, point tests and simultaneous neighboring layers.",
+          "dateScope": {
+            "from": 1813,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "sk-index",
+            "sk-summary"
+          ],
+          "locator": "Index, coverage and imported-summary scope mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "sk-map1800"
+          ],
+          "locator": "Exact 1800 topology, bounds and coordinate hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "sk-map1800"
+          ],
+          "locator": "Positive and negative point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "sk-eos-afghan",
+            "sk-eos-treaty",
+            "sk-map1800"
+          ],
+          "locator": "Historical conquest dates, Cis-Sutlej status and geometry mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "sk-map1783",
+            "sk-map1815"
+          ],
+          "locator": "Cross-snapshot owner audit and impossible 1815 seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "sk-summary",
+            "sk-eos-darbar"
+          ],
+          "locator": "Community, faith and territorial-state distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "sk-eos-khalsa"
+          ],
+          "locator": "Khalsa origin and scope distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "sk-eos-misls"
+          ],
+          "locator": "Misl organization and non-unitary political background.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "sk-eos-misls"
+          ],
+          "locator": "Lahore entry date and atlas-date distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "sk-eos-darbar"
+          ],
+          "locator": "Contemporary and historiographic state names.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "sk-eos-coins"
+          ],
+          "locator": "1801 proclamation and Nanakshahi legitimacy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "sk-eos-bhangian"
+          ],
+          "locator": "Amritsar, Zamzama and logistical caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "sk-anu-thesis"
+          ],
+          "locator": "Kasur campaign and uneven consolidation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "sk-eos-treaty"
+          ],
+          "locator": "Treaty date, terms and strategic consequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "sk-eos-afghan"
+          ],
+          "locator": "Attock, Multan failures and frontier limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "sk-eos-darbar"
+          ],
+          "locator": "Personal rule and administrative intermediaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "sk-jras-identity"
+          ],
+          "locator": "Multi-faith service, patronage and terminology caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "sk-eos-records"
+          ],
+          "locator": "Persian records, contents and survival limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "sk-eos-jagirdari"
+          ],
+          "locator": "Jagir revenue and service structure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "sk-eos-bhandari"
+          ],
+          "locator": "Bhandari archive genres and administrative implications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "sk-eos-army"
+          ],
+          "locator": "Early mixed forces and training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "sk-eos-records"
+          ],
+          "locator": "1811 force figures and recruitment diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "sk-eos-army"
+          ],
+          "locator": "Gun manufacture, mobile artillery and logistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "sk-eos-treaty",
+            "sk-map1800"
+          ],
+          "locator": "Treaty diplomacy and Cis-Sutlej map error.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "sk-wallace-army"
+          ],
+          "locator": "Post-1822 European officers and chronology caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "sk-cambridge-economy"
+          ],
+          "locator": "Agrarian production, layered rights and pastoral tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "sk-wallace-court"
+          ],
+          "locator": "Regional trade goods and household-use caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "sk-eos-coins"
+          ],
+          "locator": "Lahore and Amritsar mint chronology and coin interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "sk-wallace-court"
+          ],
+          "locator": "Toshakhana, khilat and golden throne context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "sk-nam-golden"
+          ],
+          "locator": "Harimandir Sahib patronage and longer chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "sk-eos-gurmukhi"
+          ],
+          "locator": "Persian, Punjabi and Gurmukhi functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "sk-cambridge-education"
+          ],
+          "locator": "School types, scripts and unequal access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "sk-pu-education"
+          ],
+          "locator": "Learning practices, tutors, gender and retrospective limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "sk-eos-darbar"
+          ],
+          "locator": "Plural institutions and political patronage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "sk-eos-bhandari",
+            "sk-pu-education"
+          ],
+          "locator": "Archival survival bias and literacy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "sk-atwal"
+          ],
+          "locator": "Royal family, women, property and ordinary-life distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "sk-cambridge-economy"
+          ],
+          "locator": "Social ranks and persistence of inequality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "sk-music"
+          ],
+          "locator": "Female performers, agency, exploitation and source bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "sk-pu-education"
+          ],
+          "locator": "Household and school learning with evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "sk-bl-album"
+          ],
+          "locator": "Post-annexation family and work album with date caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "sk-lahore-space"
+          ],
+          "locator": "Urban rebuilding, housing range and evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "sk-eos-misls",
+            "sk-bl-album"
+          ],
+          "locator": "Food evidence from trade and later occupational album.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "sk-wallace-court"
+          ],
+          "locator": "Textiles, khilat, rank and ordinary-clothing caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "sk-met-bazaar"
+          ],
+          "locator": "Bazaar painting date, content and documentary limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "sk-bl-album"
+          ],
+          "locator": "Later occupational and toy evidence with non-back-projection warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "sk-eos-honigberger"
+          ],
+          "locator": "Post-1829 court medicine and target-period limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "sk-darbar-life",
+            "sk-bl-album"
+          ],
+          "locator": "Sacred water and later everyday water evidence with use distinctions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "sk-gov-lahore",
+            "sk-cambridge-sanitation"
+          ],
+          "locator": "Toilet and sanitation evidence absence plus later municipal chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "sk-bm-coins"
+          ],
+          "locator": "Exact Nanakshahi coin clause, transliteration, translation and display caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "sk-nam-first",
+            "sk-nam-second",
+            "sk-map1815"
+          ],
+          "locator": "Later political ending and community continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "sk-map1815",
+            "sk-nam-first",
+            "sk-nam-second"
+          ],
+          "locator": "Decoded disappearance of the exact id and historically impossible Maratha replacement across audited Punjab points. Museum military history of the kingdom after Ranjit Singh, army strength, regency conflict and the 1845 to 1846 war. Museum military history of the 1848 to 1849 war and formal British annexation of Punjab on 29 March 1849.",
+          "dateScope": {
+            "year": 1815
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "sikhs",
+        "card": "cards/sikhs.json",
+        "dateBasis": "map_coverage",
+        "summary": "Ranjit Singh's early State of Lahore in the atlas 1800 to 1815 display window.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "sikhs",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            67.44487444874449,
+            27.70984971738214,
+            81.44901449014492,
+            35.988670797204506
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id sikhs is preserved, but the card corrects its subject from a whole faith and people to Ranjit Singh early State of Lahore or Sikh Empire.",
+    "The exact interval is one approximate atlas display from 1800 to 1815. It is not the founding and fall of Sikhism, Sikh communities or the historical empire.",
+    "No appliesTo alias is added. Lahore, Afghanistan, Multan, Maratha, British and neighboring state records remain distinct.",
+    "The sole geometry is one 35-position Polygon with SHA-256 2cd9186c13755098f800c6d299b2c5001c9b57b4a8eab40d00cd2f2820f187b5.",
+    "The polygon wrongly includes Multan, Kashmir, Peshawar and Cis-Sutlej states while excluding Anandpur Sahib, so it is preserved only as audited display geometry.",
+    "The 1815 Maratha replacement is a data error. The override records fell null, the card ending status is continuity, and no successor is inferred.",
+    "The authentic writing sample is a normalized Persian clause from an 1801 Lahore Nanakshahi rupee, with transliteration, translation and facsimile limits.",
+    "Ordinary family, education, medicine, food, clothing, housing, water, play and sanitation evidence is distinguished from court sources and later comparative material."
+  ]
+}

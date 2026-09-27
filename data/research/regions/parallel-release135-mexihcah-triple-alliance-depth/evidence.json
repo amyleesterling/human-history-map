@@ -1,0 +1,880 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release135-mexihcah-triple-alliance research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "mx-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed identities checked for mexihcah-triple-alliance and the separate aztec-empire record."
+    },
+    {
+      "id": "mx-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Initial audit records the target as a missing circa state with one 1492 to 1500 border interval and no card or override."
+    },
+    {
+      "id": "mx-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded predecessor seam: neither mexihcah-triple-alliance nor aztec-empire appears even though the historical alliance would form in 1428."
+    },
+    {
+      "id": "mx-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded exact target feature, hashes, bounds, point tests, overlaps, cultural neighbors, and unconquered-polity geometry problems."
+    },
+    {
+      "id": "mx-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded endpoint seam where the target disappears and a differently shaped aztec-empire polygon immediately replaces it."
+    },
+    {
+      "id": "mx-map1530",
+      "title": "Human History Map world-1530 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded post-conquest seam showing viceroyalty-of-new-spain ownership at all audited central Mexican points."
+    },
+    {
+      "id": "mx-aztec-card",
+      "title": "Human History Map researched Aztec Empire card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/aztec-empire.json",
+      "note": "Current separate card pointer and existing capital-focused content checked to prevent silent duplication or false historical succession."
+    },
+    {
+      "id": "mx-met-overview",
+      "title": "The Metropolitan Museum of Art: Arts of the Ancient Americas, Mexica",
+      "url": "https://www.metmuseum.org/de/exhibitions/arts-of-the-ancient-americas/inside-the-exhibition",
+      "note": "Museum overview used only for the opening: three-member alliance, indirect patchwork empire, tribute, materials, arts, and conquest-era scope."
+    },
+    {
+      "id": "mx-inah-overview",
+      "title": "Museo Nacional de Antropología: Mexica (1200 to 1521)",
+      "url": "https://lugares.inah.gob.mx/es/node/4237",
+      "note": "National museum overview used only for the opening: Mexica naming, Tenochtitlan, alliance, Late Postclassic setting, and living archaeological record."
+    },
+    {
+      "id": "mx-met-chronology",
+      "title": "The Metropolitan Museum of Art: Mexico, 1400 to 1600 A.D.",
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/08/canm.html",
+      "note": "Chronology used for alliance formation, indirect tribute rule, Ahuitzotl expansion, autonomous Tlaxcala, Purépecha resistance, and conquest-era sequence."
+    },
+    {
+      "id": "mx-met-tenochtitlan",
+      "title": "The Metropolitan Museum of Art: Tenochtitlan",
+      "url": "https://www.metmuseum.org/essays/tenochtitlan",
+      "note": "Museum synthesis used for canals, causeways, aqueducts, markets, neighborhoods, reclaimed land, population caution, and 1521 destruction."
+    },
+    {
+      "id": "mx-met-templo",
+      "title": "The Metropolitan Museum of Art: Tenochtitlan, Templo Mayor",
+      "url": "https://www.metmuseum.org/essays/tenochtitlan-templo-mayor",
+      "note": "Museum essay used for twin shrines, sacred-mountain design, repeated construction phases, offerings, archaeology, and religious meaning."
+    },
+    {
+      "id": "mx-met-stone",
+      "title": "The Metropolitan Museum of Art: Aztec Stone Sculpture",
+      "url": "https://www.metmuseum.org/essays/aztec-stone-sculpture",
+      "note": "Museum essay used for quarrying and carving technologies, tools, abrasives, transport, polychromy, and elite monument context."
+    },
+    {
+      "id": "mx-met-tribute",
+      "title": "The Metropolitan Museum of Art: Paying the Man, Ancient Tributes in Golden Kingdoms",
+      "url": "https://www.metmuseum.org/pt/perspectives/golden-kingdoms-ancient-tributes",
+      "note": "Museum study used for tribute commodities and the colonial date, commission, purpose, and limits of the Codex Mendoza."
+    },
+    {
+      "id": "mx-met-labret",
+      "title": "The Metropolitan Museum of Art: Serpent labret with articulated tongue",
+      "url": "https://www.metmuseum.org/art/collection/search/321343",
+      "note": "Object record used to distinguish Mexica Tenochtitlan, Acolhua Texcoco, and Tepaneca Tlacopan and to explain elite speech, metalwork, and office."
+    },
+    {
+      "id": "mx-met-drum",
+      "title": "The Metropolitan Museum of Art: Drum (Teponaztli)",
+      "url": "https://www.metmuseum.org/art/collection/search/312583",
+      "note": "Object record used for music in weddings, processions, agricultural dances, ballgames, and continued use into the colonial period."
+    },
+    {
+      "id": "mx-unam-alliance",
+      "title": "UNAM Noticonquista: La Triple Alianza, politics among Central Mexican Nahuas",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/767/767",
+      "note": "University history essay used for competing formation dates, member relations, political flexibility, and the danger of treating the alliance as one centralized nation-state."
+    },
+    {
+      "id": "mx-unam-frontier",
+      "title": "UNAM Noticonquista: Independent territories beyond the Isthmus",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2254/2254",
+      "note": "University essay used for Ahuitzotl-era Oaxaca and Tehuantepec campaigns, Soconusco pressure, frontier garrisons, tribute, and patchy reach."
+    },
+    {
+      "id": "mx-unam-conquest",
+      "title": "UNAM Noticonquista: The military situation at the beginning of 1521",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2461/2461",
+      "note": "University essay used for Indigenous coalitions, smallpox, Texcoco politics, supply lines, canoes, and the two-stage strategy against Tenochtitlan."
+    },
+    {
+      "id": "mx-inah-tlaxcala",
+      "title": "INAH Lugares: Tlaxcala archaeological and historical zone",
+      "url": "https://lugares.inah.gob.mx/es/pagina-de-elemento/2314",
+      "note": "Official Mexican heritage source used for Tlaxcalan resistance, the long Mexica blockade, and why atlas containment does not equal conquest."
+    },
+    {
+      "id": "mx-inah-templo",
+      "title": "INAH Lugares: Templo Mayor",
+      "url": "https://lugares.inah.gob.mx/en/node/4463",
+      "note": "Official archaeological-site guide used for Ahuítzotl’s 1486 to 1502 phase, causeways, subsidence, flood repairs, architecture, and restricted ritual spaces."
+    },
+    {
+      "id": "mx-inah-huei",
+      "title": "INAH Lugares: Huei Tzompantli",
+      "url": "https://lugares.inah.gob.mx/en/node/5907",
+      "note": "Official archaeological report used for the excavated skull-rack platform, construction phases, studied remains, and careful distinction from colonial numerical claims."
+    },
+    {
+      "id": "mx-inah-chinampas",
+      "title": "INAH: Excavated chinampas and canals in a Tenochtitlan neighborhood",
+      "url": "https://arqueologiamexicana.mx/node/989",
+      "note": "Official archaeological report used for a pre-Hispanic canal-and-chinampa complex at the city’s southwest edge and preservation limits beneath modern Mexico City."
+    },
+    {
+      "id": "mx-unesco-xochimilco",
+      "title": "UNESCO World Heritage Centre: Historic Centre of Mexico City and Xochimilco",
+      "url": "https://whc.unesco.org/en/list/412/",
+      "note": "UNESCO source used for surviving chinampa landscape, canals, constructed plots, human management of the lacustrine setting, and continuity without claiming unchanged farming."
+    },
+    {
+      "id": "mx-unam-xochimilco",
+      "title": "UNAM Noticonquista: Xochimilco, 1521",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2608/2601",
+      "note": "University essay used for Xochimilco’s tributary subjection, food supply to Tenochtitlan, local interests, and later alliance choices."
+    },
+    {
+      "id": "mx-getty-home",
+      "title": "Getty Research Institute: Digital Florentine Codex",
+      "url": "https://florentinecodex.getty.edu/",
+      "note": "Project history used for the 1577 manuscript, Nahua elders/authors/artists, parallel Nahuatl and Spanish columns, images, and colonial-production caveats."
+    },
+    {
+      "id": "mx-getty-market",
+      "title": "Digital Florentine Codex, Book 9, folio 1r",
+      "url": "https://florentinecodex.getty.edu/en/book/9/folio/1r",
+      "note": "Primary-source edition used for Tlatelolco merchants, trade goods, an authentic alphabetic Nahuatl sample, diplomatic transcription, and modern translation."
+    },
+    {
+      "id": "mx-getty-calendar",
+      "title": "Digital Florentine Codex, Book 2, folio 3r",
+      "url": "https://florentinecodex.getty.edu/book/2/folio/3r",
+      "note": "Primary-source edition used for eighteen twenty-day festival periods, rain and water rites, and the Christian editorial frame that shapes the account."
+    },
+    {
+      "id": "mx-getty-medicine",
+      "title": "Digital Florentine Codex, Book 10, folio 108r",
+      "url": "https://florentinecodex.getty.edu/book/10/folio/108r",
+      "note": "Primary-source edition used for named ingredients and treatments while warning that recorded remedies are historical evidence, not medical advice or proof of efficacy."
+    },
+    {
+      "id": "mx-getty-birth",
+      "title": "Digital Florentine Codex, Book 6, folio 129v",
+      "url": "https://florentinecodex.getty.edu/book/6/folio/129v",
+      "note": "Primary-source edition used for midwives, pregnancy care, steam-bath context, speech, and colonial compilation limits."
+    },
+    {
+      "id": "mx-getty-storage",
+      "title": "Digital Florentine Codex, Book 8, folio 28v",
+      "url": "https://florentinecodex.getty.edu/book/8/folio/28v",
+      "note": "Primary-source edition used for palace stores, maize, beans, chia, amaranth, salt, chile, squash seeds, stewards, and tribute gatherers."
+    },
+    {
+      "id": "mx-kentucky-mendoza",
+      "title": "University of Kentucky: Codex Mendoza, folio 60 recto",
+      "url": "https://uknowledge.uky.edu/world_mexico_codices/12/",
+      "note": "University digital exhibit used for colonial pictorial scenes of children’s chores, gendered training, age dots, household economy, and retrospective-source limits."
+    },
+    {
+      "id": "mx-yale-ehraf",
+      "title": "Yale eHRAF World Cultures: Aztec culture summary",
+      "url": "https://ehrafworldcultures.yale.edu/cultures/NU07/summary",
+      "note": "University synthesis used for social ranks, gendered labor, common foods and drinks, household craft learning, schools, and variation by status."
+    },
+    {
+      "id": "mx-inah-book",
+      "title": "INAH repository: Mexico, From the Olmecs to the Aztecs",
+      "url": "https://deas.inah.gob.mx/pdf/biblioteca/repositorio/repositorio%2821040%29-4563.pdf",
+      "note": "National anthropology repository edition used for food, clothing, household teaching, schooling, status, and the limits of colonial daily-life reconstruction."
+    },
+    {
+      "id": "mx-tufts-badianus",
+      "title": "Tufts University Tisch Library: The Badianus Manuscript",
+      "url": "https://tischlibrary.tufts.edu/special-collections-badianus-manuscript",
+      "note": "University special-collections guide used for the 1552 Nahua herbal, Martín de la Cruz, Juan Badiano, medicinal plants, Latin translation, and colonial institutional context."
+    },
+    {
+      "id": "mx-unam-sanitation",
+      "title": "UNAM record: Potable water and sanitation in Tenochtitlan, Aztec culture",
+      "url": "https://produccion.siia.unam.mx/Publicaciones/ProdCientif/PublicacionFrw.aspx?id=357959&scopus=0",
+      "note": "University research record used for potable-water works, lack of a citywide sewer, reported privies, canoe collection of excrement, and evidentiary caution."
+    },
+    {
+      "id": "mx-unu-waste",
+      "title": "United Nations University: The Aztecs of Mexico, a zero-waste society",
+      "url": "https://ourworld.unu.edu/en/the-aztecs-of-mexico-a-zero-waste-society",
+      "note": "UN University synthesis used for organic-waste reuse, chinampa fertilizer, canal transport, and the limits and health risks of romanticizing waste recycling."
+    },
+    {
+      "id": "mx-inah-water",
+      "title": "INAH: Tlaloc and Chapultepec, a place consecrated to water",
+      "url": "https://www.inah.gob.mx/index.php/foto-del-dia/tlaloc-y-chapultepec-un-lugar-consagrado-al-agua",
+      "note": "Official heritage source used for Chapultepec springs, connected cisterns and channels, hydraulic engineering, rulers, and sacred associations."
+    },
+    {
+      "id": "mx-inah-tlatelolco",
+      "title": "INAH: Urbanism and architecture at Tlatelolco",
+      "url": "https://lugares.inah.gob.mx/images/publicaciones/325_urbanismo_y_arquitectura_low.pdf",
+      "note": "Official archaeological publication used for unequal fresh-water distribution, elite conduits, water carriers, and the Acuecuexco aqueduct flood tradition."
+    },
+    {
+      "id": "mx-loc-huexotzinco",
+      "title": "Library of Congress: Huexotzinco Codex, 1531",
+      "url": "https://www.loc.gov/item/mss47662-2657/",
+      "note": "National library record used for Indigenous pictorial testimony, taxation lawsuit, eight amatl panels, 1531 date, and respect/context note."
+    },
+    {
+      "id": "mx-smarthistory-huex",
+      "title": "Smarthistory: The Codex Huexotzinco",
+      "url": "https://smarthistory.org/codex-huexotzinco/",
+      "note": "Scholarly art-history essay used for Indigenous agency, tribute-document traditions, Huexotzinco’s opposition to Mexica expansion, and colonial entanglement."
+    },
+    {
+      "id": "mx-inpi-nahua",
+      "title": "INPI National Catalogue: Nahua / Náhuatl people",
+      "url": "https://catalogo.inpi.gob.mx/nahua-nahuatl/",
+      "note": "Official Indigenous-peoples catalogue used for living Nahua communities, wide regional distribution, language variation, and contemporary cultural diversity."
+    },
+    {
+      "id": "mx-inah-education",
+      "title": "INAH educational poster: Schools in Mexica culture",
+      "url": "https://difusion.inah.gob.mx/divulgacion/materiales.html?collection=material_archivos&file=material_archivo&id=5546&task=download&xi=0",
+      "note": "Official educational material used cautiously for calmecac, telpochcalli, ichpochcalli, discipline, learning, and gender/status distinctions."
+    },
+    {
+      "id": "mx-noti-tlatelolco",
+      "title": "UNAM Noticonquista: War in Tlatelolco in 1521",
+      "url": "https://www.noticonquista.unam.mx/index.php/amoxtli/2755/2750",
+      "note": "University reconstruction used for the final siege, Indigenous coalition forces, lake warfare, capture of the market, and the end of organized imperial resistance."
+    }
+  ],
+  "entities": [
+    {
+      "id": "mexihcah-triple-alliance",
+      "card": "data/cards/mexihcah-triple-alliance.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "mx-met-overview",
+            "mx-inah-overview"
+          ],
+          "locator": "Museum overview used only for the opening: three-member alliance, indirect patchwork empire, tribute, materials, arts, and conquest-era scope. National museum overview used only for the opening: Mexica naming, Tenochtitlan, alliance, Late Postclassic setting, and living archaeological record.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "mx-unam-alliance"
+          ],
+          "locator": "University history essay used for competing formation dates, member relations, political flexibility, and the danger of treating the alliance as one centralized nation-state.",
+          "dateScope": {
+            "from": 1428,
+            "to": 1440
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "mx-met-chronology"
+          ],
+          "locator": "Chronology used for alliance formation, indirect tribute rule, Ahuitzotl expansion, autonomous Tlaxcala, Purépecha resistance, and conquest-era sequence.",
+          "dateScope": {
+            "from": 1440,
+            "to": 1486
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "mx-inah-templo"
+          ],
+          "locator": "Official archaeological-site guide used for Ahuítzotl’s 1486 to 1502 phase, causeways, subsidence, flood repairs, architecture, and restricted ritual spaces.",
+          "dateScope": {
+            "from": 1486,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "mx-map1492",
+            "mx-unam-frontier"
+          ],
+          "locator": "Decoded exact target feature, hashes, bounds, point tests, overlaps, cultural neighbors, and unconquered-polity geometry problems. University essay used for Ahuitzotl-era Oaxaca and Tehuantepec campaigns, Soconusco pressure, frontier garrisons, tribute, and patchy reach.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "mx-map1500",
+            "mx-index"
+          ],
+          "locator": "Decoded endpoint seam where the target disappears and a differently shaped aztec-empire polygon immediately replaces it. Exact indexed identities checked for mexihcah-triple-alliance and the separate aztec-empire record.",
+          "dateScope": {
+            "from": 1500,
+            "to": 1519
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "mx-unam-conquest"
+          ],
+          "locator": "University essay used for Indigenous coalitions, smallpox, Texcoco politics, supply lines, canoes, and the two-stage strategy against Tenochtitlan.",
+          "dateScope": {
+            "from": 1519,
+            "to": 1521
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "mx-index",
+            "mx-coverage"
+          ],
+          "locator": "Exact index and initial coverage entries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "mx-index",
+            "mx-aztec-card"
+          ],
+          "locator": "Duplicate identity, dates, aliases, existing card, and naming scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "mx-map1492"
+          ],
+          "locator": "Decoded target geometry, bounds, coordinate count, and both hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "mx-map1492",
+            "mx-inah-tlaxcala"
+          ],
+          "locator": "Exact point containment and official Tlaxcalan resistance history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "mx-map1400",
+            "mx-map1500",
+            "mx-map1530"
+          ],
+          "locator": "Decoded predecessor, identifier-swap, and colonial seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "mx-unam-alliance"
+          ],
+          "locator": "Formation-date range and source disagreement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "mx-met-labret"
+          ],
+          "locator": "Alliance member identities, royal title, and object context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "mx-met-chronology"
+          ],
+          "locator": "Indirect rule, tribute obligations, local government, and autonomy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "mx-unam-alliance"
+          ],
+          "locator": "Altepetl-centered political structure and mediated rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "mx-met-tribute"
+          ],
+          "locator": "Codex Mendoza date, commission, contents, and evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mx-inah-templo"
+          ],
+          "locator": "Ahuítzotl phase, dates, construction and flood repair.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "mx-unam-frontier"
+          ],
+          "locator": "Dated campaigns, Soconusco frontier and patchy control.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "mx-inah-tlaxcala"
+          ],
+          "locator": "Resistance, blockade, independence, and geometry contradiction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "mx-met-chronology"
+          ],
+          "locator": "Purépecha resistance and western frontier.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "mx-getty-market"
+          ],
+          "locator": "Book 9 merchant history, commodities, and colonial-source scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "mx-met-tenochtitlan"
+          ],
+          "locator": "City plan, reclaimed land, causeways, canals, and neighborhoods.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "mx-inah-water",
+            "mx-inah-tlatelolco"
+          ],
+          "locator": "Chapultepec hydraulic system and unequal household distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "mx-inah-tlatelolco",
+            "mx-inah-templo"
+          ],
+          "locator": "Aqueduct flood tradition, subsidence, and raised floors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "mx-met-templo"
+          ],
+          "locator": "Twin shrines, sacred meaning, nested construction, and archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mx-met-stone"
+          ],
+          "locator": "Carving tools, abrasives, transport, polish, paint, and labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "mx-inah-chinampas",
+            "mx-unesco-xochimilco"
+          ],
+          "locator": "Excavated urban chinampas, constructed plots, canals, and surviving landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "mx-unam-xochimilco"
+          ],
+          "locator": "Xochimilco tribute, food supply, local politics, and 1521 choices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "mx-getty-market",
+            "mx-met-tenochtitlan"
+          ],
+          "locator": "Tlatelolco market, goods, regional network, and tribute/trade distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "mx-getty-storage",
+            "mx-inah-book"
+          ],
+          "locator": "Stored staples, officials, household foods, and status variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "mx-met-tribute"
+          ],
+          "locator": "Tribute commodities, transport constraints, and luxury bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "mx-yale-ehraf"
+          ],
+          "locator": "Social categories, mobility, labor, and local variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "mx-yale-ehraf"
+          ],
+          "locator": "Households, family organization, and colonial-source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "mx-yale-ehraf"
+          ],
+          "locator": "Gendered work, women’s economic roles, and variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "mx-kentucky-mendoza"
+          ],
+          "locator": "Folio 60 tasks, age markers, manuscript date, and genre.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "mx-inah-education"
+          ],
+          "locator": "School types, curriculum, gender/status distinctions, and evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "mx-met-templo"
+          ],
+          "locator": "Twin shrines, meanings, and wider Mesoamerican religious setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mx-getty-calendar"
+          ],
+          "locator": "Festival count, eighteen periods, ritual context, and colonial correlation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "mx-inah-huei"
+          ],
+          "locator": "Excavated structure, phases, skeletal sample, and numerical caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "mx-getty-market"
+          ],
+          "locator": "Book 9 folio 1r Nahuatl transcription and Anderson-Dibble translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "mx-getty-home",
+            "mx-loc-huexotzinco"
+          ],
+          "locator": "Manuscript production, alphabetic/pictorial distinction, and display caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "mx-met-tribute"
+          ],
+          "locator": "Cloth and luxury tribute, material status, and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "mx-inah-book"
+          ],
+          "locator": "Clothing forms, status rules, regional variation, and source bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "mx-met-tenochtitlan"
+          ],
+          "locator": "Neighborhood layout, buildings, occupations, and preservation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "mx-getty-storage"
+          ],
+          "locator": "Storehouse officials and occupational diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "mx-met-drum"
+          ],
+          "locator": "Object history, performance contexts, ballgame, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "mx-tufts-badianus"
+          ],
+          "locator": "Badianus date, authorship, plants, remedies, and colonial context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "mx-getty-medicine"
+          ],
+          "locator": "Book 10 remedies and efficacy caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "mx-getty-birth"
+          ],
+          "locator": "Midwifery, pregnancy, temazcal, speech genre, and source date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "mx-inah-water",
+            "mx-inah-tlatelolco"
+          ],
+          "locator": "Spring supply, channels, water distribution, and access limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "mx-unam-sanitation",
+            "mx-unu-waste"
+          ],
+          "locator": "Reported privies, canoe removal, no sewer, reuse, and evidence/health cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "mx-unam-conquest"
+          ],
+          "locator": "Indigenous coalition, political goals, defections, and imperial fragmentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "mx-unam-conquest"
+          ],
+          "locator": "Epidemic, ruler death, blockade, lake war, siege, and capture.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "mx-getty-home",
+            "mx-met-tribute"
+          ],
+          "locator": "Colonial manuscript production, patrons, purposes, and source criticism.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "mx-loc-huexotzinco",
+            "mx-smarthistory-huex"
+          ],
+          "locator": "Date, material, legal purpose, Indigenous agency, and shifting alliances.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "mx-inpi-nahua"
+          ],
+          "locator": "Official living-community distribution and linguistic/cultural diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "mx-map1500",
+            "mx-noti-tlatelolco",
+            "mx-inpi-nahua"
+          ],
+          "locator": "Decoded endpoint seam where the target disappears and a differently shaped aztec-empire polygon immediately replaces it. University reconstruction used for the final siege, Indigenous coalition forces, lake warfare, capture of the market, and the end of organized imperial resistance. Official Indigenous-peoples catalogue used for living Nahua communities, wide regional distribution, language variation, and contemporary cultural diversity.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "mexihcah-triple-alliance",
+        "card": "cards/mexihcah-triple-alliance.json",
+        "dateBasis": "map_coverage",
+        "summary": "The atlas’s 1492 to 1500 display slice of the Triple Alliance, a polity that historically existed from about 1428 to 1521.",
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "mexihcah-triple-alliance",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -101.94761947619476,
+            16.34168785177978,
+            -94.8159481594816,
+            21.885411342450965
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact indexed target is present once at 1492 and missing a card and override.",
+    "The separate aztec-empire id represents the same Triple Alliance historically and replaces the target at the 1500 map seam.",
+    "The 1492 polygon is an imported display footprint, not a surveyed border or an ethnicity map.",
+    "The ring incorrectly contains unconquered Tlaxcala and overlaps multiple contemporary cultural/language features.",
+    "Mexihcah most directly names the Mexica of Tenochtitlan; Texcoco and Tlacopan were distinct partners.",
+    "The override preserves the indexed 1492 to 1500 interval and records no fall because 1500 is an identifier swap."
+  ]
+}
