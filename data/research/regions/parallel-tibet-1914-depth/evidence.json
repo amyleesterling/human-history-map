@@ -1,0 +1,884 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel tibet-1914 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "t14-atlas-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Project index checked locally for exact id tibet-1914, name Tibet, approximate lifetime 1914-1994, and the separate tibet, tibetan-empire, tibetans, proto-tibetan-cultures and tibeto-burmanese records. The lifetime is map metadata, not a verified political chronology."
+    },
+    {
+      "id": "t14-atlas-coverage",
+      "title": "Human History Map, generated research coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage entry checked locally: tibet-1914 has no card, has six border files and six consecutive observed intervals from 1914-1920 through 1960-1994, and has no feature outside its indexed lifetime. Existing cards for medieval Tibet and the Tibetan Empire remain separate."
+    },
+    {
+      "id": "t14-atlas-1914",
+      "title": "Human History Map, world-1914 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Primary TopoJSON decoded locally. The tibet-1914 feature for 1914-1920 is one 162-vertex Polygon with bbox 78.4501845,27.1815913 to 98.9559896,36.5002911. Named point tests and neighboring contacts are recorded in identity.json."
+    },
+    {
+      "id": "t14-atlas-1960",
+      "title": "Human History Map, world-1960 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json",
+      "note": "Primary TopoJSON decoded locally. The tibet-1914 feature for 1960-1994 remains one 162-vertex Polygon with nearly the same bbox and the same results for thirteen named point tests. It touches or overlaps the imported China, India, Nepal, Bhutan and Burma feature boundaries; this is display topology, not evidence of sovereignty."
+    },
+    {
+      "id": "t14-ucpress-modern",
+      "title": "Melvyn C. Goldstein, A History of Modern Tibet, 1913-1951, University of California Press",
+      "url": "https://www.ucpress.edu/books/a-history-of-modern-tibet-1913-1951/paper",
+      "note": "University-press description and contents checked. The study draws on Tibetan participants, interviews and diplomatic archives and treats the political status dispute, internal institutions, modernization arguments, the PLA invasion and Seventeen-Point Agreement. It describes competing Chinese and Tibetan historical narratives rather than endorsing either as a complete account."
+    },
+    {
+      "id": "t14-legal-status",
+      "title": "Teemu Ruskola, Suzerainty, Semi-Sovereignty, and International Legal Hierarchies on China’s Borderlands",
+      "url": "https://www.cambridge.org/core/journals/asian-journal-of-international-law/article/suzerainty-semisovereignty-and-international-legal-hierarchies-on-chinas-borderlands/328355051CC1C9C9FAFE5133B2FF3E20/share/87bf549fbca12469dd70d77472a8ac889df2292e",
+      "note": "Peer-reviewed legal history checked for Tibet’s de facto independence, limited foreign relations and lack of general recognition as a sovereign country before 1951, plus the ambiguity of British “suzerainty” terminology. The author characterizes the 1951 outcome as annexation; that interpretation is identified, not silently converted into universal terminology."
+    },
+    {
+      "id": "t14-simla",
+      "title": "Karunakar Gupta, The McMahon Line 1911-45: The British Legacy, The China Quarterly",
+      "url": "https://www.cambridge.org/core/journals/china-quarterly/article/abs/mcmahon-line-191145-the-british-legacy/4783FC0EBFEB26A73E2C39156F63558F",
+      "note": "Peer-reviewed article checked for the 1913-1914 Simla conference, Britain’s buffer-state aims, Tibetan aspirations, proposed Inner/Outer Tibet division, and the British-Tibetan relationship. It is used to expose imperial interests and unresolved status, not to validate the imported map boundary."
+    },
+    {
+      "id": "t14-thirteenth",
+      "title": "Treasury of Lives, The Thirteenth Dalai Lama, Tubten Gyatso",
+      "url": "https://treasuryoflives.org/zh/biographies/view/Thirteenth-Dalai-Lama%2C-Tubten-Gyatso/P197",
+      "note": "Scholarly biographical encyclopedia checked for the post-1912 government, army training, communication and postal systems, paper currency, Shol printing press, reform costs, resistance from senior institutions, and the limit that much of Kham and Amdo remained beyond Lhasa’s control."
+    },
+    {
+      "id": "t14-currency",
+      "title": "Wolfgang Bertsch, A Survey of Tibetan Paper Currency (1912-1959), Bulletin of Tibetology",
+      "url": "https://sources.mandala.library.virginia.edu/sites/mandala-sources.lib.virginia.edu/files/pdf-files/1676_0.pdf",
+      "note": "Numismatic study checked for the earliest 1913 paper notes, hand-produced printing blocks, dating clues, controlled issue, later gold backing and the 1925 Lhasa finance office. Surviving notes support object-level claims; they do not by themselves settle Tibet’s international legal status."
+    },
+    {
+      "id": "t14-post",
+      "title": "Alice Travers, The Tibetan Governmental Transport and Postal System, Buddhism, Law & Society",
+      "url": "https://www.researchgate.net/publication/340916484_The_Tibetan_Governmental_Transport_and_Postal_System",
+      "note": "Peer-reviewed legal-history article checked for the reform of the older courier network, twelve Central Tibetan postal stations, the Lhasa-Gyantse route, Tibetan stamps, transfer to the British Indian system for overseas mail and the simple telegraph line. Searchable full text and article metadata were compared."
+    },
+    {
+      "id": "t14-mirror",
+      "title": "Columbia University Libraries, online archive of the Tibet Mirror",
+      "url": "https://library.columbia.edu/about/news/libraries/2009/20090507_tibetmirror.html",
+      "note": "University special-collections announcement checked for the newspaper’s Tibetan title and transliteration, publication in Kalimpong from 1925 to 1963, circulation of world news to Tibetan readers, and the digitized issues’ 1933-1961 date range. The displayed Tibetan sample is an editorial Unicode transcription of the documented masthead title, not OCR from one page."
+    },
+    {
+      "id": "t14-goldstein-v1-jstor",
+      "title": "Melvyn C. Goldstein, A History of Modern Tibet, 1913-1951, JSTOR open book",
+      "url": "https://www.jstor.org/stable/jj.8501027",
+      "note": "Open academic book checked at the introduction and chapters 2, 18-20 for government and society, expulsion of Chinese forces after the Qing collapse, regency politics, the PLA campaign at Chamdo, negotiations and capitulation in the Seventeen-Point Agreement."
+    },
+    {
+      "id": "t14-agreement-text",
+      "title": "Tibet Justice Center legal materials, Seventeen-Point Agreement (1951)",
+      "url": "https://tibetjustice.org/materials/china/china3.html",
+      "note": "Full English text checked for the preamble and clauses on PRC sovereignty, PLA entry, regional autonomy, the existing Tibetan political system, the Dalai and Panchen Lamas, religion, language, reforms, defense and foreign affairs. The host is a Tibetan advocacy organization, so wording was cross-checked against the PRC National People’s Congress account."
+    },
+    {
+      "id": "t14-agreement-prc",
+      "title": "National People’s Congress of China, How was the 17-Article Agreement signed?",
+      "url": "https://www.npc.gov.cn/zgrdw/englishnpc/Special_NPC_Delegation/2009-03/17/content_1493643_3.htm",
+      "note": "Official PRC account checked for its position that Tibetan delegates had full authority, the later telegram from the Dalai Lama’s government and Beijing’s “peaceful liberation” framing. It is treated as a participant state narrative and paired with the agreement text and independent scholarship."
+    },
+    {
+      "id": "t14-frus-1951",
+      "title": "United States Office of the Historian, Foreign Relations of the United States, 1951, document 94",
+      "url": "https://history.state.gov/historicaldocuments/frus1951v07p2/d94",
+      "note": "Declassified diplomatic document checked for contemporary reporting that Tibet had appealed after the October 1950 invasion, received no effective UN response and faced pressure to accept PRC demands. It records US officials’ views and geopolitical interests, not a neutral transcript of Tibetan or Chinese decisions."
+    },
+    {
+      "id": "t14-goldstein-v2",
+      "title": "Melvyn C. Goldstein, A History of Modern Tibet, Volume 2: The Estate System chapter",
+      "url": "https://case.edu/artsci/tibet/sites/default/files/2022-06/%C2%A0Modern%20Tibetan%20History%2C%20Vol.%202-%20The%20Estate%20System.pdf",
+      "note": "University-press chapter checked for the continued Tibetan estate system during the initial 1951-1955 coexistence, its government, monastic and aristocratic estate categories, taxation and obligations, and the Chinese gradualist policy. The chapter’s social categories are not treated as a moral census of every household."
+    },
+    {
+      "id": "t14-goldstein-v4",
+      "title": "Melvyn C. Goldstein, A History of Modern Tibet, Volume 4: In the Eye of the Storm, University of California Press",
+      "url": "https://www.ucpress.edu/books/a-history-of-modern-tibet-volume-4/hardcover",
+      "note": "University-press description and contents checked for the 1957-1959 buildup, March 1959 Lhasa uprising and demise of the old Tibetan political order. The book is based on Tibetan, Chinese and English documents, biographies, memoirs and specially collected interviews and challenges simplified partisan accounts."
+    },
+    {
+      "id": "t14-spinning-wheel",
+      "title": "Spinning the Wheel: Policy Implications of the Dalai Lama’s Reincarnation, Case Western Reserve University",
+      "url": "https://case.edu/artsci/tibet/sites/default/files/2022-05/Spinning_the_Wheel_Policy_Implications_o.pdf",
+      "note": "Academic policy paper checked for the 10 March 1959 crowds and rumors, breakdown of negotiations, the Dalai Lama’s 17 March flight, repudiation of the agreement in exile, the end of quasi-self-rule and replacement of the old administration by the Preparatory Committee."
+    },
+    {
+      "id": "t14-coldwar",
+      "title": "Melvyn C. Goldstein, The United States, Tibet, and the Cold War",
+      "url": "https://case.edu/artsci/tibet/sites/default/files/2022-06/The%20United%20States,%20Tibet,%20and%20the%20Cold%20War.pdf",
+      "note": "Academic article checked for US policy toward Tibet, CIA contact with resistance leaders, training and weapons beginning in the late 1950s, the March 1959 uprising and the Dalai Lama’s exile in India. It explicitly analyzes how outside intervention may have intensified events rather than turning Tibetan actors into puppets."
+    },
+    {
+      "id": "t14-un-1959",
+      "title": "United Nations General Assembly Resolution 1353 (XIV), Question of Tibet",
+      "url": "https://digitallibrary.un.org/record/206855/files/A_RES_1353(XIV)-EN.pdf",
+      "note": "Official resolution checked. Adopted in 1959, it called for respect for the Tibetan people’s fundamental human rights and distinctive cultural and religious life. It did not recognize Tibet as an independent state or draw a border, limits made explicit in the card."
+    },
+    {
+      "id": "t14-prc-autonomy",
+      "title": "State Council of China, Successful Practice of Regional Ethnic Autonomy in Tibet",
+      "url": "https://english.www.gov.cn/archive/white_paper/2015/09/06/content_281475183815861.htm",
+      "note": "Official PRC white paper checked for the Preparatory Committee, dismissal of the old government after the 1959 uprising, land and political reforms, and the 1 September 1965 founding of the Tibet Autonomous Region. Its “peaceful liberation,” “rebellion” and emancipation language is presented as the PRC’s state framing, not neutral vocabulary."
+    },
+    {
+      "id": "t14-cultural-revolution",
+      "title": "Melvyn Goldstein, Ben Jiao and Tanzen Lhundrup, On the Cultural Revolution in Tibet, University of California Press",
+      "url": "https://www.ucpress.edu/books/on-the-cultural-revolution-in-tibet/paper",
+      "note": "University-press study checked for the Cultural Revolution’s factional conflicts, local Tibetan participation, the 1969 Nyemo violence and the authors’ warning that not every conflict was simply an ethnic-nationalist revolt. It is paired with oral-history evidence about coercion and deprivation."
+    },
+    {
+      "id": "t14-reform-1980",
+      "title": "National Security Archive, US diplomatic reporting on Tibetan liberalization in the early 1980s",
+      "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB414/",
+      "note": "George Washington University archive checked for declassified cables on Hu Yaobang’s 1980 visit, economic and cultural policy changes, renewed family travel, monastery restoration, education, persistent poverty, Chinese-language advantages and the limits of the religious revival. Diplomatic observers and interviewees had their own perspectives."
+    },
+    {
+      "id": "t14-un-1992",
+      "title": "United Nations Commission on Human Rights, Situation in Tibet, E/CN.4/1992/37",
+      "url": "https://digitallibrary.un.org/record/137258/files/E_CN.4_1992_37-EN.pdf",
+      "note": "UN-hosted report checked for demonstrations beginning in 1987, killings and detentions reported by non-governmental sources, the 8 March 1989 imposition of martial law and its stated official justification, and the May 1990 lifting. Contested casualty estimates are not repeated as settled totals."
+    },
+    {
+      "id": "t14-social-resource",
+      "title": "Case Western Reserve University Center for Research on Tibet, Tibetan History, Society and Marriage",
+      "url": "https://case.edu/artsci/tibet/explore-our-resources/tibetan-history-society-and-marriage",
+      "note": "University research portal checked for the published Goldstein-Miller debate over Tibetan dependency and command, plus academic works on taxation, social structure, marriage and polyandry. It demonstrates an active scholarly argument and supports caution about reducing society to one slogan."
+    },
+    {
+      "id": "t14-serfdom",
+      "title": "Melvyn C. Goldstein, Serfdom and Mobility in Traditional Tibetan Society, Journal of Asian Studies",
+      "url": "https://case.edu/artsci/tibet/sites/default/files/2022-05/Serfdom%20and%20Mobility-%20An%20Examination%20of%20the%20Institution%20of%20%2522Human%20Lease%2522%20in%20Traditional%20Tibetan%20Society%20_0.pdf",
+      "note": "Peer-reviewed 1971 study checked for hereditary ties to estates, government/monastic/aristocratic lords, differing dependent categories and channels of personal mobility. Its terminology and refugee-interview method have been debated, so the card attributes the analytical label rather than presenting propaganda from either side."
+    },
+    {
+      "id": "t14-family",
+      "title": "Melvyn C. Goldstein, Stratification, Polyandry, and Family Structure in Central Tibet",
+      "url": "https://case.edu/artsci/tibet/sites/default/files/2022-05/Stratification,%20Polyandry,%20and%20Family%20Structure%20in%20Central%20Tibet.pdf",
+      "note": "Peer-reviewed anthropological study checked for the relationship among landholding, household continuity and fraternal polyandry in Central Tibet. It documents one important pattern alongside monogamy and other arrangements and cannot be generalized to every class, locality or Tibetan-speaking region."
+    },
+    {
+      "id": "t14-oral-archive",
+      "title": "Library of Congress, Tibetan Oral History Archive Project",
+      "url": "https://www.loc.gov/collections/tibetan-oral-history-project/about-this-collection/",
+      "note": "Official collection guide checked for almost 700 interviews, including over 600 common-folk interviews and separate political and Drepung monastery collections covering traditional and socialist eras through the Cultural Revolution. Oral testimony is memory evidence with individual scope, not an automatic fact for everyone."
+    },
+    {
+      "id": "t14-unhcr-exile",
+      "title": "UNHCR, The State of the World’s Refugees 2000: The Tibetan refugee community in India",
+      "url": "https://www.unhcr.org/sites/default/files/legacy-pdf/3ebf9bab0.pdf",
+      "note": "UNHCR retrospective checked at chapter 3, box 3.1, for the Dalai Lama’s 1959 flight, Tibetan refugee settlements across India, and India’s policy of allowing the community to maintain a distinct identity, cultural life and political-administrative system. Published after the atlas endpoint, it is used only to establish continuity through and beyond 1994, not conditions inside Tibet."
+    },
+    {
+      "id": "t14-wangmo",
+      "title": "Tibet Oral History Project, Interview 74 with Tsering Wangmo",
+      "url": "https://www.tibetoralhistory.org/Interviews/74_Tsering_Wangmo.pdf",
+      "note": "Translated 2007 interview checked at transcript pages 3-6. Wangmo, born in 1920 in U-Tsang, recalled one pastoral household’s relatives, livestock, children’s work, dairy and wool labor, tsampa and soup, clothing, songs, weddings, river water, winter ice and bathing. Retrospective personal testimony is not treated as a survey."
+    },
+    {
+      "id": "t14-phurbu",
+      "title": "Library of Congress, Common Folk Oral History interview OR.0007.01 with Phurbu Chogba",
+      "url": "https://tile.loc.gov/storage-services/service/asian/asiantoha/OR_0007_01_Transcriptions/OR_0007_01.pdf",
+      "note": "Translated interview checked at transcript pages 1-6. Phurbu Chogba, born in 1949, recalled family flight from estate obligations, childhood service and beating, post-1959 village school, Tibetan reading and mathematics, activist work, a difficult hospital journey, commune-era shortages and later decollectivization. It is one life, not a representative statistic."
+    },
+    {
+      "id": "t14-phurbu-item",
+      "title": "Library of Congress catalog record, oral history interview of Phurbu",
+      "url": "https://www.loc.gov/item/2020706405/",
+      "note": "Official catalog record and linked transcript checked for Phurbu Chogba’s background, post-reform Social School and oral-history files. The linked transcript pages 1-2 record villagers carrying an appendicitis patient to county and prefectural hospitals for surgery and a blood transfusion."
+    },
+    {
+      "id": "t14-lobsang-school",
+      "title": "Tibet Oral History Project, interview 209 with Lobsang Thardho",
+      "url": "https://www.tibetoralhistory.org/interview_details.php?id=209",
+      "note": "Interview catalog and linked transcript checked for Lobsang Thardho’s recollection of beginning lessons around age five or six at the Potala with his opera-singer uncle, entering Ganden monastery at thirteen, and describing monastic study and routine. It is one comparatively privileged educational path, not evidence that all children attended school."
+    },
+    {
+      "id": "t14-toilets",
+      "title": "Library of Congress, Political History interview H.0001.14",
+      "url": "https://tile.loc.gov/storage-services/service/asian/asiantoha/H_0001_14_Transcriptions/H_0001_14.pdf",
+      "note": "Translated former-official interview checked at transcript pages 2-4. The interviewee recalled Lhasa toilets receiving ash to reduce odor, composted toilet material used as fertilizer, different PLA vegetable-fertilizing practice, imported rice and 1950s food markets. The memory is specific to Lhasa and should not be universalized."
+    },
+    {
+      "id": "t14-medicine",
+      "title": "Tibetan medicine: a unique heritage of person-centered medicine, EPMA Journal",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3405412/",
+      "note": "Peer-reviewed medical-history overview checked for the 13th Dalai Lama’s 1916 foundation of a Lhasa clinic, school and pharmacy, Tibetan diagnostic theory, compound medicines and later institutional continuity. Historical practices are described as practices, not endorsed as effective modern treatment."
+    },
+    {
+      "id": "t14-health-stats",
+      "title": "State Council Information Office of China, Democratic Reform in Tibet: Sixty Years On",
+      "url": "https://english.scio.gov.cn/2019-03/27/content_74618430_6.htm",
+      "note": "Official PRC white paper checked for reported 1958-1965 changes in roads, schools, medical institutions, hospital beds and health workers. These are state administrative counts and achievement claims; the card uses them to document institution building while explicitly noting they do not measure quality, coercion or equal access."
+    },
+    {
+      "id": "t14-sanitation",
+      "title": "Tibet Heritage Fund, The Old City of Lhasa: Water and Sanitation Project",
+      "url": "https://www.asianart.com/lhasa_restoration/report98/ch_07.htm",
+      "note": "Conservation project report checked for a 1997 old-city study, just after the atlas endpoint: vulnerable toilets in traditional buildings, water pressure, hand-emptied cesspits in some circa-1990 housing, drains and a new sewer connection. It is used to define a late evidence limit, not projected backward onto all earlier homes."
+    },
+    {
+      "id": "t14-education-1980",
+      "title": "PRC Embassy, Tibetan Education: Difficulties and Recovery (1966-1986)",
+      "url": "https://th.china-embassy.gov.cn/eng/ztbd/AboutChina/Tibet/STE/xzjydzyj/xxzjy/200011/t20001115_1433594.htm",
+      "note": "Official PRC education history checked for the 1980 policy conference, primary-school expansion, teacher training, Tibetan-language textbooks and courses, subsidies and official acknowledgement of continuing problems. Its success framing and figures are treated as government claims, not independent outcome measures."
+    },
+    {
+      "id": "t14-nomad-revival",
+      "title": "Case Western Reserve University, Voices from Tibet",
+      "url": "https://case.edu/artsci/artsci-fall-2009/tibet.html",
+      "note": "University feature checked for Goldstein and Beall’s 1980s field observations of Changtang pastoralists after commune policies were reversed: household livestock returned, religious restrictions eased, and prayer flags, yak-hair tents, herding and traditional dress remained visible. It is a fieldwork account, not proof that nothing had changed."
+    },
+    {
+      "id": "t14-loc-heading",
+      "title": "Library of Congress, name authority decision for Tibet and Tibet Autonomous Region",
+      "url": "https://www.loc.gov/aba/pcc/saco/cpsoed/psd-110330.html",
+      "note": "Official cataloging decision checked for separate jurisdiction headings: Tibet for the jurisdiction before 1 September 1965 and Tibet Autonomous Region (China) for the province-level jurisdiction formalized on that date. Catalog headings clarify identity; they are not a ruling on historical sovereignty."
+    }
+  ],
+  "entities": [
+    {
+      "id": "tibet-1914",
+      "card": "data/cards/tibet-1914.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "t14-atlas-index",
+            "t14-atlas-coverage",
+            "t14-ucpress-modern"
+          ],
+          "locator": "Project index checked locally for exact id tibet-1914, name Tibet, approximate lifetime 1914-1994, and the separate tibet, tibetan-empire, tibetans, proto-tibetan-cultures and tibeto-burmanese records. The lifetime is map metadata, not a verified political chronology. Coverage entry checked locally: tibet-1914 has no card, has six border files and six consecutive observed intervals from 1914-1920 through 1960-1994, and has no feature outside its indexed lifetime. Existing cards for medieval Tibet and the Tibetan Empire remain separate. University-press description and contents checked. The study draws on Tibetan participants, interviews and diplomatic archives and treats the political status dispute, internal institutions, modernization arguments, the PLA invasion and Seventeen-Point Agreement. It describes competing Chinese and Tibetan historical narratives rather than endorsing either as a complete account.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "t14-legal-status"
+          ],
+          "locator": "Peer-reviewed legal history checked for Tibet’s de facto independence, limited foreign relations and lack of general recognition as a sovereign country before 1951, plus the ambiguity of British “suzerainty” terminology. The author characterizes the 1951 outcome as annexation; that interpretation is identified, not silently converted into universal terminology.",
+          "dateScope": {
+            "from": 1914,
+            "to": 1933
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "t14-goldstein-v1-jstor"
+          ],
+          "locator": "Open academic book checked at the introduction and chapters 2, 18-20 for government and society, expulsion of Chinese forces after the Qing collapse, regency politics, the PLA campaign at Chamdo, negotiations and capitulation in the Seventeen-Point Agreement.",
+          "dateScope": {
+            "from": 1933,
+            "to": 1950
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "t14-frus-1951"
+          ],
+          "locator": "Declassified diplomatic document checked for contemporary reporting that Tibet had appealed after the October 1950 invasion, received no effective UN response and faced pressure to accept PRC demands. It records US officials’ views and geopolitical interests, not a neutral transcript of Tibetan or Chinese decisions.",
+          "dateScope": {
+            "from": 1950,
+            "to": 1951
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "t14-agreement-text"
+          ],
+          "locator": "Full English text checked for the preamble and clauses on PRC sovereignty, PLA entry, regional autonomy, the existing Tibetan political system, the Dalai and Panchen Lamas, religion, language, reforms, defense and foreign affairs. The host is a Tibetan advocacy organization, so wording was cross-checked against the PRC National People’s Congress account.",
+          "dateScope": {
+            "from": 1951,
+            "to": 1956
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "t14-goldstein-v4"
+          ],
+          "locator": "University-press description and contents checked for the 1957-1959 buildup, March 1959 Lhasa uprising and demise of the old Tibetan political order. The book is based on Tibetan, Chinese and English documents, biographies, memoirs and specially collected interviews and challenges simplified partisan accounts.",
+          "dateScope": {
+            "from": 1956,
+            "to": 1959
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "t14-prc-autonomy"
+          ],
+          "locator": "Official PRC white paper checked for the Preparatory Committee, dismissal of the old government after the 1959 uprising, land and political reforms, and the 1 September 1965 founding of the Tibet Autonomous Region. Its “peaceful liberation,” “rebellion” and emancipation language is presented as the PRC’s state framing, not neutral vocabulary.",
+          "dateScope": {
+            "from": 1959,
+            "to": 1966
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "t14-cultural-revolution"
+          ],
+          "locator": "University-press study checked for the Cultural Revolution’s factional conflicts, local Tibetan participation, the 1969 Nyemo violence and the authors’ warning that not every conflict was simply an ethnic-nationalist revolt. It is paired with oral-history evidence about coercion and deprivation.",
+          "dateScope": {
+            "from": 1966,
+            "to": 1976
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "t14-reform-1980"
+          ],
+          "locator": "George Washington University archive checked for declassified cables on Hu Yaobang’s 1980 visit, economic and cultural policy changes, renewed family travel, monastery restoration, education, persistent poverty, Chinese-language advantages and the limits of the religious revival. Diplomatic observers and interviewees had their own perspectives.",
+          "dateScope": {
+            "from": 1978,
+            "to": 1987
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "t14-un-1992"
+          ],
+          "locator": "UN-hosted report checked for demonstrations beginning in 1987, killings and detentions reported by non-governmental sources, the 8 March 1989 imposition of martial law and its stated official justification, and the May 1990 lifting. Contested casualty estimates are not repeated as settled totals.",
+          "dateScope": {
+            "from": 1987,
+            "to": 1994
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "t14-atlas-1914"
+          ],
+          "locator": "Local identity.json: decoded world-1914 target structure, bbox, thirteen named point-in-polygon tests and boundary-contact audit.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "t14-atlas-1960"
+          ],
+          "locator": "Local identity.json: decoded world-1960 target structure, bbox, geometry hash, point tests, contacts and comparison with five earlier intervals.",
+          "dateScope": {
+            "year": 1960
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "t14-legal-status"
+          ],
+          "locator": "Asian Journal of International Law article, discussion of de facto independence, recognition, foreign relations and the legal ambiguity of suzerainty.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "t14-simla"
+          ],
+          "locator": "China Quarterly abstract and article framing: conference parties, British buffer strategy, proposed zonal division, Tibetan aims and Chinese non-acceptance.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "t14-thirteenth"
+          ],
+          "locator": "Treasury of Lives biography, sections on post-1912 government, military advisers, communications, currency, Shol Press, costs and institutional opposition.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "t14-goldstein-v1-jstor"
+          ],
+          "locator": "Open book contents and chapters 10-17: regency contests, identification/enthronement, government finances, radios, foreign news and postwar reassessment.",
+          "dateScope": {
+            "year": 1940
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "t14-currency"
+          ],
+          "locator": "Bulletin of Tibetology survey, discussion of 1913 issues, altered date blocks, controlled quantities, gold backing and the 1925 finance office.",
+          "dateScope": {
+            "year": 1913
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "t14-post"
+          ],
+          "locator": "Buddhism, Law & Society article, postal-reform section: twelve stations, Lhasa-Gyantse timing, stamps, British-system transfer and telegraph.",
+          "dateScope": {
+            "year": 1924
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "t14-frus-1951"
+          ],
+          "locator": "FRUS 1951 volume VII, document 94 and notes: post-Chamdo appeals, absent effective response and contemporary assessment of Tibetan negotiating pressure.",
+          "dateScope": {
+            "year": 1950
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "t14-agreement-text",
+            "t14-agreement-prc"
+          ],
+          "locator": "Agreement preamble and points 1-15, cross-checked against the NPC account of delegation authority and the later Lhasa telegram.",
+          "dateScope": {
+            "year": 1951
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "t14-goldstein-v2"
+          ],
+          "locator": "A History of Modern Tibet, volume 2 estate-system chapter: 1951-1955 institutional coexistence, estate categories and gradualist policy.",
+          "dateScope": {
+            "year": 1954
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "t14-spinning-wheel",
+            "t14-coldwar"
+          ],
+          "locator": "Case Western Reserve policy paper on the 10 March crowd, flight, repudiation and institutional replacement, paired with Goldstein’s Cold War article on CIA contact, training and weapons.",
+          "dateScope": {
+            "year": 1959
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "t14-un-1959"
+          ],
+          "locator": "UN General Assembly Resolution 1353 (XIV), operative call for human rights and distinctive cultural and religious life; no independence recognition or border language.",
+          "dateScope": {
+            "year": 1959
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "t14-prc-autonomy"
+          ],
+          "locator": "State Council white paper, establishment section: dismissal of old government, reform program, Preparatory Committee and 1 September 1965 regional founding; official framing identified.",
+          "dateScope": {
+            "year": 1965
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "t14-cultural-revolution"
+          ],
+          "locator": "UC Press overview and contents, especially chapters on Lhasa factions and the Nyemo incident; authors’ finding against a one-cause nationalist interpretation.",
+          "dateScope": {
+            "year": 1969
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "t14-reform-1980"
+          ],
+          "locator": "National Security Archive narrative and cables, lines 36-43 and 81-87: Hu visit, policy changes, travel, language, poverty and religious reopening.",
+          "dateScope": {
+            "year": 1980
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "t14-nomad-revival"
+          ],
+          "locator": "Case Western Reserve feature, “Amazing Changes” section: 1980s Changtang fieldwork, tents, herds, dress, prayer flags, decollectivization and remembered deprivation.",
+          "dateScope": {
+            "year": 1987
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "t14-un-1992"
+          ],
+          "locator": "UN report E/CN.4/1992/37, Tibet section: 1987-1989 demonstrations, reported force/detention, official martial-law rationale and May 1990 end; estimates treated as contested.",
+          "dateScope": {
+            "year": 1989
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "t14-serfdom",
+            "t14-social-resource"
+          ],
+          "locator": "Journal of Asian Studies article opening and status analysis, paired with the university portal’s Goldstein-Miller debate bibliography.",
+          "dateScope": {
+            "year": 1950
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "t14-family"
+          ],
+          "locator": "Southwestern Journal of Anthropology article, analysis of stratification, household continuity and fraternal polyandry; geographic and class scope retained.",
+          "dateScope": {
+            "year": 1950
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "t14-wangmo"
+          ],
+          "locator": "Interview 74 transcript pages 3-6: family/camp, chores, children, meals, wool clothing, songs, dances, weddings and retrospective ambivalence.",
+          "dateScope": {
+            "year": 1935
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "t14-phurbu"
+          ],
+          "locator": "Library of Congress OR.0007.01, transcript pages 1-2 and 5-6: flight, childhood service, school, activism, commune labor and food shortage.",
+          "dateScope": {
+            "year": 1965
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "t14-oral-archive"
+          ],
+          "locator": "Library of Congress collection guide: corpus size, three interview collections, languages, transcripts and traditional/socialist-era scope.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "t14-lobsang-school"
+          ],
+          "locator": "Interview 209 catalog and transcript summary: early Potala tutoring, opera-singer uncle, entry to Ganden and monastic routine; explicit individual-scope limit.",
+          "dateScope": {
+            "year": 1945
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "t14-education-1980"
+          ],
+          "locator": "Official education history, 1980-1986 section: policy conference, primary schools, teacher training, Tibetan curriculum/textbooks, subsidies and acknowledged problems.",
+          "dateScope": {
+            "year": 1984
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "t14-medicine"
+          ],
+          "locator": "EPMA Journal review, history and diagnostic/treatment sections: 1916 institute, training, pulse/urine examination and compound practice.",
+          "dateScope": {
+            "year": 1916
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "t14-health-stats",
+            "t14-phurbu-item"
+          ],
+          "locator": "PRC white paper’s 1965 institutional counts paired with OR.0007.01 transcript pages 1-2, the appendicitis transport and transfusion recollection.",
+          "dateScope": {
+            "year": 1965
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "t14-wangmo"
+          ],
+          "locator": "Interview 74 transcript page 5: river water, winter ice carried by yak, melting, cold bathing and children; personal and regional limits retained.",
+          "dateScope": {
+            "year": 1940
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "t14-toilets"
+          ],
+          "locator": "Library of Congress H.0001.14 transcript pages 2-3, lines 147-169: vegetables, ash in toilets, composted fertilizer and market/import context.",
+          "dateScope": {
+            "year": 1954
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "t14-sanitation"
+          ],
+          "locator": "Tibet Heritage Fund 1997 study, sections 7.1-7.2: vulnerable toilets, circa-1990 cesspits, hand emptying, river drainage and sewer/drain work; post-cutoff limit explicit.",
+          "dateScope": {
+            "year": 1997
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "t14-currency",
+            "t14-post"
+          ],
+          "locator": "Currency survey on block-printed dated notes paired with postal-system article on stamps, stations and international transfer routes.",
+          "dateScope": {
+            "year": 1925
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "t14-mirror"
+          ],
+          "locator": "Columbia Libraries announcement, lines 28-36: Tibetan title/transliteration, dates, circulation and role as world-news source; Unicode follows documented title.",
+          "dateScope": {
+            "year": 1925
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "t14-phurbu-item",
+            "t14-reform-1980"
+          ],
+          "locator": "Phurbu catalog and linked transcript pages 1-2 for village-school reading, writing, newspapers and mathematics; National Security Archive cables for the 1980s publishing revival and Chinese-language advantage.",
+          "dateScope": {
+            "year": 1984
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "t14-loc-heading",
+            "t14-unhcr-exile"
+          ],
+          "locator": "Official cataloging decision checked for separate jurisdiction headings: Tibet for the jurisdiction before 1 September 1965 and Tibet Autonomous Region (China) for the province-level jurisdiction formalized on that date. Catalog headings clarify identity; they are not a ruling on historical sovereignty. UNHCR retrospective checked at chapter 3, box 3.1, for the Dalai Lama’s 1959 flight, Tibetan refugee settlements across India, and India’s policy of allowing the community to maintain a distinct identity, cultural life and political-administrative system. Published after the atlas endpoint, it is used only to establish continuity through and beyond 1994, not conditions inside Tibet.",
+          "dateScope": {
+            "year": 1994
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "tibet-1914",
+        "name": "Tibet (1914-1994 atlas record)",
+        "region": "Asia",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "An approximate regional atlas record spanning de facto Tibetan self-government, PRC incorporation, socialist transformation, cultural destruction, revival and dissent; its nearly unchanged polygon is not one continuous sovereignty claim.",
+        "card": "cards/tibet-1914.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "tibet-1914",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            78.450184501845,
+            27.181591329842597,
+            98.95598955989561,
+            36.500291125116924
+          ]
+        },
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "tibet-1914",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            78.450184501845,
+            27.180764410841526,
+            98.95598955989561,
+            36.49948555378234
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "tibet-1914",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            78.450184501845,
+            27.180764410841526,
+            98.95598955989561,
+            36.49948555378234
+          ]
+        },
+        {
+          "file": "world-1938.json",
+          "properties": {
+            "civ": "tibet-1914",
+            "from": 1938,
+            "to": 1945,
+            "precision": 3
+          },
+          "bounds": [
+            78.450184501845,
+            27.180764410841526,
+            98.95598955989561,
+            36.49948555378234
+          ]
+        },
+        {
+          "file": "world-1945.json",
+          "properties": {
+            "civ": "tibet-1914",
+            "from": 1945,
+            "to": 1960,
+            "precision": 3
+          },
+          "bounds": [
+            78.450184501845,
+            27.18092824849691,
+            98.95598955989561,
+            36.50048154242029
+          ]
+        },
+        {
+          "file": "world-1960.json",
+          "properties": {
+            "civ": "tibet-1914",
+            "from": 1960,
+            "to": 1994,
+            "precision": 3
+          },
+          "bounds": [
+            78.450184501845,
+            27.18092824849691,
+            98.95598955989561,
+            36.50048154242029
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "tibet-1914",
+      "finding": "Exact target is the approximate 1914-1994 historical-basemap record. It is separate from the already-carded tibet (1000-1783) and tibetan-empire records and from prehistoric or ethnolinguistic umbrella IDs."
+    },
+    {
+      "id": "tibet-1914",
+      "finding": "Six consecutive target features cover 1914-1920, 1920-1930, 1930-1938, 1938-1945, 1945-1960 and 1960-1994. Every one is a single polygon; the outline and named point-test results remain nearly unchanged despite fundamental political change."
+    },
+    {
+      "id": "tibet-1914",
+      "finding": "All six features include tested Lhasa, Shigatse, Gyantse, Tsetang, Nagqu, Chamdo and Gartok and exclude tested Leh, Xining, Lanzhou, Chengdu, Kathmandu and Thimphu. These are display-geometry tests only, not historical control or sovereignty findings."
+    },
+    {
+      "id": "tibet-1914",
+      "finding": "The atlas ID crosses the 1950 PLA campaign, 1951 agreement, 1959 institutional rupture and 1965 Tibet Autonomous Region founding. The narrative does not treat it as one continuous sovereign state, and the 1994 endpoint is a catalog cutoff rather than a fall."
+    }
+  ]
+}

@@ -1,0 +1,740 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel japan-1492 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "jap-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository index checked for id japan: name Japan, circa 1492-1530. Its generated aliases “Empire of Japan” and “Japanese Empire” are anachronistic for this interval. The same index retains muromachi through 1573 and has separate earlier and later Japan records."
+    },
+    {
+      "id": "jap-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage record checked before integration: kind state, dates approximate, card null, review missing, two border files, intervals 1492-1500 and 1500-1530, and no features outside the indexed lifetime."
+    },
+    {
+      "id": "jap-geom-1400",
+      "title": "Human History Map, world-1400 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded with topojson-client. The predecessor muromachi feature has three island parts for Kyushu, Honshu and Shikoku. A separate 21-part ainus feature includes Hokkaido."
+    },
+    {
+      "id": "jap-geom-1492",
+      "title": "Human History Map, world-1492 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded with topojson-client. The japan feature for 1492-1500 is a four-part MultiPolygon with 324 positions and bbox 129.3438934,30.8880865 to 145.4468545,45.4358676. Its fourth part is Hokkaido; the contemporary ainus feature has lost that part."
+    },
+    {
+      "id": "jap-geom-1500",
+      "title": "Human History Map, world-1500 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded with topojson-client. The japan feature for 1500-1530 is a four-part MultiPolygon with 329 positions and nearly the same broad outline as the 1492 feature. It still assigns Hokkaido to japan."
+    },
+    {
+      "id": "jap-geom-1530",
+      "title": "Human History Map, world-1530 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded with topojson-client. The successor japan-warring-states feature returns to three main-island parts and excludes Hokkaido; a separate ainu-1530 feature again contains Hokkaido. Main-island parts nearly match the target, with maximum aligned coordinate deltas below 0.0014 degrees."
+    },
+    {
+      "id": "jap-met-muromachi",
+      "title": "Metropolitan Museum of Art, Muromachi Period (1392-1573)",
+      "url": "https://www.metmuseum.org/essays/muromachi-period-1392-1573",
+      "note": "Met Department of Asian Art essay checked. Ashikaga authority was weaker than Kamakura rule, powerful daimyo retained regional influence, the 1467-1477 Onin War devastated Kyoto, and conflict continued into Sengoku. The period also expanded commercial, transport and urban networks and supported tea, renga, Noh and ink painting."
+    },
+    {
+      "id": "jap-kyoto-chron",
+      "title": "Kyoto City, historical chronology of the city",
+      "url": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/nenpyou/toshi_nenpyo.html",
+      "note": "Municipal chronology checked. It dates the Onin conflict and fortified Upper and Lower Kyoto, revival of the Gion festival in 1500 after wartime suspension, fighting near Funaokayama in 1511, and expulsion of the last Ashikaga shogun from Kyoto in 1573."
+    },
+    {
+      "id": "jap-ndl-coup",
+      "title": "National Diet Library reference database, the Meio coup and the proposed “Sakai bakufu”",
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000030263&page=ref_view",
+      "note": "Sakai City Library reference answer in the NDL cooperative database checked. Yoshitane marched to Kawachi in 1493 and was deposed in a coup led by Hosokawa Masamoto. A rival Ashikaga-Hosokawa-Miyoshi power formed at Sakai in 1527; calling it the “Sakai bakufu” is explicitly identified as one historian’s hypothesis."
+    },
+    {
+      "id": "jap-ndl-yoshiharu",
+      "title": "National Diet Library authority record, Ashikaga Yoshiharu",
+      "url": "https://id.ndl.go.jp/auth/ndlna/001268821",
+      "note": "NDL authority record checked. It identifies Ashikaga Yoshiharu (1511-1550), childhood name Kameomaru, as the twelfth shogun of the Muromachi shogunate. The authority record is identity evidence, not a full political biography."
+    },
+    {
+      "id": "jap-ming-licenses",
+      "title": "Kyoto National Museum, licenses for trade between Japan and Ming China",
+      "url": "https://www.kyohaku.go.jp/eng/learn/home/dictio/shoseki/nichimin/",
+      "note": "Museum explanation checked. Tally trade reopened in 1401. Wind-powered crossings took at least a month and complete journeys could take years. Nineteen licensed ships went over roughly 150 years; Japan exported sulfur, swords and fans and imported copper coins and silk. Japan then had no standard domestically minted currency."
+    },
+    {
+      "id": "jap-ming-utokyo",
+      "title": "University of Tokyo BiblioPlaza, Japan’s relations with Ming China in the Sengoku period",
+      "url": "https://www.u-tokyo.ac.jp/biblioplaza/en/A_00202.html",
+      "note": "Academic book overview checked. Ming accepted tribute missions, so the shogunate used the title king of Japan for licensed trade. Ship management involved shugo daimyo, temples, shrines and other powers; rivalry between Hosokawa and Ouchi interests led to the 1523 Ningbo incident. The author questions a simple later Ouchi-monopoly story."
+    },
+    {
+      "id": "jap-sakai",
+      "title": "Sakai City, archaeology of the moated city of Sakai",
+      "url": "https://www.city.sakai.lg.jp/kanko/rekishi/bunkazai/bunkazai/isekishokai/kangotoshi.html",
+      "note": "Municipal archaeology page checked. Late medieval Sakai was a trading and self-governing city; merchant councillors appear in 1484 and major fires are listed in 1494, 1508 and 1526. Excavations reveal dense narrow houses, imported and domestic ceramics, roads, drains, wells and street-side jar latrines, though layers span late Muromachi through early Edo."
+    },
+    {
+      "id": "jap-screen-1525",
+      "title": "National Museum of Japanese History, 1525 Scenes in and around Kyoto screen",
+      "url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/index.html",
+      "note": "Museum gallery checked. The Rekihaku A screen is the oldest surviving Scenes in and around Kyoto screen; the landscape depicted is dated to 1525. It shows Kyoto crowds and seasons on two six-panel screens, but remains an artist’s selected representation rather than a census or photograph."
+    },
+    {
+      "id": "jap-screen-shogun",
+      "title": "National Museum of Japanese History, shogunal residence on the 1525 Kyoto screen",
+      "url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/theme/house09.html",
+      "note": "Museum detail checked. The screen labels the shogunal residence “くはうさま（公方様）” and identifies it as Yoshiharu’s Yanagihara residence built in 1525. Samurai, visitors and women appear in the compound. The label supplies an authentic short Japanese writing sample."
+    },
+    {
+      "id": "jap-screen-children",
+      "title": "National Museum of Japanese History, children and women on Shinmachi Street",
+      "url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/theme/street30.html",
+      "note": "Museum detail checked. On the 1525 screen, a group of women wears veil-like kazuki garments and children walk with dogs on Shinmachi Street. The scene is valuable visual evidence but cannot establish how every family lived."
+    },
+    {
+      "id": "jap-screen-family",
+      "title": "National Museum of Japanese History, Sanjonishi residence on the 1525 Kyoto screen",
+      "url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/theme/house06.html",
+      "note": "Museum detail checked. The aristocratic Sanjonishi residence shows red and white plum, a bird-song contest, the male householder, a woman interpreted as his wife and a girl with a double-bun hairstyle. Identifications are museum interpretations of a painted scene."
+    },
+    {
+      "id": "jap-screen-noh",
+      "title": "National Museum of Japanese History, Kanze Noh on the 1525 Kyoto screen",
+      "url": "https://www.rekihaku.ac.jp/education_research/gallery/webgallery/rakutyuu/theme/event01.html",
+      "note": "Museum detail checked. A simple roofed Kanze Noh stage is surrounded by male and female spectators, with two performers on an uncovered bridgeway. The scene documents a public social setting selected by the painter."
+    },
+    {
+      "id": "jap-screen-people",
+      "title": "National Museum of Japanese History, persons database for sixteenth-century Kyoto screens",
+      "url": "https://www.rekihaku.ac.jp/doc/gaiyou/rakuchu.html",
+      "note": "Database overview checked. Researchers catalogued all 1,426 figures on the circa-1525 A screen by categories including adult men, adult women, children and infants; clothing, headgear, hairstyle, occupation, objects, place and activity are described. Museum classifications depend on visual interpretation."
+    },
+    {
+      "id": "jap-rekihaku-kids",
+      "title": "National Museum of Japanese History, children’s gallery on medieval Japan",
+      "url": "https://www.rekihaku.ac.jp/kids/outline/guidance/room_02/index.html",
+      "note": "Museum children’s guide checked. It presents farmers making demands and sometimes fighting warriors, regional daimyo, women selling ayu fish in Kyoto, Chinese-derived large saws, water-lifting wheels, growing craft production and performance. The gallery summarizes broad medieval developments, not uniform conditions."
+    },
+    {
+      "id": "jap-ashikaga-school",
+      "title": "Ashikaga City, Ashikaga School questions and answers",
+      "url": "https://www.city.ashikaga.tochigi.jp/education/000031/000180/p001413.html",
+      "note": "Official school-site Q&A checked. Students focused on Confucian learning, divination and later military learning; there was no modern timetable, and students mainly studied independently by copying classical Chinese books. Rules required students to take clerical status. This was a specialized institution, not universal schooling."
+    },
+    {
+      "id": "jap-ashikaga-timeline",
+      "title": "Ashikaga City, Ashikaga School chronology",
+      "url": "https://www.city.ashikaga.tochigi.jp/education/000031/000180/p001416.html",
+      "note": "Official chronology checked. Uesugi Norizane donated books and land and invited a head in 1439; renga poet Socho visited in 1509; the lecture and study halls burned sometime from 1528 to 1531. Exact fire year straddles the atlas endpoint."
+    },
+    {
+      "id": "jap-tnm-medicine",
+      "title": "Tokyo National Museum, medical books in the Japanese natural history exhibition",
+      "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=328&lang=en",
+      "note": "Museum object list checked. Enju Ruiyo, attributed to Takeda Shokei and dated 1468, is described as a book on medical nutrition and other health care; the surviving listed copy is an Edo-period transcription. It proves a textual tradition, not equal access or clinical success."
+    },
+    {
+      "id": "jap-utokyo-syphilis",
+      "title": "University Museum, University of Tokyo, palaeopathology and the first recorded syphilis outbreaks",
+      "url": "https://umdb.um.u-tokyo.ac.jp/DImages/Kankoubutsu/IBulletin/no23/no23001.html",
+      "note": "University museum dissertation page checked. It reviews retrospective medical-history conclusions that syphilis reached Japan around 1511-1512 and cites a Kyoto physician’s report of an outbreak in 1512 and a temple record of an outbreak in Kanto in 1513. Diagnosis and arrival dating remain later scholarly interpretations."
+    },
+    {
+      "id": "jap-knm-tea",
+      "title": "Kyoto National Museum, tea kettles and tea practice",
+      "url": "https://www.kyohaku.go.jp/eng/learn/home/dictio/kinkou/cha/",
+      "note": "Museum explanation checked. Tea retained a medicinal association into the Muromachi period but was also enjoyed through tasting games and ceremony. Tea practice grew rapidly in the sixteenth century among samurai and merchants in cities including Kyoto and Sakai; specialist kettles were made in several regions."
+    },
+    {
+      "id": "jap-hokkaido-museum",
+      "title": "Hokkaido Museum, The Age of Ezochi",
+      "url": "https://www.hm.pref.hokkaido.lg.jp/wp-content/uploads/2025/03/ENG-1-3.pdf",
+      "note": "Official museum panel checked. Ainu culture took shape from the thirteenth century amid northern trade. In the fourteenth and fifteenth centuries Chinese ceramics and coins reached Hokkaido; Wajin settlement in the south and violence from the mid-fifteenth to mid-sixteenth century did not amount to Ashikaga rule of the whole island. Ainu livelihoods included hunting, fishing, gathering and trade."
+    },
+    {
+      "id": "jap-ainu-national",
+      "title": "National Ainu Museum, permanent exhibition from Ainu perspectives",
+      "url": "https://archivenam.ainu-upopoy.jp/en/exhibition/floor2/basic/",
+      "note": "National Ainu Museum overview checked. It identifies the Ainu as Indigenous to Hokkaido, Sakhalin, Tohoku and the Kuril Islands and presents language, life, history, work and exchange through Ainu perspectives from the deep past to the present. This supports living continuity, not a vanished-culture frame."
+    },
+    {
+      "id": "jap-shuri",
+      "title": "Shurijo Castle Park, Shuri Castle and the Kingdom of Ryukyu",
+      "url": "https://oki-park.jp/shurijo/en/info/6466/6467",
+      "note": "Official site checked. Ryukyu unified in 1429; the Second Sho dynasty began in 1469. King Sho Shin (1465-1526) expanded trade, ports, arts and monuments during a period of peace and prosperity. Ryukyu enjoyed independence and overseas trade; it was not incorporated into Japan until 1879."
+    },
+    {
+      "id": "jap-smithsonian-teabowl",
+      "title": "Smithsonian National Museum of Asian Art, Muromachi tea bowl",
+      "url": "https://asia.si.edu/interactives/mind-over-matter/tea-bowl/index.html",
+      "note": "Museum object and curator transcript checked. A Seto- or Mino-ware bowl dated 1510-1530 was wheel-thrown with iron and ash glazes. Its Japanese makers combined features of valued Chinese wares as locally made tea ceramics spread. The visible gilded repairs are probably later and must not be assigned to the original period."
+    },
+    {
+      "id": "jap-iwami",
+      "title": "UNESCO nomination dossier, Iwami Ginzan Silver Mine",
+      "url": "https://whc.unesco.org/uploads/nominations/1246.pdf",
+      "note": "Nomination history checked. A historical document dates discovery and initial development to 1526 by Hakata merchant Kamiya Jutei; ore first moved to Tomogaura and by sea to Hakata. Cupellation began in 1533, after this card, and the mine’s great production and world impact belong later in the sixteenth century."
+    },
+    {
+      "id": "jap-women-study",
+      "title": "National Museum of Japanese History Bulletin, women and family in late medieval Japan",
+      "url": "https://www.rekihaku.ac.jp/assets/upload/book_kenkyu_202209_houkoku_235_pdf_en_235005.pdf",
+      "note": "Peer-reviewed museum bulletin English abstract checked. Sixteenth-century genre paintings often show widow nuns leading women or whole households. A property-document analysis suggests male representation strengthened in the later fifteenth century while widow nuns could retain or inherit substantial household authority. Neither pattern describes every class or region."
+    },
+    {
+      "id": "jap-ndl-genpuku",
+      "title": "National Diet Library, warrior coming-of-age ceremonies",
+      "url": "https://www.ndl.go.jp/kaleido/entry/31/2.html",
+      "note": "NDL exhibition checked. Elite warrior coming-of-age ceremonies varied but often occurred from ages eleven to seventeen, with a new adult name, cap and stories of martial achievement. From the Muromachi period some lower-ranking warriors marked adulthood by shaving the sakayaki; elite rites cannot be generalized to all children."
+    },
+    {
+      "id": "jap-ichijodani-food",
+      "title": "Ichijodani Asakura Family Site Museum, Sengoku Gourmet of Ichijodani",
+      "url": "https://asakura-museum.pref.fukui.lg.jp/files/uploads/R6%E3%83%86%E3%83%BC%E3%83%9E%E5%B1%95_%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+      "note": "Prefectural museum exhibition leaflet checked. Excavations recovered fish and shell remains, seeds, charred rice, cooking knives, iron pots and grinding bowls. Sea-bream bones bear knife marks; a chopping board reused a serving tray, and inexpensive lacquer bowls were mass produced. These finds belong to one regional castle town."
+    },
+    {
+      "id": "jap-unicode",
+      "title": "Unicode Standard 17.0, Japanese scripts",
+      "url": "https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-18/",
+      "note": "Unicode core specification checked. Japanese writing combines Han characters, called kanji in Japanese, with hiragana and katakana. Hiragana is a cursive syllabary used phonetically and for grammatical material; the Japanese syllabaries developed from stylized or simplified Chinese ideographs."
+    },
+    {
+      "id": "jap-met-chronology",
+      "title": "Metropolitan Museum of Art, Japan 1400-1600 chronology",
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/08/eaj.html",
+      "note": "Met chronology checked. It dates Sesshu’s Splashed-Ink Landscape to 1495, Kano Motonobu’s Zen-patriarch screens to about 1513 and the oldest surviving Kyoto daily-life screen to 1525. Its chronology also distinguishes the 1530 atlas cutoff from the Ashikaga shogunate’s historical end in 1573."
+    }
+  ],
+  "entities": [
+    {
+      "id": "japan",
+      "card": "data/cards/japan.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "jap-index",
+            "jap-met-chronology"
+          ],
+          "locator": "Repository index checked for id japan: name Japan, circa 1492-1530. Its generated aliases “Empire of Japan” and “Japanese Empire” are anachronistic for this interval. The same index retains muromachi through 1573 and has separate earlier and later Japan records. Met chronology checked. It dates Sesshu’s Splashed-Ink Landscape to 1495, Kano Motonobu’s Zen-patriarch screens to about 1513 and the oldest surviving Kyoto daily-life screen to 1525. Its chronology also distinguishes the 1530 atlas cutoff from the Ashikaga shogunate’s historical end in 1573.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "jap-met-muromachi"
+          ],
+          "locator": "Met Department of Asian Art essay checked. Ashikaga authority was weaker than Kamakura rule, powerful daimyo retained regional influence, the 1467-1477 Onin War devastated Kyoto, and conflict continued into Sengoku. The period also expanded commercial, transport and urban networks and supported tea, renga, Noh and ink painting.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "jap-ndl-coup"
+          ],
+          "locator": "Sakai City Library reference answer in the NDL cooperative database checked. Yoshitane marched to Kawachi in 1493 and was deposed in a coup led by Hosokawa Masamoto. A rival Ashikaga-Hosokawa-Miyoshi power formed at Sakai in 1527; calling it the “Sakai bakufu” is explicitly identified as one historian’s hypothesis.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1508
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "jap-kyoto-chron"
+          ],
+          "locator": "Municipal chronology checked. It dates the Onin conflict and fortified Upper and Lower Kyoto, revival of the Gion festival in 1500 after wartime suspension, fighting near Funaokayama in 1511, and expulsion of the last Ashikaga shogun from Kyoto in 1573.",
+          "dateScope": {
+            "from": 1508,
+            "to": 1521
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "jap-ndl-yoshiharu",
+            "jap-screen-shogun",
+            "jap-ming-utokyo"
+          ],
+          "locator": "NDL authority record checked. It identifies Ashikaga Yoshiharu (1511-1550), childhood name Kameomaru, as the twelfth shogun of the Muromachi shogunate. The authority record is identity evidence, not a full political biography. Museum detail checked. The screen labels the shogunal residence “くはうさま（公方様）” and identifies it as Yoshiharu’s Yanagihara residence built in 1525. Samurai, visitors and women appear in the compound. The label supplies an authentic short Japanese writing sample. Academic book overview checked. Ming accepted tribute missions, so the shogunate used the title king of Japan for licensed trade. Ship management involved shugo daimyo, temples, shrines and other powers; rivalry between Hosokawa and Ouchi interests led to the 1523 Ningbo incident. The author questions a simple later Ouchi-monopoly story.",
+          "dateScope": {
+            "from": 1521,
+            "to": 1527
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "jap-ndl-coup"
+          ],
+          "locator": "Sakai City Library reference answer in the NDL cooperative database checked. Yoshitane marched to Kawachi in 1493 and was deposed in a coup led by Hosokawa Masamoto. A rival Ashikaga-Hosokawa-Miyoshi power formed at Sakai in 1527; calling it the “Sakai bakufu” is explicitly identified as one historian’s hypothesis.",
+          "dateScope": {
+            "from": 1527,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "jap-index",
+            "jap-coverage"
+          ],
+          "locator": "Index id/name/aliases/from/to/circa and coverage content/interval fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "jap-geom-1492",
+            "jap-geom-1500"
+          ],
+          "locator": "Decoded feature structure, vertex counts and bboxes; scope limitation follows the coarse single feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "jap-geom-1400",
+            "jap-geom-1492",
+            "jap-geom-1500",
+            "jap-geom-1530",
+            "jap-hokkaido-museum"
+          ],
+          "locator": "Near-matched Hokkaido part and Sapporo point test across 1400/1492/1500/1530; Hokkaido Museum panel lines 22-37.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "jap-shuri",
+            "jap-geom-1492",
+            "jap-geom-1500"
+          ],
+          "locator": "Shurijo official history lines 37-45; Shuri point test at 127.719,26.217 is outside both target geometries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "jap-geom-1492",
+            "jap-geom-1500"
+          ],
+          "locator": "Named point tests in geometry-audit.json; interpretation explicitly limits the GIS result.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "jap-met-muromachi"
+          ],
+          "locator": "Met essay paragraphs on daimyo, Onin War, destruction of Kyoto and Sengoku.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "jap-ndl-coup"
+          ],
+          "locator": "NDL cooperative reference answer lines 83-85.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "jap-kyoto-chron"
+          ],
+          "locator": "Kyoto chronology lines 63-68; effect language stays general and does not assign unlisted casualty totals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "jap-rekihaku-kids"
+          ],
+          "locator": "National Museum children’s gallery lines 93-101.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "jap-ndl-coup"
+          ],
+          "locator": "NDL reference answer lines 84-90, including explicit hypothesis warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "jap-ming-utokyo"
+          ],
+          "locator": "UTokyo BiblioPlaza lines 56-59.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "jap-ming-licenses"
+          ],
+          "locator": "Kyoto National Museum lines 163-169.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "jap-ming-utokyo"
+          ],
+          "locator": "UTokyo BiblioPlaza lines 58-62, including the author’s stated research problem.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "jap-sakai"
+          ],
+          "locator": "Sakai archaeology chronology lines 107-124.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "jap-iwami"
+          ],
+          "locator": "UNESCO nomination history section 2.b: discovery/development, Tomogaura shipment and 1533 cupellation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "jap-rekihaku-kids"
+          ],
+          "locator": "National Museum children’s gallery lines 115-132.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "jap-ichijodani-food"
+          ],
+          "locator": "Prefectural museum leaflet page 2, fish bones, food remains and cooking tools.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "jap-ichijodani-food"
+          ],
+          "locator": "Prefectural museum leaflet page 2, reused board and mass-produced ordinary lacquerware.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "jap-sakai"
+          ],
+          "locator": "Sakai archaeology sections on merchant houses and excavated objects; dating caveat from site scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "jap-screen-people"
+          ],
+          "locator": "Museum database overview lines 2-22.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "jap-women-study"
+          ],
+          "locator": "Peer-reviewed museum bulletin abstract lines 7-21.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "jap-screen-family"
+          ],
+          "locator": "National Museum screen detail lines 4-5.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "jap-screen-children"
+          ],
+          "locator": "National Museum screen detail lines 4-5.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "jap-ndl-genpuku"
+          ],
+          "locator": "NDL exhibition lines 24-36 and 45-64; elite and lower-ranking scope retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "jap-screen-noh",
+            "jap-kyoto-chron"
+          ],
+          "locator": "National Museum screen detail lines 4-5; Kyoto chronology line 66.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "jap-ashikaga-school"
+          ],
+          "locator": "Ashikaga City Q&A lines 151-159.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "jap-ashikaga-timeline"
+          ],
+          "locator": "Ashikaga City chronology lines 147-166.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "jap-screen-shogun",
+            "jap-unicode"
+          ],
+          "locator": "Exact screen label at house09 line 4; Unicode chapter 18 on kanji, hiragana and script derivation. Reading caveat distinguishes transcription from conventional reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "jap-met-chronology"
+          ],
+          "locator": "Met chronology entries for 1495 and 1513.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "jap-screen-1525",
+            "jap-screen-people"
+          ],
+          "locator": "Museum gallery dating/object description and persons-database total; evidence-limit inference explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "jap-tnm-medicine"
+          ],
+          "locator": "Tokyo National Museum object list lines 178-183; access/effectiveness limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "jap-utokyo-syphilis"
+          ],
+          "locator": "University Museum dissertation lines 8-17 and 27-30.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "jap-knm-tea"
+          ],
+          "locator": "Kyoto National Museum lines 169-172.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "jap-sakai"
+          ],
+          "locator": "Sakai archaeology lines 84-97; chronology/site-scope caveat retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "jap-rekihaku-kids"
+          ],
+          "locator": "National Museum rural water-wheel display lines 129-132; evidence-limit statement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "jap-smithsonian-teabowl"
+          ],
+          "locator": "Smithsonian object record and curator transcript lines 10-47.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "jap-met-muromachi"
+          ],
+          "locator": "Met essay lines 114-118; limitations prevent elite-survival bias from becoming a universal claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "jap-screen-1525"
+          ],
+          "locator": "National Museum object description and 1525 dating; medium/evidence caveat explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "jap-ainu-national"
+          ],
+          "locator": "National Ainu Museum permanent exhibition overview, six themes and continuity to present.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "jap-geom-1530",
+            "jap-index"
+          ],
+          "locator": "Decoded 1530 successor features; civilization index muromachi endpoint/fall text and separate successor record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "jap-geom-1530",
+            "jap-index"
+          ],
+          "locator": "Decoded with topojson-client. The successor japan-warring-states feature returns to three main-island parts and excludes Hokkaido; a separate ainu-1530 feature again contains Hokkaido. Main-island parts nearly match the target, with maximum aligned coordinate deltas below 0.0014 degrees. Repository index checked for id japan: name Japan, circa 1492-1530. Its generated aliases “Empire of Japan” and “Japanese Empire” are anachronistic for this interval. The same index retains muromachi through 1573 and has separate earlier and later Japan records.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "japan",
+        "card": "cards/japan.json",
+        "summary": "Late Muromachi Japan from 1492 to 1530: fragmented power, trade, work, family life, learning, medicine, sanitation, writing and a careful map caveat for Hokkaido and Ryukyu."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "japan",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            129.3438934389344,
+            30.88808649737635,
+            145.4468544685447,
+            45.43586761765886
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "japan",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            129.3438934389344,
+            30.88771907190339,
+            145.4468544685447,
+            45.43492904839769
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Targeted only exact id japan. The index calls it Japan, circa 1492-1530; coverage marks kind state, datesApproximate true, card null and review missing before integration.",
+    "Generated aliases Empire of Japan and Japanese Empire are anachronistic for 1492-1530 and are deliberately not used as historical names in the card.",
+    "Exact observed intervals are 1492-1500 in world-1492.json and 1500-1530 in world-1500.json. Both features are four-part MultiPolygons covering Kyushu, Shikoku, Honshu and Hokkaido, with 324 and 329 positions respectively.",
+    "At world-1400 the predecessor muromachi feature has three main-island parts and the separate ainus feature contains Hokkaido. At onset Hokkaido is reassigned to japan and removed from ainus. At world-1530 the three-part japan-warring-states successor excludes Hokkaido and ainu-1530 contains it again.",
+    "Aligned same-vertex-count main-island rings across predecessor, target and successor differ by less than 0.0014 degrees. The 1492 Hokkaido part similarly near-matches the predecessor and successor Ainu Hokkaido ring. The small differences are coordinate-transform noise, not historical border evidence.",
+    "Point tests place Kyoto, Sakai, Ashikaga School and Iwami Ginzan inside target geometry; Shuri outside; and Sapporo inside only during the target’s temporary Hokkaido assignment. Point containment is an atlas audit, not proof of political control.",
+    "The world-1492 and world-1500 target bboxes overlap those of Ming, Joseon, Ainus and Chagatai records, but segment and containment testing finds no target-polygon intersection. No nearby feature falls within the audit’s five-degree expanded-bbox rule.",
+    "Historical identity is the late Muromachi and early Sengoku political landscape. The broad target outline does not depict rival daimyo or other jurisdictions. The separate japan-warring-states card begins at the atlas cutoff, while the indexed muromachi record continues to 1573.",
+    "Ryukyu is not an indexed neighbour here and Shuri lies outside target geometry; historically it was an independent kingdom. Hokkaido’s temporary assignment is treated as an atlas artifact and Ainu history is not absorbed into Ashikaga rule.",
+    "No appliesTo field is included because this is a single indexed record and no later or earlier Japan record shares this card."
+  ]
+}
