@@ -10,9 +10,9 @@ Regional queues are work-planning hints; cross-continental identities require re
 | --- | ---: |
 | indexedRecords | 3045 |
 | summaries | 2477 |
-| cards | 1190 |
-| uniqueCardFiles | 1031 |
-| missingCards | 1855 |
+| cards | 1195 |
+| uniqueCardFiles | 1036 |
+| missingCards | 1850 |
 | independentlyReviewedNarratives | 50 |
 | reviewedIdentities | 10 |
 | reviewedChronologies | 0 |
@@ -22,12 +22,12 @@ Regional queues are work-planning hints; cross-continental identities require re
 | Geographic queue hint | Records | Cards present | Narratives independently reviewed |
 | --- | ---: | ---: | ---: |
 | Africa | 255 | 245 | 18 |
-| Asia | 485 | 299 | 0 |
+| Asia | 485 | 303 | 0 |
 | Europe | 367 | 278 | 19 |
 | North America | 994 | 203 | 10 |
 | Oceania | 399 | 33 | 3 |
 | South America | 452 | 74 | 3 |
-| Unlocated | 111 | 73 | 1 |
+| Unlocated | 111 | 74 | 1 |
 
 Geographic rows overlap for records found in several regions. Centroid routing is approximate and may leave island or large multi-part societies unlocated. These are work queues, not historical classifications.
 

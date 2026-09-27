@@ -1,0 +1,751 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel philippines research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "ph-atlas-index",
+      "title": "Human History Map, imported historical civilization index",
+      "url": "https://raw.githubusercontent.com/amyleesterling/human-history-map/main/data/hb/civilizations-hb.json",
+      "note": "Repository source checked locally. The exact record is id philippines, display name Philippines, from 1492, to 1530, circa true. A different id, philippines-1650, begins at 1650 and remains open. No alias authorizes merging them."
+    },
+    {
+      "id": "ph-atlas-1492",
+      "title": "Human History Map, decoded historical borders for 1492",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Repository TopoJSON checked and decoded locally. The philippines feature covers 1492-1500, is an eight-part MultiPolygon with 279 vertices, bounds 117.128971-126.373864 E and 5.487879-18.552265 N, and geometry SHA-256 eda6db08dea4ec89e7541d5f85814db7cdf0c4878f7e5e83036f0733ffb5bf4c."
+    },
+    {
+      "id": "ph-atlas-1500",
+      "title": "Human History Map, decoded historical borders for 1500",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Repository TopoJSON checked and decoded locally. The philippines feature covers 1500-1530, is an eight-part MultiPolygon with 279 vertices, bounds 117.128971-126.373864 E and 5.488335-18.553371 N, and geometry SHA-256 6e2ddbe7042056313842b70dd739ad65d021f7a3ce21024a273c14b7d31e2a1f."
+    },
+    {
+      "id": "ph-atlas-1530",
+      "title": "Human History Map, decoded historical borders for 1530",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Repository TopoJSON checked and decoded locally. No philippines or philippines-1650 feature exists in the 1530 snapshot. Point tests at Manila, Vigan, Puerto Princesa, Iloilo, Cebu, Tacloban, Davao, Cotabato, Zamboanga and Jolo found no Philippines-labelled feature."
+    },
+    {
+      "id": "ph-atlas-1650",
+      "title": "Human History Map, decoded historical borders for 1650",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Repository TopoJSON checked and decoded locally. A separate philippines-1650 feature begins in the 1650 snapshot. The corresponding card already exists and is indexed, so later colonial, wartime and republican history is not absorbed into this missing 1492-1530 card."
+    },
+    {
+      "id": "ph-ncca-naming",
+      "title": "National Commission for Culture and the Arts, Philippines: Gateway to the Orient from Legazpi to Malaspina",
+      "url": "https://ncca.gov.ph/about-culture-and-arts/in-focus/philippines-gateway-to-the-orient-from-legazpi-to-malaspina/",
+      "note": "Official cultural-agency historical essay checked. It places the Villalobos voyage in 1542-1543, says one Visayan island was named Filipina for Prince Felipe and that the name later extended to the archipelago, and dates Legazpi's first permanent Spanish settlement at Cebu to 1565. Its exhibition language celebrating Spanish expansion is not adopted."
+    },
+    {
+      "id": "ph-cebu-history",
+      "title": "Province of Cebu, History of Cebu",
+      "url": "https://www.cebu.gov.ph/history/",
+      "note": "Official provincial-government history checked. It describes pre-European Sugbu as an active settlement, dates the Mactan battle to 27 April 1521 and identifies Legazpi's 1565 Cebu settlement as the first permanent Spanish settlement. Broad civic-pride language is not used as evidence."
+    },
+    {
+      "id": "ph-nmp-maritime-exhibit",
+      "title": "National Museum of the Philippines, 300 Years of Maritime Trade in the Philippines",
+      "url": "https://www.nationalmuseum.gov.ph/exhibitions/anthropology/300-years-of-maritime-trade-in-the-philippines/",
+      "note": "Official National Museum exhibition page checked. It dates the Pandanan wreck to the middle-late fifteenth century and Lena Shoal and Santa Cruz wrecks to the late fifteenth-early sixteenth centuries, and lists ceramics from China, Thailand, Vietnam and Myanmar alongside pottery, metal ingots, gongs, a scale and crocodile teeth."
+    },
+    {
+      "id": "ph-nmp-santa-cruz",
+      "title": "National Museum of the Philippines, Santa Cruz shipwreck",
+      "url": "https://www.nationalmuseum.gov.ph/our-collections/maritime-and-underwater-cultural-heritage/maritime-santa-cruz-shipwreck/",
+      "note": "Official National Museum collection page checked. The wreck cargo dates to the Hongzhi reign, 1488-1505, and systematic excavation recovered about 15,000 objects, including more than 8,000 intact ceramics, storage jars, earthenware pots and stoves, small cannon, beads, bracelets and iron cauldrons. The museum interprets it as evidence of regional maritime trade."
+    },
+    {
+      "id": "ph-nmp-burial-goods",
+      "title": "National Museum of the Philippines, Burial Goods",
+      "url": "https://www.nationalmuseum.gov.ph/2021/11/23/burial-goods/",
+      "note": "Official National Museum archaeology article checked. It reports more than 1,000 fifteenth-century Calatagan burials with local earthenware, ceramics from China, Vietnam and Thailand, spindle whorls, ornaments, iron and shells. It identifies greater stratification in ninth-century-to-1521 burials while warning through the evidence itself that communities and graves varied."
+    },
+    {
+      "id": "ph-nmp-earthenware",
+      "title": "National Museum of the Philippines, Earthenware collection",
+      "url": "https://www.nationalmuseum.gov.ph/our-collections/archaeology/earthenware/",
+      "note": "Official National Museum collection page checked. It describes a twelfth-to-fourteenth-century cooking stove from Santa Ana and fourteenth-to-sixteenth-century Calatagan vessels, and explains that pottery helps study trade, social structures, cultural identities and spirituality. The page does not document a general household toilet system."
+    },
+    {
+      "id": "ph-nmp-maritime-900",
+      "title": "National Museum of the Philippines, ninth- to tenth-century maritime evidence",
+      "url": "https://www.nationalmuseum.gov.ph/2022/09/20/the-9th-to-10th-century-archaeological-evidence-of-maritime-relations-between-the-philippines-and-the-islands-of-southeast-asia/",
+      "note": "Official National Museum archaeology article checked. It dates Butuan lashed-lug boats to the late eighth through early tenth centuries and the Laguna Copperplate Inscription to Saka 822, or 900 CE. The inscription uses an Early Kawi-related form and records a contract; these are older heritage, not evidence of a single 1492 government."
+    },
+    {
+      "id": "ph-nmp-gold",
+      "title": "National Museum of the Philippines, The Gold Finds of San Diego Shipwreck",
+      "url": "https://www.nationalmuseum.gov.ph/2021/12/06/the-gold-finds-of-san-diego-shipwreck/",
+      "note": "Official National Museum article checked for its archaeological background: Butuan gold objects date around the eighth century, the museum identifies a ninth-to-fourteenth-century peak in gold ornament traditions, and it notes native goldsmiths in sixteenth-century Manila. Later San Diego wreck material is not projected backward."
+    },
+    {
+      "id": "ph-nmp-cebu-archaeology",
+      "title": "National Museum of the Philippines, Urban Development and the Protection of Philippine Archaeological Heritage",
+      "url": "https://www.nationalmuseum.gov.ph/2022/05/31/urban-development-and-the-protection-of-philippine-archaeological-heritage/",
+      "note": "Official National Museum archaeology article checked. Rescue excavation at Plaza Independencia in Cebu found fourteenth-to-fifteenth-century graves with gold death masks. The page treats these as evidence for a rare burial practice among some pre-Hispanic Cebuanos, not an archipelago-wide custom."
+    },
+    {
+      "id": "ph-nmp-cranial-modification",
+      "title": "National Museum of the Philippines, Cranial Modification",
+      "url": "https://www.nationalmuseum.gov.ph/2022/03/19/cranial-modification/",
+      "note": "Official National Museum article checked. It reports a 1640 description of head shaping among some Visayan infants and archaeological evidence from several central and southern sites. Because the written report is more than a century after this card and the practice was regional and status-linked, the card presents it only as a later clue, never as a universal childhood experience."
+    },
+    {
+      "id": "ph-nmp-tattooing",
+      "title": "National Museum of the Philippines, Body Modification: Tattooing in Northern Philippines",
+      "url": "https://www.nationalmuseum.gov.ph/2022/03/23/body-modification-tattooing-in-northern-philippines/",
+      "note": "Official National Museum ethnology article checked. It states that tattooing existed before Spanish rule and explains Kalinga fatok, batok or fatek as a tradition with gender, maturity and warfare meanings. Present and later northern evidence is not used to describe every sixteenth-century islander."
+    },
+    {
+      "id": "ph-nqc-gold",
+      "title": "National Quincentennial Committee, Gold of Our Ancestors",
+      "url": "https://www.nqc.gov.ph/en/resources/gold-of-our-ancestors/",
+      "note": "Official quincentennial resource checked. It links Pigafetta's 29 March 1521 observations to archaeological gold traditions and records his description of a Butuan ruler with three gold spots on each tooth. The courtly individual is not treated as representative of ordinary clothing or dentistry."
+    },
+    {
+      "id": "ph-ncca-muslim-history",
+      "title": "National Commission for Culture and the Arts, The History of the Muslim in the Philippines",
+      "url": "https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-communities-and-traditional-arts-sccta/central-cultural-communities/the-history-of-the-muslim-in-the-philippines/",
+      "note": "Official cultural-agency essay checked. It gives a traditional 1450 date for the Sulu sultanate and places Sharif Kabungsuwan's arrival at 1515 and possible Maguindanao sultanate formation at 1516. The account mixes genealogical tradition, retrospective political narrative and history, so the card labels these dates as traditions rather than settled precision."
+    },
+    {
+      "id": "ph-ncca-mosques",
+      "title": "National Commission for Culture and the Arts, A Look at Philippine Mosques",
+      "url": "https://ncca.gov.ph/about-culture-and-arts/in-focus/a-look-at-philippine-mosques/",
+      "note": "Official cultural-agency essay checked. It says a Muslim community existed in Sulu by the late thirteenth century and identifies local traditions around fourteenth-century Makhdum Karim and early mosques, while explicitly using cautious language such as probably and attributed. The card preserves that uncertainty."
+    },
+    {
+      "id": "ph-nhcp-pigafetta",
+      "title": "National Historical Commission of the Philippines, Antonio Pigafetta marker",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/antonio-pigafetta/",
+      "note": "Official 2021 historical-marker record checked. It identifies Pigafetta as Magellan's representative in Visayan negotiations, witness to Mactan on 27 April 1521 and one of eighteen returnees in September 1522, and says his account describes language, dress, belief, arts, music, technology, society and environment."
+    },
+    {
+      "id": "ph-pigafetta-primary",
+      "title": "Antonio Pigafetta, account of the 1519-1522 voyage, Blair and Robertson transcription",
+      "url": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
+      "note": "Primary eyewitness account checked at lines 605-717, 733-737, 775-780 and 949-1066, with manuscript composed about 1525 and early-twentieth-century English editorial apparatus. Used for exact observed scenes and vocabulary only. Pigafetta was a European expedition member, participant in violence and Christian polemicist, so his judgments and generalizations are not adopted."
+    },
+    {
+      "id": "ph-pigafetta-vocabulary",
+      "title": "Project Gutenberg catalog, Pigafetta and the Visayan vocabulary in volume 33",
+      "url": "https://www.gutenberg.org/ebooks/42884",
+      "note": "Project Gutenberg catalog and linked full text checked, vocabulary at lines 949-1066 and editorial comparison at lines 2458-2495. The entry tubin is Pigafetta's Italian-ear spelling for water; the editors compare Visayan forms tobig or tubig. This is a European transcription, not an Indigenous written original."
+    },
+    {
+      "id": "ph-loc-pigafetta-manuscript",
+      "title": "Library of Congress, Journal of Magellan's Voyage, manuscript record",
+      "url": "https://www.loc.gov/item/2021667606/",
+      "note": "Library of Congress manuscript record checked. It dates the surviving French manuscript to about 1525 and describes Pigafetta's account of the 1519-1522 voyage, including Magellan's death in the Philippines and the expedition's completion. The item confirms provenance, not the neutrality of the author."
+    },
+    {
+      "id": "ph-nhcp-humabon",
+      "title": "National Historical Commission of the Philippines, Humabon marker",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/humabon/",
+      "note": "Official 2022 historical marker checked. It dates Humabon's contact with the expedition to 7 April, the cross to 10 April, baptisms to 14 April, support for the Mactan assault to 26 April, pressure from Mactan to 29 April and killing of expedition officers at the Cebu banquet to 1 May 1521."
+    },
+    {
+      "id": "ph-nhcp-lapulapu",
+      "title": "National Historical Commission of the Philippines, Lapulapu marker",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/lapulapu/",
+      "note": "Official marker record checked. Its concise 1951 text dates the Mactan battle to 27 April 1521 and states that Lapulapu and his men repelled the Spanish attackers and killed Magellan. The marker's later national-hero framing is distinguished from what can be said about a local 1521 polity."
+    },
+    {
+      "id": "ph-nhcp-magellan-death",
+      "title": "National Historical Commission of the Philippines, Ferdinand Magellan's Death marker",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/ferdinand-magellans-death/",
+      "note": "Official historical-marker record checked. It dates Magellan's death at Mactan to 27 April 1521 and the Victoria's arrival at Sanlucar de Barrameda to 6 September 1522. It clarifies that the circumnavigation continued after Magellan died."
+    },
+    {
+      "id": "ph-nqc-enrique",
+      "title": "National Quincentennial Committee, The Rise of Enrique de Malacca",
+      "url": "https://www.nqc.gov.ph/en/resources/the-rise-of-enrique-de-malacca/",
+      "note": "Official quincentennial historical essay checked. It identifies Enrique as Magellan's enslaved Malay-speaking interpreter, notes conflicting sources for his origin, and explains that Malay functioned as a regional lingua franca understood by rulers in the Visayas. It rejects the unsupported claim that he was necessarily Cebuano."
+    },
+    {
+      "id": "ph-ncca-sourcebook",
+      "title": "National Commission for Culture and the Arts and Department of Education, Philippine History Source Book",
+      "url": "https://ncca.gov.ph/wp-content/uploads/2021/09/PHILIPPINE-HISTORY-SOURCE-BOOK-FINAL-SEP022021.pdf",
+      "note": "Official educational sourcebook checked, section Customs of the Tagalogs. It contextualizes Juan de Plasencia as a Franciscan active from 1578 and reprints his 1589 account of Tagalog barangays, chiefs, relatives, social ranks, coerced labor and slavery, marriage and ritual specialists. The card flags its late date, Tagalog focus and colonial-Christian bias."
+    },
+    {
+      "id": "ph-loc-doctrina",
+      "title": "Library of Congress, Doctrina Christiana en lengua espanola y tagala",
+      "url": "https://www.loc.gov/item/48031307/",
+      "note": "Library of Congress catalog and digitized facsimile checked. The 1593 Manila book is the only known copy and presents Tagalog in Latin and Baybayin scripts after Spanish sections. The short sample is normalized into Unicode from the facsimile; it is later colonial religious print, not a verbatim 1492 voice."
+    },
+    {
+      "id": "ph-loc-baybayin-context",
+      "title": "Library of Congress Research Guide, Southeast Asian rare materials",
+      "url": "https://guides.loc.gov/southeast-asian-rare-materials-in-european-languages/rare-book-and-special-collections-reading-room",
+      "note": "Library of Congress research guide checked. It describes Baybayin as an Indic-derived writing system used by Tagalog speakers before Spanish arrival and for some time afterward, and identifies the 1593 Doctrina as one of the earliest printed examples. This supports script-family and continuity context, not a claim of universal literacy."
+    },
+    {
+      "id": "ph-umich-doctrina-pages",
+      "title": "University of Michigan Library online exhibit, pages 9-12 of the 1593 Doctrina",
+      "url": "https://apps.lib.umich.edu/online-exhibits/items/show/9347",
+      "note": "University library exhibit checked. It identifies pages 9-12 as the Lord's Prayer in Spanish, Tagalog in Roman letters and the same Tagalog in Baybayin. The card uses only the first two Baybayin words, alongside the Roman reading and a warning that old Baybayin normally left syllable-final consonants unwritten."
+    }
+  ],
+  "entities": [
+    {
+      "id": "philippines",
+      "card": "data/cards/philippines.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ph-atlas-index",
+            "ph-ncca-naming"
+          ],
+          "locator": "Repository source checked locally. The exact record is id philippines, display name Philippines, from 1492, to 1530, circa true. A different id, philippines-1650, begins at 1650 and remains open. No alias authorizes merging them. Official cultural-agency historical essay checked. It places the Villalobos voyage in 1542-1543, says one Visayan island was named Filipina for Prince Felipe and that the name later extended to the archipelago, and dates Legazpi's first permanent Spanish settlement at Cebu to 1565. Its exhibition language celebrating Spanish expansion is not adopted.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ph-nmp-maritime-exhibit",
+            "ph-ncca-muslim-history"
+          ],
+          "locator": "Official National Museum exhibition page checked. It dates the Pandanan wreck to the middle-late fifteenth century and Lena Shoal and Santa Cruz wrecks to the late fifteenth-early sixteenth centuries, and lists ceramics from China, Thailand, Vietnam and Myanmar alongside pottery, metal ingots, gongs, a scale and crocodile teeth. Official cultural-agency essay checked. It gives a traditional 1450 date for the Sulu sultanate and places Sharif Kabungsuwan's arrival at 1515 and possible Maguindanao sultanate formation at 1516. The account mixes genealogical tradition, retrospective political narrative and history, so the card labels these dates as traditions rather than settled precision.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1515
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ph-ncca-muslim-history",
+            "ph-ncca-mosques"
+          ],
+          "locator": "Official cultural-agency essay checked. It gives a traditional 1450 date for the Sulu sultanate and places Sharif Kabungsuwan's arrival at 1515 and possible Maguindanao sultanate formation at 1516. The account mixes genealogical tradition, retrospective political narrative and history, so the card labels these dates as traditions rather than settled precision. Official cultural-agency essay checked. It says a Muslim community existed in Sulu by the late thirteenth century and identifies local traditions around fourteenth-century Makhdum Karim and early mosques, while explicitly using cautious language such as probably and attributed. The card preserves that uncertainty.",
+          "dateScope": {
+            "from": 1515,
+            "to": 1521
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ph-nhcp-pigafetta",
+            "ph-nhcp-lapulapu",
+            "ph-nhcp-magellan-death"
+          ],
+          "locator": "Official 2021 historical-marker record checked. It identifies Pigafetta as Magellan's representative in Visayan negotiations, witness to Mactan on 27 April 1521 and one of eighteen returnees in September 1522, and says his account describes language, dress, belief, arts, music, technology, society and environment. Official marker record checked. Its concise 1951 text dates the Mactan battle to 27 April 1521 and states that Lapulapu and his men repelled the Spanish attackers and killed Magellan. The marker's later national-hero framing is distinguished from what can be said about a local 1521 polity. Official historical-marker record checked. It dates Magellan's death at Mactan to 27 April 1521 and the Victoria's arrival at Sanlucar de Barrameda to 6 September 1522. It clarifies that the circumnavigation continued after Magellan died.",
+          "dateScope": {
+            "from": 1521,
+            "to": 1522
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ph-cebu-history",
+            "ph-atlas-1530"
+          ],
+          "locator": "Official provincial-government history checked. It describes pre-European Sugbu as an active settlement, dates the Mactan battle to 27 April 1521 and identifies Legazpi's 1565 Cebu settlement as the first permanent Spanish settlement. Broad civic-pride language is not used as evidence. Repository TopoJSON checked and decoded locally. No philippines or philippines-1650 feature exists in the 1530 snapshot. Point tests at Manila, Vigan, Puerto Princesa, Iloilo, Cebu, Tacloban, Davao, Cotabato, Zamboanga and Jolo found no Philippines-labelled feature.",
+          "dateScope": {
+            "from": 1522,
+            "to": 1530
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ph-atlas-index"
+          ],
+          "locator": "Local identity audit of the exact civilizations-hb record; record fields id, name, from, to and circa.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ph-atlas-1492"
+          ],
+          "locator": "Decoded world-1492 TopoJSON; philippines properties and geometry summary in identity.json.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ph-atlas-1500"
+          ],
+          "locator": "Decoded world-1500 TopoJSON; philippines properties, bounds and SHA-256 in identity.json.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ph-atlas-1492",
+            "ph-atlas-1500"
+          ],
+          "locator": "Local point-in-polygon audit recorded in identity.json for every named diagnostic point.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ph-ncca-naming"
+          ],
+          "locator": "Paragraph on the Villalobos expedition of 1542-1543 and the naming of an island Filipina.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/5/text",
+          "sourceIds": [
+            "ph-atlas-1530",
+            "ph-atlas-1650"
+          ],
+          "locator": "Decoded 1530 and 1650 snapshots plus exact-id card-index audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ph-ncca-muslim-history"
+          ],
+          "locator": "Sections on the Sulu sultanate, its traditional 1450 foundation and multi-ethnic connections; uncertainty retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ph-ncca-mosques"
+          ],
+          "locator": "Opening discussion of early Sulu Muslim communities, foreign traders and the Makhdum Karim mosque tradition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ph-ncca-muslim-history"
+          ],
+          "locator": "Sections on Kabungsuwan, inter-island routes and possible Maguindanao sultanate formation in 1516.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ph-nmp-maritime-exhibit"
+          ],
+          "locator": "Entire concise exhibition description and object list for middle-fifteenth to early-sixteenth-century wrecks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ph-nmp-santa-cruz"
+          ],
+          "locator": "Dating, excavation totals and inventory on the National Museum collection page.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "ph-nmp-maritime-900"
+          ],
+          "locator": "Butuan boat and Laguna Copperplate sections; dates and interpretation as Southeast Asian maritime contact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ph-nmp-burial-goods"
+          ],
+          "locator": "Calatagan paragraph and article conclusion on archaeological interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ph-nmp-burial-goods"
+          ],
+          "locator": "Protohistoric stratification discussion and comparison of grave-good richness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ph-nmp-earthenware"
+          ],
+          "locator": "Collection highlights on Santa Ana stove, Calatagan vessels and the interpretive uses of earthenware.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ph-nmp-gold"
+          ],
+          "locator": "Paragraph on Butuan finds, peak gold industry and native goldsmiths.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ph-nmp-cebu-archaeology"
+          ],
+          "locator": "Rescue-excavation paragraph on pre-Hispanic Cebu graves with gold death masks and the article's rarity language.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/5/text",
+          "sourceIds": [
+            "ph-nmp-cranial-modification"
+          ],
+          "locator": "Paragraphs on Bobadilla's 1640 report, infant shaping and central-southern archaeological finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ph-nhcp-pigafetta",
+            "ph-loc-pigafetta-manuscript"
+          ],
+          "locator": "NHCP marker account of Pigafetta's representative role, paired with Library of Congress manuscript date and provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ph-nqc-enrique"
+          ],
+          "locator": "National Quincentennial Committee discussion of Enrique's status, disputed origin and Malay as lingua franca.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ph-nhcp-humabon"
+          ],
+          "locator": "2022 marker chronology for 7, 10 and 14 April 1521 and the household baptisms.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ph-pigafetta-primary"
+          ],
+          "locator": "Lines 706-717 on threats to chiefs, baptism and burning a hamlet for refusing obedience.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ph-nhcp-lapulapu"
+          ],
+          "locator": "Official marker text for the battle date, participants and outcome; its later nationalist sentence treated critically.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/5/text",
+          "sourceIds": [
+            "ph-pigafetta-primary"
+          ],
+          "locator": "Lines 775-780 on the landing, burning of houses, wounds and retreat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/6/text",
+          "sourceIds": [
+            "ph-nhcp-humabon"
+          ],
+          "locator": "Marker entries for 26 and 29 April and 1 May 1521.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/7/text",
+          "sourceIds": [
+            "ph-nhcp-magellan-death",
+            "ph-nhcp-pigafetta",
+            "ph-nqc-enrique"
+          ],
+          "locator": "NHCP marker dates for Mactan and Victoria return, Pigafetta marker identifying the eighteen returnees, and NQC account of Enrique's interpreting role.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ph-pigafetta-primary"
+          ],
+          "locator": "Lines 605-608 and 693-695 on raised houses, ladders, mats and animals below; locality caveat added.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ph-pigafetta-primary"
+          ],
+          "locator": "Lines 566-574 and 605-608 on coconut products, foods and meals; humorous analogy is editorial.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ph-nqc-gold"
+          ],
+          "locator": "National Quincentennial Committee quotation and discussion of the Butuan ruler's gold-decorated teeth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ph-nmp-tattooing"
+          ],
+          "locator": "Opening and Kalinga fatok/batok discussion; scope limited to the named tradition and broader pre-Spanish existence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ph-loc-pigafetta-manuscript"
+          ],
+          "locator": "Digitized manuscript Philippine section corresponding to the transcribed court scenes at modern edition lines 610-612, 683-688 and 719-721.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/5/text",
+          "sourceIds": [
+            "ph-ncca-sourcebook"
+          ],
+          "locator": "Customs of the Tagalogs introduction and paragraphs on datus, barangays, kin, labor and social ranks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/6/text",
+          "sourceIds": [
+            "ph-ncca-sourcebook"
+          ],
+          "locator": "Customs of the Tagalogs sections on family, inheritance, social rank and the sourcebook's author context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ph-loc-doctrina",
+            "ph-umich-doctrina-pages"
+          ],
+          "locator": "Doctrina pages 9-12, first two words of the Baybayin Lord's Prayer normalized to Unicode; Roman reading and translation supplied with orthographic caveat.",
+          "dateScope": {
+            "year": 1593
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ph-loc-baybayin-context"
+          ],
+          "locator": "Library of Congress guide paragraph on Baybayin origin, users and dates; scope warning is editorial.",
+          "dateScope": {
+            "year": 1593
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ph-pigafetta-vocabulary"
+          ],
+          "locator": "Linked full text lines 878 and 1027-1034 plus editorial comparison at lines 2476-2484.",
+          "dateScope": {
+            "year": 1521
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ph-loc-baybayin-context",
+            "ph-nmp-burial-goods"
+          ],
+          "locator": "Library of Congress script context and National Museum spindle-whorl evidence; the limit on schooling claims is explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ph-ncca-sourcebook"
+          ],
+          "locator": "Customs of the Tagalogs ritual passages and specialist list, read against the missionary author context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/5/text",
+          "sourceIds": [
+            "ph-loc-pigafetta-manuscript"
+          ],
+          "locator": "Library of Congress manuscript provenance paired with close reading of the Philippine voyage sections; absence and variation stated as evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/6/text",
+          "sourceIds": [
+            "ph-nmp-earthenware"
+          ],
+          "locator": "National Museum collection categories and highlighted objects; no toilet claim appears. The card records absence in the reviewed evidence rather than universal absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/7/text",
+          "sourceIds": [
+            "ph-nmp-cranial-modification"
+          ],
+          "locator": "National Museum paragraphs on infant head shaping, beauty, variation and site distribution; later date foregrounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ph-atlas-1530"
+          ],
+          "locator": "Local audit of absent Philippines-labelled feature at 1530 and 1600; historical interpretation limited to rejecting false disappearance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ph-ncca-naming"
+          ],
+          "locator": "Paragraph on the Villalobos expedition, the 1543 naming and later extension of Filipina.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ph-cebu-history"
+          ],
+          "locator": "Provincial history section on Legazpi's 1565 permanent settlement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ph-atlas-1650"
+          ],
+          "locator": "Identity audit establishing the separate open philippines-1650 record and its existing indexed card.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ph-atlas-1530",
+            "ph-ncca-naming",
+            "ph-atlas-1650"
+          ],
+          "locator": "Repository TopoJSON checked and decoded locally. No philippines or philippines-1650 feature exists in the 1530 snapshot. Point tests at Manila, Vigan, Puerto Princesa, Iloilo, Cebu, Tacloban, Davao, Cotabato, Zamboanga and Jolo found no Philippines-labelled feature. Official cultural-agency historical essay checked. It places the Villalobos voyage in 1542-1543, says one Visayan island was named Filipina for Prince Felipe and that the name later extended to the archipelago, and dates Legazpi's first permanent Spanish settlement at Cebu to 1565. Its exhibition language celebrating Spanish expansion is not adopted. Repository TopoJSON checked and decoded locally. A separate philippines-1650 feature begins in the 1650 snapshot. The corresponding card already exists and is indexed, so later colonial, wartime and republican history is not absorbed into this missing 1492-1530 card.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "philippines",
+        "summary": "A 1492 to 1530 atlas slice of many Philippine archipelago societies before the name Philippines existed.",
+        "card": "cards/philippines.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "philippines",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            117.12897128971292,
+            5.487879092363457,
+            126.3738637386374,
+            18.5522648746185
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "philippines",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            117.12897128971292,
+            5.488334821102875,
+            126.3738637386374,
+            18.553371001860185
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "philippines",
+      "decision": "Create one card only for the exact missing philippines record, 1492-1530. Do not merge the separate, already indexed philippines-1650 record or duplicate its later colonial and republican coverage.",
+      "index": "civilizations-hb.json has one philippines record, name Philippines, from 1492, to 1530, circa true, and one separate philippines-1650 record from 1650 to an open endpoint.",
+      "geometry": "Two target features only: 1492-1500 MultiPolygon, 8 polygons, 279 vertices, bounds [117.12897128971292,5.487879092363457,126.3738637386374,18.5522648746185], SHA eda6db08dea4ec89e7541d5f85814db7cdf0c4878f7e5e83036f0733ffb5bf4c; and 1500-1530 MultiPolygon, 8 polygons, 279 vertices, bounds [117.12897128971292,5.488334821102875,126.3738637386374,18.553371001860185], SHA 6e2ddbe7042056313842b70dd739ad65d021f7a3ce21024a273c14b7d31e2a1f.",
+      "pointAudit": "Both target polygons contain diagnostic points Manila, Vigan and Cotabato, but exclude Basco, Puerto Princesa, Iloilo, Cebu, Tacloban, Davao, Zamboanga and Jolo. They also exclude Kaohsiung, Kota Kinabalu and Manado. The outline is therefore a coarse and seriously incomplete teaching geometry, not territorial evidence.",
+      "related": "No Philippines-labelled feature was found at tested Philippine points in 1400, 1530 or 1600. The separate philippines-1650 feature begins at 1650. At 1938 the successor feature is absent and a United States feature contains Manila, Vigan and Cotabato; philippines-1650 returns at 1945. These later atlas mechanics are not imported into this early card."
+    }
+  ]
+}

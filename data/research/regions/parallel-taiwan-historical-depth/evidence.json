@@ -1,0 +1,605 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel taiwan-historical research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "tw1500-atlas-index",
+      "title": "Human History Map, imported civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Primary project data checked locally for the exact taiwan record, its approximate 1492-1530 display lifetime, and the separate taiwanese-tribes, dutch-formosa, taiwan-1878 and taiwan-1945 records. These are imported atlas identities, not proof of historical statehood or exact event dates."
+    },
+    {
+      "id": "tw1500-atlas-1492",
+      "title": "Human History Map, world-1492 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Primary project TopoJSON decoded locally. The taiwan feature covers 1492-1500 as one 138-vertex polygon with a simplified main-island outline. Point tests and bounds are preserved in identity.json; Penghu, Green Island, Orchid Island and Kinmen fall outside."
+    },
+    {
+      "id": "tw1500-atlas-1500",
+      "title": "Human History Map, world-1500 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Primary project TopoJSON decoded locally. The 1500-1530 feature has only 29 vertices and unexpectedly excludes tested coastal points including Tamsui, Keelung, Hualien, Taitung and Hengchun while retaining inland and western points. This is treated as a geometry artifact, not a historical contraction."
+    },
+    {
+      "id": "tw1500-atlas-modern-card",
+      "title": "Human History Map, separate modern Taiwan card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/taiwan-1945.json",
+      "note": "Primary project card checked locally to prevent conflation. The modern taiwan-1945 record begins in 1945 and covers separate twentieth- and twenty-first-century political, social and economic history."
+    },
+    {
+      "id": "tw1500-languages",
+      "title": "Paul Jen-kuei Li, Elizabeth Zeitoun and Rik De Busser, Taiwan and the Formosan Languages",
+      "url": "https://www.ling.sinica.edu.tw/upload/researcher_manager_result/ebf97808de43dcc92257a4fcf226d788.pdf",
+      "note": "2024 Brill handbook chapter hosted by Academia Sinica, checked for Taiwan before the seventeenth century, the absence of one central authority, community diversity, trade and intermarriage, the Austronesian language family, early documentation, and the reconstructed Proto-Austronesian form *zalan, road. Modern classifications are not projected backward as exact 1500 ethnic borders."
+    },
+    {
+      "id": "tw1500-iron",
+      "title": "Technological Innovation and Social Unchange: Iron in Later Prehistoric Taiwan",
+      "url": "https://link.springer.com/article/10.1007/s10963-025-09188-2",
+      "note": "Open Journal of World Prehistory synthesis checked for late prehistoric ironworking, long-distance exchange, Chinese ceramics from the late first millennium, household-scale production, Heping Dao postholes and metallurgical remains, political variation and the limits of equating new technology with centralized hierarchy."
+    },
+    {
+      "id": "tw1500-chen",
+      "title": "Leigh K. Jenco, Chen Di’s Record of Formosa (1603) and an Alternative Chinese Imaginary of Otherness",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/chen-dis-record-of-formosa-1603-and-an-alternative-chinese-imaginary-of-otherness/24FEA686C6AD63301A680EA20EF741DD",
+      "note": "Historical Journal article checked for the date, setting and interpretive limits of Chen Di’s short 1603 eyewitness text, including diverse communities, marriage and work observations, deer hunting, burial, the absence of writing among his hosts and the title Dongfan ji. Chen was a visiting Ming literatus, not a neutral voice or a witness to every island community."
+    },
+    {
+      "id": "tw1500-dongfan",
+      "title": "National Museum of Taiwan Literature, Chen Di writes Dongfan ji",
+      "url": "https://db.nmtl.gov.tw/site2/ikm?id=3",
+      "note": "Official literature knowledge-base entry checked for the January 1603 anti-pirate expedition, Chen Di’s limited visit, the approximately 1,500-character Dongfan ji, its southwestern geographic scope and its descriptions of villages, farming, clothing, food, gatherings, marriage and work. The museum stresses that much may have come from interviews rather than direct observation."
+    },
+    {
+      "id": "tw1500-prehistory",
+      "title": "National Museum of Prehistory, Taiwan Prehistory Hall",
+      "url": "https://www.nmp.gov.tw/cp.aspx?n=1982",
+      "note": "National museum exhibition guide checked for at least 30,000 years of human history, repeated migration and regional adaptation, early farming and pottery, later iron technology, and exchange that brought bronze, glass and agate. Broad exhibition periods are used as background, not as exact biographies of people in 1500."
+    },
+    {
+      "id": "tw1500-shihsanhang",
+      "title": "Shihsanhang Museum of Archaeology, 2018 Annual Report: permanent exhibition",
+      "url": "https://www.sshm.ntpc.gov.tw/files/file_pool/4/0K204491471830884494/107%E5%B9%B4%E5%8D%81%E4%B8%89%E8%A1%8C%E5%8D%9A%E7%89%A9%E9%A4%A8%E5%B9%B4%E5%A0%B1.pdf",
+      "note": "Official museum annual report checked for its permanent exhibition’s northern Taiwan evidence: iron smelting, stone and bone tools, patterned pottery, beads, bronze, glass, gold and silver exchange goods, and animal remains including deer, boar, fish, birds and shellfish. One site cannot represent the whole island."
+    },
+    {
+      "id": "tw1500-jar",
+      "title": "Shihsanhang Museum of Archaeology, Anthropomorphic Jar",
+      "url": "https://en.sshm.ntpc.gov.tw/xmdoc/cont?sid=0G265610583116568141&xsmsid=0G265589602088560024",
+      "note": "Official artifact catalog checked for the red-brown jar’s face, dotted and circular decoration, approximate 1,800-500-year age range, burial context and status as the only human-faced jar found in Taiwan. Its possible religious significance remains an interpretation."
+    },
+    {
+      "id": "tw1500-nanke",
+      "title": "National Museum of Prehistory, Archaeological Sites of the Tainan Science Park",
+      "url": "https://beta.nmp.gov.tw/enews/no187/page_01.html",
+      "note": "Museum research article checked for the long southwestern cultural sequence and Niaosong evidence including differently sized settlements, rice and Job’s tears, iron tools and a distinctive burial practice; later Siraya layers contain more iron, traded stoneware and porcelain, worked antler and glass ornaments."
+    },
+    {
+      "id": "tw1500-ceramics",
+      "title": "Encountering the Wider World before the Transition to History: Chinese Ceramics in Proto-historic Taiwan",
+      "url": "https://academic.oup.com/florida-scholarship-online/book/14154/chapter-abstract/168005187",
+      "note": "Academic archaeology chapter checked for Chinese ceramics and exchange from the tenth through sixteenth centuries, older Austronesian exchange routes and the caution that major maritime routes could pass Taiwan while contacts remained selective and uneven."
+    },
+    {
+      "id": "tw1500-health",
+      "title": "Pietrusewsky and Tsang, A Preliminary Assessment of Health and Disease in Human Skeletal Remains from Shi San Hang",
+      "url": "https://www.jstage.jst.go.jp/article/ase/111/2/111_2_203/_article/-char/en",
+      "note": "Peer-reviewed Anthropological Science article checked for its deliberately small sample of 23 well-preserved adult skeletons from the broadly dated Shihsanhang site, low observed rates of cavities and abscesses, enamel and orbital stress markers, rare trauma, and the authors’ preliminary-health conclusion. The sample does not establish island-wide medicine or mortality."
+    },
+    {
+      "id": "tw1500-beinan",
+      "title": "Bureau of Cultural Heritage, Beinan Archaeological Site and Dulan Mountain",
+      "url": "https://twh.boch.gov.tw/taiwan/intro.aspx?id=5&lang=en_us",
+      "note": "Official heritage dossier checked for eastern Taiwan’s much earlier Beinan settlement, houses, storage rooms and drainage ditches, plus the later Iron Age transition. It is used only to demonstrate what archaeology can sometimes recover and why those earlier drains cannot be called 1500-era toilets."
+    },
+    {
+      "id": "tw1500-andrade",
+      "title": "Tonio Andrade, How Taiwan Became Chinese, Chapter 1: Taiwan on the Eve of Colonization",
+      "url": "https://www.gutenberg-e.org/andrade/pdfs/Chapter1.pdf",
+      "note": "Open Columbia University Press chapter checked for early seventeenth-century observations of deer hunting, dried meat, deerhide uses, clothing and trade, and the wider Chinese-Japanese maritime setting. Its quoted European and Chinese observers used period prejudices; their local reports are not treated as island-wide ethnography for 1492."
+    },
+    {
+      "id": "tw1500-nmth1624",
+      "title": "National Museum of Taiwan History, Transcending 1624: Taiwan and the World",
+      "url": "https://www.nmth.gov.tw/en/News_Content_Due.aspx?n=4315&s=207564",
+      "note": "National museum exhibition text checked for growing mid-sixteenth-century maritime connections, the Dutch arrival in 1624, the Spanish arrival in 1626, colonial competition, cultural exchange and the need to tell contact history from Taiwan-centered as well as outside perspectives."
+    }
+  ],
+  "entities": [
+    {
+      "id": "taiwan",
+      "card": "data/cards/taiwan.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tw1500-atlas-index",
+            "tw1500-languages"
+          ],
+          "locator": "Primary project data checked locally for the exact taiwan record, its approximate 1492-1530 display lifetime, and the separate taiwanese-tribes, dutch-formosa, taiwan-1878 and taiwan-1945 records. These are imported atlas identities, not proof of historical statehood or exact event dates. 2024 Brill handbook chapter hosted by Academia Sinica, checked for Taiwan before the seventeenth century, the absence of one central authority, community diversity, trade and intermarriage, the Austronesian language family, early documentation, and the reconstructed Proto-Austronesian form *zalan, road. Modern classifications are not projected backward as exact 1500 ethnic borders.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tw1500-iron"
+          ],
+          "locator": "Open Journal of World Prehistory synthesis checked for late prehistoric ironworking, long-distance exchange, Chinese ceramics from the late first millennium, household-scale production, Heping Dao postholes and metallurgical remains, political variation and the limits of equating new technology with centralized hierarchy.",
+          "dateScope": {
+            "from": 200,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tw1500-atlas-index",
+            "tw1500-atlas-1492",
+            "tw1500-atlas-1500"
+          ],
+          "locator": "Primary project data checked locally for the exact taiwan record, its approximate 1492-1530 display lifetime, and the separate taiwanese-tribes, dutch-formosa, taiwan-1878 and taiwan-1945 records. These are imported atlas identities, not proof of historical statehood or exact event dates. Primary project TopoJSON decoded locally. The taiwan feature covers 1492-1500 as one 138-vertex polygon with a simplified main-island outline. Point tests and bounds are preserved in identity.json; Penghu, Green Island, Orchid Island and Kinmen fall outside. Primary project TopoJSON decoded locally. The 1500-1530 feature has only 29 vertices and unexpectedly excludes tested coastal points including Tamsui, Keelung, Hualien, Taitung and Hengchun while retaining inland and western points. This is treated as a geometry artifact, not a historical contraction.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tw1500-ceramics",
+            "tw1500-nmth1624"
+          ],
+          "locator": "Academic archaeology chapter checked for Chinese ceramics and exchange from the tenth through sixteenth centuries, older Austronesian exchange routes and the caution that major maritime routes could pass Taiwan while contacts remained selective and uneven. National museum exhibition text checked for growing mid-sixteenth-century maritime connections, the Dutch arrival in 1624, the Spanish arrival in 1626, colonial competition, cultural exchange and the need to tell contact history from Taiwan-centered as well as outside perspectives.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1603
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "tw1500-dongfan"
+          ],
+          "locator": "Official literature knowledge-base entry checked for the January 1603 anti-pirate expedition, Chen Di’s limited visit, the approximately 1,500-character Dongfan ji, its southwestern geographic scope and its descriptions of villages, farming, clothing, food, gatherings, marriage and work. The museum stresses that much may have come from interviews rather than direct observation.",
+          "dateScope": {
+            "from": 1603,
+            "to": 1624
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tw1500-nmth1624"
+          ],
+          "locator": "National museum exhibition text checked for growing mid-sixteenth-century maritime connections, the Dutch arrival in 1624, the Spanish arrival in 1626, colonial competition, cultural exchange and the need to tell contact history from Taiwan-centered as well as outside perspectives.",
+          "dateScope": {
+            "from": 1624,
+            "to": 1662
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tw1500-atlas-index"
+          ],
+          "locator": "civilizations-hb.json exact taiwan record and related-record comparison.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tw1500-atlas-1492"
+          ],
+          "locator": "Decoded world-1492 TopoJSON geometry, bbox and named point-in-polygon tests in identity.json.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tw1500-atlas-1500"
+          ],
+          "locator": "Decoded world-1500 TopoJSON geometry and comparison point tests in identity.json.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tw1500-atlas-index",
+            "tw1500-atlas-modern-card"
+          ],
+          "locator": "Related civilization index entries and the separate checked taiwan-1945 card.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tw1500-languages"
+          ],
+          "locator": "Chapter 1, sections 1.2.1-1.2.2 on historical context and Formosan languages.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tw1500-iron"
+          ],
+          "locator": "Introduction and synthesis on social organization, exchange and hierarchy, especially paragraphs 68-96 and 488-512.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tw1500-dongfan"
+          ],
+          "locator": "Article sections introducing the expedition and Chen’s observations of diverse kinds and acephalous village life.",
+          "dateScope": {
+            "year": 1603
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tw1500-prehistory"
+          ],
+          "locator": "Taiwan Prehistory Hall sections on regional adaptation and continuing island and overseas interaction.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tw1500-shihsanhang"
+          ],
+          "locator": "Permanent Exhibition, Shihsanhang Life, iron smelting and tool assemblage description.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tw1500-shihsanhang",
+            "tw1500-jar"
+          ],
+          "locator": "Permanent Exhibition, trade finds and anthropomorphic jug description.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tw1500-nanke"
+          ],
+          "locator": "Museum article, archaeological sequence items four and five: Niaosong and Siraya cultures.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tw1500-ceramics"
+          ],
+          "locator": "Chapter abstract on tenth- through sixteenth-century ceramics, trade routes and Taiwan’s uneven place in commerce.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tw1500-iron"
+          ],
+          "locator": "Sections on Heping Dao, Shihsanhang and domestic-scale bloomery production, paragraphs 292-325 and 478-496.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tw1500-dongfan"
+          ],
+          "locator": "Discussion of marriage, courtship, residence and women’s agricultural work, especially paragraph 514 and notes.",
+          "dateScope": {
+            "year": 1603
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tw1500-shihsanhang",
+            "tw1500-nanke"
+          ],
+          "locator": "Shihsanhang Life animal remains; Nanke article Niaosong plant remains.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tw1500-andrade"
+          ],
+          "locator": "Chapter 1, discussion of collective deer hunts, dried meat, deerhide clothing, bedding and exchange, pp. 20-22 in the chapter PDF.",
+          "dateScope": {
+            "year": 1603
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tw1500-iron"
+          ],
+          "locator": "Heping Dao stratigraphy and domestic postholes, paragraphs 297-325.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tw1500-prehistory"
+          ],
+          "locator": "Museum exhibition evidence for accumulated craft, farming and maritime knowledge; inference and evidence limit stated explicitly.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/5/text",
+          "sourceIds": [
+            "tw1500-andrade"
+          ],
+          "locator": "Chapter 1 on deerhide uses, imported clothing and exchange; archaeological-preservation caution is explicit synthesis.",
+          "dateScope": {
+            "year": 1623
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tw1500-languages"
+          ],
+          "locator": "Sections 1.2.2.1-1.2.2.2 on Formosan languages, historical documentation and language loss.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tw1500-chen"
+          ],
+          "locator": "Article discussion of Chen’s writing claim and its intellectual framing, paragraphs 518-524.",
+          "dateScope": {
+            "year": 1603
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tw1500-languages"
+          ],
+          "locator": "Table 1.2 and surrounding explanation of Proto-Austronesian *zalan, road, pp. 9-10.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tw1500-chen"
+          ],
+          "locator": "Article title and argument on 東番記, Dongfan as a place-name, paragraphs 499 and 519-523.",
+          "dateScope": {
+            "year": 1603
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tw1500-health"
+          ],
+          "locator": "Abstract, sample, dental pathology, stress indicators and limitations.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tw1500-health"
+          ],
+          "locator": "Abstract and study scope; explicit distinction between skeletal evidence and unsupported medical reconstruction.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tw1500-beinan"
+          ],
+          "locator": "Beinan architectural remains, house layout, storage and drainage ditches, lines 266-272 and 354-360.",
+          "dateScope": {
+            "year": 300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tw1500-beinan"
+          ],
+          "locator": "Evidence-limit comparison: detailed official Beinan site inventory identifies drainage but no target-period latrine; no toilet claim is inferred.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tw1500-ceramics"
+          ],
+          "locator": "Chapter abstract on Austronesian routes, imported ceramics and uneven participation in wider exchange.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tw1500-chen"
+          ],
+          "locator": "Opening account of Shen Yourong’s anti-pirate expedition, Chen’s stay and gifts from local hosts, paragraphs 498-500.",
+          "dateScope": {
+            "year": 1603
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tw1500-nmth1624"
+          ],
+          "locator": "Exhibition sections on connections, circulation, 1624 and historical viewpoint, lines 232-263.",
+          "dateScope": {
+            "year": 1624
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tw1500-atlas-modern-card",
+            "tw1500-nmth1624"
+          ],
+          "locator": "Separate modern card scope and museum framing of later connection and colonial competition.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tw1500-atlas-index",
+            "tw1500-nmth1624"
+          ],
+          "locator": "Primary project data checked locally for the exact taiwan record, its approximate 1492-1530 display lifetime, and the separate taiwanese-tribes, dutch-formosa, taiwan-1878 and taiwan-1945 records. These are imported atlas identities, not proof of historical statehood or exact event dates. National museum exhibition text checked for growing mid-sixteenth-century maritime connections, the Dutch arrival in 1624, the Spanish arrival in 1626, colonial competition, cultural exchange and the need to tell contact history from Taiwan-centered as well as outside perspectives.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "taiwan",
+        "name": "Taiwan",
+        "kind": "culture",
+        "region": "Asia",
+        "from": 1492,
+        "to": 1530,
+        "circa": true,
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "Taiwan around 1492-1530: diverse communities, village politics, ironworking, trade, family life, language, health clues, and mysterious toilets.",
+        "card": "cards/taiwan.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "taiwan",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            120.04860048600489,
+            21.928268057715513,
+            121.9998199982,
+            25.28353412052323
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "taiwan",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            119.95139951399517,
+            21.925351049785675,
+            121.78021780217802,
+            25.13372351314898
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target: taiwan, indexed approximately 1492-1530. It is distinct from taiwanese-tribes, dutch-formosa, taiwan-1878 and the already researched modern taiwan-1945 record.",
+    "Decoded world-1492 and world-1500 features are inconsistent simplified main-island polygons. Named point tests, bounds and vertex counts are recorded in identity.json; the geometry is not interpreted as a historical state boundary.",
+    "The narrative centers the atlas interval and clearly marks archaeology, the near-period 1603 outsider account, later comparison evidence and atlas gaps. No local Indigenous writing, school, medicine or toilet practice is invented where evidence is absent."
+  ]
+}
