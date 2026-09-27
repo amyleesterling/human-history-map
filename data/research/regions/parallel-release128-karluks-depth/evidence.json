@@ -1,0 +1,835 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release128-karluks research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "kl-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository identity checked: karluks is labelled Karluks, circa 700 to 1000; nearby Turk, Uyghur, Oghuz and misspelled karkhanids records remain separate."
+    },
+    {
+      "id": "kl-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Initial audit records an approximate state, two border files, intervals 700 to 800 and 900 to 1000, and a missing card."
+    },
+    {
+      "id": "kl-map600",
+      "title": "Human History Map world-600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded predecessor seam checked for the target and separate earlier Turkic features."
+    },
+    {
+      "id": "kl-map700",
+      "title": "Human History Map world-700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded exact target geometry, coordinate hash, point tests and neighboring Western Turk, Göktürk and Tibetan features."
+    },
+    {
+      "id": "kl-map800",
+      "title": "Human History Map world-800 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded midpoint seam demonstrates that the indexed Karluk target is entirely absent at 800."
+    },
+    {
+      "id": "kl-map900",
+      "title": "Human History Map world-900 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded exact target geometry, point tests and neighboring Uyghur, Oghuz, Samanid, Tibetan, Tang and Abbasid features."
+    },
+    {
+      "id": "kl-map1000",
+      "title": "Human History Map world-1000 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded endpoint seam demonstrates that the indexed Karluk target is entirely absent at 1000."
+    },
+    {
+      "id": "kl-map1100",
+      "title": "Human History Map world-1100 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Decoded successor seam checked for separate Oghuz, Cuman-Kipchak and karkhanids atlas identities."
+    },
+    {
+      "id": "kl-ei",
+      "title": "Clifford Edmund Bosworth: Karluk",
+      "url": "https://isamveri.org/pdfdkm/11/DKM110452.pdf",
+      "note": "Encyclopaedia of Islam entry used for the overview and concise ending: federation size, titles, migrations, settlement, Islamization and continuing Karluk groups."
+    },
+    {
+      "id": "kl-unesco-turks",
+      "title": "History of Civilizations of Central Asia, volume III: The Türk Empire",
+      "url": "https://es.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_III%20silk%20road_the%20turk%20empire_0.pdf",
+      "note": "UNESCO scholarly chapter used for the 742 to 766 wars, westward movement, Talas and the establishment of Karluk power in Semirechye."
+    },
+    {
+      "id": "kl-cambridge-talas",
+      "title": "Christopher Beckwith: The Tibetan Empire in Central Asia, excerpt",
+      "url": "https://assets.cambridge.org/97811071/56388/excerpt/9781107156388_excerpt.pdf",
+      "note": "Cambridge excerpt used narrowly for the Karluk role alongside Abbasid forces at the Battle of Talas in 751."
+    },
+    {
+      "id": "kl-openstax-paper",
+      "title": "OpenStax World History: East-West Interactions in the Early Middle Ages",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-2-east-west-interactions-in-the-early-middle-ages",
+      "note": "Peer-reviewed open textbook used to qualify the popular claim that Talas alone transferred papermaking westward."
+    },
+    {
+      "id": "kl-suyab",
+      "title": "Encyclopaedia Iranica: Suyab",
+      "url": "https://www.iranicaonline.org/articles/suyab/",
+      "note": "Scholarly synthesis used for Suyab chronology, multicultural religious buildings, residential archaeology and later manuscript and inscription finds."
+    },
+    {
+      "id": "kl-iicas",
+      "title": "International Institute for Central Asian Studies: Ak-Beshim report",
+      "url": "https://iicas.int/book/135",
+      "note": "Institutional report page used for the excavation programme, geophysics, animal bone, seed and radiocarbon research at Ak-Beshim."
+    },
+    {
+      "id": "kl-akb2019",
+      "title": "Ak-Beshim 2019: Archaeological Research in the Chuy Valley",
+      "url": "https://teikyo-u.repo.nii.ac.jp/record/2003931/files/s2019eng.pdf",
+      "note": "University and Kyrgyz Academy field report used for late tenth- to early eleventh-century food remains, streets, possible toilets or wells and play objects, always date-labelled."
+    },
+    {
+      "id": "kl-abe",
+      "title": "Masashi Abe: Excavation at Ak-Beshim in the Chuy Valley",
+      "url": "https://itcs.mukogawa-u.ac.jp/publications/IU_vol4/pdf/IU_vol.4_1-1_article.pdf",
+      "note": "Archaeological report used for late tenth-century ordinary houses, ovens, tools, spindle whorls and the abandonment shift toward Burana."
+    },
+    {
+      "id": "kl-economy",
+      "title": "Encyclopaedia Iranica: Central Asia, Economy before the Timurids",
+      "url": "https://www.iranicaonline.org/articles/central-asia-x/",
+      "note": "Regional economic synthesis used with explicit scope labels for pastoral herds, agriculture, irrigation, felt work, household skills and Sogdian learning."
+    },
+    {
+      "id": "kl-trade",
+      "title": "Encyclopaedia Iranica: Sogdian Trade",
+      "url": "https://www.iranicaonline.org/articles/sogdian-trade/",
+      "note": "Scholarly synthesis used for the changing Sogdian caravan networks and traded goods in the Türk, Uyghur and Samanid eras."
+    },
+    {
+      "id": "kl-coinage",
+      "title": "Encyclopaedia Iranica: Turko-Sogdian Coinage",
+      "url": "https://www.iranicaonline.org/articles/turko-sogdian-coinage/",
+      "note": "Numismatic synthesis used to distinguish earlier Sogdian-inscribed Türk issues from ninth- and tenth-century proto-Qarakhanid Arabic issues."
+    },
+    {
+      "id": "kl-ilak",
+      "title": "Encyclopaedia Iranica: Ilak-Khanids",
+      "url": "https://www.iranicaonline.org/articles/ilak-khanids/",
+      "note": "Critical dynastic synthesis used for disputed Qarakhanid origins, Satuk Bughra Khan, conversion traditions and the conquests of 992 and 999."
+    },
+    {
+      "id": "kl-medicine",
+      "title": "A Turkish Medical History Study on Qarluq Medicine in Tibetan Sources",
+      "url": "https://dergipark.org.tr/tr/pub/mutftd/article/523702",
+      "note": "Modern study of later Tibetan medical historiography used only for a cautiously labelled Qarluq notice and the limits of reconstructing treatment."
+    },
+    {
+      "id": "kl-tekin",
+      "title": "Talât Tekin: A Grammar of Orkhon Turkic",
+      "url": "https://altaica.ru/LIBRARY/Tekin%20Talat/Tekin_A%20Grammar%20of%20Orkhon%20Turkic%201968.pdf",
+      "note": "Scholarly grammar supplies the Kül Tigin North 1 transliteration and translation naming the Karluk people."
+    },
+    {
+      "id": "kl-unicode",
+      "title": "Unicode Standard: Old Turkic",
+      "url": "https://unicode.org/versions/Unicode17.0.0/core-spec/chapter-14/",
+      "note": "Technical standard used to identify the Old Turkic script and explain its right-to-left monumental writing direction."
+    },
+    {
+      "id": "kl-kultegin-date",
+      "title": "On the Author and Date of the Kül Tigin Inscription",
+      "url": "https://dergipark.org.tr/tr/pub/dilarastirmalari/article/1225561",
+      "note": "Scholarly article used for the 732 memorial context and the distinction between Turkic runiform sides and the Chinese face."
+    },
+    {
+      "id": "kl-unesco-kyrgyz",
+      "title": "UNESCO Tentative List: Silk Roads Sites in Kyrgyzstan",
+      "url": "https://whc.unesco.org/en/tentativelists/5518/",
+      "note": "UNESCO site description used for the archaeological character of Ak-Beshim and Burana and carefully dated later bath and water-main evidence."
+    },
+    {
+      "id": "kl-tdv-karluks",
+      "title": "TDV İslâm Ansiklopedisi: Karluklar",
+      "url": "https://islamansiklopedisi.org.tr/karluklar",
+      "note": "Scholarly Turkish encyclopedia entry used for early federation, location, revolt and the sequence of alliances; claims are checked against other syntheses."
+    },
+    {
+      "id": "kl-cambridge-ei",
+      "title": "The Cambridge History of Early Inner Asia, reading sample",
+      "url": "https://beckassets.blob.core.windows.net/product/readingsample/677145/9780521069366_excerpt_001.pdf",
+      "note": "Cambridge scholarly volume excerpt used for the Karluk ruler’s changing titles and a dated Qarakhanid conversion sequence."
+    },
+    {
+      "id": "kl-central-islamic",
+      "title": "Encyclopaedia Iranica: Central Asia in the Islamic Period up to the Mongols",
+      "url": "https://www.iranicaonline.org/articles/central-asia-iv/",
+      "note": "Regional synthesis used for Qarluq geography, Abbasid-period diplomacy and Islamization amid wider Transoxanian politics."
+    },
+    {
+      "id": "kl-qworld",
+      "title": "The Qarakhanid World: Introduction",
+      "url": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/21/06/09/80/2021060980/2021060980.pdf",
+      "note": "Brill scholarly volume preserved by the Library of Congress used for the confederate background and uncertainty surrounding Qarakhanid formation."
+    },
+    {
+      "id": "kl-nomadism",
+      "title": "Encyclopaedia Iranica: Nomadism",
+      "url": "https://www.iranicaonline.org/articles/nomadism/",
+      "note": "Regional reference used cautiously for mobile households, portable dwellings and gendered pastoral labor rather than as a Karluk household census."
+    },
+    {
+      "id": "kl-felt",
+      "title": "Encyclopaedia Iranica: Felt",
+      "url": "https://www.iranicaonline.org/articles/felt/",
+      "note": "Material-culture reference used for Central Asian felt clothing, floor coverings, bags and horse equipment, with target-specific limits stated."
+    },
+    {
+      "id": "kl-sogdiana",
+      "title": "Encyclopaedia Iranica: Sogdiana, History and Archaeology",
+      "url": "https://www.iranicaonline.org/articles/sogdiana-iii-history-and-archaeology/",
+      "note": "Regional archaeological synthesis used for inherited Sogdian settlement and irrigated cultivation rather than exclusive Karluk invention."
+    },
+    {
+      "id": "kl-golden",
+      "title": "Peter B. Golden: The Turk Imperial Tradition in the Pre-Chinggisid Era",
+      "url": "https://www.researchgate.net/publication/337428261_The_Turk_Imperial_Tradition_in_the_Pre-Chinggisid_Era",
+      "note": "Scholarly historical study used for post-840 title claims and the continuing prestige of Türk imperial forms."
+    }
+  ],
+  "entities": [
+    {
+      "id": "karluks",
+      "card": "data/cards/karluks.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "kl-ei",
+            "kl-index",
+            "kl-map700",
+            "kl-map800",
+            "kl-map1000"
+          ],
+          "locator": "Encyclopaedia of Islam entry used for the overview and concise ending: federation size, titles, migrations, settlement, Islamization and continuing Karluk groups. Exact repository identity checked: karluks is labelled Karluks, circa 700 to 1000; nearby Turk, Uyghur, Oghuz and misspelled karkhanids records remain separate. Decoded exact target geometry, coordinate hash, point tests and neighboring Western Turk, Göktürk and Tibetan features. Decoded midpoint seam demonstrates that the indexed Karluk target is entirely absent at 800. Decoded endpoint seam demonstrates that the indexed Karluk target is entirely absent at 1000.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "kl-tekin"
+          ],
+          "locator": "Scholarly grammar supplies the Kül Tigin North 1 transliteration and translation naming the Karluk people.",
+          "dateScope": {
+            "from": 700,
+            "to": 742
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "kl-unesco-turks"
+          ],
+          "locator": "UNESCO scholarly chapter used for the 742 to 766 wars, westward movement, Talas and the establishment of Karluk power in Semirechye.",
+          "dateScope": {
+            "from": 742,
+            "to": 751
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "kl-cambridge-talas"
+          ],
+          "locator": "Cambridge excerpt used narrowly for the Karluk role alongside Abbasid forces at the Battle of Talas in 751.",
+          "dateScope": {
+            "from": 751,
+            "to": 766
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "kl-economy"
+          ],
+          "locator": "Regional economic synthesis used with explicit scope labels for pastoral herds, agriculture, irrigation, felt work, household skills and Sogdian learning.",
+          "dateScope": {
+            "from": 766,
+            "to": 840
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "kl-golden"
+          ],
+          "locator": "Scholarly historical study used for post-840 title claims and the continuing prestige of Türk imperial forms.",
+          "dateScope": {
+            "from": 840,
+            "to": 893
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "kl-central-islamic"
+          ],
+          "locator": "Regional synthesis used for Qarluq geography, Abbasid-period diplomacy and Islamization amid wider Transoxanian politics.",
+          "dateScope": {
+            "from": 893,
+            "to": 940
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "kl-ilak"
+          ],
+          "locator": "Critical dynastic synthesis used for disputed Qarakhanid origins, Satuk Bughra Khan, conversion traditions and the conquests of 992 and 999.",
+          "dateScope": {
+            "from": 940,
+            "to": 1000
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "kl-index",
+            "kl-coverage"
+          ],
+          "locator": "Exact index and initial coverage entries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "kl-map700"
+          ],
+          "locator": "Decoded geometry statistics and coordinate hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "kl-map700"
+          ],
+          "locator": "Exact point-in-polygon results and neighboring owners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "kl-map800",
+            "kl-map900"
+          ],
+          "locator": "Exact absence and later decoded geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "kl-map900",
+            "kl-map1000",
+            "kl-map1100"
+          ],
+          "locator": "Point tests and exact-id successor seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "kl-tdv-karluks"
+          ],
+          "locator": "Encyclopedia discussion of changing component groups.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "kl-tdv-karluks"
+          ],
+          "locator": "Entry discussion of seventh-century location and political status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "kl-tdv-karluks"
+          ],
+          "locator": "Entry chronology for Eastern Türk control and revolt.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "kl-unesco-turks"
+          ],
+          "locator": "UNESCO chapter chronology for the coalition and subsequent struggle.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "kl-index",
+            "kl-map600"
+          ],
+          "locator": "Nearby identity audit and predecessor seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "kl-unesco-turks",
+            "kl-cambridge-talas"
+          ],
+          "locator": "UNESCO and Cambridge Talas narratives compared.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "kl-openstax-paper"
+          ],
+          "locator": "OpenStax discussion of paper chronology and prisoner legend.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "kl-unesco-turks"
+          ],
+          "locator": "UNESCO chronology and political transition in Semirechye.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "kl-suyab"
+          ],
+          "locator": "Iranica synthesis of Suyab origins and multicultural growth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "kl-central-islamic"
+          ],
+          "locator": "Islamic-period geographical accounts and shifting frontiers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "kl-cambridge-ei"
+          ],
+          "locator": "Title history and limits of central rank.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "kl-central-islamic"
+          ],
+          "locator": "Regional account of the Rafi ibn Layth coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "kl-golden"
+          ],
+          "locator": "Study of post-840 imperial-title traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "kl-qworld"
+          ],
+          "locator": "Competing origin theories and source limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "kl-cambridge-ei"
+          ],
+          "locator": "Conversion and conquest sequence in the scholarly overview.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "kl-economy"
+          ],
+          "locator": "Regional economic synthesis on pastoral and settled interdependence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "kl-sogdiana"
+          ],
+          "locator": "Sogdian settlement and agricultural inheritance with limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "kl-trade"
+          ],
+          "locator": "Iranica chronology of Sogdian commercial networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "kl-trade"
+          ],
+          "locator": "Documented categories of Sogdian long-distance trade.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "kl-coinage"
+          ],
+          "locator": "Iranica classification and scripts on regional coinage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "kl-tekin"
+          ],
+          "locator": "Orkhon text context and religious vocabulary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "kl-suyab"
+          ],
+          "locator": "Iranica archaeological inventory of Suyab cult sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "kl-central-islamic"
+          ],
+          "locator": "Talas campaign and wider Islamic-period setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "kl-suyab"
+          ],
+          "locator": "Dated residential and church finds at Ak-Beshim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "kl-unesco-kyrgyz"
+          ],
+          "locator": "UNESCO tentative-list description and scope caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "kl-nomadism"
+          ],
+          "locator": "Mobile social organization contrasted with missing household evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "kl-nomadism"
+          ],
+          "locator": "Regional labor structure with explicit gender evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "kl-economy"
+          ],
+          "locator": "Iranica report about specifically Sogdian commercial education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "kl-coinage"
+          ],
+          "locator": "Multilingual material record used for a cautious learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "kl-iicas"
+          ],
+          "locator": "Institutional project methods and interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "kl-nomadism"
+          ],
+          "locator": "Regional mobile material culture and explicit direct-evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "kl-abe"
+          ],
+          "locator": "Late occupation houses, fittings and small finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "kl-felt"
+          ],
+          "locator": "Regional felt uses and target-specific wardrobe limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "kl-akb2019"
+          ],
+          "locator": "Zooarchaeological and archaeobotanical tables, date-limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "kl-akb2019"
+          ],
+          "locator": "Late-context astragalus and tentative bell interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "kl-medicine"
+          ],
+          "locator": "Study conclusion and source-history limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "kl-trade"
+          ],
+          "locator": "Medicinal trade goods contrasted with absent treatment evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "kl-akb2019"
+          ],
+          "locator": "P3 interpretation, stratigraphy and missing water-flow trace.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "kl-akb2019"
+          ],
+          "locator": "P13 presumed-toilet interpretation and date limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "kl-unesco-kyrgyz"
+          ],
+          "locator": "Later Burana infrastructure and explicit earlier evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "kl-kultegin-date",
+            "kl-unicode"
+          ],
+          "locator": "Monument date, multilingual form and script identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "kl-tekin"
+          ],
+          "locator": "Exact KT N1 text and phrase identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "kl-tekin"
+          ],
+          "locator": "Tekin grammar, KT N1 transliteration and translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "kl-kultegin-date"
+          ],
+          "locator": "Genre, patronage and evidentiary limits of the memorial.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "kl-abe"
+          ],
+          "locator": "Settlement transition and continuity distinguished from political identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "kl-ilak",
+            "kl-map1000",
+            "kl-map1100"
+          ],
+          "locator": "Critical dynastic synthesis used for disputed Qarakhanid origins, Satuk Bughra Khan, conversion traditions and the conquests of 992 and 999. Decoded endpoint seam demonstrates that the indexed Karluk target is entirely absent at 1000. Decoded successor seam checked for separate Oghuz, Cuman-Kipchak and karkhanids atlas identities.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "karluks",
+        "card": "cards/karluks.json",
+        "dateBasis": "map_coverage",
+        "summary": "A mobile federation built a Semirechye yabghu polity; it transformed amid Samanid pressure and disputed Qarakhanid formation while Karluk groups continued.",
+        "fell": 940
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "karluks",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            84.55944559445595,
+            39.71380489249975,
+            101.05121051210511,
+            46.205906017734634
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "karluks",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            64.94644946449466,
+            39.68339044940879,
+            91.33471334713346,
+            46.682859784388384
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id karluks is indexed circa 700 to 1000, with initial coverage intervals 700 to 800 and 900 to 1000 and no prior card.",
+    "At 700 it is a one-ring, 16-position Polygon, bounds [84.55944559445595, 39.71380489249975, 101.05121051210511, 46.205906017734634], hash f9cf29d6bbd20652b1d201baa40210f20ff4e830c86a984173b3f79ad3d93f6d.",
+    "At 900 it is a one-ring, 138-position Polygon, bounds [64.94644946449466, 39.68339044940879, 91.33471334713346, 46.682859784388384], hash 1020a34a849e86cad0216d704c81a64a35f26250a877e53415a3fda167c592bd.",
+    "The target is absent at 600, 800, 1000 and 1100. The missing 800 and 1000 snapshots conflict with the continuous index range and require explicit caveats.",
+    "The 700 shape is east of Suyab, Talas and Ili; the 900 shape reaches those places while neighboring Uyghur, Oghuz, Samanid and Tibetan features retain separate identities.",
+    "Western Türk, Göktürk, Türgesh factions, Uyghur, Oghuz, Samanid and Qarakhanid histories remain distinct. The atlas has no separate Türgesh id and spells its 1100 Qarakhanid successor karkhanids.",
+    "All coordinates, bounds, hashes and point tests describe imported display geometry only; none establishes modern borders, ethnicity, language or exclusive sovereignty."
+  ]
+}

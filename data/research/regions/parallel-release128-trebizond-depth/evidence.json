@@ -1,0 +1,882 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release128-trebizond research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "tr-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry checked: trebizond is labeled Trebizond, marked circa and generated from historical basemaps, indexed 1279 to 1492, and has no alias, Wikipedia link or authored historical summary."
+    },
+    {
+      "id": "tr-map1200",
+      "title": "Human History Map world-1200 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded predecessor seam. The target is absent; imported Byzantine, Georgian and Armenian features divide audited Pontic and Caucasian test points, with coastline gaps at several exact modern city coordinates."
+    },
+    {
+      "id": "tr-map1279",
+      "title": "Human History Map world-1279 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded first target layer. It contains one unlabeled three-part MultiPolygon with 41 positions, including an eastern Pontic strip and two detached western coastal slivers."
+    },
+    {
+      "id": "tr-map1300",
+      "title": "Human History Map world-1300 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Decoded middle target layer. It reduces Trebizond to one 17-position Polygon while adjacent imported features are assigned to the Sultanate of Rum, Ilkhanate, Georgia, Golden Horde and Byzantine Empire."
+    },
+    {
+      "id": "tr-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded final target layer. It keeps a nearly identical 17-position Polygon through 1492 while surrounding tests are divided among Georgia, a lingering Sultanate of Rum layer, Timurids and Ottomans."
+    },
+    {
+      "id": "tr-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded endpoint seam. The exact target disappears; Ottoman, Georgian and Aq Qoyunlu features own audited successor tests, although several coastline city points remain outside every polygon."
+    },
+    {
+      "id": "tr-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded stable successor seam after the atlas cutoff. Ottoman, Georgian and Aq Qoyunlu assignments repeat the 1492 pattern around the former Trebizond footprint."
+    },
+    {
+      "id": "tr-encyclopedia",
+      "title": "Trebizond, empire of, Columbia Encyclopedia",
+      "url": "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/trebizond-empire",
+      "note": "Scholarly encyclopedia entry checked for the 1204 to 1461 state, Sinope's loss, Seljuk and Mongol relationships, trade, Alexios II's prosperity, Turkmen marriage diplomacy and Ottoman conquest."
+    },
+    {
+      "id": "tr-doml",
+      "title": "Two Works on Trebizond: Michael Panaretos and Bessarion",
+      "url": "https://domedieval.org/books/two-works-on-trebizond-michael-panaretos-bessarion/",
+      "note": "Dumbarton Oaks Medieval Library volume page checked for the surviving Greek primary texts, Panaretos's court position and dynastic chronicle, Bessarion's encomium, Black Sea trade and the 1204 to 1461 frame."
+    },
+    {
+      "id": "tr-panaretos",
+      "title": "Michael Panaretos, Guide to Byzantine Historical Writing",
+      "url": "https://www.cambridge.org/core/books/abs/guide-to-byzantine-historical-writing/michael-panaretos/A4C82038B14308E90515F99FD4C52496",
+      "note": "Cambridge scholarly guide checked for the chronicle's scope, greater eyewitness detail after 1340, Pontic Greek register and Panaretos's military, court and notarial service to Alexios III."
+    },
+    {
+      "id": "tr-foundation",
+      "title": "A. A. Vasiliev, The Foundation of the Empire of Trebizond (1204 to 1222)",
+      "url": "https://www.journals.uchicago.edu/doi/10.2307/2846872",
+      "note": "Foundational scholarly study checked for Alexios and David, Georgian support, early expansion and loss, and the later Grand Komnenian imperial title formula."
+    },
+    {
+      "id": "tr-finlay",
+      "title": "George Finlay, Empire of Trebizond, A.D. 1204 to 1461",
+      "url": "https://www.cambridge.org/core/books/abs/history-of-greece/empire-of-trebizondad-12041461/883AF93D2A61B96FAB415549AFE72149",
+      "note": "Cambridge Library Collection edition checked as an older political-history synthesis whose chapter divisions separate Seljuk and Mongol tribute, 1280 to 1349 factions, and later restoration of imperial control."
+    },
+    {
+      "id": "tr-genealogy",
+      "title": "Kelsey Jackson Williams, A Genealogy of the Grand Komnenoi of Trebizond",
+      "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/8570/Jackson_Williams_Grand_Komnenoi.pdf",
+      "note": "Peer-reviewed genealogy checked for the ruling house, corrected successions and marriages linking Trebizond with Georgian, Turkmen, Byzantine, French and Italian political worlds."
+    },
+    {
+      "id": "tr-saljuqs",
+      "title": "Saljuqs iii. Saljuqs of Rum, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/saljuqs-iii/",
+      "note": "Scholarly reference checked for the Seljuk Sultanate of Rum, its Mongol subordination after Köse Dağ and the political setting around Trebizond's tributary relationships."
+    },
+    {
+      "id": "tr-aq",
+      "title": "Aq Qoyunlu, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/aq-qoyunlu-confederation/",
+      "note": "Scholarly reference checked for fourteenth-century conflict, the 1352 marriage settlement, renewed dynastic links, Uzun Hasan's alliance and his decision not to confront Mehmed II's artillery in 1461."
+    },
+    {
+      "id": "tr-karpov",
+      "title": "Sergei Karpov, Venice and Genoa: rivalry and collaboration at Trebizond and Tana",
+      "url": "https://www.storiapatriagenova.it/Scheda_vs_info.aspx?Id_Scheda_Bibliografica=1332",
+      "note": "Scholarly journal record and study checked for Genoese and Venetian competition, treaties, quarters, fiscal privileges, conflict and collaboration in the Black Sea trading system."
+    },
+    {
+      "id": "tr-shipping",
+      "title": "Anthony Bryer, Shipping in the Empire of Trebizond",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00253359.1966.10659307",
+      "note": "Maritime History article checked for Trebizond's regional shipping, coastal ports, vessels and the relationship between the imperial state, local seafarers and Black Sea commerce."
+    },
+    {
+      "id": "tr-coin",
+      "title": "Silver asper of Alexios II, British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/C_1919-0306-1",
+      "note": "Museum catalogue checked for a 1297 silver asper minted at Trebizond, its 21 millimetre diameter and 2.15 gram weight, and its inscriptions and portraits naming St Eugenios and John II."
+    },
+    {
+      "id": "tr-clavijo",
+      "title": "Ruy González de Clavijo, Embassy to Tamerlane, 1403 to 1406",
+      "url": "https://openlibrary.org/books/OL6724592M/Embassy_to_Tamerlane_1403-1406",
+      "note": "Digitized primary travel account checked for the 1404 route through Trebizond, the imperial audience, court clothing, caravan logistics and the difficult mountain road toward Erzincan."
+    },
+    {
+      "id": "tr-tafur",
+      "title": "Pero Tafur, Travels and Adventures, 1435 to 1439",
+      "url": "https://depts.washington.edu/silkroad/texts/tafur.html",
+      "note": "University-hosted primary translation checked for Tafur's 1437 visit, the walled city, fruitful ground, harbor travel, court audience and political rumor; his estimates and prejudices are treated as an outsider's testimony."
+    },
+    {
+      "id": "tr-vazelon",
+      "title": "Tuna Artun, The Regestes of the Medieval Acts of Vazelon",
+      "url": "https://digitalarchive.library.bogazici.edu.tr/server/api/core/bitstreams/ba56403f-1be0-4867-b4cd-bffc37151a71/content",
+      "note": "Boğaziçi University thesis and documentary regesta checked for Matzouka land, women and inheritance, ransom, families, cultivation, tools, mills, fruit and the limits of reconstructing households from monastic property records."
+    },
+    {
+      "id": "tr-bryer-winfield",
+      "title": "Anthony Bryer and David Winfield, The Byzantine Monuments and Topography of the Pontos",
+      "url": "https://www.fulcrum.org/concern/monographs/1c18df96k",
+      "note": "Major archaeological-topographical survey checked for Trebizond's walls, palace, aqueduct, cisterns, churches, timber coast, foods, festivals and the absence of a secure domestic latrine or sewer reconstruction."
+    },
+    {
+      "id": "tr-palace",
+      "title": "Trabzon Inner Citadel and Palace",
+      "url": "https://openaccess.hacettepe.edu.tr/items/50d3267e-eb40-43e7-8347-e000f28ec19b",
+      "note": "Hacettepe University architectural-history thesis checked for the inner citadel, Grand Komnenian palace, defenses, surviving fabric and the limits of reconstructing a complex never studied as one intact monument."
+    },
+    {
+      "id": "tr-water",
+      "title": "Selman Şahin, Historical Water Structures in Central Trabzon",
+      "url": "https://acikerisim.erbakan.edu.tr/items/38a1b30b-9410-4d34-ac6b-4e27d9269757",
+      "note": "University art-history thesis checked for surviving aqueducts, fountains, baths and bridges and its warning that most catalogued water structures are Ottoman or later-repaired, not automatically evidence for the Trapezuntine period."
+    },
+    {
+      "id": "tr-eastmond",
+      "title": "Antony Eastmond, Art and Identity in Thirteenth-century Byzantium",
+      "url": "https://pure.courtauld.ac.uk/en/publications/iart-and-identity-in-thirteenth-century-byzantium-hagia-sophia-an/",
+      "note": "Courtauld research record and monograph checked for Hagia Sophia's mid-thirteenth-century architecture, sculpture and painting and their Byzantine, Seljuk Anatolian and Caucasian contexts."
+    },
+    {
+      "id": "tr-romance",
+      "title": "Alexander the Great manuscript, Hellenic Institute of Byzantine and Post-Byzantine Studies",
+      "url": "https://newsite.istitutoellenico.org/en/show-item/alexander-the-great-en/",
+      "note": "Hellenic Institute catalogue checked for the fourteenth-century Greek Alexander Romance, its roughly 250 miniatures, three painters and probable representation of the Grand Komnenian court through eastern visual elements."
+    },
+    {
+      "id": "tr-chrysobull",
+      "title": "Chrysobull of Alexios III for Dionysiou Monastery, Treasures of Mount Athos",
+      "url": "https://www.elpenor.org/athos/en/e218dm19.asp",
+      "note": "Exhibition catalogue checked for the September 1374 charter, endowment and annual aspers, its gold seal, painted Alexios III and Theodora, and provisions for worship and visitors from Trebizond."
+    },
+    {
+      "id": "tr-bessarion",
+      "title": "Bessarion bequest, Biblioteca Nazionale Marciana",
+      "url": "https://bibliotecanazionalemarciana.cultura.gov.it/en/bequests-and-collections/bessarion-bequest/",
+      "note": "Official library history checked for Bessarion's Trebizond birth and education, later Greek and Latin studies, and his 1468 bequest that became a major channel of Byzantine manuscript continuity."
+    },
+    {
+      "id": "tr-plague-text",
+      "title": "Costas Tsiamis and colleagues, The Black Death and the Chronicle of Michael Panaretos",
+      "url": "https://www.infezmed.it/media/journal/Vol_19_3_2011_10.pdf",
+      "note": "Peer-reviewed medical-history study checked for Panaretos's exact Greek wording, the September 1347 dating used by the authors, reported family losses and seven-month duration of Trebizond's plague."
+    },
+    {
+      "id": "tr-plague-trade",
+      "title": "Hannah Barker, Laying the Corpses to Rest: Grain, Embargoes, and Yersinia pestis in the Black Sea, 1346 to 48",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/711596?journalCode=spc",
+      "note": "Peer-reviewed Speculum article checked for the evidence and explicit uncertainty behind a possible connection between resumed northern grain shipments and the near-simultaneous plague at Trebizond and Constantinople."
+    },
+    {
+      "id": "tr-medical-transfer",
+      "title": "Petros Bouras-Vallianatos, Cross-cultural Transfer of Medical Knowledge in the Medieval Mediterranean",
+      "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/228142127/Bouras_VallianatosP2021SCrossCulturalTransferOfMedicalKnowledge.pdf",
+      "note": "Peer-reviewed study checked for Gregory Chioniades's movement of Persian scientific and medical recipes to Trebizond and the caution that his title does not prove he practiced medicine there."
+    },
+    {
+      "id": "tr-fall-date",
+      "title": "Franz Babinger, La date de la prise de Trébizonde par les Turcs (1461)",
+      "url": "https://www.persee.fr/doc/rebyz_0766-5598_1949_num_7_1_1014",
+      "note": "Revue des études byzantines note checked for documentary evidence fixing the Ottoman conquest in late summer 1461 and rejecting a later fall date."
+    },
+    {
+      "id": "tr-siege",
+      "title": "The Ottoman Conquest of Trebizond, 1461",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9783110723175-034/pdf?licenseType=open-access",
+      "note": "Open-access scholarly military-history chapter checked for Mehmed II's coordinated land and naval expedition, siege operations, artillery and the strategic isolation of David Grand Komnenos."
+    },
+    {
+      "id": "tr-kritovoulos",
+      "title": "Kritovoulos, History of Mehmed the Conqueror, Book IV",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9780691198187/html",
+      "note": "Contemporary Greek narrative in translation checked critically for Mehmed's preparations, combined army and fleet, negotiations and surrender; its author wrote within the conqueror's political orbit."
+    },
+    {
+      "id": "tr-cassone",
+      "title": "Cassone with painted panel depicting the Conquest of Trebizond, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/192693",
+      "note": "Museum object record checked for the Florentine visual commemoration after 1461 and for technical cautions that the painted front and other components may not belong to one intact original chest."
+    },
+    {
+      "id": "tr-lowry",
+      "title": "Heath W. Lowry, The Islamization and Turkification of the City of Trabzon, 1461 to 1583",
+      "url": "https://gorgiaspress.com/the-islamization-turkification-of-the-city-of-trabzon-trebizond-1461-1583",
+      "note": "Scholarly publisher page and study checked for Ottoman records at 1461, 1486 and later dates, population change, resettlement and the survival of a substantial Christian Greek-speaking community after conquest."
+    }
+  ],
+  "entities": [
+    {
+      "id": "trebizond",
+      "card": "data/cards/trebizond.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tr-encyclopedia",
+            "tr-doml"
+          ],
+          "locator": "Scholarly encyclopedia entry checked for the 1204 to 1461 state, Sinope's loss, Seljuk and Mongol relationships, trade, Alexios II's prosperity, Turkmen marriage diplomacy and Ottoman conquest. Dumbarton Oaks Medieval Library volume page checked for the surviving Greek primary texts, Panaretos's court position and dynastic chronicle, Bessarion's encomium, Black Sea trade and the 1204 to 1461 frame.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tr-foundation",
+            "tr-saljuqs"
+          ],
+          "locator": "Foundational scholarly study checked for Alexios and David, Georgian support, early expansion and loss, and the later Grand Komnenian imperial title formula. Scholarly reference checked for the Seljuk Sultanate of Rum, its Mongol subordination after Köse Dağ and the political setting around Trebizond's tributary relationships.",
+          "dateScope": {
+            "from": 1204,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tr-finlay"
+          ],
+          "locator": "Cambridge Library Collection edition checked as an older political-history synthesis whose chapter divisions separate Seljuk and Mongol tribute, 1280 to 1349 factions, and later restoration of imperial control.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1330
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tr-panaretos"
+          ],
+          "locator": "Cambridge scholarly guide checked for the chronicle's scope, greater eyewitness detail after 1340, Pontic Greek register and Panaretos's military, court and notarial service to Alexios III.",
+          "dateScope": {
+            "from": 1330,
+            "to": 1349
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "tr-panaretos",
+            "tr-chrysobull"
+          ],
+          "locator": "Cambridge scholarly guide checked for the chronicle's scope, greater eyewitness detail after 1340, Pontic Greek register and Panaretos's military, court and notarial service to Alexios III. Exhibition catalogue checked for the September 1374 charter, endowment and annual aspers, its gold seal, painted Alexios III and Theodora, and provisions for worship and visitors from Trebizond.",
+          "dateScope": {
+            "from": 1349,
+            "to": 1390
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tr-genealogy"
+          ],
+          "locator": "Peer-reviewed genealogy checked for the ruling house, corrected successions and marriages linking Trebizond with Georgian, Turkmen, Byzantine, French and Italian political worlds.",
+          "dateScope": {
+            "from": 1390,
+            "to": 1429
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "tr-siege"
+          ],
+          "locator": "Open-access scholarly military-history chapter checked for Mehmed II's coordinated land and naval expedition, siege operations, artillery and the strategic isolation of David Grand Komnenos.",
+          "dateScope": {
+            "from": 1429,
+            "to": 1461
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "tr-lowry",
+            "tr-map1400"
+          ],
+          "locator": "Scholarly publisher page and study checked for Ottoman records at 1461, 1486 and later dates, population change, resettlement and the survival of a substantial Christian Greek-speaking community after conquest. Decoded final target layer. It keeps a nearly identical 17-position Polygon through 1492 while surrounding tests are divided among Georgia, a lingering Sultanate of Rum layer, Timurids and Ottomans.",
+          "dateScope": {
+            "from": 1461,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tr-index"
+          ],
+          "locator": "Exact index and coverage entries, including dates, provenance and review state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tr-map1200"
+          ],
+          "locator": "Decoded predecessor polygons and point-in-polygon owners at the 1200 snapshot.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tr-map1279"
+          ],
+          "locator": "Exact feature type, component bounds, coordinate count, hash and audited city inclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tr-map1300",
+            "tr-map1400",
+            "tr-saljuqs"
+          ],
+          "locator": "Decoded exact and adjacent features plus Iranica's chronology for the Sultanate of Rum.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tr-map1492",
+            "tr-map1500",
+            "tr-fall-date"
+          ],
+          "locator": "Decoded successor ownership at two snapshots and documentary dating of the 1461 conquest.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tr-foundation"
+          ],
+          "locator": "Vasiliev's reconstruction of the Komnenian brothers, Georgian aid and the 1204 foundation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tr-foundation"
+          ],
+          "locator": "Foundation study's campaign sequence and contraction after the losses to Nicaea and the Seljuks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tr-clavijo",
+            "tr-bryer-winfield"
+          ],
+          "locator": "Embassy route and archaeological topography of the capital, coast, valleys and Pontic passes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tr-genealogy"
+          ],
+          "locator": "Peer-reviewed dynastic reconstruction and its cross-regional marriage connections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tr-foundation"
+          ],
+          "locator": "Study's discussion of John II, Constantinopolitan objections and the Grand Komnenian title formula.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tr-finlay"
+          ],
+          "locator": "Older political synthesis, chapter on independence and internal factions after 1280.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tr-coin"
+          ],
+          "locator": "British Museum object record for ruler, date, metal, mint, weight, dimensions and named figures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tr-finlay"
+          ],
+          "locator": "Chapter division and political narrative for Trebizond's 1280 to 1349 factions and successions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tr-panaretos",
+            "tr-chrysobull"
+          ],
+          "locator": "Eyewitness chronicle context plus the Dionysiou portrait, foundation grant and annual payment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tr-genealogy"
+          ],
+          "locator": "Corrected Grand Komnenian genealogy and methodological discussion of contradictory late sources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tr-saljuqs"
+          ],
+          "locator": "Iranica chronology for Rum's Mongol subordination and the regional political order.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tr-finlay"
+          ],
+          "locator": "Political synthesis's treatment of Mongol tribute, trade conditions and later independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tr-aq"
+          ],
+          "locator": "Iranica sections on clashes, the 1352 settlement, renewed marriages and Uzun Hasan's alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tr-karpov"
+          ],
+          "locator": "Archival study of Genoese-Venetian rivalry, collaboration, privileges and conflict at Trebizond.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tr-siege"
+          ],
+          "locator": "Open-access military chapter on strategic isolation, combined expedition, siege and surrender.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tr-karpov"
+          ],
+          "locator": "Karpov's archival reconstruction of Trebizond within Genoese, Venetian and inland trading networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tr-shipping"
+          ],
+          "locator": "Maritime-history study of local shipping, vessels, coastal ports and Black Sea conditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tr-clavijo"
+          ],
+          "locator": "Primary travel narrative's Trebizond landing and difficult overland caravan route.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tr-coin"
+          ],
+          "locator": "Museum catalogue object data and inscription identifications; wage evidence is explicitly not inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "tr-vazelon"
+          ],
+          "locator": "Economic synthesis and regesta entries for cultivation, tools, processing sites and named produce.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tr-genealogy"
+          ],
+          "locator": "Marriage network and succession evidence in the corrected Grand Komnenian genealogy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tr-vazelon"
+          ],
+          "locator": "Regesta and social-history synthesis for women, dowry, inheritance, mortgages and land transactions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tr-vazelon"
+          ],
+          "locator": "Dated ransom transaction and methodological discussion of stasis, family and dependent occupants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tr-panaretos"
+          ],
+          "locator": "Chronicle author's court and notarial offices plus the range and bias of named officeholders.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tr-bessarion"
+          ],
+          "locator": "Official biography of one learned Trebizond-born student; no universal schooling is inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tr-eastmond"
+          ],
+          "locator": "Courtauld monograph description and study of Hagia Sophia's cross-cultural artistic setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tr-chrysobull"
+          ],
+          "locator": "Exhibition catalogue for the charter's grant, obligations, material form, seal and portrait.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tr-bessarion"
+          ],
+          "locator": "Marciana biography and collection history, including study and manuscript bequest.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tr-medical-transfer"
+          ],
+          "locator": "Peer-reviewed discussion of Chioniades, Persian material, title and practice caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "tr-plague-text"
+          ],
+          "locator": "Article's Greek quotation, translation context and identification of Panaretos's plague notice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "tr-eastmond"
+          ],
+          "locator": "Art-historical analysis of architecture, sculpture, wall painting, liturgy and political identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "tr-palace"
+          ],
+          "locator": "Architectural study of the inner citadel, palace remains, defensive setting and reconstruction limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tr-romance"
+          ],
+          "locator": "Hellenic Institute manuscript description, date, text, miniature count, painters and probable court setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tr-clavijo",
+            "tr-eastmond"
+          ],
+          "locator": "Embassy clothing description and art-historical liturgical setting; children's play remains undocumented.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "tr-cassone"
+          ],
+          "locator": "Metropolitan Museum object history, subject identification and technical reconstruction caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "tr-bryer-winfield"
+          ],
+          "locator": "Topographical survey's evidence for regional food resources and the recorded diplomatic meal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "tr-tafur"
+          ],
+          "locator": "Primary travel account's Trebizond description, with explicit source criticism of estimates and rumor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "tr-bryer-winfield"
+          ],
+          "locator": "Archaeological survey's discussion of timber-rich coastal building and survival bias in monuments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "tr-tafur"
+          ],
+          "locator": "Traveler's Black Sea itinerary, reception, provisioning, shipping links and captive market observations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "tr-romance"
+          ],
+          "locator": "Manuscript catalogue evidence for multiple painters and material production; broader limits are explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "tr-plague-text"
+          ],
+          "locator": "Greek chronicle quotation and medical-history discussion of losses and seven-month duration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "tr-plague-trade"
+          ],
+          "locator": "Speculum article's explicitly conditional grain-shipment and transmission hypothesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "tr-medical-transfer"
+          ],
+          "locator": "Study's Trebizond-specific knowledge transfer and warning that Chioniades's medical title does not prove practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "tr-water"
+          ],
+          "locator": "Water-structure catalogue, chronology and explicit predominance of Ottoman or repaired survivals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tr-bryer-winfield"
+          ],
+          "locator": "Negative audit of latrine and sewer evidence and the chronology of the later converted bath.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tr-fall-date",
+            "tr-kritovoulos",
+            "tr-lowry",
+            "tr-map1492"
+          ],
+          "locator": "Revue des études byzantines note checked for documentary evidence fixing the Ottoman conquest in late summer 1461 and rejecting a later fall date. Contemporary Greek narrative in translation checked critically for Mehmed's preparations, combined army and fleet, negotiations and surrender; its author wrote within the conqueror's political orbit. Scholarly publisher page and study checked for Ottoman records at 1461, 1486 and later dates, population change, resettlement and the survival of a substantial Christian Greek-speaking community after conquest. Decoded endpoint seam. The exact target disappears; Ottoman, Georgian and Aq Qoyunlu features own audited successor tests, although several coastline city points remain outside every polygon.",
+          "dateScope": {
+            "year": 1461
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "trebizond",
+        "card": "cards/trebizond.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Black Sea Roman successor state flourished through trade, diplomacy and art until Ottoman conquest in 1461; the atlas shape lingers to 1492.",
+        "summarySource": null,
+        "fell": {
+          "year": 1461,
+          "to": [
+            "ottoman-empire"
+          ],
+          "text": "Mehmed II forced David Grand Komnenos to surrender Trebizond after a coordinated land-and-sea campaign in late summer 1461."
+        },
+        "successors": [
+          "ottoman-empire"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "trebizond",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            31.03411034110343,
+            40.15066689309464,
+            41.4850148501485,
+            42.043274738160875
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "trebizond",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            37.25137251372516,
+            40.15066689309464,
+            41.4850148501485,
+            41.436368351028605
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "trebizond",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            37.25137251372516,
+            40.15095866902104,
+            41.4850148501485,
+            41.43624876130184
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target trebizond is indexed circa 1279 to 1492, has no alias or historical link, and has no tracked card or researched override before integration.",
+    "The 1279 target is one unlabeled three-part MultiPolygon with 41 positions; two detached western slivers disappear at 1300, leaving a 17-position eastern Pontic Polygon through 1492.",
+    "Exact modern coordinates for Trabzon, Sinope, Samsun and Rize fall through coastline gaps, so point misses are geometry artifacts rather than claims that the capital was outside its own state.",
+    "The atlas begins seventy-five years after the 1204 foundation and ends thirty-one years after the documented Ottoman conquest of 1461. The card preserves map coverage dates but states the historical ending separately.",
+    "Imported neighboring layers are themselves coarse or anachronistic: the 1400 layer retains a Sultanate of Rum id; later seams divide the area among Ottoman, Georgian and Aq Qoyunlu shapes.",
+    "Daily-life claims distinguish monastic land documents, court chronicles, travelers and archaeology. No universal household, school, menu, cure, water routine, game or toilet arrangement is invented.",
+    "The written sample is medieval Greek from Michael Panaretos's court chronicle, with transliteration, translation, date, genre and social setting; it is not labeled as ordinary spoken dialogue.",
+    "No appliesTo alias or shared-card substitution is used."
+  ]
+}
