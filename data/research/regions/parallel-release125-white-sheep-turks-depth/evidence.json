@@ -1,0 +1,866 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release125-white-sheep-turks research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "ws-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry checked: emirate-of-the-white-sheep-turks is labeled Emirate of the White Sheep Turks, carries Turks as its only alias, links to Aq Qoyunlu, and is indexed circa 1492 to 1530."
+    },
+    {
+      "id": "ws-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded predecessor snapshot. The exact target id is absent, while a broad timurid-empire backdrop covers most tested places later painted as White Sheep territory. This is an atlas editorial predecessor, not proof of uniform Timurid rule."
+    },
+    {
+      "id": "ws-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded first exact target: one Polygon, one ring, 225 positions, bbox 37.953380 to 60.478805 E and 25.298741 to 43.862611 N. It includes tested points from Diyarbakir and Tabriz to Baghdad, Isfahan, Shiraz and Kerman."
+    },
+    {
+      "id": "ws-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded second exact target: one Polygon, one ring and the same 225 positions and tested inclusions as 1492, with only tiny transformed-coordinate differences. The static footprint hides the confederation's severe political division."
+    },
+    {
+      "id": "ws-map1530",
+      "title": "Human History Map world-1530 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded successor seam. The target vanishes; tested western and northern places go mainly to ottoman-empire and Iranian places to safavid-empire. The editorial seam is approximate and even assigns tested Tabriz to the Ottoman feature."
+    },
+    {
+      "id": "ws-iranica-aq",
+      "title": "John E. Woods, Aq Qoyunlu, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/aq-qoyunlu-confederation/",
+      "note": "Scholarly reference checked for the Bayandur-led confederation, uncertain sheep-name explanation, seasonal pasture circuit, councils and administration, Qara Osman and Uzun Hasan, Yaqub, factional breakdown, Safavid conquest and institutional continuities."
+    },
+    {
+      "id": "ws-tdv-aq",
+      "title": "Akkoyunlular, TDV İslâm Ansiklopedisi",
+      "url": "https://islamansiklopedisi.org.tr/akkoyunlular",
+      "note": "Scholarly Turkish encyclopedia entry checked for the dynasty's broad 1340 to 1514 convention, political sequence, arts and learning. Its endpoint is treated as a remnant-dynasty convention, not continued control of the atlas polygon."
+    },
+    {
+      "id": "ws-tdv-uzun",
+      "title": "Uzun Hasan, TDV İslâm Ansiklopedisi",
+      "url": "https://islamansiklopedisi.org.tr/uzun-hasan",
+      "note": "Scholarly biography checked for Uzun Hasan's education, early hardship, conquests, Bayandur emblem, Friday scholarly gatherings, Turkish translation of hadith readings, patronage and lawgiving."
+    },
+    {
+      "id": "ws-tdv-otluk",
+      "title": "Otlukbeli Savaşı, TDV İslâm Ansiklopedisi",
+      "url": "https://islamansiklopedisi.org.tr/otlukbeli-savasi",
+      "note": "Scholarly battle entry checked for the 11 August 1473 confrontation, the Ottoman advantage in cannon and firearms, the failure of promised Venetian weapons to arrive, and the battle's strategic effects."
+    },
+    {
+      "id": "ws-iranica-esmail",
+      "title": "Roger M. Savory, Esmail I Safawi: Biography, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/esmail-i-safawi/esmail-i-safawi-i-biography/",
+      "note": "Scholarly biography checked for Safavid-Aq Qoyunlu marriage links, Rostam's use of Safavid support, Ismail's 1501 victory over Alvand, and the conquests of Fars, Diyarbakir and Baghdad through 1508."
+    },
+    {
+      "id": "ws-iranica-iraq",
+      "title": "Iraq iii: Mongols to Safavids, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/iraq-iii-mongols-to-safavids/",
+      "note": "Scholarly regional chronology checked for Aq Qoyunlu control of Baghdad under Uzun Hasan, Yaqub and Sultan Murad, followed by the collapse of their power and Safavid occupation."
+    },
+    {
+      "id": "ws-iranica-chronology",
+      "title": "Chronology of Iranian History, part 1, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/chronology-of-iranian-history-part-1/",
+      "note": "Scholarly chronology checked for Uzun Hasan's expansion, the 1501 Safavid foundation and the 1508 capture of Iraq as the final major victory over Aq Qoyunlu power."
+    },
+    {
+      "id": "ws-iranica-qom",
+      "title": "Qom, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/qom/",
+      "note": "Scholarly urban history checked for Aq Qoyunlu Qom during the civil-war-ridden late 1490s, including its use as a winter quarter in 1497 to 98 and the survival of local governing families amid rival claims."
+    },
+    {
+      "id": "ws-iranica-armenia",
+      "title": "Armenia and Iran vi: Armeno-Iranian Relations in the Islamic Period, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/armenia-vi/",
+      "note": "Scholarly regional reference checked for Armenian communities under Turkmen rule and the political context of the Aq Qoyunlu era. Used to prevent a ruling-confederation label from erasing settled Christian populations."
+    },
+    {
+      "id": "ws-contarini",
+      "title": "Ambrogio Contarini, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/contarini-ambrogio-1429-99-venetian-merchant-and-diplomat-author-of-a-noteworthy-report-on-persia-under-the-aq-qoyunlu/",
+      "note": "Scholarly source biography checked for the Venetian diplomat's 1474 to 77 mission to Uzun Hasan and for the evidentiary character of his noteworthy but socially narrow eyewitness account."
+    },
+    {
+      "id": "ws-barbaro",
+      "title": "Giosafat Barbaro, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/barbaro-giosafat/",
+      "note": "Scholarly source biography checked for Barbaro's 1473 to 78 embassy, his later written account, and its observations about the Aq Qoyunlu court, travel, settlements, trade, entertainments and material culture."
+    },
+    {
+      "id": "ws-gutenberg",
+      "title": "Travels to Tana and Persia by Josafa Barbaro and Ambrogio Contarini",
+      "url": "https://www.gutenberg.org/files/75292/75292-h/75292-h.htm",
+      "note": "Public-domain Hakluyt Society translation checked for Contarini's Aq Qoyunlu camp meals and moving tents, Barbaro's Mardin hospital-hospice, and a later merchant's retrospective description of water and garden features in Tabriz."
+    },
+    {
+      "id": "ws-carpets",
+      "title": "Aq Qoyunlu Period Carpets and Giosafat Barbaro's Travelogue",
+      "url": "https://www.aris.gov.tr/tam-metin/774/eng",
+      "note": "Peer-reviewed material-culture study checked for Barbaro's account of roughly one hundred festival pavilions near Tabriz, forty inspected interiors, multicolored coverings and especially fine carpets."
+    },
+    {
+      "id": "ws-bimaristan",
+      "title": "Bîmâristan, TDV İslâm Ansiklopedisi",
+      "url": "https://islamansiklopedisi.org.tr/bimaristan",
+      "note": "Scholarly institutional entry checked for the hospital associated with Yaqub's Hasht Behesht complex in Tabriz and the large capacity reported by a later Venetian visitor. The number is treated as a claim, not a census."
+    },
+    {
+      "id": "ws-baths",
+      "title": "Bathhouses i: General, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/bathhouses/",
+      "note": "Scholarly architectural reference checked for Iranian bathhouse water from wells and conduits, underground construction and a traveler's statement that Tabriz palaces had baths. It does not establish access for every household."
+    },
+    {
+      "id": "ws-dicle",
+      "title": "Diyarbakır İç Kale Artuklu Sarayı Kazısı, Dicle University",
+      "url": "https://www.dicle.edu.tr/tr/birimler/arkeolojik-kazilarimiz/sayfalar/diyarbakir-ic-kale-artuklu-sarayi-kazisi-9938",
+      "note": "University archaeology report checked for older Roman clean- and waste-water channels and Artuqid palace bathing and heating systems inside Diyarbakir's citadel. These layers are not relabeled as Aq Qoyunlu toilets."
+    },
+    {
+      "id": "ws-saray",
+      "title": "Zerrin Gunal Oden, A White Sheep Ambassador: Sara Khatun",
+      "url": "https://makale.isam.org.tr/items/6061ee12-ce51-4fbf-bf20-ce855557b50a",
+      "note": "Peer-reviewed article record checked for Sara Khatun's political and diplomatic activity. Used as evidence for one exceptional royal woman, without turning elite influence into a universal condition."
+    },
+    {
+      "id": "ws-despina",
+      "title": "Despina Khatun: Wife of Uzun Hasan Bey",
+      "url": "https://dergipark.org.tr/en/pub/oad/article/1379086",
+      "note": "Peer-reviewed study checked for the 1458 marriage alliance, Despina Khatun's Trebizond Greek Christian identity, continued faith, political role and diplomatic importance at the Aq Qoyunlu court."
+    },
+    {
+      "id": "ws-fiscal",
+      "title": "Fiscal System iii: Islamic Period, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/fiscal-system-iii-islamic-period/",
+      "note": "Scholarly reference checked for regional taxation and the qanun associated with Uzun Hasan. Used to describe regulation and uneven local practice without claiming a modern uniform tax code."
+    },
+    {
+      "id": "ws-land-reform",
+      "title": "V. Minorsky, The Aq-Qoyunlu and Land Reforms",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/aqqoyunlu-and-land-reforms/7533A8D096A71C08051B7DC43931ECDC",
+      "note": "Scholarly article record checked for Aq Qoyunlu land-reform and centralization questions. Used cautiously because an abstract and historiographic frame cannot answer every village-level consequence."
+    },
+    {
+      "id": "ws-euclid",
+      "title": "British Library catalogue: Commentary on Euclid dedicated to Sultan Yaqub",
+      "url": "https://searcharchives.bl.uk/catalog/032-003390661",
+      "note": "Institutional manuscript catalogue checked for Shams al-Din Muhammad al-Kubanani at Yaqub's Aq Qoyunlu court, a Euclid commentary dedicated to the ruler, and a scholarly colophon dated Tabriz, 7 January 1483."
+    },
+    {
+      "id": "ws-hidayat",
+      "title": "V. Minorsky, The Chester Beatty Library: A Catalogue of the Turkish Manuscripts and Miniatures, part 1",
+      "url": "https://chesterbeatty.ie/assets/uploads/2021/11/Turkish-Manuscripts-and-Miniatures-Part1.pdf",
+      "note": "Scholarly manuscript catalogue checked for Hidayat's southern Turkmen Turkish divan, its Arabic script, opening words, and royal-library marks for Sultan Khalil. The supplied Latin transliteration is explicitly editorial."
+    },
+    {
+      "id": "ws-khavar",
+      "title": "Folio from a Khavarnama of Ibn Husam, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/451325",
+      "note": "Museum catalogue checked for the illustrated Khavarnama produced in Shiraz under Aq Qoyunlu rule circa 1476 to 86, its materials, large original extent and legendary adventures of Ali involving rulers, demons and dragons."
+    },
+    {
+      "id": "ws-khalil-frontispiece",
+      "title": "Frontispiece made for Sultan Khalil, Khalili Collections",
+      "url": "https://khalilicollections.org/all-collections/accession-print/?post_id=1644",
+      "note": "Museum catalogue checked for a Tabriz manuscript frontispiece in ink, gold and opaque watercolor dedicated to Sultan Khalil, who ruled for six months in 1478, and for its combined Timurid and Turkmen styles."
+    },
+    {
+      "id": "ws-khalil-coin",
+      "title": "Aq Qoyunlu silver quarter tanka of Sultan Yaqub, Khalili Collections",
+      "url": "https://www.khalilicollections.org/islamic-coins/7450-aq-qoyunlu-silver-quarter-tanka-sultaniyah-undated/",
+      "note": "Museum numismatic record checked for an undated silver quarter tanka of Yaqub from Sultaniyah, measuring 11 millimetres and weighing 1.15 grams."
+    },
+    {
+      "id": "ws-ali-qushji",
+      "title": "Ali Qushji, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/ali-qusji-qusju-ala-al-din-ali-mohammad-theologian-and-scientist-d/",
+      "note": "Scholarly biography checked for the astronomer and mathematician Ali Qushji's welcome by Uzun Hasan, the gifts he received and his diplomatic mission onward to the Ottoman court."
+    },
+    {
+      "id": "ws-met-khamsa",
+      "title": "Folio from a Khamsa of Nizami, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/455024",
+      "note": "Museum catalogue checked for a fifteenth-century Shiraz Khamsa page whose painting style is associated with the Aq Qoyunlu period of Sultan Khalil and whose materials include ink, watercolor, silver and gold."
+    },
+    {
+      "id": "ws-persee",
+      "title": "Aq Qoyunlu architectural heritage in Diyarbakir, Persée",
+      "url": "https://www.persee.fr/doc/anatv_1013-9559_2012_act_25_1_1239",
+      "note": "Scholarly proceedings article checked for the confederation's establishment around Diyarbakir, its early-fifteenth-century principality, its move toward empire and Tabriz, and its surviving architectural context."
+    },
+    {
+      "id": "ws-nebi",
+      "title": "Nebi Mosque, Diyarbakir Governor's Office",
+      "url": "https://diyarbakir.gov.tr/nebi-camii",
+      "note": "Official monument page checked for the mosque's attribution to the fifteenth-century Aq Qoyunlu era and the minaret inscription dating that component to 1530. The later component is not evidence that the dynasty still governed then."
+    },
+    {
+      "id": "ws-blue-mosque",
+      "title": "Tabriz x: Monuments, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/tabriz-x-monuments/",
+      "note": "Scholarly architectural survey checked for the Blue Mosque complex completed under the Qara Qoyunlu in 1465 and inherited by later rulers, including its garden, qanat and possible madrasa and bath components."
+    },
+    {
+      "id": "ws-art-continuity",
+      "title": "Safavid manuscript painting and Aq Qoyunlu inheritance, Khalili Collections",
+      "url": "https://khalilicollections.org/all-collections/accession-print/?post_id=2020",
+      "note": "Museum essay checked for Safavid Tabriz artists' inheritance and combination of Timurid Herat and Aq Qoyunlu Tabriz painting traditions. Used for artistic continuity rather than political survival."
+    },
+    {
+      "id": "ws-isfahan",
+      "title": "Isfahan vi: Medieval Period, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/isfahan-vi-medieval-period/",
+      "note": "Scholarly urban history checked for Isfahan's incorporation under Uzun Hasan after 1470 and the city's renewed urban life. This supports regional change without treating every atlas point as equally administered."
+    },
+    {
+      "id": "ws-social-economy",
+      "title": "Social and Internal Economic Affairs, Cambridge History of Iran",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-iran/social-and-internal-economic-affairs/4252EF40DB1407BB4A1DB3886F33CBE0",
+      "note": "Scholarly regional synthesis checked for the distinction and interaction among rural agriculture, pastoral production, urban commerce and industry in late-medieval and early-modern Iran. It is used as context, not household-level Aq Qoyunlu statistics."
+    }
+  ],
+  "entities": [
+    {
+      "id": "emirate-of-the-white-sheep-turks",
+      "card": "data/cards/emirate-of-the-white-sheep-turks.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ws-index",
+            "ws-tdv-aq"
+          ],
+          "locator": "Exact repository entry checked: emirate-of-the-white-sheep-turks is labeled Emirate of the White Sheep Turks, carries Turks as its only alias, links to Aq Qoyunlu, and is indexed circa 1492 to 1530. Scholarly Turkish encyclopedia entry checked for the dynasty's broad 1340 to 1514 convention, political sequence, arts and learning. Its endpoint is treated as a remnant-dynasty convention, not continued control of the atlas polygon.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ws-persee"
+          ],
+          "locator": "Scholarly proceedings article checked for the confederation's establishment around Diyarbakir, its early-fifteenth-century principality, its move toward empire and Tabriz, and its surviving architectural context.",
+          "dateScope": {
+            "from": 1340,
+            "to": 1435
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ws-iranica-aq"
+          ],
+          "locator": "Scholarly reference checked for the Bayandur-led confederation, uncertain sheep-name explanation, seasonal pasture circuit, councils and administration, Qara Osman and Uzun Hasan, Yaqub, factional breakdown, Safavid conquest and institutional continuities.",
+          "dateScope": {
+            "from": 1435,
+            "to": 1452
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ws-tdv-uzun"
+          ],
+          "locator": "Scholarly biography checked for Uzun Hasan's education, early hardship, conquests, Bayandur emblem, Friday scholarly gatherings, Turkish translation of hadith readings, patronage and lawgiving.",
+          "dateScope": {
+            "from": 1452,
+            "to": 1467
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ws-tdv-otluk"
+          ],
+          "locator": "Scholarly battle entry checked for the 11 August 1473 confrontation, the Ottoman advantage in cannon and firearms, the failure of promised Venetian weapons to arrive, and the battle's strategic effects.",
+          "dateScope": {
+            "from": 1467,
+            "to": 1478
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ws-euclid",
+            "ws-land-reform"
+          ],
+          "locator": "Institutional manuscript catalogue checked for Shams al-Din Muhammad al-Kubanani at Yaqub's Aq Qoyunlu court, a Euclid commentary dedicated to the ruler, and a scholarly colophon dated Tabriz, 7 January 1483. Scholarly article record checked for Aq Qoyunlu land-reform and centralization questions. Used cautiously because an abstract and historiographic frame cannot answer every village-level consequence.",
+          "dateScope": {
+            "from": 1478,
+            "to": 1490
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ws-iranica-esmail"
+          ],
+          "locator": "Scholarly biography checked for Safavid-Aq Qoyunlu marriage links, Rostam's use of Safavid support, Ismail's 1501 victory over Alvand, and the conquests of Fars, Diyarbakir and Baghdad through 1508.",
+          "dateScope": {
+            "from": 1490,
+            "to": 1501
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ws-iranica-iraq",
+            "ws-map1530"
+          ],
+          "locator": "Scholarly regional chronology checked for Aq Qoyunlu control of Baghdad under Uzun Hasan, Yaqub and Sultan Murad, followed by the collapse of their power and Safavid occupation. Decoded successor seam. The target vanishes; tested western and northern places go mainly to ottoman-empire and Iranian places to safavid-empire. The editorial seam is approximate and even assigns tested Tabriz to the Ottoman feature.",
+          "dateScope": {
+            "from": 1501,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ws-index"
+          ],
+          "locator": "Exact index record fields id, name, aliases, from, to, circa and Wikipedia identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ws-map1400"
+          ],
+          "locator": "Decoded 1400 absence, point owners and editorial-predecessor caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ws-map1492"
+          ],
+          "locator": "Exact 1492 geometry statistics, bounding box and named point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ws-map1500",
+            "ws-iranica-qom"
+          ],
+          "locator": "Exact 1500 geometry plus Qom's documented place in the civil-war-ridden late-1490s empire.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ws-map1530"
+          ],
+          "locator": "Decoded 1530 target absence and tested Ottoman-Safavid point-owner seam, including Tabriz.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ws-iranica-aq"
+          ],
+          "locator": "Opening discussion of the confederation, Bayandur leadership and unresolved name explanations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ws-iranica-aq"
+          ],
+          "locator": "Mid-fourteenth-century yaylaq and qishlaq circuit given in the scholarly reference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ws-persee"
+          ],
+          "locator": "Diyarbakir-centered principality and architectural context; inhabited-region wording prevents an empty-land inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ws-iranica-armenia"
+          ],
+          "locator": "Armenian communities and relations under Turkmen-period rule, used with explicit population-scope caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ws-tdv-uzun"
+          ],
+          "locator": "Bayandur lineage and tamga uses listed in the scholarly biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ws-iranica-iraq"
+          ],
+          "locator": "Regional sequence from Qara Qoyunlu defeat through Aq Qoyunlu rule in Iraq and Iran.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ws-iranica-iraq"
+          ],
+          "locator": "Aq Qoyunlu sequence at Baghdad; administrative implications are cautiously stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ws-isfahan"
+          ],
+          "locator": "Isfahan's incorporation and renewed urban life after 1470, with geographic limit retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ws-contarini"
+          ],
+          "locator": "Contarini's mission dates, purpose and character as an Aq Qoyunlu diplomatic eyewitness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ws-tdv-otluk"
+          ],
+          "locator": "Battle date, Ottoman firearm advantage, failed Venetian arms delivery and strategic result.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ws-iranica-aq"
+          ],
+          "locator": "Council of amirs, tribal levies, personal guards and limits on the sultan's freedom.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ws-social-economy"
+          ],
+          "locator": "Regional synthesis of pastoral, agricultural and urban economic sectors; polity-specific ranking is kept general.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ws-fiscal"
+          ],
+          "locator": "Regional variation and Uzun Hasan's fiscal qanun in the Iranica survey.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ws-land-reform"
+          ],
+          "locator": "Scholarly land-reform problem and centralization context, with village-level limits stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ws-khalil-coin"
+          ],
+          "locator": "Museum measurements, metal, denomination, ruler and mint attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ws-tdv-aq"
+          ],
+          "locator": "Yaqub's death, disputed cause and succession sequence in the encyclopedia entry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ws-iranica-esmail"
+          ],
+          "locator": "Rostam's 1493 release and military use of the Safavid brothers, followed by renewed pursuit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ws-iranica-esmail",
+            "ws-map1500"
+          ],
+          "locator": "Safavid mobilization in 1499 to 1500 contrasted with the unchanged exact atlas footprint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ws-iranica-esmail"
+          ],
+          "locator": "Sharur and Tabriz in 1501 plus dated stages through Diyarbakir and Baghdad.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ws-iranica-chronology"
+          ],
+          "locator": "Iranica chronology's 1508 final-victory marker compared with the repository's 1530 map endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ws-saray"
+          ],
+          "locator": "Peer-reviewed study of Sara Khatun's ambassadorial and political activity; elite scope retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ws-despina"
+          ],
+          "locator": "Marriage date, Christian identity, retained faith and political-diplomatic role.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ws-despina"
+          ],
+          "locator": "Dynastic connection from Uzun Hasan and Despina Khatun through their daughter to Shah Ismail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ws-tdv-uzun"
+          ],
+          "locator": "Early-life anecdote from Abu Bakr Tihrani as summarized in the scholarly biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ws-social-economy"
+          ],
+          "locator": "Regional household economies support cautious inference; explicit limits prevent invented family statistics or schooling schedules.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ws-gutenberg"
+          ],
+          "locator": "Contarini's eyewitness description of the camp move, water-pasture choice and women's tent labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ws-gutenberg"
+          ],
+          "locator": "Contarini's court meal description, vessels, seating and foods, with social limit retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ws-social-economy"
+          ],
+          "locator": "Cambridge regional synthesis of agricultural, pastoral, commercial and industrial sectors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ws-carpets"
+          ],
+          "locator": "Peer-reviewed reading of Barbaro's pavilion count, inspected interiors and carpet comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ws-barbaro"
+          ],
+          "locator": "Scholarly source biography's summary of Barbaro's court, travel, entertainment and economic observations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ws-tdv-uzun"
+          ],
+          "locator": "Friday-night scholarly meetings and Turkish rendering of Bukhari readings in the biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ws-ali-qushji"
+          ],
+          "locator": "Ali Qushji's reception, gifts and diplomatic mission under Uzun Hasan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ws-euclid"
+          ],
+          "locator": "British Library catalogue details on author, patron, subject, dated eulogy and unfinished state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ws-hidayat"
+          ],
+          "locator": "Catalogue language, script, provenance rosettes, Sultan Khalil association and unfinished state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ws-hidayat"
+          ],
+          "locator": "Exact opening words printed in the catalogue, with language, script and editorial transliteration labeled.",
+          "dateScope": {
+            "year": 1478
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ws-khavar"
+          ],
+          "locator": "Metropolitan Museum catalogue date, place, materials, original extent and legendary subject.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ws-khalil-frontispiece"
+          ],
+          "locator": "Khalili catalogue dedication, materials, Tabriz production, stylistic combination and six-month reign.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ws-met-khamsa"
+          ],
+          "locator": "Met catalogue object data and comparison to painting of the Sultan Khalil period.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ws-blue-mosque"
+          ],
+          "locator": "Qara Qoyunlu completion date and complex components in the Tabriz monument survey.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ws-nebi"
+          ],
+          "locator": "Official monument attribution and separate 1530 minaret-inscription date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ws-gutenberg"
+          ],
+          "locator": "Barbaro's Mardin institution, founder, food and guest accommodation, with terminology caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ws-bimaristan"
+          ],
+          "locator": "Hasht Behesht bimaristan attribution and later Venetian capacity report, explicitly qualified.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ws-baths"
+          ],
+          "locator": "Bathhouse water, structure and Tabriz palace observation, with access limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ws-dicle"
+          ],
+          "locator": "University excavation report on Roman and Artuqid systems; absence statement restricted to sources checked.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ws-gutenberg"
+          ],
+          "locator": "Later Venetian description of Tabriz water channels, dragon spouts and swans, with explicit sanitation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ws-map1530",
+            "ws-iranica-chronology",
+            "ws-art-continuity"
+          ],
+          "locator": "Decoded successor seam. The target vanishes; tested western and northern places go mainly to ottoman-empire and Iranian places to safavid-empire. The editorial seam is approximate and even assigns tested Tabriz to the Ottoman feature. Scholarly chronology checked for Uzun Hasan's expansion, the 1501 Safavid foundation and the 1508 capture of Iraq as the final major victory over Aq Qoyunlu power. Museum essay checked for Safavid Tabriz artists' inheritance and combination of Timurid Herat and Aq Qoyunlu Tabriz painting traditions. Used for artistic continuity rather than political survival.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "emirate-of-the-white-sheep-turks",
+        "card": "cards/emirate-of-the-white-sheep-turks.json",
+        "dateBasis": "map_coverage",
+        "summary": "The atlas begins during Aq Qoyunlu succession wars and keeps the empire painted decades beyond its main Safavid defeat.",
+        "summarySource": null,
+        "fell": null,
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "emirate-of-the-white-sheep-turks",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            37.953379533795356,
+            25.29874134206871,
+            60.47880478804788,
+            43.86261142504445
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "emirate-of-the-white-sheep-turks",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            37.953379533795356,
+            25.298717602665064,
+            60.47880478804788,
+            43.86124592570221
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact id emirate-of-the-white-sheep-turks is indexed circa 1492 to 1530, displays Emirate of the White Sheep Turks, carries only the broad alias Turks, and has no tracked card or override before integration.",
+    "The exact 1492 and 1500 features are single-ring Polygons with 225 positions and identical tested inclusions. Their slightly different hashes reflect tiny coordinate-transform changes, not a documented political redraw.",
+    "Historically the confederation formed well before 1492 and reached its zenith under Uzun Hasan, who died in 1478. The atlas starts after Yaqub's 1490 death, amid factional succession.",
+    "Ismail defeated Alvand in 1501 and took Fars and central Iran by 1503 to 04, Diyarbakir by about 1505 to 07 and Baghdad in 1508. A broader 1514 dynastic convention concerns remnants, while 1530 is only the atlas handoff.",
+    "The 1530 Ottoman-Safavid seam is editorial and approximate: its tested ownership even assigns Tabriz to the Ottoman polygon. Geometry is used as a display audit, never a precise frontier verdict.",
+    "Court meals, royal tents, manuscripts, baths and hospitals are labeled by social setting and date. No universal household diet, school access, treatment system or plumbing network is inferred.",
+    "No securely identified Aq Qoyunlu household toilet was found in the checked sources. Older Diyarbakir drains and later Tabriz water displays remain useful evidence only when their provenance is explicit.",
+    "The sample ای جان و کونکل is the exact short opening printed in a scholarly catalogue of Hidayat's southern Turkmen Turkish divan in Arabic script; Ey cān u göñül and O soul and heart are editorial transliteration and literal translation."
+  ]
+}

@@ -1,0 +1,824 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release125-nanzhao research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "nzc-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository record checked: nan-chao is a circa state record dated 800 to 1279 and remains distinct from the separate nan-zhao predecessor record dated 700 to 800."
+    },
+    {
+      "id": "nzc-map700",
+      "title": "Human History Map world-700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded predecessor seam. The exact nan-chao id is absent; a separate nan-zhao feature is present and is not aliased to this card."
+    },
+    {
+      "id": "nzc-map800",
+      "title": "Human History Map world-800 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded exact target feature: one 20-position Polygon that omits Taihe, Dali and Weishan, includes Kunming and Luang Prabang, and is therefore seriously misplaced southeast of the historical core."
+    },
+    {
+      "id": "nzc-map900",
+      "title": "Human History Map world-900 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded exact target feature: one 21-position Polygon with the same misplaced southeastern footprint just before the historical Nanzhao dynasty ended in 902."
+    },
+    {
+      "id": "nzc-map1000",
+      "title": "Human History Map world-1000 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded exact target feature: one 12-position Polygon shifted west to include Dali, Weishan and Kunming during the successor Dali kingdom rather than historical Nanzhao."
+    },
+    {
+      "id": "nzc-map1100",
+      "title": "Human History Map world-1100 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Decoded exact target feature: one 12-position Polygon continuing the west-shifted footprint during the Later Dali kingdom, after the brief Dazhong interruption."
+    },
+    {
+      "id": "nzc-map1200",
+      "title": "Human History Map world-1200 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded exact target feature: one 14-position Polygon with a footprint similar to 1100, representing an atlas label that outlived the historical Nanzhao state."
+    },
+    {
+      "id": "nzc-map1279",
+      "title": "Human History Map world-1279 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded ending seam. The exact id is absent, so 1279 is an imported atlas cutoff and not the fall date of either Nanzhao or Dali."
+    },
+    {
+      "id": "nzc-history",
+      "title": "Dali Prefectural Government: history of the Sui and Tang periods",
+      "url": "https://www.dali.gov.cn/dlzrmzf/c101711/pc/content/1968886758421663744/content_1968886758421663744.html",
+      "note": "Official regional historical account used only for the overview: Erhai unification, capitals, the 902 overthrow, short successor regimes and the founding of Dali in 937."
+    },
+    {
+      "id": "nzc-ending",
+      "title": "Academy of Chinese Studies: Nanzhao Culture",
+      "url": "https://chiculture.org.hk/en/china-five-thousand-years/1964",
+      "note": "Educational cultural-history synthesis used narrowly for the historical Nanzhao span ending in 902 and the continuity of regional culture beyond one ruling house."
+    },
+    {
+      "id": "nzc-politics",
+      "title": "Encyclopedia of China: Nanzhao Kingdom, 649 to 902",
+      "url": "https://www.berkshirepublishing.com/ecph-china/2018/01/09/nanzhao-kingdom-649-902/",
+      "note": "Publisher encyclopedia synthesis used for Nanzhao diplomacy, Tang and Tibetan alliances, military expansion and the kingdom’s status as a major southwestern power."
+    },
+    {
+      "id": "nzc-stele",
+      "title": "Yunnan Provincial Library: The Nanzhao Dehua Stele",
+      "url": "https://ynscsp.cn/nd.jsp?id=3461",
+      "note": "Provincial-library account of the 766 court inscription, its political purpose, later weathering and the earlier copies through which more of its text survives."
+    },
+    {
+      "id": "nzc-water",
+      "title": "Chun Xu: Reaping the Benefits of Water",
+      "url": "https://archiv.ub.uni-heidelberg.de/volltextserver/37950/1/Xu%20Reaping%20the%20Benefits%20of%20Water.pdf",
+      "note": "Heidelberg dissertation, especially printed pages 120 and 123, used for Erhai rice cultivation, channels, embankments and the transmitted Chinese text and translation of the Dehua inscription."
+    },
+    {
+      "id": "nzc-workshop",
+      "title": "Wuzhishan Nanzhao temple excavation report",
+      "url": "https://www.chinanews.com/cul/2021/01-13/9385739.shtml",
+      "note": "Xinhua report quoting excavation director Zhu Zhonghua on courtyard buildings, Buddhist finds, pottery kilns, firing tools, rejects and the tile inscribed guanjia sheli."
+    },
+    {
+      "id": "nzc-drains",
+      "title": "Yunnan Provincial Archaeology Institute field report on Wuzhishan",
+      "url": "https://www.wenlvnews.com/p/442296.html",
+      "note": "Regional publication of the provincial institute field report, used for split-level halls, stone foundations and courtyard drainage; it does not identify a toilet or wastewater sewer."
+    },
+    {
+      "id": "nzc-manshu",
+      "title": "Fan Chuo: Man shu, bilingual annotated edition",
+      "url": "https://yunnanexplorer.com/static/download/nanzhao/manshu.pdf",
+      "note": "Ninth-century Tang outsider’s account, checked against the Chinese on printed page 100, for women’s clothing, servants and courtship music made with gourds and leaves."
+    },
+    {
+      "id": "nzc-manshu-food",
+      "title": "Chinese Text Project: Man shu, volume seven on products",
+      "url": "https://ctext.org/wiki.pl?chapter=255016&if=en",
+      "note": "Searchable primary-text edition used for one annual paddy harvest followed by winter barley and for the management of salt wells; treated as the same underlying work as other Fan Chuo evidence."
+    },
+    {
+      "id": "nzc-feast",
+      "title": "State Ethnic Affairs Commission: historical source for a Nanzhao feast",
+      "url": "https://www.neac.gov.cn/seac/c103536/202607/1193120.shtml",
+      "note": "Official article reproducing Fan Chuo’s passage about eleventh-lunar-month brewing, cattle, sheep and visits among relatives and neighbors; used as medieval evidence, not timeless custom."
+    },
+    {
+      "id": "nzc-school",
+      "title": "Shao-yun Yang: Sun Qiao and Nanzhao in Chengdu",
+      "url": "https://fanhan.org/chapter-2/sun-qiao/",
+      "note": "Scholarly sourcebook introduction used for elite Nanzhao youths studying literacy and numeracy in Chengdu and for the 829 capture of artisans and silk weavers."
+    },
+    {
+      "id": "nzc-buddhism",
+      "title": "Megan Bryson: Southwestern Chan in texts and art",
+      "url": "https://www.shin-ibs.edu/documents/pwj3-18/07Bryson.pdf",
+      "note": "Peer-reviewed study used for the 899 Illustrated History of Nanzhao, Buddhist royal foundation stories, the end of Nanzhao and the establishment of Dali in 937."
+    },
+    {
+      "id": "nzc-changhe",
+      "title": "Megan Bryson: Buddhist Kingship in Tenth-Century Dali",
+      "url": "https://www1.ihp.sinica.edu.tw/en/Publications/AsiaMajor/1083/Article/829",
+      "note": "Asia Major article abstract and publication record used for Nanzhao’s fall, the Changhe regime from 903 to 927 and its continued use of Buddhist kingship."
+    },
+    {
+      "id": "nzc-governance",
+      "title": "Buddhist kingship and governance in the Dali kingdom",
+      "url": "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/buddhist-kingship-and-governance-in-the-dali-kingdom-1140s-to-1200/CBAB43963316CEE8E42CA0F54837DAD9",
+      "note": "Peer-reviewed Journal of Southeast Asian Studies article used for Dali governance, major clans, the Dazhong interruption, imported books, medical texts and Buddhist statecraft."
+    },
+    {
+      "id": "nzc-dali-chronology",
+      "title": "University of Pittsburgh: Buddhism and visual culture in the Dali kingdom",
+      "url": "https://d-scholarship.pitt.edu/45152/1/Yang%20-%20ETD%20-%202.pdf",
+      "note": "University dissertation used narrowly for Dali’s 937 to 1253 span and the brief Dazhong interruption from 1094 to 1096 before Later Dali."
+    },
+    {
+      "id": "nzc-annan",
+      "title": "The Annan Protectorate during the Tang period",
+      "url": "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/annan-protectorate-in-northern-vietnam-during-the-tang-period-679907/0330A3F32086B5B1AEFC262A54FBF023",
+      "note": "Peer-reviewed regional history used narrowly for Nanzhao’s occupation of Annan from 863 to 866, its garrison and the Tang reconquest."
+    },
+    {
+      "id": "nzc-trade",
+      "title": "Horses, silver, and cowries: Yunnan in global perspective",
+      "url": "https://scholars.cityu.edu.hk/en/publications/horses-silver-and-cowries-yunnan-in-global-perspective/",
+      "note": "Peer-reviewed Journal of World History publication record and abstract used for horse trade, silver exports, cowry money and Yunnan’s links across East, Southeast and Inner Asia."
+    },
+    {
+      "id": "nzc-met",
+      "title": "Metropolitan Museum of Art: Twenty-four-armed Avalokiteshvara",
+      "url": "https://www.metmuseum.org/art/collection/search/49567",
+      "note": "Museum object record for a gilt arsenical-bronze Dali sculpture dated to the eleventh or twelfth century, including its protective tantric form and held attributes."
+    },
+    {
+      "id": "nzc-npm",
+      "title": "National Palace Museum: Long Scroll of Buddhist Images",
+      "url": "https://theme.npm.edu.tw/selection/Article.aspx?lang=2&sNo=04009134",
+      "note": "Museum record for Zhang Shengwen’s Dali scroll, its 1172 to 1175 colophon, imperial offering scene, hundreds of figures and Buddhist texts written in Chinese and Sanskrit."
+    },
+    {
+      "id": "nzc-smithsonian",
+      "title": "Smithsonian: Illustrated Sutra of the Deeds of the Buddha documentation",
+      "url": "https://asia.si.edu/wp-content/uploads/2023/05/song-yuan-f1926-1_documentation.pdf",
+      "note": "Museum documentation for a twelfth- or thirteenth-century Dali handscroll, married donors Chen Qing and Lian, and a Yunnanese father-son naming link."
+    },
+    {
+      "id": "nzc-oxford",
+      "title": "Oxford Research Encyclopedia: The Sino-Tibetan borderlands",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter/546340776",
+      "note": "Scholarly regional synthesis used for the Dali kingdom’s 937 to 1253 span, the Mongol campaign and the start of longer political integration into imperial China."
+    },
+    {
+      "id": "nzc-frontier",
+      "title": "From Kingdom to Frontier: Yunnan under Mongol-Yuan and Ming rule",
+      "url": "https://escholarship.org/uc/item/69q75161",
+      "note": "University of California dissertation abstract used for the 1253 conquest and the Mongol-Yuan use of Dali personnel, institutions and religious-political traditions after conquest."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nan-chao",
+      "card": "data/cards/nan-chao.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nzc-history",
+            "nzc-oxford",
+            "nzc-index",
+            "nzc-map800",
+            "nzc-map900",
+            "nzc-map1000",
+            "nzc-map1279"
+          ],
+          "locator": "Official regional historical account used only for the overview: Erhai unification, capitals, the 902 overthrow, short successor regimes and the founding of Dali in 937. Scholarly regional synthesis used for the Dali kingdom’s 937 to 1253 span, the Mongol campaign and the start of longer political integration into imperial China. Exact repository record checked: nan-chao is a circa state record dated 800 to 1279 and remains distinct from the separate nan-zhao predecessor record dated 700 to 800. Decoded exact target feature: one 20-position Polygon that omits Taihe, Dali and Weishan, includes Kunming and Luang Prabang, and is therefore seriously misplaced southeast of the historical core. Decoded exact target feature: one 21-position Polygon with the same misplaced southeastern footprint just before the historical Nanzhao dynasty ended in 902. Decoded exact target feature: one 12-position Polygon shifted west to include Dali, Weishan and Kunming during the successor Dali kingdom rather than historical Nanzhao. Decoded ending seam. The exact id is absent, so 1279 is an imported atlas cutoff and not the fall date of either Nanzhao or Dali.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nzc-politics"
+          ],
+          "locator": "Publisher encyclopedia synthesis used for Nanzhao diplomacy, Tang and Tibetan alliances, military expansion and the kingdom’s status as a major southwestern power.",
+          "dateScope": {
+            "from": 800,
+            "to": 829
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nzc-school"
+          ],
+          "locator": "Scholarly sourcebook introduction used for elite Nanzhao youths studying literacy and numeracy in Chengdu and for the 829 capture of artisans and silk weavers.",
+          "dateScope": {
+            "from": 829,
+            "to": 863
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nzc-annan",
+            "nzc-buddhism"
+          ],
+          "locator": "Peer-reviewed regional history used narrowly for Nanzhao’s occupation of Annan from 863 to 866, its garrison and the Tang reconquest. Peer-reviewed study used for the 899 Illustrated History of Nanzhao, Buddhist royal foundation stories, the end of Nanzhao and the establishment of Dali in 937.",
+          "dateScope": {
+            "from": 863,
+            "to": 902
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nzc-changhe"
+          ],
+          "locator": "Asia Major article abstract and publication record used for Nanzhao’s fall, the Changhe regime from 903 to 927 and its continued use of Buddhist kingship.",
+          "dateScope": {
+            "from": 902,
+            "to": 937
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nzc-dali-chronology"
+          ],
+          "locator": "University dissertation used narrowly for Dali’s 937 to 1253 span and the brief Dazhong interruption from 1094 to 1096 before Later Dali.",
+          "dateScope": {
+            "from": 937,
+            "to": 1096
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nzc-governance"
+          ],
+          "locator": "Peer-reviewed Journal of Southeast Asian Studies article used for Dali governance, major clans, the Dazhong interruption, imported books, medical texts and Buddhist statecraft.",
+          "dateScope": {
+            "from": 1096,
+            "to": 1253
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nzc-frontier"
+          ],
+          "locator": "University of California dissertation abstract used for the 1253 conquest and the Mongol-Yuan use of Dali personnel, institutions and religious-political traditions after conquest.",
+          "dateScope": {
+            "from": 1253,
+            "to": 1279
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nzc-map800"
+          ],
+          "locator": "Exact feature count, geometry statistics, decoded bounds and point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nzc-map900"
+          ],
+          "locator": "Exact 900 feature, coordinate hash and capital and southeast point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nzc-map1000",
+            "nzc-buddhism"
+          ],
+          "locator": "Decoded 1000 geometry paired with scholarly chronology for Dali founding.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nzc-map1100",
+            "nzc-map1200"
+          ],
+          "locator": "Exact geometry counts, hashes and repeated Dali and Kunming point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nzc-index",
+            "nzc-map700",
+            "nzc-map1279",
+            "nzc-ending",
+            "nzc-dali-chronology"
+          ],
+          "locator": "Index records, exact-id seam audit and historical Nanzhao and Dali chronologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nzc-politics"
+          ],
+          "locator": "Encyclopedia discussion of Tang and Tibetan alliances and political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nzc-school"
+          ],
+          "locator": "Sourcebook introduction on the 829 raid and captured craftspeople.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nzc-annan"
+          ],
+          "locator": "Article chronology and reported Nanzhao garrison during the 863 to 866 occupation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nzc-politics"
+          ],
+          "locator": "Synthesis of documented campaigns and state expansion; unnamed labor explicitly marked as inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nzc-stele"
+          ],
+          "locator": "Library account of erection, political rationale, weathering and manuscript transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nzc-ending"
+          ],
+          "locator": "Academy chronology for Nanzhao through 902, with cultural continuity distinguished from dynastic rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nzc-changhe"
+          ],
+          "locator": "Asia Major abstract and article metadata on Changhe dates and Buddhist kingship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nzc-dali-chronology"
+          ],
+          "locator": "Dissertation chronology for Dali, Dazhong and restored Duan rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nzc-governance"
+          ],
+          "locator": "Governance sections on major clans, local leaders and semi-autonomous military units.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nzc-frontier",
+            "nzc-map1279"
+          ],
+          "locator": "Dissertation abstract on conquest and institutional reuse paired with atlas ending seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nzc-water"
+          ],
+          "locator": "Printed page 120 on Erhai rice agriculture, terraces, channels, embankments and capitals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nzc-water"
+          ],
+          "locator": "Printed page 123 translated clauses on floods, crops, orchards, mulberries and stores.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nzc-manshu-food"
+          ],
+          "locator": "Volume seven passage on the rice harvest and winter barley crop.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nzc-feast"
+          ],
+          "locator": "Reproduced Man shu passage on the dated gathering, brewing, animals and guests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nzc-manshu-food"
+          ],
+          "locator": "Volume seven salt-well passages, including supply and official closure of furnaces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nzc-manshu"
+          ],
+          "locator": "Printed page 100 clothing passages for noblewomen and female servants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nzc-manshu"
+          ],
+          "locator": "Printed page 100 lines on youths, gourds, leaves and courtship music.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nzc-smithsonian"
+          ],
+          "locator": "Smithsonian object documentation naming both donors and the manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nzc-smithsonian"
+          ],
+          "locator": "Documentation discussion of the father-son shared name element and regional naming practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nzc-feast"
+          ],
+          "locator": "Feast passage naming relatives and neighbors, with household structure left explicitly unknown.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nzc-school"
+          ],
+          "locator": "Sourcebook introduction on elite Nanzhao students and subjects learned in Chengdu.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nzc-governance"
+          ],
+          "locator": "Article section quoting the 1173 book list and connecting imports with bureaucratic training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nzc-water",
+            "nzc-stele"
+          ],
+          "locator": "Exact four characters and translation on printed page 123 plus monument transmission history.",
+          "dateScope": {
+            "year": 766
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nzc-stele"
+          ],
+          "locator": "Court-inscription context and evidence limits; no invented spoken-language attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nzc-npm"
+          ],
+          "locator": "Museum description of scripts, religious texts and scale of the painted scroll.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nzc-workshop"
+          ],
+          "locator": "Excavation director’s description of courtyard layouts and diagnostic religious finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nzc-workshop"
+          ],
+          "locator": "Report paragraph on eastern kilns, tools, molds and defective glazed wares.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nzc-workshop"
+          ],
+          "locator": "Inscribed tile, associated finds and excavator’s explicitly tentative royal-relic interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nzc-buddhism"
+          ],
+          "locator": "Study of the 899 Nanzhao Tuzhuan foundation narrative and royal ritual.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nzc-met"
+          ],
+          "locator": "Museum date, medium, iconographic identification and listed attributes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nzc-trade"
+          ],
+          "locator": "Economic synthesis of the horse trade, with caravan labor stated as grounded inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nzc-trade"
+          ],
+          "locator": "Article abstract on silver export and cowry monetary system; labor list presented as grounded inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nzc-school"
+          ],
+          "locator": "829 capture of named occupational groups and the article’s context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nzc-npm"
+          ],
+          "locator": "Museum date, composition and discussion of multiple artistic traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nzc-map800",
+            "nzc-trade"
+          ],
+          "locator": "Exact misplaced atlas point test paired with evidence for regional exchange rather than territorial control.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nzc-governance"
+          ],
+          "locator": "1173 catalogue category for medicine and stated limits of bibliographic evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nzc-met",
+            "nzc-npm"
+          ],
+          "locator": "Protective iconography and state-protection texts; medical inference explicitly withheld.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nzc-water"
+          ],
+          "locator": "Hydraulic works described on printed pages 120 and 123; sanitation distinction is an evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nzc-drains"
+          ],
+          "locator": "Field report on foundations and courtyard drainage; no toilet or wastewater identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nzc-drains"
+          ],
+          "locator": "Reviewed report scope and absence of any latrine, cesspit, toilet or sewer identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nzc-ending",
+            "nzc-frontier",
+            "nzc-map1279"
+          ],
+          "locator": "Educational cultural-history synthesis used narrowly for the historical Nanzhao span ending in 902 and the continuity of regional culture beyond one ruling house. University of California dissertation abstract used for the 1253 conquest and the Mongol-Yuan use of Dali personnel, institutions and religious-political traditions after conquest. Decoded ending seam. The exact id is absent, so 1279 is an imported atlas cutoff and not the fall date of either Nanzhao or Dali.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nan-chao",
+        "card": "cards/nan-chao.json",
+        "dateBasis": "map_coverage",
+        "summary": "An atlas label spans historical Nanzhao, short successor regimes, Dali and Mongol rule; Erhai communities continued as dynasties and borders changed.",
+        "fell": 902
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "nan-chao",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            98.58158581585815,
+            20.118736810871397,
+            106.58446584465844,
+            26.990255519311887
+          ]
+        },
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "nan-chao",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            98.58158581585815,
+            20.11860869380314,
+            106.58446584465844,
+            26.990890357675084
+          ]
+        },
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "nan-chao",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            98.58158581585815,
+            20.11860869380314,
+            106.58446584465844,
+            26.990890357675084
+          ]
+        },
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "nan-chao",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            100.12240122401226,
+            19.47852291420695,
+            108.75528755287553,
+            26.614857243095884
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "nan-chao",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            100.12240122401226,
+            19.47852291420695,
+            108.75528755287553,
+            26.614857243095884
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact id nan-chao is indexed circa 800 to 1279 as a state and had no tracked card or override before integration.",
+    "At 800 and 900 the feature is one 20- or 21-position Polygon that excludes Taihe, Dali and Weishan while including Kunming and Luang Prabang. Both early geometries are seriously misplaced southeast of the historical Nanzhao core.",
+    "At 1000 the polygon shifts west and includes Dali, Weishan and Kunming. The 1100 and 1200 versions keep that general successor-era footprint, but historical Nanzhao had already ended in 902 and Dali had begun in 937.",
+    "The separate nan-zhao predecessor id remains distinct. No appliesTo alias is used, and its already documented world-700 geometry problem is not silently transferred to this target.",
+    "The id is absent at the 700 predecessor seam and 1279 ending seam. Its 1279 endpoint is atlas coverage, while the override records 902 as the historical Nanzhao fall and the card narrates Dali’s 1253 conquest separately.",
+    "All bounds, hashes and point tests describe imported display geometry only; none establishes ethnic identity, spoken language, precise political control or modern territorial claims."
+  ]
+}
