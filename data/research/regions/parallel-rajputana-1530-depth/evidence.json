@@ -1,0 +1,841 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel rajputana-1530 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "raj-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Local index checked for exact id rajputana, name Rajputana, approximate map lifetime 1530-1650. Separate indexed records exist for rajput-clans-and-small-states, rajput-kingdoms, hindu-kingdoms-1100, rajputs and mughal-empire; this card does not share or replace any of them."
+    },
+    {
+      "id": "raj-coverage",
+      "title": "Human History Map, generated research coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage checked before integration. rajputana was missing a card and review, had exactly two border files and two continuous observed intervals, 1530-1600 and 1600-1650, with no features outside its indexed lifetime."
+    },
+    {
+      "id": "raj-map1530",
+      "title": "Human History Map, world-1530 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded locally with topojson-client. The exact rajputana feature for 1530-1600 is a single-ring, 11-position Polygon with bbox 68.8165,23.4542 to 75.7502,28.9448 and SHA-256 012eee7897344d6c48d15738cdb7e050224e99066c865ffcc98b615958fab2f2. Named point tests and contacts are in identity.json."
+    },
+    {
+      "id": "raj-map1600",
+      "title": "Human History Map, world-1600 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Decoded locally with topojson-client. The 1600-1650 feature repeats the exact same Polygon and hash as 1530. It includes tested Udaipur, Kumbhalgarh, Jodhpur, Bikaner, Jaisalmer, Ajmer, Merta and Sirohi, but excludes Chittorgarh, Amber, Jaipur, Bundi, Kota, Dungarpur, Agra, Delhi, Ahmedabad, Gwalior and Multan."
+    },
+    {
+      "id": "raj-integration",
+      "title": "Tanuja Kothiyal, Scrambling for glory: assessing true Rajput identity in a Mughal war of succession, Journal of the Royal Asiatic Society",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/scrambling-for-glory-assessing-true-rajput-identity-in-a-mughal-war-of-succession-16571659/ED942AAF54963DAD5AE56A7B3D837888",
+      "note": "Peer-reviewed article checked at lines 554-572. It describes coercion, conciliation, marriage and friendship in Mughal-Rajput alliance building; names Jodhpur, Bikaner, Mewar, Amer and Bundi as distinct pre-existing polities; and explains how imperial rank and revenue assignments could subordinate rulers while also strengthening their local kingship claims."
+    },
+    {
+      "id": "raj-gujarat",
+      "title": "IGNOU eGyanKosh, Unit 5: Mughal Conquest of Gujarat and Gujarat Sultanate",
+      "url": "https://www.egyankosh.ac.in/bitstream/123456789/77567/1/Unit-5.pdf",
+      "note": "University teaching unit checked at the section on Bahadur Shah and Humayun. It explains that Bahadur Shah attacked Chittor in 1534-35 because it could anchor expansion toward Ajmer, Nagaur and Ranthambore, and that Humayun then blocked his retreat and moved against Gujarat. It does not validate later rakhi legends."
+    },
+    {
+      "id": "raj-maldev",
+      "title": "IGNOU eGyanKosh, History of Bharat, Unit 11: Rao Maldeo Rathore, Humayun, and Sher Shah Sur",
+      "url": "https://www.egyankosh.ac.in/bitstream/123456789/116363/1/Unit-11.pdf",
+      "note": "University teaching unit checked at section 11.3.2. It presents Rao Maldeo of Marwar as filling a political vacuum after Rana Sanga, describes his changing response to the exiled Humayun under pressure from Sher Shah, and places Marwar within the Humayun-Sur struggle rather than a united Rajput front."
+    },
+    {
+      "id": "raj-akbar",
+      "title": "Encyclopaedia Iranica, Akbar I: Mughal India",
+      "url": "https://www.iranicaonline.org/articles/akbar-i-mughal-india/",
+      "note": "Scholarly encyclopedia entry checked at lines 41-48. It dates Akbar’s marriage alliance with Raja Bhar Mal of Amber to 1562, connects it with recruiting Rajputs into the bureaucracy, and records the 1568 capture of Chitor with a massacre of its garrison and the 1569 capture of Ranthambor."
+    },
+    {
+      "id": "raj-ajmer",
+      "title": "Pratyay Nath, Pilgrimage, performance, and peripatetic kingship: Akbar’s journeys to Ajmer and the formation of the Mughal Empire, Journal of the Royal Asiatic Society",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/pilgrimage-performance-and-peripatetic-kingship-akbars-journeys-to-ajmer-and-the-formation-of-the-mughal-empire/737BAAF780618C6D7F2457DA28E7A15C",
+      "note": "Peer-reviewed article checked at lines 615-628. It distinguishes alliance building with Amber, Bikaner and Jaisalmer from force at Chitor, Ranthambor and Haldighat; notes Man Singh’s 1576 victory without capturing Pratap; documents operations against Chandrasen; and explains Ajmer’s role in routes and campaigns."
+    },
+    {
+      "id": "raj-vam-mughal",
+      "title": "Victoria and Albert Museum, The arts of the Mughal Empire",
+      "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire",
+      "note": "Museum essay checked for the travelling Mughal court, Persian administration and collaborative workshops, Jahangir’s long stay at Ajmer, and Nanha’s circa 1615-18 image of Prince Khurram receiving Rana Amar Singh’s submission. The painting is an imperial representation, not neutral documentary photography."
+    },
+    {
+      "id": "raj-pratap",
+      "title": "G. N. Sharma, Mewar and the Mughal Emperors, IGNCA digital book",
+      "url": "https://ignca.gov.in/Asi_data/10571.pdf",
+      "note": "Historical study checked around printed p. 117 and the chapter on the 1615 settlement. It cites an inscription dated 1588 for Pratap’s recovery and land grant, places his Chavand capital around 1585, and discusses the long Mewar war and settlement. Older readings are used with named evidence and not treated as infallible."
+    },
+    {
+      "id": "raj-stateformation",
+      "title": "Tanuja Kothiyal, Serving Empire, Building Kingdoms: Rajput State Formation and Political Culture in the Mughal Empire, UC eScholarship",
+      "url": "https://escholarship.org/uc/item/6t89f9jv",
+      "note": "University dissertation record and abstract checked. It argues that Mughal expansion could cement Rajput political authority in agrarian hinterlands and lists Persian chronicles, Marwari and Malvi texts, land grants, inscriptions, court poetry, administrative records and built landscapes among its evidence. This supports a layered, not binary, view of service and sovereignty."
+    },
+    {
+      "id": "raj-artisans",
+      "title": "Nandita Prasad Sahai, Politics of Patronage and Protest: The State, Society, and Artisans in Early Modern Rajasthan, Oxford Academic",
+      "url": "https://academic.oup.com/book/27262",
+      "note": "Oxford University Press abstract checked at lines 2522-2531. Based on petitions and legal disputes, the book studies the Marwar state’s relationships with artisans, caste hierarchy, coercion, concessions, customary expectations and resistance in rural and urban settings during 1500-1700."
+    },
+    {
+      "id": "raj-marriage",
+      "title": "Sabita Singh, The Politics of Marriage in Medieval India: Gender and Alliance in Rajasthan, Oxford Academic",
+      "url": "https://academic.oup.com/book/35022",
+      "note": "Oxford University Press abstract and chapter list checked at lines 2526-2528. It treats marriage as political and social practice, connects matrimonial alliances to Rajput state formation, and explicitly analyzes sati, widowhood and jauhar in relation to women’s oppression rather than romanticizing them."
+    },
+    {
+      "id": "raj-rural",
+      "title": "NCERT, Themes in Indian History Part II, Peasants, Zamindars and the State",
+      "url": "https://ncert.nic.in/textbook/pdf/lehs204.pdf",
+      "note": "Official textbook chapter checked at printed pp. 202-207. It uses seventeenth-century Rajasthan records for jati panchayats, petitions against taxes and unpaid labor, women’s complaints about husbands neglecting wives and children, and a Marwar manual in which Rajputs also appear as peasants. It warns that the Ain is a view from above."
+    },
+    {
+      "id": "raj-rural-sathee",
+      "title": "IIT Kanpur SATHEE, Peasants, Zamindars and the State",
+      "url": "https://www.satheebihar.iitk.ac.in/sathee-clat/student-corner/ncert-books/class-12/themes-in-indian-history/chapter-08-peasants-zamindars-eight-and-the-state-agrarian-society-and-the-mughal-empire/",
+      "note": "IIT Kanpur educational transcription of the NCERT chapter checked for field and craft labor by women, cotton and oilseed production, the western Indian arrival of maize, tobacco’s spread and ineffective ban, village exchange, caste exclusions and collective petitions. General Mughal evidence is marked as regional context where not Rajasthan-specific."
+    },
+    {
+      "id": "raj-hillforts",
+      "title": "UNESCO World Heritage Centre, Hill Forts of Rajasthan",
+      "url": "https://whc.unesco.org/en/list/247",
+      "note": "UNESCO property description checked at lines 39-49. It identifies forts as defended urban settlements containing courts, guards, homes, temples, production and trade, documents extensive water harvesting, and emphasizes varied terrain and an eclectic architectural exchange rather than one uniform Rajput style."
+    },
+    {
+      "id": "raj-nomination",
+      "title": "UNESCO, Hill Forts of Rajasthan nomination dossier",
+      "url": "https://whc.unesco.org/uploads/nominations/247rev.pdf",
+      "note": "Nomination dossier checked at the Kumbhalgarh water-structures section around p. 113. It documents dependence on rain, planning of catchments, roughly ten dams and more than twenty baoris, outlet drains and Persian-wheel lifting. The dossier is detailed about water engineering but does not establish a typical household toilet for 1530-1650."
+    },
+    {
+      "id": "raj-evaluation",
+      "title": "ICOMOS evaluation, Hill Forts of Rajasthan nomination",
+      "url": "https://whc.unesco.org/document/116681",
+      "note": "ICOMOS evaluation checked at the Amber Palace discussion. It describes Man Singh Mahal, 1589-1614, as a women’s residential court; servants’ quarters, stores and stables; privacy increasing through successive courtyards; and seventeenth-century water features and gardens. Later alterations are not silently assigned to Man Singh’s reign."
+    },
+    {
+      "id": "raj-udaipur",
+      "title": "Government of Rajasthan, Udaipur at a glance",
+      "url": "https://lsg.urban.rajasthan.gov.in/content/raj/udh/uit-udaipur/en/about-us/Udaipur-at-a-glance.html",
+      "note": "Official local-government page checked for the 1559 foundation of Udaipur, its setting by Lake Pichola and the oldest City Palace shrine. The page includes a hermit legend; the card separates that story from the dated urban foundation and does not repeat its romantic martial language."
+    },
+    {
+      "id": "raj-amber",
+      "title": "Government of India, Incredible India: Amber Fort",
+      "url": "https://www.incredibleindia.gov.in/en/rajasthan/jaipur/amber-fort",
+      "note": "Official tourism page checked for the conventional 1592 commission under Man Singh, sandstone construction, multiple courtyards and palace zones. Decorative features added later are not all backdated to 1592, and tourism superlatives are not used as historical proof."
+    },
+    {
+      "id": "raj-met-masters",
+      "title": "Metropolitan Museum of Art, Wonder of the Age: Master Painters of India, 1100-1900",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Wonder_of_the_Age_Master_Painters_of_India_1100_1900.pdf",
+      "note": "Metropolitan Museum catalogue checked at the Nasiruddin entry around pp. 98-100. It identifies the Chawand Ragamala as dated 10 April 1605, names its Muslim painter Nasiruddin, links it to Mewar’s court in exile and calls it a landmark in early Rajput painting."
+    },
+    {
+      "id": "raj-met-divine",
+      "title": "Metropolitan Museum of Art, Divine Pleasures: Painting from India’s Rajput Courts",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Divine_Pleasures.pdf",
+      "note": "Metropolitan Museum catalogue checked at catalogue no. 6, p. 62. A 1605 Chawand Ragamala folio shows a prince, two women attendants, mirror, caged bird, bed, turban and white muslin jama. The catalogue transcribes its Devanagari label as desakararagini and translates the longer inscription."
+    },
+    {
+      "id": "raj-bl-ramayana",
+      "title": "British Library Archives, IO San 3621: Mewar Ramayana folios",
+      "url": "https://searcharchives.bl.uk/catalog/032-003272211",
+      "note": "British Library catalogue checked at lines 43-49. It records a Ramayana commissioned for Rana Jagat Singh, with its first book completed in 1649; surviving sections were written by Mahatma Hirananda and illustrated in several named styles, with other volumes completed after the atlas endpoint."
+    },
+    {
+      "id": "raj-ignca-ramayana",
+      "title": "Indira Gandhi National Centre for the Arts, Illustrated Ramayana Manuscripts",
+      "url": "https://ignca.gov.in/illustrated-ramayana-manuscripts/",
+      "note": "Government arts centre overview checked at line 872. It identifies Udaipur as a prolific mid-seventeenth-century manuscript centre, describes bold outlines, vivid palettes and consecutive scenes in one frame, and notes that large illustrated manuscripts took years to complete."
+    },
+    {
+      "id": "raj-dadu",
+      "title": "Tanuja Kothiyal, Sulh-i kull to Vedanta: The Dadu Panth and the Mughal-Rajput imperial paradigm, Modern Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/sulhi-kull-to-vedanta-the-dadu-panth-and-the-mughalrajput-imperial-paradigm/D5F725AF8C2F8AD460CBFA4895B15D62",
+      "note": "Peer-reviewed article checked at lines 517-537. It traces Dadu Panthi networks with Amber and Marwar elites, merchants and Charans, the growth of vernacular Hindavi manuscript culture, and a circa 1610-20 hagiography, while resisting a simple court-versus-folk split."
+    },
+    {
+      "id": "raj-medicine",
+      "title": "Encyclopaedia Iranica, India xxxiii: Indo-Muslim Physicians",
+      "url": "https://www.iranicaonline.org/articles/india-xxxiii-indo-muslim-physicians/",
+      "note": "Scholarly encyclopedia entry checked at lines 37-46 and 68-83. It documents sixteenth- and seventeenth-century Mughal court physicians, Persian works on Indian pharmacology, local drug substitutions, and intellectual exchange between Avicennian and Indian traditions. Court literature cannot establish ordinary access or effectiveness."
+    },
+    {
+      "id": "raj-pachisi",
+      "title": "British Museum, Top 10 historical board games: Pachisi",
+      "url": "https://www.britishmuseum.org/blog/top-10-historical-board-games",
+      "note": "Museum explainer checked for pachisi as an Indian cross-shaped race game documented from at least the sixteenth century, traditionally using cowrie-shell throws. It supports a period pastime in India, not a claim that every Rajput child owned a board or that elite and village play were identical."
+    },
+    {
+      "id": "raj-textiles",
+      "title": "Victoria and Albert Museum, Indian textiles",
+      "url": "https://www.vam.ac.uk/articles/indian-textiles",
+      "note": "Museum essay checked for spinning, weaving, dyeing, woodblock printing and embroidery as specialized labor; the long-distance textile trade; and seventeenth-century court demand. It supplies Indian craft context, while the card avoids assigning every technique or surviving object specifically to Rajasthan."
+    },
+    {
+      "id": "raj-memory",
+      "title": "Ramya Sreenivasan, The Many Lives of a Rajput Queen, De Gruyter Brill",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9780295997858/html",
+      "note": "University-press book description checked. It explains how gendered heroic narratives around Padmini changed while circulating among communities from the sixteenth through twentieth centuries and were later appropriated for political ends. It supports separating historical siege evidence from later memory."
+    }
+  ],
+  "entities": [
+    {
+      "id": "rajputana",
+      "card": "data/cards/rajputana.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "raj-index",
+            "raj-map1530",
+            "raj-map1600",
+            "raj-integration"
+          ],
+          "locator": "Local index checked for exact id rajputana, name Rajputana, approximate map lifetime 1530-1650. Separate indexed records exist for rajput-clans-and-small-states, rajput-kingdoms, hindu-kingdoms-1100, rajputs and mughal-empire; this card does not share or replace any of them. Decoded locally with topojson-client. The exact rajputana feature for 1530-1600 is a single-ring, 11-position Polygon with bbox 68.8165,23.4542 to 75.7502,28.9448 and SHA-256 012eee7897344d6c48d15738cdb7e050224e99066c865ffcc98b615958fab2f2. Named point tests and contacts are in identity.json. Decoded locally with topojson-client. The 1600-1650 feature repeats the exact same Polygon and hash as 1530. It includes tested Udaipur, Kumbhalgarh, Jodhpur, Bikaner, Jaisalmer, Ajmer, Merta and Sirohi, but excludes Chittorgarh, Amber, Jaipur, Bundi, Kota, Dungarpur, Agra, Delhi, Ahmedabad, Gwalior and Multan. Peer-reviewed article checked at lines 554-572. It describes coercion, conciliation, marriage and friendship in Mughal-Rajput alliance building; names Jodhpur, Bikaner, Mewar, Amer and Bundi as distinct pre-existing polities; and explains how imperial rank and revenue assignments could subordinate rulers while also strengthening their local kingship claims.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "raj-gujarat"
+          ],
+          "locator": "University teaching unit checked at the section on Bahadur Shah and Humayun. It explains that Bahadur Shah attacked Chittor in 1534-35 because it could anchor expansion toward Ajmer, Nagaur and Ranthambore, and that Humayun then blocked his retreat and moved against Gujarat. It does not validate later rakhi legends.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1535
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "raj-maldev"
+          ],
+          "locator": "University teaching unit checked at section 11.3.2. It presents Rao Maldeo of Marwar as filling a political vacuum after Rana Sanga, describes his changing response to the exiled Humayun under pressure from Sher Shah, and places Marwar within the Humayun-Sur struggle rather than a united Rajput front.",
+          "dateScope": {
+            "from": 1535,
+            "to": 1556
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "raj-akbar"
+          ],
+          "locator": "Scholarly encyclopedia entry checked at lines 41-48. It dates Akbar’s marriage alliance with Raja Bhar Mal of Amber to 1562, connects it with recruiting Rajputs into the bureaucracy, and records the 1568 capture of Chitor with a massacre of its garrison and the 1569 capture of Ranthambor.",
+          "dateScope": {
+            "from": 1556,
+            "to": 1562
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "raj-akbar"
+          ],
+          "locator": "Scholarly encyclopedia entry checked at lines 41-48. It dates Akbar’s marriage alliance with Raja Bhar Mal of Amber to 1562, connects it with recruiting Rajputs into the bureaucracy, and records the 1568 capture of Chitor with a massacre of its garrison and the 1569 capture of Ranthambor.",
+          "dateScope": {
+            "from": 1562,
+            "to": 1568
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "raj-ajmer"
+          ],
+          "locator": "Peer-reviewed article checked at lines 615-628. It distinguishes alliance building with Amber, Bikaner and Jaisalmer from force at Chitor, Ranthambor and Haldighat; notes Man Singh’s 1576 victory without capturing Pratap; documents operations against Chandrasen; and explains Ajmer’s role in routes and campaigns.",
+          "dateScope": {
+            "from": 1568,
+            "to": 1576
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "raj-ajmer",
+            "raj-pratap"
+          ],
+          "locator": "Peer-reviewed article checked at lines 615-628. It distinguishes alliance building with Amber, Bikaner and Jaisalmer from force at Chitor, Ranthambor and Haldighat; notes Man Singh’s 1576 victory without capturing Pratap; documents operations against Chandrasen; and explains Ajmer’s role in routes and campaigns. Historical study checked around printed p. 117 and the chapter on the 1615 settlement. It cites an inscription dated 1588 for Pratap’s recovery and land grant, places his Chavand capital around 1585, and discusses the long Mewar war and settlement. Older readings are used with named evidence and not treated as infallible.",
+          "dateScope": {
+            "from": 1576,
+            "to": 1605
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "raj-vam-mughal"
+          ],
+          "locator": "Museum essay checked for the travelling Mughal court, Persian administration and collaborative workshops, Jahangir’s long stay at Ajmer, and Nanha’s circa 1615-18 image of Prince Khurram receiving Rana Amar Singh’s submission. The painting is an imperial representation, not neutral documentary photography.",
+          "dateScope": {
+            "from": 1605,
+            "to": 1615
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "raj-met-masters"
+          ],
+          "locator": "Metropolitan Museum catalogue checked at the Nasiruddin entry around pp. 98-100. It identifies the Chawand Ragamala as dated 10 April 1605, names its Muslim painter Nasiruddin, links it to Mewar’s court in exile and calls it a landmark in early Rajput painting.",
+          "dateScope": {
+            "from": 1615,
+            "to": 1628
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "raj-bl-ramayana"
+          ],
+          "locator": "British Library catalogue checked at lines 43-49. It records a Ramayana commissioned for Rana Jagat Singh, with its first book completed in 1649; surviving sections were written by Mahatma Hirananda and illustrated in several named styles, with other volumes completed after the atlas endpoint.",
+          "dateScope": {
+            "from": 1628,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "raj-index",
+            "raj-coverage"
+          ],
+          "locator": "Exact local index and coverage records; lifetime and content status.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "raj-map1530",
+            "raj-map1600"
+          ],
+          "locator": "Decoded target geometry, interval properties and identical SHA-256 hashes.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "raj-map1530"
+          ],
+          "locator": "Named point-in-polygon tests in identity.json.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "raj-map1530",
+            "raj-map1600"
+          ],
+          "locator": "Exact contact audit for both target features.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "raj-index",
+            "raj-coverage"
+          ],
+          "locator": "Related index, override and card audit recorded in identity.json.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "raj-gujarat"
+          ],
+          "locator": "IGNOU Unit 5, section on Bahadur Shah, Chittor and Humayun.",
+          "dateScope": {
+            "year": 1535
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "raj-maldev"
+          ],
+          "locator": "IGNOU History of Bharat, section 11.3.2 and cited Maldeo-Sher Shah discussion.",
+          "dateScope": {
+            "year": 1544
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "raj-akbar",
+            "raj-memory"
+          ],
+          "locator": "Iranica lines 45-48 for conquest and massacre; Sreenivasan for later heroic memory.",
+          "dateScope": {
+            "year": 1568
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "raj-ajmer"
+          ],
+          "locator": "Nath lines 615-620, including Man Singh, defeat and failed capture.",
+          "dateScope": {
+            "year": 1576
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "raj-vam-mughal"
+          ],
+          "locator": "V&A section on Jahangirnama painting IS.185-1984 and Ajmer court.",
+          "dateScope": {
+            "year": 1615
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "raj-akbar"
+          ],
+          "locator": "Iranica lines 41-43; absence of the bride’s own testimony stated as an evidence limit.",
+          "dateScope": {
+            "year": 1562
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "raj-ajmer"
+          ],
+          "locator": "Nath lines 615-620, contrasting alliance building and force.",
+          "dateScope": {
+            "year": 1570
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "raj-stateformation"
+          ],
+          "locator": "UC dissertation abstract on Mughal expansion and Rajput state formation.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "raj-artisans"
+          ],
+          "locator": "Oxford book abstract lines 2522-2527, based on arzees and disputes.",
+          "dateScope": {
+            "year": 1620
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "raj-rural"
+          ],
+          "locator": "NCERT printed pp. 202-204 on panchayats, representation, petitions, tax and begar.",
+          "dateScope": {
+            "year": 1630
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "raj-marriage"
+          ],
+          "locator": "Oxford book abstract and chapters 2-3 on political marriage and Rajput state formation.",
+          "dateScope": {
+            "year": 1580
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "raj-marriage"
+          ],
+          "locator": "Oxford chapter 4 and abstract, which explicitly examine these practices as forms of oppression and historical complexity.",
+          "dateScope": {
+            "year": 1568
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "raj-rural-sathee"
+          ],
+          "locator": "IITK SATHEE transcription, women in agrarian society and village artisan sections.",
+          "dateScope": {
+            "year": 1625
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "raj-rural"
+          ],
+          "locator": "NCERT printed p. 207, women’s petitions and naming practice.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "raj-rural"
+          ],
+          "locator": "NCERT printed pp. 201-202, caste inequality and Marwar manual.",
+          "dateScope": {
+            "year": 1630
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "raj-hillforts"
+          ],
+          "locator": "UNESCO lines 39-45 on urban settlements, production, trade and varied fort settings.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "raj-rural-sathee"
+          ],
+          "locator": "SATHEE/NCERT crop, maize and tobacco sections.",
+          "dateScope": {
+            "year": 1620
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "raj-met-divine"
+          ],
+          "locator": "Met Divine Pleasures, catalogue no. 6, object description and inscription.",
+          "dateScope": {
+            "year": 1605
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "raj-textiles"
+          ],
+          "locator": "V&A sections on making, printing, embroidery, courts and global trade.",
+          "dateScope": {
+            "year": 1610
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "raj-pachisi"
+          ],
+          "locator": "British Museum pachisi history and rules; age and regional limits explicit.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "raj-nomination"
+          ],
+          "locator": "UNESCO nomination p. 113, Kumbhalgarh water structures.",
+          "dateScope": {
+            "year": 1580
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "raj-udaipur"
+          ],
+          "locator": "Government of Rajasthan foundation date, setting and legend, separated by evidence type.",
+          "dateScope": {
+            "year": 1559
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "raj-medicine"
+          ],
+          "locator": "Iranica lines 37-46 and 68-81 on court physicians, pharmacology and translation.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "raj-medicine"
+          ],
+          "locator": "Iranica lines 78-83, named early seventeenth-century works and court setting.",
+          "dateScope": {
+            "year": 1630
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "raj-nomination",
+            "raj-evaluation"
+          ],
+          "locator": "UNESCO water and palace documentation audited specifically for sanitation; absence stated as a source limit.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "raj-dadu"
+          ],
+          "locator": "Cambridge lines 517-537 on networks, vernacular manuscripts and social base.",
+          "dateScope": {
+            "year": 1615
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "raj-met-masters"
+          ],
+          "locator": "Met catalogue Nasiruddin entry, date, place, artist and art-historical importance.",
+          "dateScope": {
+            "year": 1605
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "raj-met-divine"
+          ],
+          "locator": "Met catalogue no. 6, inscription statement and romanized label.",
+          "dateScope": {
+            "year": 1605
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "raj-bl-ramayana"
+          ],
+          "locator": "British Library lines 43-49, dates, patron, scribe and artists.",
+          "dateScope": {
+            "year": 1649
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "raj-ignca-ramayana"
+          ],
+          "locator": "IGNCA line 872, Mewar production characteristics and time required.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "raj-amber"
+          ],
+          "locator": "Incredible India commission date, materials and court layout, with later-layer caveat.",
+          "dateScope": {
+            "year": 1592
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "raj-evaluation"
+          ],
+          "locator": "ICOMOS Amber Palace plan, dates, functions and women’s court.",
+          "dateScope": {
+            "year": 1610
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "raj-hillforts"
+          ],
+          "locator": "UNESCO lines 43-49 on Amber, varied terrain and eclectic exchange.",
+          "dateScope": {
+            "year": 1630
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "raj-index",
+            "raj-coverage"
+          ],
+          "locator": "Exact indexed endpoint and separate related identities; no historical extinction inferred.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "raj-memory"
+          ],
+          "locator": "University-press book description on changing heroic narratives and political appropriation.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "raj-index",
+            "raj-coverage",
+            "raj-stateformation"
+          ],
+          "locator": "Local index checked for exact id rajputana, name Rajputana, approximate map lifetime 1530-1650. Separate indexed records exist for rajput-clans-and-small-states, rajput-kingdoms, hindu-kingdoms-1100, rajputs and mughal-empire; this card does not share or replace any of them. Coverage checked before integration. rajputana was missing a card and review, had exactly two border files and two continuous observed intervals, 1530-1600 and 1600-1650, with no features outside its indexed lifetime. University dissertation record and abstract checked. It argues that Mughal expansion could cement Rajput political authority in agrarian hinterlands and lists Persian chronicles, Marwari and Malvi texts, land grants, inscriptions, court poetry, administrative records and built landscapes among its evidence. This supports a layered, not binary, view of service and sovereignty.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "rajputana",
+        "name": "Rajput states in the Mughal age: atlas umbrella",
+        "kind": "region",
+        "region": "Asia",
+        "from": 1530,
+        "to": 1650,
+        "circa": true,
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "Distinct Rajput states amid alliance, war and Mughal service, with forts, family life, work, writing, medicine, water and honest map limits.",
+        "card": "cards/rajputana.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "rajputana",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            68.81648816488166,
+            23.454198101422193,
+            75.75015750157502,
+            28.944815335923394
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "rajputana",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            68.81648816488166,
+            23.454198101422193,
+            75.75015750157502,
+            28.944815335923394
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Targeted only exact id rajputana: name Rajputana, approximate indexed map lifetime 1530-1650, kind state before review, and missing card before integration.",
+    "The exact target has two observed intervals, 1530-1600 and 1600-1650. Each is one single-ring Polygon with 11 coordinate positions, bbox approximately 68.8165,23.4542 to 75.7502,28.9448, and identical decoded geometry SHA-256 012eee7897344d6c48d15738cdb7e050224e99066c865ffcc98b615958fab2f2.",
+    "Named point tests put Udaipur, Kumbhalgarh, Jodhpur, Bikaner, Jaisalmer, Ajmer, Merta and Sirohi inside, while Chittorgarh, Amber, Jaipur, Bundi, Kota, Dungarpur, Agra, Delhi, Ahmedabad, Gwalior and Multan are outside.",
+    "In both snapshots, the target meets imported mughal-empire and islamic-and-hindu-states features. This is display topology and not proof of sovereignty, tribute, administration, cultural identity or a settled border.",
+    "The polygon cannot describe one government. The card separates Mewar, Marwar, Amber, Bikaner, Jaisalmer, Bundi and smaller domains, and distinguishes alliance, imperial service, coercion and resistance.",
+    "The 1530 and 1650 endpoints are imported map coverage. Neither is presented as the foundation or extinction of a Rajputana state.",
+    "Existing related cards and overrides for rajput-clans-and-small-states, rajput-kingdoms, hindu-kingdoms-1100, mughal-empire and other broad South Asian umbrellas were inspected. This bundle proposes no appliesTo and no additional override.",
+    "Public history claims are source-attributed. Gendered violence is described without romanticizing jauhar or sati; daily life and medical or sanitation claims state their evidence limits."
+  ]
+}

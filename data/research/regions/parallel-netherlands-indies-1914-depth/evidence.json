@@ -1,0 +1,824 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel netherlands-indies-1914 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "nli-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry for netherlands-indies: Netherlands Indies, circa 1914 to 1920. Related ids dutch-east-indies, netherlands-1878 and dutch-east-indies-1920 were audited separately."
+    },
+    {
+      "id": "nli-geom-1900",
+      "title": "Human History Map, world-1900 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1900.json",
+      "note": "Decoded 1900 to 1914 predecessor: civ netherlands-1878, label Netherlands Indies, 15-part MultiPolygon, 15 rings, 908 positions. Its coordinate JSON exactly equals the 1914 target."
+    },
+    {
+      "id": "nli-geom-1914",
+      "title": "Human History Map, world-1914 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Decoded exact-id 1914 to 1920 feature: 15-part MultiPolygon, 15 rings, 908 positions, bbox about 95.1904 E to 140.9612 E and 10.3788 S to 5.5701 N. Geometry is only a coarse locator."
+    },
+    {
+      "id": "nli-geom-1920",
+      "title": "Human History Map, world-1920 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1920.json",
+      "note": "Decoded 1920 to 1930 successor: civ dutch-east-indies-1920, with the same 15 parts, 15 rings and 908 positions. Maximum coordinate change is about 0.00136 degrees from topology scaling."
+    },
+    {
+      "id": "nli-ihc-prewar",
+      "title": "Indisch Herinneringscentrum, prewar political and military developments",
+      "url": "https://www.indischherinneringscentrum.nl/vooroorlogse-periode-politiek-militaire-ontwikkelingen",
+      "note": "Rulers, Ethical Policy and Nationalism sections describe a diverse archipelago, Dutch reliance on Indigenous officials, limited education and administration openings, and the rise and repression of nationalism."
+    },
+    {
+      "id": "nli-ihc-era",
+      "title": "Indisch Herinneringscentrum, overview of the prewar Netherlands Indies",
+      "url": "https://www.indischherinneringscentrum.nl/projecten/indie-oorlog/vooroorlogse-periode",
+      "note": "Museum education overview: by about 1900 the Dutch claimed nearly the whole archipelago, the Ethical Policy promised greater welfare and autonomy, nationalism grew, and colonial modernization remained unequal and contested."
+    },
+    {
+      "id": "nli-merdeka",
+      "title": "The Colonial State: Violence and Modernity, Resistance and Repression",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9789048560844-002/pdf?licenseType=open-access",
+      "note": "Open-access MERDEKA chapter, especially printed pages 20 to 21: coercive state formation and the paternalistic Ethical Policy, whose education, irrigation and migration programs also served colonial labor and production needs."
+    },
+    {
+      "id": "nli-aceh",
+      "title": "Dis/connection: Violence, Religion, and Geographic Imaginings in Aceh and Colonial Indonesia, 1890s to 1920s",
+      "url": "https://www.cambridge.org/core/journals/itinerario/article/disconnection-violence-religion-and-geographic-imaginings-in-aceh-and-colonial-indonesia-1890s1920s/3809B0462784D85AE8D1EC4A6169FF3B",
+      "note": "Itinerario open-access article, especially web lines 493 to 522: Dutch conquest used brutal violence and territorial categories; victory was claimed in the late 1910s but armed resistance on Aceh’s west coast persisted."
+    },
+    {
+      "id": "nli-prison",
+      "title": "From Across the Water: Nusakambangan and the Making of a Notorious Prison Island",
+      "url": "https://www.cambridge.org/core/journals/international-review-of-social-history/article/from-across-the-water-nusakambangan-and-the-making-of-a-notorious-prison-island/18DEB4158121C0687218B3EC22CBFF2B",
+      "note": "International Review of Social History, web lines 564 to 579: centralized prisons, forced labor, deported Acehnese, Buginese and Toraja prisoners, colonial legal categories, incomplete statistics and the press-shaped reputation of Nusakambangan."
+    },
+    {
+      "id": "nli-legal-class",
+      "title": "Two Sides of the Same Coin: Direct Taxation and Negotiated Governance in Colonial Indonesia",
+      "url": "https://academic.oup.com/jsh/article/56/2/411/6710329",
+      "note": "Journal of Social History, Fairness and Equality section, web lines 91 to 104: racialized sociolegal classes connected residents to separate bureaucracies, laws, courts and tax practices that were unevenly negotiated."
+    },
+    {
+      "id": "nli-volksraad",
+      "title": "Activities of the Indonesian Political Parties During the Early Years of the People’s Council, Part I",
+      "url": "https://www.jstage.jst.go.jp/article/sea1971/1971/1/1971_1_12/_article/-char/en",
+      "note": "Japan Society for Southeast Asian Studies abstract, web lines 137 to 143: Volksraad founded in May 1918, indirect election through unequal local councils, advisory authority, nationalist disappointment and four Budi Utomo members among ten elected Indigenous members."
+    },
+    {
+      "id": "nli-weerbaar",
+      "title": "Indie Weerbaar Polemic and the Radicalization of Sarekat Islam, 1917 to 1918",
+      "url": "https://ejournal2.undip.ac.id/index.php/ihis/article/view/9095",
+      "note": "Indonesian Historical Studies abstract, web lines 20 to 42: dispute over an Indies defense force, Abdoel Moeis, Semaoen, decentralized Sarekat Islam branches, labor politics and the Radicale Concentratie in the Volksraad."
+    },
+    {
+      "id": "nli-marxism",
+      "title": "Translating and Transliterating Marxism in Indonesia",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/translating-and-transliterating-marxism-in-indonesia/8C92D9F2AAC5AE1097BAAC3C5E6FABAC",
+      "note": "Modern Asian Studies, web lines 552 to 569: 1914 ISDV, railway-union ties, Dutch and Malay political print, Sarekat Islam connections, Sinar Hindia in 1918, Soeara Ra’jat in 1919 and the 1920 party renaming."
+    },
+    {
+      "id": "nli-censorship",
+      "title": "Print Power and Censorship in Colonial Indonesia, 1914 to 1942",
+      "url": "https://ecommons.cornell.edu/bitstream/handle/1813/33591/ny24.pdf",
+      "note": "Cornell dissertation, chapter on press offences: Semaun translated a Sneevliet article into Malay for Sinar Hindia, considered the danger, published it with an editorial on 16 November 1918, and faced colonial prosecution."
+    },
+    {
+      "id": "nli-writing",
+      "title": "Spreading Nationalism in the Early 1900s: Marco Kartodikromo’s Radical Newspapers",
+      "url": "https://journal2.um.ac.id/index.php/sejarah-dan-budaya/article/download/10042/4997",
+      "note": "University historical journal article, section on Marco and Sinar Hindia: a 1918 article used the period Malay title “Azia boeat Orang Azia,” translated by the authors as “Asia is for Asian people.”"
+    },
+    {
+      "id": "nli-wwi",
+      "title": "The Netherlands Indies and the Great War, open-access monograph",
+      "url": "https://brill.com/downloadpdf/display/title/24650.pdf",
+      "note": "Open-access scholarly monograph, especially the August 1914 and wartime economy chapters: Dutch neutrality, shipping disruption, rice export bans and price controls, colonial commodity bottlenecks and expanding government economic intervention."
+    },
+    {
+      "id": "nli-rice",
+      "title": "Commodities and anti-commodities: Rice on Sumatra, 1915 to 1925",
+      "url": "https://research.wur.nl/en/publications/commodities-and-anti-commodities-rice-on-sumatra-1915-1925/",
+      "note": "Wageningen peer-reviewed chapter abstract, web lines 32 to 45: wartime shipping anxiety, Sumatran estates’ dependence on migrant contract labor and imported rice, rising prices, and 1918 restrictions on food-crop exports."
+    },
+    {
+      "id": "nli-plantation",
+      "title": "The Price of Un/Freedom: Indonesia’s Colonial and Contemporary Plantation Labor Regimes",
+      "url": "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/price-of-unfreedom-indonesias-colonial-and-contemporary-plantation-labor-regimes/8EFC43C76E9427735F4CD38C7037CCF5",
+      "note": "Comparative Studies in Society and History, Tobacco and Rubber section: Sumatran export estates, Chinese and Javanese migrant recruitment, coercive contracts, penal sanctions and worker desertion in the colonial plantation regime."
+    },
+    {
+      "id": "nli-family-album",
+      "title": "Rijksmuseum, family and Purworejo sugar-factory album, RP-F-F01051",
+      "url": "https://www.rijksmuseum.nl/en/collection/object/Familiealbum-met-fotos-van-een-familie-in-de-voormalige-kolonie-Nederlands-Indie-en-van-een-suikerfabriek-in-Purworejo--55a21cb4c6ac1360bc61e7b7d73ff791",
+      "note": "Public-domain album catalogue: family photographs mainly from 1916 to 1918 plus Purworejo sugar-factory scenes, verandas, cars, swimming, tennis, children, rice pounding, household workers and unnamed Indonesian subjects."
+    },
+    {
+      "id": "nli-servant",
+      "title": "Rijksmuseum, Indonesian house servant serving a European man at table, April 1917",
+      "url": "https://www.rijksmuseum.nl/en/collection/object/Indonesische-huisknecht-bedient-Europese-man-aan-tafel-in-Nederlands-Indie--b32dfbfc4bd39cc38ac3e0a962c3c9bc",
+      "note": "Public-domain photograph RP-F-F01051-8-3, dated April 1917. The catalogue identifies an Indonesian house servant, a European man, dining room and anonymous photographer, but does not name the worker."
+    },
+    {
+      "id": "nli-minangkabau",
+      "title": "UNESCO World Heritage Centre, Traditional Settlement at Nagari Sijunjung",
+      "url": "https://whc.unesco.org/en/tentativelists/6059/",
+      "note": "Indonesia’s UNESCO tentative-list nomination: nine Minangkabau clans, female-line descent and inheritance, matrilocal marriage, rumah gadang, maternal male relatives, elected penghulu, customary teaching, mosques, fields and markets. Used as continuity evidence, not a 1914 census."
+    },
+    {
+      "id": "nli-women-health",
+      "title": "The modernity of tradition: Women and “healthy progress” in late colonial Java and Sumatra",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/modernity-of-tradition-women-and-healthy-progress-in-late-colonial-java-and-sumatra/4BA3E976E8F878BAEA50052F50C07520",
+      "note": "Modern Asian Studies, especially web lines 513 to 535 and 559 to 610: 1919 Malay press discussion, women’s agency in negotiating health and child-rearing, consumer advertising, hygiene propaganda, promised wells and latrines, and colonial blame."
+    },
+    {
+      "id": "nli-education",
+      "title": "Education, Labour, and Discipline: Indigenous Children in Colonial Asia",
+      "url": "https://www.cambridge.org/core/journals/international-review-of-social-history/article/education-labour-and-discipline-new-perspectives-on-imperial-practices-and-indigenous-children-in-colonial-asia/837FA5E8CA15D36A8BF3202AA72D8AD9",
+      "note": "International Review of Social History, web lines 533 to 541: slow village-school implementation, local cost burdens, no comprehensive system, no more than five percent of Indigenous children receiving several official school years around 1905, and unequal investment."
+    },
+    {
+      "id": "nli-kartini",
+      "title": "Kartini and Van Deventer Schools: pioneers of girls’ schooling in colonial Semarang",
+      "url": "https://download.garuda.kemdikbud.go.id/article.php?article=769339&title=+SEKOLAH+KARTINI+DAN+VAN+DEVENTER++PELOPOR+SEKOLAH+PEREMPUAN+DI+SEMARANG++PADA+MASA+KOLONIAL&val=11353",
+      "note": "Indonesian education-history article using Kartini Fund records: Semarang school opened in 1913; Madiun, Batavia and Buitenzorg followed in 1914, Malang in 1915, Cirebon and Pekalongan in 1916; first-year Semarang pupils were ages seven to thirteen."
+    },
+    {
+      "id": "nli-muhammadiyah",
+      "title": "Museum Benteng Vredeburg, diorama of Muhammadiyah’s founding",
+      "url": "https://kebudayaan.kemdikbud.go.id/Vredeburg/diorama-berdirinya-organisasi-muhammadiyah-diorama-museum-benteng-vredeburg-yogyakarta/",
+      "note": "Official Indonesian cultural-heritage page: Ahmad Dahlan and colleagues founded Muhammadiyah in Kauman, Yogyakarta, on 18 November 1912 amid concerns about education, social conditions and colonial discrimination."
+    },
+    {
+      "id": "nli-stovia",
+      "title": "Universitas Indonesia Archive, the STOVIA and Salemba medical-school buildings",
+      "url": "https://arsip.ui.ac.id/gedung-fk-ui-salemba-cagar-budaya-di-tengah-kota/",
+      "note": "Official UI archive, web lines 51 to 69: nine-year STOVIA curriculum, compulsory dormitory and facilities, 1916 cornerstone, 1919 central teaching hospital, and the 1920 move to Salemba with a later choice of dormitory or lodging."
+    },
+    {
+      "id": "nli-raft",
+      "title": "Rijksmuseum collection, boys on a raft at Kali Taman",
+      "url": "https://www.rijksmuseum.nl/nl/collectie/node/raft--91ad809468395f4a4a80168b673f7c0c",
+      "note": "Rijksmuseum subject catalogue lists the public-domain photograph “Jongens op een vlot bij Kali Taman in Nederlands-Indië,” anonymous, circa 1917. It records a moment of play without identifying the boys."
+    },
+    {
+      "id": "nli-rice-pound",
+      "title": "Rijksmuseum collection, men pounding rice with older equipment",
+      "url": "https://www.rijksmuseum.nl/en/collection/node/other%2Bhandicrafts%2B~%2Bfood--add157c2feb4a62a04c00d1c586a6b10",
+      "note": "Rijksmuseum subject catalogue lists an anonymous circa 1916 to 1917 photograph of men pounding rice with older tools in the Netherlands Indies; the catalogue does not name the men or location."
+    },
+    {
+      "id": "nli-warung",
+      "title": "Rijksmuseum, warung with food displayed on a table in inland Java",
+      "url": "https://www.rijksmuseum.nl/en/collection/object/Warung%2Bmet%2Buitgestald%2Beten%2Bop%2Btafel%2Bin%2Bhet%2Bbinnenland%2Bvan%2BJava.--380f2cc39dbbdc41af82e678663c1967",
+      "note": "Public-domain stereograph RP-F-2001-17-184, inland Java or Malang possibly, dated broadly 1900 to 1935. Its catalogue identifies a warung and displayed food but no dish, vendor or customer."
+    },
+    {
+      "id": "nli-market",
+      "title": "Rijksmuseum, a market in Grobogan",
+      "url": "https://www.rijksmuseum.nl/en/collection/object/Op-een-markt-in-Grobogan--3b72f55ddeb1fd0cb4453cf0a4f198f6",
+      "note": "Rijksmuseum catalogue for anonymous photograph RP-F-2005-162-1, dated 1910 to 1928 and located at a market in Grobogan, Java. Used only for the visible setting and cautious source criticism."
+    },
+    {
+      "id": "nli-headcloth",
+      "title": "Metropolitan Museum of Art, Javanese Headcloth, 58.33.4",
+      "url": "https://www.metmuseum.org/art/collection/search/308267",
+      "note": "Met object record, web lines 3 to 49: mid-nineteenth to early twentieth-century Pekalongan cotton headcloth, local wrapping traditions, everyday and formal use, faux-patchwork tambal design and sometimes protective meanings."
+    },
+    {
+      "id": "nli-sarong",
+      "title": "Metropolitan Museum of Art, Javanese Sarong, 22.167.3",
+      "url": "https://www.metmuseum.org/art/collection/search/307905",
+      "note": "Met object record: north-coast Javanese cotton batik, mid-nineteenth to early twentieth century; tubular garment format, body and head design zones, changing status rules, Chinese-community fashion and Indian and Chinese motifs."
+    },
+    {
+      "id": "nli-archaeology",
+      "title": "The Rijksmuseum Bulletin, colonial archaeology and Candi Panataran",
+      "url": "https://bulletin.rijksmuseum.nl/article/download/9791/10285",
+      "note": "Rijksmuseum Bulletin article, printed page 266: the Archaeological Service began full restoration at Candi Panataran in 1918; Javanese dignitaries joined an advisory committee and results were shared with students and teachers."
+    },
+    {
+      "id": "nli-medical",
+      "title": "The expansion of medical education in the Dutch East Indies and the Indonesian medical profession",
+      "url": "https://www.cambridge.org/core/journals/medical-history/article/expansion-of-medical-education-in-the-dutch-east-indies-and-the-formation-of-the-indonesian-medical-profession/C7CEE29D918ACA46E2D49FE063C2892D",
+      "note": "Medical History, web lines 514 to 522 and 562: STOVIA, Surabaya’s 1913 NIAS, Indigenous physicians’ training, dormitory and laboratory education, social and professional struggles, and arguments that trusted Indonesian doctors understood patients’ concerns."
+    },
+    {
+      "id": "nli-pathology",
+      "title": "Medical Journal of Indonesia, The History of Pathology in Indonesia",
+      "url": "https://mji.ui.ac.id/journal/index.php/mji/article/download/883/830/1769",
+      "note": "University medical-history article: NIAS opened in Surabaya in 1913, the term Indisch Arts replaced Inlandsch Arts in 1913, and a cancer institute was established in Bandung in 1914 among a small set of pathology centers."
+    },
+    {
+      "id": "nli-malaria",
+      "title": "Species sanitation of malaria in the Netherlands East Indies, 1913 to 1942",
+      "url": "https://www.michaeljournal.no/article/2010/10/Species-sanitation-of-malaria-in-the-Netherlands-East-Indies-%281913-1942%29-an-example-of-applied-medical-history-",
+      "note": "Medical-history review, web lines 57 to 75 and 79 to 123: 1915 to 1919 Sumatra trials, Surabaya work, Belawan intervention in 1919, identifying local mosquito habitats, engineering measures and incomplete early trials."
+    },
+    {
+      "id": "nli-influenza",
+      "title": "The 1918 to 1920 Influenza Pandemic: A Retrospective in the Time of COVID-19",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E2695A213FACA1CD66D1AC9144EE7FD1/9781009336086AR.pdf/191820_influenza_pandemic.pdf",
+      "note": "Cambridge Elements PDF, printed pages 26 to 27: colonial vital statistics heavily favored European and “other foreign” residents, Java data were deficient, estimates are disputed, and a careful reconstruction estimated about 1.47 million excess deaths in Java."
+    },
+    {
+      "id": "nli-water-1917",
+      "title": "Hygiënische toestanden in Nederlandsch Indië, 1917 review of a 1914 water survey",
+      "url": "https://www.dbnl.org/tekst/_nee003191701_01/_nee003191701_01_0026.php",
+      "note": "Contemporary Dutch review in DBNL, pages 36 to 37: a 1914 survey reported severely inadequate drinking, bathing and washing water, few urban pipes or hydrants, polluted rivers and wells, and one river serving as toilet, urinal and fishery."
+    },
+    {
+      "id": "nli-plague",
+      "title": "Establishment of a specialized health administration through plague control in the Dutch East Indies, 1900 to 1925",
+      "url": "https://cir.nii.ac.jp/crid/1390001205094532608?lang=en",
+      "note": "Socio-Economic History abstract, web lines 62 to 66: Java plague from 1911, new Civil Medical Service, diagnostic spleen puncture, isolation and ratproofing, community skepticism, failed uniform measures and a shift toward locally adapted research."
+    },
+    {
+      "id": "nli-health-museum",
+      "title": "Wereldmuseum Amsterdam, Health care in the Netherlands Indies",
+      "url": "https://amsterdam.wereldmuseum.nl/nl/wereldverhalen/gezondheidszorg-in-nederlands-indie",
+      "note": "Museum research page, web lines 23 to 154: poverty and unhealthy conditions, cholera and plague, vaccination, home rebuilding, quinine, missions, small urban medical workforce and health services that remained insufficient across the archipelago."
+    },
+    {
+      "id": "nli-itb",
+      "title": "Institut Teknologi Bandung, History",
+      "url": "https://itb.ac.id/history",
+      "note": "Official university history: the Bandung technical college opened on 3 July 1920 with one faculty and a road and water engineering major; its first 1920 to 1921 class had 28 students, only two Indonesian."
+    },
+    {
+      "id": "nli-invasion",
+      "title": "Indisch Herinneringscentrum, the road to Japanese occupation",
+      "url": "https://www.indischherinneringscentrum.nl/aanloop-tot-de-japanse-bezetting-politiek-militaire-ontwikkelingen",
+      "note": "Invasion and Indies government sections: Japan took Tarakan in January 1942, landed on Java on 1 March after the Java Sea defeat, and forced the Dutch colonial government out of the archipelago."
+    },
+    {
+      "id": "nli-transfer",
+      "title": "Nationaal Archief, Transfer of sovereignty to Indonesia, 1949",
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/soevereiniteitsoverdracht-indonesie-1949",
+      "note": "Dutch National Archives education source: Sukarno and Hatta proclaimed independence on 17 August 1945; the Netherlands refused, war followed, and sovereignty was transferred on 27 December 1949, initially excluding western New Guinea."
+    }
+  ],
+  "entities": [
+    {
+      "id": "netherlands-indies",
+      "card": "data/cards/netherlands-indies.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nli-geom-1914",
+            "nli-ihc-era",
+            "nli-merdeka"
+          ],
+          "locator": "Decoded exact-id 1914 to 1920 feature: 15-part MultiPolygon, 15 rings, 908 positions, bbox about 95.1904 E to 140.9612 E and 10.3788 S to 5.5701 N. Geometry is only a coarse locator. Museum education overview: by about 1900 the Dutch claimed nearly the whole archipelago, the Ethical Policy promised greater welfare and autonomy, nationalism grew, and colonial modernization remained unequal and contested. Open-access MERDEKA chapter, especially printed pages 20 to 21: coercive state formation and the paternalistic Ethical Policy, whose education, irrigation and migration programs also served colonial labor and production needs.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nli-aceh",
+            "nli-marxism"
+          ],
+          "locator": "Itinerario open-access article, especially web lines 493 to 522: Dutch conquest used brutal violence and territorial categories; victory was claimed in the late 1910s but armed resistance on Aceh’s west coast persisted. Modern Asian Studies, web lines 552 to 569: 1914 ISDV, railway-union ties, Dutch and Malay political print, Sarekat Islam connections, Sinar Hindia in 1918, Soeara Ra’jat in 1919 and the 1920 party renaming.",
+          "dateScope": {
+            "from": 1914,
+            "to": 1915
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nli-rice",
+            "nli-marxism"
+          ],
+          "locator": "Wageningen peer-reviewed chapter abstract, web lines 32 to 45: wartime shipping anxiety, Sumatran estates’ dependence on migrant contract labor and imported rice, rising prices, and 1918 restrictions on food-crop exports. Modern Asian Studies, web lines 552 to 569: 1914 ISDV, railway-union ties, Dutch and Malay political print, Sarekat Islam connections, Sinar Hindia in 1918, Soeara Ra’jat in 1919 and the 1920 party renaming.",
+          "dateScope": {
+            "from": 1915,
+            "to": 1916
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nli-kartini",
+            "nli-volksraad"
+          ],
+          "locator": "Indonesian education-history article using Kartini Fund records: Semarang school opened in 1913; Madiun, Batavia and Buitenzorg followed in 1914, Malang in 1915, Cirebon and Pekalongan in 1916; first-year Semarang pupils were ages seven to thirteen. Japan Society for Southeast Asian Studies abstract, web lines 137 to 143: Volksraad founded in May 1918, indirect election through unequal local councils, advisory authority, nationalist disappointment and four Budi Utomo members among ten elected Indigenous members.",
+          "dateScope": {
+            "from": 1916,
+            "to": 1917
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nli-weerbaar"
+          ],
+          "locator": "Indonesian Historical Studies abstract, web lines 20 to 42: dispute over an Indies defense force, Abdoel Moeis, Semaoen, decentralized Sarekat Islam branches, labor politics and the Radicale Concentratie in the Volksraad.",
+          "dateScope": {
+            "from": 1917,
+            "to": 1918
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nli-volksraad",
+            "nli-wwi",
+            "nli-influenza"
+          ],
+          "locator": "Japan Society for Southeast Asian Studies abstract, web lines 137 to 143: Volksraad founded in May 1918, indirect election through unequal local councils, advisory authority, nationalist disappointment and four Budi Utomo members among ten elected Indigenous members. Open-access scholarly monograph, especially the August 1914 and wartime economy chapters: Dutch neutrality, shipping disruption, rice export bans and price controls, colonial commodity bottlenecks and expanding government economic intervention. Cambridge Elements PDF, printed pages 26 to 27: colonial vital statistics heavily favored European and “other foreign” residents, Java data were deficient, estimates are disputed, and a careful reconstruction estimated about 1.47 million excess deaths in Java.",
+          "dateScope": {
+            "from": 1918,
+            "to": 1919
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nli-stovia",
+            "nli-malaria",
+            "nli-itb",
+            "nli-geom-1920"
+          ],
+          "locator": "Official UI archive, web lines 51 to 69: nine-year STOVIA curriculum, compulsory dormitory and facilities, 1916 cornerstone, 1919 central teaching hospital, and the 1920 move to Salemba with a later choice of dormitory or lodging. Medical-history review, web lines 57 to 75 and 79 to 123: 1915 to 1919 Sumatra trials, Surabaya work, Belawan intervention in 1919, identifying local mosquito habitats, engineering measures and incomplete early trials. Official university history: the Bandung technical college opened on 3 July 1920 with one faculty and a road and water engineering major; its first 1920 to 1921 class had 28 students, only two Indonesian. Decoded 1920 to 1930 successor: civ dutch-east-indies-1920, with the same 15 parts, 15 rings and 908 positions. Maximum coordinate change is about 0.00136 degrees from topology scaling.",
+          "dateScope": {
+            "from": 1919,
+            "to": 1920
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nli-index",
+            "nli-geom-1914"
+          ],
+          "locator": "Index exact-id entry; identity.json exactSnapshot statistics and bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nli-geom-1900",
+            "nli-geom-1914"
+          ],
+          "locator": "identity.json predecessorToTarget comparison: exactJson true, maximum coordinate delta zero.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nli-geom-1920"
+          ],
+          "locator": "identity.json successor statistics and targetToSuccessor coordinate comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nli-geom-1914"
+          ],
+          "locator": "identity.json pointTests for named cities; false coastal results are reported as geometry limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nli-legal-class"
+          ],
+          "locator": "Fairness and Equality section on plural colonial categories and uneven institutions; diversity statement limits inference rather than assigning one custom.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nli-ihc-prewar"
+          ],
+          "locator": "Rulers and Ethical Policy sections on Indigenous officials and limited administrative openings under continued Dutch authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nli-aceh"
+          ],
+          "locator": "Web lines 493 to 522, especially claimed late-1910s victory, continuing resistance and colonial geographic framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nli-prison"
+          ],
+          "locator": "Web lines 564 to 579 on central prisons, deported resistance prisoners and forced-labor destinations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nli-legal-class"
+          ],
+          "locator": "Fairness and Equality section, racialized sociolegal classification and separate administrative and legal systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nli-volksraad"
+          ],
+          "locator": "Web lines 137 to 143 on founding, indirect selection, advisory role, elected Indigenous members and nationalist disappointment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nli-wwi"
+          ],
+          "locator": "August 1914 and wartime economy chapters on neutrality, shipping disruption, rice export ban and price measures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nli-rice"
+          ],
+          "locator": "Wageningen abstract lines 32 to 36 and 91 to 95 on contract workers, imports, prices and 1918 restrictions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nli-plantation"
+          ],
+          "locator": "Tobacco and Rubber section on migrant recruitment, contract coercion, penal sanctions and desertion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nli-family-album"
+          ],
+          "locator": "Album catalogue description and part list for sugar factory, machinery, rail, mixed groups and named provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nli-women-health"
+          ],
+          "locator": "Article framing of women’s household, health and consumption work in Java and Sumatra; wording deliberately refuses a universal job claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nli-minangkabau"
+          ],
+          "locator": "Tentative-list description of one explicitly Minangkabau settlement and family system; other communities are listed only to limit generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nli-minangkabau"
+          ],
+          "locator": "Description and authenticity sections on matriliny, matrilocality, leadership, houses and educational spaces; modern nomination caveat explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nli-family-album"
+          ],
+          "locator": "Album scope, dates, named family, domestic and leisure part list; representativeness limitation explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nli-servant"
+          ],
+          "locator": "Object RP-F-F01051-8-3 date, catalogue title, subjects and anonymous creator; absent personal details stated as absences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nli-women-health"
+          ],
+          "locator": "Web lines 513 to 535 on the 1919 editorial, healthy progress, child-rearing and women’s agency in Malay print.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nli-education"
+          ],
+          "locator": "Web lines 535 to 540 on village costs, non-comprehensive intent and enrollment comparison; alternatives stated as bounded context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nli-kartini"
+          ],
+          "locator": "Article table and discussion of seven opening dates, Semarang ages and first-year enrollment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nli-muhammadiyah"
+          ],
+          "locator": "Official heritage page on founding date, place, Ahmad Dahlan, education and colonial social context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nli-stovia"
+          ],
+          "locator": "UI archive lines 51 to 67 on curriculum, dormitory rules, facilities, 1916 cornerstone and 1919 hospital.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nli-raft"
+          ],
+          "locator": "Rijksmuseum subject entry title, anonymous creator and circa-1917 date; uncertainties follow missing catalogue detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nli-rice-pound"
+          ],
+          "locator": "Rijksmuseum subject catalogue title, date and anonymous authorship; no location or identity is inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nli-warung"
+          ],
+          "locator": "Object title, broad 1900 to 1935 date, inland-Java scope and absent menu detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nli-market"
+          ],
+          "locator": "Rijksmuseum catalogue place and date; social interpretation limited to the named market setting and visible exchange context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nli-headcloth",
+            "nli-sarong"
+          ],
+          "locator": "Met headcloth web lines 3 to 13 and object details; Met sarong record on format, design zones, changing status and mixed motifs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nli-archaeology"
+          ],
+          "locator": "Rijksmuseum Bulletin printed page 266 on 1918 restoration, advisory participation and public teaching; discovery caveat explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nli-medical"
+          ],
+          "locator": "Medical History lines 514 to 522 and 562 on the schools, Indonesian physicians and trust; scale limitation follows the article’s cohort discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nli-pathology"
+          ],
+          "locator": "Medical Journal of Indonesia abstract and history section on the 1914 cancer institute and pathology centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nli-malaria"
+          ],
+          "locator": "Web lines 57 to 75, especially first trials, local-vector method, incomplete projects and 1919 Belawan work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nli-influenza"
+          ],
+          "locator": "Cambridge PDF printed pages 26 to 27 on record bias, contested estimates and revised excess-death estimate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nli-medical"
+          ],
+          "locator": "Medical History historiographical framing of doctors and midwives, plus institutional archive emphasis; last sentence states an evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nli-water-1917"
+          ],
+          "locator": "DBNL pages 36 to 37, 1914 survey scope, named cities, network and hydrant shortages.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nli-water-1917"
+          ],
+          "locator": "DBNL page 36 to 37 examples of river and well contamination, including the cited multi-use river; source viewpoint identified.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nli-women-health"
+          ],
+          "locator": "Modern Asian Studies hygiene-policy and healthy-progress sections, wells/latrines discussion and women’s press agency.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nli-plague"
+          ],
+          "locator": "CiNii English abstract lines 62 to 66 on measures, opposition, failures and locally adapted approach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nli-health-museum"
+          ],
+          "locator": "Wereldmuseum lines 23 to 24, 71 to 140 on disease, interventions, social conditions and limited reach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nli-marxism"
+          ],
+          "locator": "Modern Asian Studies web lines 552 to 558 on founding, membership, railway union, newspaper and Sarekat Islam links.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nli-marxism"
+          ],
+          "locator": "Web lines 565 to 569 and surrounding discussion of Malay newspapers, translation and ideological interaction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nli-writing"
+          ],
+          "locator": "Article section identifying Marco Kartodikromo’s 1918 Sinar Hindia title and English meaning; modern-spelling comparison is orthographic clarification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nli-weerbaar"
+          ],
+          "locator": "Article abstract lines 20 to 42 on the defense polemic, named actors, labor movement and radicalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nli-censorship"
+          ],
+          "locator": "Dissertation censorship chapter on the 16 November 1918 translation, editorial, deliberation and prosecution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nli-geom-1920",
+            "nli-invasion",
+            "nli-transfer"
+          ],
+          "locator": "Decoded 1920 to 1930 successor: civ dutch-east-indies-1920, with the same 15 parts, 15 rings and 908 positions. Maximum coordinate change is about 0.00136 degrees from topology scaling. Invasion and Indies government sections: Japan took Tarakan in January 1942, landed on Java on 1 March after the Java Sea defeat, and forced the Dutch colonial government out of the archipelago. Dutch National Archives education source: Sukarno and Hatta proclaimed independence on 17 August 1945; the Netherlands refused, war followed, and sovereignty was transferred on 27 December 1949, initially excluding western New Guinea.",
+          "dateScope": {
+            "year": 1920
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "netherlands-indies",
+        "card": "cards/netherlands-indies.json",
+        "summary": "The 1914 to 1920 Netherlands Indies was a diverse, unequal colonial state shaped by wartime shortages, resistance, expanding schools and print, public-health crises and growing political organization; its 1920 cutoff is only an atlas handoff."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "netherlands-indies",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            95.19035190351906,
+            -10.378827871761523,
+            140.96120961209613,
+            5.570138613142582
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target netherlands-indies is indexed circa 1914 to 1920 and is missing before integration.",
+    "The world-1914 target has 15 parts/rings and 908 positions; it is exactly identical to the 1900 predecessor shape labeled Netherlands Indies under netherlands-1878.",
+    "The world-1920 successor dutch-east-indies-1920 preserves the same topology dimensions; its maximum coordinate delta is about 0.00136 degrees because the TopoJSON transform changes.",
+    "The 1920 endpoint is a map-library id handoff, not a historical end of the colony.",
+    "Coarse geometry misses some known coastal cities in point tests; the card calls it a locator, never a verified sovereignty polygon.",
+    "Related dutch-east-indies, netherlands-1878 and dutch-east-indies-1920 cards remain distinct; no appliesTo linkage is used."
+  ]
+}

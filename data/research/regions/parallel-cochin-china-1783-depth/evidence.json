@@ -1,0 +1,800 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel cochin-china-1783 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "cc-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository index checked for exact id cochin-china: name Cochin China, approximately 1783-1878. Separate indexed records include cochin, ai-viet, annam-1920, cochin-china-1920, french-indo-china and vietnam; this card does not merge them."
+    },
+    {
+      "id": "cc-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage checked before integration. Exact id cochin-china had no card and review missing; three observed intervals run continuously 1783-1800, 1800-1815 and 1815-1878, with no target features outside its indexed lifetime."
+    },
+    {
+      "id": "cc-map1783",
+      "title": "Human History Map, world-1783 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Decoded with topojson-client. The exact cochin-china target is one 33-position Polygon, bbox 104.3884,8.4749 to 106.7501,11.0066. Point tests include My Tho, Can Tho, Vinh Long, Chau Doc, Ha Tien, Rach Gia, Ca Mau, Bac Lieu and Soc Trang, but exclude Saigon, Cholon, Bien Hoa, Tay Ninh, Phu Quoc, Phnom Penh, Hue, Da Nang, Quy Nhon and Nha Trang."
+    },
+    {
+      "id": "cc-map1800",
+      "title": "Human History Map, world-1800 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Decoded with topojson-client. The 1800-1815 target has the same Polygon structure, coordinates, bbox, 33 positions and tested inclusions/exclusions as world-1783. This is static imported geometry, not proof that control stood still."
+    },
+    {
+      "id": "cc-map1815",
+      "title": "Human History Map, world-1815 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Decoded with topojson-client. The 1815-1878 target repeats the exact earlier 33-position Polygon. Its to=1878 property is an atlas interval endpoint and does not date the end of the French colony or the lives of southern communities."
+    },
+    {
+      "id": "cc-waterfront-overview",
+      "title": "NUS Press, Water Frontier: Commerce and the Chinese in the Lower Mekong Region, 1750-1880",
+      "url": "https://nuspress.nus.edu.sg/products/water-frontier",
+      "note": "Publisher description and contents checked. The volume treats southwest Indochina as a multiethnic coastal and riverine economic zone connected by junk traders, settlers and small ports, explicitly challenging state-centred narratives. Used for the card framing rather than precise event dates."
+    },
+    {
+      "id": "cc-bnf-editorial",
+      "title": "Bibliotheque nationale de France, France-Vietnam portal editorial",
+      "url": "https://heritage.bnf.fr/france-vietnam/editorial",
+      "note": "Institutional editorial checked. It distinguishes Cochinchina, Tonkin and Annam while emphasizing movement along the Mekong and across the later colonial divisions. It also identifies Sino-Vietnamese and Nom textual traditions without treating romanized Vietnamese as their instant replacement."
+    },
+    {
+      "id": "cc-bnf-literature",
+      "title": "Bibliotheque nationale de France, Literature in the France-Vietnam portal",
+      "url": "https://heritage.bnf.fr/france-vietnam/litterature",
+      "note": "Institutional collection essay directly read. It identifies nineteenth-century materials in Han and Nom, later quoc ngu literature and a large Cochinchinese market for translated Chinese heroic fiction associated with Minh Huong migration. Used for script plurality, not a claim that advanced literacy was universal."
+    },
+    {
+      "id": "cc-battle",
+      "title": "Vietnam Cultural Heritage Administration, Rach Gam-Xoai Mut historic site",
+      "url": "https://dsvh.gov.vn/di-tich-lich-su-dia-diem-chien-thang-rach-gam-xoai-mut-2986",
+      "note": "Official heritage entry checked for the night of 19-20 January 1785, the Tien River setting near My Tho, the Tay Son ambush of the Siamese fleet and the site interpretation. Nationalist superlatives and exact casualty totals are not repeated as neutral estimates."
+    },
+    {
+      "id": "cc-cholon-thesis",
+      "title": "Nguyen Thi Minh Hieu, Cholon urban evolution, 1879-1930, Australian National University thesis, 2020",
+      "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/207829/1/Nguyen%20Final%20thesis%202020.pdf",
+      "note": "Original ANU thesis directly read. Printed pp47-56 examine the 1780s-1830s Gia Dinh regime, Minh Huong networks, rice, military supply, 1802 victory, southern autonomy and Minh Mang centralization. Printed pp62-64 reconstruct an early nineteenth-century market, houses, well, festivals, goods and An Thong Canal from named contemporary accounts, while warning that victorious court histories obscure alternatives."
+    },
+    {
+      "id": "cc-nguyen-museum",
+      "title": "Vietnam National Museum of History, The Nguyen dynasty, 1802-1945",
+      "url": "https://vnmh.com.vn/en/Articles/4205/the-nguyen-dynasty-1802-1945-ad",
+      "note": "National museum overview checked. It dates the dynasty from 1802, distinguishes its independent and colonial periods, and identifies administrative reform, land development, dikes, flood protection, irrigation and north-south integration. Object listings include nineteenth-century ceramics, furniture, incense burners, writing tools, weights and measures; they are national, not delta-specific samples."
+    },
+    {
+      "id": "cc-minhmang-book",
+      "title": "Choi Byung Wook, Southern Vietnam under the Reign of Minh Mang, JSTOR Books",
+      "url": "https://www.jstor.org/stable/10.7591/j.ctv1nhppm",
+      "note": "Scholarly book record and indexed contents checked. The work centers southern Vietnam in 1820-1841, identifies Gia Dinh as the regional name after 1802, and treats the 1832 reform as the point when the central court imposed direct rule. Used only for that administrative tension, not details hidden behind the preview."
+    },
+    {
+      "id": "cc-vnu-admin",
+      "title": "University of Social Sciences and Humanities, VNU Hanoi, Southern administration in the early nineteenth century",
+      "url": "https://his.ussh.vnu.edu.vn/vi/news/nguyen-viet-hoang/to-chuc-bo-may-quan-ly-hanh-chinh-nam-bo-nua-dau-the-ky-xix-tu-gia-dinh-thanh-den-nam-ky-luc-tinh-ths-nguyen-ngoc-phuc-5819.html",
+      "note": "University history article directly read, especially paragraphs listing the October 1832 dissolution of Gia Dinh Thanh and creation of Phien An, Bien Hoa, Vinh Long, Dinh Tuong, An Giang and Ha Tien provinces, plus the new provincial fiscal, judicial, civil and military offices. The court edict is treated as a government viewpoint."
+    },
+    {
+      "id": "cc-army-conquest",
+      "title": "Musee de Armee, Indochina exhibition visitor itinerary, 1859-1907",
+      "url": "https://www.musee-armee.fr/ExpoIndochine/1859-1907-en.html",
+      "note": "French national military museum exhibition text checked critically. It traces rivalry, commercial ambitions and religious tensions behind intervention, and the naval conquest of southern Vietnam from 1858 to 1867. Its imperial framing is not adopted and conquest is not described as peaceful modernization."
+    },
+    {
+      "id": "cc-cambridge-conquest",
+      "title": "K. W. Taylor, The French Conquest, A History of the Vietnamese, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/history-of-the-vietnamese/french-conquest/6C14579A72274909AB5968934CAD15A6",
+      "note": "Cambridge chapter abstract checked. It dates the decision and expedition to 1857-1862, the Treaty of Saigon cession to 1862, failed Vietnamese negotiations for French withdrawal to 1862-1874, and the naval officers annexing the remaining Mekong plain. Used for sequence, not inaccessible chapter details."
+    },
+    {
+      "id": "cc-bnf-circulations",
+      "title": "Bibliotheque nationale de France, Circulations in France-Vietnam history",
+      "url": "https://heritage.bnf.fr/france-vietnam/circulations-article",
+      "note": "Institutional scholarly essay directly read. It notes the unimplemented 1787 treaty involving future Gia Long, the 1858-1867 conquest of Cochinchina, later expansion into Annam and Tonkin and the 1887 Indochinese Union. Used as a broad chronology with explicit colonial context."
+    },
+    {
+      "id": "cc-anom-government",
+      "title": "Archives nationales de outre-mer, Indochina research guide",
+      "url": "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/indochine",
+      "note": "Original archival guide directly read. It describes the admiral-led government preceding the 1887 union and distinguishes directly administered Cochinchina under a governor from protectorates under residents superior. Its 1862-1954 archive span confirms that 1878 is not the colony end."
+    },
+    {
+      "id": "cc-bnf-government",
+      "title": "Bibliotheque nationale de France, Governments and dynasties",
+      "url": "https://heritage.bnf.fr/france-vietnam/gouvernements-et-dynasties-0",
+      "note": "Institutional scholarly essay directly read. It describes Minh Mang centralization, the French imposition of authority despite resistance, the later legal division into colony and protectorates, and the continuation of bureaucratic, lineage and client networks across political ruptures."
+    },
+    {
+      "id": "cc-waterfront-book",
+      "title": "Li Tana and Nola Cooke, Water Frontier, Australian National University repository copy",
+      "url": "https://openresearch-repository.anu.edu.au/bitstreams/97928cc1-786c-43d3-804a-01c276a98474/download",
+      "note": "Institutional full-book record and searchable contents checked. Chapters cover Chinese trade, junk shipping, the late eighteenth- and early nineteenth-century delta, Nguyen policy, shipbuilding and riverine networks from Ca Mau to Tonle Sap. Public claims stay at chapter-level findings because the repository download intermittently returned service errors."
+    },
+    {
+      "id": "cc-rice-trade",
+      "title": "Li Tana, The late eighteenth and early nineteenth century Mekong Delta in the regional trade system",
+      "url": "https://www.researchgate.net/publication/291251755_The_late_eighteenth_and_early_nineteenth_century_Mekong_Delta_in_the_regional_trade_system",
+      "note": "Author-uploaded chapter record and text snippets checked. It places the delta in expanding South China Sea rice markets and notes growing rice exports to southern China after 1800. The card does not turn export growth into a claim of equal prosperity for farming households."
+    },
+    {
+      "id": "cc-vinhte",
+      "title": "An Giang Province portal, Vinh Te Canal historical overview",
+      "url": "https://angiang.gov.vn/en/vinh-te-canal-historical-extraordinary-feat-border-area",
+      "note": "Official provincial history checked. It dates construction to 1819-1824 in three phases, names Nguyen Van Thoai and other commanders, and records initial Vietnamese civilian and soldier labor with monthly money and rice rations. The celebratory framing is balanced by stating the scale and coercive burden of state mobilization."
+    },
+    {
+      "id": "cc-irrigation",
+      "title": "VNUHCM Journal of Social Sciences and Humanities, Irrigation in western Cochinchina under the Nguyen dynasty",
+      "url": "https://ssh.vnuhcmjournal.com.vn/index.php/ssh/article/view/671",
+      "note": "Peer-reviewed article abstract and indexed text checked. It dates Thoai Ha Canal to 1817, Vinh Te to 1819-1824 and Vinh An to 1843-1844, relating canals and roads to transport, agriculture, settlement and defense. Used without calling every project voluntary or beneficial to every resident."
+    },
+    {
+      "id": "cc-singapore-trade",
+      "title": "Asian Civilisations Museum, Siamese Junks Moored in Singapore",
+      "url": "https://www.roots.gov.sg/Collection-landing/listing/1115514",
+      "note": "Museum object essay checked. It states that Singapore maintained regional trade with Cochinchina and that, until the 1860s, junks arrived on the northeast monsoon carrying rice, sugar and salt. This is evidence of traded staples, not a complete household menu."
+    },
+    {
+      "id": "cc-coastal-agriculture",
+      "title": "Tetsuya Kono, A History of Agriculture in the Coastal Complex Area of the Mekong Delta",
+      "url": "https://www.jstage.jst.go.jp/article/tak/39/1/39_KJ00000132231/_article/-char/en",
+      "note": "Scholarly article abstract checked. A Tra Vinh-area village study identifies earlier Khmer occupation of sand ridges, Kinh settlement along small rivers from the early nineteenth century, intermittent Hoa interaction, Buddhist sites and later shared administration. It is a local case, not a demographic template for the whole polygon."
+    },
+    {
+      "id": "cc-housing",
+      "title": "Journal of the Korean Housing Association, Mekong Delta houses built from 1858 to 1945",
+      "url": "https://journal.khousing.or.kr/articles/xml/50rP/",
+      "note": "Peer-reviewed housing study directly read. Six relatively large surviving houses in Tien Giang, Dong Thap and Can Tho were selected; its 1850s type had communal sleeping and reception spaces, central but separated prayer space, and kitchen outside the main house. The article explicitly says these are selected large houses, not ordinary-house statistics."
+    },
+    {
+      "id": "cc-religion",
+      "title": "Cornell University, Ancestor Worship, Supernaturalism, and Gia Long Court in Gia Dinh",
+      "url": "https://ecommons.cornell.edu/entities/publication/76d744d4-488f-4d3e-b998-421668786c6f",
+      "note": "Cornell thesis record and abstract checked. The study is specifically about religious institutions and practices in the Gia Dinh region during Nguyen Anh campaigns in the 1790s-1802 and under Gia Long. The card uses it to establish plurality and political relevance, without inventing a universal household ritual."
+    },
+    {
+      "id": "cc-clothing",
+      "title": "Vietnam National Museum of History, Clothing of the Nguyen period",
+      "url": "https://vnmh.com.vn/vi/Articles/3096/18741/y-phuc-thoi-nguyen-tai-bao-tang-lich-su-quoc-gia.html",
+      "note": "National museum collection essay checked. It describes detailed court rules by material, color, cut and decoration and lists surviving silk and embroidered formal garments. These elite and ceremonial objects do not establish what a delta farming family wore day to day, a limitation stated publicly."
+    },
+    {
+      "id": "cc-writing",
+      "title": "Vietnam National Museum of History, Gia Dinh Bao, the first quoc ngu newspaper",
+      "url": "https://baotanglichsuquocgia.vn/vi/Articles/3097/13409/gia-djinh-bao-to-bao-chu-quoc-ngu-djau-tien-o-viet-nam.html",
+      "note": "National museum article directly read. It dates issue one to 15 April 1865, identifies Latin-script Vietnamese printing, four pages, Chinese and Vietnamese title scripts, official notices plus later history, poetry and stories, and transcribes the subscription line used as the short authentic writing sample."
+    },
+    {
+      "id": "cc-education",
+      "title": "Bibliotheque nationale de France, Education collection in the France-Vietnam portal",
+      "url": "https://heritage.bnf.fr/france-vietnam/enseignement",
+      "note": "Institutional catalog directly read. It records a Cochinchina administration course from 1874, Truong Vinh Ky geography of Lower Cochinchina from 1875 and a primary science primer from 1876. Catalog survival proves these books existed, not how many children used them."
+    },
+    {
+      "id": "cc-print",
+      "title": "Bibliotheque nationale de France, Legal deposit and print in colonial Indochina",
+      "url": "https://heritage.bnf.fr/france-vietnam/depot-legal-en-indochine-coloniale",
+      "note": "Institutional essay directly read. It states that the colonial administration published official material from the conquest, including the 1862 Bulletin officiel, and that romanized Vietnamese later expanded authorship and reading. Used to distinguish print technology from the power deciding what was printed."
+    },
+    {
+      "id": "cc-maps",
+      "title": "Bibliotheque nationale de France, Maps of Cochinchina collection",
+      "url": "https://heritage.bnf.fr/france-vietnam/cartes-cochinchine",
+      "note": "Institutional catalog directly read. It lists Le Pilote de Cochinchine, 1791-1807; a 1860 map of Saigon province reduced from a Vietnamese map; an 1860 Saigon River plan; and a French Cochinchina map from 1868. Catalog evidence is not treated as validation of the atlas polygon."
+    },
+    {
+      "id": "cc-toys",
+      "title": "Vu Hong Nhi, Folk Toys and Games for Children: Cultural Heritage of Vietnam",
+      "url": "https://ijssm.org/vol_4/Nhi_4.4.pdf",
+      "note": "Open-access peer-reviewed article directly read, especially pp223-225. It discusses handmade materials, pretend household play, nursery rhymes and games, but explicitly defines its case as the Red River Delta and does not securely date examples to 1783-1878. It is used only to explain why those examples are not projected onto lower-Mekong children."
+    },
+    {
+      "id": "cc-medicine-list",
+      "title": "Bibliotheque nationale de France, Medicine collection in the France-Vietnam portal",
+      "url": "https://heritage.bnf.fr/france-vietnam/medecine",
+      "note": "Institutional catalog directly read. It lists the 1872 medical topography of Lower Cochinchina, 1874 pathology survey, 1859-1862 naval medical history and 1877-1878 work on the so-called Cochinchina diarrhea, alongside traditional medicine and pharmacy. Listing a work does not endorse its colonial or obsolete theories."
+    },
+    {
+      "id": "cc-medical-topography",
+      "title": "A. Gueirard, Essai de topographie medicale de la Basse-Cochinchine, 1872, Gallica",
+      "url": "https://gallica.bnf.fr/ark:/12148/bpt6k6458119g",
+      "note": "Public-domain primary text and indexed excerpts checked. Gueirard debated unsafe water, marsh exposure, dysentery and seasonal fever through nineteenth-century miasma theory. The card treats the observations as evidence of concerns, not the author causal explanation as modern medicine, and notes that the work does not give a reliable household toilet census."
+    },
+    {
+      "id": "cc-diarrhea-debate",
+      "title": "Archives de medecine navale, volume 30, 1878",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Archives_de_m%C3%A9decine_navale._Volume_30%2C_1878._%28IA_s423id13662540%29.pdf",
+      "note": "Public-domain primary journal directly read through indexed text, pp29 onward. A Saigon physician describes testing a proposed parasite and chlorodyne explanation for chronic diarrhea, then reports doubts and conflicting observations. Used as an example of active but incomplete medical investigation, never as treatment advice."
+    },
+    {
+      "id": "cc-science-society",
+      "title": "Bibliotheque nationale de France, Sciences and society in colonial Vietnam",
+      "url": "https://heritage.bnf.fr/france-vietnam/sciences-et-societe",
+      "note": "Institutional scholarly essay directly read. Its health section says traditional plant remedies and imported Chinese medicines remained primary for most Vietnamese early in conquest while Western medicine initially served a narrow, separated community. Later institutions lie outside this card and are not backdated."
+    }
+  ],
+  "entities": [
+    {
+      "id": "cochin-china",
+      "card": "data/cards/cochin-china.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "cc-index",
+            "cc-coverage",
+            "cc-map1783",
+            "cc-map1800",
+            "cc-map1815",
+            "cc-waterfront-overview",
+            "cc-bnf-editorial"
+          ],
+          "locator": "Repository index checked for exact id cochin-china: name Cochin China, approximately 1783-1878. Separate indexed records include cochin, ai-viet, annam-1920, cochin-china-1920, french-indo-china and vietnam; this card does not merge them. Coverage checked before integration. Exact id cochin-china had no card and review missing; three observed intervals run continuously 1783-1800, 1800-1815 and 1815-1878, with no target features outside its indexed lifetime. Decoded with topojson-client. The exact cochin-china target is one 33-position Polygon, bbox 104.3884,8.4749 to 106.7501,11.0066. Point tests include My Tho, Can Tho, Vinh Long, Chau Doc, Ha Tien, Rach Gia, Ca Mau, Bac Lieu and Soc Trang, but exclude Saigon, Cholon, Bien Hoa, Tay Ninh, Phu Quoc, Phnom Penh, Hue, Da Nang, Quy Nhon and Nha Trang. Decoded with topojson-client. The 1800-1815 target has the same Polygon structure, coordinates, bbox, 33 positions and tested inclusions/exclusions as world-1783. This is static imported geometry, not proof that control stood still. Decoded with topojson-client. The 1815-1878 target repeats the exact earlier 33-position Polygon. Its to=1878 property is an atlas interval endpoint and does not date the end of the French colony or the lives of southern communities. Publisher description and contents checked. The volume treats southwest Indochina as a multiethnic coastal and riverine economic zone connected by junk traders, settlers and small ports, explicitly challenging state-centred narratives. Used for the card framing rather than precise event dates. Institutional editorial checked. It distinguishes Cochinchina, Tonkin and Annam while emphasizing movement along the Mekong and across the later colonial divisions. It also identifies Sino-Vietnamese and Nom textual traditions without treating romanized Vietnamese as their instant replacement.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "cc-battle"
+          ],
+          "locator": "Official heritage entry checked for the night of 19-20 January 1785, the Tien River setting near My Tho, the Tay Son ambush of the Siamese fleet and the site interpretation. Nationalist superlatives and exact casualty totals are not repeated as neutral estimates.",
+          "dateScope": {
+            "from": 1783,
+            "to": 1785
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "cc-cholon-thesis"
+          ],
+          "locator": "Original ANU thesis directly read. Printed pp47-56 examine the 1780s-1830s Gia Dinh regime, Minh Huong networks, rice, military supply, 1802 victory, southern autonomy and Minh Mang centralization. Printed pp62-64 reconstruct an early nineteenth-century market, houses, well, festivals, goods and An Thong Canal from named contemporary accounts, while warning that victorious court histories obscure alternatives.",
+          "dateScope": {
+            "from": 1785,
+            "to": 1802
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "cc-nguyen-museum"
+          ],
+          "locator": "National museum overview checked. It dates the dynasty from 1802, distinguishes its independent and colonial periods, and identifies administrative reform, land development, dikes, flood protection, irrigation and north-south integration. Object listings include nineteenth-century ceramics, furniture, incense burners, writing tools, weights and measures; they are national, not delta-specific samples.",
+          "dateScope": {
+            "from": 1802,
+            "to": 1820
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "cc-minhmang-book"
+          ],
+          "locator": "Scholarly book record and indexed contents checked. The work centers southern Vietnam in 1820-1841, identifies Gia Dinh as the regional name after 1802, and treats the 1832 reform as the point when the central court imposed direct rule. Used only for that administrative tension, not details hidden behind the preview.",
+          "dateScope": {
+            "from": 1820,
+            "to": 1832
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "cc-vnu-admin"
+          ],
+          "locator": "University history article directly read, especially paragraphs listing the October 1832 dissolution of Gia Dinh Thanh and creation of Phien An, Bien Hoa, Vinh Long, Dinh Tuong, An Giang and Ha Tien provinces, plus the new provincial fiscal, judicial, civil and military offices. The court edict is treated as a government viewpoint.",
+          "dateScope": {
+            "from": 1832,
+            "to": 1858
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "cc-army-conquest",
+            "cc-bnf-circulations"
+          ],
+          "locator": "French national military museum exhibition text checked critically. It traces rivalry, commercial ambitions and religious tensions behind intervention, and the naval conquest of southern Vietnam from 1858 to 1867. Its imperial framing is not adopted and conquest is not described as peaceful modernization. Institutional scholarly essay directly read. It notes the unimplemented 1787 treaty involving future Gia Long, the 1858-1867 conquest of Cochinchina, later expansion into Annam and Tonkin and the 1887 Indochinese Union. Used as a broad chronology with explicit colonial context.",
+          "dateScope": {
+            "from": 1858,
+            "to": 1862
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "cc-cambridge-conquest"
+          ],
+          "locator": "Cambridge chapter abstract checked. It dates the decision and expedition to 1857-1862, the Treaty of Saigon cession to 1862, failed Vietnamese negotiations for French withdrawal to 1862-1874, and the naval officers annexing the remaining Mekong plain. Used for sequence, not inaccessible chapter details.",
+          "dateScope": {
+            "from": 1862,
+            "to": 1867
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "cc-anom-government",
+            "cc-education",
+            "cc-print"
+          ],
+          "locator": "Original archival guide directly read. It describes the admiral-led government preceding the 1887 union and distinguishes directly administered Cochinchina under a governor from protectorates under residents superior. Its 1862-1954 archive span confirms that 1878 is not the colony end. Institutional catalog directly read. It records a Cochinchina administration course from 1874, Truong Vinh Ky geography of Lower Cochinchina from 1875 and a primary science primer from 1876. Catalog survival proves these books existed, not how many children used them. Institutional essay directly read. It states that the colonial administration published official material from the conquest, including the 1862 Bulletin officiel, and that romanized Vietnamese later expanded authorship and reading. Used to distinguish print technology from the power deciding what was printed.",
+          "dateScope": {
+            "from": 1867,
+            "to": 1878
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "cc-index",
+            "cc-coverage",
+            "cc-map1783",
+            "cc-map1800",
+            "cc-map1815"
+          ],
+          "locator": "Exact index record, coverage record and decoded geometry hashes in identity.json; all three geometries equal dc7fba43...",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "cc-map1783"
+          ],
+          "locator": "Decoded Polygon and ray-casting tests recorded in identity.json; the item names every tested inclusion and the most relevant exclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "cc-index",
+            "cc-map1815"
+          ],
+          "locator": "Own-project identity exception: one imported id bridges distinct political regimes; no external historical claim beyond the card phases is assigned to atlas files.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "cc-index",
+            "cc-coverage"
+          ],
+          "locator": "Related-id audit in identity.json and runtime card/override inventory. No appliesTo aliases are proposed.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "cc-coastal-agriculture"
+          ],
+          "locator": "Kono article abstract, study village east of Tra Vinh, settlement geography and explicit single-village method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "cc-battle"
+          ],
+          "locator": "Cultural Heritage Administration site chronology and battlefield description; casualty number deliberately omitted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "cc-cholon-thesis"
+          ],
+          "locator": "ANU thesis printed pp50-52, especially heterogeneity, maritime supply, rice support, 1802 victory and warning about victor-written narratives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "cc-nguyen-museum"
+          ],
+          "locator": "Vietnam National Museum Nguyen overview, independent period and policy list; labor burden is framed as a necessary implication, not a numerical claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "cc-minhmang-book"
+          ],
+          "locator": "JSTOR book record, indexed contents and preview language on Gia Dinh, local response and 1832 direct rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "cc-vnu-admin",
+            "cc-map1815"
+          ],
+          "locator": "VNU Hanoi article paragraphs262-272 and exact atlas bbox/point tests; source perspectives kept distinct.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "cc-army-conquest",
+            "cc-bnf-circulations"
+          ],
+          "locator": "Musee de Armee exhibition, forming French Indochina and conquest sections, plus BnF Circulations on the Franco-Spanish intervention; read critically against imperial framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "cc-cambridge-conquest"
+          ],
+          "locator": "Cambridge chapter abstract: expedition1857-1862, treaty possession, negotiations1862-1874 and annexation of remaining Mekong plain.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "cc-bnf-circulations",
+            "cc-vnu-admin"
+          ],
+          "locator": "BnF Circulations lines11-12 for conquest dates and later expansion; VNU Hanoi paragraphs262-272 for the named southern provinces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "cc-anom-government"
+          ],
+          "locator": "ANOM Indochina guide, territorial archives section: government of admirals, 1887 union and direct-colony/protectorate distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "cc-map1815",
+            "cc-bnf-government"
+          ],
+          "locator": "Atlas interval property to=1878 plus BnF governments essay lines11-17 on colony/protectorates, resistance and institutional continuities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "cc-waterfront-book"
+          ],
+          "locator": "Water Frontier contents and publisher/ANU description; chapters on junk trade, delta system, shipbuilding and Ca Mau-Tonle Sap riverine networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "cc-rice-trade"
+          ],
+          "locator": "Author-uploaded chapter record and indexed text on post-1800 South China trade; household equality explicitly not inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "cc-vinhte"
+          ],
+          "locator": "An Giang English portal, phases, commanders, initial labor groups and rations; celebratory source balanced with labor perspective.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "cc-irrigation"
+          ],
+          "locator": "VNUHCM journal article abstract/indexed text, named canal dates and multiple functions; no claim all inhabitants benefited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "cc-maps",
+            "cc-map1783"
+          ],
+          "locator": "BnF maps catalog items plus exact repeated atlas geometry; no claim the listed maps agree with one another.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "cc-housing"
+          ],
+          "locator": "Housing study lines126-127 and310-323: six selected large houses, communal sleeping/reception and explicit sample limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "cc-housing"
+          ],
+          "locator": "Housing study lines324-327, kitchen/dining arrangement and prayer/ancestor space; limited to selected house type.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "cc-cholon-thesis"
+          ],
+          "locator": "ANU thesis printed pp62-64, early accounts, house materials, shop-homes and well; geographic caveat explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "cc-religion"
+          ],
+          "locator": "Cornell thesis abstract, exact Gia Dinh,1790s-1802/Gia Long scope and religious-institution focus; no ritual detail beyond abstract.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "cc-coastal-agriculture"
+          ],
+          "locator": "Kono abstract, Tra Vinh coastal-complex village, settlement sequence, ethnic interaction and Buddhist-site method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "cc-clothing"
+          ],
+          "locator": "Vietnam National Museum clothing essay, regulations and named elite garments; public text states class and geographic limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "cc-singapore-trade"
+          ],
+          "locator": "Asian Civilisations Museum object essay, pre-1860s Cochinchina-Singapore junk traffic and cargo list; menu limitation explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "cc-waterfront-book"
+          ],
+          "locator": "Water Frontier chapter list and regional framing; examples kept generic because full text access was intermittent.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "cc-nguyen-museum"
+          ],
+          "locator": "Vietnam National Museum lines158-180, national object groups and dates; explicit survival/representativeness caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "cc-toys"
+          ],
+          "locator": "Vu Hong Nhi pp223-225, handmade materials, pretend household play, rhymes, and explicit Red River Delta scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "cc-bnf-literature"
+          ],
+          "locator": "BnF literature collection essay on nineteenth-century Han, Nom and quoc ngu materials; inequality phrased as a cautious limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "cc-education"
+          ],
+          "locator": "BnF Education lines154-161 and223-233, exact titles and years; access and reception not inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "cc-writing"
+          ],
+          "locator": "Vietnam National Museum lines15-18, issue date, scripts and title; short title and translation only.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "cc-writing"
+          ],
+          "locator": "Museum lines18-20; 10-word excerpt shortened with ellipsis from public-domain1865 subscription line, plus four-page/content description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "cc-print"
+          ],
+          "locator": "BnF legal-deposit essay, official print from conquest,1862 bulletin and later quoc ngu publishing; interpretation keeps both effects visible.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "cc-science-society"
+          ],
+          "locator": "BnF Sciences and society, health section on early conquest, traditional remedies/Chinese medicines and narrow Western medical community.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "cc-medical-topography"
+          ],
+          "locator": "Gueirard primary text, indexed excerpts on unsafe water, marsh emanations, dysentery and seasonal fevers; obsolete causation explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "cc-diarrhea-debate"
+          ],
+          "locator": "Archives de medecine navale volume30, pp29 onward, proposed Anguillula/chlorodyne explanation and reported doubts; no treatment endorsement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "cc-medicine-list"
+          ],
+          "locator": "BnF Medicine lines3-12 and95-108, exact dated works; healthcare access not inferred from publication.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "cc-medical-topography"
+          ],
+          "locator": "Gueirard primary text content and absence check for household toilet census; claim carefully limited to what the source does and does not document.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "cc-index",
+            "cc-map1815",
+            "cc-bnf-government"
+          ],
+          "locator": "Repository index checked for exact id cochin-china: name Cochin China, approximately 1783-1878. Separate indexed records include cochin, ai-viet, annam-1920, cochin-china-1920, french-indo-china and vietnam; this card does not merge them. Decoded with topojson-client. The 1815-1878 target repeats the exact earlier 33-position Polygon. Its to=1878 property is an atlas interval endpoint and does not date the end of the French colony or the lives of southern communities. Institutional scholarly essay directly read. It describes Minh Mang centralization, the French imposition of authority despite resistance, the later legal division into colony and protectorates, and the continuation of bureaucratic, lineage and client networks across political ruptures.",
+          "dateScope": {
+            "year": 1878
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "cochin-china",
+        "card": "cards/cochin-china.json",
+        "summary": "A sourced 1783-1878 lower-Mekong history of war, Nguyen rule, French conquest, canals, family life, print, medicine and map limits."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "cochin-china",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            104.38844388443886,
+            8.474866491728882,
+            106.75006750067502,
+            11.006624537576414
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "cochin-china",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            104.38844388443886,
+            8.474866491728882,
+            106.75006750067502,
+            11.006624537576414
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "cochin-china",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            104.38844388443886,
+            8.474866491728882,
+            106.75006750067502,
+            11.006624537576414
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target is cochin-china, indexed Cochin China, approximately1783-1878; it was missing before integration.",
+    "The target occurs in exactly three continuous intervals:1783-1800,1800-1815 and1815-1878.",
+    "All three decoded targets are the exact same Polygon: one ring,33 positions,bbox104.3884,8.4749,106.7501,11.0066.",
+    "Included point tests:MyTho,CanTho,VinhLong,ChauDoc,HaTien,RachGia,CaMau,BacLieu,SocTrang.",
+    "Excluded point tests:Saigon,Cholon,BienHoa,TayNinh,PhuQuoc,PhnomPenh,Hue,DaNang,QuyNhon,NhaTrang.",
+    "The card explicitly treats the feature as a partial lower-delta locator across several regimes, never as a continuous state or ethnic boundary.",
+    "Related ids cochin,ai-viet,annam,annam-1920,cochin-china-1920,french-indo-china,vietnam and cambodia remain distinct; no appliesTo is proposed.",
+    "The1878 endpoint is an imported atlas handoff, not the end of French Cochinchina; imported geometry remains unchanged."
+  ]
+}

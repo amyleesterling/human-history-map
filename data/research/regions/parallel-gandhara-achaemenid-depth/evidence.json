@@ -1,0 +1,778 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel gandhara-achaemenid research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "gan-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry: gandhara, name Gandhāra, circa 500 to 400 BCE. The distinct gandhara-grave-culture record covers 1000 to 700 BCE and was not merged."
+    },
+    {
+      "id": "gan-map500",
+      "title": "Human History Map, world-500 BCE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Decoded exact-id feature: one polygon and ring, 10 positions, bbox about 70.6201 to 73.8817 E and 32.8111 to 35.0618 N. Point tests include Taxila, Charsadda and Peshawar but exclude Barikot, Kabul, Jalalabad, Multan and Srinagar."
+    },
+    {
+      "id": "gan-map400",
+      "title": "Human History Map, world-400 BCE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Next atlas interval, 400 to 323 BCE: the separate Achaemenid Empire and Hindu kingdoms features overlap the target bbox. There is no exact gandhara feature, so the target endpoint is a snapshot handoff rather than a documented fall."
+    },
+    {
+      "id": "gan-overview",
+      "title": "Willem Vogelsang, Gandhāra, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/gandhara/",
+      "note": "Academic regional overview: geography around Taxila and Pushkalavati, Vedic and Achaemenid names, Bisitun listing, Pāṇini, earlier grave archaeology, Gandhara art and the region as a gateway. Used only for the overview and short index summary."
+    },
+    {
+      "id": "gan-relations",
+      "title": "Encyclopaedia Iranica, India iii: political and cultural relations in the Achaemenid period",
+      "url": "https://www.iranicaonline.org/articles/india-iii-relations-achaemenid-period/",
+      "note": "Academic review of conquest dating, uncertain duration of control, eastern peoples in inscriptions and reliefs, Bhir Mound evidence, seals and beads, and the lack of securely identifiable Achaemenid architecture at Taxila."
+    },
+    {
+      "id": "gan-satrapies",
+      "title": "Bruno Jacobs, Achaemenid Satrapies, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/achaemenid-satrapies/",
+      "note": "Reconstruction of Gandhara and neighboring administrative geography, probable indigenous government, named late Persian appointee Astis, subordinate local dynasts, and the negotiated authority visible during Alexander’s campaign."
+    },
+    {
+      "id": "gan-behistun",
+      "title": "Goethe University TITUS Old Persian Corpus, Behistun inscription DB I",
+      "url": "https://titus.uni-frankfurt.de/texte/etcs/iran/airan/apers/apers028.htm",
+      "note": "University linguistic corpus of the Old Persian Behistun text. Line 16 lists Gadāra among Darius I’s countries; the spelling supplies the exact-period written sample and imperial perspective."
+    },
+    {
+      "id": "gan-unicode",
+      "title": "Unicode Standard 17.0, Old Persian script",
+      "url": "https://www.unicode.org/versions/Unicode17.0.0/UnicodeStandard-17.0.pdf",
+      "note": "Official Unicode specification, section 11.3: Old Persian sign inventory, monumental use under Darius I, left-to-right direction and encoded characters. Used to document the digital rendering of the cuneiform sample."
+    },
+    {
+      "id": "gan-taxation",
+      "title": "Muhammad Dandamayev, Achaemenid Taxation, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/achaemenid-taxation/",
+      "note": "Academic synthesis of Herodotus’s tribute list and its dating: Sattagydia, Gandara and Arachosia together were assessed 170 talents. The grouping cannot be converted into a Gandharan household tax bill."
+    },
+    {
+      "id": "gan-persepolis",
+      "title": "Encyclopaedia Iranica, Persepolis",
+      "url": "https://www.iranicaonline.org/articles/persepolis/",
+      "note": "Academic description of Apadana delegations and offerings: figures identified as Gandarians bring a humped bull, circular shield and two decorative lances. Reliefs are imperial representation rather than documentary snapshots."
+    },
+    {
+      "id": "gan-clothing",
+      "title": "Encyclopaedia Iranica, Clothing in the Median and Achaemenid periods",
+      "url": "https://www.iranicaonline.org/articles/clothing-ii/",
+      "note": "Comparative study of Achaemenid visual evidence. Gandarians appear in an “Indian” clothing category with a kilt and sometimes a mantle; this is court art, male delegation dress and not a complete wardrobe survey."
+    },
+    {
+      "id": "gan-unesco-taxila",
+      "title": "UNESCO World Heritage Centre, Taxila",
+      "url": "https://whc.unesco.org/en/list/139",
+      "note": "Authoritative heritage synthesis of Taxila’s serial sites: Saraikala, Bhir Mound, Sirkap, Sirsukh and later monasteries show changing urban settlement, political phases and religious institutions over many centuries."
+    },
+    {
+      "id": "gan-taxila-museum",
+      "title": "Taxila Museum, Bhir Mound",
+      "url": "https://taxilamuseum.punjab.gov.pk/node/77",
+      "note": "Punjab government museum site: Bhir chronology, excavated streets and houses, courtyard soak-wells, storage jars, pottery, beads, glass, bone, ivory, metal objects, terracotta toys, bent-bar money and inscriptions. Deposits span several centuries."
+    },
+    {
+      "id": "gan-masterplan",
+      "title": "Government of Punjab Urban Unit, Taxila Heritage City Master Plan",
+      "url": "https://urbanunit.gov.pk/Download/publications/Files/8/2025/Taxila%20Master%20Plan_252025_v3.pdf",
+      "note": "Official planning study, Bhir Mound section: exposed elite houses around courtyards, 15 to 20 rooms, windows, mud-covered wooden roofs, drains and courtyard soak-wells; representativeness and archaeological protection limits are explicit."
+    },
+    {
+      "id": "gan-pakarch",
+      "title": "Pakistan Archaeology 12, stratigraphic excavations at Bhir Mound",
+      "url": "https://ignca.gov.in/Asi_data/64227.pdf",
+      "note": "Excavation report: four building periods, limited deep sounding, iron in the earliest phase, later drains and soak-wells, iron slag in the last phase, and insufficient evidence to prove Marshall’s Achaemenid attribution."
+    },
+    {
+      "id": "gan-sanitation",
+      "title": "Archaeological Survey of India annual report, comparative notes on Bhir Mound soak-wells",
+      "url": "https://ignca.gov.in/Asi_data/21765.pdf",
+      "note": "Historical archaeological report compares disposal systems and describes Bhir soak-wells made from stone or bottomless stacked jars. The excavator called the arrangement insanitary; its terminology and colonial-era interpretation require caution."
+    },
+    {
+      "id": "gan-barikot-chronology",
+      "title": "Olivieri and colleagues, revised chronology and cultural sequence of Barikot",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168583X19303866",
+      "note": "Peer-reviewed radiocarbon and stratigraphic study: Barikot preserves continuous occupation and an early urban phase from about 500 BCE, with proposed Achaemenid, Mauryan and Indo-Greek acculturational phases and explicit evidentiary limits."
+    },
+    {
+      "id": "gan-double-crop",
+      "title": "Luca Maria Olivieri, Double-crop Pocket Zones",
+      "url": "https://heiup.uni-heidelberg.de/catalog/view/1582/2696/128604",
+      "note": "Open academic chapter: archaeobotanical evidence for wheat or barley and rice double-cropping in Swat settlements including Barikot, regional ecology, early urbanization and agricultural links to route settlements."
+    },
+    {
+      "id": "gan-beads",
+      "title": "The typology, production and adornment of Gandharan beads at Barikot",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352226720301744",
+      "note": "Peer-reviewed material study of Barikot beads: excavation context, shapes, raw-material identification and craft analysis. Its main assemblages postdate the exact map interval, so the card labels them as later evidence."
+    },
+    {
+      "id": "gan-met-art",
+      "title": "The Metropolitan Museum of Art, The Art of Gandhara in the Metropolitan Museum of Art",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Gandhara_in_The_Metropolitan_Museum_of_Art.pdf",
+      "note": "Museum catalogue: chronology of Gandharan production, urban luxury objects, mirror handles, shawls, hairstyles, jewelry and cross-regional fashions, mainly from the first century BCE onward."
+    },
+    {
+      "id": "gan-hariti",
+      "title": "Metropolitan Museum of Art, Rondel with the Goddess Hariti",
+      "url": "https://www.metmuseum.org/art/collection/search/38221",
+      "note": "Object record for a circa first-century silver-and-gold rondel from ancient Gandhara showing Hariti nursing a child. It documents later religious imagery of caregiving, not a fifth-century BCE family portrait."
+    },
+    {
+      "id": "gan-panini",
+      "title": "Vincenzo Vergiani, The Introduction of Writing into Achaemenid Gandhāra and the Origin of Pāṇini’s Grammar",
+      "url": "https://journals.sagepub.com/doi/10.1177/09719458241226574",
+      "note": "Peer-reviewed 2024 article: Indian tradition places Pāṇini at Śalātura in Gandhara; his linguistic variety is northwestern; the relationship among Achaemenid writing, Kharoṣṭhī and grammar is evaluated as an argument, not settled biography."
+    },
+    {
+      "id": "gan-uw-kharosthi",
+      "title": "University of Washington, The British Library Kharoṣṭhī Fragments",
+      "url": "https://asian.washington.edu/british-library-kharosthi-fragments",
+      "note": "University manuscript project: Gāndhārī language, Kharoṣṭhī script, birch-bark scrolls, approximate third-century BCE to fourth-century CE currency, and first-century manuscript fragments preserving diverse Buddhist texts."
+    },
+    {
+      "id": "gan-loc-scroll",
+      "title": "Library of Congress, Gandhara scroll",
+      "url": "https://www.loc.gov/item/2018305008/",
+      "note": "Primary manuscript catalogue and image: a fragile birch-bark scroll from ancient Gandhara, written in Gāndhārī with Kharoṣṭhī script, probably first century BCE to first century CE."
+    },
+    {
+      "id": "gan-sydney-texts",
+      "title": "University of Sydney, Gandhāran Buddhist Texts project",
+      "url": "https://gandhari-texts.sydney.edu.au/",
+      "note": "University research project: early manuscripts have transformed study of Buddhist texts, genres, social practice and transmission from Gandhara toward Central and East Asia. Most manuscripts are centuries later than this map slice."
+    },
+    {
+      "id": "gan-gandhari-grammar",
+      "title": "Gandhari.org, Outline of Gāndhārī Grammar",
+      "url": "https://gandhari.org/grammar",
+      "note": "Scholarly digital corpus grammar: Kharoṣṭhī derives from Aramaic as used in the Achaemenid Empire, of which Gandhara formed a province. Used to explain script history without claiming a direct surviving local text from 500 BCE."
+    },
+    {
+      "id": "gan-physicians",
+      "title": "Ravishankar and Shukla, Physicians of ancient India",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5084543/",
+      "note": "Medical-history review of later textual traditions about Taxila, Jīvaka, teacher-led training and medicine. The card explicitly treats the narratives as traditions rather than an excavated enrollment list or exact-period clinic record."
+    },
+    {
+      "id": "gan-skeletal",
+      "title": "Hemphill, Zahir and Ali, Skeletal Analysis of Gandharan Graves at Shah Mirandeh",
+      "url": "https://ojs.uop.edu.pk/ancientpakistan/article/download/23/19/37",
+      "note": "Peer-reviewed University of Peshawar study of 18 people from northern protohistoric cemetery contexts: fragmentary preservation, infants through adults, dental caries, enamel hypoplasia, trauma and strict sample limitations."
+    },
+    {
+      "id": "gan-gandharan-art",
+      "title": "Encyclopaedia Iranica, Gandhāran Art",
+      "url": "https://www.iranicaonline.org/articles/gandharan-art/",
+      "note": "Academic art-history synthesis: Gandharan art begins in securely discussed form around the first century BCE at Taxila and Butkara I, develops under later dynasties, and cannot be projected unchanged into the fifth century BCE."
+    },
+    {
+      "id": "gan-unesco-barikot",
+      "title": "UNESCO World Heritage Centre tentative list, Bazira-Barikot",
+      "url": "https://whc.unesco.org/en/tentativelists/7034/",
+      "note": "Pakistan’s heritage nomination: long urban sequence, pottery, terracotta, beads, metalworking debris, coinage, religious architecture, preservation value and the importance of well-provenanced modern excavation."
+    },
+    {
+      "id": "gan-strabo",
+      "title": "Strabo, Geography, Book XV, Perseus Digital Library",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0239%3Abook%3D15",
+      "note": "Ancient Greek literary account, written centuries after the fifth-century BCE map slice: Taxila is called a large, well-governed city in fertile and populous country. Used as a later witness with viewpoint and dating limits."
+    },
+    {
+      "id": "gan-diodorus",
+      "title": "Diodorus Siculus, Library of History, Book XVII, Perseus Digital Library",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0084%3Abook%3D17&force=y",
+      "note": "Ancient narrative of Alexander and Taxiles/Mophis: alliance, restored kingship and army. It reflects a Greek author’s later account and shows political negotiation rather than the disappearance of local society."
+    }
+  ],
+  "entities": [
+    {
+      "id": "gandhara",
+      "card": "data/cards/gandhara.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "gan-overview"
+          ],
+          "locator": "Academic regional overview: geography around Taxila and Pushkalavati, Vedic and Achaemenid names, Bisitun listing, Pāṇini, earlier grave archaeology, Gandhara art and the region as a gateway. Used only for the overview and short index summary.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "gan-relations"
+          ],
+          "locator": "Academic review of conquest dating, uncertain duration of control, eastern peoples in inscriptions and reliefs, Bhir Mound evidence, seals and beads, and the lack of securely identifiable Achaemenid architecture at Taxila.",
+          "dateScope": {
+            "from": -550,
+            "to": -520
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "gan-behistun",
+            "gan-taxation"
+          ],
+          "locator": "University linguistic corpus of the Old Persian Behistun text. Line 16 lists Gadāra among Darius I’s countries; the spelling supplies the exact-period written sample and imperial perspective. Academic synthesis of Herodotus’s tribute list and its dating: Sattagydia, Gandara and Arachosia together were assessed 170 talents. The grouping cannot be converted into a Gandharan household tax bill.",
+          "dateScope": {
+            "from": -520,
+            "to": -400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "gan-satrapies"
+          ],
+          "locator": "Reconstruction of Gandhara and neighboring administrative geography, probable indigenous government, named late Persian appointee Astis, subordinate local dynasts, and the negotiated authority visible during Alexander’s campaign.",
+          "dateScope": {
+            "from": -400,
+            "to": -327
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "gan-diodorus",
+            "gan-overview"
+          ],
+          "locator": "Ancient narrative of Alexander and Taxiles/Mophis: alliance, restored kingship and army. It reflects a Greek author’s later account and shows political negotiation rather than the disappearance of local society. Academic regional overview: geography around Taxila and Pushkalavati, Vedic and Achaemenid names, Bisitun listing, Pāṇini, earlier grave archaeology, Gandhara art and the region as a gateway. Used only for the overview and short index summary.",
+          "dateScope": {
+            "from": -327,
+            "to": -185
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "gan-met-art"
+          ],
+          "locator": "Museum catalogue: chronology of Gandharan production, urban luxury objects, mirror handles, shawls, hairstyles, jewelry and cross-regional fashions, mainly from the first century BCE onward.",
+          "dateScope": {
+            "from": -185,
+            "to": 50
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "gan-gandharan-art",
+            "gan-uw-kharosthi"
+          ],
+          "locator": "Academic art-history synthesis: Gandharan art begins in securely discussed form around the first century BCE at Taxila and Butkara I, develops under later dynasties, and cannot be projected unchanged into the fifth century BCE. University manuscript project: Gāndhārī language, Kharoṣṭhī script, birch-bark scrolls, approximate third-century BCE to fourth-century CE currency, and first-century manuscript fragments preserving diverse Buddhist texts.",
+          "dateScope": {
+            "from": 50,
+            "to": 300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "gan-unesco-taxila",
+            "gan-unesco-barikot"
+          ],
+          "locator": "Authoritative heritage synthesis of Taxila’s serial sites: Saraikala, Bhir Mound, Sirkap, Sirsukh and later monasteries show changing urban settlement, political phases and religious institutions over many centuries. Pakistan’s heritage nomination: long urban sequence, pottery, terracotta, beads, metalworking debris, coinage, religious architecture, preservation value and the importance of well-provenanced modern excavation.",
+          "dateScope": {
+            "from": 300,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "gan-index",
+            "gan-map500"
+          ],
+          "locator": "Index row and decoded target topology statistics; no historical border is inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "gan-map500"
+          ],
+          "locator": "Decoded point-in-polygon tests listed in identity.json.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "gan-map400"
+          ],
+          "locator": "Adjacent world-bc400 feature inventory and bbox intersection; joke does not assert a dated calendar event.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "gan-behistun"
+          ],
+          "locator": "DB I country list and royal authorship; imperial-viewpoint limit explicit.",
+          "dateScope": {
+            "year": -520
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "gan-relations",
+            "gan-pakarch"
+          ],
+          "locator": "Iranica assessment of Achaemenid material at Taxila and stratigraphic report’s explicit inability to prove the attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "gan-satrapies"
+          ],
+          "locator": "Sections 7.3 and 7.3.1 on administrative geography, indigenous family and local dynasts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "gan-taxation"
+          ],
+          "locator": "Iranica summary of Herodotus 3.91 and dating; household allocation is explicitly unknown.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "gan-persepolis"
+          ],
+          "locator": "Persepolis delegation catalogue and iconographic context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "gan-satrapies"
+          ],
+          "locator": "Named officials and rank cautions in Gandāra/Gandhāra satrapy section.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "gan-relations"
+          ],
+          "locator": "Material-culture review of seals, beads, architecture and acculturation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "gan-unesco-taxila"
+          ],
+          "locator": "UNESCO serial-site geography and settlement sequence; route users stated as broad historical categories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "gan-unesco-taxila"
+          ],
+          "locator": "UNESCO component sequence and chronology; anti-projection caveat explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "gan-strabo"
+          ],
+          "locator": "Geography XV.1.28 description; temporal and literary-source limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "gan-barikot-chronology"
+          ],
+          "locator": "Methods, samples and revised early urban chronology; no claim that every sample was grain.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "gan-beads"
+          ],
+          "locator": "Study methodology, forms, materials and chronology; later-date limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "gan-masterplan"
+          ],
+          "locator": "Bhir house plan, rooms, windows, roof and elite-quarter assessment in official master plan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "gan-masterplan"
+          ],
+          "locator": "House architecture supports space description; possible occupants are marked as possibilities, not findings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "gan-taxila-museum"
+          ],
+          "locator": "Official museum list of Bhir finds; occupational roles are bounded functional inferences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "gan-skeletal"
+          ],
+          "locator": "Sample size, ages, preservation and burial-context cautions; geographic and chronological limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "gan-hariti"
+          ],
+          "locator": "Met date, medium and nursing iconography; exact-period exclusion explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "gan-double-crop"
+          ],
+          "locator": "Paleobotanical discussion of wheat/barley and rice double-cropping; menu limitation explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "gan-double-crop"
+          ],
+          "locator": "Chapter’s agricultural-zone and route-settlement argument; humorous transport line is clearly illustrative.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "gan-pakarch"
+          ],
+          "locator": "Period sequence, early iron and later Period IV slag; attribution restraint follows report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "gan-clothing"
+          ],
+          "locator": "Iranica clothing typology and depicted delegations; representativeness limits explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "gan-taxila-museum"
+          ],
+          "locator": "Official find list; individual dating and use remain unspecified.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "gan-panini"
+          ],
+          "locator": "Article’s tradition, linguistic geography and historical argument; biographical uncertainty explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "gan-panini"
+          ],
+          "locator": "Peer-reviewed discussion of grammar and writing context; manuscript and later-script cautions explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "gan-physicians"
+          ],
+          "locator": "Medical-history review of teacher-led traditions; modern-institution and archaeological-evidence caveat explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "gan-behistun",
+            "gan-unicode"
+          ],
+          "locator": "TITUS DB I line 16 and Unicode Old Persian directionality and character repertoire.",
+          "dateScope": {
+            "year": -520
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "gan-gandhari-grammar",
+            "gan-uw-kharosthi"
+          ],
+          "locator": "Grammar’s derivation statement and UW dating range; directional statement follows Kharoṣṭhī grammar convention.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "gan-relations",
+            "gan-gandharan-art"
+          ],
+          "locator": "Achaemenid cultural-relations review and later start of securely discussed Gandharan art; household limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "gan-gandharan-art"
+          ],
+          "locator": "Iranica chronology and cross-cultural art-historical synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "gan-met-art"
+          ],
+          "locator": "Catalogue section on urban luxury, dress, jewelry and foreign fashion; class bias explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "gan-loc-scroll"
+          ],
+          "locator": "LOC catalogue language, script, material and date; exact-period exclusion explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "gan-sydney-texts"
+          ],
+          "locator": "University project overview of genres, scholarship and transmission; chronological distinction explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "gan-physicians"
+          ],
+          "locator": "Medical-history review’s Jīvaka and teacher-led training discussion; literary-tradition status explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "gan-skeletal"
+          ],
+          "locator": "Study pathology results and preservation warnings; population extrapolation explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "gan-taxila-museum",
+            "gan-sanitation"
+          ],
+          "locator": "Museum house description and historical report’s construction details and sanitation assessment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "gan-sanitation"
+          ],
+          "locator": "Historical comparison of soak-wells and sewage disposal; distinction between feature and latrine is an explicit evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "gan-masterplan",
+            "gan-pakarch"
+          ],
+          "locator": "Official plan and stratigraphic report document setting and drainage but not a universal exact-period supply system.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "gan-map400"
+          ],
+          "locator": "Exact adjacent map handoff; no historical event inferred at endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "gan-diodorus",
+            "gan-satrapies"
+          ],
+          "locator": "Diodorus alliance narrative and Iranica’s local-dynast reconstruction; domestic continuity framed cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "gan-taxila-museum"
+          ],
+          "locator": "Taxila Museum’s chronology and urban sequence; interpretive continuity claim kept distinct from political identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "gan-barikot-chronology",
+            "gan-unesco-barikot"
+          ],
+          "locator": "Modern methods and well-provenanced find categories from research and heritage nomination.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "gan-panini",
+            "gan-sydney-texts"
+          ],
+          "locator": "Grammar-origin research and manuscript-transmission project; synthesis avoids sole-cause or ethnic ownership claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "gan-diodorus",
+            "gan-unesco-taxila"
+          ],
+          "locator": "Ancient narrative of Alexander and Taxiles/Mophis: alliance, restored kingship and army. It reflects a Greek author’s later account and shows political negotiation rather than the disappearance of local society. Authoritative heritage synthesis of Taxila’s serial sites: Saraikala, Bhir Mound, Sirkap, Sirsukh and later monasteries show changing urban settlement, political phases and religious institutions over many centuries.",
+          "dateScope": {
+            "year": -327
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "gandhara",
+        "card": "cards/gandhara.json",
+        "kind": "state",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "Achaemenid-era Gandhara linked Taxila and the Peshawar basin to wider Asian routes; its cities, farms, grammar, later art and manuscripts outlasted every imperial handoff."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc500.json",
+          "properties": {
+            "civ": "gandhara",
+            "from": -500,
+            "to": -400,
+            "precision": 1
+          },
+          "bounds": [
+            70.62010620106201,
+            32.811108785536845,
+            73.8817388173882,
+            35.06177757426819
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target gandhara is indexed circa 500 to 400 BCE, appears in one basemap snapshot and was missing before integration.",
+    "The decoded target is one 10-position polygon with bbox about 70.6201 to 73.8817 E and 32.8111 to 35.0618 N.",
+    "Point tests include Taxila, Charsadda and Peshawar but exclude Barikot, Kabul, Jalalabad, Multan and Srinagar; the polygon is a coarse core-region locator.",
+    "The 400 BCE endpoint is a category handoff to broader Achaemenid Empire and Hindu kingdoms features, not a documented fall.",
+    "The separate gandhara-grave-culture record is an earlier archaeological label and is not linked through appliesTo.",
+    "Historical Gandhara continued through multiple later regimes; periods beyond the exact map interval are explicitly labeled as later history."
+  ]
+}

@@ -1,0 +1,982 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel laos-1492 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "lx-atlas-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Checked locally for exact id laos, label Laos, approximate lifetime 1492-1650, and separate laotian-states, laos-1800 and laos-1938 records. The dates are atlas metadata, not Lan Xang foundation or fall dates."
+    },
+    {
+      "id": "lx-atlas-coverage",
+      "title": "Human History Map, generated research coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Checked locally before integration: laos is missing a card and has four exact intervals, 1492-1500, 1500-1530, 1530-1600 and 1600-1650, with no features outside its indexed lifetime."
+    },
+    {
+      "id": "lx-atlas-1400",
+      "title": "Human History Map, world-1400 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded locally as transition context. Tested Luang Prabang and Phonsavan are assigned to ai-viet, Vientiane to ayutthaya, and several northern Lao points to overlapping Yuan and Ming features; these are evident atlas artifacts."
+    },
+    {
+      "id": "lx-atlas-1492",
+      "title": "Human History Map, world-1492 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded locally. The exact laos feature for 1492-1500 is one 15-vertex Polygon, bbox 101.6452165,17.4504325 to 105.5728557,20.9660657. It contains tested Luang Prabang and Phonsavan but excludes every other named test point, including Vientiane."
+    },
+    {
+      "id": "lx-atlas-1500",
+      "title": "Human History Map, world-1500 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded locally. The laos feature for 1500-1530 is again one 15-vertex Polygon with almost the same bbox and exactly the same named point-test results as the 1492 feature."
+    },
+    {
+      "id": "lx-atlas-1530",
+      "title": "Human History Map, world-1530 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded locally. The laos feature for 1530-1600 becomes one 39-vertex Polygon, bbox 98.5635856,19.0492195 to 104.7196472,23.1841455. It adds tested northern places through Jinghong but still excludes Vientiane, Thakhek, Savannakhet and Pakse."
+    },
+    {
+      "id": "lx-atlas-1600",
+      "title": "Human History Map, world-1600 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Decoded locally. The laos feature for 1600-1650 remains one 39-vertex Polygon with the same bbox and point results as 1530, while contacts include ai-viet, ayutthaya, lan-na, ming-dynasty and shan-states."
+    },
+    {
+      "id": "lx-atlas-1650",
+      "title": "Human History Map, world-1650 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Decoded locally as successor context. The separate laotian-states feature suddenly covers tested Vientiane, Luang Prabang, Thakhek, Savannakhet and Pakse. This is a dataset handoff at 1650, not Lan Xang fragmentation."
+    },
+    {
+      "id": "lx-lockhart",
+      "title": "Bruce M. Lockhart, Lan Xang Kingdom (early Laos), The Encyclopedia of Empire",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118455074.wbeoe154",
+      "note": "Scholarly encyclopedia entry checked for Lan Xang as the polity regarded as an ancestor of modern Laos, the severe uncertainty of much early history, its late-fourteenth-century formation from smaller polities in later chronicles, and survival until roughly 1700."
+    },
+    {
+      "id": "lx-country-study",
+      "title": "Andrea Matles Savada, ed., Laos: A Country Study, Library of Congress",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/la/laoscountrystudy00sava_0/laoscountrystudy00sava_0.pdf",
+      "note": "Federal Research Division country study checked at the History chapter, Lan Xang subsection, for the royal sequence, sixteenth-century Lan Na connection, capital move, Burmese interventions, later restoration and kingdom-wide chronology. It synthesizes older scholarship rather than replacing inscriptions."
+    },
+    {
+      "id": "lx-niu-chronology",
+      "title": "Northern Illinois University SEAsite, Chronology of the Lan Xang Dynasty",
+      "url": "https://seasite.niu.edu/lao/chronology_of_lan_xang_dynasty.htm",
+      "note": "University-hosted chronology checked for the approximate royal sequence around the atlas opening, including Somphou 1497-1500, Visoun 1500-1520 and later rulers. Regnal dates differ among chronicles, so the card uses circa language."
+    },
+    {
+      "id": "lx-succession",
+      "title": "Michel Lorrillard, La succession de Setthāthirāt: réappréciation d’une période de l’histoire du Lān Xāng, Aséanie",
+      "url": "https://www.persee.fr/doc/asean_0859-9009_1999_num_4_1_1641",
+      "note": "Peer-reviewed historical reassessment checked at pp. 45-64 for the poorly known late-sixteenth- and early-seventeenth-century transition between Setthathirath and Suriyavongsa and for the limitations and disagreements among chronicles and inscriptions."
+    },
+    {
+      "id": "lx-capital",
+      "title": "Souneth Phothisane, The Establishment of Vientiane as the New Capital of the Lan Xang Kingdom, Journal of Mekong Societies",
+      "url": "https://so03.tci-thaijo.org/index.php/mekongjournal/article/download/245652/168702/894630",
+      "note": "Peer-reviewed article checked at pp. 3-7 for the 1560 capital transfer, Vientiane-area building and inscriptions, rice-producing hinterland, temple land donations, Sangha appointments and the strategic relation between Luang Prabang and Vientiane."
+    },
+    {
+      "id": "lx-treaty",
+      "title": "A. B. Griswold and Prasert na Nagara, Inscription of 1563 A.D. Recording a Treaty between Laos and Ayodhya in 1560, Journal of the Siam Society",
+      "url": "https://thesiamsociety.org/wp-content/uploads/1979/03/JSS_067_2g_GriswoldPrasert_InscriptionOf1563RecordingTreatyBetweenLaosAndAyodhya1560.pdf",
+      "note": "Epigraphic edition checked at pp. 2-8 for the damaged bilingual-script inscription, its 1560 alliance, 1563 erection date, titles of both kings, mutual friendship and defense language, and the editors’ translation and uncertainty marks."
+    },
+    {
+      "id": "lx-ayutthaya",
+      "title": "Supaporn Phetrakosol, A Relationship between Ayutthaya and Lan Xang, Journal of the Faculty of Arts, Silpakorn University",
+      "url": "https://so04.tci-thaijo.org/index.php/jasu/article/view/194694",
+      "note": "Peer-reviewed article abstract and references checked for long-running political, religious, cultural and trading relationships, Ayutthaya as a trade outlet, and the 1560 Phra That Si Song Rak alliance monument."
+    },
+    {
+      "id": "lx-burma",
+      "title": "Nguyễn Mậu Hùng, Siam, Lan Xang and Burma over Chiang Mai, Can Tho University Journal of Science",
+      "url": "https://doaj.org/article/6548e867dd334d26b75073c47b26d011",
+      "note": "University-journal abstract checked for the complex mid-sixteenth- to early-seventeenth-century contest over Chiang Mai, Burmese expansion, and Lan Xang’s survival after prolonged struggle. It cautions against narrating the wars as one simple bilateral invasion."
+    },
+    {
+      "id": "lx-community",
+      "title": "The Development of Lan Xang Communities in the Loei-Nam Mong River Basin: Vientiane Period (1560-1779), Journal of Mekong Societies",
+      "url": "https://so03.tci-thaijo.org/index.php/mekongjournal/article/download/264136/177539/1046258",
+      "note": "Peer-reviewed archaeology and epigraphy article checked at pp. 161-176, especially discussion of 1591 inscriptions dedicating land, rice fields, temple dependents and sanctions, plus the changing right-bank Mekong settlement network."
+    },
+    {
+      "id": "lx-rice",
+      "title": "Jonathan Rigg, From Subsistence to Commercial Rice Production in Laos",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-15-0998-8_5",
+      "note": "Academic book chapter checked for lowland muang dependence on rice-growing populations and surpluses, Lan Xang’s reach through northern highlands and the Khorat Plateau, and the Vientiane plain’s greater surplus capacity as one factor in the capital move."
+    },
+    {
+      "id": "lx-economy-review",
+      "title": "Michel Lorrillard, review of Yoshiyuki Masuhara’s Economic History of Lan Xang, Aséanie",
+      "url": "https://www.persee.fr/doc/asean_0859-9009_2004_num_13_1_1821",
+      "note": "Scholarly review checked at pp. 178-184 for the problem of reconstructing a landlocked kingdom’s sixteenth- and seventeenth-century economy, the centrality of trade evidence, and the warning that the material basis of the so-called golden age remains incompletely known."
+    },
+    {
+      "id": "lx-stuartfox",
+      "title": "Martin Stuart-Fox, The Lao Kingdom of Lan Xang: Rise and Decline",
+      "url": "https://lao-online.com/all_files/books/B01472.pdf",
+      "note": "Full scholarly monograph checked at chapters 4-6, especially pp. 64-96, for royal chronology, muang organization, war, trade networks, craft production, VOC observations, imported cloth and travel times. Hearsay in early European reports is identified as such."
+    },
+    {
+      "id": "lx-wuysthoff",
+      "title": "Wouter Feldberg, Gerrit Wuijsthoff’s Journey to the Lao Court at Vientiane, 1641-1642",
+      "url": "https://seasite.niu.edu/lao/LaoStudies/wfeld.htm",
+      "note": "University-hosted conference paper checked for the VOC mission’s July 1641 departure from Lovek, journey to Souligna Vongsa’s court, surviving journal, and its rare outsider observations about customs, trade, monarchy and politics."
+    },
+    {
+      "id": "lx-uva-textiles",
+      "title": "H. ten Brummelhuis, Lan Xang and the global textile trade in Gerrit van Wuysthoff’s travel report",
+      "url": "https://www.dare.uva.nl/id/82d3465d-bcc9-4ee9-b77a-7324bc900323",
+      "note": "University of Amsterdam repository record checked for the scholarly chapter, its 1641-1642 primary-source basis, global textile-trade focus, publication details and page range 125-139."
+    },
+    {
+      "id": "lx-eic-silk",
+      "title": "D. K. Bassett, The Trade of the English East India Company in Cambodia, 1651-1656, Journal of the Royal Asiatic Society",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/trade-of-the-english-east-india-company-in-cambodia-16511656/52B163879D03781EB2B08DE813097568",
+      "note": "Peer-reviewed article notes checked at pp. 58-60 for Wuysthoff’s 1641 identification of Huijloun near Vientiane as a silk-cloth production and export center connected with Siam, Tonkin, Annam and Cambodia."
+    },
+    {
+      "id": "lx-voc-archives",
+      "title": "UNESCO Memory of the World nomination, Archives of the Dutch East India Company",
+      "url": "https://mowid.anri.go.id/uploads/r/null/f/5/2/f52c2903d1aadd39936b9eaad3bb6e9aa9fa3287afbc93d2c3f0aa82e617303f/netherlands_voc_archives.pdf",
+      "note": "Archival nomination checked for the scale of surviving 1635-1644 Laos-Cambodia documentation, the VOC Cambodia post’s rice, deerskin and lacquer trade, and Wuysthoff’s 1641 expedition report. Corporate archives reflect commercial priorities."
+    },
+    {
+      "id": "lx-unesco-luang",
+      "title": "UNESCO World Heritage Centre, Town of Luang Prabang",
+      "url": "https://whc.unesco.org/en/list/479",
+      "note": "World Heritage description checked for the Mekong-Nam Khan setting, Lan Xang capital and Buddhist-center history, Wat Xieng Thong’s sixteenth-century origin, wooden and masonry building traditions, temple-village pattern, wetlands and warnings about later rebuilding."
+    },
+    {
+      "id": "lx-wat-xieng",
+      "title": "Luang Prabang Tourism Department, Wat Xieng Thong",
+      "url": "https://tourismluangprabang.org/things-to-do/buddhism/wat-xiengthong/",
+      "note": "Official local tourism page checked for the monastery’s attribution to Setthathirath, Lan Xang architectural identity, later survival and four documented restoration campaigns. Present decoration is not assumed to be wholly sixteenth-century fabric."
+    },
+    {
+      "id": "lx-nara-wat",
+      "title": "Asia-Pacific Cultural Centre for UNESCO, Wat Xieng Thong conservation report",
+      "url": "https://www.nara.accu.or.jp/img/report/report2018.pdf",
+      "note": "Conservation report checked for Wat Xieng Thong’s circa-1560 construction, royal coronation and festival roles, and the need for modern conservation. It distinguishes institutional continuity from unchanged material fabric."
+    },
+    {
+      "id": "lx-gallery-buddha",
+      "title": "National Gallery of Australia, Buddha sheltered by Muchalinda, via Google Arts & Culture",
+      "url": "https://artsandculture.google.com/asset/buddha-sheltered-by-muchalinda-the-serpent-king-lan-xang-kingdom-14th-18th-centuries-laos/YgGpb6y3VqgQbw",
+      "note": "Museum object record checked for a Lao bronze dated fifteenth-sixteenth century, seven-headed serpent canopy, local ideal of beauty, technical quality and its placement within Lan Xang artistic production. The date range is broad, not a named workshop record."
+    },
+    {
+      "id": "lx-inscriptions",
+      "title": "Michel Lorrillard, The Inscriptions of the Lan Na and Lan Xang Kingdoms: A New Approach to Cross-Border History",
+      "url": "https://www.researchgate.net/publication/359056492_The_Inscriptions_of_the_Lan_Na_and_Lan_Xang_Kingdoms_A_New_Approach_to_Cross-Border_History",
+      "note": "Scholarly article checked at pp. 22-39 and its Vat Visun appendix for inscription distribution, donors, lands, taxes and dependents; a sixteenth-century Fak Kham text; modern Lao transcription; and English translation of a royal donation ordinance."
+    },
+    {
+      "id": "lx-literary-heritage",
+      "title": "Michel Lorrillard, The Written Heritage of Laos and its Preservation",
+      "url": "https://digital.crossasia.org/wp-content/uploads/2021/10/literaryheritageoflaos28_lorrillard_en.pdf",
+      "note": "Scholarly paper checked at pp. 6-7 for 1497 and 1530 secular-script inscriptions, Fak Kham and Tham development, sixty Tipitaka volumes and learned monks sent in 1523, Phothisarath’s 1527 edict, and the Mekong-centered limits of writing’s spread."
+    },
+    {
+      "id": "lx-medicine",
+      "title": "Bethany G. Elkington et al., Folk Epidemiology Recorded in Palm Leaf Manuscripts of Laos",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3703660/",
+      "note": "Peer-reviewed study checked at lines 94-150 and 189-218 for manuscript construction, diverse scripts and subjects, monks as healers, and strict dating limits: only three medical manuscripts in its analyzed sample had dates, all from 1913 or later."
+    },
+    {
+      "id": "lx-dllm",
+      "title": "Digital Library of Lao Manuscripts, About the Collection",
+      "url": "https://digital.crossasia.org/digital-library-of-lao-manuscripts-about-dllm-collection/?lang=en",
+      "note": "Library documentation checked for palm-leaf preparation, stylus incision, soot darkening, oil treatment, cords, wooden covers and cloth wrapping, plus preservation and cataloguing practices. Surviving bundles may be later copies of older works."
+    },
+    {
+      "id": "lx-niu-literature",
+      "title": "Northern Illinois University SEAsite, Introduction to Lao Literature",
+      "url": "https://seasite.niu.edu/lao/LaoLiterature/Introduction_to_Lao_lit.htm",
+      "note": "University-hosted literature overview checked for the sixteenth-century flowering of art, literature and scholarship, Lan Na and Buddhist influences, temple-centered literacy, young male novices and monks, and the mixture of written and oral traditions."
+    },
+    {
+      "id": "lx-beliefs",
+      "title": "Sukanya Suchxaya, An Adaptation of Traditional Beliefs to Buddhism: A Study of Lan Xang Literature",
+      "url": "https://digital.car.chula.ac.th/arv/vol13/iss1/2/",
+      "note": "Chulalongkorn University repository record and abstract checked for the study of how Lan Xang literature adapted older beliefs within Buddhism. It supports coexistence and literary negotiation, not a claim that one royal edict erased local practice."
+    },
+    {
+      "id": "lx-women-law",
+      "title": "Pakdeekul Ratana, Amnuaypond Kidpromma and Adilan Usama, Influence of Ancient Indian Legislation on Traditional Law in Mainland Southeast Asia",
+      "url": "https://so08.tci-thaijo.org/index.php/artssu/article/view/5181",
+      "note": "Peer-reviewed article checked at abstract lines 45-55 for Lan Xang legal traditions concerning family guardianship, adultery, divorce, property and inheritance, and for selective adaptation of Indian-derived law with Buddhist and local ideas."
+    },
+    {
+      "id": "lx-architecture",
+      "title": "Northern Illinois University SEAsite, Architectural Heritage of Luang Prabang",
+      "url": "https://seasite.niu.edu/lao/culture/LuangPrabang/Architectural_Heritage.htm",
+      "note": "University-hosted architectural account checked for documented Luang Prabang wooden-house features, raised floors, eaves, side kitchens, work and storage below, roof alignment and sleeping-orientation traditions. Surviving houses are not automatically dated to 1492-1650."
+    },
+    {
+      "id": "lx-vernacular",
+      "title": "Xayaphone Vongvilay et al., Typology of Lao Vernacular Dwellings and Settlements in Cultural and Physical Context",
+      "url": "https://link.springer.com/article/10.5659/AIKAR.2015.17.4.127",
+      "note": "Peer-reviewed architecture article checked for the diversity of Lao, Khmu and Hmong dwelling forms and the relation between settlement, environment and social culture. Modern typologies cannot be projected unchanged into Lan Xang."
+    },
+    {
+      "id": "lx-hamburg-objects",
+      "title": "University of Hamburg CSMC, Inscribed Objects in Luang Prabang",
+      "url": "https://www.csmc.uni-hamburg.de/cultural-heritage/luang-prabang.html",
+      "note": "University research project checked for inscription scarcity, Luang Prabang’s role as Buddhist center, an object recording King Phothisara and Supreme Patriarch Sirichantho’s sixteenth-century Vat Ban Sing foundation, and later recopying and rebuilding layers."
+    },
+    {
+      "id": "lx-hamburg-thesis",
+      "title": "Bounleuth Sengsoulin, Buddhist Monastic Education in Luang Prabang, University of Hamburg dissertation",
+      "url": "https://ediss.sub.uni-hamburg.de/bitstream/ediss/6849/1/Dissertation.pdf",
+      "note": "Doctoral dissertation checked for Luang Prabang’s learned monks, Sanskrit and Pali knowledge, Setthathirath’s transfer of the capital and images, continued role of the Phra Bang, and cautions about reconstructing early education from later institutions."
+    },
+    {
+      "id": "lx-monastic-book",
+      "title": "Justin Thomas McDaniel, Gathering Leaves and Lifting Words: Histories of Buddhist Monastic Education in Laos and Thailand",
+      "url": "https://www.jstor.org/stable/j.ctvcwnct8",
+      "note": "University-press open book checked at the introduction and early-history discussion for manuscript-centered learning, the scarcity of precolonial classroom description, and Giovanni Maria Leria’s uniquely detailed but openly hostile missionary account of 1640s Vientiane monks."
+    },
+    {
+      "id": "lx-leria",
+      "title": "Giovanni Filippo de Marini, A New and Interesting Description of the Lao Kingdom (1642-1648), White Lotus Books",
+      "url": "https://whitelotusbooks.com/books/new-and-interesting-description-of-the-lao-kingdom-1642-1648-a",
+      "note": "Publisher record checked for the translated seventeenth-century description based on Giovanni Maria Leria’s 1642-1648 Laos mission. Claims drawn through later scholarship are labeled as one European missionary’s observations, not a neutral survey."
+    },
+    {
+      "id": "lx-soas-economy",
+      "title": "James Derek Alan Brown, Reworking Territory, Assembling Scale: Labour’s Agency in Lao Border Economies, SOAS dissertation",
+      "url": "https://eprints.soas.ac.uk/24951/1/Brown_4418.pdf",
+      "note": "Doctoral dissertation checked at pp. 82-85 for Lan Xang as a muang network, craft production, tin and iron mining, alluvial gold, forest goods, riverine and overland trade, and the physical difficulty of moving goods to maritime markets."
+    },
+    {
+      "id": "lx-after-angkor",
+      "title": "Mitch Hendrickson, Miriam Stark and Damian Evans, Mainland Southeast Asia after Angkor, SOAS repository",
+      "url": "https://eprints.soas.ac.uk/35286/1/Mainland%20Southeast%20Asia%20After%20Angkor.FINAL%20%281%29.pdf",
+      "note": "Peer-reviewed handbook chapter checked at the Lan Xang discussion for the difference between later foundation legend and evidence, strategic uses of Angkor and Sri Lankan Buddhist connections, and earlier material layers under later royal monuments."
+    },
+    {
+      "id": "lx-games-limit",
+      "title": "Khanuengnit Saiyasopon et al., Children’s Play of the Thai-Lao Ethnic Group in Sikhorabhum, Journal of Variety in Language and Literature",
+      "url": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/198337",
+      "note": "Modern ethnographic study checked for documented categories of Thai-Lao children’s games, ordinary locally found equipment, songs and social learning. It is used only as a warning that living traditions do not date a game to Lan Xang without period evidence."
+    }
+  ],
+  "entities": [
+    {
+      "id": "laos",
+      "card": "data/cards/laos.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "lx-atlas-index",
+            "lx-atlas-coverage",
+            "lx-atlas-1492",
+            "lx-atlas-1530",
+            "lx-lockhart"
+          ],
+          "locator": "Checked locally for exact id laos, label Laos, approximate lifetime 1492-1650, and separate laotian-states, laos-1800 and laos-1938 records. The dates are atlas metadata, not Lan Xang foundation or fall dates. Checked locally before integration: laos is missing a card and has four exact intervals, 1492-1500, 1500-1530, 1530-1600 and 1600-1650, with no features outside its indexed lifetime. Decoded locally. The exact laos feature for 1492-1500 is one 15-vertex Polygon, bbox 101.6452165,17.4504325 to 105.5728557,20.9660657. It contains tested Luang Prabang and Phonsavan but excludes every other named test point, including Vientiane. Decoded locally. The laos feature for 1530-1600 becomes one 39-vertex Polygon, bbox 98.5635856,19.0492195 to 104.7196472,23.1841455. It adds tested northern places through Jinghong but still excludes Vientiane, Thakhek, Savannakhet and Pakse. Scholarly encyclopedia entry checked for Lan Xang as the polity regarded as an ancestor of modern Laos, the severe uncertainty of much early history, its late-fourteenth-century formation from smaller polities in later chronicles, and survival until roughly 1700.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "lx-atlas-1492",
+            "lx-niu-chronology",
+            "lx-country-study"
+          ],
+          "locator": "Decoded locally. The exact laos feature for 1492-1500 is one 15-vertex Polygon, bbox 101.6452165,17.4504325 to 105.5728557,20.9660657. It contains tested Luang Prabang and Phonsavan but excludes every other named test point, including Vientiane. University-hosted chronology checked for the approximate royal sequence around the atlas opening, including Somphou 1497-1500, Visoun 1500-1520 and later rulers. Regnal dates differ among chronicles, so the card uses circa language. Federal Research Division country study checked at the History chapter, Lan Xang subsection, for the royal sequence, sixteenth-century Lan Na connection, capital move, Burmese interventions, later restoration and kingdom-wide chronology. It synthesizes older scholarship rather than replacing inscriptions.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "lx-niu-chronology",
+            "lx-niu-literature"
+          ],
+          "locator": "University-hosted chronology checked for the approximate royal sequence around the atlas opening, including Somphou 1497-1500, Visoun 1500-1520 and later rulers. Regnal dates differ among chronicles, so the card uses circa language. University-hosted literature overview checked for the sixteenth-century flowering of art, literature and scholarship, Lan Na and Buddhist influences, temple-centered literacy, young male novices and monks, and the mixture of written and oral traditions.",
+          "dateScope": {
+            "from": 1500,
+            "to": 1520
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "lx-beliefs",
+            "lx-hamburg-objects"
+          ],
+          "locator": "Chulalongkorn University repository record and abstract checked for the study of how Lan Xang literature adapted older beliefs within Buddhism. It supports coexistence and literary negotiation, not a claim that one royal edict erased local practice. University research project checked for inscription scarcity, Luang Prabang’s role as Buddhist center, an object recording King Phothisara and Supreme Patriarch Sirichantho’s sixteenth-century Vat Ban Sing foundation, and later recopying and rebuilding layers.",
+          "dateScope": {
+            "from": 1520,
+            "to": 1548
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "lx-country-study",
+            "lx-burma",
+            "lx-hamburg-thesis"
+          ],
+          "locator": "Federal Research Division country study checked at the History chapter, Lan Xang subsection, for the royal sequence, sixteenth-century Lan Na connection, capital move, Burmese interventions, later restoration and kingdom-wide chronology. It synthesizes older scholarship rather than replacing inscriptions. University-journal abstract checked for the complex mid-sixteenth- to early-seventeenth-century contest over Chiang Mai, Burmese expansion, and Lan Xang’s survival after prolonged struggle. It cautions against narrating the wars as one simple bilateral invasion. Doctoral dissertation checked for Luang Prabang’s learned monks, Sanskrit and Pali knowledge, Setthathirath’s transfer of the capital and images, continued role of the Phra Bang, and cautions about reconstructing early education from later institutions.",
+          "dateScope": {
+            "from": 1548,
+            "to": 1560
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "lx-capital",
+            "lx-treaty",
+            "lx-atlas-1530"
+          ],
+          "locator": "Peer-reviewed article checked at pp. 3-7 for the 1560 capital transfer, Vientiane-area building and inscriptions, rice-producing hinterland, temple land donations, Sangha appointments and the strategic relation between Luang Prabang and Vientiane. Epigraphic edition checked at pp. 2-8 for the damaged bilingual-script inscription, its 1560 alliance, 1563 erection date, titles of both kings, mutual friendship and defense language, and the editors’ translation and uncertainty marks. Decoded locally. The laos feature for 1530-1600 becomes one 39-vertex Polygon, bbox 98.5635856,19.0492195 to 104.7196472,23.1841455. It adds tested northern places through Jinghong but still excludes Vientiane, Thakhek, Savannakhet and Pakse.",
+          "dateScope": {
+            "from": 1560,
+            "to": 1575
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "lx-succession",
+            "lx-country-study"
+          ],
+          "locator": "Peer-reviewed historical reassessment checked at pp. 45-64 for the poorly known late-sixteenth- and early-seventeenth-century transition between Setthathirath and Suriyavongsa and for the limitations and disagreements among chronicles and inscriptions. Federal Research Division country study checked at the History chapter, Lan Xang subsection, for the royal sequence, sixteenth-century Lan Na connection, capital move, Burmese interventions, later restoration and kingdom-wide chronology. It synthesizes older scholarship rather than replacing inscriptions.",
+          "dateScope": {
+            "from": 1575,
+            "to": 1591
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "lx-succession",
+            "lx-community"
+          ],
+          "locator": "Peer-reviewed historical reassessment checked at pp. 45-64 for the poorly known late-sixteenth- and early-seventeenth-century transition between Setthathirath and Suriyavongsa and for the limitations and disagreements among chronicles and inscriptions. Peer-reviewed archaeology and epigraphy article checked at pp. 161-176, especially discussion of 1591 inscriptions dedicating land, rice fields, temple dependents and sanctions, plus the changing right-bank Mekong settlement network.",
+          "dateScope": {
+            "from": 1591,
+            "to": 1637
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "lx-wuysthoff",
+            "lx-economy-review",
+            "lx-monastic-book"
+          ],
+          "locator": "University-hosted conference paper checked for the VOC mission’s July 1641 departure from Lovek, journey to Souligna Vongsa’s court, surviving journal, and its rare outsider observations about customs, trade, monarchy and politics. Scholarly review checked at pp. 178-184 for the problem of reconstructing a landlocked kingdom’s sixteenth- and seventeenth-century economy, the centrality of trade evidence, and the warning that the material basis of the so-called golden age remains incompletely known. University-press open book checked at the introduction and early-history discussion for manuscript-centered learning, the scarcity of precolonial classroom description, and Giovanni Maria Leria’s uniquely detailed but openly hostile missionary account of 1640s Vientiane monks.",
+          "dateScope": {
+            "from": 1637,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "lx-atlas-index",
+            "lx-atlas-coverage"
+          ],
+          "locator": "Local index and coverage audit; identity.json index and coverage arrays",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "lx-atlas-1492"
+          ],
+          "locator": "identity.json targetFeatures[0], geometry statistics and twenty-four point tests",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "lx-atlas-1530",
+            "lx-atlas-1600"
+          ],
+          "locator": "identity.json targetFeatures[2-3], bbox, pointTests.Jinghong and pointTests.Vientiane",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "lx-atlas-1400",
+            "lx-atlas-1500",
+            "lx-atlas-1530",
+            "lx-atlas-1600"
+          ],
+          "locator": "identity.json pointOwnersByFile and contacts for world-1400 through world-1600",
+          "dateScope": {
+            "year": 1560
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "lx-atlas-1650",
+            "lx-lockhart"
+          ],
+          "locator": "identity.json pointOwnersByFile world-1650; Lockhart survival to roughly 1700",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "lx-niu-chronology",
+            "lx-niu-literature"
+          ],
+          "locator": "NIU chronology, Visunarat entry; NIU literature historical overview",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "lx-literary-heritage",
+            "lx-beliefs"
+          ],
+          "locator": "Lorrillard p. 7, 1527 Vat Sangkhalok edict; Suchxaya repository abstract",
+          "dateScope": {
+            "year": 1527
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "lx-capital",
+            "lx-rice"
+          ],
+          "locator": "Phothisane pp. 3-7; Rigg chapter historical background",
+          "dateScope": {
+            "year": 1560
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "lx-treaty",
+            "lx-ayutthaya"
+          ],
+          "locator": "Griswold and Prasert pp. 2-8, translation and notes; Phetrakosol abstract",
+          "dateScope": {
+            "year": 1560
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "lx-burma",
+            "lx-succession"
+          ],
+          "locator": "Can Tho abstract; Lorrillard pp. 45-64",
+          "dateScope": {
+            "year": 1575
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "lx-soas-economy"
+          ],
+          "locator": "Brown dissertation pp. 82-85, muang and trade network",
+          "dateScope": {
+            "year": 1550
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "lx-community"
+          ],
+          "locator": "Journal of Mekong Societies pp. 174-175, inscription evidence",
+          "dateScope": {
+            "year": 1591
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "lx-capital"
+          ],
+          "locator": "Phothisane p. 4, table 2, Wat Wiangkham inscription",
+          "dateScope": {
+            "year": 1561
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "lx-capital",
+            "lx-after-angkor"
+          ],
+          "locator": "Phothisane inscriptions table; Hendrickson, Stark and Evans, Lan Xang section",
+          "dateScope": {
+            "year": 1566
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "lx-economy-review"
+          ],
+          "locator": "Lorrillard review pp. 178-184, evidence and golden-age cautions",
+          "dateScope": {
+            "year": 1640
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "lx-rice",
+            "lx-vernacular"
+          ],
+          "locator": "Rigg chapter historical background; Vongvilay et al. dwelling and environment typology",
+          "dateScope": {
+            "year": 1560
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "lx-soas-economy"
+          ],
+          "locator": "Brown dissertation pp. 83-84, production and riverine trade discussion",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "lx-stuartfox",
+            "lx-wuysthoff"
+          ],
+          "locator": "Stuart-Fox p. 89; Feldberg conference abstract and expedition description",
+          "dateScope": {
+            "year": 1641
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "lx-stuartfox",
+            "lx-voc-archives"
+          ],
+          "locator": "Stuart-Fox pp. 88-90; VOC Memory of the World nomination, Laos-Cambodia records",
+          "dateScope": {
+            "year": 1641
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "lx-eic-silk",
+            "lx-uva-textiles"
+          ],
+          "locator": "Bassett p. 60 note 2; ten Brummelhuis repository record, pp. 125-139",
+          "dateScope": {
+            "year": 1641
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "lx-literary-heritage"
+          ],
+          "locator": "Lorrillard p. 6, Jinakalamali report and source notes",
+          "dateScope": {
+            "year": 1523
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "lx-literary-heritage"
+          ],
+          "locator": "Lorrillard pp. 6-7, scripts, dated steles and geographic distribution",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "lx-inscriptions"
+          ],
+          "locator": "Lorrillard appendix pp. 37-39, modern Lao transcription lines 4-5 and English translation",
+          "dateScope": {
+            "year": 1520
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "lx-wat-xieng",
+            "lx-nara-wat"
+          ],
+          "locator": "Luang Prabang Tourism restoration list; ACCU conservation report",
+          "dateScope": {
+            "year": 1560
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "lx-gallery-buddha"
+          ],
+          "locator": "National Gallery of Australia object record, date, material and description",
+          "dateScope": {
+            "year": 1550
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "lx-ayutthaya"
+          ],
+          "locator": "Phetrakosol political, family and cultural relations across courts",
+          "dateScope": {
+            "year": 1550
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "lx-women-law"
+          ],
+          "locator": "Ratana, Kidpromma and Usama abstract lines 45-55",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "lx-community"
+          ],
+          "locator": "1591 Loei-Nam Mong dedications and institutional record pattern",
+          "dateScope": {
+            "year": 1591
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "lx-niu-literature",
+            "lx-monastic-book",
+            "lx-hamburg-thesis"
+          ],
+          "locator": "NIU introduction, temple education; McDaniel introduction; Sengsoulin historical chapters",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "lx-monastic-book",
+            "lx-leria"
+          ],
+          "locator": "McDaniel early-history discussion of Leria; White Lotus publisher record, 1642-1648",
+          "dateScope": {
+            "year": 1642
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "lx-architecture"
+          ],
+          "locator": "NIU architectural heritage house sections and preservation caveats",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "lx-architecture"
+          ],
+          "locator": "NIU architectural heritage, house orientation and sleeping arrangement",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "lx-rice",
+            "lx-unesco-luang"
+          ],
+          "locator": "Rigg historical rice background; UNESCO ponds, fish and vegetable landscape",
+          "dateScope": {
+            "year": 1641
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "lx-uva-textiles",
+            "lx-eic-silk",
+            "lx-soas-economy"
+          ],
+          "locator": "ten Brummelhuis chapter metadata; Bassett p. 60 note 2; Brown craft-production discussion",
+          "dateScope": {
+            "year": 1641
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "lx-niu-literature",
+            "lx-beliefs",
+            "lx-games-limit"
+          ],
+          "locator": "NIU literature overview; Suchxaya abstract; Saiyasopon et al. modern ethnographic abstract",
+          "dateScope": {
+            "year": 1640
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "lx-dllm",
+            "lx-medicine"
+          ],
+          "locator": "DLLM collection description; Elkington et al. lines 98-117",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "lx-medicine"
+          ],
+          "locator": "Elkington et al. lines 140-150 and 189-218, dated-manuscript limit",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "lx-unesco-luang",
+            "lx-vernacular"
+          ],
+          "locator": "UNESCO OUV landscape and wetlands; Vongvilay et al. environment-settlement analysis",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "lx-architecture",
+            "lx-monastic-book",
+            "lx-leria"
+          ],
+          "locator": "Source-corpus limit: architecture study, McDaniel source critique and Leria publication record",
+          "dateScope": {
+            "year": 1642
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "lx-economy-review",
+            "lx-medicine",
+            "lx-wuysthoff"
+          ],
+          "locator": "Economic evidence limits; medical dating limits; rare outsider-account context",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "lx-atlas-1650",
+            "lx-stuartfox"
+          ],
+          "locator": "Decoded locally as successor context. The separate laotian-states feature suddenly covers tested Vientiane, Luang Prabang, Thakhek, Savannakhet and Pakse. This is a dataset handoff at 1650, not Lan Xang fragmentation. Full scholarly monograph checked at chapters 4-6, especially pp. 64-96, for royal chronology, muang organization, war, trade networks, craft production, VOC observations, imported cloth and travel times. Hearsay in early European reports is identified as such.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "laos",
+        "name": "Lan Xang (1492-1650 atlas record)",
+        "region": "Asia",
+        "dateBasis": "map_coverage",
+        "fell": null,
+        "successors": [],
+        "summary": "A deeply researched guide to Lan Xang during 1492-1650, paired with a warning that this atlas polygon is a shifting northern fragment which excludes Vientiane and does not represent the kingdom’s reach or a modern Laos border.",
+        "card": "cards/laos.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "laos",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            101.6452164521645,
+            17.450432549914026,
+            105.57285572855727,
+            20.96606567629229
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "laos",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            101.6452164521645,
+            17.4510995634964,
+            105.57285572855727,
+            20.965889621675288
+          ]
+        },
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "laos",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            98.56358563585638,
+            19.04921946988712,
+            104.71964719647195,
+            23.18414549893437
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "laos",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            98.56358563585638,
+            19.04921946988712,
+            104.71964719647195,
+            23.18414549893437
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "laos",
+      "finding": "Exact target is the missing approximate 1492-1650 id laos. It is separate from already-carded laotian-states (1650-1783) and laos-1938, and from missing laos-1800; appliesTo is intentionally omitted."
+    },
+    {
+      "id": "laos",
+      "finding": "Four target features cover 1492-1500, 1500-1530, 1530-1600 and 1600-1650. All are single-ring Polygons; the first two have 15 vertices and the later two have 39."
+    },
+    {
+      "id": "laos",
+      "finding": "Every target polygon contains tested Luang Prabang and Phonsavan and excludes Vientiane, Thakhek, Savannakhet and Pakse. The later pair also contains tested Jinghong. These results demonstrate that the display geometry cannot stand for Lan Xang’s jurisdiction."
+    },
+    {
+      "id": "laos",
+      "finding": "The 1650 switch to laotian-states suddenly covers tested Vientiane and southern Lao centers. It is an atlas record handoff during Souligna Vongsa’s continuing reign, not the end or fragmentation of Lan Xang."
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel siam-1938-wartime research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "siam-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository index checked for the exact id siam-1938: name Siam, approximately 1938-1945. Separate records exist for rattanakosin-kingdom, siam, and thailand, so this card does not silently merge those identities."
+    },
+    {
+      "id": "siam-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage checked before integration. Exact id siam-1938 had no card, review missing, one border file and one observed interval from 1938 to 1945, with no features outside its indexed lifetime."
+    },
+    {
+      "id": "siam-map1930",
+      "title": "Human History Map, world-1930 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Decoded with topojson-client. The predecessor rattanakosin-kingdom feature has the same one-ring 199-position footprint within coordinate-transform noise and includes tested Bangkok, Chiang Mai, Nakhon Ratchasima and Pattani points."
+    },
+    {
+      "id": "siam-map1938",
+      "title": "Human History Map, world-1938 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "Decoded with topojson-client. Exact siam-1938 is a one-ring Polygon with 199 positions and bbox approximately 97.372,5.531 to 105.476,20.458. It includes tested Bangkok, Chiang Mai, Nakhon Ratchasima and Pattani, but excludes Phuket and neighboring Lao, Cambodian and Burmese test points."
+    },
+    {
+      "id": "siam-map1945",
+      "title": "Human History Map, world-1945 historical-basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Decoded with topojson-client. The successor thailand feature repeats the target footprint to within about 0.0014 degrees of transform noise. The 1945 change is an atlas id handoff rather than a meaningful national border reconstruction."
+    },
+    {
+      "id": "siam-overview",
+      "title": "Panarat Anamwathana, Thailand during World War II: Impact and Aftermath, Oxford DPhil thesis",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A623a2d48-a892-49e4-842d-0ea1758a72c2",
+      "note": "University of Oxford repository record and thesis checked for Thailand’s wartime political, economic and social history. The study emphasizes administrative continuity, severe economic contraction, inflation and shortages, the Japanese alliance, Free Thai resistance and a negotiated postwar transition rather than state collapse."
+    },
+    {
+      "id": "siam-kasetsiri",
+      "title": "Charnvit Kasetsiri, The First Phibun Government and Its Involvement in World War II",
+      "url": "https://thesiamsociety.org/wp-content/uploads/1974/03/JSS_062_2d_CharnvitKasetsiri_FirstPhibunGovernmentAndInvolvementInWorldWarII.pdf",
+      "note": "Peer-reviewed Journal of the Siam Society study checked for Phibun’s rise, authoritarian government, nationalism, the 1939 name change, cultural mandates, relations with Japan, the July 1944 political defeat and the survival of the constitutional state."
+    },
+    {
+      "id": "siam-ucpress",
+      "title": "E. Bruce Reynolds, Thailand and Japan’s Southern Advance, University of California Press chapter",
+      "url": "https://content.ucpress.edu/chapters/13070.ch01.pdf",
+      "note": "University of California Press chapter checked for Thailand’s domestic politics and diplomacy before the Japanese invasion, including Phibun’s military government, nationalist state-building and the pressures created by war in Europe and Japanese expansion."
+    },
+    {
+      "id": "siam-nation",
+      "title": "Kobkua Suwannathat-Pian, National Identity, the “Sam-Sams” of Satun, and the Thai Malay Muslims",
+      "url": "https://www.jstage.jst.go.jp/article/tak/34/1/34_KJ00000131912/_article/-char/en",
+      "note": "Kyoto University Southeast Asian Studies article checked for Phibun-era nation-making and the unequal pressure placed on Malay Muslim communities by centralized language, dress, naming and cultural policies."
+    },
+    {
+      "id": "siam-mandate",
+      "title": "Fine Arts Department of Thailand, collected state cultural mandates and documents",
+      "url": "https://finearts.go.th/storage/contents/2023/12/file/vYyiIMQWdsfqb9KRQ5mBiKeyP45m0s5Sw3wvZo7v.pdf",
+      "note": "Official Fine Arts Department document collection checked for the first 1939 cultural mandate. It preserves the Thai wording “ชื่อประเทศ ประชาชน และสัญชาติ ให้ใช้ว่า ‘ไทย’” ordering use of Thai for the country, people and nationality."
+    },
+    {
+      "id": "siam-society",
+      "title": "UNESCO Memory of the World nomination, Minute Books of the Council of the Siam Society",
+      "url": "https://media.unesco.org/sites/default/files/webform/mow001/thailand_minute_books_council_of_siam_society.pdf",
+      "note": "UNESCO nomination dossier checked for the Siam Society’s scholarly continuity, its meetings, publications, collections and the effect of wartime disruption. This is evidence about one learned institution, not the education of the whole population."
+    },
+    {
+      "id": "siam-society-war",
+      "title": "Kenjiro Ichikawa, Thai Society During World War II",
+      "url": "https://www.jstage.jst.go.jp/article/sea1971/1971/1/1971_1_79/_article",
+      "note": "Academic article checked for wartime Thai social and political responses, the Chinese anti-Japanese boycott, accommodation and compromise under Japanese military pressure, and the distinction between alliance and direct Japanese colonial administration."
+    },
+    {
+      "id": "siam-franco-war",
+      "title": "Public Relations Department, Battle of Ko Chang and the Franco-Thai War",
+      "url": "https://trat.prd.go.th/th/content/category/detail/id/60/iid/235",
+      "note": "Thai government historical article checked for the 1940-1941 border dispute, nationalist demonstrations, land, air and naval fighting and the Battle of Ko Chang. The official commemorative viewpoint is used with attribution rather than as a neutral account of every combatant’s experience."
+    },
+    {
+      "id": "siam-frus-invasion",
+      "title": "U.S. Department of State, Foreign Relations of the United States, Japanese invasion of Thailand, 8 December 1941",
+      "url": "https://history.state.gov/historicaldocuments/frus1941v05/d411",
+      "note": "Primary diplomatic record checked for reports of Japanese landings and fighting on 8 December 1941, the Thai cease-fire and permission for Japanese forces to pass through the country. It records contemporary diplomatic information, not every local encounter."
+    },
+    {
+      "id": "siam-mfa-alliance",
+      "title": "Thai Ministry of Foreign Affairs, The Quest for a Thai-U.S. Alliance",
+      "url": "https://image.mfa.go.th/mfa/0/4OJCTby7gE/The_Quest_for_Thai-US_Alliance_Apichart_Chinwanno.pdf",
+      "note": "Official diplomatic history checked for the December 1941 Thai-Japanese alliance, Thailand’s January 1942 declarations of war, Ambassador Seni Pramoj’s refusal to deliver the declaration in Washington and the roots of the Free Thai relationship with the United States."
+    },
+    {
+      "id": "siam-frus-declaration",
+      "title": "U.S. Department of State, FRUS memorandum on Thailand’s declaration of war, 1942",
+      "url": "https://history.state.gov/historicaldocuments/frus1942v01/d807",
+      "note": "Primary U.S. diplomatic memorandum checked for the American decision not to declare war on Thailand after Ambassador Seni Pramoj withheld the Thai declaration. It documents U.S. policy; Britain and other Allies made different legal choices."
+    },
+    {
+      "id": "siam-frus-end",
+      "title": "U.S. Department of State, FRUS, Thai declaration ending war status, 1945",
+      "url": "https://history.state.gov/historicaldocuments/frus1945v06/d953",
+      "note": "Primary diplomatic document checked for Thailand’s August 1945 repudiation of the 1942 war declarations and wartime acts, and for the claim that those acts had been contrary to the Thai people’s will. It is a postwar government position, not a poll of every citizen."
+    },
+    {
+      "id": "siam-frus-settlement",
+      "title": "U.S. Department of State, FRUS, postwar settlement with Thailand, 1945",
+      "url": "https://history.state.gov/historicaldocuments/frus1945v06/d924",
+      "note": "Primary diplomatic record checked for competing Allied positions on Thailand after Japan’s surrender, including U.S. support for Thai sovereignty and British demands. It shows negotiation and continuity rather than an automatic return to the prewar situation."
+    },
+    {
+      "id": "siam-nida-free",
+      "title": "NIDA Library, Free Thai Movement Collection",
+      "url": "https://library.nida.ac.th/library_area/free-thai-movement-collection/",
+      "note": "National Institute of Development Administration special-collection guide checked for Free Thai networks, participants, memoirs and archival materials. The collection supports the movement’s institutional breadth while also warning that surviving elite records do not capture every resister."
+    },
+    {
+      "id": "siam-pridi-free",
+      "title": "Pridi Banomyong Institute, the Free Thai Movement and the end of World War II",
+      "url": "https://pridi.or.th/th/content/2022/08/1210",
+      "note": "Institute historical essay checked for Regent Pridi Banomyong’s role, domestic Free Thai organization, contact with Allied forces and the August 1945 peace proclamation. It represents an institution devoted to Pridi’s legacy and is read with that perspective explicit."
+    },
+    {
+      "id": "siam-finance",
+      "title": "Gregg Huff and Shinobu Majima, Financing Japan’s Greater East Asia Co-Prosperity Sphere in Thailand",
+      "url": "https://www.cambridge.org/core/journals/financial-history-review/article/financing-japans-greater-east-asia-coprosperity-sphere-in-thailand/E26490B9206F989897F55420DF4486EF",
+      "note": "Peer-reviewed economic history checked for forced occupation finance, monetary expansion, prices rising more than sevenfold from 1941 to 1945, Bangkok-Thonburi ration coupons from 1943, black markets and the especially heavy burden on urban households."
+    },
+    {
+      "id": "siam-food-war",
+      "title": "Paul H. Kratoska, Food and Living Standards in Urban Southeast Asia during World War II",
+      "url": "https://www.cambridge.org/core/books/abs/world-war-ii-and-southeast-asia/food-and-living-standards-in-urban-southeast-asia/F343AE5B15887B2889C61F6EDAFB9202",
+      "note": "Cambridge University Press chapter checked for wartime Bangkok shortages, rationing, urban displacement, Allied raids, mass evacuation and the April 1945 destruction of power stations. Its city evidence is not generalized to every rural household."
+    },
+    {
+      "id": "siam-rice-rail",
+      "title": "Kakizaki Ichiro, Rail Transport and Rice Distribution in Thailand during World War II",
+      "url": "https://www.jstage.jst.go.jp/article/tak/42/2/42_KJ00000713665/_article/-char/en",
+      "note": "Kyoto University Southeast Asian Studies article checked for rail requisition, military transport, disrupted civilian movement and rice distribution during the war. It explains why a rice-exporting country could still face serious local shortages and high prices."
+    },
+    {
+      "id": "siam-social-thesis",
+      "title": "Ubon Jirasawat, Political, Economic and Social Conditions of Thailand during World War II",
+      "url": "https://digital.car.chula.ac.th/chulaetd/15412/",
+      "note": "Chulalongkorn University thesis record checked for wartime administration, diplomacy, economic disruption and government attempts to prescribe a modern way of life. It is an older study and explicitly describes its evidence as incomplete and tentative."
+    },
+    {
+      "id": "siam-railway",
+      "title": "Australian War Memorial, Burma-Thailand Railway",
+      "url": "https://www.awm.gov.au/visit/exhibitions/stolenyears/ww2/japan/burmathai",
+      "note": "Australian War Memorial exhibition checked for the railway’s construction, approximately 60,000 Allied prisoners of war, about 200,000 Asian laborers, brutal work, disease, malnutrition and enormous death toll. Allied POW documentation is fuller than evidence for diverse Asian romusha."
+    },
+    {
+      "id": "siam-f-force",
+      "title": "Australian War Memorial, Jonathon Dallimore: F Force on the Burma-Thailand Railway",
+      "url": "https://www.awm.gov.au/wartime/103/jonathan-dallimore",
+      "note": "Australian War Memorial article checked for F Force’s 1943 forced movement, remote camps, cholera, inadequate food, medical scarcity and very high mortality. It is a focused prisoner-of-war case and does not stand for all railway workers."
+    },
+    {
+      "id": "siam-women",
+      "title": "Chulalongkorn University, Thai women and state policy in the Phibun era",
+      "url": "https://digital.car.chula.ac.th/chulaetd/29880/",
+      "note": "Chulalongkorn University thesis record checked for government ideals of women as modern wives, mothers and citizens alongside women’s growing public visibility, schooling and employment. Prescriptive policy is distinguished from what every household actually did."
+    },
+    {
+      "id": "siam-family",
+      "title": "Chulalongkorn University, family politics and nation-building under Phibun",
+      "url": "https://digital.car.chula.ac.th/chulaetd/12674/",
+      "note": "Chulalongkorn University thesis record checked for state efforts to make orderly marriage, gender roles, child-rearing and household conduct serve nation-building. Official family ideals are treated as campaigns, not a census of private life."
+    },
+    {
+      "id": "siam-fashion",
+      "title": "Southeast Asian Studies, Women, Fashion, and Nation in Phibun-era Thailand",
+      "url": "https://englishkyoto-seas.org/wp-content/uploads/SEAS0802_all.pdf",
+      "note": "Peer-reviewed Kyoto University journal issue checked for dress mandates, hats, skirts, blouses, urban fashion, women’s bodies as symbols of civilization and the uneven, negotiated reception of official clothing rules."
+    },
+    {
+      "id": "siam-malay",
+      "title": "Cambridge University Press, Malay Muslims and the Thai-Buddhist State",
+      "url": "https://www.cambridge.org/core/books/abs/encountering-islam/malay-muslims-and-the-thaibuddhist-state-confrontation-accommodation-and-disengagement/AB3A154C31EBC07DE25C740A3C968E4D",
+      "note": "Scholarly book chapter checked for the long relationship between Malay Muslim communities and the central Thai state, including language, Islamic education, local authority and twentieth-century assimilation pressure. The southern borderlands were not culturally uniform."
+    },
+    {
+      "id": "siam-chinese-schools",
+      "title": "Journal of Language and Culture, Chinese schools in Thailand before and during World War II",
+      "url": "https://so03.tci-thaijo.org/index.php/JLC/article/download/265585/176609/1021135",
+      "note": "Peer-reviewed Thai journal article checked for Chinese-language schooling, nationalist politics, state surveillance and wartime restrictions. It supports discussion of a substantial but politically pressured educational world, not a claim that all Chinese Thai children attended such schools."
+    },
+    {
+      "id": "siam-boys-school",
+      "title": "A boys’ school, militarized youth and health in Phibun-era Thailand",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12312773/",
+      "note": "Open-access scholarly article checked for school discipline, bodily training, uniforms, hygiene and the Yuwachon military youth movement. Its institutional case is vivid but cannot represent every rural school or every child."
+    },
+    {
+      "id": "siam-education",
+      "title": "UNESCO, Education for All assessment: Thailand historical background",
+      "url": "https://uis.unesco.org/sites/default/files/documents/education-for-all-mid-decade-assessment-for-the-mekong-sub-region-en_0.pdf",
+      "note": "UNESCO education assessment checked for the development of compulsory primary education, uneven school access and the long expansion of Thailand’s education system. Later aggregate data are used only as retrospective institutional context."
+    },
+    {
+      "id": "siam-democracy",
+      "title": "Parliament Museum of Thailand, Democracy Monument",
+      "url": "https://parliamentmuseum.go.th/2564/ar64-monument.html",
+      "note": "Official Parliament Museum page checked for the Democracy Monument’s construction and inauguration in 1939-1940, its constitutional symbolism and its relationship to the new political order. Official symbolism is distinguished from public consent."
+    },
+    {
+      "id": "siam-silpakorn",
+      "title": "Silpakorn University, history",
+      "url": "https://www.su.ac.th/en/about",
+      "note": "Official university history checked for the School of Fine Arts, Silpa Bhirasri’s role and the institution’s elevation to Silpakorn University in 1943. Founding an arts university during war was an enduring institutional achievement, though access was limited."
+    },
+    {
+      "id": "siam-mortality",
+      "title": "The Demographic History of Thailand, public health and mortality",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3175806/",
+      "note": "Peer-reviewed demographic study checked for mortality, epidemics, vaccination and the interwar Sanitary Campaign, including field units, provincial expansion and thousands of latrines. National programs did not reach all communities equally."
+    },
+    {
+      "id": "siam-hygiene",
+      "title": "Of Germs, Public Hygiene, and the Healthy Body: The Making of the Medicalizing State in Thailand",
+      "url": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/of-germs-public-hygiene-and-the-healthy-body-the-making-of-the-medicalizing-state-in-thailand/8F368C6D37135960E0853DA629E40B6B",
+      "note": "Peer-reviewed Journal of Asian Studies article checked for health education, hygiene, sanitation and state campaigns that linked clean bodies and surroundings with modern citizenship. It analyzes government power as well as health benefits."
+    },
+    {
+      "id": "siam-latrines",
+      "title": "Historical development of sanitation and latrines in Thailand",
+      "url": "https://www.jstage.jst.go.jp/article/svc/4/3/4_00024/_pdf",
+      "note": "Scholarly sanitation history checked for household and public latrine development, rural sanitation campaigns, administrative law and the creation of the Ministry of Public Health in 1942. The evidence supports unequal transition, not universal flush toilets."
+    },
+    {
+      "id": "siam-foodculture",
+      "title": "Central Thai food culture and everyday meals",
+      "url": "https://www.sciencedirect.com/org/science/article/pii/S0859992020000044",
+      "note": "Scholarly cultural study checked for rice-centered meals, shared dishes, fish, vegetables, condiments and the social organization of central Thai food. Retrospective cultural evidence is used cautiously and is not treated as a wartime ration diary."
+    }
+  ],
+  "entities": [
+    {
+      "id": "siam-1938",
+      "card": "data/cards/siam-1938.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "siam-overview"
+          ],
+          "locator": "University of Oxford repository record and thesis checked for Thailand’s wartime political, economic and social history. The study emphasizes administrative continuity, severe economic contraction, inflation and shortages, the Japanese alliance, Free Thai resistance and a negotiated postwar transition rather than state collapse.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "siam-kasetsiri",
+            "siam-ucpress"
+          ],
+          "locator": "Peer-reviewed Journal of the Siam Society study checked for Phibun’s rise, authoritarian government, nationalism, the 1939 name change, cultural mandates, relations with Japan, the July 1944 political defeat and the survival of the constitutional state. University of California Press chapter checked for Thailand’s domestic politics and diplomacy before the Japanese invasion, including Phibun’s military government, nationalist state-building and the pressures created by war in Europe and Japanese expansion.",
+          "dateScope": {
+            "from": 1938,
+            "to": 1939
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "siam-mandate",
+            "siam-index"
+          ],
+          "locator": "Official Fine Arts Department document collection checked for the first 1939 cultural mandate. It preserves the Thai wording “ชื่อประเทศ ประชาชน และสัญชาติ ให้ใช้ว่า ‘ไทย’” ordering use of Thai for the country, people and nationality. Repository index checked for the exact id siam-1938: name Siam, approximately 1938-1945. Separate records exist for rattanakosin-kingdom, siam, and thailand, so this card does not silently merge those identities.",
+          "dateScope": {
+            "from": 1939,
+            "to": 1940
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "siam-franco-war"
+          ],
+          "locator": "Thai government historical article checked for the 1940-1941 border dispute, nationalist demonstrations, land, air and naval fighting and the Battle of Ko Chang. The official commemorative viewpoint is used with attribution rather than as a neutral account of every combatant’s experience.",
+          "dateScope": {
+            "from": 1940,
+            "to": 1941
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "siam-frus-invasion",
+            "siam-mfa-alliance",
+            "siam-frus-declaration"
+          ],
+          "locator": "Primary diplomatic record checked for reports of Japanese landings and fighting on 8 December 1941, the Thai cease-fire and permission for Japanese forces to pass through the country. It records contemporary diplomatic information, not every local encounter. Official diplomatic history checked for the December 1941 Thai-Japanese alliance, Thailand’s January 1942 declarations of war, Ambassador Seni Pramoj’s refusal to deliver the declaration in Washington and the roots of the Free Thai relationship with the United States. Primary U.S. diplomatic memorandum checked for the American decision not to declare war on Thailand after Ambassador Seni Pramoj withheld the Thai declaration. It documents U.S. policy; Britain and other Allies made different legal choices.",
+          "dateScope": {
+            "from": 1941,
+            "to": 1942
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "siam-society-war",
+            "siam-finance",
+            "siam-railway"
+          ],
+          "locator": "Academic article checked for wartime Thai social and political responses, the Chinese anti-Japanese boycott, accommodation and compromise under Japanese military pressure, and the distinction between alliance and direct Japanese colonial administration. Peer-reviewed economic history checked for forced occupation finance, monetary expansion, prices rising more than sevenfold from 1941 to 1945, Bangkok-Thonburi ration coupons from 1943, black markets and the especially heavy burden on urban households. Australian War Memorial exhibition checked for the railway’s construction, approximately 60,000 Allied prisoners of war, about 200,000 Asian laborers, brutal work, disease, malnutrition and enormous death toll. Allied POW documentation is fuller than evidence for diverse Asian romusha.",
+          "dateScope": {
+            "from": 1942,
+            "to": 1943
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "siam-finance",
+            "siam-food-war",
+            "siam-kasetsiri"
+          ],
+          "locator": "Peer-reviewed economic history checked for forced occupation finance, monetary expansion, prices rising more than sevenfold from 1941 to 1945, Bangkok-Thonburi ration coupons from 1943, black markets and the especially heavy burden on urban households. Cambridge University Press chapter checked for wartime Bangkok shortages, rationing, urban displacement, Allied raids, mass evacuation and the April 1945 destruction of power stations. Its city evidence is not generalized to every rural household. Peer-reviewed Journal of the Siam Society study checked for Phibun’s rise, authoritarian government, nationalism, the 1939 name change, cultural mandates, relations with Japan, the July 1944 political defeat and the survival of the constitutional state.",
+          "dateScope": {
+            "from": 1943,
+            "to": 1944
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "siam-pridi-free",
+            "siam-frus-settlement"
+          ],
+          "locator": "Institute historical essay checked for Regent Pridi Banomyong’s role, domestic Free Thai organization, contact with Allied forces and the August 1945 peace proclamation. It represents an institution devoted to Pridi’s legacy and is read with that perspective explicit. Primary diplomatic record checked for competing Allied positions on Thailand after Japan’s surrender, including U.S. support for Thai sovereignty and British demands. It shows negotiation and continuity rather than an automatic return to the prewar situation.",
+          "dateScope": {
+            "from": 1944,
+            "to": 1945
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "siam-index",
+            "siam-mandate"
+          ],
+          "locator": "Exact index record compared with the official first cultural mandate on the country name.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "siam-map1938"
+          ],
+          "locator": "Decoded exact world-1938 target geometry, bounds, structure and point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "siam-map1938"
+          ],
+          "locator": "Point-in-polygon test for Phuket and exact target bounds; humorous interpretation clearly labeled.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "siam-map1930",
+            "siam-map1945"
+          ],
+          "locator": "Predecessor and successor geometry hashes, position counts, bounds and maximum coordinate delta.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "siam-index",
+            "siam-coverage"
+          ],
+          "locator": "Related-index audit and exact target coverage; separate siam identity retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "siam-kasetsiri"
+          ],
+          "locator": "Kasetsiri study sections on Phibun’s accession, trials, military cabinet and ideological program.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "siam-ucpress",
+            "siam-fashion"
+          ],
+          "locator": "University press political context and peer-reviewed analysis of dress rules and reception.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "siam-democracy"
+          ],
+          "locator": "Official Parliament Museum construction chronology and symbolism, interpreted against the political context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "siam-nation",
+            "siam-chinese-schools"
+          ],
+          "locator": "Academic studies of Malay Muslim assimilation pressure and Chinese schooling restrictions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "siam-society-war"
+          ],
+          "locator": "Academic analysis of accommodation and retained administration under Japanese military pressure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "siam-franco-war"
+          ],
+          "locator": "Thai government commemorative account of the dispute and fighting, used with viewpoint caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "siam-frus-invasion"
+          ],
+          "locator": "Contemporary U.S. diplomatic reports on Japanese landings, resistance, cease-fire and transit permission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "siam-mfa-alliance",
+            "siam-frus-declaration"
+          ],
+          "locator": "Thai diplomatic history and primary U.S. memorandum on the undelivered declaration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "siam-finance"
+          ],
+          "locator": "Peer-reviewed reconstruction of occupation finance and its monetary effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "siam-ucpress",
+            "siam-frus-settlement"
+          ],
+          "locator": "Regional-war context and postwar negotiations; atlas geometry limitation stated separately.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "siam-nida-free",
+            "siam-pridi-free"
+          ],
+          "locator": "Special-collection overview and Pridi Institute history of domestic and overseas organization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "siam-nida-free",
+            "siam-social-thesis"
+          ],
+          "locator": "Collection scope and social-history evidence limits support a spectrum rather than a universal claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "siam-railway"
+          ],
+          "locator": "Australian War Memorial numbers, construction conditions and mortality discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "siam-f-force",
+            "siam-railway"
+          ],
+          "locator": "AWM focused F Force case and broader exhibition’s explicit evidence imbalance for Asian workers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "siam-kasetsiri",
+            "siam-frus-end"
+          ],
+          "locator": "Political fall and primary August 1945 repudiation; continuity distinguished from regime change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "siam-social-thesis",
+            "siam-foodculture"
+          ],
+          "locator": "Wartime social study paired with cautious retrospective evidence on rice-centered household foodways.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "siam-finance"
+          ],
+          "locator": "Cambridge economic history price index and ration-coupon list.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "siam-rice-rail"
+          ],
+          "locator": "Kyoto study of military rail demands and rice-distribution breakdown.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "siam-foodculture",
+            "siam-social-thesis"
+          ],
+          "locator": "Food-culture study and wartime social thesis; universal invention story explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "siam-food-war"
+          ],
+          "locator": "Cambridge chapter on Bangkok evacuation, raids and loss of electricity; child experience framed cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "siam-family"
+          ],
+          "locator": "Chulalongkorn thesis on state family policy; prescription versus practice made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "siam-women"
+          ],
+          "locator": "Chulalongkorn study of women’s citizenship, education, work and official domestic ideals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "siam-fashion"
+          ],
+          "locator": "Peer-reviewed analysis of prescribed women’s dress and uneven reception.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "siam-malay",
+            "siam-chinese-schools"
+          ],
+          "locator": "Cambridge chapter and Thai journal article on institutions, language and pressure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "siam-social-thesis",
+            "siam-fashion"
+          ],
+          "locator": "Wartime social study and cultural-policy evidence; explicit limit on play documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "siam-education"
+          ],
+          "locator": "UNESCO historical overview of compulsory primary education and uneven system growth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "siam-boys-school"
+          ],
+          "locator": "Open-access school case study of bodily discipline and Yuwachon training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "siam-chinese-schools"
+          ],
+          "locator": "Peer-reviewed history of Chinese schools, surveillance, regulations and wartime closures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "siam-silpakorn",
+            "siam-society"
+          ],
+          "locator": "Official university chronology and learned-society context for wartime cultural institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "siam-mandate"
+          ],
+          "locator": "Fine Arts Department primary-document collection, first cultural mandate, exact Thai clause and translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "siam-mortality",
+            "siam-hygiene"
+          ],
+          "locator": "Demographic and medical-state studies of vaccination, institutional change, negotiation and unequal reach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "siam-latrines",
+            "siam-rice-rail"
+          ],
+          "locator": "Sanitation history ministry date and wartime transport constraints.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "siam-mortality",
+            "siam-hygiene"
+          ],
+          "locator": "Provincial campaign, field-unit and latrine counts with scholarly analysis of medicalizing state power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "siam-latrines",
+            "siam-f-force"
+          ],
+          "locator": "Historical latrine development and F Force cholera/sanitation conditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "siam-mandate",
+            "siam-index",
+            "siam-map1945"
+          ],
+          "locator": "Official name-history documents, exact id handoff and successor geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "siam-frus-end",
+            "siam-frus-settlement",
+            "siam-map1945"
+          ],
+          "locator": "Primary diplomatic document checked for Thailand’s August 1945 repudiation of the 1942 war declarations and wartime acts, and for the claim that those acts had been contrary to the Thai people’s will. It is a postwar government position, not a poll of every citizen. Primary diplomatic record checked for competing Allied positions on Thailand after Japan’s surrender, including U.S. support for Thai sovereignty and British demands. It shows negotiation and continuity rather than an automatic return to the prewar situation. Decoded with topojson-client. The successor thailand feature repeats the target footprint to within about 0.0014 degrees of transform noise. The 1945 change is an atlas id handoff rather than a meaningful national border reconstruction.",
+          "dateScope": {
+            "year": 1945
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "siam-1938",
+        "card": "cards/siam-1938.json",
+        "summary": "An epic sourced 1938-1945 history of wartime Thailand: naming, war, resistance, family life, food, schools, medicine, toilets and Thai writing."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1938.json",
+          "properties": {
+            "civ": "siam-1938",
+            "from": 1938,
+            "to": 1945,
+            "precision": 3
+          },
+          "bounds": [
+            97.37197371973718,
+            5.531111499255815,
+            105.47565475654756,
+            20.458102402431955
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Targeted only exact id siam-1938: name Siam, approximately 1938-1945, kind state, datesApproximate true, and missing a card before integration.",
+    "The target has exactly one observed interval, 1938-1945, in world-1938.json; no features occur outside the indexed lifetime.",
+    "The exact feature is a one-ring Polygon with 199 coordinate positions and bounds approximately 97.37197,5.53111 to 105.47565,20.45810.",
+    "Point tests put Bangkok, Chiang Mai, Nakhon Ratchasima and Pattani inside; Phuket, Vientiane, Luang Prabang, Phnom Penh, Siem Reap, Yangon and Kuala Lumpur are outside.",
+    "Phuket’s exclusion is treated as an imported coastal geometry defect, not a historical secession. The card never makes political claims from that glitch.",
+    "The predecessor rattanakosin-kingdom and successor thailand outlines are equivalent to the target after allowing coordinate-transform noise; the successor maximum matched-position delta is approximately 0.0013543 degrees.",
+    "The separate id siam, 1800-1815, is a tiny three-part, 18-position imported feature that excludes all major tested Thai points. It is not associated with this card and receives no appliesTo entry.",
+    "The official country name changed from Siam to Thailand in 1939, back to Siam in English in 1945 and to Thailand again in 1949. The atlas label siam-1938 is therefore explicitly presented as a data label, not a clean historical state name.",
+    "The 1945 endpoint is treated as a dataset handoff and wartime political transformation, not collapse, conquest or a new country’s birth. No additional override is proposed."
+  ]
+}
