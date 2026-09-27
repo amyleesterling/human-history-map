@@ -1,0 +1,887 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release128-pandyas research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "pd-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported Pandyas identity, approximate 500 to 800 interval and separately indexed neighboring and later identities."
+    },
+    {
+      "id": "pd-map500",
+      "title": "Human History Map 500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Decoded first Pandyas geometry, coordinate hash, topology and named point tests against simultaneous Chola, Pallava and Simhala layers."
+    },
+    {
+      "id": "pd-map600",
+      "title": "Human History Map 600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded snapshot proving the exact Pandyas feature is absent during the internal 600 to 700 coverage gap."
+    },
+    {
+      "id": "pd-map700",
+      "title": "Human History Map 700 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded second Pandyas geometry, coordinate hash, topology and point ownership among Pallava, Chalukya, Chera and Chola layers."
+    },
+    {
+      "id": "pd-map800",
+      "title": "Human History Map 800 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded handoff from exact id pandyas to the distinct pandya-state and pallava atlas records."
+    },
+    {
+      "id": "pd-map900",
+      "title": "Human History Map 900 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded continued pandya-state layer and separately labeled Sri Lankan and rival South Indian layers."
+    },
+    {
+      "id": "pd-map1000",
+      "title": "Human History Map 1000 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded later Chola Empire assignment of Madurai and far southern test points after the separately carded Pandya state interval."
+    },
+    {
+      "id": "pd-map1279",
+      "title": "Human History Map 1279 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded much later and separately indexed pandya-state-1279 geometry, which unlike this target contains Madurai."
+    },
+    {
+      "id": "pd-overview",
+      "title": "Tamil Nadu Open University, History of India up to 1206 CE",
+      "url": "https://tnou.ac.in/eslm/UG/B.A.%20HISTORY/SEM%20I/BHYS-12.pdf",
+      "note": "Official university course synthesis of the revived Pandya sequence from Kadungon through Nedunjadaiyan, with conventional dates used only as approximate guides."
+    },
+    {
+      "id": "pd-south-india",
+      "title": "Archaeological Survey of India, South India to about A.D. 1300",
+      "url": "https://ignca.gov.in/Asi_data/41498.pdf",
+      "note": "Authoritative survey explaining the unusually heavy dependence of early Pandya history on bilingual copper plates and the growth of stone inscriptions after the sixth century."
+    },
+    {
+      "id": "pd-ei17",
+      "title": "Archaeological Survey of India, Epigraphia Indica XVII: Velvikudi grant",
+      "url": "https://library.bjp.org/jspui/bitstream/123456789/1910/8/epigraphia-indica-vol-17.pdf",
+      "note": "Original scholarly edition, facsimile and translation of the Velvikudi grant, including royal genealogy, Kalabhra narrative, petition and land restoration."
+    },
+    {
+      "id": "pd-classical",
+      "title": "R. C. Majumdar, The Classical Age: Dynasties of South India",
+      "url": "https://www.cristoraul.org/ENGLISH/readinghall/CR-PDF-LIBRARY/INDIA/320-740-INDIA-THE-CLASSICAL-AGE.pdf",
+      "note": "Major scholarly synthesis stressing that early medieval Pandya genealogy and chronology remain unsettled while offering a provisional ruler sequence."
+    },
+    {
+      "id": "pd-imperial",
+      "title": "R. C. Majumdar, The Age of Imperial Kanauj: South India",
+      "url": "https://ignca.gov.in/Asi_data/73908.pdf",
+      "note": "Scholarly history of early Pandya rulers, campaigns and rivals based primarily on the Velvikudi and Sinnamanur records."
+    },
+    {
+      "id": "pd-state",
+      "title": "IGNOU, State in Early Medieval India",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/66566/1/Block-2.pdf",
+      "note": "University synthesis of Pandya state formation, nadu and nattar institutions, brahmadeya and temple integration, revenue and limits of older political models."
+    },
+    {
+      "id": "pd-economy",
+      "title": "IGNOU, Early Medieval Economy and its Continuities",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/67196/1/Block-3.pdf",
+      "note": "University synthesis of sixth to tenth-century Pandya agrarian change, Tamraparni and Vaigai valleys, land controllers, peasants and labor."
+    },
+    {
+      "id": "pd-velvikudi",
+      "title": "DHARMA, Velvikudi grant of Nedunjadaiyan, year 3",
+      "url": "https://dharmalekha.info/texts/INSPandya10002",
+      "note": "Critical digital edition of the bilingual grant, its Grantha Sanskrit and Vatteluttu Tamil, regnal context and royal Sanskrit verse used for the written sample."
+    },
+    {
+      "id": "pd-anaimalai",
+      "title": "DHARMA, SII 14.1 and 14.2: Anaimalai inscriptions",
+      "url": "https://dharmalekha.info/texts/INSSIIv14p1i0001-0002",
+      "note": "Critical digital edition of dated Grantha and Vatteluttu records for the Narasimha cave, minister Maran Kari and his brother and successor Maran Eyinan."
+    },
+    {
+      "id": "pd-tiruppara",
+      "title": "DHARMA, SII 14.3: Tirupparankunram inscription",
+      "url": "https://dharmalekha.info/texts/INSSIIv14p1i0003",
+      "note": "Critical digital edition of a year-six Vatteluttu record naming a shrine, tank, royal mahāsāmanta Sattan Ganapati and shrines built by Nakkan Korri."
+    },
+    {
+      "id": "pd-ladan",
+      "title": "Tamil Nadu Archaeology, Ladan Koil at Anaimalai",
+      "url": "https://www.tnarch.gov.in/lanankol-anaimalai",
+      "note": "Official monument description of an eighth-century early Pandya rock-cut Murugan shrine, seated figures, pillars and sculptural details."
+    },
+    {
+      "id": "pd-tank",
+      "title": "Tamil Nadu Archaeology, Pandiyan Kalvettu Padukai",
+      "url": "https://www.tnarch.gov.in/pandiyan-kalvettu-padukai",
+      "note": "Official account of an eighth-century Tamil verse inscription recording a chief, his son, a stonemason, a tank, stone facing, sluice and irrigated land."
+    },
+    {
+      "id": "pd-vatteluttu",
+      "title": "Tamil Nadu Archaeology, Inscriptions in Vatteluttu script",
+      "url": "https://www.tnarch.gov.in/epigraphy/inscriptions-vattezhuthu-script",
+      "note": "Official script overview illustrating seventh-century Pandya irrigation and eighth-century donative inscriptions in the southern cursive script."
+    },
+    {
+      "id": "pd-copper",
+      "title": "Tamil Nadu Archaeology, Copper Plate Inscriptions",
+      "url": "https://www.tnarch.gov.in/copper-plate-inscriptions",
+      "note": "Official description of Pandya seventh to tenth-century copper charters, Vatteluttu Tamil, Grantha Sanskrit, ring-bound plates and chance discoveries."
+    },
+    {
+      "id": "pd-korkai",
+      "title": "Tamil Nadu Archaeology, Korkai excavation",
+      "url": "https://www.tnarch.gov.in/korkai",
+      "note": "Official excavation page for the ancient Pandya port, brick structure, three probable soakage jars and clearly earlier Tamil-Brahmi material."
+    },
+    {
+      "id": "pd-cultural",
+      "title": "Tamil Nadu Archaeology, The Cultural Heritage of Tamil Nadu",
+      "url": "https://www.tnarch.gov.in/Library%20BOOk%20PDF/The%20Cultural%20Heritage%20of%20Tamilnadu.pdf",
+      "note": "Official archaeological survey of Korkai finds and their broad dating, including medieval ring features and earlier pottery, beads, bangles and ornaments."
+    },
+    {
+      "id": "pd-coins",
+      "title": "Government Museum Chennai, Pandya coins",
+      "url": "https://www.chennaimuseum.org/draft/gallery/04/01/coin1.htm",
+      "note": "Official museum overview distinguishing early square coinage from the single or paired fish emblems common on seventh to tenth-century Pandya coins."
+    },
+    {
+      "id": "pd-bhakti",
+      "title": "IGNOU, Historical Background: The Bhakti Millennium",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/82886/3/Theme-4.pdf",
+      "note": "University account of sixth to ninth-century Tamil Alvar and Nayanar devotion, Tamil composition, diverse participants and women."
+    },
+    {
+      "id": "pd-bhakti-society",
+      "title": "IGNOU, Medieval Society: Tamil Bhakti",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/103504/1/Block-6.pdf",
+      "note": "University discussion of Tamil devotional hymns, temple worship, pilgrimage, music-like poetic forms and social inclusion with continuing hierarchy."
+    },
+    {
+      "id": "pd-jain",
+      "title": "Heritage University of Kerala Journal, Jainism in the Tamil region",
+      "url": "https://www.heritageuniversityofkerala.com/JournalPDF/Volume11.1/5.pdf",
+      "note": "Peer-reviewed study of eighth and ninth-century Jain teachers, images, patrons and continuing communities in the Pandya region."
+    },
+    {
+      "id": "pd-xuanzang",
+      "title": "Samuel Beal, Buddhist Records of the Western World, volume 2",
+      "url": "https://ignca.gov.in/Asi_data/15707.pdf",
+      "note": "Primary travel-record translation used cautiously for the mid-seventh-century secondhand account of Malakuta, commerce, pearls and religious conditions."
+    },
+    {
+      "id": "pd-trade",
+      "title": "R. C. Majumdar, The Classical Age: Trade",
+      "url": "https://ignca.gov.in/Asi_data/2028.pdf",
+      "note": "Scholarly synthesis identifying Korkai and Saliyur as Pandya ports and describing coastal and river exchange in late ancient South India."
+    },
+    {
+      "id": "pd-port",
+      "title": "Asia-Pacific Conference on Underwater Cultural Heritage, Tamiraparani ports",
+      "url": "https://apconf.omeka.net/exhibits/show/apconfproceedings/item/1991",
+      "note": "Specialist archaeological summary distinguishing early historic Korkai from medieval Kayal and emphasizing changing delta routes and port networks."
+    },
+    {
+      "id": "pd-medicine",
+      "title": "Anatomy in ancient India: a focus on the Susruta Samhita",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3039177/",
+      "note": "Peer-reviewed overview of early Indian medical learning and surgery, with explicit uncertainty about textual dates and no claim of local Pandya clinical access."
+    },
+    {
+      "id": "pd-sri-lanka",
+      "title": "ISEAS, Engineering Expansion: The Chola Invasion of Sri Lanka",
+      "url": "https://www.iseas.edu.sg/wp-content/uploads/pdfs/nscwps8.pdf",
+      "note": "Research paper placing major Pandya-Anuradhapura warfare in the ninth-century context and explaining shifting Pallava, Pandya and Sri Lankan alignments."
+    },
+    {
+      "id": "pd-map-model",
+      "title": "Monica L. Smith, Territories, corridors, and networks",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/cplx.20173",
+      "note": "Archaeological model explaining why premodern states often worked through nodes, corridors and uneven influence rather than fixed surveyed borders."
+    },
+    {
+      "id": "pd-deccan",
+      "title": "Government of Maharashtra Gazetteers, History: Chalukyas and Pandyas",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/chapter_6.pdf",
+      "note": "Government scholarly history discussing the Velvikudi report of the Venbai campaign and a Ganga marriage connection under late Chalukya conditions."
+    },
+    {
+      "id": "pd-food",
+      "title": "IGNOU, Early Tamil Society: Regions and Cultures",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/103487/1/Block-3.pdf",
+      "note": "University synthesis of earlier Tamil wet and dry landscapes, rice, millet, animal work and tank irrigation, used only as inherited regional background with date limits."
+    }
+  ],
+  "entities": [
+    {
+      "id": "pandyas",
+      "card": "data/cards/pandyas.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pd-overview",
+            "pd-index",
+            "pd-map500",
+            "pd-map600",
+            "pd-map700",
+            "pd-map800"
+          ],
+          "locator": "Official university course synthesis of the revived Pandya sequence from Kadungon through Nedunjadaiyan, with conventional dates used only as approximate guides. Exact imported Pandyas identity, approximate 500 to 800 interval and separately indexed neighboring and later identities. Decoded first Pandyas geometry, coordinate hash, topology and named point tests against simultaneous Chola, Pallava and Simhala layers. Decoded snapshot proving the exact Pandyas feature is absent during the internal 600 to 700 coverage gap. Decoded second Pandyas geometry, coordinate hash, topology and point ownership among Pallava, Chalukya, Chera and Chola layers. Decoded handoff from exact id pandyas to the distinct pandya-state and pallava atlas records.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pd-ei17",
+            "pd-map500"
+          ],
+          "locator": "Original scholarly edition, facsimile and translation of the Velvikudi grant, including royal genealogy, Kalabhra narrative, petition and land restoration. Decoded first Pandyas geometry, coordinate hash, topology and named point tests against simultaneous Chola, Pallava and Simhala layers.",
+          "dateScope": {
+            "from": 500,
+            "to": 590
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pd-ei17"
+          ],
+          "locator": "Original scholarly edition, facsimile and translation of the Velvikudi grant, including royal genealogy, Kalabhra narrative, petition and land restoration.",
+          "dateScope": {
+            "from": 590,
+            "to": 620
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pd-classical"
+          ],
+          "locator": "Major scholarly synthesis stressing that early medieval Pandya genealogy and chronology remain unsettled while offering a provisional ruler sequence.",
+          "dateScope": {
+            "from": 620,
+            "to": 645
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pd-classical",
+            "pd-vatteluttu"
+          ],
+          "locator": "Major scholarly synthesis stressing that early medieval Pandya genealogy and chronology remain unsettled while offering a provisional ruler sequence. Official script overview illustrating seventh-century Pandya irrigation and eighth-century donative inscriptions in the southern cursive script.",
+          "dateScope": {
+            "from": 645,
+            "to": 670
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pd-imperial",
+            "pd-bhakti"
+          ],
+          "locator": "Scholarly history of early Pandya rulers, campaigns and rivals based primarily on the Velvikudi and Sinnamanur records. University account of sixth to ninth-century Tamil Alvar and Nayanar devotion, Tamil composition, diverse participants and women.",
+          "dateScope": {
+            "from": 670,
+            "to": 710
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pd-imperial"
+          ],
+          "locator": "Scholarly history of early Pandya rulers, campaigns and rivals based primarily on the Velvikudi and Sinnamanur records.",
+          "dateScope": {
+            "from": 710,
+            "to": 740
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pd-south-india",
+            "pd-deccan"
+          ],
+          "locator": "Authoritative survey explaining the unusually heavy dependence of early Pandya history on bilingual copper plates and the growth of stone inscriptions after the sixth century. Government scholarly history discussing the Velvikudi report of the Venbai campaign and a Ganga marriage connection under late Chalukya conditions.",
+          "dateScope": {
+            "from": 740,
+            "to": 765
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pd-anaimalai",
+            "pd-velvikudi",
+            "pd-map800"
+          ],
+          "locator": "Critical digital edition of dated Grantha and Vatteluttu records for the Narasimha cave, minister Maran Kari and his brother and successor Maran Eyinan. Critical digital edition of the bilingual grant, its Grantha Sanskrit and Vatteluttu Tamil, regnal context and royal Sanskrit verse used for the written sample. Decoded handoff from exact id pandyas to the distinct pandya-state and pallava atlas records.",
+          "dateScope": {
+            "from": 765,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pd-index"
+          ],
+          "locator": "Exact civilization index row and related-id search.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pd-map500"
+          ],
+          "locator": "Decoded topology, bbox, coordinate hash and named point tests in world-500.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pd-map600",
+            "pd-index"
+          ],
+          "locator": "Exact-target absence and complete point-owner table at 600.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pd-map700"
+          ],
+          "locator": "Decoded topology, bbox, coordinate hash, named point tests and simultaneous owners in world-700.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pd-map800",
+            "pd-map1279",
+            "pd-index"
+          ],
+          "locator": "Successor-snapshot audit, later point tests and distinct indexed identities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pd-south-india"
+          ],
+          "locator": "Survey chapter on inscriptional sources, scripts, languages and evidence density.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pd-ei17"
+          ],
+          "locator": "Velvikudi edition and translation, lines on Kalabhra seizure and Kadungon genealogy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pd-classical"
+          ],
+          "locator": "Dynasties of South India chapter, explicit chronology uncertainty and provisional sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pd-state"
+          ],
+          "locator": "Pandya ruler table and discussion of early medieval state formation and records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pd-vatteluttu"
+          ],
+          "locator": "Official illustrated examples and geographic history of Vatteluttu.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pd-imperial"
+          ],
+          "locator": "South India political chapter, genealogy and campaigns attributed to Arikesari.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pd-imperial"
+          ],
+          "locator": "Campaign summaries for Kochadaiyan, Rajasimha and Nedunjadaiyan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pd-map500",
+            "pd-map700",
+            "pd-map-model"
+          ],
+          "locator": "Atlas point-owner comparison plus archaeological model of nodes, corridors and uneven control.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pd-deccan"
+          ],
+          "locator": "Government history chapter on Venbai, Chalukya conditions and the Ganga marriage report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pd-state"
+          ],
+          "locator": "State-formation discussion of layered authority, landed groups, institutions and ranked officers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pd-state"
+          ],
+          "locator": "Nadu, nattar, revenue and local authority discussion with democracy caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pd-economy"
+          ],
+          "locator": "Pandya-region section on brahmadeya, Tamraparni and Vaigai, intermediaries and producers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pd-ei17"
+          ],
+          "locator": "Velvikudi Tamil grant narrative and translated petition at Kudal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pd-tiruppara"
+          ],
+          "locator": "SII 14.3 summary and lines 1 to 10, titles, residence, shrine and tank.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pd-copper"
+          ],
+          "locator": "Official copper-plate overview, scripts, format and discovery circumstances.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pd-korkai"
+          ],
+          "locator": "Official location, port tradition, brick structure and explicit dates of inscribed sherds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pd-port"
+          ],
+          "locator": "Specialist port-network summary distinguishing Korkai and Kayal chronologically.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pd-xuanzang"
+          ],
+          "locator": "Buddhist Records volume 2, Malakuta description and route context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pd-coins"
+          ],
+          "locator": "Official museum chronology and description of fish emblems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pd-trade",
+            "pd-port"
+          ],
+          "locator": "Trade chapter on Pandya ports compared with specialist delta-network chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pd-economy"
+          ],
+          "locator": "Pandya-region agrarian organization and comparative river-valley discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pd-food"
+          ],
+          "locator": "Early Tamil ecology, wet and dry cultivation, rice, millet and irrigation, with date boundary stated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pd-tank"
+          ],
+          "locator": "Official monument account, date, father and son, mason, stone revetment, sluice and land.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pd-tiruppara"
+          ],
+          "locator": "SII 14.3 lines 7 to 10 and summary, shrine and tank.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pd-state"
+          ],
+          "locator": "Local agrarian authority and irrigation-management discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pd-anaimalai"
+          ],
+          "locator": "SII 14.1 and 14.2 summary, dated record, brothers, office succession and building sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pd-tiruppara"
+          ],
+          "locator": "SII 14.3 summary and lines 11 to 14, relationship wording and two goddess shrines.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pd-ladan"
+          ],
+          "locator": "Official monument description, date, plan, deity, consort and emblems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pd-bhakti"
+          ],
+          "locator": "University account of Tamil poet-saints, dates, languages, participants and later corpora.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pd-jain"
+          ],
+          "locator": "Peer-reviewed discussion of eighth and ninth-century Jain activity and patronage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pd-anaimalai"
+          ],
+          "locator": "Anaimalai brother succession, completion of the cave project and inherited ministerial office.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pd-copper",
+            "pd-bhakti-society"
+          ],
+          "locator": "Specialized written and poetic production, with explicit absence of universal-school evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pd-velvikudi"
+          ],
+          "locator": "Velvikudi page 3v, line 30; language and Grantha script metadata.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pd-velvikudi"
+          ],
+          "locator": "Critical edition, stanza 17, with the governing verb in the preceding line and normalized spelling explained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pd-velvikudi"
+          ],
+          "locator": "Title, regnal year, scripts, languages and critical-edition bibliography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pd-food",
+            "pd-economy"
+          ],
+          "locator": "Regional crop ecology compared with early medieval Pandya agrarian organization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pd-cultural"
+          ],
+          "locator": "Official Korkai artifact list and broad chronological discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pd-ladan",
+            "pd-cultural"
+          ],
+          "locator": "Monument imagery compared with archaeological preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pd-tank",
+            "pd-copper"
+          ],
+          "locator": "Named mason and material production chain in official inscription resources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pd-bhakti-society"
+          ],
+          "locator": "Tamil hymn, worship and community discussion, with explicit limit on game evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pd-anaimalai",
+            "pd-tiruppara"
+          ],
+          "locator": "Vaidya wording in Anaimalai and Tirupparankunram records, with occupational inference limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pd-medicine"
+          ],
+          "locator": "Peer-reviewed review of contents, training and dating problems in the Susruta textual tradition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pd-tank"
+          ],
+          "locator": "Official tank, sluice, irrigated-land evidence and its functional limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pd-korkai",
+            "pd-cultural"
+          ],
+          "locator": "Excavation interpretation and broad medieval dating; no latrine identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pd-map800",
+            "pd-map900",
+            "pd-map1000",
+            "pd-sri-lanka"
+          ],
+          "locator": "Atlas sequence compared with scholarly placement of major Pandya-Anuradhapura conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pd-map800",
+            "pd-map900",
+            "pd-map1000",
+            "pd-sri-lanka"
+          ],
+          "locator": "Decoded handoff from exact id pandyas to the distinct pandya-state and pallava atlas records. Decoded continued pandya-state layer and separately labeled Sri Lankan and rival South Indian layers. Decoded later Chola Empire assignment of Madurai and far southern test points after the separately carded Pandya state interval. Research paper placing major Pandya-Anuradhapura warfare in the ninth-century context and explaining shifting Pallava, Pandya and Sri Lankan alignments.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "pandyas",
+        "card": "cards/pandyas.json",
+        "dateBasis": "map_coverage",
+        "summary": "The early medieval Pandya revival, preserved in difficult charters and cave inscriptions while the atlas omits Madurai and a full century of geometry.",
+        "fell": null,
+        "successors": [
+          "pandya-state"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-500.json",
+          "properties": {
+            "civ": "pandyas",
+            "from": 500,
+            "to": 600,
+            "precision": 1
+          },
+          "bounds": [
+            76.65376653766538,
+            8.02748509045896,
+            78.24138241382417,
+            9.132082364535336
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "pandyas",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            76.53856538565384,
+            8.02748509045896,
+            78.67338673386735,
+            10.345895138801993
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target pandyas is indexed approximately 500 to 800 CE and was missing both a card and a researched override at initial audit.",
+    "Only world-500 and world-700 contain the exact target. The absent world-600 feature creates a real 600 to 700 geometry gap inside the indexed lifetime.",
+    "The 500 target is one Polygon, one ring and 16 positions with SHA-256 423f9dbbc4e92aca80118dd8aba45f9ecb8855d9ef5c63a8b27ea0b2fbf724af.",
+    "The 700 target is one Polygon, one ring and 19 positions with SHA-256 9c968604690830ee30a27d7ebd055374e30faa9784f9478a58941d0452f7ba51.",
+    "Both target polygons contain Korkai, Tirunelveli and Kanyakumari but exclude Madurai, Rameswaram, Dindigul, Karur, Uraiyur, Puhar, Kanchipuram, Kerala ports and all tested Sri Lankan points.",
+    "At 500 and 700 the atlas assigns Madurai to chola-empire; other nearby points move among pallavas, chalukyas, cheras and chola-empire. Simhala remains a separate island layer.",
+    "At 800 the exact target disappears and the distinct pandya-state record begins. pandya-state-1279 is a separate much later record whose geometry finally includes Madurai.",
+    "No appliesTo alias is added. The override leaves fell null and links pandya-state only as the next separately carded atlas and dynastic phase."
+  ]
+}
