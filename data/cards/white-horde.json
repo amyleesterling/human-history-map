@@ -1,0 +1,572 @@
+{
+  "id": "white-horde",
+  "overview": "The atlas paints “White Horde” across the eastern steppe from 1400 to 1530, but the historical wing it tries to show was older and had already changed form. Orda’s descendants ruled within Jochi’s wider realm; before 1400, Tokhtamysh reunited eastern and western wings, fought Timur and lost his grip. The next century belonged to rival Jochid, Abu’l-Khayrid and emerging Kazakh projects. Even the color name slips: some sources call the eastern wing Blue Horde and use White Horde for the west or the whole realm. This card follows the evidence rather than the paint, moving between pasture routes, Syr Darya cities, ruling families, markets, schools, waterworks, medicine, children and writing. It carefully marks what belongs to broader Golden Horde or successor settings. The 1530 endpoint is an atlas handoff, not a people’s disappearance.",
+  "periods": [
+    {
+      "from": 1227,
+      "to": 1260,
+      "circa": true,
+      "title": "Orda’s inheritance in the Jochid world",
+      "summary": "After Jochi’s death, Orda and his descendants held the north-eastern part of the wider Jochid realm. Later writers would attach White or Blue color names to this wing, but the labels are not consistent.",
+      "sourceIds": [
+        "wh-iranica"
+      ]
+    },
+    {
+      "from": 1260,
+      "to": 1359,
+      "circa": true,
+      "title": "A durable eastern wing with room to govern",
+      "summary": "The eastern and western wings remained parts of one Jochid political order while regional rulers handled many internal affairs. Sighnaq linked steppe power to a rebuilt trading city on the Syr Darya.",
+      "sourceIds": [
+        "wh-wings"
+      ]
+    },
+    {
+      "from": 1359,
+      "to": 1378,
+      "circa": true,
+      "title": "Civil war, eastern contenders and a mint at Sighnaq",
+      "summary": "When the senior Batuid line failed, rival Jochid families competed. Eastern rulers issued coins at Sighnaq, first under Mubarak Khwaja and then regularly under Urus Khan, making authority visible in silver.",
+      "sourceIds": [
+        "wh-coinage"
+      ]
+    },
+    {
+      "from": 1378,
+      "to": 1395,
+      "circa": true,
+      "title": "Tokhtamysh reunites the wings, then fights Timur",
+      "summary": "With Timur’s early support, Tokhtamysh gained the eastern wing and then reunited the wider Golden Horde. Their alliance broke; Timur’s invasions badly weakened Tokhtamysh’s rule and the reunited political center.",
+      "sourceIds": [
+        "wh-iranica"
+      ]
+    },
+    {
+      "from": 1395,
+      "to": 1429,
+      "circa": true,
+      "title": "The atlas begins amid fragmentation",
+      "summary": "Jochid rulers and powerful allies kept competing after Tokhtamysh. Urus Khan’s descendants and other lineages remained important, but a single independent eastern state called White Horde is a poor description of the whole period.",
+      "sourceIds": [
+        "wh-urus"
+      ]
+    },
+    {
+      "from": 1429,
+      "to": 1468,
+      "circa": true,
+      "title": "Abu’l-Khayr gathers much of the eastern steppe",
+      "summary": "Abu’l-Khayr was elected khan in Siberia and united much of the Uzbek ulus. His long rule, rather than an unchanged White Horde, dominates a large part of the atlas label’s fifteenth-century span.",
+      "sourceIds": [
+        "wh-abulkhayrids"
+      ]
+    },
+    {
+      "from": 1468,
+      "to": 1530,
+      "circa": true,
+      "title": "Kazakh and Shaybanid successors reshape the inheritance",
+      "summary": "Jani Beg and Giray’s followers built the Kazakh Khanate from a break with Abu’l-Khayr, while Shaybanid power moved south. The atlas keeps saying White Horde until its 1530 handoff, long after political names had changed.",
+      "sourceIds": [
+        "wh-kazakh"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "Audit the map before riding into the story",
+      "items": [
+        {
+          "text": "The exact atlas id is white-horde, labeled “White Horde” and indexed circa 1400 to 1530. Its only alias is “Golden Horde.” Those are database fields, not a verdict on medieval terminology. Separate blue-horde, golden-horde, khanate-of-sibir, nogai-horde and quazaq-khanate records must stay separate.",
+          "sourceIds": [
+            "wh-index"
+          ]
+        },
+        {
+          "text": "In the 1300 snapshot, no white-horde feature exists. A broad khanate-of-the-golden-horde polygon reaches across both eastern and western test places; a second, smaller feature uses that same id and carries the odd label “Ryazan.” The 1400 split is therefore an editorial redraw, not a newly witnessed founding ceremony.",
+          "sourceIds": [
+            "wh-map1300"
+          ]
+        },
+        {
+          "text": "At 1400 the target is one 213-position polygon, spanning about 47.83° to 93.97° east and 41.14° to 62.54° north. It includes tested Kazan, Tyumen, Tobolsk, Orenburg, Oral and Mangystau, yet excludes Sighnaq, Sauran and Otyrar. The neighboring western polygon is called blue-horde.",
+          "sourceIds": [
+            "wh-map1400"
+          ]
+        },
+        {
+          "text": "At 1492 the target becomes a different 279-position polygon, now spanning about 50.33° to 87.77° east and 38.90° to 61.69° north. It includes tested Sighnaq, Sauran, Otyrar, Turkistan and Saryarka but drops Kazan, Tyumen and Tobolsk. That dramatic change exposes a locator, not a measured frontier.",
+          "sourceIds": [
+            "wh-map1492"
+          ]
+        },
+        {
+          "text": "The 1500 target has 281 positions and a lower northern limit than 1492. At 1530 it vanishes: tested Syr Darya and central-steppe points transfer to quazaq-khanate, Mangystau to khiva-khanate, and northern or western points to Sibir, Kazan or Nogai features. This is a many-way atlas handoff.",
+          "sourceIds": [
+            "wh-map1500",
+            "wh-map1530"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Why white can mean blue",
+      "items": [
+        {
+          "text": "The atlas uses White Horde for its eastern polygon and Blue Horde for its western polygon in 1400. That is one common modern convention, but the geometry only proves how this dataset labels its two shapes. It cannot settle what every medieval writer meant by a color.",
+          "sourceIds": [
+            "wh-map1400"
+          ]
+        },
+        {
+          "text": "Research centered on sources made inside the Jochid world reaches the opposite color assignment: by the late fourteenth century, White Horde could mean the western Right Wing or the whole Jochid realm, while Blue Horde meant the eastern Left Wing. Both schemes appear in scholarship, so the card states the disagreement.",
+          "sourceIds": [
+            "wh-wings"
+          ]
+        },
+        {
+          "text": "The safest historical label for the eastern polity is therefore “the eastern or Left Wing of the Jochid ulus,” with White Horde and Blue Horde noted as competing names. A color word cannot function like a modern passport stamp. It shifts with the author, language, period and scholarly tradition.",
+          "sourceIds": [
+            "wh-wings"
+          ]
+        },
+        {
+          "text": "Contemporary evidence is uneven. Many narratives came from Rus, Arabic, Timurid, European or Chinese observers and concentrate on western capitals. A small group of surviving Jochid orders helps, but the eastern wing remains especially hard to reconstruct. Confident year-by-year borders would outrun what the sources can support.",
+          "sourceIds": [
+            "wh-turmoil"
+          ]
+        },
+        {
+          "text": "The atlas alias “Golden Horde” is also too broad to settle the issue. Golden Horde can name the wider Jochid realm, while the feature shown here tries to isolate its eastern inheritance. The alias helps search, but it must not collapse every Jochid government from the Volga to the Irtysh into one card.",
+          "sourceIds": [
+            "wh-index"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "An eastern wing, a city and a powerful family",
+      "items": [
+        {
+          "text": "The ruling house descended from Jochi, the eldest son of Chinggis Khan. Orda, Jochi’s son and Batu’s older brother, held the north-eastern territories. This dynastic inheritance mattered for centuries: the right to be khan rested on Chinggisid descent even when generals, clan leaders and city officials held enormous practical power.",
+          "sourceIds": [
+            "wh-iranica"
+          ]
+        },
+        {
+          "text": "The western khans at Sarai claimed senior standing, but Orda’s eastern successors often managed their own internal affairs. That combination, one wider ulus with strong regional autonomy, fits the evidence better than two permanently sealed countries. The system could hold together, loosen and be reunited without a modern constitutional map.",
+          "sourceIds": [
+            "wh-coinage"
+          ]
+        },
+        {
+          "text": "Sygnak, also spelled Sighnaq or Syganak, stood where river routes, irrigated fields and the open steppe met. UNESCO’s dossier associates it with Ak-Orda and describes a rebuilt political and economic center with houses, fields and channels around it. Steppe government and city life were partners, not opposites.",
+          "sourceIds": [
+            "wh-unesco"
+          ]
+        },
+        {
+          "text": "Only a Chinggisid could normally hold the title khan, a rule scholars call the Chinggisid principle. Other elites could command armies, broker alliances and make or break claimants, but they still needed a royal descendant at the top. Political power was therefore both deeply hereditary and constantly negotiated.",
+          "sourceIds": [
+            "wh-turmoil"
+          ]
+        },
+        {
+          "text": "The two-wing structure survived even after Tokhtamysh brought the wings under one ruler. That durability was an achievement of flexible government across enormous distances. It also explains why later chroniclers could remember eastern and western political communities without agreeing on which one was white and which one was blue.",
+          "sourceIds": [
+            "wh-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Silver coins in a season of civil war",
+      "items": [
+        {
+          "text": "Berdibeg’s death in 1359 opened a long struggle for the central throne. Regional leaders strengthened their own positions while still speaking the political language of one Jochid realm. The turmoil was not merely a list of dueling princes: climate, epidemic disease, trade disruption and food-supply stress also burdened communities.",
+          "sourceIds": [
+            "wh-turmoil"
+          ]
+        },
+        {
+          "text": "Mubarak Khwaja’s coins from Sighnaq date to 1366 to 1368, correcting older readings that placed them decades too early. Minting his own named money signaled an eastern ruler’s claim to independent authority. A tiny coin can sometimes date a political argument more securely than a much later chronicle.",
+          "sourceIds": [
+            "wh-coinage"
+          ]
+        },
+        {
+          "text": "Urus Khan took power at Sighnaq in 1368 or 1369, after which the mint issued coins regularly. He also intervened in contests for the wider Golden Horde throne. The eastern wing was no quiet edge of someone else’s empire; its rulers could try to command the whole Jochid political world.",
+          "sourceIds": [
+            "wh-coinage",
+            "wh-urus"
+          ]
+        },
+        {
+          "text": "Urus Khan’s story also shows that royal descent did not erase coalition politics. Tribal leaders gained influence during instability, and khans needed their support. A ruler on horseback still required people to supply remounts, guide routes, relay messages, collect resources and decide that his orders deserved obedience.",
+          "sourceIds": [
+            "wh-urus"
+          ]
+        },
+        {
+          "text": "A mint does not prove that every shepherd used cash every day or that borders stayed still. Research on steppe trade also emphasizes barter, livestock products and imported prestige goods. Numismatics gives a sharp point of evidence inside a much softer landscape of seasonal movement and negotiated allegiance.",
+          "sourceIds": [
+            "wh-crafts"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tokhtamysh changes the chapter before 1400",
+      "items": [
+        {
+          "text": "Tokhtamysh first rose with help from Timur, defeated rivals in the east and then reunited the major Jochid wings around 1378 to 1380. Regional elites submitted surprisingly quickly because the idea of one Jochid ulus and a legitimate Chinggisid khan still mattered. The old wing structure survived inside the reunion.",
+          "sourceIds": [
+            "wh-turmoil"
+          ]
+        },
+        {
+          "text": "The alliance with Timur collapsed. Tokhtamysh challenged Timur’s expansion, and Timur’s invasions badly damaged his power. By 1393 Tokhtamysh’s own diplomatic letter described betrayal, warfare and his effort to rebuild external relations. The document catches a ruler explaining disaster in his own political voice.",
+          "sourceIds": [
+            "wh-yarligh-text"
+          ]
+        },
+        {
+          "text": "This makes the atlas start date awkward in a useful way. By 1400, the eastern wing had already been folded into Tokhtamysh’s reunited realm and then shaken apart by war. The label “White Horde, 1400 to 1530” begins after the state usually meant by that name had transformed.",
+          "sourceIds": [
+            "wh-iranica",
+            "wh-index"
+          ]
+        },
+        {
+          "text": "The 1400 polygon adds another warning: it excludes Sighnaq, the eastern political center associated with Urus Khan, while including far northern and western test cities. A technically exact coordinate ring can still be historically misleading. The proper response is explanation, not false precision.",
+          "sourceIds": [
+            "wh-map1400",
+            "wh-urus"
+          ]
+        },
+        {
+          "text": "The fifteenth century brought several Jochid successor projects, not a neat continuation under one color. Families descended from Jochi, commanders and mobile communities kept competing over steppe routes, cities and the prestigious right to rule. Political fragmentation changed institutions without wiping away the people who carried them.",
+          "sourceIds": [
+            "wh-kazakh"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "What filled the atlas years",
+      "items": [
+        {
+          "text": "Abu’l-Khayr was elected supreme ruler of the Uzbek ulus in Siberia in 1429 and gathered much of the eastern steppe under his authority. His success belongs inside the atlas’s 1400 to 1492 polygon, yet the database never changes its White Horde label. The map’s long name-span hides a major political replacement.",
+          "sourceIds": [
+            "wh-abulkhayrids"
+          ]
+        },
+        {
+          "text": "The 1492 redraw shifts south toward Sighnaq, Sauran and Otyrar, but by then those places had passed through Timurid, Abu’l-Khayrid and emerging Kazakh contests. Geometry alone cannot choose which government a child in one household answered to, especially when pasture routes, city jurisdictions and dynastic claims overlapped.",
+          "sourceIds": [
+            "wh-map1492"
+          ]
+        },
+        {
+          "text": "In the 1450s, the Jochid princes Jani Beg and Giray broke from Abu’l-Khayr with a following drawn from the Uzbek ulus. Their movement developed into the Kazakh Khanate. Historians debate how to date that formation, so the story is better understood as a process of migration, coalition and new political identity.",
+          "sourceIds": [
+            "wh-kazakh"
+          ]
+        },
+        {
+          "text": "The Kazakh Khanate was not created from empty land and the White Horde did not simply change its name overnight. It inherited parts of the eastern Jochid political world while building new coalitions. Other Jochid and Shaybanid successors did the same elsewhere. Continuity branched; it did not run through one tidy line.",
+          "sourceIds": [
+            "wh-kazakh"
+          ]
+        },
+        {
+          "text": "At 1530 the atlas finally replaces white-horde with a mosaic. That handoff arrives long after historical transformation, but it usefully points toward Kazakh, Nogai, Sibir, Kazan, Khiva and Bukhara stories. No 1530 switch erased steppe families, trade knowledge, Islam, Turkic speech or Chinggisid ideas of legitimacy.",
+          "sourceIds": [
+            "wh-map1530"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Households, rank and growing up",
+      "items": [
+        {
+          "text": "Pastoral households planned movements around winter shelter, spring growth and summer grazing. Animals provided transport, food and exchange value, while towns supplied markets and craft goods. Calling this “wandering” misses the work: families needed route knowledge, labor coordination and decisions about when grass and water could support a herd.",
+          "sourceIds": [
+            "wh-life"
+          ]
+        },
+        {
+          "text": "Early-sixteenth-century Ruzbihan described portable homes and larger wooden, felt-covered dwellings mounted on carts and pulled by camels. The account belongs to successor communities on the same eastern steppe, not a frozen White Horde custom. Still, it makes moving day wonderfully literal: sometimes the house came too.",
+          "sourceIds": [
+            "wh-life"
+          ]
+        },
+        {
+          "text": "A fourteenth-century visitor to the wider Golden Horde saw elite women who held property and exercised authority. Their households also included servants and enslaved attendants. This is evidence about royal circles, largely farther west, not proof that every woman shared a princess’s power, or that everyone inside her wagon was free.",
+          "sourceIds": [
+            "wh-ibnbattuta"
+          ]
+        },
+        {
+          "text": "Archaeology hears children only faintly. Golden Horde houses and cemeteries preserve changing family sleeping platforms and evidence of child mortality, but most examples are not securely from the eastern wing. They help form questions about White Horde families; they cannot supply a census, an average family size or a universal childhood.",
+          "sourceIds": [
+            "wh-children"
+          ]
+        },
+        {
+          "text": "Learning happened in several settings. Some older children in herding households must have learned animal care, routes and craft skills by participating, but that is an inference from the work, not a surviving school schedule. Urban religious schooling is visible separately at Sauran in 1515, and neither path reached every child equally.",
+          "sourceIds": [
+            "wh-life",
+            "wh-school"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Meals, clothes, markets and hard truths",
+      "items": [
+        {
+          "text": "Ibn Battuta reported millet porridge with mare’s milk, meat and a pasta-like dish cooked with milk in the wider Golden Horde. His travel account gives a vivid meal, not a menu for every eastern family. Diet changed with wealth, season, herd mix, access to crops and whether someone lived in camp or town.",
+          "sourceIds": [
+            "wh-ibnbattuta"
+          ]
+        },
+        {
+          "text": "A source cited for early-sixteenth-century Syganak says that market demand could consume up to 500 camels’ worth of meat in a day. That startling number comes from a visitor’s description and should not become an annual average. It does show a busy city drawing livestock and customers from the steppe.",
+          "sourceIds": [
+            "wh-syganak"
+          ]
+        },
+        {
+          "text": "UNESCO’s corridor evidence joins irrigated fields, gardens, caravan roads, workshops and steppe pasture. Grain, fruit, ceramics and metal goods moved through towns while animals and their products came from mobile producers. “Nomad” and “city dweller” describe connected ways of making a living, not sealed teams that never met.",
+          "sourceIds": [
+            "wh-unesco"
+          ]
+        },
+        {
+          "text": "A study of Dasht-i Qipchaq crafts reports local production of clothing, shoes, tools and weapons, with luxury fabrics, jewelry and some prestigious arms arriving through exchange. Its source traditions also assign some crafts differently by gender. Those patterns are useful context, but no rule can describe every household across two centuries.",
+          "sourceIds": [
+            "wh-crafts"
+          ]
+        },
+        {
+          "text": "Trade had a cruel side. Livestock products and ordinary goods circulated beside captives sold into slavery. Children should not hear only a sparkling Silk Road story: war and raiding could split families, and wealth for a ruler or merchant could mean terror for somebody forced onto the road.",
+          "sourceIds": [
+            "wh-crafts"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Schools, scholars and a letter in gold",
+      "items": [
+        {
+          "text": "Sauran’s excavated madrasa measured about 31.5 by 28 metres. Rooms surrounded a courtyard, with residential cells, a teaching hall and an entrance framed by two minarets. Archaeologists identify it with a building described in 1515, inside the atlas interval, but centuries after the original eastern wing formed.",
+          "sourceIds": [
+            "wh-school"
+          ]
+        },
+        {
+          "text": "A school building does not prove universal schooling. Students living in its cells were a selected urban group; many children learned work at home, and girls’ or poorer children’s access is not quantified here. The honest lesson is that formal scholarship and practical training coexisted, while the surviving building favors an institutional view.",
+          "sourceIds": [
+            "wh-school"
+          ]
+        },
+        {
+          "text": "Syganak was associated with Muslim scholars and a mint, linking religious study, administration and trade. Some famous scholars connected with the city lived before the atlas’s 1400 start. Their careers show an inherited intellectual network, not a claim that the map label founded every school or that all residents were literate.",
+          "sourceIds": [
+            "wh-syganak"
+          ]
+        },
+        {
+          "text": "Tokhtamysh’s 1393 yarlïğ, a ruler’s written order or letter, survives in an Old Uyghur script on two paper sheets. Scholars describe its language as a Golden Horde Turkic chancery form. “Uyghur script” names the writing system here; it does not mean the document is a sample of today’s Uyghur language.",
+          "sourceIds": [
+            "wh-yarligh-study",
+            "wh-yarligh-text"
+          ]
+        },
+        {
+          "text": "Its gold-highlighted opening is transcribed “Toqtamïš sözüm,” literally “Tokhtamysh, my word,” or more naturally “Tokhtamysh’s message.” This is a Latin scholarly transliteration of the original Old Uyghur-script words, not a facsimile. It is a court formula from a Jochid document, not necessarily the speech of every home.",
+          "sourceIds": [
+            "wh-yarligh-text"
+          ],
+          "year": 1393
+        }
+      ]
+    },
+    {
+      "title": "Water, remedies, toilets and toys",
+      "items": [
+        {
+          "text": "Around Sauran, aerial photographs and fieldwork revealed canals, garden plots, vineyards and underground kariz galleries that carried groundwater. In a hot, dry summer, spring runoff alone could not reliably support a town and its fields. Building and maintaining this system required shared technical knowledge and steady labor.",
+          "sourceIds": [
+            "wh-water"
+          ]
+        },
+        {
+          "text": "Archaeologists found that Sauran and nearby Mirtobe used separate underground water systems, correcting an older reading of a famous written account. That is an achievement of method as well as engineering: landscapes, wells and soil can answer back when a respected author’s description is too simple.",
+          "sourceIds": [
+            "wh-water"
+          ]
+        },
+        {
+          "text": "At Syganak, excavators reported saiga bones, worked bone and objects interpreted as connected with medicine; the cultural-history account says material inside animal horns was prepared as a remedy called “musk.” This tells us what people may have tried. It does not demonstrate a cure by modern medical standards.",
+          "sourceIds": [
+            "wh-syganak"
+          ]
+        },
+        {
+          "text": "Direct toilet evidence from the eastern White Horde core is thin. Water channels and kariz galleries are not automatically sewers or latrines. Across the wider Golden Horde, archaeologists have found baby potties and urinal tubes used to reconstruct cradle care, but those comparative finds cannot be quietly relocated to Sighnaq.",
+          "sourceIds": [
+            "wh-children",
+            "wh-water"
+          ]
+        },
+        {
+          "text": "The wider Golden Horde archaeology also includes ceramic whistles, toy dishes, animal figurines, balls and sheep-ankle bones used in games. A baby potty may be less glamorous than a khan’s seal, but it proves one sturdy historical rule: empire never canceled potty breaks. The eastern-wing toy record remains incomplete.",
+          "sourceIds": [
+            "wh-children"
+          ]
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "status": "transformation",
+    "year": 1530,
+    "text": "The 1530 endpoint is an atlas handoff. Long before then, the eastern Jochid inheritance had branched into Abu’l-Khayrid, Kazakh and other successor projects. The layer moves tested places among Quazaq, Nogai, Sibir, Kazan, Khiva and Bukhara features. Political names changed; communities, skills and memories continued.",
+    "sourceIds": [
+      "wh-map1530",
+      "wh-continuity"
+    ]
+  },
+  "sources": [
+    {
+      "id": "wh-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json"
+    },
+    {
+      "id": "wh-map1300",
+      "title": "Human History Map world-1300 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json"
+    },
+    {
+      "id": "wh-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json"
+    },
+    {
+      "id": "wh-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json"
+    },
+    {
+      "id": "wh-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json"
+    },
+    {
+      "id": "wh-map1530",
+      "title": "Human History Map world-1530 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json"
+    },
+    {
+      "id": "wh-encyclopedia",
+      "title": "Timothy May, White Horde Khanate, The Encyclopedia of Empire",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118455074.wbeoe367"
+    },
+    {
+      "id": "wh-iranica",
+      "title": "Peter Jackson, Golden Horde, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/golden-horde/"
+    },
+    {
+      "id": "wh-wings",
+      "title": "Takushi Kawaguchi and Hiroyuki Nagamine, Rethinking the Political System of the Jöchid",
+      "url": "https://real.mtak.hu/38023/"
+    },
+    {
+      "id": "wh-coinage",
+      "title": "István Vásáry, The Beginnings of Coinage in the Blue Horde",
+      "url": "https://real.mtak.hu/44776/"
+    },
+    {
+      "id": "wh-turmoil",
+      "title": "Ishayahu Landa, Jochid elites in the Time of Troubles, 1359 to circa 1380",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/between-the-chinggisid-principle-loyalty-and-selfaggrandisement-jochid-elites-in-the-time-of-troubles-1359-to-circa-1380/AEB03260F727D9147A9043682A24804B"
+    },
+    {
+      "id": "wh-urus",
+      "title": "M. Nogaibayeva, Urus Khan and ethnopolitical history of White Horde",
+      "url": "https://bulletin-history.kaznu.kz/index.php/1-history/en/article/view/657"
+    },
+    {
+      "id": "wh-abulkhayrids",
+      "title": "Yuri Bregel, Abu’l-Khayrids, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/abul-khayrids-dynasty/"
+    },
+    {
+      "id": "wh-kazakh",
+      "title": "Joo-Yup Lee, The Kazakh Khanate, Oxford Research Encyclopedia of Asian History",
+      "url": "https://www.researchgate.net/publication/338291376_Kazakh_Khanate_In_The_Oxford_Research_Encyclopedia_of_Asian_History_Ed_David_Ludden_New_York_Oxford_University_Press"
+    },
+    {
+      "id": "wh-unesco",
+      "title": "UNESCO World Heritage Centre, Silk Roads: Fergana-Syrdarya Corridor",
+      "url": "https://whc.unesco.org/en/tentativelists/6568"
+    },
+    {
+      "id": "wh-life",
+      "title": "Orazgul Muhatova, The Way of Living of the Inhabitants of the Kazakh Khanate",
+      "url": "https://pressto.amu.edu.pl/index.php/bp/article/view/1741"
+    },
+    {
+      "id": "wh-water",
+      "title": "Erbulat Smagulov, Sauran Medieval Archaeological Complex in South Kazakhstan",
+      "url": "https://www.transoxiana.org/13/smagulov-sauran.php"
+    },
+    {
+      "id": "wh-school",
+      "title": "Sauran madrasa excavations, 2006 field season",
+      "url": "https://archaeology.kz/rus/expeditions/770-raskopki-sauranskogo-medrese-v-polevom-sezone-2006-goda/"
+    },
+    {
+      "id": "wh-syganak",
+      "title": "Abai Institute, Syganak",
+      "url": "https://oq.gov.kz/en/abai/syghanaq"
+    },
+    {
+      "id": "wh-children",
+      "title": "Emma Zilivinskaya, Elusive Traces: Children in the Golden Horde",
+      "url": "https://www.e-anthropology.com/English/Catalog/Archaeology/STM_DWL_37zU_SKANwH6CCpQ6.aspx"
+    },
+    {
+      "id": "wh-ibnbattuta",
+      "title": "UC Berkeley ORIAS, Ibn Battuta in the Lands of the Golden Horde",
+      "url": "https://orias.berkeley.edu/node/170"
+    },
+    {
+      "id": "wh-crafts",
+      "title": "Yaroslav Pylypchuk, Trade and Crafts in Dasht-i Qipchaq",
+      "url": "https://oriental-world.org.ua/index.php/journal/article/view/593"
+    },
+    {
+      "id": "wh-yarligh-study",
+      "title": "Lexical-Semantic Analysis of Tokhtamysh’s Yarlïğ to Jogaila",
+      "url": "https://bulpolit.enu.kz/index.php/main/article/view/132"
+    },
+    {
+      "id": "wh-yarligh-text",
+      "title": "Scholarly edition of Golden Horde khans’ letters, Tokhtamysh document",
+      "url": "https://www.vostlit.info/Texts/Dokumenty/Zolotoord/XIV/1380-1400/Pisma_zol_chanov/text.phtml?id=3955"
+    },
+    {
+      "id": "wh-continuity",
+      "title": "Marie Favereau and Roman Pochekaev, The Golden Horde, c. 1260 to 1502",
+      "url": "https://publications.hse.ru/en/chapters/898350958"
+    }
+  ]
+}
