@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release127-southern-xiongnu research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "sx-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository identities checked: southern-xiongnu is circa 100 to 300; earlier xiongnu and xiongnu-bc200 and later han-zhao are separate records. No appliesTo alias is appropriate."
+    },
+    {
+      "id": "sx-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "The target was audited as an approximate state record with two border files, intervals 100 to 200 and 200 to 300, and no card before this isolated bundle."
+    },
+    {
+      "id": "sx-map-bc100",
+      "title": "Human History Map world-100 BCE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Decoded predecessor seam: southern-xiongnu is absent; separate xiongnu-bc200 and han-dynasty features are present."
+    },
+    {
+      "id": "sx-map-bc1",
+      "title": "Human History Map world-1 BCE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded predecessor seam: southern-xiongnu remains absent while the separate xiongnu-bc200 feature continues."
+    },
+    {
+      "id": "sx-map100",
+      "title": "Human History Map world-100 CE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Decoded exact feature: one 20-position Polygon, geographically centered on the Alxa and western Gobi zone rather than the documented Ordos to Shanxi settlements."
+    },
+    {
+      "id": "sx-map200",
+      "title": "Human History Map world-200 CE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Decoded exact feature: the same Polygon, bounds, positions and coordinate hash as at 100 CE despite major political changes."
+    },
+    {
+      "id": "sx-map300",
+      "title": "Human History Map world-300 CE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Decoded endpoint seam: southern-xiongnu is absent; separate jin-dynasty and han-zhao features occupy different tested areas."
+    },
+    {
+      "id": "sx-map400",
+      "title": "Human History Map world-400 CE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Decoded post-seam check: southern-xiongnu remains absent and the northern political geography has changed again."
+    },
+    {
+      "id": "sx-iranica",
+      "title": "Étienne de la Vaissière: Xiongnu",
+      "url": "https://www.iranicaonline.org/articles/xiongnu/",
+      "note": "Encyclopaedia Iranica synthesis used only for the overview and override summary: the 48 split, settlement within northern China, early-third-century loss of the last chanyu, continued identity, and caution about westward migration or simple Hun equations."
+    },
+    {
+      "id": "sx-division",
+      "title": "Rafe de Crespigny: The Division and Destruction of the Xiongnu Confederacy",
+      "url": "https://openresearch-repository.anu.edu.au/items/edb5ffcd-7fa9-44ae-a52e-05a2907d16e7/full",
+      "note": "ANU study, checked against the cached six-page PDF, used for Bi’s 48/49 breakaway, the 50 settlement, the initial eight divisions, and the political distinction between rulers and ordinary pastoral communities."
+    },
+    {
+      "id": "sx-northern-frontier",
+      "title": "Rafe de Crespigny: Northern Frontier, The Policies and Strategy of the Later Han Empire",
+      "url": "https://openresearch-repository.anu.edu.au/items/1a59ea73-106d-4c58-bd3f-56d475c0e513",
+      "note": "Open ANU monograph used for Later Han frontier bargaining, rebellions in 109 to 110, 124 and 140, abandoned commanderies, and the dependent chanyu regime."
+    },
+    {
+      "id": "sx-steppe-too-far",
+      "title": "Rafe de Crespigny: A Steppe Too Far",
+      "url": "https://openresearch-repository.anu.edu.au/server/api/core/bitstreams/4b0c5c56-5056-43ae-b15d-ace07a2c7ca7/content",
+      "note": "ANU frontier study used for Tanshihuai’s Xianbei power, the disastrous 177 expedition with Southern Xiongnu cavalry, and the later contraction of control."
+    },
+    {
+      "id": "sx-three-kingdoms-i",
+      "title": "Rafe de Crespigny: The Three Kingdoms and Western Jin, Part I",
+      "url": "https://openresearch-repository.anu.edu.au/handle/1885/41896",
+      "note": "Open East Asian History article used for the 188 to 216 collapse, Cao Cao’s northern order, and the historical setting of the Five Divisions."
+    },
+    {
+      "id": "sx-three-kingdoms-ii",
+      "title": "Rafe de Crespigny: The Three Kingdoms and Western Jin, Part II",
+      "url": "https://openresearch-repository.anu.edu.au/items/1872fd6f-d492-4179-94ca-62f8722fb9b4",
+      "note": "Open East Asian History article used for Western Jin’s northern frontier, later third-century Xiongnu and Xianbei unrest, and the limits of central control."
+    },
+    {
+      "id": "sx-houhanshu-ctext",
+      "title": "Hou Hanshu: Account of the Southern Xiongnu",
+      "url": "https://ctext.org/hou-han-shu/nan-xiong-nu-lie-zhuan",
+      "note": "Chinese Text Project primary text used for the Southern chanyu’s ranks, marriage clans, oral adjudication, assemblies and annual rites. It is a Chinese court history and is read critically."
+    },
+    {
+      "id": "sx-houhanshu-translation",
+      "title": "Book of Later Han, volume 89: Treatise on the Southern Xiongnu",
+      "url": "https://24histories.com/houhanshu/100",
+      "note": "Modern parallel presentation used to check the court-history passages on supervision, hostages, provisions, elite gift distributions, frontier markets, assemblies and sport."
+    },
+    {
+      "id": "sx-dongguan",
+      "title": "Dongguan Hanji: Southern Chanyu",
+      "url": "https://ctext.org/dong-guan-han-ji/xiong-nu-nan-dan-yu/zh",
+      "note": "Chinese Text Project primary fragment used for the exact Classical Chinese writing sample and its description of Three Dragons sacrifice, horse racing and camel contests. It is not an indigenous Xiongnu-language document."
+    },
+    {
+      "id": "sx-jinshu",
+      "title": "Jin Shu, volume 101",
+      "url": "https://zh.wikisource.org/zh-hans/%E6%99%8B%E4%B9%A6/%E5%8D%B7101",
+      "note": "Later official history used cautiously for Five Divisions settlements in the Fen River region and the elite education and hostage experience attributed to Liu Yuan; its dynastic storytelling and retrospective pedigree claims are not treated as ordinary biography."
+    },
+    {
+      "id": "sx-openstax",
+      "title": "OpenStax World History: The Steppes",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-2-the-steppes",
+      "note": "Peer-reviewed open textbook used for clan-scale pastoral life, early practical learning, hostage education, trade and the fluid frontier; its broad steppe generalizations are explicitly labelled as context."
+    },
+    {
+      "id": "sx-earlynomads",
+      "title": "Early Nomads of the Eastern Steppe and Their Tentative Connections in the West",
+      "url": "https://www.cambridge.org/core/journals/evolutionary-human-sciences/article/early-nomads-of-the-eastern-steppe-and-their-tentative-connections-in-the-west/4CBA0E2CB74C8093EC1CA38C95067D55",
+      "note": "Cambridge peer-reviewed synthesis used for the Southern buffer polity, pastoral and agricultural economy, separate Xianbei rise, and the warning that archaeological cultures rarely map neatly onto named historical groups."
+    },
+    {
+      "id": "sx-miller",
+      "title": "Bryan K. Miller: Xiongnu, The World’s First Nomadic Empire",
+      "url": "https://academic.oup.com/book/55323",
+      "note": "Oxford scholarly monograph used for mobile imperial organization and the long Xiongnu political background; claims are limited to inherited institutions rather than projected unchanged into every second-century household."
+    },
+    {
+      "id": "sx-south-arch",
+      "title": "Archaeological Investigations of Xiongnu-Hun Cultural Connections",
+      "url": "https://conservancy.umn.edu/bitstreams/f88f812e-304d-4002-8c6f-6657394db305/download",
+      "note": "University of Minnesota dissertation used narrowly for the Budongdou Southern Xiongnu burial group, animal offerings, pottery, iron objects, paired burial and the larger problem of assigning mixed frontier remains."
+    },
+    {
+      "id": "sx-food",
+      "title": "Economic Diversification Supported the Growth of Mongolia’s Nomadic Empires",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7054399/",
+      "note": "Peer-reviewed isotope study used only as earlier and northern Xiongnu background for mixed millet and animal-food consumption; it is not treated as a Southern Xiongnu menu from Ordos or Shanxi."
+    },
+    {
+      "id": "sx-dairy",
+      "title": "Dairy Pastoralism Sustained Eastern Eurasian Steppe Populations for 5,000 Years",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7212056/",
+      "note": "Peer-reviewed biomolecular study used for the long steppe dairy tradition, explicitly separated from direct proof of one Southern Xiongnu meal."
+    },
+    {
+      "id": "sx-clothes",
+      "title": "Clothes from the Xiongnu Wardrobe Based on Noin-Ula Finds",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/331",
+      "note": "Peer-reviewed textile study used as earlier elite Xiongnu comparison for caftans, trousers, felt, fur and imported silk; Noin-Ula is neither a Southern Xiongnu settlement nor an ordinary wardrobe."
+    },
+    {
+      "id": "sx-frontier-settlements",
+      "title": "Fortified Settlements and the Settlement System in the Northern Zone of the Han Empire",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/fortified-settlements-and-the-settlement-system-in-the-northern-zone-of-the-han-empire/B424C99FFA1361E82A19D7AB795433DC",
+      "note": "Peer-reviewed Antiquity study used for the varied hierarchy and imperial planning of Han frontier settlements, while preserving the difference between Han administrative sites and Southern Xiongnu domestic space."
+    },
+    {
+      "id": "sx-ordos-bronzes",
+      "title": "Review of Bronzes du style de l’Ordos",
+      "url": "https://www.persee.fr/doc/arasi_0004-3958_1988_num_43_1_1253_t1_0179_0000_3",
+      "note": "Scholarly review used to warn that the broad “Ordos” label mixes several styles and sometimes different named groups, limiting confident ethnic assignment of material culture."
+    },
+    {
+      "id": "sx-dental",
+      "title": "Dental Caries Prevalence in Xiongnu Population from Mongolia",
+      "url": "https://www.paleopathology.jp/open-access/ajp-vol-1/ajp2017-1-3/",
+      "note": "Peer-reviewed paleopathology study used for dental disease and carbohydrate evidence in Xiongnu-period Mongolian remains spanning the second century BCE to second century CE; it does not document Southern Xiongnu medicine."
+    },
+    {
+      "id": "sx-smithsonian-latrine",
+      "title": "Smithsonian National Museum of Asian Art: Model of a Latrine and Pigsty",
+      "url": "https://asia-archive.si.edu/object/S2012.9.3316/",
+      "note": "Museum catalogue used for the existence of a first-century Eastern Han funerary latrine-and-pigsty model, explicitly not evidence for a Southern Xiongnu household toilet."
+    },
+    {
+      "id": "sx-waste",
+      "title": "Excreted and Left Untreated? Human and Animal Waste from Dunhuang to Laozi",
+      "url": "https://doi.org/10.1163/26669323-bja10005",
+      "note": "Peer-reviewed study used for rare Eastern Han sanitation evidence: a Yinan privy image, a Dunhuang relay-station latrine and hygiene sticks, plus the limits of reconstructing general practice."
+    }
+  ],
+  "entities": [
+    {
+      "id": "southern-xiongnu",
+      "card": "data/cards/southern-xiongnu.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "sx-iranica",
+            "sx-index",
+            "sx-map100",
+            "sx-map200"
+          ],
+          "locator": "Encyclopaedia Iranica synthesis used only for the overview and override summary: the 48 split, settlement within northern China, early-third-century loss of the last chanyu, continued identity, and caution about westward migration or simple Hun equations. Exact repository identities checked: southern-xiongnu is circa 100 to 300; earlier xiongnu and xiongnu-bc200 and later han-zhao are separate records. No appliesTo alias is appropriate. Decoded exact feature: one 20-position Polygon, geographically centered on the Alxa and western Gobi zone rather than the documented Ordos to Shanxi settlements. Decoded exact feature: the same Polygon, bounds, positions and coordinate hash as at 100 CE despite major political changes.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "sx-northern-frontier"
+          ],
+          "locator": "Open ANU monograph used for Later Han frontier bargaining, rebellions in 109 to 110, 124 and 140, abandoned commanderies, and the dependent chanyu regime.",
+          "dateScope": {
+            "from": 100,
+            "to": 118
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "sx-northern-frontier"
+          ],
+          "locator": "Open ANU monograph used for Later Han frontier bargaining, rebellions in 109 to 110, 124 and 140, abandoned commanderies, and the dependent chanyu regime.",
+          "dateScope": {
+            "from": 118,
+            "to": 143
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "sx-steppe-too-far"
+          ],
+          "locator": "ANU frontier study used for Tanshihuai’s Xianbei power, the disastrous 177 expedition with Southern Xiongnu cavalry, and the later contraction of control.",
+          "dateScope": {
+            "from": 143,
+            "to": 177
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "sx-steppe-too-far"
+          ],
+          "locator": "ANU frontier study used for Tanshihuai’s Xianbei power, the disastrous 177 expedition with Southern Xiongnu cavalry, and the later contraction of control.",
+          "dateScope": {
+            "from": 177,
+            "to": 188
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "sx-three-kingdoms-i"
+          ],
+          "locator": "Open East Asian History article used for the 188 to 216 collapse, Cao Cao’s northern order, and the historical setting of the Five Divisions.",
+          "dateScope": {
+            "from": 188,
+            "to": 216
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "sx-three-kingdoms-i"
+          ],
+          "locator": "Open East Asian History article used for the 188 to 216 collapse, Cao Cao’s northern order, and the historical setting of the Five Divisions.",
+          "dateScope": {
+            "from": 216,
+            "to": 265
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "sx-three-kingdoms-ii"
+          ],
+          "locator": "Open East Asian History article used for Western Jin’s northern frontier, later third-century Xiongnu and Xianbei unrest, and the limits of central control.",
+          "dateScope": {
+            "from": 265,
+            "to": 300
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "sx-index",
+            "sx-coverage"
+          ],
+          "locator": "Exact index entry and initial coverage record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "sx-map100",
+            "sx-map200"
+          ],
+          "locator": "Exact geometry type, topology counts, decoded bounds and SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "sx-map100",
+            "sx-map200"
+          ],
+          "locator": "Exact point-in-polygon audit; historical correction is established in the chronology sources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "sx-map100",
+            "sx-map200"
+          ],
+          "locator": "Point owners for documented settlement-region test points in both snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "sx-map300",
+            "sx-map400",
+            "sx-index"
+          ],
+          "locator": "Exact-id absence, related successor features and separate indexed identities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "sx-division"
+          ],
+          "locator": "Cached PDF lines 121 to 136: breakaway, title, alliance, Meiji, supervisor and hostage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "sx-division"
+          ],
+          "locator": "Cached PDF lines 128 to 150: eight divisions, population estimate and supervised buffer arrangement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "sx-houhanshu-translation"
+          ],
+          "locator": "Volume 89 paragraphs 63 to 66 on investiture, provisions, guards and annual distributions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "sx-earlynomads"
+          ],
+          "locator": "Historical synthesis on division, Southern buffer status and separate Xianbei victory.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "sx-index",
+            "sx-map-bc100",
+            "sx-map-bc1",
+            "sx-map100"
+          ],
+          "locator": "Exact identity and predecessor seam audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "sx-houhanshu-ctext"
+          ],
+          "locator": "Southern Xiongnu treatise passage listing royal ranks, great houses, intermarriage and status bases.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "sx-houhanshu-ctext"
+          ],
+          "locator": "Primary passage on oral adjudication and absence of written registers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "sx-houhanshu-translation"
+          ],
+          "locator": "Volume 89 paragraph 66 on annual hostages, court gifts and ranked recipients.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "sx-houhanshu-translation"
+          ],
+          "locator": "Volume 89 paragraphs 192 to 199 on Wuwei market, herds, hospitality and Southern raid.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "sx-northern-frontier"
+          ],
+          "locator": "ANU monograph synthesis of demographic retreat, auxiliaries and negotiated frontier rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "sx-division"
+          ],
+          "locator": "Later Han frontier chronology for 94, 109 to 110, subsequent auxiliary service and 124.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "sx-northern-frontier"
+          ],
+          "locator": "Later Han frontier account of the 140 revolt, Xiuli and commandery withdrawals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "sx-steppe-too-far"
+          ],
+          "locator": "ANU paper on Tanshihuai, 177 expedition and distinction of Xianbei power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "sx-earlynomads"
+          ],
+          "locator": "Cambridge synthesis, explicit caution on joining archaeological cultures to historical groups.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "sx-three-kingdoms-i"
+          ],
+          "locator": "East Asian History Part I and its Southern Xiongnu chronology for 188 to 216.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "sx-three-kingdoms-i"
+          ],
+          "locator": "East Asian History Part I on Cao Cao, Huchuquan, Qubei and five-division reorganization.",
+          "dateScope": {
+            "year": 216
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "sx-three-kingdoms-ii"
+          ],
+          "locator": "Third-century political synthesis and distinction between imperial administration and autonomous statehood.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "sx-jinshu"
+          ],
+          "locator": "Jin Shu 101 passage locating divisions at Zishi, Qi, Puzi, Xinxing and Daling near Jinyang.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "sx-jinshu"
+          ],
+          "locator": "Jin Shu 101 biographical passage on Liu Yuan’s teachers, classical and military studies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "sx-openstax",
+            "sx-map300"
+          ],
+          "locator": "Open textbook successor chronology paired with separate atlas identity and seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "sx-earlynomads"
+          ],
+          "locator": "Cambridge synthesis on pastoral economy with an agricultural component.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "sx-houhanshu-translation"
+          ],
+          "locator": "Court distribution record interpreted with its elite documentary limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "sx-food"
+          ],
+          "locator": "Peer-reviewed dietary isotope findings and explicit period-region limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "sx-dairy"
+          ],
+          "locator": "Biomolecular history of steppe dairying; direct Southern household evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "sx-south-arch"
+          ],
+          "locator": "Dissertation Group D1 synthesis of Budongdou tombs, grave form, animal offerings and artefacts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "sx-openstax"
+          ],
+          "locator": "Open textbook family and clan context; missing Southern household details explicitly withheld.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "sx-south-arch"
+          ],
+          "locator": "Budongdou burial descriptions, including M1 paired burial and variation among nine graves.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "sx-houhanshu-ctext"
+          ],
+          "locator": "Primary rank and marriage-clan passage; evidentiary inference about omitted ordinary labor labelled.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "sx-openstax"
+          ],
+          "locator": "Hostage education and early practical steppe learning in the open textbook.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "sx-miller"
+          ],
+          "locator": "Oxford analysis of mobile imperial organization and social hierarchy; detailed household ranks withheld.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "sx-frontier-settlements"
+          ],
+          "locator": "Northern Han settlement hierarchy used only as regional context; Southern domestic plans remain unproven.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "sx-frontier-settlements"
+          ],
+          "locator": "Antiquity abstract on varied walled settlement hierarchy and frontier planning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "sx-clothes"
+          ],
+          "locator": "Peer-reviewed Noin-Ula textile reconstruction, presented as earlier elite comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "sx-south-arch"
+          ],
+          "locator": "Southern burial assemblage and material-culture interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "sx-ordos-bronzes"
+          ],
+          "locator": "Review’s critique of mixed styles, periods and ethnic assignments in Ordos-bronze synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "sx-openstax"
+          ],
+          "locator": "Documented early riding and practical steppe learning, with Southern-specific limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "sx-jinshu"
+          ],
+          "locator": "Jin Shu elite curriculum and hostage-court context, with representativeness limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "sx-dental"
+          ],
+          "locator": "Study sample and findings paired with the absence of Southern treatment evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "sx-houhanshu-ctext"
+          ],
+          "locator": "Primary passage on three annual sacrifices, political assembly and racing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "sx-dongguan"
+          ],
+          "locator": "Exact Dongguan Hanji fragment, transliteration, translation and external-language caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "sx-earlynomads"
+          ],
+          "locator": "Pastoral and settlement context; direct Southern water infrastructure evidence explicitly absent.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "sx-smithsonian-latrine"
+          ],
+          "locator": "Museum catalogue date, medium, type and funerary context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "sx-waste"
+          ],
+          "locator": "Peer-reviewed Yinan and Xuanquanzhi evidence with explicit geographic limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "sx-waste"
+          ],
+          "locator": "Article’s warning that early privy evidence is patchy; target-specific absence preserved.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "sx-division"
+          ],
+          "locator": "ANU conclusion distinguishing political fall from continued pastoral and trading lives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "sx-three-kingdoms-ii",
+            "sx-map300"
+          ],
+          "locator": "Open East Asian History article used for Western Jin’s northern frontier, later third-century Xiongnu and Xianbei unrest, and the limits of central control. Decoded endpoint seam: southern-xiongnu is absent; separate jin-dynasty and han-zhao features occupy different tested areas.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "southern-xiongnu",
+        "card": "cards/southern-xiongnu.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Han-aligned frontier polity became supervised Five Divisions after the chanyu office ended in 216; communities continued under Wei and Jin.",
+        "fell": 216
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "southern-xiongnu",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            98.29358293582936,
+            39.41380788564797,
+            106.35766357663579,
+            42.82299046120785
+          ]
+        },
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "southern-xiongnu",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            98.29358293582936,
+            39.41380788564797,
+            106.35766357663579,
+            42.82299046120785
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id southern-xiongnu is indexed circa 100 to 300 CE and occurs only in the 100 and 200 snapshots among the audited seams.",
+    "Both exact features are the same one-part, one-ring, 20-position Polygon, bounds [98.29358293582936, 39.41380788564797, 106.35766357663579, 42.82299046120785], with coordinate hash eb99737ebad52a00066b46c0925c947a0a38598b34652faa036b2a83bb48bfca.",
+    "Ejin/Khara-Khoto, Badain Jaran and northern Alxa test inside; Ordos, Hohhot, Shuofang, Datong, Taiyuan, Pingyang, Ye and Luoyang test outside. The imported geometry is therefore seriously displaced west of documented Southern Xiongnu settlements.",
+    "The political formation began with Bi’s breakaway in 48/49 and Han agreement in 50. The chanyu office effectively ended in 216; the atlas continues the id to 300, covering communities reorganized under Cao Wei and Western Jin.",
+    "Earlier xiongnu and xiongnu-bc200 records, the independent Xianbei, Cao Wei, Jin and later Han-Zhao remain distinct. No appliesTo alias is added.",
+    "All bounds, hashes and point tests describe imported display geometry only; none establishes sovereignty, ethnicity, language, migration or modern territorial claims."
+  ]
+}

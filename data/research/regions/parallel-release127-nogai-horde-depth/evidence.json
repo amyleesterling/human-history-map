@@ -1,0 +1,902 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release127-nogai-horde research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "ng-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry checked: nogai-horde is labeled Nogai Horde, marked circa, generated from historical basemaps, indexed 1530 to 1783, and has no aliases, Wikipedia link or authored historical summary."
+    },
+    {
+      "id": "ng-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded predecessor seam. The exact target is absent; a broad golden-horde feature owns lower-Volga tests, white-horde owns Emba-to-Orenburg tests, and an Ottoman feature labeled Crimean Khanate owns Crimea, Azov and Kuban tests."
+    },
+    {
+      "id": "ng-map1530",
+      "title": "Human History Map world-1530 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded first target layer. It contains two separate Polygons: a vast unlabeled lower-Volga-to-steppe feature and a North Caucasus feature whose embedded label says Astrakhan Khanate even though its civ id is nogai-horde."
+    },
+    {
+      "id": "ng-map1600",
+      "title": "Human History Map world-1600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Decoded target layer: one 33-position Polygon around Atyrau, Emba and Aktobe. Tested lower-Volga places are instead assigned to Muscovy, while western Nogai settlements are absent from the exact target geometry."
+    },
+    {
+      "id": "ng-map1700",
+      "title": "Human History Map world-1700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Decoded target layer. Its tested footprint and 33-position bounding box match the 1600 remnant, although minute coordinate changes give the feature a different geometry hash."
+    },
+    {
+      "id": "ng-map1715",
+      "title": "Human History Map world-1715 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Decoded final target layer. It repeats the 1700 geometry through 1783, retaining only the eastern Atyrau-Emba-Aktobe footprint while historically important Black Sea and North Caucasus communities remain outside the target."
+    },
+    {
+      "id": "ng-map1783",
+      "title": "Human History Map world-1783 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Decoded successor seam. The target disappears; Russian Empire owns the tested lower Volga, Crimea, Azov, Kuban and North Caucasus, Ottoman Empire owns Budjak, and central-asian-khanates owns eastern tests."
+    },
+    {
+      "id": "ng-encyclopedia",
+      "title": "Nogai, Encyclopedia of Russian History",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/nogai",
+      "note": "Scholarly encyclopedia entry checked for the Nogai confederation's Manghit leadership, the Great, Lesser and Altıul divisions, relations with Muscovy and Crimea, and the limits of treating later dispersed groups as one state."
+    },
+    {
+      "id": "ng-manghits",
+      "title": "Anke von Kügelgen, Manghits, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/manghits/",
+      "note": "Scholarly reference checked for Manghit and Nogai naming, the tribe's Golden Horde role, sixteenth-century migration toward the Crimean Khanate and North Caucasus, and distinct later Manghit histories in Central Asia."
+    },
+    {
+      "id": "ng-eou-nogay",
+      "title": "Nogay Tatars, Encyclopedia of Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CN%5CO%5CNogayTatars.htm",
+      "note": "Scholarly institutional entry checked for the Great and Little Horde split, the Kalmyk-driven migrations, Black Sea subhordes, eighteenth-century forced relocation and later Nogai continuity."
+    },
+    {
+      "id": "ng-power",
+      "title": "Mikhail Moiseev, Descendants of Edige: the power structure of the Nogai Horde",
+      "url": "https://journals.rcsi.science/2308-152X/article/view/289328",
+      "note": "Peer-reviewed Golden Horde Review article checked for Edige's descendants, the ulus biy and confederation biy, non-Chinggisid limits, and the development of western, central and eastern wings in the early sixteenth century."
+    },
+    {
+      "id": "ng-hus",
+      "title": "Alper Başer, Conflicting Legitimacies in the Triangle of the Noghay Hordes, Crimean Khanate, and Ottoman Empire",
+      "url": "https://www.husj.harvard.edu/articles/conflicting-legitimacies-in-the-triangle-of-the-noghay-hordes-crimean-khanate-and-ottoman-empire",
+      "note": "Peer-reviewed Harvard Ukrainian Studies article checked for Manghit-Edige legitimacy, Chinggisid Crimean and Islamic Ottoman claims, famine and faction, Great and Lesser Nogai, Altıoğul, Budjak groups and shifting political spheres."
+    },
+    {
+      "id": "ng-trepavlov",
+      "title": "Vadim Trepavlov, The Independent Horde: the Nogai nomadic empire",
+      "url": "https://ru.djvu.online/file/AKlpXLOJDoFDK",
+      "note": "Major scholarly monograph checked for formation, titles, seasonal routes, livestock, trade, fishing, pasture politics, the 1550s famine and flood, Muscovite pressure, civil conflict, Kalmyk attacks and political dissolution."
+    },
+    {
+      "id": "ng-embassy",
+      "title": "Embassy Books on Relations between Russia and the Nogai Horde, 1551 to 1561",
+      "url": "https://djvu.online/file/5sYPMYuJZW7dk",
+      "note": "Critical publication of Muscovite diplomatic books checked for the 1551 Ismail Mirza letter, envoys and interpreters, trade, gifts, horses, famine, drought, grain relief, family movements and the surviving chancery form of Nogai diplomacy."
+    },
+    {
+      "id": "ng-zaytsev",
+      "title": "Ilya Zaytsev, On the History of the Book in the Juchid Khanates",
+      "url": "https://www.orientalstudies.ru/rus/images/pdf/journals/p_mo_7_1_2001_05_zaytsev.pdf",
+      "note": "Peer-reviewed Manuscripta Orientalia study checked for Nogai biys' knowledge of Muslim books, learned advisers, a student sent to Crimea to learn writing, a requested poet-translator, and paper and pigments sought for local book production."
+    },
+    {
+      "id": "ng-evliya",
+      "title": "Alper Başer, The Nogais in the Seyahatname of Evliya Çelebi",
+      "url": "https://dergipark.org.tr/en/download/article-file/406649",
+      "note": "Peer-reviewed study checked critically against Evliya's 1660s observations for post-Kalmyk geography, named Nogai groups, food, clothing, agriculture, trade, learned Muslims, language examples, hunting birds and service with Crimean and Ottoman forces."
+    },
+    {
+      "id": "ng-bilhorod",
+      "title": "Bilhorod Horde, Encyclopedia of Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CB%5CI%5CBilhorodHorde.htm",
+      "note": "Scholarly institutional entry checked for seventeenth-century movement from the Caspian to Budjak, Crimean and Ottoman overlordship, pastoral economy, raiding and slave-taking, the 1770 Russian protectorate and forced resettlement."
+    },
+    {
+      "id": "ng-eou-tatars",
+      "title": "Tatars, Encyclopedia of Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CT%5CA%5CTatars.htm",
+      "note": "Scholarly institutional overview checked for Crimean suzerainty over northern Black Sea Nogai groups, the Bilhorod, Yedisan and other horde names, pastoral life and participation in raiding and captive exchange."
+    },
+    {
+      "id": "ng-eou-crimea",
+      "title": "Crimea, Encyclopedia of Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pagesC%5CR%5CCrimea",
+      "note": "Scholarly institutional history checked for the Crimean Khanate, Ottoman protection, its Nogai vassals, Bakhchysarai, steppe warfare and diplomacy, the 1774 settlement and Russian annexation in 1783."
+    },
+    {
+      "id": "ng-ceu",
+      "title": "Daniil Kabotyanski, From Rebellious Allies to Loyal Subjects",
+      "url": "https://www.etd.ceu.edu/2015/kabotyanski_daniil.pdf",
+      "note": "Central European University thesis checked for Nogai hordes in the 1768 to 1783 struggle, nominal Crimean-Ottoman allegiance, tribal and religious structures, Russian alliance-making, oath politics, rebellions and annexation."
+    },
+    {
+      "id": "ng-imperial-space",
+      "title": "Willard Sunderland, Imperial Space: Territorial Thought and Practice in the Eighteenth Century",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/698B5AAE749103645C4E50289FE1CD33/9781107337794c1_p5-78_CBO.pdf/imperial_space.pdf",
+      "note": "Cambridge History of Russia chapter checked for Russian steppe colonization, frontier transformations, later attempts to make Nogais agriculturalists, continuing mobility and nineteenth-century migrations to the Ottoman Empire."
+    },
+    {
+      "id": "ng-hijra",
+      "title": "Lale Can, Hijra from the Russian Empire and the Soviet Union",
+      "url": "https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/hijra-from-the-russian-empire-and-the-soviet-union-middle-east-routes-of-muslim-displacement/B54F314E66E7364D87CE308471454230",
+      "note": "Peer-reviewed International Journal of Middle East Studies article checked for Russian annexation of Crimea, settler colonization and later movements of Crimean and Nogai Tatars into Ottoman lands."
+    },
+    {
+      "id": "ng-new-russia",
+      "title": "New Russia and the Legacies of Settler Colonialism in Southern Ukraine",
+      "url": "https://brill.com/view/journals/joah/4/1-2/article-p58_6.xml",
+      "note": "Peer-reviewed Journal of Applied History article checked for the Pontic steppe shared by Nogai, Crimean, Cossack and imperial powers and for the 1774 and 1792 treaty sequence around progressive Russian incorporation."
+    },
+    {
+      "id": "ng-resistance",
+      "title": "Yaroslav Pylypchuk, Giray and Nogai resistance to the Russian Empire, 1783 to 1812",
+      "url": "https://skhodoznavstvo.org.ua/index.php/journal/article/view/101",
+      "note": "Peer-reviewed article from the A. Krymsky Institute of Oriental Studies checked for Nogai and Giray resistance after 1783, with centers in Budjak and Trans-Kuban territory, demonstrating that annexation did not end Nogai political action."
+    },
+    {
+      "id": "ng-nobles",
+      "title": "A. V. Belyakov, Nogai Nobility in Russia in the Sixteenth and Seventeenth Centuries",
+      "url": "https://iriran.ru/node/3283",
+      "note": "Russian Academy of Sciences monograph record checked for the migration and incorporation of Nogai mirzas, including the Yusupov and Urusov lines, their service, marriages, genealogy and status within Muscovy."
+    },
+    {
+      "id": "ng-sakai",
+      "title": "Hiroki Sakai, The Nogay Horde in the Sixteenth Century, part 2",
+      "url": "https://cir.nii.ac.jp/crid/1050001202942326016",
+      "note": "University repository article checked for Karasai, Qazi and Adil, Lesser Nogai formation, relations with Crimea, Russia, the Ottoman and Safavid states, and the later oral epic memory of sixteenth-century leaders."
+    },
+    {
+      "id": "ng-material",
+      "title": "S. Sh. Gadzhieva, Material Culture of the Nogais in the Nineteenth and Early Twentieth Centuries",
+      "url": "https://instituteofhistory.ru/media/library/publication/files/%D0%93%D0%B0%D0%B4%D0%B6%D0%B8%D0%B5%D0%B2%D0%B0_1976._%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B0_%D0%BD%D0%BE%D0%B3%D0%B0%D0%B9%D1%86%D0%B5%D0%B2.pdf",
+      "note": "Academy ethnographic monograph checked for later documented Nogai portable dwellings, felt, clothing, food, transport, crafts and settlement. The card labels this as later comparative evidence and does not project every detail backward."
+    },
+    {
+      "id": "ng-family",
+      "title": "S. Sh. Gadzhieva, Essays on the History of Family and Marriage among the Nogais",
+      "url": "https://instituteofhistory.ru/library/publications/ocherki-istorii-semi-i-braka-u-nogajcev-xix-nachal",
+      "note": "Academy ethnographic monograph checked for nineteenth- and early-twentieth-century household relations, women's position, childrearing, marriage forms and ritual. These later observations are used only with explicit chronology limits."
+    },
+    {
+      "id": "ng-food",
+      "title": "Z. Zineeva and S. Telepen, Food in Traditional Nogai Culture",
+      "url": "https://journal.kunstkamera.ru/en/archive/2024_issue_2_24/zineeva_z_telepen_s_food_in_the_traditional_nogai_culture",
+      "note": "Peer-reviewed Kunstkamera article checked for Nogai pastoral food systems, animal products, grains, preservation and hospitality, while distinguishing long-lived traditions from evidence directly datable to the early modern horde."
+    },
+    {
+      "id": "ng-medicine",
+      "title": "M. B. Gimbatova, Spiritual Culture of the Nogais: Folk Medicine and Veterinary Knowledge",
+      "url": "https://instituteofhistory.ru/media/library/publication/files/%D0%93%D0%B8%D0%BC%D0%B1%D0%B0%D1%82%D0%BE%D0%B2%D0%B0_2005._%D0%94%D1%83%D1%85%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B0_%D0%BD%D0%BE%D0%B3%D0%B0%D0%B9%D1%86%D0%B5%D0%B2.pdf",
+      "note": "Academy ethnographic study checked for later recorded Nogai healers, veterinary knowledge, cleanliness sayings, remedies and ritual treatment. It supplies continuity evidence, not proof of a specific sixteenth-century cure."
+    },
+    {
+      "id": "ng-child-games",
+      "title": "A. Sultanmuradov and F. Kusegenova, Children's game folklore in Nogai and Kumyk cultures",
+      "url": "https://filolnauki.ru/en/archive/2204/4821",
+      "note": "Peer-reviewed folklore study checked for recorded Nogai counting-out, lots, game choruses, teasing, jokes, tongue twisters and song appeals, along with the warning that children's repertoires change through transmission."
+    },
+    {
+      "id": "ng-edige",
+      "title": "I. Zakirova, Nogai version of the epic Edige",
+      "url": "https://journals.rcsi.science/2308-152X/article/view/283324",
+      "note": "Peer-reviewed Golden Horde Review study checked for the corpus and collection history of Nogai Edige epic variants. It supports later oral memory and performance, not verbatim reconstruction of a sixteenth-century campfire."
+    },
+    {
+      "id": "ng-language",
+      "title": "M. Magomedov, Problems of Preservation and Development of the Nogai Language in Dagestan",
+      "url": "https://dergipark.org.tr/en/pub/ayt/article/1112643",
+      "note": "Peer-reviewed language study checked for present Nogai communities in Dagestan, Astrakhan, Karachay-Cherkessia, Stavropol and Chechnya and for current pressures on transmission of the Nogai language."
+    },
+    {
+      "id": "ng-steppe-continuity",
+      "title": "Kamil Wielecki, The Steppe that Ceases to Be Itself",
+      "url": "https://doi.org/10.4467/22999558.PE.21.003.14125",
+      "note": "Peer-reviewed modern ethnography checked for the Nogai Steppe, migration, attachment to ancestral land and return-oriented home building. Used only for present-day continuity after the card's political endpoint."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nogai-horde",
+      "card": "data/cards/nogai-horde.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ng-encyclopedia",
+            "ng-manghits"
+          ],
+          "locator": "Scholarly encyclopedia entry checked for the Nogai confederation's Manghit leadership, the Great, Lesser and Altıul divisions, relations with Muscovy and Crimea, and the limits of treating later dispersed groups as one state. Scholarly reference checked for Manghit and Nogai naming, the tribe's Golden Horde role, sixteenth-century migration toward the Crimean Khanate and North Caucasus, and distinct later Manghit histories in Central Asia.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ng-power"
+          ],
+          "locator": "Peer-reviewed Golden Horde Review article checked for Edige's descendants, the ulus biy and confederation biy, non-Chinggisid limits, and the development of western, central and eastern wings in the early sixteenth century.",
+          "dateScope": {
+            "from": 1396,
+            "to": 1490
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ng-power"
+          ],
+          "locator": "Peer-reviewed Golden Horde Review article checked for Edige's descendants, the ulus biy and confederation biy, non-Chinggisid limits, and the development of western, central and eastern wings in the early sixteenth century.",
+          "dateScope": {
+            "from": 1490,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ng-hus"
+          ],
+          "locator": "Peer-reviewed Harvard Ukrainian Studies article checked for Manghit-Edige legitimacy, Chinggisid Crimean and Islamic Ottoman claims, famine and faction, Great and Lesser Nogai, Altıoğul, Budjak groups and shifting political spheres.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1556
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ng-bilhorod"
+          ],
+          "locator": "Scholarly institutional entry checked for seventeenth-century movement from the Caspian to Budjak, Crimean and Ottoman overlordship, pastoral economy, raiding and slave-taking, the 1770 Russian protectorate and forced resettlement.",
+          "dateScope": {
+            "from": 1556,
+            "to": 1635
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ng-eou-nogay"
+          ],
+          "locator": "Scholarly institutional entry checked for the Great and Little Horde split, the Kalmyk-driven migrations, Black Sea subhordes, eighteenth-century forced relocation and later Nogai continuity.",
+          "dateScope": {
+            "from": 1635,
+            "to": 1700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ng-eou-tatars"
+          ],
+          "locator": "Scholarly institutional overview checked for Crimean suzerainty over northern Black Sea Nogai groups, the Bilhorod, Yedisan and other horde names, pastoral life and participation in raiding and captive exchange.",
+          "dateScope": {
+            "from": 1700,
+            "to": 1774
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ng-ceu"
+          ],
+          "locator": "Central European University thesis checked for Nogai hordes in the 1768 to 1783 struggle, nominal Crimean-Ottoman allegiance, tribal and religious structures, Russian alliance-making, oath politics, rebellions and annexation.",
+          "dateScope": {
+            "from": 1774,
+            "to": 1783
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ng-index"
+          ],
+          "locator": "Exact index and coverage records, including dates, kind, review state and observed intervals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ng-map1492"
+          ],
+          "locator": "Decoded predecessor features and point-in-polygon owners for twenty-three audited places.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ng-map1530"
+          ],
+          "locator": "Second exact feature's type, coordinate count, bounds and audited inclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ng-map1530"
+          ],
+          "locator": "First exact feature's embedded label, geometry statistics and point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ng-map1600",
+            "ng-map1700",
+            "ng-map1715",
+            "ng-map1783"
+          ],
+          "locator": "Four decoded snapshots, exact target hashes and successor point ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ng-power"
+          ],
+          "locator": "Conclusion on ulus biy, horde biy, Chinggisid investiture and tripartite structure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ng-hus"
+          ],
+          "locator": "Comparative analysis of the three legitimacy systems and Nogai political choices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ng-hus"
+          ],
+          "locator": "Sections on famine-era dispersal, Great, Lesser and Six Sons Nogais.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ng-evliya"
+          ],
+          "locator": "Named group list and geographical discussion based on the Seyahatname.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ng-nobles"
+          ],
+          "locator": "Monograph abstract on collective biography, service, marriage strategy and status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ng-sakai"
+          ],
+          "locator": "Sixteenth-century political geography, Saraychik and relations with neighboring Jochid polities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ng-nobles"
+          ],
+          "locator": "Nogai elite service, alliance and conflict within sixteenth-century Muscovite relations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ng-trepavlov"
+          ],
+          "locator": "Famine chapter synthesizing the 1555 to 1559 environmental crisis, relief requests and political dispersal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ng-hus"
+          ],
+          "locator": "Discussion of Lesser Nogai, Budjak settlement and conflicting suzerainties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ng-bilhorod"
+          ],
+          "locator": "Entry's account of movement from the Caspian and formation of western Nogai communities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ng-eou-nogay"
+          ],
+          "locator": "Institutional encyclopedia chronology of the Kalmyk attacks and westward Nogai migrations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ng-evliya"
+          ],
+          "locator": "Geographical section compared with Beauplan, Jan de Luc and Ottoman geography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ng-eou-tatars"
+          ],
+          "locator": "Crimean-Nogai relationships and named Black Sea horde groupings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ng-sakai"
+          ],
+          "locator": "Article abstract and method linking Lesser Nogai history with the Nogai epic cycle.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ng-new-russia"
+          ],
+          "locator": "Article discussion of the Pontic steppe and progressive imperial incorporation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ng-ceu"
+          ],
+          "locator": "Thesis conclusion on Nogai alliances, oaths and Russian diplomatic practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ng-ceu"
+          ],
+          "locator": "Chapters on the postwar settlement and Russian management of the hordes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ng-eou-crimea"
+          ],
+          "locator": "Crimean Khanate chronology, 1774 settlement and 1783 annexation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ng-resistance"
+          ],
+          "locator": "Article abstract and post-1783 geography of resistance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ng-hijra",
+            "ng-language"
+          ],
+          "locator": "Peer-reviewed migration history and present community-language distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ng-sakai"
+          ],
+          "locator": "Sixteenth-century reconstruction of the horde's seasonal political geography and pasture routes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ng-trepavlov"
+          ],
+          "locator": "Economic chapter on livestock dependence, winter losses and pastoral catastrophe.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ng-embassy"
+          ],
+          "locator": "Embassy-book entries on missions, livestock totals, food allowances and trade access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ng-evliya"
+          ],
+          "locator": "Economic section quoting Evliya and a 1721 to 1722 Budjak observer on camel traction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ng-bilhorod"
+          ],
+          "locator": "Entry on pastoral economy, raids, slave-taking and regional exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ng-embassy"
+          ],
+          "locator": "Letters and reports naming kin obligations, marriages and whole-family migrations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ng-family"
+          ],
+          "locator": "Monograph scope: family forms, internal relations, women's position, childrearing and marriage ritual.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ng-family"
+          ],
+          "locator": "Later childrearing chapters used with an explicit early-modern evidence limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ng-family"
+          ],
+          "locator": "Women's status and household relations, bounded by period and social difference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ng-nobles"
+          ],
+          "locator": "Elite incorporation evidence contrasted with ordinary and coerced statuses documented across the card.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ng-zaytsev"
+          ],
+          "locator": "Page 35 discussion of the student sent to Crimea and requested poet-translator.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ng-zaytsev"
+          ],
+          "locator": "Pages 34 to 36 on books, learned men, paper and pigments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ng-evliya"
+          ],
+          "locator": "Socio-cultural section on Abdürrezzak Efendi, Islam and Evliya's school labels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ng-embassy"
+          ],
+          "locator": "Book 4, folio 52; delegation received 23 July 1551 and Muscovite reply dated 29 July.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ng-zaytsev"
+          ],
+          "locator": "Study of Juchid book culture read with the Russian embassy-book transmission context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ng-material"
+          ],
+          "locator": "Dwelling chapters on terme and otav construction, transport and hearths.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ng-material"
+          ],
+          "locator": "Ethnographic sections on felt production and the range of household objects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ng-material"
+          ],
+          "locator": "Clothing and textile chapters compared with dated traveler descriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ng-food"
+          ],
+          "locator": "Traditional food synthesis read against the seventeenth-century food list and water evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ng-food"
+          ],
+          "locator": "Article's pastoral food-system approach and documented variation through sedentarization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ng-embassy"
+          ],
+          "locator": "Historical introduction and letters on famine mortality, illness and environmental stress.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ng-medicine"
+          ],
+          "locator": "Chapter on folk medicine and veterinary practice, with collection-date limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ng-trepavlov"
+          ],
+          "locator": "Famine chapter on drought, deep digging, flood and loss of crops and herds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ng-medicine"
+          ],
+          "locator": "Explicit negative-evidence audit across the study's medicine, cleanliness and household chapters.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ng-child-games",
+            "ng-edige"
+          ],
+          "locator": "Folklore genre and transmission studies; later records are not backdated as verbatim performances.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ng-map1783",
+            "ng-resistance",
+            "ng-imperial-space",
+            "ng-steppe-continuity"
+          ],
+          "locator": "Decoded successor seam. The target disappears; Russian Empire owns the tested lower Volga, Crimea, Azov, Kuban and North Caucasus, Ottoman Empire owns Budjak, and central-asian-khanates owns eastern tests. Peer-reviewed article from the A. Krymsky Institute of Oriental Studies checked for Nogai and Giray resistance after 1783, with centers in Budjak and Trans-Kuban territory, demonstrating that annexation did not end Nogai political action. Cambridge History of Russia chapter checked for Russian steppe colonization, frontier transformations, later attempts to make Nogais agriculturalists, continuing mobility and nineteenth-century migrations to the Ottoman Empire. Peer-reviewed modern ethnography checked for the Nogai Steppe, migration, attachment to ancestral land and return-oriented home building. Used only for present-day continuity after the card's political endpoint.",
+          "dateScope": {
+            "year": 1783
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nogai-horde",
+        "card": "cards/nogai-horde.json",
+        "dateBasis": "map_coverage",
+        "summary": "A mobile Nogai confederation became Great, Lesser and other hordes long before 1783; annexation changed their political world, while Nogai communities and language continued.",
+        "summarySource": null,
+        "fell": null,
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "nogai-horde",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1,
+            "label": "Astrakhan Khanate"
+          },
+          "bounds": [
+            37.474574745747475,
+            41.19760401864988,
+            48.224282242822426,
+            46.81306969249219
+          ]
+        },
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "nogai-horde",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            28.089280892808944,
+            44.43959229675748,
+            61.0008100081001,
+            58.20548978236802
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "nogai-horde",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            51.12951129511296,
+            44.63500724529139,
+            60.9540095400954,
+            51.705228647108314
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "nogai-horde",
+            "from": 1650,
+            "to": 1700,
+            "precision": 1
+          },
+          "bounds": [
+            51.12951129511296,
+            44.63500724529139,
+            60.9540095400954,
+            51.705228647108314
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "nogai-horde",
+            "from": 1700,
+            "to": 1715,
+            "precision": 1
+          },
+          "bounds": [
+            51.12951129511296,
+            44.63500724529139,
+            60.9540095400954,
+            51.705228647108314
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "nogai-horde",
+            "from": 1715,
+            "to": 1783,
+            "precision": 1
+          },
+          "bounds": [
+            51.12951129511296,
+            44.63500724529139,
+            60.9540095400954,
+            51.705228647108314
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target nogai-horde is indexed circa 1530 to 1783, has no alias or historical link, and has no tracked card or researched override before integration.",
+    "The 1530 layer contains two separate exact-id Polygons. One is an immense lower-Volga-to-steppe shape; the North Caucasus shape is mislabeled Astrakhan Khanate and excludes tested Astrakhan.",
+    "From 1600 through 1783 the exact id retains only a 33-position Atyrau-Emba-Aktobe remnant, omitting documented western and North Caucasus Nogai communities.",
+    "The historical Nogai Horde fragmented into Great, Lesser, Altıoğul and later Black Sea and Caucasus groupings; the 1783 endpoint follows Crimea's annexation, not the death of one continuously unified state.",
+    "Daily-life claims distinguish contemporary diplomatic and traveler evidence from nineteenth- and twentieth-century ethnography. No universal household, menu, school, cure or toilet is invented.",
+    "The written sample is an accurately labeled Early Modern Russian chancery copy of a 1551 Ismail Mirza greeting. No lost Nogai-language autograph or Arabic-script vernacular is fabricated.",
+    "No appliesTo alias or shared-card substitution is used."
+  ]
+}
