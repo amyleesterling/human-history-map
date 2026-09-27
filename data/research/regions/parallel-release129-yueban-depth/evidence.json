@@ -1,0 +1,837 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release129-yueban research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "yb-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository identity checked: yueban is labelled Yueban, circa 100 to 500; neighboring Xiongnu, Southern Xiongnu and Ruanruan records remain separate."
+    },
+    {
+      "id": "yb-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Initial audit records an approximate state, four consecutive border intervals and a missing card."
+    },
+    {
+      "id": "yb-mapbc1",
+      "title": "Human History Map world-bc1 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded predecessor seam checked for the absent exact target and separate earlier Xiongnu feature."
+    },
+    {
+      "id": "yb-map100",
+      "title": "Human History Map world-100 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Decoded exact target geometry, coordinate hashes, point tests and separate Southern Xiongnu neighbor."
+    },
+    {
+      "id": "yb-map200",
+      "title": "Human History Map world-200 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Decoded second exact snapshot and confirmed identical canonical geometry."
+    },
+    {
+      "id": "yb-map300",
+      "title": "Human History Map world-300 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Decoded third exact snapshot and checked distinct Han-Zhao and Jin neighbors."
+    },
+    {
+      "id": "yb-map400",
+      "title": "Human History Map world-400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Decoded final exact snapshot, ring-order difference and large separate Ruanruan feature."
+    },
+    {
+      "id": "yb-map500",
+      "title": "Human History Map world-500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Decoded indexed endpoint seam checked for the absent exact target and distinct Northern Wei and Ruanruan records."
+    },
+    {
+      "id": "yb-map600",
+      "title": "Human History Map world-600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded successor seam checked for continuing Ruanruan and distinct Göktürk and Sasanian records."
+    },
+    {
+      "id": "yb-sourcebook",
+      "title": "Dániel Balogh, ed.: Hunnic Peoples in Central and South Asia, Sources for their Origin and History",
+      "url": "https://www.jstor.org/stable/j.ctv13nb6vw",
+      "note": "ERC-supported multilingual sourcebook used for the overview and concise override: Yueban appears securely in Chinese history only in 437 to 448, and proposed links to Avars or Hephthalites remain competing theories."
+    },
+    {
+      "id": "yb-weishu",
+      "title": "Wei Shu 102: Western Regions, Yueban passage",
+      "url": "https://www.chinese-classics.org/read/history/wei-shu/wei-shu-102",
+      "note": "Primary Classical Chinese text used for exact wording about origin, title, grooming, medicine, ritual claims, diplomacy and court adoption of Yueban music."
+    },
+    {
+      "id": "yb-taiping",
+      "title": "Taiping Yulan 799: Yueban",
+      "url": "https://ctext.org/text.pl?if=en&node=400263",
+      "note": "Later Chinese encyclopedic transmission of the Yueban notice, used for the parallel original wording about weather specialists, medicine, washing, and court adoption of drum-and-dance rhythms."
+    },
+    {
+      "id": "yb-weishu-eng",
+      "title": "Wei Shu, Wusun, Yueban and neighboring states: English translation",
+      "url": "https://tianmu.org/good-work-library/scythian/chinese-frontier-sources/wei-shu-wusun-yueban-sogd-yuezhi-hephthalites-and-kang-good-works-translation",
+      "note": "Readable translation used alongside the Chinese original for location, population claim, hair treatment, bathing and sulfur; court ethnography is explicitly treated as external testimony."
+    },
+    {
+      "id": "yb-ctext",
+      "title": "Chinese Text Project: Wei Shu bibliographic entry",
+      "url": "https://ctext.org/dictionary.pl?char=%E9%AD%8F%E6%9B%B8&if=en&remap=gb",
+      "note": "Text-history reference used to identify Wei Shou’s 554 compilation and the external Classical Chinese context of the written sample."
+    },
+    {
+      "id": "yb-yu",
+      "title": "Taishan Yu: A History of the Relationship Between the Chinese Dynasties and the Western Regions",
+      "url": "https://sino-platonic.org/complete/spp131_chinese_dynasties_western_region.pdf",
+      "note": "Detailed synthesis used for the Ili to Chu reconstruction, 437 and 448 embassies, Northern Wei response and explicit uncertainty around contacts and later fate."
+    },
+    {
+      "id": "yb-selbitschka",
+      "title": "Armin Selbitschka: Tribute, Hostages, and Marriage Alliances in the Northern Wei Period",
+      "url": "https://doi.org/10.1080/15299104.2019.1660088",
+      "note": "Peer-reviewed diplomatic study used for the north-of-Issyk-Kul placement and the political purpose and military result of the 448 tribute-backed alliance request."
+    },
+    {
+      "id": "yb-kradin",
+      "title": "Nikolay N. Kradin: From Tribal Confederation to Empire, The Evolution of Rouran Society",
+      "url": "https://real.mtak.hu/45766/",
+      "note": "Peer-reviewed study used to keep Rouran history distinct: formation in 402, Ili to Tarim reach, military organization and mid-fifth-century crisis."
+    },
+    {
+      "id": "yb-unesco2",
+      "title": "UNESCO History of Civilizations of Central Asia II: The Nomads of Northern Central Asia",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_II%20silk%20road_the%20nomads%20of%20northern%20central%20asia%20after%20the%20invansion%20of%20alexander.pdf",
+      "note": "Older scholarly synthesis used as a clearly labelled reconstruction of Yueban origins near Lake Balkhash, contrasted with the narrower secure chronology."
+    },
+    {
+      "id": "yb-unesco3",
+      "title": "UNESCO History of Civilizations of Central Asia III: Northern Nomads",
+      "url": "https://es.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_III%20silk%20road_northern%20nomads.pdf",
+      "note": "Scholarly regional chapter used for its source-based summary of Tarbagatai placement, Northern Xiongnu ancestry, grooming and washing reports."
+    },
+    {
+      "id": "yb-begash",
+      "title": "Michael Frachetti and Alexei Mar’yashev: Long-Term Occupation and Seasonal Settlement at Begash",
+      "url": "https://www.researchgate.net/publication/233638768_Long-Term_Occupation_and_Seasonal_Settlement_of_Eastern_Eurasian_Pastoralists_at_Begash_Kazakhstan",
+      "note": "Peer-reviewed regional archaeology used only as comparison: Phase 4 dates 70 to 550, intermittent habitation, hearths, trash pits, spindle whorls, iron work and spring-fed water."
+    },
+    {
+      "id": "yb-botany",
+      "title": "Robert Spengler III: Botanical Resource Use in the Central Eurasian Mountain/Steppe Interface",
+      "url": "https://www.researchgate.net/publication/281870815_Botanical_Resource_Use_in_the_Bronze_and_Iron_Age_of_the_Central_Eurasian_MountainSteppe_Interface_Decision_Making_in_Multi-resource_Pastoral_Economies_PhD_Dissertation_for_the_Anthropology_Department",
+      "note": "Archaeobotanical dissertation used to confirm the 70 to 550 Begash phase, its conventional Wusun attribution and sparse productive remains; it is never relabelled Yueban."
+    },
+    {
+      "id": "yb-nature",
+      "title": "Dairy to millet synergy in the Inner Asian mountains from 2900 BCE",
+      "url": "https://doi.org/10.1038/s43247-026-03487-y",
+      "note": "Peer-reviewed biomolecular study used as explicitly regional food evidence for dairy, horse products, millet and increasing agrarian intake; it does not identify Yueban diners."
+    },
+    {
+      "id": "yb-nomad-bias",
+      "title": "An Imagined Past? Nomadic Narratives in Central Asian Archaeology",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/714245",
+      "note": "Peer-reviewed synthesis used to reject a uniform meat-only, always-moving stereotype and to frame mixed herding, farming and craft economies cautiously."
+    },
+    {
+      "id": "yb-xiongnu",
+      "title": "Étienne de la Vaissière: Xiongnu, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/xiongnu/",
+      "note": "Scholarly reference used to distinguish the earlier empire, Northern and Southern divisions, the post-153 evidence gap and uncertainty in language and continuity."
+    },
+    {
+      "id": "yb-kidarites",
+      "title": "Frantz Grenet: Kidarites, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/kidarites/",
+      "note": "Scholarly reference used to identify the Kidarites as a separate Tokharistan/Gandhara dynasty with their own coins and chronology."
+    },
+    {
+      "id": "yb-hephthalites",
+      "title": "A. D. H. Bivar: Hephthalites, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/hephthalites/",
+      "note": "Scholarly reference used to identify the Hephthalites as a distinct later political formation in Bactria, Iran and India."
+    },
+    {
+      "id": "yb-eastnomads",
+      "title": "Alexander Savelyev and Choongwon Jeong: Early nomads of the Eastern Steppe",
+      "url": "https://doi.org/10.1017/ehs.2020.18",
+      "note": "Open peer-reviewed interdisciplinary study used for the weak evidentiary bridge between eastern steppe names and later western Huns or Avars."
+    }
+  ],
+  "entities": [
+    {
+      "id": "yueban",
+      "card": "data/cards/yueban.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "yb-sourcebook",
+            "yb-index",
+            "yb-map100",
+            "yb-map200",
+            "yb-map300",
+            "yb-map400"
+          ],
+          "locator": "ERC-supported multilingual sourcebook used for the overview and concise override: Yueban appears securely in Chinese history only in 437 to 448, and proposed links to Avars or Hephthalites remain competing theories. Exact repository identity checked: yueban is labelled Yueban, circa 100 to 500; neighboring Xiongnu, Southern Xiongnu and Ruanruan records remain separate. Decoded exact target geometry, coordinate hashes, point tests and separate Southern Xiongnu neighbor. Decoded second exact snapshot and confirmed identical canonical geometry. Decoded third exact snapshot and checked distinct Han-Zhao and Jin neighbors. Decoded final exact snapshot, ring-order difference and large separate Ruanruan feature.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "yb-unesco2"
+          ],
+          "locator": "Older scholarly synthesis used as a clearly labelled reconstruction of Yueban origins near Lake Balkhash, contrasted with the narrower secure chronology.",
+          "dateScope": {
+            "from": 100,
+            "to": 200
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "yb-xiongnu"
+          ],
+          "locator": "Scholarly reference used to distinguish the earlier empire, Northern and Southern divisions, the post-153 evidence gap and uncertainty in language and continuity.",
+          "dateScope": {
+            "from": 200,
+            "to": 350
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "yb-xiongnu"
+          ],
+          "locator": "Scholarly reference used to distinguish the earlier empire, Northern and Southern divisions, the post-153 evidence gap and uncertainty in language and continuity.",
+          "dateScope": {
+            "from": 350,
+            "to": 402
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "yb-kradin"
+          ],
+          "locator": "Peer-reviewed study used to keep Rouran history distinct: formation in 402, Ili to Tarim reach, military organization and mid-fifth-century crisis.",
+          "dateScope": {
+            "from": 402,
+            "to": 437
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "yb-selbitschka"
+          ],
+          "locator": "Peer-reviewed diplomatic study used for the north-of-Issyk-Kul placement and the political purpose and military result of the 448 tribute-backed alliance request.",
+          "dateScope": {
+            "from": 437,
+            "to": 448
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "yb-kradin"
+          ],
+          "locator": "Peer-reviewed study used to keep Rouran history distinct: formation in 402, Ili to Tarim reach, military organization and mid-fifth-century crisis.",
+          "dateScope": {
+            "from": 448,
+            "to": 470
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "yb-kidarites",
+            "yb-hephthalites"
+          ],
+          "locator": "Scholarly reference used to identify the Kidarites as a separate Tokharistan/Gandhara dynasty with their own coins and chronology. Scholarly reference used to identify the Hephthalites as a distinct later political formation in Bactria, Iran and India.",
+          "dateScope": {
+            "from": 470,
+            "to": 500
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "yb-index",
+            "yb-coverage"
+          ],
+          "locator": "Exact index and initial coverage ledger entries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "yb-map100"
+          ],
+          "locator": "Decoded 100 geometry statistics and hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "yb-map100"
+          ],
+          "locator": "Exact point-in-polygon results for the 100 feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "yb-map100",
+            "yb-map200",
+            "yb-map300",
+            "yb-map400"
+          ],
+          "locator": "Raw and canonical coordinate-hash comparison across four snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "yb-mapbc1",
+            "yb-map500",
+            "yb-map600",
+            "yb-index"
+          ],
+          "locator": "Seam audit and nearby exact-name search.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "yb-weishu-eng"
+          ],
+          "locator": "Translated origin passage and retrospective-source limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "yb-unesco3"
+          ],
+          "locator": "UNESCO source summary checked against the modern 437 to 448 source chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "yb-weishu"
+          ],
+          "locator": "Dated embassy in the dynastic history and its documentary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "yb-yu"
+          ],
+          "locator": "Wei Shu quotations and Yu’s warning about the conventional formula.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "yb-unesco2"
+          ],
+          "locator": "Older synthesis contrasted with source-critical chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "yb-weishu-eng"
+          ],
+          "locator": "Translated location sentence and genre limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "yb-yu"
+          ],
+          "locator": "Ili to Chu reconstruction and authorial uncertainty language.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "yb-selbitschka"
+          ],
+          "locator": "Peer-reviewed geographical placement in the 448 alliance example.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "yb-kradin",
+            "yb-map400"
+          ],
+          "locator": "Rouran territorial synthesis and separate atlas geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "yb-map400"
+          ],
+          "locator": "Comparative point tests for exact Yueban and Ruanruan features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "yb-unesco2"
+          ],
+          "locator": "Population, extent and ruler-title report with evidentiary limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "yb-selbitschka"
+          ],
+          "locator": "Article argument and Yueban alliance case.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "yb-unesco3"
+          ],
+          "locator": "Dated embassy entry and bounded inference from diplomatic action.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "yb-selbitschka"
+          ],
+          "locator": "Tribute-backed request and imperial military response.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "yb-yu"
+          ],
+          "locator": "448 annal sequence and cautious assessment of the operation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "yb-kradin"
+          ],
+          "locator": "Rouran foundation, military organization, western extent and crisis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "yb-weishu"
+          ],
+          "locator": "Primary anecdote about alliance, insult, pursuit and ensuing hostility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "yb-taiping"
+          ],
+          "locator": "Parallel transmitted ritual-weather claim and literal-belief limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "yb-xiongnu"
+          ],
+          "locator": "Broader Xiongnu military record used to state, rather than fill, the Yueban gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "yb-kidarites",
+            "yb-hephthalites",
+            "yb-eastnomads"
+          ],
+          "locator": "Separate dynastic geographies and interdisciplinary continuity warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "yb-nomad-bias"
+          ],
+          "locator": "Regional mixed-economy synthesis and anti-stereotype warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "yb-begash"
+          ],
+          "locator": "Phase 4 date, interpretation and conventional archaeological label.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "yb-botany"
+          ],
+          "locator": "Phase 4 productive remains and conventional Wusun attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "yb-nature"
+          ],
+          "locator": "Biomolecular food results and target-specific limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "yb-taiping"
+          ],
+          "locator": "Parallel transmitted notice ordering Yueban performance rhythms into court music.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "yb-unesco2"
+          ],
+          "locator": "Social ranks visible and absent in the historical reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "yb-nomad-bias"
+          ],
+          "locator": "Regional household economy contrasted with target-specific documentary silence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "yb-botany"
+          ],
+          "locator": "Productive evidence used for a tightly labelled learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "yb-taiping"
+          ],
+          "locator": "Specialist roles in the transmitted Yueban passage and explicit training gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "yb-unesco3"
+          ],
+          "locator": "Source-based population report and quantitative limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "yb-begash"
+          ],
+          "locator": "Seasonal-settlement interpretation and Phase 4 habitation evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "yb-unesco3"
+          ],
+          "locator": "UNESCO rendering of the Wei Shu grooming report and scope caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "yb-nature"
+          ],
+          "locator": "Regional diet evidence contrasted with the limited primary food reference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "yb-begash"
+          ],
+          "locator": "Regional activity traces paired with explicit play-evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "yb-selbitschka"
+          ],
+          "locator": "Diplomatic exchange evidence and missing commercial documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "yb-weishu"
+          ],
+          "locator": "Primary Fire Mountain and stone-sulfur passage with medical limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "yb-weishu"
+          ],
+          "locator": "Primary court-test anecdote and evidence-quality warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "yb-weishu-eng"
+          ],
+          "locator": "Translated specialist notices and explicit everyday-care gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "yb-begash",
+            "yb-map400"
+          ],
+          "locator": "Regional water setting and geometry limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "yb-weishu-eng"
+          ],
+          "locator": "Translated hygiene sentence and explicit sanitation/toilet evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "yb-ctext"
+          ],
+          "locator": "Bibliographic compilation date and dynastic-history context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "yb-taiping"
+          ],
+          "locator": "Exact original Chinese sentence in the transmitted Yueban passage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "yb-ctext"
+          ],
+          "locator": "Modern reading aid, translation and historical-language limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "yb-xiongnu"
+          ],
+          "locator": "Language uncertainty and the limits of names and exonyms.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "yb-eastnomads"
+          ],
+          "locator": "Religious silence and disputed eastern-to-western continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "yb-map500",
+            "yb-eastnomads",
+            "yb-kidarites",
+            "yb-hephthalites"
+          ],
+          "locator": "Decoded indexed endpoint seam checked for the absent exact target and distinct Northern Wei and Ruanruan records. Open peer-reviewed interdisciplinary study used for the weak evidentiary bridge between eastern steppe names and later western Huns or Avars. Scholarly reference used to identify the Kidarites as a separate Tokharistan/Gandhara dynasty with their own coins and chronology. Scholarly reference used to identify the Hephthalites as a distinct later political formation in Bactria, Iran and India.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "yueban",
+        "card": "cards/yueban.json",
+        "dateBasis": "historical",
+        "summary": "Secure records run 437 to 448; disappearance is undocumented, so 448 marks the last dated Yueban evidence, not extinction.",
+        "fell": 448
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "yueban",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            71.41931419314193,
+            44.50546215401255,
+            75.33615336153363,
+            47.772249836919286
+          ]
+        },
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "yueban",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            71.41931419314193,
+            44.50546215401255,
+            75.33615336153363,
+            47.772249836919286
+          ]
+        },
+        {
+          "file": "world-300.json",
+          "properties": {
+            "civ": "yueban",
+            "from": 300,
+            "to": 400,
+            "precision": 1
+          },
+          "bounds": [
+            71.41931419314193,
+            44.50546215401255,
+            75.33615336153363,
+            47.772249836919286
+          ]
+        },
+        {
+          "file": "world-400.json",
+          "properties": {
+            "civ": "yueban",
+            "from": 400,
+            "to": 500,
+            "precision": 1
+          },
+          "bounds": [
+            71.41931419314193,
+            44.50546215401255,
+            75.33615336153363,
+            47.772249836919286
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id yueban is indexed circa 100 to 500, with four initial coverage intervals and no prior card or override.",
+    "It is absent at 1 BCE, present at 100, 200, 300 and 400, then absent at the indexed 500 endpoint and at 600.",
+    "All four exact snapshots are one-part, one-ring, nine-position Polygons with bounds [71.41931419314193, 44.50546215401255, 75.33615336153363, 47.772249836919286].",
+    "The 100, 200 and 300 raw coordinate hash is d5fce106a2f8d45ea140352a79c7db162273d47b573c146e5d47906126447ad2; 400 is b1d3e85fa37e2661e1bba78461e366f7b4aa5d1709acc90cbfe8e56357fc1766 only because its ring begins at another vertex.",
+    "All four rotation- and orientation-invariant canonical hashes equal c3bbdc5b2d998c0a00c5c47d341e5155b01198a4ba1cf343b45ac0161fe8f6bc.",
+    "The exact Yueban shape contains only the western Lake Balkhash test point and misses historical candidates in Ili, Chu, Tarbagatai, Issyk-Kul and north of Kucha.",
+    "Earlier Xiongnu and Southern Xiongnu and later Ruanruan remain separate atlas identities. No actual Xianbei, Kidarite or Hephthalite id exists in the audited index.",
+    "All coordinates, bounds, hashes and point tests describe imported display geometry only; none establishes ethnicity, language, migration, modern borders or exclusive sovereignty."
+  ]
+}

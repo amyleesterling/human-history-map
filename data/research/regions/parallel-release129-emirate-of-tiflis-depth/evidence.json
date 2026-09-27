@@ -1,0 +1,893 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release129-emirate-of-tiflis research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "tif-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry checked: emirate-of-tiflis is labeled Emirate of Tiflis, marked circa and historical-basemaps generated, and indexed 1100 to 1200 without aliases or an authored link."
+    },
+    {
+      "id": "tif-summary",
+      "title": "Human History Map imported historical-basemap summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported summary checked for its Wikipedia provenance and its internally important distinction between effective emir rule to about 1080 and Georgian capture of the city in 1122."
+    },
+    {
+      "id": "tif-map1000",
+      "title": "Human History Map world-1000 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded predecessor seam. The target id is absent and the imported Georgia feature owns all audited eastern Georgian city tests, including the exact modern Tbilisi point."
+    },
+    {
+      "id": "tif-map1100",
+      "title": "Human History Map world-1100 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Decoded only target layer. It contains one unlabeled seven-position Polygon southeast of Tbilisi; exact Tbilisi and every named audit point miss it, while Georgia owns the city point."
+    },
+    {
+      "id": "tif-map1200",
+      "title": "Human History Map world-1200 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded endpoint seam. The exact target disappears and the Georgia feature owns Tbilisi, Mtskheta, Rustavi, Gori, Dmanisi, Telavi and Kutaisi at the 1200 snapshot."
+    },
+    {
+      "id": "tif-map1279",
+      "title": "Human History Map world-1279 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded later successor seam. The target remains absent; Ilkhanate geometry overlays several eastern Georgian and Caucasian tests while Georgia retains Gori and Kutaisi."
+    },
+    {
+      "id": "tif-ge-emirate",
+      "title": "Emirate of Tbilisi, Georgian Encyclopedia",
+      "url": "https://georgianencyclopedia.ge/en/form_eng/834",
+      "note": "Georgian National Academy of Sciences encyclopedia entry checked for establishment, caliphal administration, territorial contraction, Shuabids, Jaffarids, coinage, Georgian pressure and rule by city elders after the 1080s."
+    },
+    {
+      "id": "tif-ge-bugha",
+      "title": "Bugha al-Kabir's Campaign, Georgian Encyclopedia",
+      "url": "https://georgianencyclopedia.ge/en/form_eng/511",
+      "note": "Academy encyclopedia entry checked for the 853 to 854 campaign, Ishaq's rebellion, participating alliances, the crossing into Tbilisi, destruction, execution and the chroniclers' casualty claims."
+    },
+    {
+      "id": "tif-ge-fortress",
+      "title": "Tbilisi Fortress (Narikala), Georgian Encyclopedia",
+      "url": "https://georgianencyclopedia.ge/en/form_eng/835",
+      "note": "Academy encyclopedia entry checked for the citadel's changing names, early fortifications, Bagrat IV's 1045 seizure and David IV's securing of fortress and city in 1122."
+    },
+    {
+      "id": "tif-ge-elders",
+      "title": "Tbileli Berebi (Elders of Tbilisi), Georgian Encyclopedia",
+      "url": "https://www.georgianencyclopedia.ge/ka/form/19472",
+      "note": "Georgian-language Academy entry checked for elite citizen representation, opposition to emirs, full urban government from the Jaffarids' extinction in the 1080s to 1122 and al-Fariqi's rotating-rule report."
+    },
+    {
+      "id": "tif-ge-abo",
+      "title": "Abo Tbileli, Georgian Encyclopedia",
+      "url": "https://georgianencyclopedia.ge/en/form_eng/222",
+      "note": "Academy encyclopedia biography checked for Abo's approximate dates, Arab background, service to Nerse, skill mixing myrrh preparations, conversion, execution and contemporary Georgian hagiography."
+    },
+    {
+      "id": "tif-ge-tiflisi",
+      "title": "al-Tiflisi, Georgian Encyclopedia",
+      "url": "https://georgianencyclopedia.ge/ka/form/17432",
+      "note": "Georgian-language Academy entry checked for the nisba's meaning and for connected theologians, jurists, writers, poets, physicians, merchants and craftspeople, including al-Hasan and Hubaysh."
+    },
+    {
+      "id": "tif-tdv",
+      "title": "Tiflis, TDV Encyclopedia of Islam",
+      "url": "https://islamansiklopedisi.org.tr/tiflis",
+      "note": "Scholarly encyclopedia entry checked for geography, the seventh-century agreement, emirate politics, Bagratid and Seljuk episodes, fortifications, baths, mixed worship, products, crafts and David IV's capture."
+    },
+    {
+      "id": "tif-treaty",
+      "title": "The Seventh Century Conquest of Kartli by Habib ibn Maslamah",
+      "url": "https://www.spekali.tsu.ge/index.php/en/article/viewArticle/12/118",
+      "note": "Peer-reviewed Tbilisi State University article checked for the 654 to 655 peace-and-security agreement, its household rather than individual levy and scholarly cautions about transmitted treaty texts."
+    },
+    {
+      "id": "tif-numis-abbasid",
+      "title": "Abbasid dirhems of Tbilisi mint, Online English-Georgian Catalogue of Georgian Numismatics",
+      "url": "https://geonumismatics.tsu.ge/en/catalogue/types?type=36",
+      "note": "Tbilisi State University numismatic catalogue checked for the AH 248 / 862 to 63 issue, known specimens, metal and dimensions, and the complete original Arabic legends with translation."
+    },
+    {
+      "id": "tif-numis-jafarid",
+      "title": "Jaffarid dirhems of Tbilisi mint, Online English-Georgian Catalogue of Georgian Numismatics",
+      "url": "https://geonumismatics.tsu.ge/public/en/catalogue/types?type=37",
+      "note": "Tbilisi State University catalogue checked for the Jaffarid dynasty, rulers revealed by coins, issues of AH 342 to 418 and what names and dates show about hereditary local power."
+    },
+    {
+      "id": "tif-emirs-numismatic",
+      "title": "The History of Emirs of Tbilisi According to Numismatic Materials",
+      "url": "https://dspace.nplg.gov.ge/bitstream/1234/353832/1/Sakartvelos_Institutis_Shromebi_2018_T_XIII.pdf",
+      "note": "Institute of Georgian History study checked for reconstructed Jaffarid successions, otherwise unknown rulers, debased late issues, hoards and the evidence and limits of coins as political sources."
+    },
+    {
+      "id": "tif-ons-176",
+      "title": "A new dirham of Ja'far ibn Mansur struck at Tiflis",
+      "url": "https://www.orientalnumismaticsociety.org/archive/ONS_176.pdf",
+      "note": "Oriental Numismatic Society article checked for identification of a Tiflis issue of AH 374 / 984 to 85 and the way one coin adds to the fragmentary record of hereditary emirs."
+    },
+    {
+      "id": "tif-djaparidze",
+      "title": "Researches into the History of Georgia and the Near East",
+      "url": "https://dspace.nplg.gov.ge/bitstream/1234/412190/5/DziebaniSaqartvelosaDaAxloAghmosavletisIstoriashi_2012_Tomi_I.pdf",
+      "note": "National Parliamentary Library volume checked for the al-Tiflisi biographical corpus, its explicit evidence limits, occupations, education journeys, religious currents and post-1122 Muslim continuity."
+    },
+    {
+      "id": "tif-iranica-saj",
+      "title": "Banu Saj, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/banu-saj-more-correctly-al-abil-saj-a-family-named-after-its-ancestor-abul-saj-which-served-the-abbasid-caliphate/",
+      "note": "Scholarly reference checked for Muhammad ibn Abi'l-Saj's Caucasian campaigns, occupation of Tiflis after conflict with Smbat and the wider politics of Azerbaijan, Armenia and caliphal investiture around 900."
+    },
+    {
+      "id": "tif-cambridge-mayyafariqin",
+      "title": "Caucasica in the History of Mayyafariqin",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/caucasica-in-the-history-of-mayyafariqin/8F633E7E2EC78DD00566CA3E797D5BB2",
+      "note": "Minorsky's source study checked for al-Fariqi's Caucasian material, the elders' invitation to Ilghazi, the 1122 capture and cautions when reconciling Georgian and Arabic chronologies."
+    },
+    {
+      "id": "tif-unesco",
+      "title": "Tbilisi (Georgia), UNESCO World Heritage documentation",
+      "url": "https://whc.unesco.org/document/1118",
+      "note": "UNESCO dossier checked for Tbilisi's fortified urban development, trading and administrative roles, early medieval churches, the 853 destruction, revival and incorporation into David IV's kingdom."
+    },
+    {
+      "id": "tif-progeorgia",
+      "title": "Islamic-Arabic Sources on Medieval Tbilisi, Pro Georgia 30",
+      "url": "https://dspace.nplg.gov.ge/bitstream/1234/529059/1/Pro_Georgia_2020_N30.pdf",
+      "note": "Scholarly source survey checked for al-Istakhri, Ibn Hawqal and al-Muqaddasi on walls, gates, river, fertile surroundings, crops, fruit, thermal water and the limits of translating geographic descriptions."
+    },
+    {
+      "id": "tif-mosques",
+      "title": "Tbilisi Mosques in Georgian and Foreign Sources",
+      "url": "https://ttk.gov.tr/wp-content/uploads/2024/08/TTK-kongre-Cilt-5.pdf",
+      "note": "Turkish Historical Society congress study checked for mosque institutions, khatib and qadi, wooden urban fabric, Muslim worship before and after 1122 and the survival limits of early structures."
+    },
+    {
+      "id": "tif-muslim-successors",
+      "title": "Georgia and the Near Eastern Islamic World in the Twelfth to Early Thirteenth Century",
+      "url": "https://dspace.nplg.gov.ge/bitstream/1234/9045/13/SaqartveloDaMaxlobeliAgmisavletisIslamuriSamyaroXII-XIISaikunisPirvelMesamedshi_Gateqstebuli.pdf",
+      "note": "National Parliamentary Library study checked for privileges granted after 1122, continued worship and qadi jurisdiction, Arabic-inscribed coinage and the careful analogy with protected communities."
+    },
+    {
+      "id": "tif-urbanarch",
+      "title": "Challenges in Urban Archaeology in Tbilisi",
+      "url": "https://farig.org/images/pages/research/Urban_Archaeology_in_Tbilisi.pdf",
+      "note": "Recent archaeological report checked for medieval ceramic production, kilns, vessels, cellars, water reservoirs and tubes, refuse practices, dating problems and the preliminary character of many interpretations."
+    },
+    {
+      "id": "tif-water",
+      "title": "One Aspect of the Tbilisi Water Supply System in the 19th Century",
+      "url": "https://academia.openjournals.ge/index.php/academia/article/view/3537",
+      "note": "Art-academy journal article checked for river, well and ceramic-pipe supply traditions and its explicit warning that exposed pipe dates and supposed medieval continuity remain uncertain without excavation."
+    },
+    {
+      "id": "tif-glazed-pottery",
+      "title": "Glazed Clay Pottery in Eastern Georgia of the Middle Ages",
+      "url": "https://www.sciencejournals.ge/index.php/HAE/article/view/627",
+      "note": "Peer-reviewed archaeology article checked for ninth to thirteenth-century local bowls and dishes, red and kaolin clays, glazing and painted motifs, including material from a medieval Tbilisi workshop."
+    },
+    {
+      "id": "tif-dmanisi",
+      "title": "Archaeology of the Dmanisi Medieval Town",
+      "url": "https://dmanisi.gov.ge/turizmi/93-arqeologia-dmanisis-naqalaqari.html",
+      "note": "Municipal archaeological overview checked for the emirate-linked regional city's houses, workshops, glass and pottery production, fortifications, bath, water-supply tunnel and later rebuilding chronology."
+    },
+    {
+      "id": "tif-dmanisi-necropolis",
+      "title": "Dmanisi medieval necropolis, new epigraphic evidence",
+      "url": "https://archaeopresspublishing.com/ojs/index.php/aramazd/article/view/3294",
+      "note": "Peer-reviewed Georgian National Museum-led study checked for Dmanisi's ninth-century urban role, trade routes and multi-confessional Georgian, Armenian and Arabic epigraphic record."
+    },
+    {
+      "id": "tif-education",
+      "title": "Education in Medieval Georgia (11th to 12th Centuries)",
+      "url": "https://dergipark.org.tr/tr/pub/karen/article/1056097",
+      "note": "Peer-reviewed education-history article checked for household, religious and formal learning distinctions, church and monastery centers, travel for advanced study and the rise of Georgian academies around the conquest era."
+    },
+    {
+      "id": "tif-ncbi-physician",
+      "title": "Isa al-Raqqi al-Tiflisi in A Literary History of Medicine",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK621355/",
+      "note": "Critical edition hosted by NCBI Bookshelf checked for the tenth-century al-Tiflisi physician-translator at Sayf al-Dawla's court and for what the biographical anecdote does and does not show about Tbilisi."
+    },
+    {
+      "id": "tif-medicine",
+      "title": "Comparative analysis of medieval Georgian and European medical treatises and remedies",
+      "url": "https://www.hst-journal.com/index.php/hst/article/view/715",
+      "note": "Peer-reviewed history-of-science article checked for the eleventh-century Georgian Ustsoro Karabadini, remedies, wine and classical knowledge, used only as regional written medicine rather than proof of an emirate clinic."
+    },
+    {
+      "id": "tif-hubaysh",
+      "title": "Hubaysh al-Tiflisi, Islamisation of Anatolia prosopography",
+      "url": "https://www.islam-anatolia.ac.uk/data/documents/IN_RASB_207%3Bunnumbered_1",
+      "note": "Research-project record checked for the Tiflis-born physician, astronomer and author, his migration, Arabic and Persian works and the uncertainty in his death date."
+    },
+    {
+      "id": "tif-abo-text",
+      "title": "Ioane Sabanisdze, The Martyrdom of Abo Tbileli",
+      "url": "https://literaturatmcodneoba.tsu.ge/abo-tbil.pdf",
+      "note": "Tbilisi State University-hosted edition of the eighth-century Georgian hagiography checked as near-contemporary evidence for language learning, craft skill, religious conflict and the source's devotional genre."
+    },
+    {
+      "id": "tif-chronos-inscription",
+      "title": "Early Arabic inscriptions and administration in Tiflis, Chronos 3",
+      "url": "https://dspace.nplg.gov.ge/bitstream/1234/437150/5/Chronos_2022_N3.pdf",
+      "note": "Scholarly journal study checked for the Kufic inscription dated Sha'ban AH 147, early Tiflis minting and the administrative significance of Arabic writing in the eighth-century city."
+    },
+    {
+      "id": "tif-women",
+      "title": "Social and Legal Status of Women in Medieval Georgia",
+      "url": "https://www.ijch.net/index.php?a=show&c=index&catid=43&id=381&m=content",
+      "note": "Peer-reviewed regional legal-history study checked for ninth-century evidence of dowry and women's property interests; used with an explicit warning that broad Georgian evidence cannot fill Tbilisi-specific silence."
+    },
+    {
+      "id": "tif-didgori",
+      "title": "Battle of Didgori, Georgian Encyclopedia",
+      "url": "https://georgianencyclopedia.ge/ka/form_eng/692",
+      "note": "Georgian National Academy of Sciences encyclopedia entry checked for the 1121 coalition, Tbilisi's strategic relation to Didgori and David IV's victory, without repeating disputed giant army totals."
+    }
+  ],
+  "entities": [
+    {
+      "id": "emirate-of-tiflis",
+      "card": "data/cards/emirate-of-tiflis.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tif-ge-emirate",
+            "tif-unesco"
+          ],
+          "locator": "Georgian National Academy of Sciences encyclopedia entry checked for establishment, caliphal administration, territorial contraction, Shuabids, Jaffarids, coinage, Georgian pressure and rule by city elders after the 1080s. UNESCO dossier checked for Tbilisi's fortified urban development, trading and administrative roles, early medieval churches, the 853 destruction, revival and incorporation into David IV's kingdom.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tif-treaty"
+          ],
+          "locator": "Peer-reviewed Tbilisi State University article checked for the 654 to 655 peace-and-security agreement, its household rather than individual levy and scholarly cautions about transmitted treaty texts.",
+          "dateScope": {
+            "from": 654,
+            "to": 736
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tif-chronos-inscription"
+          ],
+          "locator": "Scholarly journal study checked for the Kufic inscription dated Sha'ban AH 147, early Tiflis minting and the administrative significance of Arabic writing in the eighth-century city.",
+          "dateScope": {
+            "from": 736,
+            "to": 813
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tif-ge-bugha"
+          ],
+          "locator": "Academy encyclopedia entry checked for the 853 to 854 campaign, Ishaq's rebellion, participating alliances, the crossing into Tbilisi, destruction, execution and the chroniclers' casualty claims.",
+          "dateScope": {
+            "from": 813,
+            "to": 853
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "tif-emirs-numismatic"
+          ],
+          "locator": "Institute of Georgian History study checked for reconstructed Jaffarid successions, otherwise unknown rulers, debased late issues, hoards and the evidence and limits of coins as political sources.",
+          "dateScope": {
+            "from": 853,
+            "to": 880
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tif-numis-jafarid",
+            "tif-iranica-saj"
+          ],
+          "locator": "Tbilisi State University catalogue checked for the Jaffarid dynasty, rulers revealed by coins, issues of AH 342 to 418 and what names and dates show about hereditary local power. Scholarly reference checked for Muhammad ibn Abi'l-Saj's Caucasian campaigns, occupation of Tiflis after conflict with Smbat and the wider politics of Azerbaijan, Armenia and caliphal investiture around 900.",
+          "dateScope": {
+            "from": 880,
+            "to": 940
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "tif-emirs-numismatic",
+            "tif-ons-176"
+          ],
+          "locator": "Institute of Georgian History study checked for reconstructed Jaffarid successions, otherwise unknown rulers, debased late issues, hoards and the evidence and limits of coins as political sources. Oriental Numismatic Society article checked for identification of a Tiflis issue of AH 374 / 984 to 85 and the way one coin adds to the fragmentary record of hereditary emirs.",
+          "dateScope": {
+            "from": 940,
+            "to": 1046
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "tif-cambridge-mayyafariqin"
+          ],
+          "locator": "Minorsky's source study checked for al-Fariqi's Caucasian material, the elders' invitation to Ilghazi, the 1122 capture and cautions when reconciling Georgian and Arabic chronologies.",
+          "dateScope": {
+            "from": 1046,
+            "to": 1080
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "tif-ge-elders",
+            "tif-map1100"
+          ],
+          "locator": "Georgian-language Academy entry checked for elite citizen representation, opposition to emirs, full urban government from the Jaffarids' extinction in the 1080s to 1122 and al-Fariqi's rotating-rule report. Decoded only target layer. It contains one unlabeled seven-position Polygon southeast of Tbilisi; exact Tbilisi and every named audit point miss it, while Georgia owns the city point.",
+          "dateScope": {
+            "from": 1080,
+            "to": 1122
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "tif-muslim-successors",
+            "tif-map1200"
+          ],
+          "locator": "National Parliamentary Library study checked for privileges granted after 1122, continued worship and qadi jurisdiction, Arabic-inscribed coinage and the careful analogy with protected communities. Decoded endpoint seam. The exact target disappears and the Georgia feature owns Tbilisi, Mtskheta, Rustavi, Gori, Dmanisi, Telavi and Kutaisi at the 1200 snapshot.",
+          "dateScope": {
+            "from": 1122,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tif-index",
+            "tif-summary"
+          ],
+          "locator": "Exact index, imported summary and coverage records; dates, provenance and missing-card state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tif-map1000"
+          ],
+          "locator": "Decoded 1000 topology and point-in-polygon ownership for Tbilisi and twelve comparison places.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tif-map1100"
+          ],
+          "locator": "Exact feature properties, geometry type, ring and coordinate counts, bounds and coordinate hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tif-map1100"
+          ],
+          "locator": "Point tests, shared-arc topology and target location relative to the capital and adjacent ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tif-map1200",
+            "tif-map1279",
+            "tif-summary"
+          ],
+          "locator": "Decoded endpoint and later seam plus the imported summary's internally stated 1080 and 1122 dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tif-treaty"
+          ],
+          "locator": "Spekali analysis of date, household levy, protection clauses and textual-authenticity debate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tif-chronos-inscription"
+          ],
+          "locator": "Chronos study's reconstruction of eighth-century Arabic administration, mint and communications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tif-chronos-inscription"
+          ],
+          "locator": "Chronos study of the dated Tiflis inscription, mint and early administrative writing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tif-ge-abo"
+          ],
+          "locator": "Academy biography summarizing Ioane Sabanisdze's devotional narrative, skill and execution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tif-ge-fortress"
+          ],
+          "locator": "Academy fortress history and topographic setting, used with an explicit distinction between claims and reach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tif-ge-bugha"
+          ],
+          "locator": "Academy account of Ishaq, the caliph's objective and Bugha's punitive campaign.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tif-ge-bugha"
+          ],
+          "locator": "Campaign sequence, alliances, destruction and source-attributed casualty figure with source criticism.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tif-numis-abbasid"
+          ],
+          "locator": "TSU coin type entry for date, specimens, legends, silver and mint attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tif-numis-jafarid",
+            "tif-emirs-numismatic"
+          ],
+          "locator": "TSU catalogue and Institute of Georgian History reconstruction of the Jaffarid sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tif-ons-176"
+          ],
+          "locator": "Oriental Numismatic Society identification, date, ruler and interpretation within hereditary coinage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tif-iranica-saj"
+          ],
+          "locator": "Iranica chronology of Muhammad ibn Abi'l-Saj's campaigns and occupation of Tiflis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tif-ge-fortress",
+            "tif-cambridge-mayyafariqin"
+          ],
+          "locator": "Fortress chronology and Minorsky's comparison of Arabic and Georgian narrative evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tif-cambridge-mayyafariqin"
+          ],
+          "locator": "Minorsky's reconciliation of the Caucasian campaign and overlordship sequence in Arabic and Georgian sources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tif-ge-elders"
+          ],
+          "locator": "Georgian Encyclopedia evidence for origin, social base, authority and rotating civic government.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tif-didgori",
+            "tif-summary"
+          ],
+          "locator": "Academy coalition and Didgori chronology plus the repository summary's 1122 capture date; inflated totals omitted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tif-progeorgia"
+          ],
+          "locator": "Source survey's translated descriptions of banks, defenses, crossings, roads and border-city role.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tif-tdv"
+          ],
+          "locator": "Encyclopedia synthesis of Ibn Hawqal, Yaqut and Qazwini on products and mixed urban economy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tif-numis-abbasid"
+          ],
+          "locator": "Catalogue measurements, metal, inscription layout and official formula.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tif-glazed-pottery"
+          ],
+          "locator": "Archaeological typology, dates, production centers, materials and decorative groups.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "tif-dmanisi"
+          ],
+          "locator": "Municipal archaeological inventory and chronology, used as explicitly bounded regional comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tif-treaty",
+            "tif-abo-text"
+          ],
+          "locator": "Treaty analysis and contemporary martyr narrative for protected worship, mixed community and real conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tif-mosques"
+          ],
+          "locator": "Congress study's Arabic-source evidence for mosque officials, negotiation and survival limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tif-abo-text"
+          ],
+          "locator": "TSU-hosted primary work, authorship, genre, near-contemporary setting and polemical purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tif-dmanisi-necropolis"
+          ],
+          "locator": "Georgian National Museum-led epigraphic and archaeological study of the medieval necropolis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tif-djaparidze"
+          ],
+          "locator": "Author's explicit discussion of sectarian variety, missing local chronicle and biographical selection bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tif-treaty"
+          ],
+          "locator": "Scholarly reading of the Tbilisi levy as household-based and limits of the treaty wording.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tif-ge-elders",
+            "tif-djaparidze"
+          ],
+          "locator": "Academy analysis of the elders' social base plus the occupational range and bias of biographies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tif-ge-tiflisi"
+          ],
+          "locator": "Academy entry on nisba meaning, occupational range, uncertain ethnicity and migration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tif-women"
+          ],
+          "locator": "Regional legal-history study, explicitly limited rather than projected wholesale onto the emirate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "tif-ge-abo"
+          ],
+          "locator": "Academy biography for age, skill and learning; representativeness explicitly limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "tif-djaparidze"
+          ],
+          "locator": "Biographical corpus count, professions, travel destinations and selection caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "tif-ge-tiflisi"
+          ],
+          "locator": "Academy biography of al-Hasan, subjects, patron and non-survival of his works.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tif-ncbi-physician",
+            "tif-hubaysh"
+          ],
+          "locator": "Critical medical biography and prosopographic record for two mobile al-Tiflisi scholars.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tif-education"
+          ],
+          "locator": "Education-history distinctions among popular, religious and formal study plus institutional chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "tif-numis-abbasid"
+          ],
+          "locator": "TSU catalogue's original marginal inscription, translated date, mint and numismatic genre.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "tif-mosques"
+          ],
+          "locator": "Study's citation of al-Baladhuri on pine construction and discussion of the early built environment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "tif-tdv"
+          ],
+          "locator": "Arabic-geographer synthesis listing felt, wool and silk goods; no universal costume inferred.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "tif-progeorgia"
+          ],
+          "locator": "Translated geographic descriptions of agriculture, fruit, honey and river-powered activity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "tif-urbanarch"
+          ],
+          "locator": "Urban archaeology report's workshop contexts, ceramic forms, refuse and dating cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "tif-mosques",
+            "tif-glazed-pottery"
+          ],
+          "locator": "Documented religious sound and material decoration; explicit negative audit for games and melodies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "tif-ge-abo",
+            "tif-ncbi-physician"
+          ],
+          "locator": "Two biographies with different genres and locations; institutional inference explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "tif-medicine"
+          ],
+          "locator": "History-of-science analysis of the handbook, date, influences and remedy topics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "tif-progeorgia"
+          ],
+          "locator": "Arabic-source survey of thermal springs and continually heated baths, with counts and routines withheld.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "tif-water"
+          ],
+          "locator": "Journal abstract and conclusion on supply modes, exposed pipes, speculative dates and need for excavation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tif-urbanarch"
+          ],
+          "locator": "Tbilisi excavation evidence for water and refuse plus negative audit of toilets and sewers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tif-summary",
+            "tif-muslim-successors",
+            "tif-map1200"
+          ],
+          "locator": "Imported summary checked for its Wikipedia provenance and its internally important distinction between effective emir rule to about 1080 and Georgian capture of the city in 1122. National Parliamentary Library study checked for privileges granted after 1122, continued worship and qadi jurisdiction, Arabic-inscribed coinage and the careful analogy with protected communities. Decoded endpoint seam. The exact target disappears and the Georgia feature owns Tbilisi, Mtskheta, Rustavi, Gori, Dmanisi, Telavi and Kutaisi at the 1200 snapshot.",
+          "dateScope": {
+            "year": 1122
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "emirate-of-tiflis",
+        "card": "cards/emirate-of-tiflis.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Muslim-ruled Caucasian crossroads became a self-governing city by the 1080s and Georgia's capital after 1122, despite an atlas shape lingering to 1200.",
+        "summarySource": null,
+        "fell": {
+          "year": 1122,
+          "to": [
+            "georgia"
+          ],
+          "text": "David IV captured Tbilisi and its citadel in 1122, ending the city elders' independent government and incorporating the city into the Kingdom of Georgia."
+        },
+        "successors": [
+          "georgia"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "emirate-of-tiflis",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            44.890648906489076,
+            41.09766205313862,
+            45.83385833858338,
+            41.708715864329804
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target emirate-of-tiflis is indexed circa 1100 to 1200, has no alias or authored link, and had no tracked card or researched override before isolated integration.",
+    "The only target geometry is an unlabeled seven-position Polygon in world-1100; its bounds lie southeast of Tbilisi, and its coordinate-array SHA-256 is 0b1e8ea8b03040ea69734d51090a11e799fe1fc89177811132b93263f53c24b1.",
+    "Exact modern Tbilisi and every other named audit point miss the target polygon. The separate Georgia feature owns Tbilisi, and the target shares raw topology arcs only with Georgia and Kakheti-Hereti.",
+    "The target is absent at 1000, 1200 and 1279. This is an imported locator and seam artifact rather than a historically faithful boundary series.",
+    "Historical phases are separated: treaty and tribute around 654 to 655; caliphal emirate from the 730s; Shuabid and Jaffarid local power; city elders after the 1080s; Georgian conquest in 1122; post-conquest continuity through the atlas cutoff.",
+    "The historical date problem is explicit: effective emir rule ended around 1080, independent civic rule ended in 1122, and the atlas label persists to 1200.",
+    "Daily-life claims separate Tbilisi evidence from regional comparisons and later continuity. No standard household, school attendance rate, outfit, menu, cure, game, toilet or sewer is invented.",
+    "The written sample is a formal Arabic mint legend struck at Tbilisi in AH 248 / 862 to 63, with original script, transliteration, translation, date and genre; it is not labeled as ordinary speech.",
+    "No appliesTo alias or shared-card substitution is used."
+  ]
+}
