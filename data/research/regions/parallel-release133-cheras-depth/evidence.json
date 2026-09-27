@@ -1,0 +1,869 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release133-cheras research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "cr-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed row checked for id cheras, label Cheras, approximate 500 to 800 CE dates, no aliases and historical-basemaps provenance."
+    },
+    {
+      "id": "cr-summary",
+      "title": "Human History Map imported summary ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Wikipedia summary checked as an evidence lead; its early-historic description does not match the indexed late-antique interval."
+    },
+    {
+      "id": "cr-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage record checked for two non-contiguous observed intervals, two border files, missing card and unreviewed identity, chronology and border fields."
+    },
+    {
+      "id": "cr-map400",
+      "title": "Human History Map world-400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Decoded predecessor seam checked for target absence and broad hindu-kingdoms ownership of most fixed South Indian probes."
+    },
+    {
+      "id": "cr-map500",
+      "title": "Human History Map world-500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Decoded first target polygon checked for exact properties, bounds, coordinate hash, topology arcs, shared neighbors and fixed point probes."
+    },
+    {
+      "id": "cr-map600",
+      "title": "Human History Map world-600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded gap seam checked for target absence and replacement by broad or neighboring atlas features."
+    },
+    {
+      "id": "cr-map700",
+      "title": "Human History Map world-700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded second target polygon checked for exact properties, bounds, coordinate hash, topology arcs, shared neighbors and fixed point probes."
+    },
+    {
+      "id": "cr-map800",
+      "title": "Human History Map world-800 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded indexed endpoint seam checked for target absence and Pallava, Pandya and Rashtrakuta assignments across audited places."
+    },
+    {
+      "id": "cr-map900",
+      "title": "Human History Map world-900 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded post-endpoint comparison checked for continued target absence despite the documented Chera Perumal state by this century."
+    },
+    {
+      "id": "cr-map1000",
+      "title": "Human History Map world-1000 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded long-after comparison checked for target absence and Chola Empire ownership of most audited southern places."
+    },
+    {
+      "id": "cr-abraham",
+      "title": "Shinu Anna Abraham, Chera, Chola, Pandya: archaeological evidence and early Tamil kingdoms",
+      "url": "https://doi.org/10.1353/asi.2003.0031",
+      "note": "Peer-reviewed Asian Perspectives study checked for the c. 300 BCE to 300 CE archaeological horizon and the need to keep literary, inscriptional and material identities analytically distinct."
+    },
+    {
+      "id": "cr-cambridge-book",
+      "title": "Ophira Gamliel, Judaism in South India, 849 to 1489",
+      "url": "https://www.cambridge.org/core/books/judaism-in-south-india-8491489/489BA508BB7B693C50BDAE8841C234A7/listing",
+      "note": "Cambridge book listing checked for the mid-ninth- to late-twelfth-century Chera Perumal state-formation horizon and its separation from early Chera evidence."
+    },
+    {
+      "id": "cr-ignou-early",
+      "title": "IGNOU, Early Tamil Society: Regions, Cultures and Hero Worship",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/103490/1/Unit-10.pdf",
+      "note": "University teaching unit checked for source criticism, landscapes, occupations, exchange, polity, warriors, bards and hero-stone commemoration in early Tamilakam."
+    },
+    {
+      "id": "cr-inflibnet-sangam",
+      "title": "INFLIBNET, The Sangam Age",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-sangam-age/",
+      "note": "University chapter checked for debated literary chronology, Chera-Chola-Pandya politics, court offices, warfare, crops, ports, crafts and social categories."
+    },
+    {
+      "id": "cr-inflibnet-transition",
+      "title": "INFLIBNET, South Indian Kingdoms: Pallavas and Chalukyas",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/south-indian-kingdoms-pallavas-and-chalukyas/",
+      "note": "University chapter checked for the sixth- to eighth-century regional political setting dominated in its sources by Pallava-Chalukya conflict and multiple land-grant states."
+    },
+    {
+      "id": "cr-tn-karur",
+      "title": "Tamil Nadu Department of Archaeology, Chera Site Museum at Karur",
+      "url": "https://www.tnarch.gov.in/chera-site-museum-karur",
+      "note": "Official museum account checked for Pugalur genealogy, Jain donation, Karur excavations, Roman coins, stones, ceramics, amphorae, bricks and iron."
+    },
+    {
+      "id": "cr-tn-pugalur",
+      "title": "Tamil Nadu Department of Archaeology, Pugalur rock beds and inscriptions",
+      "url": "https://www.tnarch.gov.in/node/118",
+      "note": "Official monument record checked for the cave setting, Jain beds, royal Chera genealogy, merchant names and broad inscriptional dating."
+    },
+    {
+      "id": "cr-tn-script",
+      "title": "Tamil Nadu Department of Archaeology, Tamil-Brahmi Script",
+      "url": "https://www.tnarch.gov.in/tamil-brahmi-script",
+      "note": "Official epigraphy page checked for Tamil-Brahmi chronology, inscription settings and the second-century-CE Pugalur example."
+    },
+    {
+      "id": "cr-tn-epigraphy",
+      "title": "Tamil Nadu Department of Archaeology, Kalvettiyal epigraphy manual",
+      "url": "https://www.tnarch.gov.in/Library%20BOOk%20PDF/KALVETIYAL.pdf",
+      "note": "Official manual checked for its normalized Tamil reading of the Pugalur genealogy and discussion connecting inscriptional names with literary traditions."
+    },
+    {
+      "id": "cr-unicode",
+      "title": "Unicode Standard 17.0, Brahmi code chart",
+      "url": "https://www.unicode.org/charts/PDF/U11000.pdf",
+      "note": "Official character chart checked for Brahmi vowel signs and the dedicated Old Tamil consonant and virama code points used in the cautious Unicode rendering."
+    },
+    {
+      "id": "cr-cict-early",
+      "title": "Central Institute of Classical Tamil, Early Tamil Epigraphy",
+      "url": "https://library.cict.in/pub/cict-bkd-29.html",
+      "note": "Government research institute catalogue checked for Mahadevan's corpus scope, Tamil-Brahmi cave inscriptions, transliteration, translation and sixth-century endpoint."
+    },
+    {
+      "id": "cr-tdl-pots",
+      "title": "Tamil Nadu State Archaeology, Inscribed Potsherds of Tamil Nadu, volume 1",
+      "url": "https://tamildigitallibrary.in/Articles/062969_Inscribed_Potsherds_of_Tamil_Nadu_Vol_1",
+      "note": "Official digital publication checked for Karur excavation history, Makkotai coin reporting and the warning that many riverbed coins lack stratified contexts."
+    },
+    {
+      "id": "cr-karur-gov",
+      "title": "Karur District Government, History",
+      "url": "https://karur.nic.in/about-district/history/",
+      "note": "District government history checked for Karur finds including pottery, brick, toys, amphorae, rings and coins, while treating its confident capital claim cautiously."
+    },
+    {
+      "id": "cr-tn-excavations",
+      "title": "Tamil Nadu Department of Archaeology, excavated sites",
+      "url": "https://www.tnarch.gov.in/archaeology-excavation",
+      "note": "Official excavation register checked for Karur's 1973 to 1974 and 1994 to 1995 seasons and classification as an Early Historic site."
+    },
+    {
+      "id": "cr-kchr-manual",
+      "title": "Kerala Council for Historical Research, Pattanam Excavations 2008 manual",
+      "url": "https://kchr.ac.in/images/img/pattanam%20handbook%202008.pdf",
+      "note": "Official field manual checked for excavation objectives, multidisciplinary method, long chronology, maritime questions and the still-open task of locating Muziris."
+    },
+    {
+      "id": "cr-mgu-pattanam",
+      "title": "Mahatma Gandhi University museum, Early Historic Pattanam collection",
+      "url": "https://sss.mgu.ac.in/early-historic-age-collection/",
+      "note": "University museum account checked for site chronology, sweet water, botanical remains, brick and roof architecture, toilets, ring wells, industries and imported containers."
+    },
+    {
+      "id": "cr-kerala-pattanam",
+      "title": "Kerala Tourism, Pattanam archaeological site",
+      "url": "https://www.keralatourism.org/muziris/historical-sites/pattanam",
+      "note": "Official heritage account checked for continuous settlement, wharf and canoe context, pottery, toilet features, ring wells and cautious possible identification with Muziris."
+    },
+    {
+      "id": "cr-ucl-commerce",
+      "title": "UCL South Asian Archaeology, Indian Ocean commerce and western India",
+      "url": "https://www.ucl.ac.uk/southasianarchaeology/Indo-Roman%20Commerce.pdf",
+      "note": "University archaeology paper checked for Pattanam surface finds, trial excavation, imports, brick architecture, roof tiles, ring wells and spindle whorls."
+    },
+    {
+      "id": "cr-antiquity",
+      "title": "Antiquity, External Connections of Early Historic Pattanam",
+      "url": "https://www.antiquity.ac.uk/projgall/tomber315",
+      "note": "Peer-reviewed project report checked for ceramic evidence, Pattanam's discovery, chronology and long-distance links without making pottery equal political control."
+    },
+    {
+      "id": "cr-met-yearone",
+      "title": "Metropolitan Museum of Art, The Year One: Art of the Ancient World",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Year_One_Art_of_the_Ancient_World_East_and_West.pdf",
+      "note": "Museum publication checked for monsoon sailing, Muziris cargoes, Malabar pepper, ivory, gems, textiles and Mediterranean demand."
+    },
+    {
+      "id": "cr-met-trade",
+      "title": "Metropolitan Museum of Art, Tree and Serpent trade guide",
+      "url": "https://www.metmuseum.org/pt/exhibitions/tree-and-serpent%2Fvisiting-guide",
+      "note": "Museum exhibition guide checked for west-coast exports, Roman-world exchange and the first-century-CE peak in luxury trade."
+    },
+    {
+      "id": "cr-beads",
+      "title": "BEADS, stone beads, debitage and raw materials from Pattanam",
+      "url": "https://journals.uoregon.edu/beads/article/view/6111",
+      "note": "Specialist journal study checked for finished beads, manufacturing debris, raw materials and the distinctiveness of Pattanam's assemblage."
+    },
+    {
+      "id": "cr-rice",
+      "title": "UCL Discovery, rice agriculture in Iron Age and Early Historic South India",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10069759/",
+      "note": "University repository article checked for archaeobotanical evidence and the caution needed before assuming one uniform irrigation regime across South India."
+    },
+    {
+      "id": "cr-pama",
+      "title": "PAMA, Pattanam Unearthed excavation catalogue",
+      "url": "https://www.pama.org.in/docs/amity20/PAMA_Amity_Excavation_Catalogue_Masterlayout_Unearthing_Pattanam.pdf",
+      "note": "Archaeological institute catalogue checked for plant remains, wharf context, kiln, toilets, ring wells, roofing, bead and craft evidence, and religious-evidence limits."
+    },
+    {
+      "id": "cr-pathitrupattu",
+      "title": "Patiṟṟuppattu, original Tamil and English translation by Vaidehi Herbert",
+      "url": "https://sangamtranslationsbyvaidehi.com/pathitruppathu/",
+      "note": "Primary literary collection and modern translation checked for Chera praise poetry, war, agriculture, food, female performers, music, clothing and courtly generosity."
+    },
+    {
+      "id": "cr-projectmadurai",
+      "title": "Project Madurai, Patiṟṟuppattu Tamil electronic text",
+      "url": "https://www.projectmadurai.org/pm_etexts/utf8/pmuni0473_01.html",
+      "note": "Open scholarly Tamil e-text checked as an original-language witness to the received poem collection, with later compilation and edition limits preserved."
+    },
+    {
+      "id": "cr-projectmadurai-plain",
+      "title": "Project Madurai, Patiṟṟuppattu plain Tamil electronic text",
+      "url": "https://www.projectmadurai.org/pm_etexts/utf8/pmuni0038.html",
+      "note": "Separate open Tamil e-text checked for the cited war, dress, meal and performance verses; it witnesses the received collection rather than an ancient manuscript."
+    },
+    {
+      "id": "cr-cict-archive",
+      "title": "Central Institute of Classical Tamil, digital manuscript and poetry archive",
+      "url": "https://www.digitalarchives.cict.in/",
+      "note": "Government institute archive checked for surviving manuscript editions, classical poetry tools, women's voices and the difference between old composition and later witnesses."
+    },
+    {
+      "id": "cr-ashoka-border",
+      "title": "IGNCA and ASI, Minor Rock Edicts of Asoka and connected problems",
+      "url": "https://ignca.gov.in/Asi_data/18130.pdf",
+      "note": "Official scholarly publication checked for Ashoka's Keralaputra reference and the interpretation of southern polities as outside Mauryan dominion."
+    },
+    {
+      "id": "cr-ashoka-text",
+      "title": "Colorado State University, translations of Ashoka's edicts",
+      "url": "https://www.cs.colostate.edu/~malaiya/ashoka.html",
+      "note": "University-hosted translation checked for Rock Edict II's Keralaputra passage about treatments, useful plants, roadside wells and trees."
+    },
+    {
+      "id": "cr-physicians",
+      "title": "Indian Journal of History of Science, Physicians of Ancient India",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5084543/",
+      "note": "Peer-reviewed medical history checked for healing evidence, practitioners and the later compilation histories of the Charaka and Sushruta traditions."
+    },
+    {
+      "id": "cr-cambridge-chapter",
+      "title": "Ophira Gamliel, Jewish Maritime Networks in Old Malayalam Inscriptions",
+      "url": "https://www.cambridge.org/core/books/abs/judaism-in-south-india-8491489/jewish-maritime-networks-in-old-malayalam-inscriptions/ED71D128E5BD741129AA41336A5C4535",
+      "note": "Cambridge chapter checked for eighth-century temple-village change, 849 Kollam plates and mid-ninth- to late-twelfth-century Chera Perumal state formation."
+    },
+    {
+      "id": "cr-tn-script-history",
+      "title": "Tamil Nadu Department of Archaeology, inscriptions in Tamil script",
+      "url": "https://www.tnarch.gov.in/epigraphy/inscriptions-tamil-script",
+      "note": "Official epigraphy overview checked for Tamil-Brahmi, Grantha, Tamil and Vattezhuthu chronology and regional variation."
+    },
+    {
+      "id": "cr-nmma-reviews",
+      "title": "National Mission on Monuments and Antiquities, Indian Archaeology reviews",
+      "url": "https://nmma.nic.in/nmma/archReview.do",
+      "note": "National archaeological index checked for the availability of annual excavation reviews and the need to tie finds to reported seasons and contexts."
+    },
+    {
+      "id": "cr-keeladi",
+      "title": "Tamil Nadu Department of Archaeology, ring wells at Keeladi",
+      "url": "https://www.tnarch.gov.in/ring-wells-exposed-ongoing-archaeological-excavation-keeladi",
+      "note": "Official excavation note checked as a wider Tamilakam comparison for constructed wells, decoration and the limits of transferring evidence between sites."
+    }
+  ],
+  "entities": [
+    {
+      "id": "cheras",
+      "card": "data/cards/cheras.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "cr-index",
+            "cr-coverage",
+            "cr-abraham",
+            "cr-cambridge-book"
+          ],
+          "locator": "Exact indexed row checked for id cheras, label Cheras, approximate 500 to 800 CE dates, no aliases and historical-basemaps provenance. Coverage record checked for two non-contiguous observed intervals, two border files, missing card and unreviewed identity, chronology and border fields. Peer-reviewed Asian Perspectives study checked for the c. 300 BCE to 300 CE archaeological horizon and the need to keep literary, inscriptional and material identities analytically distinct. Cambridge book listing checked for the mid-ninth- to late-twelfth-century Chera Perumal state-formation horizon and its separation from early Chera evidence.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "cr-map500",
+            "cr-map600",
+            "cr-inflibnet-transition"
+          ],
+          "locator": "Decoded first target polygon checked for exact properties, bounds, coordinate hash, topology arcs, shared neighbors and fixed point probes. Decoded gap seam checked for target absence and replacement by broad or neighboring atlas features. University chapter checked for the sixth- to eighth-century regional political setting dominated in its sources by Pallava-Chalukya conflict and multiple land-grant states.",
+          "dateScope": {
+            "from": 500,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "cr-map700",
+            "cr-map800",
+            "cr-cambridge-chapter"
+          ],
+          "locator": "Decoded second target polygon checked for exact properties, bounds, coordinate hash, topology arcs, shared neighbors and fixed point probes. Decoded indexed endpoint seam checked for target absence and Pallava, Pandya and Rashtrakuta assignments across audited places. Cambridge chapter checked for eighth-century temple-village change, 849 Kollam plates and mid-ninth- to late-twelfth-century Chera Perumal state formation.",
+          "dateScope": {
+            "from": 700,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "cr-index",
+            "cr-summary",
+            "cr-coverage"
+          ],
+          "locator": "civilizations row 285, imported-summary row and coverage record 463",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "cr-map500"
+          ],
+          "locator": "decoded target feature, coordinate hash and point tests",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "cr-map700"
+          ],
+          "locator": "decoded target feature, coordinate hash and point tests",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "cr-map500",
+            "cr-map700"
+          ],
+          "locator": "canonicalized shared-arc neighbor audit for both exact features",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "cr-map400",
+            "cr-map600",
+            "cr-map800",
+            "cr-map900",
+            "cr-map1000"
+          ],
+          "locator": "decoded absence and point-owner tables across five seams",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "cr-ashoka-border"
+          ],
+          "locator": "discussion of southern borderers in Rock Edicts II and XIII",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "cr-tn-pugalur",
+            "cr-tn-karur"
+          ],
+          "locator": "official monument background and museum genealogy paragraph",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "cr-tn-karur",
+            "cr-tn-excavations",
+            "cr-nmma-reviews"
+          ],
+          "locator": "official museum excavation finds, state register and annual-review index",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "cr-tn-script",
+            "cr-tdl-pots"
+          ],
+          "locator": "script overview and Karur numismatic-context warning",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "cr-inflibnet-sangam"
+          ],
+          "locator": "political-history section on chiefs and crowned rulers",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "cr-pathitrupattu",
+            "cr-projectmadurai"
+          ],
+          "locator": "collection introduction and original Tamil electronic edition",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "cr-inflibnet-sangam"
+          ],
+          "locator": "cultural-history sections on court offices and performers",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "cr-pathitrupattu"
+          ],
+          "locator": "poems 68 and 75 battle-camp and elephant imagery",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "cr-projectmadurai-plain"
+          ],
+          "locator": "plain Tamil poems 13 and 75 on occupied agricultural country",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "cr-ignou-early"
+          ],
+          "locator": "hero-worship section and archaeological-source cautions",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "cr-met-yearone"
+          ],
+          "locator": "museum catalogue section on monsoon routes and Muziris cargoes",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "cr-met-yearone",
+            "cr-met-trade"
+          ],
+          "locator": "museum catalogue cargo discussion and exhibition trade guide",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "cr-antiquity"
+          ],
+          "locator": "ceramic report introduction and external-connections analysis",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "cr-ucl-commerce"
+          ],
+          "locator": "Pattanam surface survey and trial-excavation evidence",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "cr-kchr-manual",
+            "cr-kerala-pattanam"
+          ],
+          "locator": "field-manual objectives and official heritage identification caveat",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "cr-tn-karur",
+            "cr-tdl-pots"
+          ],
+          "locator": "official museum finds and numismatic stratigraphy warning",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "cr-beads"
+          ],
+          "locator": "abstract and assemblage comparison of beads and debitage",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "cr-pama"
+          ],
+          "locator": "excavation-catalogue craft and industrial contexts",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "cr-mgu-pattanam"
+          ],
+          "locator": "triple-grooved tile display entry and architectural summary",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "cr-inflibnet-sangam",
+            "cr-tdl-pots"
+          ],
+          "locator": "dynastic emblems and Makkotai coin-context discussion",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "cr-tn-pugalur"
+          ],
+          "locator": "official genealogy and investiture description",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "cr-ignou-early"
+          ],
+          "locator": "five-landscape occupations and polity discussion",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "cr-cict-archive",
+            "cr-projectmadurai"
+          ],
+          "locator": "archive women's-voices corpus and original collection colophons",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "cr-pathitrupattu"
+          ],
+          "locator": "poem 18 cooking, hospitality and performer passage",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "cr-karur-gov"
+          ],
+          "locator": "district excavation-finds list including mud toys",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "cr-tn-epigraphy",
+            "cr-cict-early",
+            "cr-unicode"
+          ],
+          "locator": "Pugalur normalized reading, corpus description and Brahmi code chart",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "cr-tn-pugalur",
+            "cr-tn-script"
+          ],
+          "locator": "official rock-bed interpretation and Pugalur script example",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "cr-ignou-early",
+            "cr-projectmadurai"
+          ],
+          "locator": "source section on oral bardic literature and received Tamil edition",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "cr-tn-script",
+            "cr-cict-early"
+          ],
+          "locator": "official script examples and epigraphic corpus scope",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "cr-tn-script-history",
+            "cr-tn-epigraphy"
+          ],
+          "locator": "official script chronology and manual's normalized Pugalur text",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "cr-pama"
+          ],
+          "locator": "catalogue architecture, flooring and roofing contexts",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "cr-ignou-early"
+          ],
+          "locator": "five-fold landscape economy sections",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "cr-rice"
+          ],
+          "locator": "study conclusions on diverse rice agricultural regimes",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "cr-projectmadurai-plain",
+            "cr-ucl-commerce"
+          ],
+          "locator": "plain Tamil ornament imagery and Pattanam spindle-whorl evidence",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "cr-pathitrupattu",
+            "cr-karur-gov"
+          ],
+          "locator": "drum and dance passages plus official list of mud toys",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "cr-mgu-pattanam",
+            "cr-projectmadurai-plain"
+          ],
+          "locator": "botanical-remains list and plain Tamil poem 18 feast passage",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "cr-ashoka-text",
+            "cr-ashoka-border"
+          ],
+          "locator": "Rock Edict II translation and southern-polity context",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "cr-physicians"
+          ],
+          "locator": "sections on early practitioners and compilation chronology",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "cr-mgu-pattanam",
+            "cr-keeladi"
+          ],
+          "locator": "Pattanam water setting and comparative constructed-ring evidence",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "cr-kerala-pattanam",
+            "cr-pama"
+          ],
+          "locator": "official finds list and catalogue toilet-feature context",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "cr-inflibnet-transition"
+          ],
+          "locator": "period introduction and regional power discussion",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "cr-map800",
+            "cr-map900"
+          ],
+          "locator": "target absence and point-owner audit at 800 and 900",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "cr-cambridge-chapter"
+          ],
+          "locator": "chapter summary on 849 plates and Chera Perumal state formation",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "cr-kchr-manual"
+          ],
+          "locator": "long site chronology and pre-ninth-century research significance",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "cr-cict-archive",
+            "cr-projectmadurai-plain"
+          ],
+          "locator": "manuscript archive description and received Patiṟṟuppattu edition",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "cr-map800",
+            "cr-cambridge-chapter"
+          ],
+          "locator": "Decoded indexed endpoint seam checked for target absence and Pallava, Pandya and Rashtrakuta assignments across audited places. Cambridge chapter checked for eighth-century temple-village change, 849 Kollam plates and mid-ninth- to late-twelfth-century Chera Perumal state formation.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "cheras",
+        "card": "cards/cheras.json",
+        "summary": "Atlas locators separating early Cheras, evidence gaps and later Chera Perumals.",
+        "dateBasis": "map_coverage",
+        "fell": 800,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-500.json",
+          "properties": {
+            "civ": "cheras",
+            "from": 500,
+            "to": 600,
+            "precision": 1
+          },
+          "bounds": [
+            76.27216272162724,
+            8.902591566667155,
+            77.65457654576545,
+            10.322393069140801
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "cheras",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            75.36495364953652,
+            9.118257617675809,
+            78.27018270182703,
+            12.609006199706911
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
