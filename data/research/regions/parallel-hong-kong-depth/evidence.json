@@ -1,0 +1,1052 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel hong-kong research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "hk-atlas-index",
+      "title": "Human History Map, imported civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Primary project data checked locally for the exact hong-kong identity, its approximate 1650-1938 indexed lifetime, and the separate united-kingdom-1938 and china identities that later snapshots use for Hong Kong. These are imported display records, not authoritative constitutional dates."
+    },
+    {
+      "id": "hk-atlas-1650",
+      "title": "Human History Map, world-1650 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Primary project TopoJSON checked locally. The hong-kong feature already resembles nearly all of present-day Hong Kong, including Hong Kong Island, Kowloon and most of the New Territories, though Britain did not acquire these areas together in 1650. Bounds and city point tests are preserved in identity.json."
+    },
+    {
+      "id": "hk-atlas-1930",
+      "title": "Human History Map, world-1930 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Primary project TopoJSON checked locally for the last hong-kong feature, covering the 1930-1938 interval. Its tested footprint is essentially unchanged from the 1650 snapshot and omits the tested point on Cheung Chau."
+    },
+    {
+      "id": "hk-atlas-1938",
+      "title": "Human History Map, world-1938 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "Primary project TopoJSON checked locally. For 1938-1945 the same Hong Kong-shaped feature is relabelled Hong Kong under civ united-kingdom-1938, showing that the target record's cutoff is a data reassignment rather than the end of British administration."
+    },
+    {
+      "id": "hk-atlas-2000",
+      "title": "Human History Map, world-2000 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-2000.json",
+      "note": "Primary project TopoJSON checked locally. It still assigns the Hong Kong-labelled feature to united-kingdom-1938 for 2000-2010, three years after the actual 1997 transfer, so atlas ownership labels cannot be read as legal sovereignty."
+    },
+    {
+      "id": "hk-atlas-2010",
+      "title": "Human History Map, world-2010 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-2010.json",
+      "note": "Primary project TopoJSON checked locally. The 2010-2020 Hong Kong-labelled feature is assigned to china and keeps the same simplified footprint used by earlier snapshots."
+    },
+    {
+      "id": "hk-atlas-modern",
+      "title": "Human History Map, modern GeoJSON",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/borders/modern.geojson",
+      "note": "Primary project GeoJSON checked locally. It contains no standalone hong-kong feature, reinforcing that the historical target should not be treated as a complete modern boundary record."
+    },
+    {
+      "id": "hk-yearbook-intro",
+      "title": "Hong Kong Yearbook 2002, History: Introduction",
+      "url": "https://www.yearbook.gov.hk/2002/ehtml/e21-00.htm",
+      "note": "Official Hong Kong yearbook overview checked for the 1 July 1997 establishment of the Hong Kong Special Administrative Region, the Joint Declaration's fifty-year policy framework, and the long expansion of housing, schools, hospitals and other public facilities. Its upbeat retrospective language is not treated as a complete assessment of colonial or post-handover government."
+    },
+    {
+      "id": "hk-qing-evacuation",
+      "title": "Antiquities and Monuments Office, Chou Wong Yi Kung Study Hall",
+      "url": "https://www.amo.gov.hk/en/heritage-trails/greater-bay-area-education-trail/theme-a/chou-wong-yi-kung-study-hall/index.html",
+      "note": "Official heritage account checked for the Qing Coastal Evacuation Edict of 1661, the reopening of the coast in 1669, and subsequent encouragement of Hakka settlement. A building history is used as evidence for this particular local process, not as a description of every community."
+    },
+    {
+      "id": "hk-history-communities",
+      "title": "Hong Kong Museum of History, The Hong Kong Story exhibition leaflet",
+      "url": "https://hk.history.museum/documents/Exhibitions/Hong-Kong-Story/Exhibition-leaflet.pdf",
+      "note": "Official museum leaflet checked for the convergence of Punti, Hakka, Tanka and Hoklo communities during the Qing period. Its broad language about shared tradition is supplemented with material evidence and is not used to erase differences among those communities."
+    },
+    {
+      "id": "hk-history-ethnography",
+      "title": "Hong Kong Museum of History, Ethnography collection",
+      "url": "https://hk.history.museum/en/web/mh/collections/collections/ethnography.html",
+      "note": "Official museum collection description checked for farming implements, household wares, fishing gear, junk models, clothing across origin, age and class, and objects connected with weddings, worship, entertainment and traditional trades. Collection categories are evidence of varied lifeways, not proof that all residents shared one custom."
+    },
+    {
+      "id": "hk-history-folk-life",
+      "title": "Hong Kong Museum of History, Folk Culture in Hong Kong teaching kit answers",
+      "url": "https://hk.history.museum/documents/Collections-and-Services/Resources/Teaching-Kits/Recreating-a-Classic/BestFeature_activity_booklet_answers.pdf",
+      "note": "Official museum educational material checked for salted-fish preparation and fishing among boat-dwelling and Hoklo communities, farming and ancestral worship among Punti and Hakka communities, and surviving wedding objects including dowry registers, food gift boxes and tea vessels. These are examples, not universal rules."
+    },
+    {
+      "id": "hk-tna-nanking",
+      "title": "UK National Archives, Hong Kong and the Opium Wars",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/hong-kong-and-the-opium-wars/",
+      "note": "National Archives teaching set and treaty transcript checked for Britain's victory in the First Opium War and Article III of the 1842 Treaty of Nanking, by which the Qing emperor ceded Hong Kong Island to Britain. Treaty language is presented as an imperial instrument after war, not as consent from residents."
+    },
+    {
+      "id": "hk-yearbook-port",
+      "title": "Hong Kong Yearbook 2002, A Place From Which to Trade",
+      "url": "https://www.yearbook.gov.hk/2002/ehtml/e21-02.htm",
+      "note": "Official historical overview checked for the estimated early population of about 3,650 people in villages and hamlets plus about 2,000 boat-dwelling fishers, the harbour's natural advantages and the development of an entrepot after 1841. Its colonial framing is not adopted uncritically."
+    },
+    {
+      "id": "hk-yearbook-territory",
+      "title": "Hong Kong Yearbook 2021, Chapter 22: History",
+      "url": "https://www.yearbook.gov.hk/2021/en/pdf/E22.pdf",
+      "note": "Official yearbook history checked for the 1860 cession of Kowloon Peninsula south of Boundary Street after the Second Opium War and the 1898 ninety-nine-year lease of the New Territories north to the Shenzhen River with islands. It is used for dates and territorial terms, not as a neutral account of empire."
+    },
+    {
+      "id": "hk-legco-1899",
+      "title": "Hong Kong Legislative Council brief on the Old Tai Po Police Station",
+      "url": "https://www.legco.gov.hk/yr20-21/english/brief/devbcho1bcr141_20210716-e.pdf",
+      "note": "Official legislative brief checked for fighting between British troops and local inhabitants from 14 to 19 April 1899 during the colonial takeover of the New Territories, the early flag raising on 16 April, and the station's initial multiethnic police staffing. Heritage designation language is kept separate from the conflict itself."
+    },
+    {
+      "id": "hk-yearbook-growth",
+      "title": "Hong Kong Yearbook 2002, Initial Growth",
+      "url": "https://www.yearbook.gov.hk/2002/ehtml/e21-04.htm",
+      "note": "Official historical overview checked for population and shipping statistics, the appointed governor and councils, the first nominated Chinese Legislative Council member in 1880, and the 1922 seamen's and 1925-26 Canton-Hong Kong strikes. Paternalistic judgments on colonial rule are not repeated."
+    },
+    {
+      "id": "hk-edb-syllabus",
+      "title": "Hong Kong Education Bureau, Advanced Level History syllabus",
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/pshe/CSALHISE.pdf",
+      "note": "Official curriculum document checked for its framing of public health, living and working conditions, the 1904 Hill District Reservation Ordinance, the 1922 seamen's strike, the 1925-26 general strike and boycott, Japanese occupation, and postwar reconstruction as essential topics in Hong Kong history."
+    },
+    {
+      "id": "hk-peak-law",
+      "title": "Historical Laws of Hong Kong Online, Peak District Reservation Ordinance 1904",
+      "url": "https://oelawhk.lib.hku.hk/items/show/942",
+      "note": "HKU-hosted primary law checked for its definition of the Peak District and its explicit rule barring owners and occupiers, except by exemption, from allowing Chinese people to reside there. The ordinance is direct evidence of legalized racial exclusion."
+    },
+    {
+      "id": "hk-muitsai-study",
+      "title": "HKU Scholars Hub, A national custom: Debating female servitude in late nineteenth-century Hong Kong",
+      "url": "https://hub.hku.hk/handle/10722/127649",
+      "note": "Peer-reviewed scholarly abstract checked for mui tsai as female bondservitude, divisions among colonial officials, and the role of Chinese elites in defending the practice as custom. It supports a carefully bounded account rather than equating every domestic servant or family arrangement with slavery."
+    },
+    {
+      "id": "hk-muitsai-law",
+      "title": "Historical Laws of Hong Kong Online, Female Domestic Service Ordinance",
+      "url": "https://oelawhk.lib.hku.hk/items/show/1752",
+      "note": "HKU-hosted primary legislation checked for the 1923 ordinance's declaration that payment could confer no property right in a girl, its prohibition on employing or bringing in mui tsai, and its ban on female domestic servants under twelve. The later consolidated text records amendments and is not proof of immediate enforcement success."
+    },
+    {
+      "id": "hk-jamia",
+      "title": "Antiquities and Monuments Office, Heritage Appraisal of Jamia Mosque",
+      "url": "https://www.amo.gov.hk/filemanager/amo/common/form/dminfo/DM130_Related_Information_En.pdf",
+      "note": "Official heritage appraisal checked for Muslim merchants and sailors from the Indian subcontinent, Indian soldiers, police, prison guards and clerks, the 1849 mosque land grant, and the 1915-16 Jamia Mosque funded by Bombay merchant Haji Mohamed Essack Elias."
+    },
+    {
+      "id": "hk-city-photos",
+      "title": "Hong Kong Museum of History, History Through the Lens",
+      "url": "https://hk.history.museum/en_US/web/mh/exhibition/2020_past_02.html",
+      "note": "Official museum exhibition checked for Victoria City's late nineteenth-century geography, European-style buildings near Central and on the hills, and the concentration of many Chinese residents in West Point and Sheung Wan tenements. Photographic categories are not treated as rigid boundaries between all residents."
+    },
+    {
+      "id": "hk-lui-seng-chun",
+      "title": "Commissioner for Heritage's Office, Lui Seng Chun",
+      "url": "https://www.heritage.gov.hk/en/revitalisation-scheme/batch-i-of-revitalisation-scheme/virtual-tour-on-batch-i-historic-buildings/lui-seng-chun/",
+      "note": "Official heritage account checked for the 1931 tong lau's Chinese bone-setting shop on the ground floor, Lui family quarters above, deep verandahs, and combined Chinese shophouse and neoclassical features. One prosperous household is not presented as typical of every tenement family."
+    },
+    {
+      "id": "hk-yi-tai",
+      "title": "Antiquities and Monuments Office, Yi Tai Study Hall",
+      "url": "https://www.amo.gov.hk/en/heritage-trails/greater-bay-area-education-trail/theme-a/yi-tai-study-hall/index.html",
+      "note": "Official heritage account checked for a Qing-era Tang clan study hall, its curriculum of classical texts, free attendance for young clansmen, local and Guangdong teachers, the White Stone Lane nickname, and conversion to a primary school until 1941. It shows one male clan-centred path to education."
+    },
+    {
+      "id": "hk-jinshi-plaque",
+      "title": "Antiquities and Monuments Office, Greater Bay Area Education Heritage Trail booklet",
+      "url": "https://www.amo.gov.hk/filemanager/amo/common/trails/gba-trail-ebooklet.pdf",
+      "note": "Official bilingual booklet checked for the historic plaque reading 進士 at Tang Chan Yui Kuen Ancestral Hall, its commemoration of Tang Man-wai, and the description of jinshi as a graduate of the Palace Examination. The displayed Cantonese romanization is supplied as reading help and identified as modern Jyutping."
+    },
+    {
+      "id": "hk-central-school",
+      "title": "Antiquities and Monuments Office, Central School",
+      "url": "https://www.amo.gov.hk/en/heritage-trails/greater-bay-area-education-trail/theme-b/central-school/index.html",
+      "note": "Official heritage account checked for Central School's 1862 founding as the first government school providing Western education to Chinese boys, and its mixed curriculum of Chinese classics, English and mathematics. Its status did not mean universal access."
+    },
+    {
+      "id": "hk-girls-education",
+      "title": "HKU Scholars Hub, A Postcolonial Reading of the History of Girls' Education in Hong Kong",
+      "url": "https://hub.hku.hk/bitstream/10722/64978/1/Abstract.pdf?accept=1",
+      "note": "University-hosted scholarly abstract checked for the predominance of women missionaries and nuns in nineteenth-century girls' education and the establishment of the government Central School for Girls in 1890. It supports the access limitation omitted by boys' school histories."
+    },
+    {
+      "id": "hk-hku-history",
+      "title": "The University of Hong Kong, History",
+      "url": "https://www.hku.hk/en/about-hku/history",
+      "note": "Official university chronology checked for the 1887 Hong Kong College of Medicine, HKU's incorporation in 1911, first students in Arts, Engineering and Medicine in 1912, first graduation in 1916 and admission of women in 1921. Institutional celebration is used only for dated milestones."
+    },
+    {
+      "id": "hk-tung-wah",
+      "title": "Tung Wah Group of Hospitals, Our Origin",
+      "url": "https://www.tungwah.org.hk/en/about/our-origin/",
+      "note": "Official institutional history checked for the 1870 founding and 1872 opening of Hong Kong's first Chinese hospital, free Chinese medicine for poor patients, related charity and schooling, and later hospitals. It represents Tung Wah's account of its own service history."
+    },
+    {
+      "id": "hk-plague-police",
+      "title": "Hong Kong Police Museum, The First Plague Medal",
+      "url": "https://www.police.gov.hk/museum/qrpage/en/inner/18/2.html",
+      "note": "Official museum account checked for at least 2,500 deaths in 1894, army and police door-to-door searches, isolation, body removal and disinfection, the demolition of nearly 400 Tai Ping Shan apartment blocks, and recurrent plague through 1926. Police commemoration is distinguished from residents' fear and coercion."
+    },
+    {
+      "id": "hk-plague-science",
+      "title": "US National Library of Medicine, Plague: from natural disease to bioterrorism",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1200711/",
+      "note": "Peer-reviewed historical review checked for the independent 1894 work of Shibasaburo Kitasato and Alexandre Yersin in Hong Kong, the disputed priority and differing accuracy of their descriptions, and the later name Yersinia pestis. It prevents a simplistic single-hero discovery story."
+    },
+    {
+      "id": "hk-old-pathological",
+      "title": "Antiquities and Monuments Office, Old Pathological Institute",
+      "url": "https://www.amo.gov.hk/en/historic-buildings/monuments/hong-kong-island/monuments_41/index.html",
+      "note": "Official monument account checked for the 1906 opening of Hong Kong's first purpose-built public health and medical laboratory in response to plague and other infectious diseases, and its climate-adapted Edwardian architecture."
+    },
+    {
+      "id": "hk-wsd-milestones",
+      "title": "Hong Kong Water Supplies Department, Water Supply Milestones",
+      "url": "https://www.wsd.gov.hk/en/water-matters/water-supply-milestones/",
+      "note": "Official technical history checked for early reliance on streams and wells, free public wells from 1851, Pok Fu Lam Reservoir in 1863, Tai Tam works, filtration from 1889, Kowloon supply, the 1930 cross-harbour main, and later seawater flushing and Guangdong water links."
+    },
+    {
+      "id": "hk-wsd-toilets",
+      "title": "Hong Kong Water Supplies Department, The Introduction of Flush Toilets to Hong Kong",
+      "url": "https://www.wsd.gov.hk/en/water-matters/harvesting-water/07/",
+      "note": "Official technical history checked for wooden waste buckets in many Chinese homes, private public toilets collecting saleable fertilizer, early water closets in European houses, Chadwick's 1882 report, the Sanitary Board, and the slow spread of regulated flushing amid water scarcity. Social categories in colonial reports are treated critically."
+    },
+    {
+      "id": "hk-dsd-drainage",
+      "title": "Hong Kong Drainage Services Department, A Century of Drainage Development",
+      "url": "https://www.dsd.gov.hk/Documents/SustainabilityReports/1415/en/text/our_core_responsibilities.html",
+      "note": "Official engineering history checked for the combined drainage and sewerage system used in the later nineteenth century, in which stormwater washed sewage into receiving waters, and for the limits that rapid urban growth placed on drainage capacity."
+    },
+    {
+      "id": "hk-pound-lane",
+      "title": "Hong Kong Architectural Services Department, Pound Lane Public Toilet and Bathhouse",
+      "url": "https://www.archsd.gov.hk/archsd/html/report2023/en/case-study/1.html",
+      "note": "Official building case study checked for the 1904 opening of Pound Lane as Hong Kong's first public bathhouse and its connection to environmental-hygiene reforms after the plague outbreak."
+    },
+    {
+      "id": "hk-grs-occupation",
+      "title": "Hong Kong Government Records Service, The Siege",
+      "url": "https://www.grs.gov.hk/ws/online/80VWR/en/sec1/index.html",
+      "note": "Official archival exhibition checked for the Japanese attack beginning 8 December 1941, British surrender on 25 December, three years and eight months of occupation, food shortage, coerced population movement, rice rationing, forced currency exchange and rooftop vegetable growing. Commemorative language is separated from concrete archival evidence."
+    },
+    {
+      "id": "hk-postwar-yearbook",
+      "title": "Hong Kong Yearbook 2005, The Post-war Years",
+      "url": "https://www.yearbook.gov.hk/2005/en/21_07.htm",
+      "note": "Official historical overview checked for post-surrender return migration, population growth from about 600,000 in August 1945 to 1.8 million by the end of 1947 and 2.2 million by mid-1950, the 1948-50 refugee influx, and the shift from entrepot dependence toward textile-led manufacturing."
+    },
+    {
+      "id": "hk-public-housing",
+      "title": "Hong Kong Housing Authority, History of Shek Kip Mei Estate",
+      "url": "https://www.housingauthority.gov.hk/hdw/en/aboutus/events/community/heritage/about.html",
+      "note": "Official housing history checked for the 1953 fire that left about 58,000 people homeless, the 1954 reinforced-concrete resettlement blocks, roughly 120-square-foot rooms for some families of five or more, shared toilets and washing areas, corridor cooking and laundry, and later conversion to self-contained flats."
+    },
+    {
+      "id": "hk-joint-declaration",
+      "title": "United Nations Treaty Series, Joint Declaration on the Question of Hong Kong",
+      "url": "https://treaties.un.org/doc/publication/unts/volume%201399/v1399.pdf",
+      "note": "UN-registered authentic treaty checked for the 1984 Sino-British agreement, Britain's administration through 30 June 1997, China's resumption of sovereignty on 1 July 1997, the HKSAR framework, a high degree of autonomy except foreign and defence affairs, and policies stated to remain unchanged for fifty years."
+    },
+    {
+      "id": "hk-basiclaw-en",
+      "title": "Hong Kong Basic Law, Chapter I, official English text",
+      "url": "https://www.basiclaw.gov.hk/en/basiclaw/chapter1.html",
+      "note": "Official English text checked for Articles 1, 2, 5, 8 and 9: Hong Kong as an inalienable part of the PRC, its high degree of autonomy and executive, legislative and independent judicial powers under the Basic Law, the fifty-year system clause, continuity of prior laws, and Chinese and English official-language use."
+    },
+    {
+      "id": "hk-basiclaw-tc",
+      "title": "Hong Kong Basic Law, Chapter I, official Traditional Chinese text",
+      "url": "https://www.basiclaw.gov.hk/tc/basiclaw/chapter1.html",
+      "note": "Official Traditional Chinese text checked for the exact Article 1 language used in the writing sample. The supplied Jyutping is a modern Cantonese reading aid; the legal text is Modern Standard Written Chinese rather than a transcript of colloquial Cantonese."
+    },
+    {
+      "id": "hk-basiclaw-relations",
+      "title": "Hong Kong Basic Law, Chapter II, official English text",
+      "url": "https://www.basiclaw.gov.hk/en/basiclaw/chapter2.html",
+      "note": "Official English text checked for Article 12's definition of the HKSAR as a local administrative region directly under the Central People's Government, and Articles 13-14 assigning foreign affairs and defence to the central government while local public order rests with the HKSAR government."
+    },
+    {
+      "id": "hk-peak-tram",
+      "title": "Antiquities and Monuments Office, Garden Road Peak Tram Lower Terminus",
+      "url": "https://www.amo.gov.hk/en/heritage-trails/cw-trails/western/section-a/a1/index.html",
+      "note": "Official heritage account checked for the Peak Tram's 1888 opening, 1,278-metre route, 25.7-degree maximum gradient, original coal-powered steam machinery and thirty-passenger capacity."
+    }
+  ],
+  "entities": [
+    {
+      "id": "hong-kong",
+      "card": "data/cards/hong-kong.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "hk-atlas-index",
+            "hk-yearbook-intro"
+          ],
+          "locator": "Primary project data checked locally for the exact hong-kong identity, its approximate 1650-1938 indexed lifetime, and the separate united-kingdom-1938 and china identities that later snapshots use for Hong Kong. These are imported display records, not authoritative constitutional dates. Official Hong Kong yearbook overview checked for the 1 July 1997 establishment of the Hong Kong Special Administrative Region, the Joint Declaration's fifty-year policy framework, and the long expansion of housing, schools, hospitals and other public facilities. Its upbeat retrospective language is not treated as a complete assessment of colonial or post-handover government.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "hk-atlas-index",
+            "hk-qing-evacuation",
+            "hk-history-communities"
+          ],
+          "locator": "Primary project data checked locally for the exact hong-kong identity, its approximate 1650-1938 indexed lifetime, and the separate united-kingdom-1938 and china identities that later snapshots use for Hong Kong. These are imported display records, not authoritative constitutional dates. Official heritage account checked for the Qing Coastal Evacuation Edict of 1661, the reopening of the coast in 1669, and subsequent encouragement of Hakka settlement. A building history is used as evidence for this particular local process, not as a description of every community. Official museum leaflet checked for the convergence of Punti, Hakka, Tanka and Hoklo communities during the Qing period. Its broad language about shared tradition is supplemented with material evidence and is not used to erase differences among those communities.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1841
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "hk-tna-nanking",
+            "hk-yearbook-port"
+          ],
+          "locator": "National Archives teaching set and treaty transcript checked for Britain's victory in the First Opium War and Article III of the 1842 Treaty of Nanking, by which the Qing emperor ceded Hong Kong Island to Britain. Treaty language is presented as an imperial instrument after war, not as consent from residents. Official historical overview checked for the estimated early population of about 3,650 people in villages and hamlets plus about 2,000 boat-dwelling fishers, the harbour's natural advantages and the development of an entrepot after 1841. Its colonial framing is not adopted uncritically.",
+          "dateScope": {
+            "from": 1841,
+            "to": 1860
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "hk-yearbook-territory",
+            "hk-wsd-milestones",
+            "hk-city-photos"
+          ],
+          "locator": "Official yearbook history checked for the 1860 cession of Kowloon Peninsula south of Boundary Street after the Second Opium War and the 1898 ninety-nine-year lease of the New Territories north to the Shenzhen River with islands. It is used for dates and territorial terms, not as a neutral account of empire. Official technical history checked for early reliance on streams and wells, free public wells from 1851, Pok Fu Lam Reservoir in 1863, Tai Tam works, filtration from 1889, Kowloon supply, the 1930 cross-harbour main, and later seawater flushing and Guangdong water links. Official museum exhibition checked for Victoria City's late nineteenth-century geography, European-style buildings near Central and on the hills, and the concentration of many Chinese residents in West Point and Sheung Wan tenements. Photographic categories are not treated as rigid boundaries between all residents.",
+          "dateScope": {
+            "from": 1860,
+            "to": 1898
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "hk-yearbook-territory",
+            "hk-legco-1899",
+            "hk-plague-police",
+            "hk-old-pathological"
+          ],
+          "locator": "Official yearbook history checked for the 1860 cession of Kowloon Peninsula south of Boundary Street after the Second Opium War and the 1898 ninety-nine-year lease of the New Territories north to the Shenzhen River with islands. It is used for dates and territorial terms, not as a neutral account of empire. Official legislative brief checked for fighting between British troops and local inhabitants from 14 to 19 April 1899 during the colonial takeover of the New Territories, the early flag raising on 16 April, and the station's initial multiethnic police staffing. Heritage designation language is kept separate from the conflict itself. Official museum account checked for at least 2,500 deaths in 1894, army and police door-to-door searches, isolation, body removal and disinfection, the demolition of nearly 400 Tai Ping Shan apartment blocks, and recurrent plague through 1926. Police commemoration is distinguished from residents' fear and coercion. Official monument account checked for the 1906 opening of Hong Kong's first purpose-built public health and medical laboratory in response to plague and other infectious diseases, and its climate-adapted Edwardian architecture.",
+          "dateScope": {
+            "from": 1898,
+            "to": 1911
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "hk-edb-syllabus",
+            "hk-peak-law",
+            "hk-muitsai-study",
+            "hk-yearbook-growth"
+          ],
+          "locator": "Official curriculum document checked for its framing of public health, living and working conditions, the 1904 Hill District Reservation Ordinance, the 1922 seamen's strike, the 1925-26 general strike and boycott, Japanese occupation, and postwar reconstruction as essential topics in Hong Kong history. HKU-hosted primary law checked for its definition of the Peak District and its explicit rule barring owners and occupiers, except by exemption, from allowing Chinese people to reside there. The ordinance is direct evidence of legalized racial exclusion. Peer-reviewed scholarly abstract checked for mui tsai as female bondservitude, divisions among colonial officials, and the role of Chinese elites in defending the practice as custom. It supports a carefully bounded account rather than equating every domestic servant or family arrangement with slavery. Official historical overview checked for population and shipping statistics, the appointed governor and councils, the first nominated Chinese Legislative Council member in 1880, and the 1922 seamen's and 1925-26 Canton-Hong Kong strikes. Paternalistic judgments on colonial rule are not repeated.",
+          "dateScope": {
+            "from": 1911,
+            "to": 1938
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "hk-atlas-1930",
+            "hk-atlas-1938",
+            "hk-grs-occupation"
+          ],
+          "locator": "Primary project TopoJSON checked locally for the last hong-kong feature, covering the 1930-1938 interval. Its tested footprint is essentially unchanged from the 1650 snapshot and omits the tested point on Cheung Chau. Primary project TopoJSON checked locally. For 1938-1945 the same Hong Kong-shaped feature is relabelled Hong Kong under civ united-kingdom-1938, showing that the target record's cutoff is a data reassignment rather than the end of British administration. Official archival exhibition checked for the Japanese attack beginning 8 December 1941, British surrender on 25 December, three years and eight months of occupation, food shortage, coerced population movement, rice rationing, forced currency exchange and rooftop vegetable growing. Commemorative language is separated from concrete archival evidence.",
+          "dateScope": {
+            "from": 1938,
+            "to": 1941
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "hk-grs-occupation"
+          ],
+          "locator": "Official archival exhibition checked for the Japanese attack beginning 8 December 1941, British surrender on 25 December, three years and eight months of occupation, food shortage, coerced population movement, rice rationing, forced currency exchange and rooftop vegetable growing. Commemorative language is separated from concrete archival evidence.",
+          "dateScope": {
+            "from": 1941,
+            "to": 1945
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "hk-postwar-yearbook",
+            "hk-public-housing",
+            "hk-wsd-milestones"
+          ],
+          "locator": "Official historical overview checked for post-surrender return migration, population growth from about 600,000 in August 1945 to 1.8 million by the end of 1947 and 2.2 million by mid-1950, the 1948-50 refugee influx, and the shift from entrepot dependence toward textile-led manufacturing. Official housing history checked for the 1953 fire that left about 58,000 people homeless, the 1954 reinforced-concrete resettlement blocks, roughly 120-square-foot rooms for some families of five or more, shared toilets and washing areas, corridor cooking and laundry, and later conversion to self-contained flats. Official technical history checked for early reliance on streams and wells, free public wells from 1851, Pok Fu Lam Reservoir in 1863, Tai Tam works, filtration from 1889, Kowloon supply, the 1930 cross-harbour main, and later seawater flushing and Guangdong water links.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1984
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "hk-joint-declaration"
+          ],
+          "locator": "UN-registered authentic treaty checked for the 1984 Sino-British agreement, Britain's administration through 30 June 1997, China's resumption of sovereignty on 1 July 1997, the HKSAR framework, a high degree of autonomy except foreign and defence affairs, and policies stated to remain unchanged for fifty years.",
+          "dateScope": {
+            "from": 1984,
+            "to": 1997
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "hk-basiclaw-en",
+            "hk-basiclaw-relations"
+          ],
+          "locator": "Official English text checked for Articles 1, 2, 5, 8 and 9: Hong Kong as an inalienable part of the PRC, its high degree of autonomy and executive, legislative and independent judicial powers under the Basic Law, the fifty-year system clause, continuity of prior laws, and Chinese and English official-language use. Official English text checked for Article 12's definition of the HKSAR as a local administrative region directly under the Central People's Government, and Articles 13-14 assigning foreign affairs and defence to the central government while local public order rests with the HKSAR government.",
+          "dateScope": {
+            "from": 1997,
+            "to": null
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "hk-atlas-index",
+            "hk-atlas-1650",
+            "hk-atlas-1930"
+          ],
+          "locator": "Local audit: civilizations-hb entry plus decoded world-1650 and world-1930 TopoJSON bounds and point-in-polygon tests in identity.json.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "hk-atlas-1938",
+            "hk-atlas-2000",
+            "hk-atlas-2010",
+            "hk-atlas-modern"
+          ],
+          "locator": "Local audit: decoded labelled Hong Kong features in world-1938, world-2000 and world-2010, plus absence of a hong-kong civ in modern.geojson.",
+          "dateScope": {
+            "year": 1938
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "hk-tna-nanking"
+          ],
+          "locator": "National Archives teaching resource, Source 4 treaty transcript, contextual introduction and Article III.",
+          "dateScope": {
+            "year": 1842
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "hk-yearbook-territory"
+          ],
+          "locator": "Chapter 22, First and Second Anglo-Chinese Wars and Lease of the New Territories sections.",
+          "dateScope": {
+            "year": 1898
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "hk-legco-1899"
+          ],
+          "locator": "LegCo brief, paragraphs on historical interest and the armed disturbance, pp. 16-18.",
+          "dateScope": {
+            "year": 1899
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "hk-yearbook-growth",
+            "hk-edb-syllabus"
+          ],
+          "locator": "Yearbook Initial Growth paragraphs on government and strikes; Education Bureau syllabus, Hong Kong 1841-1941 topics.",
+          "dateScope": {
+            "year": 1925
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "hk-peak-law"
+          ],
+          "locator": "Primary ordinance, sections 2-3 and abstract.",
+          "dateScope": {
+            "year": 1904
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "hk-muitsai-study",
+            "hk-muitsai-law"
+          ],
+          "locator": "HKU scholarly abstract; primary ordinance sections 2-7 and consolidation note.",
+          "dateScope": {
+            "year": 1923
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "hk-yearbook-port"
+          ],
+          "locator": "A Place From Which to Trade, opening paragraphs on population, boats, terrain and harbour.",
+          "dateScope": {
+            "year": 1841
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "hk-yearbook-growth"
+          ],
+          "locator": "Initial Growth, first paragraph with census and shipping statistics.",
+          "dateScope": {
+            "year": 1931
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "hk-lui-seng-chun"
+          ],
+          "locator": "Historical Background and Architectural Merits sections.",
+          "dateScope": {
+            "year": 1931
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "hk-peak-tram"
+          ],
+          "locator": "Garden Road Peak Tram Lower Terminus history and technical description.",
+          "dateScope": {
+            "year": 1888
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "hk-history-communities",
+            "hk-history-ethnography",
+            "hk-history-folk-life"
+          ],
+          "locator": "Hong Kong Story Qing-community passage; Ethnography collection; Folk Culture challenges 1-2.",
+          "dateScope": {
+            "year": 1800
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "hk-history-folk-life"
+          ],
+          "locator": "Folk Culture in Hong Kong, Challenge 2, Traditional Wedding Planner.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "hk-jamia"
+          ],
+          "locator": "Heritage Appraisal, Historical Interest, pp. 1-3.",
+          "dateScope": {
+            "year": 1916
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "hk-city-photos"
+          ],
+          "locator": "History Through the Lens exhibition introduction on City of Victoria districts and housing.",
+          "dateScope": {
+            "year": 1890
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "hk-public-housing"
+          ],
+          "locator": "Shek Kip Mei Estate historical background, Mark I block layout and later improvements.",
+          "dateScope": {
+            "year": 1954
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "hk-yi-tai"
+          ],
+          "locator": "Yi Tai Study Hall history, curriculum, architecture and early twentieth-century conversion.",
+          "dateScope": {
+            "year": 1850
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "hk-central-school",
+            "hk-girls-education"
+          ],
+          "locator": "Central School history and curriculum; HKU-hosted girls' education abstract, first page.",
+          "dateScope": {
+            "year": 1890
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "hk-hku-history"
+          ],
+          "locator": "HKU timeline, 1887-1945 Early Years entries.",
+          "dateScope": {
+            "year": 1921
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "hk-jinshi-plaque"
+          ],
+          "locator": "Tang Chan Yui Kuen Ancestral Hall entry and photograph of the 進士 plaque, p. 8.",
+          "dateScope": {
+            "year": 1685
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "hk-basiclaw-tc",
+            "hk-basiclaw-en"
+          ],
+          "locator": "Basic Law Chapter I, Article 1 in official Traditional Chinese and English texts; Article 9 for official-language context.",
+          "dateScope": {
+            "year": 1990
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "hk-tung-wah"
+          ],
+          "locator": "Our Origin, founding, hospital opening and early charity paragraphs.",
+          "dateScope": {
+            "year": 1872
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "hk-plague-police"
+          ],
+          "locator": "First Plague Medal exhibit description.",
+          "dateScope": {
+            "year": 1894
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "hk-plague-science"
+          ],
+          "locator": "Historical review section on the 1894 Hong Kong investigations and naming of Yersinia pestis.",
+          "dateScope": {
+            "year": 1894
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "hk-old-pathological"
+          ],
+          "locator": "Old Pathological Institute history and architectural description.",
+          "dateScope": {
+            "year": 1906
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "hk-wsd-milestones"
+          ],
+          "locator": "Water Supply Milestones, 1840s-1890s development sequence.",
+          "dateScope": {
+            "year": 1889
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "hk-wsd-toilets"
+          ],
+          "locator": "Introduction of Flush Toilets, nineteenth-century earth privies, buckets, public toilets and water closets.",
+          "dateScope": {
+            "year": 1882
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "hk-wsd-toilets",
+            "hk-dsd-drainage"
+          ],
+          "locator": "WSD Toilet Reform section; DSD A Century of Drainage Development, nineteenth-century combined system.",
+          "dateScope": {
+            "year": 1883
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "hk-pound-lane"
+          ],
+          "locator": "Architectural Services Department case study, historical introduction.",
+          "dateScope": {
+            "year": 1904
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "hk-grs-occupation"
+          ],
+          "locator": "The Siege, occupation, ration-card, food-queue and rooftop-gardening records.",
+          "dateScope": {
+            "year": 1942
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "hk-postwar-yearbook"
+          ],
+          "locator": "The Post-war Years, first two paragraphs on migration, population and industrialization.",
+          "dateScope": {
+            "year": 1950
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "hk-public-housing"
+          ],
+          "locator": "Shek Kip Mei fire, first resettlement blocks and later modernization sections.",
+          "dateScope": {
+            "year": 1953
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "hk-joint-declaration"
+          ],
+          "locator": "Joint Declaration paragraphs 1-4 and Annex I, sections I-II.",
+          "dateScope": {
+            "year": 1997
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "hk-basiclaw-en",
+            "hk-basiclaw-relations"
+          ],
+          "locator": "Basic Law Articles 1-2 and 12-14.",
+          "dateScope": {
+            "year": 1997
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "hk-atlas-1938",
+            "hk-atlas-2000",
+            "hk-atlas-2010",
+            "hk-grs-occupation",
+            "hk-basiclaw-relations"
+          ],
+          "locator": "Primary project TopoJSON checked locally. For 1938-1945 the same Hong Kong-shaped feature is relabelled Hong Kong under civ united-kingdom-1938, showing that the target record's cutoff is a data reassignment rather than the end of British administration. Primary project TopoJSON checked locally. It still assigns the Hong Kong-labelled feature to united-kingdom-1938 for 2000-2010, three years after the actual 1997 transfer, so atlas ownership labels cannot be read as legal sovereignty. Primary project TopoJSON checked locally. The 2010-2020 Hong Kong-labelled feature is assigned to china and keeps the same simplified footprint used by earlier snapshots. Official archival exhibition checked for the Japanese attack beginning 8 December 1941, British surrender on 25 December, three years and eight months of occupation, food shortage, coerced population movement, rice rationing, forced currency exchange and rooftop vegetable growing. Commemorative language is separated from concrete archival evidence. Official English text checked for Article 12's definition of the HKSAR as a local administrative region directly under the Central People's Government, and Articles 13-14 assigning foreign affairs and defence to the central government while local public order rests with the HKSAR government.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "hong-kong",
+        "summary": "Qing coast and village communities became a British-ruled migrant port after the Opium Wars, survived Japanese occupation, transformed after 1945, and continued from 1997 as a Chinese special administrative region.",
+        "card": "cards/hong-kong.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.171787501668447,
+            114.41454414544148,
+            22.561260350482556
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.171787501668447,
+            114.41454414544148,
+            22.561260350482556
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.171787501668447,
+            114.41454414544148,
+            22.561260350482556
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148931448376,
+            114.41454414544148,
+            22.560370318544386
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148931448376,
+            114.41454414544148,
+            22.560370318544386
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148931448376,
+            114.41454414544148,
+            22.560370318544386
+          ]
+        },
+        {
+          "file": "world-1878.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1878,
+            "to": 1880,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148954088257,
+            114.41454414544148,
+            22.560370341041136
+          ]
+        },
+        {
+          "file": "world-1880.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1880,
+            "to": 1900,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148931341475,
+            114.41454414544148,
+            22.560370318438153
+          ]
+        },
+        {
+          "file": "world-1900.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1900,
+            "to": 1914,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148931341475,
+            114.41454414544148,
+            22.560370318438153
+          ]
+        },
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.172148931341475,
+            114.41454414544148,
+            22.560370318438153
+          ]
+        },
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.171585220113407,
+            114.41454414544148,
+            22.5612035625202
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "hong-kong",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            113.83493834938349,
+            22.171585220113407,
+            114.41454414544148,
+            22.5612035625202
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "hong-kong",
+      "finding": "Exact target is the imported approximate 1650-1938 hong-kong record. Its twelve TopoJSON features share an almost unchanged present-day-style footprint; the 1650 date is a snapshot artifact, not a founding or sovereignty date."
+    },
+    {
+      "id": "hong-kong",
+      "finding": "After 1938 the same labelled geometry moves to united-kingdom-1938 through the 2000 snapshot and then to china in 2010. That sequence misses Japanese occupation and lags the 1997 handover, so the card explicitly separates atlas bookkeeping from political control."
+    },
+    {
+      "id": "hong-kong",
+      "finding": "The polygon includes tested points across Hong Kong Island, Kowloon and most of the New Territories even in 1650, excludes tested Shenzhen, Macau and Guangzhou points, and omits the tested point on Cheung Chau. It is suitable for orientation only, not cadastral, maritime or treaty-boundary precision."
+    }
+  ]
+}

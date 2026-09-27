@@ -1,0 +1,1020 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel ceylon-1815 research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "cey-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository index checked for id ceylon-1815: name Ceylon, circa 1815-1945, generated from historical basemaps. Earlier records named Ceylon, Ceylon (Dutch), Kandy and Sinhalese kingdoms and the later Sri Lanka record were audited separately."
+    },
+    {
+      "id": "cey-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Coverage record checked before integration: kind state, dates approximate, card null, review missing, eight border files and exactly eight intervals from 1815-1878 through 1938-1945, with no features outside the indexed lifetime."
+    },
+    {
+      "id": "cey-geom-1800",
+      "title": "Human History Map, world-1800 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Decoded with topojson-client. The ceylon-dutch-1800 feature is a two-ring Polygon: its outer ring exactly matches the later whole-island outline and its inner ring exactly matches the separate Kandy Polygon. This is atlas topology, not proof that the predecessor was still Dutch in 1800."
+    },
+    {
+      "id": "cey-geom-1815",
+      "title": "Human History Map, world-1815 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Decoded with topojson-client. The ceylon-1815 feature for 1815-1878 is one 35-position Polygon, bbox 79.6741967,5.9320164 to 81.8666187,9.6866718. Its ring equals the predecessor coastal outer ring after the Kandyan hole is removed. The British East India Company bbox overlaps, but polygon intersection testing is false."
+    },
+    {
+      "id": "cey-geom-1938",
+      "title": "Human History Map, world-1938 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "Decoded with topojson-client. The ceylon-1815 feature for 1938-1945 remains a separate 35-position island Polygon. A mainland India-shaped occurrence of united-kingdom-1938 has an overlapping bbox but no polygon intersection with the island."
+    },
+    {
+      "id": "cey-geom-1945",
+      "title": "Human History Map, world-1945 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Decoded with topojson-client. The successor sri-lanka feature is a 35-position Polygon with the same broad island outline. The maximum paired coordinate difference from the last colonial ring is about 0.0012003 degrees, so this is a near-continuous atlas handoff, not an exact coordinate identity or a correct independence date."
+    },
+    {
+      "id": "uk-colonial",
+      "title": "UK National Archives, Colonial administration records: Ceylon",
+      "url": "https://cdn.nationalarchives.gov.uk/documents/migrated-archives-5-guidance.pdf",
+      "note": "Official guide checked. It states that the British colony was established in 1802, the entire island came under British control after the annexation of Kandy in 1815, and Ceylon became a self-governing Commonwealth state in 1948. It also identifies relevant Colonial and Dominions Office record series."
+    },
+    {
+      "id": "slna-1815",
+      "title": "Sri Lanka National Archives, 1815 Convention",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/1-1815-convention",
+      "note": "National Archives exhibit and cited signature page checked. British control of former Dutch coastal territories preceded the March 1815 Convention; Article 4 transferred Kandyan sovereignty and Article 5 promised protection of the Buddhist order and customs. The exhibit describes political manoeuvring among British officials and Kandyan chiefs."
+    },
+    {
+      "id": "slna-doyly",
+      "title": "Sri Lanka National Archives, Sir John D'Oyly, the Strategist",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/d-oyly",
+      "note": "Exhibit and archival locator checked. D'Oyly drafted the Convention, studied Sinhala language and literature, cultivated clerical and literary contacts, and was employed as a British spy to create discord between the Kandyan king and nobility."
+    },
+    {
+      "id": "slna-1818",
+      "title": "Sri Lanka National Archives, Freedom Struggle, 1818",
+      "url": "https://www.archives.gov.lk/English/online_exhibits/path_to_freedom/freedom_struggle",
+      "note": "Exhibit checked against cited governor letters and Gazette. Resistance spread through Kandyan regions from 1817; the British captured leaders and the Tooth Relic, suppressed the revolt ruthlessly, and branded nineteen chiefs traitors in a proclamation later invalidated in 2016."
+    },
+    {
+      "id": "slna-reforms",
+      "title": "Sri Lanka National Archives, The First Reforms, 1833",
+      "url": "https://www.archives.gov.lk/English/online-exhibits/path-to-freedom/reforms",
+      "note": "Exhibit and Colebrooke-Cameron records checked. Recommendations included Executive and Legislative Councils, five provinces, a new islandwide judicial system, unofficial representation of Sinhalese, Tamils and Burghers, and abolition of rajakariya compulsory labour."
+    },
+    {
+      "id": "slna-1848",
+      "title": "Sri Lanka National Archives, Freedom Struggle, 1848",
+      "url": "https://archives.gov.lk/online-exhibits/path-to-freedom/struggle-1848",
+      "note": "Exhibit checked against cited petition, despatches, Gazette and 1840 ordinance. Dumbara petitioners said the Road Ordinance restored compulsory labour; about 3,000 unarmed people gathered at Kandy, objecting to taxes. The exhibit links possible ancestral-land loss to the Crown Lands Encroachment Ordinance and records martial law as protest became violent."
+    },
+    {
+      "id": "slna-elective",
+      "title": "Sri Lanka National Archives, Introducing the Elective Principle",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/elective-principle",
+      "note": "Exhibit checked. The 1910 Crewe-McCallum reforms introduced a very limited elective element: the Legislative Council had eleven officials and ten non-officials, only four elected on an ethnic basis. Ponnambalam Ramanathan became the first educated representative selected through the new arrangement."
+    },
+    {
+      "id": "slna-terror",
+      "title": "Sri Lanka National Archives, Hundred Days of Terror",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/terror",
+      "note": "Exhibit checked against cited police material. During the 1915 riots, martial law from 2 June allowed police and army to shoot alleged rioters without trial or showing cause; Edward Henry Pedris was court-martialled and executed, and Sinhala leaders were imprisoned. The page foregrounds colonial repression and is not a complete history of intercommunal harms."
+    },
+    {
+      "id": "slna-congress",
+      "title": "Sri Lanka National Archives, Ceylon National Congress",
+      "url": "https://archives.gov.lk/online-exhibits/path-to-freedom/congress",
+      "note": "Exhibit checked. The Congress was founded on 11 December 1919 with Ponnambalam Arunachalam as first president and sought a common constitutional movement. Disputes over representation and later departures weakened it and damaged trust between Sinhala and Tamil leaders."
+    },
+    {
+      "id": "slna-labour",
+      "title": "Sri Lanka National Archives, Labour Movement",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/labour-movement",
+      "note": "Exhibit checked. It records resistance to a road contribution requiring adult men to work six days, founding of the Ceylon Labour Union in 1922, the 1923 general strike, and A.E. Gunasinghe advocacy of adult suffrage regardless of gender, race, religion or caste."
+    },
+    {
+      "id": "slna-vote",
+      "title": "Sri Lanka National Archives, Donoughmore Commission, 1931",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/vote-women",
+      "note": "Exhibit checked against cited 1927 testimony and 1931 Hansard. Donoughmore changes brought universal suffrage, territorial representation, a State Council, executive committees and ministers. Evidence from Agnes de Silva and other Society for Women's Suffrage members helped secure women's voting rights."
+    },
+    {
+      "id": "slna-bracegirdle",
+      "title": "Sri Lanka National Archives, Bracegirdle Case",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/bracegirdle-",
+      "note": "Exhibit checked against the 1937 commission locator. Plantation manager Mark Bracegirdle opposed long hours and reported brutal treatment of workers, including women and children; his ordered deportation became a labour-political confrontation reviewed by the State Council."
+    },
+    {
+      "id": "slna-suriyamal",
+      "title": "Sri Lanka National Archives, Suriya-Mal Movement",
+      "url": "https://www.archives.gov.lk/English/online-exhibits/path-to-freedom/suriyamal-",
+      "note": "Exhibit checked. Founded in 1933 with Doreen Wickramasinghe as president, the anti-imperial welfare movement worked on education for children treated as lower caste and delivered medicine, food and other aid during the malaria crisis. The page is a National Archives interpretation of movement records."
+    },
+    {
+      "id": "slna-dominion",
+      "title": "Sri Lanka National Archives, Dominion Status",
+      "url": "https://www.archives.gov.lk/online-exhibits/path-to-freedom/dominion-",
+      "note": "Exhibit checked against the Ceylon Independence Act and related records. The British Parliament passed the Act in November 1947; Ceylon was declared an independent state on 4 February 1948. That date, rather than the atlas endpoint of 1945, ends British colonial rule."
+    },
+    {
+      "id": "parliament-evolution",
+      "title": "Parliament of Sri Lanka, Evolution of the Parliamentary System",
+      "url": "https://www.parliament.lk/en/learn/handbook-of-parliament/evolution-of-the-parliamentary-system",
+      "note": "Official parliamentary history checked. It distinguishes the 1833-1931 Legislative Council, 1931-1947 State Council and later House of Representatives, and dates the Soulbury Commission Westminster model to 1944. These institutions expanded representation within, and then beyond, colonial rule."
+    },
+    {
+      "id": "tea-history",
+      "title": "Sri Lanka Tea Board, History of Ceylon Tea",
+      "url": "https://srilankateaboard.lk/ceylon-tea/history-of-ceylon-tea/",
+      "note": "Official industry history checked. It describes state-supported coffee expansion, road building and forest conversion in the central hills, the 1869 appearance of coffee rust, and the collapse of coffee within about a decade. Its celebratory language about colonial prosperity requires comparison with labour and rural-economy evidence."
+    },
+    {
+      "id": "tea-saves",
+      "title": "Sri Lanka Tea Board, Tea Saves the Day",
+      "url": "https://srilankateaboard.lk/ceylon-tea/history-of-ceylon-tea/tea-saves-the-day/",
+      "note": "Industry history checked. James Taylor experimented with tea processing by 1866, planted twenty acres at Loolecondera and shipped a first 23-pound consignment. The page calls him the first successful Ceylon planter, not the first person to attempt tea; it is a planter-centred account."
+    },
+    {
+      "id": "cambridge-labour",
+      "title": "Wenzlhuemer, Indian Labour Immigration and British Labour Policy in Nineteenth-Century Ceylon",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/indian-labour-immigration-and-british-labour-policy-in-nineteenthcentury-ceylon/BE7DEB404E26AF12E453664CFC7B2405",
+      "note": "Peer-reviewed Modern Asian Studies abstract checked. Coffee and tea export monocultures depended overwhelmingly on imported South Indian wage labour. The kangany system organized migration and labour supply while government regulation remained slight for much of the nineteenth century."
+    },
+    {
+      "id": "railway-history",
+      "title": "Sri Lanka Railways, History",
+      "url": "https://railway.gov.lk/web/index.php?Itemid=181&id=137&lang=si&option=com_content&view=article",
+      "note": "Official railway history checked. Rail began in 1864 to move hill-country coffee to Colombo, expanded for tea and other plantations, and carried labour, machinery, manure, rice and food. It later served broader passenger travel; the original export purpose remains important context."
+    },
+    {
+      "id": "cbsl-economy",
+      "title": "Central Bank of Sri Lanka, 25th Anniversary Review of the Economy",
+      "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/publications/otherpub/25th_anniversary_review_of_the_economy_of_sri_lanka.pdf",
+      "note": "Official retrospective checked. It distinguishes an export plantation sector from rural subsistence food production, says rural gains from plantation growth were negligible, identifies immigrant South Indian labour, and reports that more than 90 percent of colonial-era exports were plantation products while imports were largely consumer goods including food."
+    },
+    {
+      "id": "fao-irrigation",
+      "title": "FAO, Modernization in irrigation-system rehabilitation in Sri Lanka",
+      "url": "https://www.fao.org/4/x6626e/x6626e14.htm",
+      "note": "FAO technical paper checked. Sri Lankan irrigation systems have histories exceeding two millennia; British colonial governments renovated many systems to promote irrigated agriculture. Renovation is therefore distinguished from invention of the island's ancient hydraulic heritage."
+    },
+    {
+      "id": "fao-food",
+      "title": "FAO, Research area: agricultural background in Sri Lanka",
+      "url": "https://www.fao.org/4/t1952e/t1952e04.htm",
+      "note": "FAO study checked. It describes a dry-zone pattern in which irrigable land often grew rice mainly for home consumption while dry land produced subsidiary foods for both market and household. This later study is used cautiously as a pattern, not a census of colonial meals."
+    },
+    {
+      "id": "worldbank-lines",
+      "title": "World Bank, Tackling Chronic Undernutrition in Sri Lanka's Plantations",
+      "url": "https://www.worldbank.org/en/country/srilanka/publication/tackling-chronic-undernutrition-in-sri-lankas-plantations",
+      "note": "World Bank feature checked. A plantation-workers museum occupies line rooms more than a century old and reconstructs an approximately 100-square-foot home with clay walls, pots, pans and a basic hearth. It is a modern museum reconstruction, not a complete survey of every estate household."
+    },
+    {
+      "id": "law-family",
+      "title": "Sri Lanka LawNet, Perera v. Aselin Nona, New Law Reports vol. 60",
+      "url": "https://www.lawnet.gov.lk/wp-content/uploads/2016/11/021-NLR-NLR-V-60-PERERA-Appellant-and-ASELIN-NONA-and-another-Respondents.pdf",
+      "note": "Later appellate judgment checked for its explanation of older Kandyan law. In a binna marriage the husband lived in the wife's parental home and she retained inheritance rights; in diga she moved to the husband's home and usually lost parental inheritance, subject to exceptions. This is Kandyan legal history, not an islandwide family rule."
+    },
+    {
+      "id": "bm-boat",
+      "title": "British Museum, Sri Lankan shore-seine fishing-boat model As1933,1110.4",
+      "url": "https://www.britishmuseum.org/collection/object/A_As1933-1110-4",
+      "note": "Museum catalog checked. The nineteenth- to twentieth-century ma-del-paru model documents a flat-bottomed shore-seine boat: wood planks were sewn in a criss-cross pattern with coconut-fibre rope and seams caulked with leaves. Curators locate variants on west, south and northeast coasts; provenance beyond an old Ceylon label is limited."
+    },
+    {
+      "id": "bm-mask",
+      "title": "British Museum, Sri Lankan dance mask As,+.2764",
+      "url": "https://www.britishmuseum.org/collection/object/A_As-2764",
+      "note": "Museum catalog checked. The painted wood mask is dated to the nineteenth century and assigned to Sri Lanka's interior; its colonial register describes cobra forms. It was purchased from a dealer in 1886, so it evidences an object and collecting history, not every dance or community."
+    },
+    {
+      "id": "bm-clothing",
+      "title": "British Museum, robe collection catalogue",
+      "url": "https://www.britishmuseum.org/collection/term/x8786",
+      "note": "Museum catalogue index checked. It lists several Buddhist garment, robe and cloth objects acquired in Sri Lanka, including As1908,0521.2-.4. The index supplies religious and acquisition associations but little production context; it cannot support a single national costume."
+    },
+    {
+      "id": "bm-collecting",
+      "title": "British Museum, Collecting and Empire trail",
+      "url": "https://www.britishmuseum.org/visit/object-trails/collecting-and-empire-trail",
+      "note": "Museum trail checked. It explains that colonial civil servant Hugh Nevill amassed objects with sparse provenance and likely acquired a nineteenth-century betel-nut cutter through the Kandyan Society of Arts. The object records local craft and colonial collecting together."
+    },
+    {
+      "id": "unesco-learning",
+      "title": "UNESCO-hosted Sri Lanka education historical overview",
+      "url": "https://media.unesco.org/sites/default/files/webform/r2e002/8602c1f46230536f84124dadd74a3e17dd5bb606.pdf",
+      "note": "Historical overview checked. It describes temple-associated oral and memorized learning, later ola-leaf manuscripts and libraries, and pirivena monastic colleges serving clergy and some male lay students. These traditions predated and continued through colonial change; access was not universal."
+    },
+    {
+      "id": "unesco-schools",
+      "title": "UNESCO IIEP, Sri Lanka Education for All National Action Plan",
+      "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/sri_lanka_efa_nap.pdf",
+      "note": "Government education plan hosted by UNESCO checked. It describes British mass education as a dual system of church-assisted English schools favoured by elites and state vernacular schools for common people, alongside pirivenas; the Department of Public Instruction was established in 1869."
+    },
+    {
+      "id": "slna-catalogues",
+      "title": "Sri Lanka National Archives, Our Catalogues",
+      "url": "https://www.archives.gov.lk/our-catalogues",
+      "note": "Official holdings guide checked. Relevant records include the Board of Kandyan Commissioners 1815-1833, Colebrooke-Cameron inquiry records, Jaffna and Kandy Kachcheri records, Ceylon National Congress collections, newspapers, maps, the 1818 rebellion and archaeology papers. Survival in an archive is selective evidence, not a full record of ordinary lives."
+    },
+    {
+      "id": "archaeology-history",
+      "title": "Department of Archaeology Sri Lanka, History",
+      "url": "https://archaeology.gov.lk/index.php/about/history",
+      "note": "Official institutional history checked. Government surveys and photographs began in the 1860s-1870s, inscription work followed, and the department began duties in 1890 under H.C.P. Bell. It records 1897 mural finds at Sigiriya and Polonnaruwa and labels the early phase colonial."
+    },
+    {
+      "id": "archaeology-critique",
+      "title": "Department of Archaeology Sri Lanka proceedings, Decolonizing the Narration of Sri Lankan Archaeology",
+      "url": "https://archaeology.gov.lk/books/conferencepub/tmpl/files/basic-html/page320.html",
+      "note": "Department-hosted conference paper checked. It argues that the 1890 archaeology department followed Western frameworks and excluded local voices, and calls for interpretation alongside local texts and knowledge. This provides an explicit limit on triumphalist accounts of colonial archaeology."
+    },
+    {
+      "id": "health-history",
+      "title": "Sri Lanka Ministry of Health, History of Medicine in Sri Lanka",
+      "url": "https://previousmoh.health.gov.lk/moh_final/english/others.php?spid=7",
+      "note": "Official historical overview checked. Early British medical institutions were under military control; a separate Civil Medical Department was created in 1858 to provide civilian facilities. The page also notes older local medical histories and earlier Portuguese and Dutch military hospitals."
+    },
+    {
+      "id": "ayurveda-policy",
+      "title": "Department of Ayurveda, National Traditional Medicine Policy",
+      "url": "https://www.ayurveda.gov.lk/dwn/tm_policy_lk.pdf",
+      "note": "Official 2024 policy checked for the named plurality of living systems: Ayurveda, Siddha, Unani and Deshiya Chikitsa. Its ancient-history claims include policy rhetoric and are not used here; the document supports continuity and diversity rather than a single timeless practice."
+    },
+    {
+      "id": "health-bulletin",
+      "title": "Sri Lanka Ministry of Health, Annual Health Bulletin 2024",
+      "url": "https://www.health.gov.lk/wp-content/uploads/2026/03/Annual-Health-Bulletin-2024-compressed.pdf",
+      "note": "Official bulletin published in 2026 checked for its historical timeline. It dates Colombo Medical College to 1870, a local nursing school to 1878, women's admission to the medical college to 1892, the bacteriology laboratory to 1900, civil birth/death registration to 1867 and the census to 1871."
+    },
+    {
+      "id": "cmc-sewer",
+      "title": "Colombo Municipal Council, Greater Colombo Wastewater Management",
+      "url": "https://www.colombo.mc.gov.lk/greater-colombo-wastewater.php",
+      "note": "Official municipal page checked. Colombo sewerage planning began in 1896, construction in 1906 and major completion by 1925. The page also shows that even a 1972 regional plan found limited public-sewer coverage, so the colonial works must not be generalized to every household or town."
+    },
+    {
+      "id": "wellcome-1917",
+      "title": "Colombo Public Health Department, Administration Report 1917",
+      "url": "https://wellcomecollection.org/works/zuxfjeh3/items?canvas=27&shouldScrollToCanvas=true",
+      "note": "Public-domain municipal report scan checked at page 13. It urged connecting latrines to sewers and reducing flies, manure and refuse near homes to combat enteric fever, dysentery and infant diarrhoea. This is colonial public-health evidence for Colombo and contains official assumptions, not residents' voices."
+    },
+    {
+      "id": "wellcome-1928",
+      "title": "Ceylon Director of Medical and Sanitary Services, Report 1928",
+      "url": "https://wellcomecollection.org/works/ztyzvvp9/items?canvas=59&page=10&shouldScrollToCanvas=true",
+      "note": "Public-domain official report scan checked. Inspectors visited 3,106 schools serving 554,595 children; the report counted 2,649 schools with latrines, 493 with urinals and 991 with protected wells and still judged sanitation inadequate. Counts reflect the colonial department's categories and coverage."
+    },
+    {
+      "id": "who-malaria",
+      "title": "WHO, Driven to End Malaria: Ten years of success for Sri Lanka",
+      "url": "https://www.who.int/srilanka/news/detail/24-04-2026-driven-to-end-malaria---ten-years-of-success-for-sri-lanka",
+      "note": "WHO historical review dated 24 April 2026 checked. The 1934-1935 epidemic affected about 1.5 million people and caused nearly 80,000 deaths. Responses included quinine, mobile units, environmental management, larviciding, oiling and Paris green; modern insecticide DDT came later."
+    },
+    {
+      "id": "noolaham-sample",
+      "title": "Noolaham Foundation, Uthaya Tharakai / Morning Star, 15 April 1841",
+      "url": "https://www.noolaham.org/wiki/index.php/%E0%AE%89%E0%AE%A4%E0%AE%AF_%E0%AE%A4%E0%AE%BE%E0%AE%B0%E0%AE%95%E0%AF%88_Morning_Star_1841.04.15",
+      "note": "Digital heritage record checked. It identifies a twelve-page Tamil-English issue published 15 April 1841 and displays the Tamil title உதய தாரகை with English Morning Star. The newspaper came from a Jaffna mission-print context; its title is not a sample of everyone's speech."
+    },
+    {
+      "id": "bl-sample",
+      "title": "British Library Archives, American Ceylon Mission tracts EAP835/3/1",
+      "url": "https://searcharchives.bl.uk/catalog/040-003459967",
+      "note": "Archive catalogue checked. It describes ninety-five Jaffna mission-press tracts from 1841-1891, mostly in Tamil, and transliterates the title as utayatārakai. It distinguishes translations from original compositions and documents the missionary production context."
+    },
+    {
+      "id": "unicode-tamil",
+      "title": "Unicode Standard 18.0, Tamil script",
+      "url": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-12/",
+      "note": "Current Unicode 18.0 core specification checked on 27 September 2026. Tamil descends from the South Indian branch of Brahmi, is used in Sri Lanka, and is encoded with an abugida model in which consonants carry an inherent vowel that the pulli can cancel. This is script structure, not a claim that all Tamil readers pronounce words identically."
+    },
+    {
+      "id": "bm-tamil-box",
+      "title": "British Museum, brass box with Tamil inscription As1895,-.130",
+      "url": "https://www.britishmuseum.org/collection/object/A_As1895-130",
+      "note": "Museum catalog checked. A hinged brass box acquired in Kandy and purchased in 1895 carries a Tamil inscription. The catalogue supplies no production date, transcription or translation, so it proves a labelled inscribed object but cannot furnish the card's translated language sample."
+    }
+  ],
+  "entities": [
+    {
+      "id": "ceylon-1815",
+      "card": "data/cards/ceylon-1815.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "cey-index",
+            "uk-colonial"
+          ],
+          "locator": "Repository index checked for id ceylon-1815: name Ceylon, circa 1815-1945, generated from historical basemaps. Earlier records named Ceylon, Ceylon (Dutch), Kandy and Sinhalese kingdoms and the later Sri Lanka record were audited separately. Official guide checked. It states that the British colony was established in 1802, the entire island came under British control after the annexation of Kandy in 1815, and Ceylon became a self-governing Commonwealth state in 1948. It also identifies relevant Colonial and Dominions Office record series.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "slna-1815",
+            "slna-1818"
+          ],
+          "locator": "National Archives exhibit and cited signature page checked. British control of former Dutch coastal territories preceded the March 1815 Convention; Article 4 transferred Kandyan sovereignty and Article 5 promised protection of the Buddhist order and customs. The exhibit describes political manoeuvring among British officials and Kandyan chiefs. Exhibit checked against cited governor letters and Gazette. Resistance spread through Kandyan regions from 1817; the British captured leaders and the Tooth Relic, suppressed the revolt ruthlessly, and branded nineteen chiefs traitors in a proclamation later invalidated in 2016.",
+          "dateScope": {
+            "from": 1815,
+            "to": 1819
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "slna-catalogues"
+          ],
+          "locator": "Official holdings guide checked. Relevant records include the Board of Kandyan Commissioners 1815-1833, Colebrooke-Cameron inquiry records, Jaffna and Kandy Kachcheri records, Ceylon National Congress collections, newspapers, maps, the 1818 rebellion and archaeology papers. Survival in an archive is selective evidence, not a full record of ordinary lives.",
+          "dateScope": {
+            "from": 1819,
+            "to": 1833
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "slna-reforms"
+          ],
+          "locator": "Exhibit and Colebrooke-Cameron records checked. Recommendations included Executive and Legislative Councils, five provinces, a new islandwide judicial system, unofficial representation of Sinhalese, Tamils and Burghers, and abolition of rajakariya compulsory labour.",
+          "dateScope": {
+            "from": 1833,
+            "to": 1848
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "slna-1848",
+            "railway-history"
+          ],
+          "locator": "Exhibit checked against cited petition, despatches, Gazette and 1840 ordinance. Dumbara petitioners said the Road Ordinance restored compulsory labour; about 3,000 unarmed people gathered at Kandy, objecting to taxes. The exhibit links possible ancestral-land loss to the Crown Lands Encroachment Ordinance and records martial law as protest became violent. Official railway history checked. Rail began in 1864 to move hill-country coffee to Colombo, expanded for tea and other plantations, and carried labour, machinery, manure, rice and food. It later served broader passenger travel; the original export purpose remains important context.",
+          "dateScope": {
+            "from": 1848,
+            "to": 1869
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tea-history",
+            "cambridge-labour"
+          ],
+          "locator": "Official industry history checked. It describes state-supported coffee expansion, road building and forest conversion in the central hills, the 1869 appearance of coffee rust, and the collapse of coffee within about a decade. Its celebratory language about colonial prosperity requires comparison with labour and rural-economy evidence. Peer-reviewed Modern Asian Studies abstract checked. Coffee and tea export monocultures depended overwhelmingly on imported South Indian wage labour. The kangany system organized migration and labour supply while government regulation remained slight for much of the nineteenth century.",
+          "dateScope": {
+            "from": 1869,
+            "to": 1910
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "slna-elective",
+            "slna-terror"
+          ],
+          "locator": "Exhibit checked. The 1910 Crewe-McCallum reforms introduced a very limited elective element: the Legislative Council had eleven officials and ten non-officials, only four elected on an ethnic basis. Ponnambalam Ramanathan became the first educated representative selected through the new arrangement. Exhibit checked against cited police material. During the 1915 riots, martial law from 2 June allowed police and army to shoot alleged rioters without trial or showing cause; Edward Henry Pedris was court-martialled and executed, and Sinhala leaders were imprisoned. The page foregrounds colonial repression and is not a complete history of intercommunal harms.",
+          "dateScope": {
+            "from": 1910,
+            "to": 1919
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "slna-congress",
+            "slna-labour"
+          ],
+          "locator": "Exhibit checked. The Congress was founded on 11 December 1919 with Ponnambalam Arunachalam as first president and sought a common constitutional movement. Disputes over representation and later departures weakened it and damaged trust between Sinhala and Tamil leaders. Exhibit checked. It records resistance to a road contribution requiring adult men to work six days, founding of the Ceylon Labour Union in 1922, the 1923 general strike, and A.E. Gunasinghe advocacy of adult suffrage regardless of gender, race, religion or caste.",
+          "dateScope": {
+            "from": 1919,
+            "to": 1931
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "slna-vote",
+            "who-malaria"
+          ],
+          "locator": "Exhibit checked against cited 1927 testimony and 1931 Hansard. Donoughmore changes brought universal suffrage, territorial representation, a State Council, executive committees and ministers. Evidence from Agnes de Silva and other Society for Women's Suffrage members helped secure women's voting rights. WHO historical review dated 24 April 2026 checked. The 1934-1935 epidemic affected about 1.5 million people and caused nearly 80,000 deaths. Responses included quinine, mobile units, environmental management, larviciding, oiling and Paris green; modern insecticide DDT came later.",
+          "dateScope": {
+            "from": 1931,
+            "to": 1939
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "parliament-evolution"
+          ],
+          "locator": "Official parliamentary history checked. It distinguishes the 1833-1931 Legislative Council, 1931-1947 State Council and later House of Representatives, and dates the Soulbury Commission Westminster model to 1944. These institutions expanded representation within, and then beyond, colonial rule.",
+          "dateScope": {
+            "from": 1939,
+            "to": 1945
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "cey-index",
+            "cey-coverage"
+          ],
+          "locator": "Index id/name/from/to/circa and coverage kind/datesApproximate/content/observedIntervals; the final sentence is a scope rule derived from the record type.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "cey-geom-1800",
+            "cey-geom-1815"
+          ],
+          "locator": "Decoded Polygon rings and exact coordinate-key comparisons in geometry-audit.json; interpretation limited to atlas topology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "cey-coverage",
+            "cey-geom-1815",
+            "cey-geom-1938"
+          ],
+          "locator": "Coverage observedIntervals plus decoded geometry stats and onset-to-last paired-coordinate delta 0.0010237998666156045.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "cey-geom-1815",
+            "cey-geom-1938"
+          ],
+          "locator": "Geometry audit bbox candidates, segment/containment intersection checks, and 1815 nearby records within the audit threshold.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "cey-geom-1945",
+            "slna-dominion"
+          ],
+          "locator": "Decoded successor stats and max coordinate delta; National Archives Ceylon Independence Act chronology and 4 February 1948 declaration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "slna-1815"
+          ],
+          "locator": "National Archives narrative and digitized signature page LK-NA/6/12345; Articles 4 and 5; consent caveat follows the named signatory setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "slna-doyly"
+          ],
+          "locator": "National Archives D'Oyly exhibit and Governor Brownrigg letter LK-NA/21/35/1.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "slna-1818"
+          ],
+          "locator": "National Archives exhibit, Governor Brownrigg correspondence and Gazette No. 896 of 10 January 1818.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "slna-reforms"
+          ],
+          "locator": "Colebrooke-Cameron Commission exhibit and quoted recommendations; limitation follows the councils' colonial and appointed character.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "slna-1848"
+          ],
+          "locator": "National Archives petition/despatch/Gazette discussion and Crown Lands Encroachment Ordinance No. 12 of 1840.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "slna-terror"
+          ],
+          "locator": "National Archives Hundred Days exhibit and police-report locator; evidentiary-perspective caveat is explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tea-history"
+          ],
+          "locator": "Tea Board coffee history: state support, land sales, roads, forest expansion, 1869 rust and collapse; page's celebratory framing is explicitly limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tea-saves"
+          ],
+          "locator": "Tea Board Loolecondera account: 1866 veranda processing, twenty acres, 23-pound shipment and first-successful-not-first-attempt caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "cambridge-labour"
+          ],
+          "locator": "Modern Asian Studies abstract: export monoculture, imported wage labour, free migration and kangany organization; final sentence is an anti-reduction scope rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "railway-history"
+          ],
+          "locator": "Sri Lanka Railways official history: 1864 origin, commodity and input traffic, later passenger expansion and route rationales.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "cbsl-economy"
+          ],
+          "locator": "25th Anniversary Review, colonial economy section: plantation/rural split, export share, immigrant labour and import composition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/5/text",
+          "sourceIds": [
+            "fao-irrigation"
+          ],
+          "locator": "FAO paper introduction: ancient irrigation chronology and British-period renovations; analogy explains the distinction without adding a historical claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "worldbank-lines"
+          ],
+          "locator": "World Bank feature on Tea Plantation Workers Museum: room age, approximate area, walls and hearth; reconstruction limitation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "law-family"
+          ],
+          "locator": "Perera v. Aselin Nona explanation of binna/diga residence and succession; judgment date and regional-law limitation made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "fao-food",
+            "cbsl-economy"
+          ],
+          "locator": "FAO agricultural-background section plus Central Bank retrospective; the text marks the FAO evidence as later and avoids a universal menu.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "bm-boat"
+          ],
+          "locator": "British Museum As1933,1110.4 description, curator comments, date range and provenance caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "bm-mask"
+          ],
+          "locator": "British Museum As,+.2764 production/date/material/register and acquisition entries; missing-context caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/5/text",
+          "sourceIds": [
+            "bm-clothing"
+          ],
+          "locator": "British Museum robe term catalogue and listed Sri Lanka Buddhist garment records; the source's missing context motivates the limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/6/text",
+          "sourceIds": [
+            "bm-collecting"
+          ],
+          "locator": "British Museum Collecting and Empire trail, Sri Lanka betel-cutter and Hugh Nevill sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "unesco-learning"
+          ],
+          "locator": "Historical overview sections 1.1-1.2: oral transmission, ola leaves, temple libraries, pirivena subjects and student scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "unesco-schools"
+          ],
+          "locator": "Education for All plan historical section 1.2.3: dual system, pirivenas and 1869 department; inequality caveat follows the source's elite/common distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "noolaham-sample",
+            "bl-sample",
+            "unicode-tamil"
+          ],
+          "locator": "Noolaham issue title/date/languages; British Library transliteration and mission corpus; Unicode 18.0 Tamil origin and encoding model.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "bm-tamil-box"
+          ],
+          "locator": "British Museum As1895,-.130 description, acquisition place/date and absent transcription/production date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "slna-catalogues"
+          ],
+          "locator": "National Archives record-group and special-collection catalogue; examples named on the page, followed by an archival-silence caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/5/text",
+          "sourceIds": [
+            "archaeology-history"
+          ],
+          "locator": "Department history: 1868 committee, 1871 photography, 1873 survey, 1875-1879 inscriptions, 1890 department and 1897 murals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/6/text",
+          "sourceIds": [
+            "archaeology-critique"
+          ],
+          "locator": "Department-hosted proceedings page 320, exclusion of local voices and call for Indigenous/local perspectives; discovery-language rule follows directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ayurveda-policy"
+          ],
+          "locator": "National Traditional Medicine Policy background naming systems; ancient-origin rhetoric deliberately excluded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "health-history"
+          ],
+          "locator": "Ministry history: British military phase and creation of separate Civil Medical Department in 1858; limits distinguish administration from universal access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "health-bulletin"
+          ],
+          "locator": "Ministry Annual Health Bulletin 2024, published 2026, historical timeline; access limitation explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "cmc-sewer"
+          ],
+          "locator": "Colombo Municipal Council history and later 1972 coverage proportions used only as a warning against retrojection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "wellcome-1917"
+          ],
+          "locator": "Colombo Public Health Department report, scan canvas 27/page 13; disease and sewer-connection recommendations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/5/text",
+          "sourceIds": [
+            "wellcome-1928"
+          ],
+          "locator": "Director of Medical and Sanitary Services report, school sanitation table at scan canvas 59.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/6/text",
+          "sourceIds": [
+            "who-malaria"
+          ],
+          "locator": "WHO article dated 24 April 2026, historical epidemic and intervention paragraphs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/7/text",
+          "sourceIds": [
+            "slna-suriyamal"
+          ],
+          "locator": "National Archives Suriya-Mal exhibit and Kamkaru Handa 2 November 1934 locator.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "slna-elective"
+          ],
+          "locator": "National Archives 1910 reform description and council composition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "slna-congress"
+          ],
+          "locator": "National Archives Congress exhibit: founding, presidency, aims, representation dispute and withdrawals.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "slna-labour"
+          ],
+          "locator": "National Archives labour exhibit: road contribution, union, strike and 1927 Donoughmore testimony.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "slna-vote"
+          ],
+          "locator": "National Archives Donoughmore exhibit and 1927 women's suffrage evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "slna-bracegirdle"
+          ],
+          "locator": "National Archives Bracegirdle exhibit, deportation dispute and commission locator LK-NA/108/20/2.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/5/text",
+          "sourceIds": [
+            "parliament-evolution"
+          ],
+          "locator": "Parliament timeline and Soulbury paragraph; political-status limitation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/6/text",
+          "sourceIds": [
+            "slna-dominion"
+          ],
+          "locator": "National Archives Act chronology and declaration date; continuity statement distinguishes state transition from human survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "cey-geom-1945",
+            "slna-dominion"
+          ],
+          "locator": "Decoded with topojson-client. The successor sri-lanka feature is a 35-position Polygon with the same broad island outline. The maximum paired coordinate difference from the last colonial ring is about 0.0012003 degrees, so this is a near-continuous atlas handoff, not an exact coordinate identity or a correct independence date. Exhibit checked against the Ceylon Independence Act and related records. The British Parliament passed the Act in November 1947; Ceylon was declared an independent state on 4 February 1948. That date, rather than the atlas endpoint of 1945, ends British colonial rule.",
+          "dateScope": {
+            "year": 1948
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "ceylon-1815",
+        "card": "cards/ceylon-1815.json",
+        "summary": "British colonial Ceylon after the 1815 takeover of Kandy: conquest, resistance, plantations, labour, daily life, health, education, writing and the atlas's early 1945 handoff."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.932016406250035,
+            81.8666186661867,
+            9.686671821449991
+          ]
+        },
+        {
+          "file": "world-1878.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1878,
+            "to": 1880,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.9320164348774185,
+            81.8666186661867,
+            9.686671848693095
+          ]
+        },
+        {
+          "file": "world-1880.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1880,
+            "to": 1900,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.9320164061148475,
+            81.8666186661867,
+            9.686671821321347
+          ]
+        },
+        {
+          "file": "world-1900.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1900,
+            "to": 1914,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.9320164061148475,
+            81.8666186661867,
+            9.686671821321347
+          ]
+        },
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.9320164061148475,
+            81.8666186661867,
+            9.686671821321347
+          ]
+        },
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.93190169377462,
+            81.8666186661867,
+            9.687040484928211
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.93190169377462,
+            81.8666186661867,
+            9.687040484928211
+          ]
+        },
+        {
+          "file": "world-1938.json",
+          "properties": {
+            "civ": "ceylon-1815",
+            "from": 1938,
+            "to": 1945,
+            "precision": 3
+          },
+          "bounds": [
+            79.67419674196742,
+            5.93190169377462,
+            81.8666186661867,
+            9.687040484928211
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Targeted only id ceylon-1815. The record is name Ceylon, circa 1815-1945, kind state, datesApproximate true, and missing a card before integration.",
+    "The exact target intervals are 1815-1878, 1878-1880, 1880-1900, 1900-1914, 1914-1920, 1920-1930, 1930-1938 and 1938-1945. Every feature is one 35-position Polygon; three exact coordinate variants occur across the eight snapshots.",
+    "The world-1800 predecessor ceylon-dutch-1800 is a two-ring island Polygon. Its outer ring exactly equals the world-1815 target outer ring and its interior hole exactly equals the separate Kandy Polygon. The topology expresses the atlas merger of a coastal feature and Kandyan interior.",
+    "The predecessor label Ceylon (Dutch) is historically misleading for 1800-1815: Britain acquired the former Dutch coastal territories in 1796 and established a Crown colony in 1802. This bundle does not propagate the atlas label as a historical government name.",
+    "At 1815 the British East India Company mainland bbox overlaps the island bbox; later the British Raj and one India-shaped united-kingdom-1938 occurrence do the same. Exact segment and containment tests find no polygon intersection in any target snapshot. Mysore and Travancore are nearby but disjoint.",
+    "The world-1945 sri-lanka successor is a near-identical 35-position island outline, with maximum paired coordinate delta about 0.0012003 degrees from the last target ring. This is an atlas handoff, not evidence that independence occurred in 1945.",
+    "Historical identity is British colonial Ceylon after the 1815 annexation/takeover of Kandy, within a colony established in 1802. Independence occurred on 4 February 1948. Earlier island peoples and polities and later Sri Lanka remain separate records and histories.",
+    "No appliesTo field is included because this is a single indexed record and no other record is being made to share its card."
+  ]
+}

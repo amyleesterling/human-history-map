@@ -1,0 +1,670 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel azerbaijan-historical research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "azh-atlas-index",
+      "title": "Human History Map, imported civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Primary project data checked locally for the exact azerbaijan record, its approximate 1914-1938 indexed lifetime, and the separate azerbaijan-1994 record. The dates are display metadata rather than verified founding or dissolution dates."
+    },
+    {
+      "id": "azh-atlas-1914",
+      "title": "Human History Map, world-1914 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Primary TopoJSON decoded locally for the azerbaijan feature covering 1914-1920. Identity audit records its two polygons, 165 vertices, bounds and point tests. The imported geometry is a locator, not a verified control map."
+    },
+    {
+      "id": "azh-atlas-1930",
+      "title": "Human History Map, world-1930 historical border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Primary TopoJSON decoded locally for the azerbaijan feature covering 1930-1938. Identity audit records its single polygon, 115 vertices, bounds and point tests, including its inaccurate inclusion of the tested Yerevan point."
+    },
+    {
+      "id": "azh-atlas-modern",
+      "title": "Human History Map, modern GeoJSON",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/borders/modern.geojson",
+      "note": "Primary project GeoJSON checked locally for the separate azerbaijan-1994 record. It is not merged into this historical card; its modern geometry is used only to explain the project identity boundary."
+    },
+    {
+      "id": "azh-us-history",
+      "title": "United States Office of the Historian, Azerbaijan country recognition guide",
+      "url": "https://history.state.gov/countries/azerbaijan",
+      "note": "Official diplomatic history checked for the collapse of Russian imperial rule, the brief independent state, Allied de facto recognition in January 1920, termination of independence after the Red Army arrived in April 1920, and restored independence in 1991."
+    },
+    {
+      "id": "azh-iranica-name",
+      "title": "Encyclopaedia Iranica, Azarbaijan",
+      "url": "https://www.iranicaonline.org/articles/azerbaijan-index/",
+      "note": "Scholarly reference checked for the older name of the Iranian region south of the Aras and the 1918 adoption of Azerbaijan for the new state north of the river. Its normative opinion about naming is identified as the source author’s interpretation."
+    },
+    {
+      "id": "azh-iranica-baku",
+      "title": "Ronald Grigor Suny, Encyclopaedia Iranica, Baku in the nineteenth and twentieth centuries",
+      "url": "https://www.iranicaonline.org/articles/baku-pers/baku-ii-history-in-the-19-20th-centuries/?generate_pdf=1",
+      "note": "Scholarly overview checked for Baku’s oil boom, multinational working class, strikes and 1904 general labor contract; renewed wartime strikes; 1917-1920 governing changes; and early Soviet transformation."
+    },
+    {
+      "id": "azh-oil-capital",
+      "title": "Sara Brinegar, Oil Capital: Industry and Society in Baku, Azerbaijan, 1870-1920",
+      "url": "https://scholarsbank.uoregon.edu/bitstreams/ab177b1c-688f-45bf-a68a-d856818b8b0c/download",
+      "note": "University of Oregon doctoral dissertation checked for wartime Baku, labor and social divisions, the 1917-1918 struggle for the oil city, and the author’s warning that precise March 1918 death tolls and origins remain debated."
+    },
+    {
+      "id": "azh-declaration",
+      "title": "Azerbaijan Presidential Library, 1918 Declaration of Independence",
+      "url": "https://axc.preslib.az/en/page/41rUR0xeMH",
+      "note": "Official archival project checked for the declaration’s 28 May 1918 date, democratic republican form, civil-rights guarantee regardless of nationality, religion, class, estate or sex, minority-development clause, and provisional governing arrangement."
+    },
+    {
+      "id": "azh-parliament",
+      "title": "Azerbaijan government portal, History of Parliament",
+      "url": "https://azerbaijan.az/en/related-information/284",
+      "note": "Official institutional history checked for the December 1918 opening, intended 120-seat community allocation, 96 members and eleven factions by late 1919, 145 sessions, legislative activity and the 27 April 1920 final sitting. Celebratory and polemical judgments are not repeated as neutral fact."
+    },
+    {
+      "id": "azh-collapse",
+      "title": "Azerbaijan Presidential Library, resolution to hand power to the communists",
+      "url": "https://axc.preslib.az/en/page/SowqEPXTG8",
+      "note": "Official archival transcription checked for the parliament’s late-night 27 April 1920 conditional transfer of power, including written promises of sovereignty, a temporary communist government, personal security and an attempt to avoid fighting as the Red Army approached."
+    },
+    {
+      "id": "azh-bloxham",
+      "title": "Donald Bloxham, The Great Game of Genocide, Oxford University Press",
+      "url": "https://api.nla.am/server/api/core/bitstreams/c4423014-3b0c-444c-a413-cecdd1419ea8/content",
+      "note": "Academic monograph checked at printed pages 99-103 for the collapse of authority, mass killing of Azerbaijani Muslims in Baku in March 1918, mass killing of Armenians after Ottoman and Azerbaijani forces captured Baku in September, disputed estimates and wider reciprocal violence."
+    },
+    {
+      "id": "azh-university",
+      "title": "Azerbaijan Presidential Library, Foundation of Baku State University",
+      "url": "https://www.preslib.az/en/historical/page/2nW3VKs",
+      "note": "Official institutional history checked for the 1919 law, four planned faculties including medicine, compulsory Azerbaijani-language study, admission of women and men on equal terms, November classes, first-year enrollment and the first medical graduates in 1922."
+    },
+    {
+      "id": "azh-loc-soviet",
+      "title": "Library of Congress country study, Azerbaijan within the Soviet Union",
+      "url": "https://countrystudies.us/azerbaijan/10.htm",
+      "note": "US Library of Congress country-study text checked for the late-1921 decision, Azerbaijan’s incorporation with Armenia and Georgia in the Transcaucasian federation, entry into the USSR in 1922 and the federation’s abolition under the 1936 constitution."
+    },
+    {
+      "id": "azh-federation",
+      "title": "Azerbaijan Presidential Library, establishment of the Transcaucasian Federation",
+      "url": "https://www.preslib.az/en/historical/page/a5SFNLs",
+      "note": "Official historical account checked for the March 1922 Azerbaijani approval, the December Transcaucasian congress and federation, and the 30 December 1922 USSR founding agreement. Its description of colonial status is treated as national interpretation, not neutral constitutional language."
+    },
+    {
+      "id": "azh-borders-red",
+      "title": "Stephan Rindlisbacher, Borders in Red, Cornell University Press",
+      "url": "https://ecommons.cornell.edu/bitstreams/9ae9d05d-a62c-4d8a-b26f-ff83b2be2c77/download",
+      "note": "Peer-reviewed open-access monograph checked at chapter 5 for negotiated early Soviet border-making, the 1930 Azerbaijani OGPU campaign against alleged kulaks and their families, coercion into collective farms, rural resistance, migration and abandonment of borderland households."
+    },
+    {
+      "id": "azh-spatial-revolution",
+      "title": "Christina E. Crawford, Spatial Revolution, Cornell University Press",
+      "url": "https://ecommons.cornell.edu/bitstreams/cc2e1890-f50d-458f-894d-df4165d81fa0/download",
+      "note": "Peer-reviewed open-access architectural history checked for Baku’s dense core, poor worker housing and industrial adjacency; 1924-1927 planning; experimental worker settlements; limited but real construction; services, green space, ventilation, sewage and storm-water goals."
+    },
+    {
+      "id": "azh-baku-soviet",
+      "title": "Azerbaijan Presidential Library, Baku in the Soviet period",
+      "url": "https://bakucity.preslib.az/en/page/gRyzQZYa4h",
+      "note": "Official city history checked for early worker settlements, constructivist housing and civic buildings, three general-plan versions, and the 1926 electrified railway joining oil districts to central Baku, described by the source as the USSR’s first."
+    },
+    {
+      "id": "azh-shollar-water",
+      "title": "United Water Supply Service of Large Cities, Shollar-Baku water system history",
+      "url": "https://www.isst.gov.az/icmeli-su-techizati/su-menbeleri",
+      "note": "Official utility history checked for construction beginning in 1911, water reaching Baku in February 1917 at about one-third of design flow, and 1930s wells, reservoirs and pumping upgrades that raised delivery to the stated design capacity."
+    },
+    {
+      "id": "azh-language-policy",
+      "title": "Azerbaijan Presidential Library, language, schooling and alphabet decrees",
+      "url": "https://www.preslib.az/en/historical/page/wghajdk",
+      "note": "Official historical account checked for the 1921 literacy commission, new-alphabet committees, parallel use of old and new scripts, free-school and official-language measures, the 1928 compulsory-education decision and the official 1929 transition to a Latin-based alphabet."
+    },
+    {
+      "id": "azh-yeni-yol-archive",
+      "title": "Azerbaijan National Library, Yeni yol digitized newspaper catalog",
+      "url": "https://www.millikitabxana.az/en/newspapers/search?month=&name=Yeni+yol&year=",
+      "note": "National-library catalog checked for the normalized title Yeni yol and digitized issues dated from 1924 through the 1930s. The catalog title is used as a small authentic publication sample, not as a conversational quotation or facsimile transcription."
+    },
+    {
+      "id": "azh-yeni-yol-study",
+      "title": "Azerbaijan National Library, study of education, literature and Yeni yol",
+      "url": "https://anl.az/el/q/qe_em%26e.pdf",
+      "note": "National-library publication checked for the New Turkic Alphabet Committee’s July 1922 creation, the newspaper’s 21 September 1922 launch in a Latin-based alphabet and its mission to promote the new writing system and literature."
+    },
+    {
+      "id": "azh-carpet-museum",
+      "title": "Azerbaijan National Carpet Museum, Harmony of Space exhibition",
+      "url": "https://azcarpetmuseum.az/en/single/716",
+      "note": "Official museum exhibition text checked for late nineteenth- and early twentieth-century home interiors, carpets and textiles, copper utensils, clothing and jewelry, plus wedding and dowry objects. It is material-culture evidence, not a claim about every household."
+    },
+    {
+      "id": "azh-history-museum",
+      "title": "Azerbaijan government portal, National Historical Museum",
+      "url": "https://azerbaijan.az/en/related-information/263",
+      "note": "Official museum history checked for its 1920 founding and 1921 opening, the creation of related cultural institutions in the 1920s-30s, and the ethnographic collection’s regional clothing, copper vessels, carpets, rugs and household bags."
+    },
+    {
+      "id": "azh-rural-family",
+      "title": "Nargiz Guliyeva, Modern Azerbaijani Family, Azerbaijan National Library",
+      "url": "https://anl.az/el_en/gn_bseavam_en.pdf",
+      "note": "Ethnographic monograph checked for early twentieth-century large and small rural household forms, archive and later fieldwork limits, the impact of collectivization on joint households, children’s upbringing, regional variation, wedding customs and typical 1920-1950 dowry objects."
+    },
+    {
+      "id": "azh-old-city-memoir",
+      "title": "Khadija Aghabeyli memoir, Growing Up in Baku’s Old City",
+      "url": "https://www.azer.com/aiweb/categories/magazine/ai123_folder/123_articles/123_khadija_aghabeyli.html",
+      "note": "Published family-archive memoir checked for one wealthy Old City girl’s recollections of ice vendors, wooden iceboxes, daily purchases by less affluent households, fresh dishes, guests and food charity. It is explicitly a late-life individual memory, not a population survey."
+    },
+    {
+      "id": "azh-pediatrics",
+      "title": "Turkish Archives of Pediatrics, child healthcare in Azerbaijan",
+      "url": "https://www.turkarchpediatr.org/index.php/pub/article/download/1133/1132/1222",
+      "note": "Peer-reviewed historical review checked for scarce specialized care before 1917, the 1919 medical faculty, 1924 epidemiological service, 1928 sanatoria, the 1930 medical university and the 1936 pediatrics faculty created amid a shortage of child-health specialists."
+    },
+    {
+      "id": "azh-pharmacy",
+      "title": "Azerbaijan Medical University, history of pharmacy education",
+      "url": "https://amu.edu.az/page/20/eczaciliq-fakultesi",
+      "note": "Official university history checked for the republic-era medical-pharmacy division and state pharmacies, the 1919 university foundation, the 1925 pharmacy technical school and the specialized higher pharmacy institute established in 1938."
+    },
+    {
+      "id": "azh-great-terror",
+      "title": "Eldar Ismailov, 1937: Great Terror in Azerbaijan, Caucasus Analytical Digest",
+      "url": "https://ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/CAD-22.pdf",
+      "note": "Academic regional digest checked at printed pages 9-12 for the 1936-1938 arrest waves, troikas and quotas, attacks on party, professional and rural groups, deportation of border residents, punishment of spouses and children, and uncertainty around aggregate victim estimates."
+    },
+    {
+      "id": "azh-independence-act",
+      "title": "Azerbaijan Presidential Library, 1991 Constitutional Act on State Independence",
+      "url": "https://files.preslib.az/projects/remz/pdf_en/atr_kons.pdf",
+      "note": "Official constitutional text checked for the modern republic’s stated legal succession from the 1918-1920 republic and the 1991 restoration of independence. It supports continuity language, not retrospective validation of every national narrative."
+    }
+  ],
+  "entities": [
+    {
+      "id": "azerbaijan",
+      "card": "data/cards/azerbaijan.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "azh-atlas-index",
+            "azh-atlas-1914",
+            "azh-atlas-1930",
+            "azh-atlas-modern",
+            "azh-us-history"
+          ],
+          "locator": "Primary project data checked locally for the exact azerbaijan record, its approximate 1914-1938 indexed lifetime, and the separate azerbaijan-1994 record. The dates are display metadata rather than verified founding or dissolution dates. Primary TopoJSON decoded locally for the azerbaijan feature covering 1914-1920. Identity audit records its two polygons, 165 vertices, bounds and point tests. The imported geometry is a locator, not a verified control map. Primary TopoJSON decoded locally for the azerbaijan feature covering 1930-1938. Identity audit records its single polygon, 115 vertices, bounds and point tests, including its inaccurate inclusion of the tested Yerevan point. Primary project GeoJSON checked locally for the separate azerbaijan-1994 record. It is not merged into this historical card; its modern geometry is used only to explain the project identity boundary. Official diplomatic history checked for the collapse of Russian imperial rule, the brief independent state, Allied de facto recognition in January 1920, termination of independence after the Red Army arrived in April 1920, and restored independence in 1991.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "azh-iranica-baku"
+          ],
+          "locator": "Scholarly overview checked for Baku’s oil boom, multinational working class, strikes and 1904 general labor contract; renewed wartime strikes; 1917-1920 governing changes; and early Soviet transformation.",
+          "dateScope": {
+            "from": 1914,
+            "to": 1917
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "azh-oil-capital"
+          ],
+          "locator": "University of Oregon doctoral dissertation checked for wartime Baku, labor and social divisions, the 1917-1918 struggle for the oil city, and the author’s warning that precise March 1918 death tolls and origins remain debated.",
+          "dateScope": {
+            "from": 1917,
+            "to": 1918
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "azh-parliament"
+          ],
+          "locator": "Official institutional history checked for the December 1918 opening, intended 120-seat community allocation, 96 members and eleven factions by late 1919, 145 sessions, legislative activity and the 27 April 1920 final sitting. Celebratory and polemical judgments are not repeated as neutral fact.",
+          "dateScope": {
+            "from": 1918,
+            "to": 1920
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "azh-collapse"
+          ],
+          "locator": "Official archival transcription checked for the parliament’s late-night 27 April 1920 conditional transfer of power, including written promises of sovereignty, a temporary communist government, personal security and an attempt to avoid fighting as the Red Army approached.",
+          "dateScope": {
+            "from": 1920,
+            "to": 1922
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "azh-loc-soviet",
+            "azh-language-policy"
+          ],
+          "locator": "US Library of Congress country-study text checked for the late-1921 decision, Azerbaijan’s incorporation with Armenia and Georgia in the Transcaucasian federation, entry into the USSR in 1922 and the federation’s abolition under the 1936 constitution. Official historical account checked for the 1921 literacy commission, new-alphabet committees, parallel use of old and new scripts, free-school and official-language measures, the 1928 compulsory-education decision and the official 1929 transition to a Latin-based alphabet.",
+          "dateScope": {
+            "from": 1922,
+            "to": 1929
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "azh-borders-red"
+          ],
+          "locator": "Peer-reviewed open-access monograph checked at chapter 5 for negotiated early Soviet border-making, the 1930 Azerbaijani OGPU campaign against alleged kulaks and their families, coercion into collective farms, rural resistance, migration and abandonment of borderland households.",
+          "dateScope": {
+            "from": 1929,
+            "to": 1936
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "azh-great-terror"
+          ],
+          "locator": "Academic regional digest checked at printed pages 9-12 for the 1936-1938 arrest waves, troikas and quotas, attacks on party, professional and rural groups, deportation of border residents, punishment of spouses and children, and uncertainty around aggregate victim estimates.",
+          "dateScope": {
+            "from": 1936,
+            "to": 1938
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "azh-atlas-1914"
+          ],
+          "locator": "Local identity.json audit: decoded world-1914 azerbaijan feature, geometry structure, bounds and twelve named point-in-polygon tests.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "azh-atlas-index",
+            "azh-atlas-1930"
+          ],
+          "locator": "Local identity.json audit: indexed lifetime, observed 1914-1920 and 1930-1938 intervals, decoded structure and point tests.",
+          "dateScope": {
+            "year": 1930
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "azh-iranica-name"
+          ],
+          "locator": "Entry opening, lines 33-37: older Iranian regional name, 1918 adoption north of the Aras, and contemporary “Caucasian Azerbaijan” usage.",
+          "dateScope": {
+            "year": 1918
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "azh-atlas-index",
+            "azh-atlas-modern"
+          ],
+          "locator": "Local index and modern-geometry audit: distinct azerbaijan and azerbaijan-1994 records with a 1938-1994 indexing gap.",
+          "dateScope": {
+            "year": 1938
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "azh-iranica-baku"
+          ],
+          "locator": "PDF printed pages 2-3, lines 29-42 and 69-83: oil expansion, entrepreneurs, multinational labor, 1904 contract and prewar strikes.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "azh-oil-capital"
+          ],
+          "locator": "Dissertation chapters on wartime society and 1917-1920 political struggle; the source distinguishes class, national and international contests over Baku.",
+          "dateScope": {
+            "year": 1918
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "azh-bloxham"
+          ],
+          "locator": "Oxford monograph, printed pages 99-103, especially lines 3659-3664 and 3727-3747: March and September killings, wider violence and estimate limits.",
+          "dateScope": {
+            "year": 1918
+          },
+          "uncertainty": "Victim totals and responsibility for particular incidents remain disputed; the card names documented victim groups and perpetrators without adopting nationalized aggregate claims."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "azh-declaration"
+          ],
+          "locator": "Archival transcription, clauses 2 and 4-6, lines 43-49: form of government, rights guarantee, minority development and provisional institutions.",
+          "dateScope": {
+            "year": 1918
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "azh-parliament"
+          ],
+          "locator": "History of Parliament, lines 130-152: composition, opening place/date, membership, factions, sessions and legislation; read with the institution’s celebratory framing.",
+          "dateScope": {
+            "year": 1919
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "azh-university"
+          ],
+          "locator": "Presidential Library history, lines 20-35: parliamentary debate, founding law, faculties, language, equal admission, opening, enrollment and 1922 graduates.",
+          "dateScope": {
+            "year": 1919
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "azh-collapse"
+          ],
+          "locator": "Archival resolution dated 27 April 1920, lines 39-62; conditions are presented as the parliament’s recorded terms, not promises proven to have been honored.",
+          "dateScope": {
+            "year": 1920
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "azh-federation"
+          ],
+          "locator": "Presidential Library history of the federation: March and December 1922 institutions and USSR entry; national interpretation separated from the dated constitutional sequence.",
+          "dateScope": {
+            "year": 1922
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "azh-borders-red"
+          ],
+          "locator": "Open-access monograph chapter 5, especially printed pages 151-153: negotiated border-making, OGPU campaign, coercion, rural upheaval and abandoned households.",
+          "dateScope": {
+            "year": 1930
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "azh-great-terror"
+          ],
+          "locator": "Caucasus Analytical Digest printed pages 9-12, especially lines 611-648 and 714-730: arrest waves, troikas, quotas, border deportations, spouses, children and uncertain totals.",
+          "dateScope": {
+            "year": 1937
+          },
+          "uncertainty": "Aggregate victim estimates are disputed and the cited author notes incomplete study; institutional methods and affected groups are better established."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "azh-spatial-revolution"
+          ],
+          "locator": "Cornell open-access book, Baku chapters and conclusion to the 1927 plan: inherited conditions, experimental settlements, services, green space, hygienic economy and insufficient housing.",
+          "dateScope": {
+            "year": 1927
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "azh-baku-soviet"
+          ],
+          "locator": "Official Baku history, Soviet-period section: worker settlements, constructivist buildings, 1926 electric line and three general-plan versions.",
+          "dateScope": {
+            "year": 1926
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "azh-shollar-water"
+          ],
+          "locator": "Official utility history, lines 77-85: route, construction, February 1917 opening, initial flow and 1930s upgrades; household connection limits are explicitly not inferred.",
+          "dateScope": {
+            "year": 1935
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "azh-spatial-revolution"
+          ],
+          "locator": "Cornell open-access book, Baku planning resolutions and housing chapters: sewage, storm water, ventilation, open space, construction limits and the distinction between plans and delivery.",
+          "dateScope": {
+            "year": 1927
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "azh-rural-family"
+          ],
+          "locator": "National Library monograph, printed pages 2-8, especially lines 87-128 and 297-325: evidence base, household forms, collectivization and variation.",
+          "dateScope": {
+            "year": 1930
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "azh-carpet-museum"
+          ],
+          "locator": "Official Harmony of Space exhibition description: period home interiors, textile uses, wedding objects and dowry components; scope limited to curated objects.",
+          "dateScope": {
+            "year": 1920
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "azh-old-city-memoir"
+          ],
+          "locator": "Published family-archive memoir, lines 6-29: author and class caveat, ice vendors, storage, daily purchases and named foods.",
+          "dateScope": {
+            "year": 1916
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "azh-history-museum"
+          ],
+          "locator": "Government museum description, lines 132-139: founding, ethnographic objects, regional clothing and the restored Taghiyev mansion rooms.",
+          "dateScope": {
+            "year": 1921
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "azh-language-policy"
+          ],
+          "locator": "Presidential Library chronology, lines 12-26: literacy commission, education and language measures, compulsory-education decision and alphabet timetable.",
+          "dateScope": {
+            "year": 1929
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "azh-yeni-yol-archive",
+            "azh-yeni-yol-study"
+          ],
+          "locator": "National Library catalog entries for Yeni yol issues plus library study passage on the July 1922 committee, 21 September launch and Latin-script mission.",
+          "dateScope": {
+            "year": 1922
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "azh-pharmacy",
+            "azh-pediatrics"
+          ],
+          "locator": "Medical University pharmacy history, lines 409-413, for the 1919 university, 1925 technical school and 1938 institute; peer-reviewed pediatrics review, printed pages S19-S20, for the 1930 university and 1936 faculty. Access is not generalized.",
+          "dateScope": {
+            "year": 1938
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "azh-pediatrics"
+          ],
+          "locator": "Peer-reviewed review, printed pages S19-S20, lines 165-213: sanatoria, epidemiology service, pre-1917 scarcity, medical institutions and pediatrics faculty.",
+          "dateScope": {
+            "year": 1936
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "azh-history-museum"
+          ],
+          "locator": "Government museum history, lines 132-138: founding/opening, related 1920s-30s institutions, research role and material-culture holdings.",
+          "dateScope": {
+            "year": 1921
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "azh-atlas-index",
+            "azh-independence-act"
+          ],
+          "locator": "Primary project data checked locally for the exact azerbaijan record, its approximate 1914-1938 indexed lifetime, and the separate azerbaijan-1994 record. The dates are display metadata rather than verified founding or dissolution dates. Official constitutional text checked for the modern republic’s stated legal succession from the 1918-1920 republic and the 1991 restoration of independence. It supports continuity language, not retrospective validation of every national narrative.",
+          "dateScope": {
+            "year": 1938
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "azerbaijan",
+        "card": "cards/azerbaijan.json",
+        "summary": "An approximate 1914-1938 atlas record spanning imperial collapse, the 1918-1920 republic, Soviet takeover, social transformation and Stalinist terror, with a documented ten-year geometry gap."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1914.json",
+          "properties": {
+            "civ": "azerbaijan",
+            "from": 1914,
+            "to": 1920,
+            "precision": 3
+          },
+          "bounds": [
+            44.671046710467124,
+            38.30968008997825,
+            50.46710467104671,
+            41.88963588099124
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "azerbaijan",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            43.490234902349044,
+            38.30932559593,
+            50.46710467104671,
+            41.88850771631922
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "azerbaijan",
+      "finding": "Exact target is the approximate 1914-1938 imported azerbaijan record, separate from the already-carded azerbaijan-1994 modern record and from the historical Iranian region also called Azerbaijan."
+    },
+    {
+      "id": "azerbaijan",
+      "finding": "Only two historical features exist: a 1914-1920 two-part multipolygon and a 1930-1938 single polygon. The indexed lifetime therefore contains a geometry gap from 1920 to 1930."
+    },
+    {
+      "id": "azerbaijan",
+      "finding": "The 1930 polygon joins the western component to the mainland and contains the tested Yerevan point, unlike the 1914 feature. Both are treated strictly as imported display locators, never verified borders or political-control maps."
+    },
+    {
+      "id": "azerbaijan",
+      "finding": "The 1938 endpoint is not dissolution. The Azerbaijan SSR continued until restored independence in 1991; the separate modern record starts in 1994, leaving a project indexing gap."
+    }
+  ]
+}
