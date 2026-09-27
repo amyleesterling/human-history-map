@@ -1,0 +1,827 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release126-sasanian-dependencies research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "sd-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry checked: sasanian-dependencies is labeled Sasanian dependencies, marked circa, generated from historical basemaps, and indexed 600 to 800 without aliases or a historical summary."
+    },
+    {
+      "id": "sd-map500",
+      "title": "Human History Map world-500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Decoded predecessor layer. The target is absent; himyarite-kingdom covers tested Najran, Sana'a, Marib and Shibam/Hadramawt, while sasanian-empire separately covers tested Iranian and Mesopotamian centers."
+    },
+    {
+      "id": "sd-map600",
+      "title": "Human History Map world-600 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded first target layer: one 57-position Yemen Polygon, including tested Najran, Sana'a, Marib and Shibam/Hadramawt but excluding Aden, Socotra, Iran, Iraq, Oman and the Hejaz."
+    },
+    {
+      "id": "sd-map700",
+      "title": "Human History Map world-700 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded second target layer. Its exact geometry, bounding box, hash and tested footprint are byte-identical to 600, although historical Sasanian authority in Yemen had ended and the dynasty in Iran had fallen."
+    },
+    {
+      "id": "sd-map800",
+      "title": "Human History Map world-800 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded successor seam. The target disappears and abbasid-caliphate owns the tested Yemeni points as well as the tested Iranian and Iraqi centers previously painted with Sasanian labels."
+    },
+    {
+      "id": "sd-abna",
+      "title": "Clifford Edmund Bosworth, Abna, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/abna-term/",
+      "note": "Scholarly reference checked for Persian intervention in Yemen, governors and garrison, intermarriage and the Abna community, uncertainty about the colony's religion, mountain unrest, isolation after 628, conversion and early Islamic continuity."
+    },
+    {
+      "id": "sd-arab-i",
+      "title": "Clifford Edmund Bosworth, Arab i: Arabs and Iran in the pre-Islamic period, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/arab-i/",
+      "note": "Scholarly survey checked for Sasanian client and garrison strategy around Arabia, Gulf commerce, Persian intervention under Khosrow I, Vahrez's campaign and Sayf ibn Dhi Yazan's tributary rule."
+    },
+    {
+      "id": "sd-arab-ii",
+      "title": "Michael G. Morony, Arab ii: Arab conquest of Iran, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/arab-ii/",
+      "note": "Scholarly conquest account checked for the collapse of Sasanian military colonies and alliances after defeat by Byzantium, abandoned Persian agents in Arabia, Yemen's transition and the conquest of the Iranian empire."
+    },
+    {
+      "id": "sd-arabia-ii",
+      "title": "Daniel T. Potts, Arabia ii: The Sasanians and Arabia, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/arabia-ii-sasanians-and-arabia/",
+      "note": "Scholarly regional synthesis checked for direct garrisons, client rulers, maritime strategy, Yemen and the uneven archaeological visibility of Sasanian activity across Arabia."
+    },
+    {
+      "id": "sd-east-africa",
+      "title": "East Africa i: Economic, political, and cultural relations through 1900, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/east-africa-i-economic-political-and-cultural-relations-through-1900/",
+      "note": "Scholarly reference checked for Iranian-East African contacts, Persian and Ethiopian competition around Yemen, and the Red Sea and Indian Ocean commercial setting of Sasanian intervention."
+    },
+    {
+      "id": "sd-sasanian-dynasty",
+      "title": "Alireza Shapur Shahbazi, Sasanian Dynasty, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/sasanian-dynasty/",
+      "note": "Scholarly dynastic history checked for the empire's political and religious institutions, final civil crisis, Arab victories, Yazdegerd III's death, and administrative, royal and numismatic continuities after the dynasty."
+    },
+    {
+      "id": "sd-sasanian-chronology",
+      "title": "Ehsan Yarshater, Chronology of Iranian History, part 1, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/chronology-of-iranian-history-part-1/",
+      "note": "Scholarly chronology checked for Qadisiyya in 636, Ctesiphon's capture in 637, Nihavand in 642 and Yazdegerd III's murder in 651 as the end of the Sasanian dynasty."
+    },
+    {
+      "id": "sd-zoroastrianism",
+      "title": "Zoroastrianism i: Historical review up to the Arab conquest, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/zoroastrianism-i-historical-review/",
+      "note": "Scholarly religious history checked for Zoroastrian institutions under the Sasanians, the close connection of church and state, and competition with Christianity, Judaism, Manichaeism and other faiths."
+    },
+    {
+      "id": "sd-gondeshapur",
+      "title": "Gondeshapur ii: History and medical school, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/gondesapur/gondesapur-ii-history-and-medical-school/",
+      "note": "Scholarly institutional history checked for Gondeshapur's medical-learning reputation, limited evidence for its exact Sasanian form and later importance in transmitting Galenic medical learning to Abbasid society."
+    },
+    {
+      "id": "sd-historiography",
+      "title": "Historiography iii: Early Islamic period, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/historiography-iii/",
+      "note": "Scholarly historiographic survey checked for Wahb ibn Munabbih's Yemeni and Persian family connections, early learning and role in preserving and reshaping stories about the pre-Islamic past."
+    },
+    {
+      "id": "sd-lakhmids",
+      "title": "Lakhmids, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/lakhmids/",
+      "note": "Scholarly reference checked for the Lakhmid client kingdom at Hira, its frontier and diplomatic functions for Sasanian rulers and Khosrow II's dissolution of the dynasty before the wider imperial crisis."
+    },
+    {
+      "id": "sd-sasanian-law",
+      "title": "Judicial and Legal Systems iii: Sasanian legal system, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/judicial-and-legal-systems-iii-sasanian-legal-system/",
+      "note": "Scholarly legal history checked for status distinctions by freedom, citizenship, religion, rank, gender and age in Sasanian Iran; the card explicitly does not assume identical enforcement in distant Yemen."
+    },
+    {
+      "id": "sd-oxford-yemen",
+      "title": "Daniel Martin Varisco, Islam in Yemen, Oxford Bibliographies",
+      "url": "https://academic.oup.com/reference/62361/reference-article-abstract/571507782",
+      "note": "Oxford reference entry checked for Badhan's conversion, Umayyad division between Sana'a and al-Janad, and the difficulty Abbasid rulers faced controlling remote and strongly tribal Yemen."
+    },
+    {
+      "id": "sd-red-sea",
+      "title": "Timothy Power, The Red Sea under the Caliphal Dynasties, c. 639 to 1171, History Compass",
+      "url": "https://compass.onlinelibrary.wiley.com/doi/10.1111/hic3.12484",
+      "note": "Peer-reviewed synthesis checked for the Red Sea as a zone of political, economic and social interaction linking Yemen, the Hejaz, northeast Africa and changing caliphal trade networks."
+    },
+    {
+      "id": "sd-oxford-identity",
+      "title": "Peter Webb, From the Desert to Islam: Constructing Yemeni Identity, Oxford Academic",
+      "url": "https://doi.org/10.1093/oso/9780190067946.003.0011",
+      "note": "Scholarly chapter checked for the disruption of pre-Islamic memories, the loss of ability to read old South Arabian scripts and the construction of new Yemeni identities under early Islamic political organization."
+    },
+    {
+      "id": "sd-unesco-marib",
+      "title": "Landmarks of the Ancient Kingdom of Saba, Marib, UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/1700",
+      "note": "Institutional heritage record checked for Marib's cities, inscriptions, temples, trade, dam, canals, irrigated agriculture and artificial oasis, with continuity stated as local inheritance rather than a Persian invention."
+    },
+    {
+      "id": "sd-unesco-dhafar",
+      "title": "Archaeological Remains and Water Management Systems of the Himyar Kingdom in Dhafar, UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/6846",
+      "note": "Institutional nomination record checked for Dhafar's dams, cisterns, terraces, seasonal-rain harvesting, open livestock and irrigation reservoirs and enclosed drinking-water storage; ancient and continuing uses are distinguished."
+    },
+    {
+      "id": "sd-zafar-archaeology",
+      "title": "Paul Yule, Zafar, capital of Himyar: rehabilitation of a neglected site, Heidelberg University repository",
+      "url": "https://archiv.ub.uni-heidelberg.de/propylaeumdok/134/1/Yule_Zafar2008.pdf",
+      "note": "University archaeological report checked for stone construction and the survival problem for timber, wattle and daub at Zafar. Used to explain why household fittings and sanitation are harder to document than masonry."
+    },
+    {
+      "id": "sd-dai-zafar",
+      "title": "Paul Yule, Zafar, capital of Himyar, Fifth Preliminary Report, German Archaeological Institute journal",
+      "url": "https://publications.dainst.org/journals/zaak/article/view/4185",
+      "note": "Institutional archaeological report checked for mapping, sixth-century reliefs, environmental change, ongoing destruction and the limits of the excavated evidence at one major Yemeni center."
+    },
+    {
+      "id": "sd-nebes",
+      "title": "Norbert Nebes, A new Abraha inscription from the Great Dam of Marib, Proceedings of the Seminar for Arabian Studies",
+      "url": "https://www.gw.uni-jena.de/phifakmedia/19390/38-a-new-dabraha-inscription-from-the-great-dam-of-marib-in-psas-34-2004-s-221-230.pdf",
+      "note": "Peer-reviewed epigraphic study checked for the 547 to 548 dam rupture and repair, plague interruption, tribal labor, diplomatic visits, construction measurements, calendar and dated return to Sana'a."
+    },
+    {
+      "id": "sd-hatke",
+      "title": "George Hatke, Religious Ideology in the Ge'ez Epigraphic Corpus from Yemen",
+      "url": "https://journals.pan.pl/Content/125821/PDF/ROrient%2075%20z.%202-22%205Hatke.pdf",
+      "note": "Peer-reviewed epigraphic study checked for Aksum's 525 invasion, Ge'ez and Sabaic writing in Yemen, CIH 541's March 548 context and the exact transliteration and translation of its Christian invocation."
+    },
+    {
+      "id": "sd-met-shawl",
+      "title": "Fragment of a shawl with inscription, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/448599",
+      "note": "Museum catalogue checked for an eighth to ninth-century cotton and wool shawl attributed to Sana'a, the Yemeni textile industry, Umayyad and Abbasid workshops and the translated Arabic tiraz inscription."
+    },
+    {
+      "id": "sd-bm-lyre",
+      "title": "Statuette of a seated woman playing a lyre, British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/W_1930-0613-16",
+      "note": "Museum catalogue checked for the first to second-century Yemeni bronze, the fragmentary evidence for pre-Islamic music, lyres and lutes, formal performance settings and the danger of projecting one old object onto all later children."
+    },
+    {
+      "id": "sd-bm-camel",
+      "title": "Incense burner showing a camel rider from Shabwa, British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/W_1937-0507-1",
+      "note": "Museum catalogue checked for camel transport, milk and hair, Shabwa's salt and trade routes, and earlier multi-storey houses with stone foundations and wood or mudbrick upper structures."
+    },
+    {
+      "id": "sd-bm-decree",
+      "title": "Sabaean royal decree from Marib, British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/W_1911-0513-2",
+      "note": "Museum catalogue checked for a third-century Sabaean decree regulating sales, loans and enslavement. It is used only as earlier regional evidence for literacy, law and inequality, not as a seventh-century statute."
+    },
+    {
+      "id": "sd-bm-coin",
+      "title": "Arab-Sasanian silver drachm minted at Yazd in 662, British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/C_O1956-0409-40",
+      "note": "Museum catalogue checked for a 662 silver drachm with Khosrow II's bust and a fire altar, showing that Sasanian visual and monetary forms continued under new political authority in Iran."
+    },
+    {
+      "id": "sd-cambridge-yemen",
+      "title": "The constitutional history of Yemen: Cambridge University Press excerpt",
+      "url": "https://assets.cambridge.org/052180/3322/excerpt/0521803322_excerpt.htm",
+      "note": "Cambridge excerpt checked for Yemen's early civilization, strategic position on trade between India and Syria, Aksumite occupation from 525 and Sasanian governors in the late sixth and early seventh centuries."
+    }
+  ],
+  "entities": [
+    {
+      "id": "sasanian-dependencies",
+      "card": "data/cards/sasanian-dependencies.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "sd-index",
+            "sd-cambridge-yemen"
+          ],
+          "locator": "Exact repository entry checked: sasanian-dependencies is labeled Sasanian dependencies, marked circa, generated from historical basemaps, and indexed 600 to 800 without aliases or a historical summary. Cambridge excerpt checked for Yemen's early civilization, strategic position on trade between India and Syria, Aksumite occupation from 525 and Sasanian governors in the late sixth and early seventh centuries.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "sd-hatke"
+          ],
+          "locator": "Peer-reviewed epigraphic study checked for Aksum's 525 invasion, Ge'ez and Sabaic writing in Yemen, CIH 541's March 548 context and the exact transliteration and translation of its Christian invocation.",
+          "dateScope": {
+            "from": 525,
+            "to": 570
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "sd-arab-i"
+          ],
+          "locator": "Scholarly survey checked for Sasanian client and garrison strategy around Arabia, Gulf commerce, Persian intervention under Khosrow I, Vahrez's campaign and Sayf ibn Dhi Yazan's tributary rule.",
+          "dateScope": {
+            "from": 570,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "sd-arabia-ii"
+          ],
+          "locator": "Scholarly regional synthesis checked for direct garrisons, client rulers, maritime strategy, Yemen and the uneven archaeological visibility of Sasanian activity across Arabia.",
+          "dateScope": {
+            "from": 600,
+            "to": 628
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "sd-arab-ii"
+          ],
+          "locator": "Scholarly conquest account checked for the collapse of Sasanian military colonies and alliances after defeat by Byzantium, abandoned Persian agents in Arabia, Yemen's transition and the conquest of the Iranian empire.",
+          "dateScope": {
+            "from": 628,
+            "to": 632
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "sd-sasanian-chronology"
+          ],
+          "locator": "Scholarly chronology checked for Qadisiyya in 636, Ctesiphon's capture in 637, Nihavand in 642 and Yazdegerd III's murder in 651 as the end of the Sasanian dynasty.",
+          "dateScope": {
+            "from": 632,
+            "to": 661
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "sd-oxford-yemen"
+          ],
+          "locator": "Oxford reference entry checked for Badhan's conversion, Umayyad division between Sana'a and al-Janad, and the difficulty Abbasid rulers faced controlling remote and strongly tribal Yemen.",
+          "dateScope": {
+            "from": 661,
+            "to": 750
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "sd-red-sea"
+          ],
+          "locator": "Peer-reviewed synthesis checked for the Red Sea as a zone of political, economic and social interaction linking Yemen, the Hejaz, northeast Africa and changing caliphal trade networks.",
+          "dateScope": {
+            "from": 750,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "sd-index"
+          ],
+          "locator": "Exact civilization-index fields id, name, from, to, circa, kind and generated flag.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "sd-map500"
+          ],
+          "locator": "Decoded 500 absence plus exact tested point owners for the Yemeni predecessor and separate imperial core.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "sd-map600"
+          ],
+          "locator": "Exact 600 geometry statistics, bounding box, SHA-256 and all named point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "sd-map700"
+          ],
+          "locator": "Exact 700 geometry equality and decoded concurrent sasanian-empire point ownership contrasted with the recorded interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "sd-map800"
+          ],
+          "locator": "Decoded 800 target absence and Abbasid point ownership at every named Yemeni and former imperial test.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "sd-hatke"
+          ],
+          "locator": "Article abstract and historical background on the 525 invasion, Christian framing, Ethiopian identity and multilingual inscriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "sd-abna"
+          ],
+          "locator": "Iranica discussion of Yemeni religious conflict and its explicit uncertainty about the settled Persian colony's religion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "sd-unesco-marib"
+          ],
+          "locator": "UNESCO serial property's date range, urban remains, inscriptions, dam, canals and artificial-oasis significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "sd-nebes"
+          ],
+          "locator": "Nebes's reconstructed 547 to 548 sequence: rupture, plague, dismissal and recall of tribes, repairs and return.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "sd-hatke"
+          ],
+          "locator": "CIH 541 lines 1 to 3 transliteration and translation, March 548 date and Sabaic-Christian context; Unicode preserves the published restoration brackets.",
+          "dateScope": {
+            "year": 548
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "sd-arab-i"
+          ],
+          "locator": "Iranica narrative of Sayf's appeals, Khosrow's decision, Vahrez's voyage and tributary settlement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "sd-arab-i"
+          ],
+          "locator": "Second campaign, Sayf's death, larger force, garrison and succession of Persian governors in the pre-Islamic survey.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "sd-east-africa"
+          ],
+          "locator": "Iranica account of Iranian-East African relations, Persian-Ethiopian rivalry and Indian Ocean and Red Sea commerce.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "sd-arabia-ii"
+          ],
+          "locator": "Regional synthesis of Sasanian garrisons, clients, alliances and uneven direct authority in Arabia.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "sd-lakhmids"
+          ],
+          "locator": "Lakhmid frontier-client functions and Khosrow II's dissolution of the dynasty, with atlas geography kept separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "sd-sasanian-dynasty"
+          ],
+          "locator": "Dynastic survey of Sasanian kingship, institutions, warfare, religion and coinage; comparison explicitly limits transfer to Yemen.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "sd-arabia-ii"
+          ],
+          "locator": "Potts's synthesis of varying political forms and the thin, uneven archaeological record for Sasanian Arabia.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "sd-abna"
+          ],
+          "locator": "Iranica notices on Khurra Khosrow's cultural assimilation and unrest caused by Persian financial exactions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "sd-east-africa"
+          ],
+          "locator": "Commercial routes and Persian-Ethiopian strategic competition around the Red Sea and western Indian Ocean.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "sd-sasanian-law"
+          ],
+          "locator": "Iranica list of legal-status divisions and legal capacity in Sasanian Iran, used with an explicit Yemen jurisdiction limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "sd-abna"
+          ],
+          "locator": "Definition of Abna as descendants of Persian fathers and Arab mothers and their persistence as a distinct early Islamic group.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "sd-sasanian-law"
+          ],
+          "locator": "Legal capacity and distinctions by freedom, religion, citizenship, rank, gender and age in the Sasanian legal survey.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "sd-bm-decree"
+          ],
+          "locator": "British Museum date, provenance and decree topics; chronological caveat prevents reuse as a seventh-century law.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "sd-oxford-identity"
+          ],
+          "locator": "Oxford chapter on disrupted memories, new political organization and construction of Muslim-era Yemeni identities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "sd-historiography"
+          ],
+          "locator": "Iranica discussion of Wahb's family background, scholarly activity and place in early Islamic historiography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "sd-east-africa"
+          ],
+          "locator": "Economic relations and route competition among Iran, Yemen, East Africa, the Red Sea and Indian Ocean.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "sd-unesco-marib"
+          ],
+          "locator": "UNESCO description of the dam-fed canal system, agriculture and largest ancient artificial oasis in South Arabia.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "sd-bm-camel"
+          ],
+          "locator": "Object date, camel-rider image and curator's discussion of transport, milk, hair and meat, with period limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "sd-bm-camel"
+          ],
+          "locator": "Museum catalogue discussion of Shabwa salt, taxation and trade routes; explicit absence of household diet statistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "sd-red-sea"
+          ],
+          "locator": "History Compass overview of the Red Sea's constituent hinterlands and economic and social interaction under caliphal dynasties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "sd-bm-camel"
+          ],
+          "locator": "Curator's archaeological summary of Shabwa tower-house foundations, upper materials and written storey counts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "sd-unesco-dhafar"
+          ],
+          "locator": "UNESCO nomination's residences, terraces, rock-cut installations, seasonal rainfall and water-management landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "sd-met-shawl"
+          ],
+          "locator": "Met object date, Sana'a attribution, cotton ground, wool embroidery and Yemeni textile-industry context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "sd-bm-lyre"
+          ],
+          "locator": "British Museum object's date, musician image and explicit limits on musical evidence and performance contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "sd-dai-zafar"
+          ],
+          "locator": "DAI preliminary report on sixth-century finds, mapping, erosion, building damage and evidentiary loss; play limit is explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "sd-zoroastrianism"
+          ],
+          "locator": "Historical review of Sasanian Zoroastrian institutions and religious competition, with Yemen inference deliberately limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "sd-hatke"
+          ],
+          "locator": "Study of Ge'ez inscriptions, local Sabaic and Christian formulae in sixth-century Yemen; later language shift stated cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "sd-oxford-identity"
+          ],
+          "locator": "Oxford discussion of lost script literacy and disrupted knowledge of pre-Islamic South Arabia, with schooling evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "sd-historiography"
+          ],
+          "locator": "Iranica historiographic treatment of Wahb and learned transmission, used with explicit access and literacy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "sd-met-shawl"
+          ],
+          "locator": "Met catalogue translation, date, Sana'a attribution and explanation of tiraz as textile and workshop.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "sd-nebes"
+          ],
+          "locator": "Dam inscription's plague interruption, dismissal, abatement and resumed work; absence of treatment detail retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "sd-gondeshapur"
+          ],
+          "locator": "Iranica account of Gondeshapur's medical reputation, evidentiary limits and later Abbasid transmission; geographic contrast explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "sd-unesco-dhafar"
+          ],
+          "locator": "UNESCO descriptions of open irrigation and livestock reservoirs, enclosed potable-water storage and rainfall dependence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "sd-zafar-archaeology"
+          ],
+          "locator": "Heidelberg report's preservation contrast between masonry and perishable construction, used to frame the explicit toilet-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "sd-unesco-marib"
+          ],
+          "locator": "UNESCO's specific agricultural dam-and-canal functions, contrasted with the absence of toilet evidence rather than relabeled as sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "sd-arab-ii"
+          ],
+          "locator": "Collapse of Arabian military colonies and alliances, abandoned agents and their attraction to Medina after Sasanian defeat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "sd-arab-ii"
+          ],
+          "locator": "Iranica account of the Yemen ridda conflicts, Abna leaders and caliphal military assistance after Badhan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "sd-sasanian-chronology"
+          ],
+          "locator": "Exact conquest milestones and 651 dynastic endpoint from the scholarly chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "sd-oxford-yemen"
+          ],
+          "locator": "Oxford introduction's Umayyad administrative division and Abbasid control problem.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "sd-bm-coin"
+          ],
+          "locator": "British Museum object's date, mint, silver material, Khosrow II portrait, fire altar and Arab-Sasanian classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "sd-map800",
+            "sd-sasanian-dynasty",
+            "sd-red-sea"
+          ],
+          "locator": "Decoded successor seam. The target disappears and abbasid-caliphate owns the tested Yemeni points as well as the tested Iranian and Iraqi centers previously painted with Sasanian labels. Scholarly dynastic history checked for the empire's political and religious institutions, final civil crisis, Arab victories, Yazdegerd III's death, and administrative, royal and numismatic continuities after the dynasty. Peer-reviewed synthesis checked for the Red Sea as a zone of political, economic and social interaction linking Yemen, the Hejaz, northeast Africa and changing caliphal trade networks.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "sasanian-dependencies",
+        "card": "cards/sasanian-dependencies.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Yemen dependency layer whose Sasanian rule ended around 631 to 632, centuries before its 800 atlas handoff.",
+        "summarySource": null,
+        "fell": null,
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-600.json",
+          "properties": {
+            "civ": "sasanian-dependencies",
+            "from": 600,
+            "to": 700,
+            "precision": 1
+          },
+          "bounds": [
+            41.20061200612008,
+            12.613153623764774,
+            52.35712357123572,
+            19.17990838204112
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "sasanian-dependencies",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            41.20061200612008,
+            12.613153623764774,
+            52.35712357123572,
+            19.17990838204112
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact id sasanian-dependencies is indexed circa 600 to 800, displays Sasanian dependencies, has no aliases, and has no tracked card or researched override before integration.",
+    "The exact target is a Yemen polygon, not the Sasanian imperial core. It contains tested Najran, Sana'a, Marib and Shibam/Hadramawt while excluding tested Aden, Socotra, Iran, Iraq, Oman and the Hejaz.",
+    "The 600 and 700 target features are byte-identical single-ring Polygons with 57 positions, bbox 41.20061200612008,12.613153623764774 to 52.35712357123572,19.17990838204112 and SHA-256 c86cff983c31e024c4823b1437d07dfc40ca9f5c70238e474364d1fc0ddb604d.",
+    "In 500 the atlas predecessor is himyarite-kingdom at all four tested Yemeni interior points; at 800 abbasid-caliphate owns all four. The same atlas independently paints a sasanian-empire feature across the Iranian core through 700, another documented date afterimage.",
+    "Historically Persian intervention began around 570, a garrison and governors remained near Sana'a, imperial collapse isolated them after 628, and Badhan and Abna leaders changed allegiance around 631. Yemen was no longer a Sasanian dependency in the later seventh or eighth century.",
+    "The Sasanian dynasty in Iran ended with Yazdegerd III in 651. The card uses map-coverage dates but divides 525 to 800 into Aksumite, dependency, transition, early-caliphal, Umayyad and Abbasid periods.",
+    "Daily-life evidence is labeled by place, date and social setting. Earlier Sabaean and Himyarite objects reveal inherited regional practices; eighth-century textiles reveal successors; neither is silently made into a universal dependency-era household.",
+    "No securely dated Sasanian or early Islamic Yemeni household toilet was found in the checked sources. Dams, canals, reservoirs and cisterns retain their documented water functions rather than being recast as sewers.",
+    "The written sample is CIH 541's Christian Sabaic invocation from Marib, March 548: immediately pre-Persian, local and directly relevant to the landscape. Original script is a normalized Unicode rendering with restoration brackets, followed by scholarly transliteration and translation, not a facsimile."
+  ]
+}

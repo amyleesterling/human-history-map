@@ -1,0 +1,804 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release126-magadha-200 research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "mh-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported Magadha, Maurya and Gupta identities and their indexed lifetimes."
+    },
+    {
+      "id": "mh-mapbc1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded predecessor snapshot used to trace the inherited placement error around the Magadha heartland."
+    },
+    {
+      "id": "mh-map100",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Decoded predecessor snapshot used to compare ownership of named test points before the target interval."
+    },
+    {
+      "id": "mh-map200",
+      "title": "Human History Map 200 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Decoded target geometry, coordinate hash, bounds, topology counts and point-in-polygon tests."
+    },
+    {
+      "id": "mh-map300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Decoded successor snapshot showing the identical target coordinates relabeled as Gupta Empire."
+    },
+    {
+      "id": "mh-map400",
+      "title": "Human History Map 400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Decoded later Gupta geometry used to test when the atlas finally includes the Magadha heartland."
+    },
+    {
+      "id": "mh-orbit",
+      "title": "Dilip K. Chakrabarti, The Re-emergence of the Gangetic Orbit and the Regional Power Centres",
+      "url": "https://academic.oup.com/book/2352/chapter-abstract/142519603",
+      "note": "Oxford overview of Magadha and Pataliputra returning to political prominence under the Gupta dynasty."
+    },
+    {
+      "id": "mh-pataliputra-exc",
+      "title": "B. P. Sinha and L. A. Narain, Pataliputra Excavation 1955-56",
+      "url": "https://wiswo.org/books/_resources/book-reference-pdfs/Sinha-Narain-1970-P%C4%81taliputra%20Excavations%201955-56.pdf",
+      "note": "Government excavation report for occupation, structures, coins, terracottas and dating limits at ancient Pataliputra."
+    },
+    {
+      "id": "mh-ncert-states",
+      "title": "NCERT, Kings, Farmers and Towns: Early States and Economies",
+      "url": "https://sathee.iitk.ac.in/ncert-books/class-12/themes-in-indian-history/chapter-02-kings-farmers-and-towns-early-states-and-economies/",
+      "note": "River cities, artifacts, crafts, traders, transport, coinage and cautions about reconstructing early states."
+    },
+    {
+      "id": "mh-ncert-society",
+      "title": "NCERT, Kinship, Caste and Class: Early Societies",
+      "url": "https://sathee.iitk.ac.in/ncert-books/class-12/themes-in-indian-history/chapter-03-kinship-caste-and-class-early-societies/",
+      "note": "Households, patriliny, marriage, social prescriptions, property and the limits of elite textual evidence."
+    },
+    {
+      "id": "mh-ncert-belief",
+      "title": "NCERT, Thinkers, Beliefs and Buildings: Cultural Developments",
+      "url": "https://sathee.iitk.ac.in/ncert-books/class-12/themes-in-indian-history/chapter-04-thinkers-beliefs-and-buildings-cultural-developments/",
+      "note": "Religious plurality, oral and manuscript transmission, donors, monasteries and public reading of texts."
+    },
+    {
+      "id": "mh-ancient-education",
+      "title": "NCERT, Ancient Education System of India",
+      "url": "https://sathee.iitk.ac.in/ncert-books/class-08/nb-english/it-so-happend/chapter-08-ancient-education-system-of-india/",
+      "note": "Monastic study, debate, teacher-pupil learning and the range of subjects taught in ancient India."
+    },
+    {
+      "id": "mh-society-economy",
+      "title": "IGNOU, Unit 16: Society and Economy",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/20142/1/Unit-16.pdf",
+      "note": "Gahapati households, family labor, landholders, traders, kin groups and unequal access to resources."
+    },
+    {
+      "id": "mh-kumrahar-review",
+      "title": "Archaeological Survey of India, Indian Archaeology 1953-54: A Review",
+      "url": "https://nmma.nic.in/nmma/NAS1/nmma_doc/IAR/Indian%20Archaeology%201953-54%20A%20Review.pdf",
+      "note": "Official preliminary sequence at Kumrahar, including the structural phase dated about 100 to 300 CE."
+    },
+    {
+      "id": "mh-kushan-studies",
+      "title": "Archaeological Survey of India, Kushana Studies",
+      "url": "https://ignca.gov.in/Asi_data/61876.pdf",
+      "note": "Stratified Kushan coin horizon at Pataliputra, Kumrahar and Vaishali and its chronological limits."
+    },
+    {
+      "id": "mh-gupta-rise",
+      "title": "INFLIBNET, The Gupta Empire",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-gupta-empire/",
+      "note": "Third-century fragmentation, uncertain Gupta origins, early rulers and commencement of the Gupta era in 320."
+    },
+    {
+      "id": "mh-gupta-ignou",
+      "title": "IGNOU, Unit 32: Rise and Growth of Guptas",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/20162/1/Unit-32.pdf",
+      "note": "Critical survey of fourth-century political conditions, Gupta beginnings, sources and debated homeland theories."
+    },
+    {
+      "id": "mh-murunda-hypothesis",
+      "title": "Corpus Inscriptionum Indicarum, History and Chronology introduction",
+      "url": "https://ignca.gov.in/Asi_data/47214.pdf",
+      "note": "Older reconstruction combining Chinese, Greek and Jain reports to propose Murunda power in the Ganges valley."
+    },
+    {
+      "id": "mh-murunda-limit",
+      "title": "Corpus Inscriptionum Indicarum, Political History: the Murundas",
+      "url": "https://whatisindia.com/inscriptions/earlyguptakings/politicalhistory29.html",
+      "note": "Published warning that no securely identified Murunda inscription or coin confirms the proposed northern rule."
+    },
+    {
+      "id": "mh-bodhgaya",
+      "title": "UNESCO World Heritage Centre, Mahabodhi Temple Complex at Bodh Gaya",
+      "url": "https://whc.unesco.org/en/list/1056",
+      "note": "Site history, Ashokan foundation, later brick temple, pilgrimage, worship and successive construction phases."
+    },
+    {
+      "id": "mh-nalanda",
+      "title": "UNESCO World Heritage Centre, Archaeological Site of Nalanda Mahavihara",
+      "url": "https://whc.unesco.org/en/list/1502",
+      "note": "Early archaeological layers and the later fifth- to thirteenth-century monastic scholastic institution."
+    },
+    {
+      "id": "mh-gupta-inscriptions",
+      "title": "Archaeological Survey of India, Inscriptions of the Post-Mauryan and Pre-Gupta Period",
+      "url": "https://ignca.gov.in/Asi_data/83463.pdf",
+      "note": "Edition, translation and fourth- to fifth-century dating of the Kumrahar Arogya-vihara sealing."
+    },
+    {
+      "id": "mh-vaishali-review",
+      "title": "Archaeological Survey of India, Indian Archaeology 1958-59: A Review",
+      "url": "https://nmma.nic.in/nmma/NAS1/nmma_doc/IAR/Indian%20Archaeology%201958-59%20A%20Review.pdf",
+      "note": "Official Vaishali excavation summary for late Kushan and early Gupta ramparts, barracks and iron implements."
+    },
+    {
+      "id": "mh-vaishali-sanitation",
+      "title": "Tiwary and Saurabh, Ancient Toilet System: Evidences from Archaeology and Literature",
+      "url": "https://www.heritageuniversityofkerala.com/JournalPDF/Volume6/36.pdf",
+      "note": "Vaishali Museum toilet pan, attached toilet chamber, ring-well interpretation and Gupta-period dating."
+    },
+    {
+      "id": "mh-vaishali-food",
+      "title": "Indian Express, Remnants of a republic",
+      "url": "https://indianexpress.com/article/news-archive/print/remnants-of-a-republic/",
+      "note": "Report from ASI excavators and a palaeobotanist on rice, lentils, animal foods, drainage and a ring well."
+    },
+    {
+      "id": "mh-beads",
+      "title": "Krishna Kant Kishan, Beads from the Ancient Sites of Bihar",
+      "url": "https://www.heritageuniversityofkerala.com/JournalPDF/Volume9/63.pdf",
+      "note": "Catalogued materials and 100 to 300 CE stratigraphic phase for beads recovered at Kumrahar."
+    },
+    {
+      "id": "mh-makar",
+      "title": "Archaeological Survey of India, A Note on Makar Figurines",
+      "url": "https://ignca.gov.in/Asi_data/51105.pdf",
+      "note": "Kumrahar crocodile-headed vessel spout, its 100 to 300 CE context and cautious ritual interpretation."
+    },
+    {
+      "id": "mh-medicine",
+      "title": "Anatomy in ancient India: a focus on the Susruta Samhita",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3039177/",
+      "note": "Peer-reviewed overview of early Sanskrit medical learning, teacher-pupil training and uncertain textual dates."
+    },
+    {
+      "id": "mh-arogyavihara",
+      "title": "Anand Singh, Identification of Kumrahar as Asokarama",
+      "url": "https://ancient-asia-journal.com/upload/1/volume/Vol.%2016%20%282025%29/PDF/10_Anand%20Singh_AA.pdf",
+      "note": "Archaeological discussion of the Gupta-period monastery and sanatorium and its inscribed Brahmi sealing."
+    },
+    {
+      "id": "mh-pottery",
+      "title": "Anand Kumar, Pottery from Pataliputra",
+      "url": "https://ijrti.org/papers/IJRTI2403053.pdf",
+      "note": "Periodized Kumrahar pottery report, vessel forms, storage jars, hearth evidence and dating cautions."
+    },
+    {
+      "id": "mh-nmma-objects",
+      "title": "National Mission on Monuments and Antiquities, Bihar object catalogue",
+      "url": "https://nmma.nic.in/nmma/exploreState.do?pager.offset=3000&state=BR",
+      "note": "Government catalogue entries for wheels, sling balls and objects labeled hopscotch from Bihar sites."
+    },
+    {
+      "id": "mh-silkroad-vaishali",
+      "title": "UNESCO Tentative List, Silk Road Sites in India",
+      "url": "https://whc.unesco.org/en/tentativelists/5492/",
+      "note": "State Party description of Vaishali religious phases, brick-lined tank, bathing ghats and Kushan construction."
+    }
+  ],
+  "entities": [
+    {
+      "id": "magadha-200",
+      "card": "data/cards/magadha-200.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "mh-orbit",
+            "mh-pataliputra-exc",
+            "mh-map200",
+            "mh-map300"
+          ],
+          "locator": "Oxford overview of Magadha and Pataliputra returning to political prominence under the Gupta dynasty. Government excavation report for occupation, structures, coins, terracottas and dating limits at ancient Pataliputra. Decoded target geometry, coordinate hash, bounds, topology counts and point-in-polygon tests. Decoded successor snapshot showing the identical target coordinates relabeled as Gupta Empire.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "mh-kumrahar-review"
+          ],
+          "locator": "Official preliminary sequence at Kumrahar, including the structural phase dated about 100 to 300 CE.",
+          "dateScope": {
+            "from": 200,
+            "to": 215
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "mh-kushan-studies"
+          ],
+          "locator": "Stratified Kushan coin horizon at Pataliputra, Kumrahar and Vaishali and its chronological limits.",
+          "dateScope": {
+            "from": 215,
+            "to": 230
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "mh-gupta-rise"
+          ],
+          "locator": "Third-century fragmentation, uncertain Gupta origins, early rulers and commencement of the Gupta era in 320.",
+          "dateScope": {
+            "from": 230,
+            "to": 245
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "mh-murunda-hypothesis",
+            "mh-murunda-limit"
+          ],
+          "locator": "Older reconstruction combining Chinese, Greek and Jain reports to propose Murunda power in the Ganges valley. Published warning that no securely identified Murunda inscription or coin confirms the proposed northern rule.",
+          "dateScope": {
+            "from": 245,
+            "to": 265
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "mh-gupta-rise"
+          ],
+          "locator": "Third-century fragmentation, uncertain Gupta origins, early rulers and commencement of the Gupta era in 320.",
+          "dateScope": {
+            "from": 265,
+            "to": 285
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "mh-gupta-rise"
+          ],
+          "locator": "Third-century fragmentation, uncertain Gupta origins, early rulers and commencement of the Gupta era in 320.",
+          "dateScope": {
+            "from": 285,
+            "to": 300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "mh-gupta-rise",
+            "mh-map300"
+          ],
+          "locator": "Third-century fragmentation, uncertain Gupta origins, early rulers and commencement of the Gupta era in 320. Decoded successor snapshot showing the identical target coordinates relabeled as Gupta Empire.",
+          "dateScope": {
+            "from": 300,
+            "to": 320
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "mh-index",
+            "mh-map200"
+          ],
+          "locator": "Exact index row, coverage record and decoded target topology.",
+          "dateScope": {
+            "year": 200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "mh-map200"
+          ],
+          "locator": "Decoded bounding box and named point-in-polygon tests.",
+          "dateScope": {
+            "year": 200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "mh-mapbc1",
+            "mh-map100",
+            "mh-map200"
+          ],
+          "locator": "Point-owner tables across three decoded snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "mh-map200",
+            "mh-map300"
+          ],
+          "locator": "Exact geometry hashes and coordinate equality across the seam.",
+          "dateScope": {
+            "year": 300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "mh-index",
+            "mh-map400"
+          ],
+          "locator": "Related index rows, existing card audit and later point tests.",
+          "dateScope": {
+            "year": 400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "mh-ncert-states"
+          ],
+          "locator": "State-reconstruction discussion and Magadha regional background.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "mh-kumrahar-review",
+            "mh-kushan-studies"
+          ],
+          "locator": "Kumrahar Kushan finds and comparative stratified coin discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "mh-murunda-hypothesis",
+            "mh-murunda-limit"
+          ],
+          "locator": "Murunda reconstruction and the corpus warning about missing direct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "mh-gupta-rise"
+          ],
+          "locator": "Introduction on third-century fragmentation and new ruling families.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "mh-gupta-ignou"
+          ],
+          "locator": "Source criticism, early Gupta genealogy and disputed homeland.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mh-ncert-states"
+          ],
+          "locator": "New-cities section on Pataliputra and riverine communication routes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "mh-kumrahar-review"
+          ],
+          "locator": "Official structural sequence and target-period occupation at Kumrahar.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "mh-ncert-states"
+          ],
+          "locator": "Urban-populations section and its explicit excavation limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "mh-vaishali-review"
+          ],
+          "locator": "Period III fortification, barracks and iron finds in official review.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "mh-ncert-states"
+          ],
+          "locator": "Trade section on routes, travelers, transport and carried goods.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "mh-beads"
+          ],
+          "locator": "Kumrahar period III material list and date range.",
+          "dateScope": {
+            "year": 250
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "mh-pottery"
+          ],
+          "locator": "Kumrahar period III vessel forms and chronological comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "mh-makar"
+          ],
+          "locator": "Kumrahar makara spout, comparative dating and cautious function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "mh-kushan-studies"
+          ],
+          "locator": "Eastern Kushan material horizon and stratigraphic distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mh-bodhgaya",
+            "mh-silkroad-vaishali"
+          ],
+          "locator": "UNESCO site chronology and regional pattern of phased shrine rebuilding.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "mh-ncert-society"
+          ],
+          "locator": "Families and kinship introduction with source limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "mh-ncert-society"
+          ],
+          "locator": "Patriliny discussion and recorded exceptions to direct son succession.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "mh-ncert-society"
+          ],
+          "locator": "Varna, jati and historian cautions about prescriptive texts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "mh-society-economy"
+          ],
+          "locator": "Gahapati, household labor and unequal resource-control sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "mh-ncert-belief"
+          ],
+          "locator": "Donor inscriptions and contributions by bhikkhus and bhikkhunis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "mh-ncert-belief"
+          ],
+          "locator": "Chapter introduction on multiple traditions and oral and written transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "mh-ancient-education"
+          ],
+          "locator": "Vihara learning, debate and listed disciplines in ancient education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "mh-ncert-belief",
+            "mh-ancient-education"
+          ],
+          "locator": "Public reading and contrasting access to learned traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "mh-nalanda"
+          ],
+          "locator": "UNESCO brief synthesis distinguishing early layers from fifth-century institution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "mh-gupta-inscriptions"
+          ],
+          "locator": "Published sealing edition, translation, script and palaeographic date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "mh-vaishali-food"
+          ],
+          "locator": "Excavation-team report on plant and animal food remains and broad phases.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mh-pottery"
+          ],
+          "locator": "Kumrahar vessel catalogue and reported post-Mauryan hearth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "mh-beads"
+          ],
+          "locator": "Adornment materials and the evidentiary limits of small finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "mh-beads",
+            "mh-pottery"
+          ],
+          "locator": "Craft materials, production traces and interregional raw-material range.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "mh-nmma-objects"
+          ],
+          "locator": "Bihar catalogue entries and their missing target-period context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "mh-medicine"
+          ],
+          "locator": "Review of medical texts, training model, geography and uncertain dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "mh-arogyavihara",
+            "mh-gupta-inscriptions"
+          ],
+          "locator": "Gupta-period complex, seal legend and palaeographic dating.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "mh-vaishali-food"
+          ],
+          "locator": "Excavator statement on drainage, ring well and tentative disposal function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "mh-vaishali-sanitation"
+          ],
+          "locator": "Vaishali toilet pan measurements, attached chamber and Gupta dating.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "mh-silkroad-vaishali"
+          ],
+          "locator": "State Party description of tank, ghats and phased Kushan construction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "mh-vaishali-review",
+            "mh-society-economy"
+          ],
+          "locator": "Material record and social-economic account of coordinated work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "mh-map200",
+            "mh-map300"
+          ],
+          "locator": "Coordinate identity and repeated core-point exclusions at the seam.",
+          "dateScope": {
+            "year": 300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "mh-gupta-ignou"
+          ],
+          "locator": "Gupta-era opening and early consolidation discussion.",
+          "dateScope": {
+            "year": 320
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "mh-bodhgaya",
+            "mh-nalanda",
+            "mh-map400"
+          ],
+          "locator": "Later site chronologies and atlas inclusion of Magadha centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "mh-kumrahar-review"
+          ],
+          "locator": "Excavation limits and uneven survival of political and domestic evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "mh-gupta-ignou",
+            "mh-map200",
+            "mh-map300",
+            "mh-map400"
+          ],
+          "locator": "Critical survey of fourth-century political conditions, Gupta beginnings, sources and debated homeland theories. Decoded target geometry, coordinate hash, bounds, topology counts and point-in-polygon tests. Decoded successor snapshot showing the identical target coordinates relabeled as Gupta Empire. Decoded later Gupta geometry used to test when the atlas finally includes the Magadha heartland.",
+          "dateScope": {
+            "year": 320
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "magadha-200",
+        "card": "cards/magadha-200.json",
+        "dateBasis": "map_coverage",
+        "summary": "A poorly documented third-century Magadha region whose atlas polygon omits its historical heartland and changes to Gupta too early.",
+        "fell": {
+          "year": 320,
+          "to": [
+            "gupta-empire"
+          ],
+          "text": "Around 319 to 320, emerging Gupta rule begins the next separately carded political phase in Magadha."
+        },
+        "successors": [
+          "gupta-empire"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "magadha-200",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            75.36135361353615,
+            21.017217239672533,
+            93.7719377193772,
+            33.509258501943066
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target magadha-200 is indexed circa 200 to 300 CE and was missing a card and override at initial audit.",
+    "Its only geometry is world-200: one Polygon, one ring and 76 positions, bbox 75.361354 to 93.771938 east and 21.017217 to 33.509259 north.",
+    "Vaishali, Champa, Varanasi, Kaushambi, Mathura and Tamralipti test inside; Pataliputra, Rajgir, Gaya, Bodh Gaya, Nalanda, Vidisha and Ujjain test outside.",
+    "At 300 the same 76-coordinate geometry and hash are relabeled gupta-empire, roughly twenty years before the indexed historical Gupta start in 320.",
+    "The 400 Gupta geometry finally contains every tested Magadha center. The map seam is therefore not reliable territorial chronology.",
+    "Existing magadha, maurya-empire and gupta-empire cards remain separate; appliesTo is omitted and no shared mapping is changed.",
+    "The historical 200 to 300 CE king list is unresolved. Kushan material is real; continuous direct Kushan rule and Murunda rule at Pataliputra remain interpretations."
+  ]
+}
