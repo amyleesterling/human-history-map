@@ -1,0 +1,1184 @@
+{
+  "version": 1,
+  "region": "Oceania",
+  "researcher": "Codex parallel polynesians research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "poly-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Repository source checked at the frozen bundle revision. The record is id polynesians, name Polynesians, circa 1000-1900, kind culture, generated from historical basemaps. Its alias Beothuk is inconsistent with the name and Pacific geometry and is treated as catalog contamination, not as identity evidence."
+    },
+    {
+      "id": "poly-coverage",
+      "title": "Human History Map, generated coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Repository coverage record checked: 18 consecutive polygon intervals from 1000-1100 through 1880-1900, no card before this draft. Simultaneous named records were separately audited rather than merged into this broad label."
+    },
+    {
+      "id": "poly-geom-hawaii",
+      "title": "Human History Map, world-1000 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded with topojson-client. The polynesians feature for 1000-1100 is a three-part MultiPolygon with 48 positions and bbox -158.46458464584646,18.94575359308675 to -154.91854918549186,21.689646959512046. The three parts are Hawaiʻi, Oʻahu and Maui, not a boundary around Polynesia."
+    },
+    {
+      "id": "poly-geom-1492",
+      "title": "Human History Map, world-1492 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded with topojson-client. The polynesians and ko-hawai-i-pae-aina-hawaiian-kingdom features have the same three island rings and bbox for 1492-1500; their coordinate lists begin at different vertices. This is duplicate atlas coverage, not evidence of a Hawaiian Kingdom in 1492."
+    },
+    {
+      "id": "poly-geom-rapa",
+      "title": "Human History Map, world-1815 historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Decoded with topojson-client. For 1815-1878 the polynesians feature becomes a single 13-position Polygon around Rapa Nui, bbox -109.45009450094501,-27.201292477440305 to -109.21969219692197,-27.062641982048874. Nearly identical single polygons continue to 1900."
+    },
+    {
+      "id": "west-settlement",
+      "title": "UNESCO World Heritage Centre, Lapita Pottery Archaeological Sites, Tonga tentative-list submission",
+      "url": "https://whc.unesco.org/en/tentativelists/5168/",
+      "note": "Tonga National Commission for UNESCO submission checked. It reports more than 30 Tongan Lapita sites, initial settlement around 2,800 years ago, beach and small-island locations, decorated and plain pottery, shell and stone artifacts, faunal remains, transported food resources, and ongoing debate about ultimate origins."
+    },
+    {
+      "id": "east-chronology",
+      "title": "Wilmshurst, Hunt, Lipo and Anderson, High-precision radiocarbon dating of East Polynesian colonization, PNAS",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3033267/",
+      "note": "Peer-reviewed open article checked. Its screened short-lived samples support Society Islands settlement about 1025-1120 and a later major pulse about 1190-1290. The authors call the model falsifiable and explain why older charcoal and marine samples can produce misleadingly early dates."
+    },
+    {
+      "id": "settlement-rethink",
+      "title": "University of Otago repository, Understanding the human settlement of the Pacific: Are we there yet?",
+      "url": "https://ourarchive.otago.ac.nz/esploro/outputs/journalArticle/Understanding-the-human-settlement-of-the/9926753237401891",
+      "note": "Peer-reviewed 2025 Journal of Archaeological Science record checked. Matisoo-Smith and Gosling review genomic changes to settlement models, stress limitations in present evidence, propose testable hypotheses, and call for Pacific voices in research design and interpretation."
+    },
+    {
+      "id": "wayfinding",
+      "title": "Polynesian Voyaging Society, Polynesian Wayfinding",
+      "url": "https://hokulea.com/polynesian-wayfinding/",
+      "note": "Indigenous-led voyaging institution page checked. It describes non-instrument wayfinding with stars, sun, swells and other environmental signs, and identifies the Hawaiian star compass as a modern system developed by Nainoa Thompson from learning with Satawalese master navigator Mau Piailug."
+    },
+    {
+      "id": "taputapuatea",
+      "title": "UNESCO World Heritage Centre, Taputapuātea",
+      "url": "https://whc.unesco.org/en/list/1529/",
+      "note": "World Heritage entry checked. The Raʻiātea cultural landscape includes valleys, lagoon, reef and ocean; its marae was political, ceremonial and funerary. UNESCO describes an alliance linked by chiefly gatherings and voyaging, not a single government ruling all Polynesian peoples."
+    },
+    {
+      "id": "tonga-capitals",
+      "title": "UNESCO World Heritage Centre, Ancient Capitals of the Kingdom of Tonga",
+      "url": "https://whc.unesco.org/en/tentativelists/5167",
+      "note": "Tonga National Commission submission checked. It describes Heketā and Lapaha, monumental stone structures, about 22 royal tomb platforms, and Lapaha as a chiefly centre of a Tongan maritime chiefdom from the thirteenth to nineteenth centuries. Living burial traditions are also noted."
+    },
+    {
+      "id": "samoa-society",
+      "title": "National Park of American Samoa, The Heart of American Samoa: Its People and Culture",
+      "url": "https://home.nps.gov/npsa/learn/historyculture/people.htm",
+      "note": "Official park page checked. It defines aiga as extended family, matai leadership as service, village fono as councils of family titleholders, communal land, shared work and resources, respect for elders, and living faʻasamoa. These Samoan patterns are not generalized to every Polynesian society."
+    },
+    {
+      "id": "maori-society",
+      "title": "Te Ara, Māori: Pre-European society",
+      "url": "https://teara.govt.nz/en/maori/page-2",
+      "note": "New Zealand national encyclopedia page checked for whānau, hapū and iwi relationships, rangatira leadership, mana and tapu, regional authority and exchange. It does not describe one Māori state, still less one pan-Polynesian state."
+    },
+    {
+      "id": "hawaii-unification",
+      "title": "US National Park Service, Kamehameha Begins His Bid for Power",
+      "url": "https://www.nps.gov/puhe/learn/historyculture/stories.htm",
+      "note": "Official historical narrative checked. It distinguishes Kamehameha control of Hawaiʻi Island, conquest of Maui, Lānaʻi, Molokaʻi and Oʻahu by 1795, and Kauaʻi paramount chief Kaumualiʻi acknowledging supremacy in 1810, completing the consolidation of the Hawaiian Kingdom."
+    },
+    {
+      "id": "hawaii-food",
+      "title": "US National Park Service, Food, Subsistence, and Agriculture in Hawaiʻi",
+      "url": "https://home.nps.gov/locations/hawaii/food.htm",
+      "note": "Official overview checked. It describes Polynesian-introduced food plants, wet and dry taro cultivation, terraced pondfields, diverted water, breadfruit, sweet potato, yam, banana, coconut, sugar cane and other crops. Practices and crop mixes varied by island and environment."
+    },
+    {
+      "id": "hawaii-fishpond",
+      "title": "US National Park Service, Huilua Fishpond National Historic Landmark",
+      "url": "https://www.nps.gov/places/huilua-fishpond.htm",
+      "note": "Official landmark account checked. Huilua had a 500-foot stone seawall, two sluice gates, mixed fresh and salt water, smaller nursery ponds, cultivated algae and specialist caretakers. Construction date is unknown; many Hawaiian ponds were built between about 1200 and 1600."
+    },
+    {
+      "id": "rapa-heritage",
+      "title": "UNESCO World Heritage Centre, Rapa Nui National Park",
+      "url": "https://whc.unesco.org/en/list/715/",
+      "note": "World Heritage entry checked for Rapa Nui as a distinct society of Polynesian origin and for moai, ahu and other archaeological landscapes. Monument dates, functions and environmental narratives are not treated as a complete or uncontested biography of the living Rapa Nui people."
+    },
+    {
+      "id": "marquesas-heritage",
+      "title": "UNESCO World Heritage Centre, Te Henua Enata - The Marquesas Islands",
+      "url": "https://whc.unesco.org/en/list/1707",
+      "note": "World Heritage entry checked. It dates maritime arrival around 1000 CE and describes paepae house and ceremonial platforms, tohua gathering places, meʻae sacred spaces, agriculture, marine adaptation, demographic collapse and assimilation after European contact, and living Ènata language and narratives."
+    },
+    {
+      "id": "lakalaka",
+      "title": "UNESCO Intangible Cultural Heritage, Lakalaka, dances and sung speeches of Tonga",
+      "url": "https://ich.unesco.org/en/RL/lakalaka-dances-and-sung-speeches-of-tonga-00072",
+      "note": "UNESCO living-heritage entry checked. Lakalaka blends choreography, oratory and polyphonic music; large groups may number in the hundreds. The punake combines the roles of poet, composer, choreographer and director, renewing themes of history, legend, values and social structure."
+    },
+    {
+      "id": "ie-samoa",
+      "title": "UNESCO Intangible Cultural Heritage, ʻIe Samoa, fine mat and its cultural value",
+      "url": "https://ich.unesco.org/en/RL/ie-samoa-fine-mat-and-its-cultural-value-01499",
+      "note": "UNESCO nomination and inscription materials checked. Fine pandanus strips are woven into mats used in ceremonies and exchanges; work can take months or years, is measured in handspans, and is transmitted through families, master weavers and village committees."
+    },
+    {
+      "id": "maori-childhood",
+      "title": "Te Ara, Ngā tamariki: Māori childhoods",
+      "url": "https://teara.govt.nz/en/nga-tamariki-maori-childhoods",
+      "note": "New Zealand national encyclopedia entry checked. It describes children raised within extended whānau and hapū, whāngai care, grandparents teaching traditions, learning by watching and copying, and games including kites, string games, knucklebones and small flax canoes."
+    },
+    {
+      "id": "maori-education",
+      "title": "Te Ara, Education in traditional Māori society",
+      "url": "https://teara.govt.nz/en/maori-education-matauranga/page-1",
+      "note": "Entry checked. It distinguishes broad practical learning through family, games, observation, cooperation and apprenticeship from selective whare wānanga instruction. Songs, proverbs, histories, stories and genealogy transmitted knowledge in an oral culture; practices varied among iwi."
+    },
+    {
+      "id": "maori-medicine",
+      "title": "Te Ara, Te hauora Māori i mua: history of Māori health",
+      "url": "https://teara.govt.nz/en/te-hauora-maori-i-mua-history-of-maori-health/print",
+      "note": "Entry checked for Māori-specific healing and public health: karakia and ritual, medicinal plants, massage, water, splinting, stitching with flax fibre, separation of latrines, graded water uses, and the health effects of introduced infections. It explicitly notes limits of historical evidence and changing practice."
+    },
+    {
+      "id": "hawaii-medicine",
+      "title": "University of Hawaiʻi John A. Burns School of Medicine, Māla Lāʻau Lapaʻau",
+      "url": "https://dnhh.hawaii.edu/about/mala.html",
+      "note": "Native Hawaiian Health department page checked. Its traditional healing garden contains endemic and Indigenous plants selected with Native Hawaiian cultural experts, including ʻawa, kukui, pōpolo and ʻōhiʻa lehua, and is dedicated to ancestral health and healing knowledge."
+    },
+    {
+      "id": "maori-sanitation",
+      "title": "Te Ara, Sewage, water and waste: Māori and colonial settlements",
+      "url": "https://teara.govt.nz/en/sewage-water-and-waste/page-1",
+      "note": "Entry checked. It describes early Māori rubbish sites, designated waste responsibilities, latrines designed to avoid accumulation, protected storehouses, graded water uses and disposing of used water on land. These are Māori examples, not evidence for identical arrangements on every island."
+    },
+    {
+      "id": "writing-maori",
+      "title": "Te Ara, Te reo Māori: writing down Māori",
+      "url": "https://teara.govt.nz/en/te-reo-maori-the-maori-language/page-2",
+      "note": "Entry checked. Māori was transmitted orally before European alphabetic writing; early spelling varied. The first book appeared in 1815 and an 1820 grammar developed foundations of the later orthography with contributions from chiefs Hongi Hika and Waikato as well as missionaries and a linguist."
+    },
+    {
+      "id": "writing-sample",
+      "title": "Manatū Taonga NZHistory, He Whakaputanga, 1835: transcript and translations",
+      "url": "https://nzhistory.govt.nz/media/interactive/he-whakaputanga-declaration-independence-1835",
+      "note": "Official page checked against the Archives New Zealand document. It supplies the 1835 Māori transcript, Mānuka Hēnare translation, English drafting history and signatories. Original orthography used waka where modern Māori normally writes whaka; translation choices are contextual, not word-for-word equivalences."
+    },
+    {
+      "id": "hawaiian-printing",
+      "title": "Hawaiian Mission Houses Digital Archive, first Hawaiian alphabet primer page, 1822",
+      "url": "https://hmha.missionhouses.org/items/show/4394",
+      "note": "Archive catalog record and image metadata checked. It identifies the first page of the first book printed by Elisha Loomis on the mission press in January 1822. It documents one local alphabetic print tradition, not a script shared across Polynesia."
+    },
+    {
+      "id": "rongorongo",
+      "title": "British Museum, kohau rongorongo tablet Oc1903,-.150",
+      "url": "https://www.britishmuseum.org/collection/object/E_Oc1903-150",
+      "note": "Museum catalog checked. The Thespesia populnea wood tablet carries pictographic motifs and is assigned broadly to the eighteenth or early nineteenth century. The catalog records material, dimensions, provenance and bibliography but does not offer a decipherment."
+    },
+    {
+      "id": "rongorongo-status",
+      "title": "British Museum Magazine, Rongorongo: an undeciphered script",
+      "url": "https://www.britishmuseum.org/sites/default/files/2020-11/British_Museum_Magazine_Autumn2020_reducedsize.pdf",
+      "note": "British Museum Magazine pages 44-45 checked. The curatorial essay calls rongorongo undeciphered, notes that surviving tablets are not formally dated, and presents proto-writing versus full writing and pre-contact versus post-contact origin as unresolved questions. Claimed translations are not treated as established."
+    },
+    {
+      "id": "hawaii-disease",
+      "title": "Hawaiʻi State Energy Office, Hawaiʻi Cultural Narrative",
+      "url": "https://energy.hawaii.gov/wp-content/uploads/2022/10/HSEO-Cultural-Narrative_FINAL.pdf",
+      "note": "State cultural narrative checked, especially Population Loss Caused by Disease. It attributes severe post-1778 Native Hawaiian population decline to introduced infections and explains resulting loss of people, homes, gardens, fishponds, stories and practices. Exact pre-contact population estimates remain debated and are omitted."
+    },
+    {
+      "id": "tahiti-colonial",
+      "title": "French Polynesia Heritage Archives, Tahiti becomes French, 29 June 1880",
+      "url": "https://www.archives.pf/136-ans-dhistoire-29-juin-1880-tahiti-devient-francais/",
+      "note": "Official archives page checked. It dates French annexation of the Marquesas to 1842, an imposed Tahitian protectorate later confirmed in 1847, reduced powers of Queen Pōmare IV, and Pōmare V transfer of protectorate territories to France in 1880. It does not cover every island identically."
+    },
+    {
+      "id": "maori-colonial",
+      "title": "Manatū Taonga NZHistory, History of New Zealand 1769-1914",
+      "url": "https://nzhistory.govt.nz/comment/21377",
+      "note": "Official overview checked for the Kīngitanga, New Zealand Wars, confiscation, Native Land Court, Tītokowaru, Te Kooti and Parihaka. It distinguishes differing Māori choices and regional effects; resistance was armed, diplomatic, religious and nonviolent at different times."
+    },
+    {
+      "id": "rapa-incorporation",
+      "title": "Chile National Cultural Heritage Service, return of the 1888 Agreement of Wills to Rapa Nui representatives",
+      "url": "https://www.patrimoniocultural.gob.cl/noticias/ministerio-de-las-culturas-entrega-historico-acuerdo-de-voluntades-de-1888-representantes",
+      "note": "Official 8 May 2026 notice checked. It dates the bilingual Vaʻai Haŋa Kaiŋa and Vanaŋa Haʻaki Agreement of Wills to 9 September 1888 and describes it as formalizing incorporation. The card pairs that state description with the service’s background study on contested promises and later colonial leasing."
+    },
+    {
+      "id": "rapa-colonial-memory",
+      "title": "Chile National Cultural Heritage Service, background study for renewal of the Rapa Nui museum",
+      "url": "https://www.patrimoniocultural.gob.cl/sites/www.patrimoniocultural.gob.cl/files/2024-08/Anexo%20I.%20Antecedentes%20Generales%20RN.pdf",
+      "note": "Official background study checked. It describes nineteenth-century slave raids, epidemics, missionary and commercial land pressures, the 1888 agreement and promised protection, later sheep-company leasing, disrupted genealogy and authority, loss of rongorongo knowledge, and continuing Rapa Nui memory and repatriation concerns."
+    },
+    {
+      "id": "hawaii-resistance",
+      "title": "US National Archives, 1897 petition against annexation of Hawaiʻi",
+      "url": "https://www.archives.gov/press/press-releases/1999/nr99-103",
+      "note": "National Archives description checked. The 556-page petition carried 21,169 signatures from seven main islands and provides strong evidence that most Native Hawaiians did not seek annexation in 1897. It is resistance evidence, not a referendum or a census of every opinion."
+    },
+    {
+      "id": "samoa-colonial",
+      "title": "National Park of American Samoa, History and the Islands of Samoa",
+      "url": "https://www.nps.gov/npsa/learn/historyculture/history-and-the-islands-of-samoa.htm",
+      "note": "Official park history checked. It distinguishes the Samoan archipelago from its later political division, describes aiga and matai institutions, sustained nineteenth-century foreign intervention, and the 1899 Treaty of Berlin division. Living faʻasamoa continued across political borders."
+    },
+    {
+      "id": "hokulea-continuity",
+      "title": "Polynesian Voyaging Society, 45th anniversary of Hōkūleʻa’s 1976 Hawaiʻi-Tahiti voyage",
+      "url": "https://worldwidevoyage.hokulea.com/hokule%CA%BBa-and-hikianalia-sail-to-honolua-bay-maui-on-45th-anniversary-of-hokule%CA%BBas-maiden-voyage-to-tahiti/",
+      "note": "Indigenous-led institution account checked. It identifies the 1976 voyage, Micronesian master navigator Mau Piailug, a Hawaiian and Pacific crew, use of wind, waves, stars, birds and clouds, and the voyage’s role in renewing Hawaiian voyaging and language commitments."
+    },
+    {
+      "id": "kohanga-continuity",
+      "title": "Te Kōhanga Reo National Trust, Te Orokohanganga",
+      "url": "https://www.kohanga.ac.nz/kaupapa/te-oorokohanganga",
+      "note": "Māori-led national trust history checked. It records the first kōhanga reo at Pukeatua in 1982, whānau governance, immersion in te reo Māori and intergenerational community action. Used as one specific continuity example, not as a proxy for all Polynesian language movements."
+    }
+  ],
+  "entities": [
+    {
+      "id": "polynesians",
+      "card": "data/cards/polynesians.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "poly-index",
+            "hokulea-continuity",
+            "kohanga-continuity"
+          ],
+          "locator": "Repository source checked at the frozen bundle revision. The record is id polynesians, name Polynesians, circa 1000-1900, kind culture, generated from historical basemaps. Its alias Beothuk is inconsistent with the name and Pacific geometry and is treated as catalog contamination, not as identity evidence. Indigenous-led institution account checked. It identifies the 1976 voyage, Micronesian master navigator Mau Piailug, a Hawaiian and Pacific crew, use of wind, waves, stars, birds and clouds, and the voyage’s role in renewing Hawaiian voyaging and language commitments. Māori-led national trust history checked. It records the first kōhanga reo at Pukeatua in 1982, whānau governance, immersion in te reo Māori and intergenerational community action. Used as one specific continuity example, not as a proxy for all Polynesian language movements.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "west-settlement",
+            "east-chronology",
+            "poly-geom-hawaii"
+          ],
+          "locator": "Tonga National Commission for UNESCO submission checked. It reports more than 30 Tongan Lapita sites, initial settlement around 2,800 years ago, beach and small-island locations, decorated and plain pottery, shell and stone artifacts, faunal remains, transported food resources, and ongoing debate about ultimate origins. Peer-reviewed open article checked. Its screened short-lived samples support Society Islands settlement about 1025-1120 and a later major pulse about 1190-1290. The authors call the model falsifiable and explain why older charcoal and marine samples can produce misleadingly early dates. Decoded with topojson-client. The polynesians feature for 1000-1100 is a three-part MultiPolygon with 48 positions and bbox -158.46458464584646,18.94575359308675 to -154.91854918549186,21.689646959512046. The three parts are Hawaiʻi, Oʻahu and Maui, not a boundary around Polynesia.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "east-chronology",
+            "settlement-rethink"
+          ],
+          "locator": "Peer-reviewed open article checked. Its screened short-lived samples support Society Islands settlement about 1025-1120 and a later major pulse about 1190-1290. The authors call the model falsifiable and explain why older charcoal and marine samples can produce misleadingly early dates. Peer-reviewed 2025 Journal of Archaeological Science record checked. Matisoo-Smith and Gosling review genomic changes to settlement models, stress limitations in present evidence, propose testable hypotheses, and call for Pacific voices in research design and interpretation.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tonga-capitals",
+            "taputapuatea",
+            "samoa-society",
+            "maori-society"
+          ],
+          "locator": "Tonga National Commission submission checked. It describes Heketā and Lapaha, monumental stone structures, about 22 royal tomb platforms, and Lapaha as a chiefly centre of a Tongan maritime chiefdom from the thirteenth to nineteenth centuries. Living burial traditions are also noted. World Heritage entry checked. The Raʻiātea cultural landscape includes valleys, lagoon, reef and ocean; its marae was political, ceremonial and funerary. UNESCO describes an alliance linked by chiefly gatherings and voyaging, not a single government ruling all Polynesian peoples. Official park page checked. It defines aiga as extended family, matai leadership as service, village fono as councils of family titleholders, communal land, shared work and resources, respect for elders, and living faʻasamoa. These Samoan patterns are not generalized to every Polynesian society. New Zealand national encyclopedia page checked for whānau, hapū and iwi relationships, rangatira leadership, mana and tapu, regional authority and exchange. It does not describe one Māori state, still less one pan-Polynesian state.",
+          "dateScope": {
+            "from": 1500,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "samoa-society",
+            "taputapuatea",
+            "poly-coverage"
+          ],
+          "locator": "Official park page checked. It defines aiga as extended family, matai leadership as service, village fono as councils of family titleholders, communal land, shared work and resources, respect for elders, and living faʻasamoa. These Samoan patterns are not generalized to every Polynesian society. World Heritage entry checked. The Raʻiātea cultural landscape includes valleys, lagoon, reef and ocean; its marae was political, ceremonial and funerary. UNESCO describes an alliance linked by chiefly gatherings and voyaging, not a single government ruling all Polynesian peoples. Repository coverage record checked: 18 consecutive polygon intervals from 1000-1100 through 1880-1900, no card before this draft. Simultaneous named records were separately audited rather than merged into this broad label.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1783
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "hawaii-unification",
+            "hawaii-disease"
+          ],
+          "locator": "Official historical narrative checked. It distinguishes Kamehameha control of Hawaiʻi Island, conquest of Maui, Lānaʻi, Molokaʻi and Oʻahu by 1795, and Kauaʻi paramount chief Kaumualiʻi acknowledging supremacy in 1810, completing the consolidation of the Hawaiian Kingdom. State cultural narrative checked, especially Population Loss Caused by Disease. It attributes severe post-1778 Native Hawaiian population decline to introduced infections and explains resulting loss of people, homes, gardens, fishponds, stories and practices. Exact pre-contact population estimates remain debated and are omitted.",
+          "dateScope": {
+            "from": 1783,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "poly-geom-rapa",
+            "writing-sample"
+          ],
+          "locator": "Decoded with topojson-client. For 1815-1878 the polynesians feature becomes a single 13-position Polygon around Rapa Nui, bbox -109.45009450094501,-27.201292477440305 to -109.21969219692197,-27.062641982048874. Nearly identical single polygons continue to 1900. Official page checked against the Archives New Zealand document. It supplies the 1835 Māori transcript, Mānuka Hēnare translation, English drafting history and signatories. Original orthography used waka where modern Māori normally writes whaka; translation choices are contextual, not word-for-word equivalences.",
+          "dateScope": {
+            "from": 1815,
+            "to": 1842
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "tahiti-colonial",
+            "maori-colonial",
+            "rapa-colonial-memory"
+          ],
+          "locator": "Official archives page checked. It dates French annexation of the Marquesas to 1842, an imposed Tahitian protectorate later confirmed in 1847, reduced powers of Queen Pōmare IV, and Pōmare V transfer of protectorate territories to France in 1880. It does not cover every island identically. Official overview checked for the Kīngitanga, New Zealand Wars, confiscation, Native Land Court, Tītokowaru, Te Kooti and Parihaka. It distinguishes differing Māori choices and regional effects; resistance was armed, diplomatic, religious and nonviolent at different times. Official background study checked. It describes nineteenth-century slave raids, epidemics, missionary and commercial land pressures, the 1888 agreement and promised protection, later sheep-company leasing, disrupted genealogy and authority, loss of rongorongo knowledge, and continuing Rapa Nui memory and repatriation concerns.",
+          "dateScope": {
+            "from": 1842,
+            "to": 1880
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "tahiti-colonial",
+            "rapa-incorporation",
+            "rapa-colonial-memory",
+            "hawaii-resistance",
+            "samoa-colonial"
+          ],
+          "locator": "Official archives page checked. It dates French annexation of the Marquesas to 1842, an imposed Tahitian protectorate later confirmed in 1847, reduced powers of Queen Pōmare IV, and Pōmare V transfer of protectorate territories to France in 1880. It does not cover every island identically. Official 8 May 2026 notice checked. It dates the bilingual Vaʻai Haŋa Kaiŋa and Vanaŋa Haʻaki Agreement of Wills to 9 September 1888 and describes it as formalizing incorporation. The card pairs that state description with the service’s background study on contested promises and later colonial leasing. Official background study checked. It describes nineteenth-century slave raids, epidemics, missionary and commercial land pressures, the 1888 agreement and promised protection, later sheep-company leasing, disrupted genealogy and authority, loss of rongorongo knowledge, and continuing Rapa Nui memory and repatriation concerns. National Archives description checked. The 556-page petition carried 21,169 signatures from seven main islands and provides strong evidence that most Native Hawaiians did not seek annexation in 1897. It is resistance evidence, not a referendum or a census of every opinion. Official park history checked. It distinguishes the Samoan archipelago from its later political division, describes aiga and matai institutions, sustained nineteenth-century foreign intervention, and the 1899 Treaty of Berlin division. Living faʻasamoa continued across political borders.",
+          "dateScope": {
+            "from": 1880,
+            "to": 1900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "poly-index"
+          ],
+          "locator": "Exact polynesians object in data/hb/civilizations-hb.json; compared name, alias, dates, kind and generated field.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "poly-geom-hawaii"
+          ],
+          "locator": "Decoded all fifteen world-1000 through world-1800 target features; representative exact counts and bbox come from world-1000.json.",
+          "dateScope": null,
+          "uncertainty": "Coordinates describe imported atlas geometry, not cultural or political borders."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "poly-geom-1492",
+            "hawaii-unification"
+          ],
+          "locator": "Decoded both features in world-1492.json and canonicalized closed rings; NPS history supplies the separate 1795 and 1810 political chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "poly-geom-rapa",
+            "poly-coverage"
+          ],
+          "locator": "Decoded world-1815, world-1878 and world-1880; cross-checked indexed lifetimes and all observed intervals in coverage.json.",
+          "dateScope": null,
+          "uncertainty": "Named atlas records are imported labels with their own review needs; the list describes database overlap, not an exhaustive list of Polynesian peoples."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "west-settlement"
+          ],
+          "locator": "UNESCO tentative-list Description, Lapita sites in general and Statements of authenticity sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "east-chronology"
+          ],
+          "locator": "PNAS abstract, Methods, Results and Conclusions; reliability classes and modeled ranges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "settlement-rethink"
+          ],
+          "locator": "University of Otago repository abstract and peer-review metadata for the 2025 Journal of Archaeological Science article.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "wayfinding"
+          ],
+          "locator": "Polynesian Voyaging Society sections on modern non-instrument navigation and the Hawaiian star compass.",
+          "dateScope": null,
+          "uncertainty": "Modern documented practice helps explain knowledge systems; it is not a word-for-word reconstruction of every medieval voyage."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "taputapuatea"
+          ],
+          "locator": "UNESCO property description and Statement of Outstanding Universal Value on the marae, alliance and voyaging network.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "tonga-capitals"
+          ],
+          "locator": "UNESCO tentative-list description of Lapaha, royal tombs and the Tongan maritime chiefdom.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "hawaii-food"
+          ],
+          "locator": "NPS sections on introduced plants, taro, wet pondfields and dry cultivation.",
+          "dateScope": null,
+          "uncertainty": "Hawaiian evidence is a regional example, not a claim of identical agriculture throughout Polynesia."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "hawaii-fishpond"
+          ],
+          "locator": "NPS landmark description of wall dimensions, streams, brackish water, nursery ponds, algae, gates and kiaʻi loko.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "rapa-heritage"
+          ],
+          "locator": "UNESCO Rapa Nui National Park description and criteria; claim limited to the named island and monuments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "marquesas-heritage"
+          ],
+          "locator": "UNESCO Te Henua Enata property description and criteria for settlement, platforms and land-sea adaptation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "lakalaka"
+          ],
+          "locator": "UNESCO intangible-heritage description of performers, rows, movement, themes and the punake.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/5/text",
+          "sourceIds": [
+            "ie-samoa"
+          ],
+          "locator": "UNESCO nomination and inscription description of materials, dimensions, time, exchange and transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "samoa-society"
+          ],
+          "locator": "NPS Family and Community, Matai System and Fono sections; presented only as a Samoan case.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "maori-childhood"
+          ],
+          "locator": "Te Ara story summary and traditional-childhood sections on whānau, whāngai, learning and games.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "maori-education"
+          ],
+          "locator": "Te Ara Process of learning, Rituals and transmission, and Whare wānanga sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "maori-medicine"
+          ],
+          "locator": "Te Ara Beliefs about ill health and Healing practices sections, including named treatments and cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "hawaii-medicine"
+          ],
+          "locator": "University of Hawaiʻi Department of Native Hawaiian Health description of the māla and its selected plants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/5/text",
+          "sourceIds": [
+            "maori-sanitation"
+          ],
+          "locator": "Te Ara Māori public hygiene section, including waste sites, latrines, storehouses and graded water uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/6/text",
+          "sourceIds": [
+            "hawaii-food",
+            "hawaii-fishpond"
+          ],
+          "locator": "NPS agriculture and Huilua pages; combined claim limited to documented Hawaiian systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "writing-maori",
+            "hawaiian-printing",
+            "rongorongo-status"
+          ],
+          "locator": "Te Ara writing-down-Māori section, Hawaiian Mission Houses 1822 primer catalog and British Museum rongorongo discussion; the absence claim is limited to a shared pan-Polynesian script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "writing-sample"
+          ],
+          "locator": "He Whakaputanga article 1, Mānuka Hēnare translation and NZHistory orthography note.",
+          "dateScope": {
+            "year": 1835
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "writing-sample"
+          ],
+          "locator": "NZHistory document title, drafting and scribal history, signatory context and translations.",
+          "dateScope": {
+            "year": 1835
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "rongorongo",
+            "rongorongo-status"
+          ],
+          "locator": "British Museum object catalog for the tablet and British Museum Magazine pages 44-45 for dating and undeciphered status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "hawaii-disease",
+            "marquesas-heritage"
+          ],
+          "locator": "Hawaiʻi Cultural Narrative Population Loss section and UNESCO Marquesas continuity and demographic-collapse discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "maori-colonial"
+          ],
+          "locator": "NZHistory sections on Kīngitanga, New Zealand Wars, raupatu, Native Land Court and Parihaka.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tahiti-colonial"
+          ],
+          "locator": "French Polynesia Heritage Archives chronology of the Marquesas, Tahitian protectorate, war, royal authority and 1880 colonial administration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "rapa-incorporation",
+            "rapa-colonial-memory"
+          ],
+          "locator": "Official 2026 return notice and 2024 museum-renewal background, read together to preserve both the state description and community memory.",
+          "dateScope": {
+            "year": 1888
+          },
+          "uncertainty": "The card does not turn a contested bilingual agreement into a simple or unanimous modern sovereignty story."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "hawaii-resistance"
+          ],
+          "locator": "US National Archives description of the petition, its physical extent, island coverage, signature count and evidentiary limit.",
+          "dateScope": {
+            "year": 1897
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/5/text",
+          "sourceIds": [
+            "samoa-colonial"
+          ],
+          "locator": "NPS historical overview of the archipelago, foreign rivalry, 1899 division and cultural continuity.",
+          "dateScope": {
+            "year": 1899
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "hokulea-continuity",
+            "kohanga-continuity"
+          ],
+          "locator": "Indigenous-led institution account checked. It identifies the 1976 voyage, Micronesian master navigator Mau Piailug, a Hawaiian and Pacific crew, use of wind, waves, stars, birds and clouds, and the voyage’s role in renewing Hawaiian voyaging and language commitments. Māori-led national trust history checked. It records the first kōhanga reo at Pukeatua in 1982, whānau governance, immersion in te reo Māori and intergenerational community action. Used as one specific continuity example, not as a proxy for all Polynesian language movements.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "polynesians",
+        "card": "cards/polynesians.json",
+        "summary": "Many living Polynesian peoples developed connected voyaging worlds and distinct societies. This card separates their histories from an atlas marker that shows only Hawaiʻi and then Rapa Nui, and follows navigation, family life, technology, colonial disruption, resistance and continuity."
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.94575359308675,
+            -154.91854918549186,
+            21.689646959512046
+          ]
+        },
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.944887685429123,
+            -154.91854918549186,
+            21.689099937045654
+          ]
+        },
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.944887685429123,
+            -154.91854918549186,
+            21.689099937045654
+          ]
+        },
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.20211733167915,
+            -109.21969219692197,
+            -27.06386986308386
+          ]
+        },
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.944887685299918,
+            -154.91854918549186,
+            21.68909993691166
+          ]
+        },
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.202117331727802,
+            -109.21969219692197,
+            -27.06386986313275
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.944887685299918,
+            -154.91854918549186,
+            21.68909993691166
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.202117331727802,
+            -109.21969219692197,
+            -27.06386986313275
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.945751903818618,
+            -154.91854918549186,
+            21.68964520761982
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.20129247739179,
+            -109.21969219692197,
+            -27.062641982000116
+          ]
+        },
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.944887685429123,
+            -154.91854918549186,
+            21.689099937045654
+          ]
+        },
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.20211733167915,
+            -109.21969219692197,
+            -27.06386986308386
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.945751903818618,
+            -154.91854918549186,
+            21.68964520761982
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.20129247739179,
+            -109.21969219692197,
+            -27.062641982000116
+          ]
+        },
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.94608380260533,
+            -154.91854918549186,
+            21.688678323348526
+          ]
+        },
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201699112977437,
+            -109.21969219692197,
+            -27.063280191099256
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.94608380260533,
+            -154.91854918549186,
+            21.688678323348526
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201699112977437,
+            -109.21969219692197,
+            -27.063280191099256
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.94608380260533,
+            -154.91854918549186,
+            21.688678323348526
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201699112977437,
+            -109.21969219692197,
+            -27.063280191099256
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.94608380260533,
+            -154.91854918549186,
+            21.688678323348526
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201699112977437,
+            -109.21969219692197,
+            -27.063280191099256
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.94608380260533,
+            -154.91854918549186,
+            21.688678323348526
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201699112977437,
+            -109.21969219692197,
+            -27.063280191099256
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.945751903689782,
+            -154.91854918549186,
+            21.689645207486194
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201292477440305,
+            -109.21969219692197,
+            -27.062641982048874
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            -158.46458464584646,
+            18.945751903689782,
+            -154.91854918549186,
+            21.689645207486194
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201292477440305,
+            -109.21969219692197,
+            -27.062641982048874
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201292477440305,
+            -109.21969219692197,
+            -27.062641982048874
+          ]
+        },
+        {
+          "file": "world-1878.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1878,
+            "to": 1880,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.20129243659713,
+            -109.21969219692197,
+            -27.062641941256818
+          ]
+        },
+        {
+          "file": "world-1880.json",
+          "properties": {
+            "civ": "polynesians",
+            "from": 1880,
+            "to": 1900,
+            "precision": 3
+          },
+          "bounds": [
+            -109.45009450094501,
+            -27.201292477633167,
+            -109.21969219692197,
+            -27.062641982241495
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "polynesians",
+      "decision": "Broad educational umbrella for many living Polynesian peoples, never a single state, empire or vanished civilization. Indexed circa 1000-1900 with the unrelated alias Beothuk rejected as catalog contamination. Exact audit: 18 intervals; 1000-1815 repeats three Hawaiian island polygons, then 1815-1900 uses one Rapa Nui polygon. The 1492-1500 Kō Hawaiʻi Paeʻāina record duplicates the broad footprint although the Hawaiian Kingdom consolidated around 1810. Concurrent named records are Tuʻi Tonga (1000-1878), Māori split among maori/maoris/maori-1650 plus m-ori (1279-1914 with a 1878 alias interval), the Hawaiian Kingdom (1815-1914), and from 1878 American Samoa, Niue, Samoa, Tonga, and Wallis and Futuna. No historical Tahiti, Marquesas, Cook Islands or dedicated Rapa Nui card is present in this index. Shapes, labels and cutoffs are atlas coverage, not political borders, complete cultural extent, founding dates or extinction dates."
+    }
+  ]
+}

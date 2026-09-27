@@ -1,0 +1,705 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel oman-historical research, integrated by Codex",
+  "checkedAt": "2026-09-22",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map, imported civilization index and historical border snapshots",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Primary project data were checked locally for the exact oman, muscat-and-oman and oman-1945 identities, indexed lifetimes, the eleven oman intervals and every historical TopoJSON feature. Bounds and point tests are preserved in the identity audit. Imported shapes are display data, not verified borders or control maps."
+    },
+    {
+      "id": "atlas-modern",
+      "title": "Human History Map, modern GeoJSON",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/borders/modern.geojson",
+      "note": "Primary project GeoJSON was checked locally for the later oman-1945 record. Its modern geometry includes most tested core cities that the historical oman shapes omit. Point tests diagnose atlas geometry only and do not establish legal title."
+    },
+    {
+      "id": "qdl-lorimer",
+      "title": "Qatar Digital Library, Gazetteer of the Persian Gulf historical chronology of Oman",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023514760.0x000030",
+      "note": "British Library India Office historical compilation checked for Portuguese presence at Muscat from 1507, Ya‘ruba rule and expulsion of the Portuguese in 1650, naval expansion, factional conflict, the Persian invasion and occupation of 1737-1744, and Ahmad bin Said’s rise. It is a colonial-era chronology and is not treated as a neutral voice about Omani society."
+    },
+    {
+      "id": "omaninfo-history",
+      "title": "Oman Ministry of Information, History and Geography",
+      "url": "https://www.omaninfo.om/en/pages/161/show/572",
+      "note": "Official Omani historical account checked for Nasir bin Murshid’s election as the first Ya‘ruba imam in 1624, campaigns to reunify tribes, Sultan bin Saif’s capture of Muscat in 1650, subsequent campaigns in the Indian Ocean and East Africa, and the conventional 1744 start of Al Bu Said rule. Celebratory state language is not repeated as an objective assessment."
+    },
+    {
+      "id": "oman-fm-history",
+      "title": "Sultanate of Oman Foreign Ministry, History",
+      "url": "https://www.fm.gov.om/en/about-oman/state/history/",
+      "note": "Official state overview checked for Portuguese control of Muscat until 1650, post-1650 influence in East Africa, Ahmad ibn Said’s defeat of Persian invaders and election as imam, the 1798 British treaty and the 1833 United States treaty. The page’s broad national narrative is used only for concrete dated events."
+    },
+    {
+      "id": "qdl-british-power",
+      "title": "Qatar Digital Library, British Power, the Al Bu Sa‘id Sultanate, and Musandam, 1800-1932",
+      "url": "https://qdl.qa/en/british-power-al-bu-said-sultanate-and-musandam-peninsula-1800-1932",
+      "note": "British Library Partnership Team essay checked for the Al Bu Said sultanate’s western Indian Ocean reach, its reduced position after the 1861 separation of Zanzibar, growing reliance on British power while remaining officially independent, and the 1891 pledge not to cede or mortgage territory to another power."
+    },
+    {
+      "id": "nm-maritime",
+      "title": "National Museum of Oman, Maritime Heritage collection",
+      "url": "https://www.nm.gov.om/en/collection/gift/maritime-heritage",
+      "note": "Official museum catalogue checked for the 1838 drawing behind a reconstructed Omani fishing badan, the materials of that boat, and the Sultanah: built in Bombay in 1833 and sent from Zanzibar to New York in 1840 on an 87-day diplomatic voyage, followed by a London mission in 1842."
+    },
+    {
+      "id": "experience-jabreen",
+      "title": "Experience Oman, Jabreen Fort",
+      "url": "https://experienceoman.om/en/destinations/al-dakhiliyah/jabreen-fort",
+      "note": "Official tourism and heritage account checked for Jabreen’s construction in 1675 under Imam Bil‘arab bin Sultan, its combined roles as fort, residence, centre of learning and administration, and its meeting hall, courtroom, living quarters, kitchen, stores and defensive features. Modern visitor facilities are not presented as seventeenth-century ones."
+    },
+    {
+      "id": "unesco-stone-town",
+      "title": "UNESCO World Heritage Centre, Stone Town of Zanzibar",
+      "url": "https://whc.unesco.org/en/list/173",
+      "note": "Official World Heritage record checked for Stone Town’s Swahili foundation and fusion of African, Arab, Indian and European influences, coral-rag and mangrove-timber buildings, courtyard houses and commercial streets, and its importance as both a major slave-trading port and a site of abolitionist memory."
+    },
+    {
+      "id": "unesco-zanzibar-dossier",
+      "title": "UNESCO World Heritage nomination dossier, Stone Town of Zanzibar",
+      "url": "https://whc.unesco.org/uploads/nominations/173rev.pdf",
+      "note": "Officially published nomination dossier checked for the eighteenth- and nineteenth-century trade in grain, mangrove poles, fish, ivory and enslaved people; the mid-nineteenth-century scale of slave imports; and the dependence of the clove plantation economy on enslaved labour. Nomination narrative is distinguished from UNESCO’s short listing statement."
+    },
+    {
+      "id": "us-1845-slavery-treaty",
+      "title": "United States Office of the Historian, 1845 British-Muscat agreement on the slave trade",
+      "url": "https://history.state.gov/historicaldocuments/frus1872p1/d170",
+      "note": "Transcribed primary treaty checked for Said bin Sultan’s October 1845 agreement, effective 1 January 1847, to prohibit export from his African dominions and import into his Asian possessions, British seizure authority, and the exception allowing transport within specified African dominions. The limited instrument is not called complete abolition."
+    },
+    {
+      "id": "qdl-canning-award",
+      "title": "Qatar Digital Library, Lord Canning’s 1861 arbitration between Muscat and Zanzibar",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023935572.0x000032",
+      "note": "British Library India Office précis checked for the 1861 award treating the inheritances of the rulers of Zanzibar and Muscat as distinct and separate, ending Muscat’s claim in return for an annual subsidy. This is evidence of a British-mediated settlement, not a neutral endorsement of imperial arbitration."
+    },
+    {
+      "id": "qdl-1913-rebellion",
+      "title": "Qatar Digital Library, Muscat Rising of 1913",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023576860.0x0000b6",
+      "note": "British Library India Office file description and papers checked for the 1913 Ibadi imamate uprising led by Salim bin Rashid al-Kharusi, interior centres including Nizwa, Izki and Awabi, and British Indian military intervention supporting the sultanate. Colonial labels such as “rebels” are not adopted as neutral description."
+    },
+    {
+      "id": "loc-country-study",
+      "title": "Library of Congress, Persian Gulf States: Country Studies, Oman chapter",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/pe/persiangulfstate00metz_0/persiangulfstate00metz_0.pdf",
+      "note": "Institutional country study checked for the Ibadi imamate’s elective ideal, the 1913-1920 coastal/interior conflict, British assistance to the sultan and the 1920 Treaty of As Sib, which left the imam governing the interior and the sultan the coast. The study’s “de facto partition” is an interpretation, not treaty wording."
+    },
+    {
+      "id": "unesco-aflaj",
+      "title": "UNESCO World Heritage Centre, Aflaj Irrigation Systems of Oman",
+      "url": "https://whc.unesco.org/en/list/1207",
+      "note": "Official World Heritage record checked for gravity-fed underground or surface channels, agricultural and domestic uses, time-share distribution monitored by sundials, communal maintenance, date-harvest dwellings and roughly 3,000 functioning systems. The site’s ancient origins do not make every surviving channel equally old."
+    },
+    {
+      "id": "unesco-bahla",
+      "title": "UNESCO World Heritage Centre, Bahla Fort",
+      "url": "https://whc.unesco.org/en/list/433/",
+      "note": "Official World Heritage record checked for Bahla’s pre-1530 Banu Nebhan core, mud-brick fort and walled oasis, falaj, traditional family compounds, sablas, bath houses, market and craft evidence. It is used to separate an older, layered heritage landscape from achievements of one dynasty or the modern state."
+    },
+    {
+      "id": "omaninfo-education",
+      "title": "Oman Ministry of Information, Educational Museum",
+      "url": "https://www.omaninfo.om/mainsections/92/show/182",
+      "note": "Official museum description checked for children’s elementary study in kuttab from the seventeenth through nineteenth centuries, progression after completing Qur’an study to mosque learning circles, and instruction in religious, literary and historical subjects at centres including Nizwa, Rustaq, Bahla, al-Mudhaibi and al-Hamra."
+    },
+    {
+      "id": "omaninfo-sulaif",
+      "title": "Oman Ministry of Information, Harat al-Sulaif",
+      "url": "https://www.omaninfo.om/mainsections/103/show/56",
+      "note": "Official heritage description checked for the fortified settlement’s Ya‘ruba-era construction under Sultan bin Saif II, seasonal residence in date gardens during harvest, two-storey mud-brick courtyard houses and the market’s livestock, vegetable, tailoring, blacksmithing and weapon-making activities."
+    },
+    {
+      "id": "nm-architecture",
+      "title": "National Museum of Oman, Architectural Heritage collection",
+      "url": "https://www.nm.gov.om/en/collection/gift/architectural-heritage",
+      "note": "Official museum catalogue checked for an Indian-made 1714 fort gate, Muscat’s capital history, Musandam lock houses and seasonal storage, Bait Fransa, the eighteenth-century al-Bait al-‘Aod and its household birth/death inscriptions, and a foundation stone dated 29 November 1909 for a hospital at Muttrah."
+    },
+    {
+      "id": "oman-biomedicine",
+      "title": "Sultan Qaboos University Medical Journal, history of biomedicine in nineteenth-century Oman",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3121022/",
+      "note": "Peer-reviewed medical history checked for sporadic early nineteenth-century practitioners, the British Agency hospital after 1861, the Arabian Mission from 1893 and Muttrah clinic from 1904, cholera and plague episodes, poor sanitation and clean-water limits, and the narrow geographic and social reach of early biomedical services."
+    },
+    {
+      "id": "oman-ethnomedicine",
+      "title": "Oman Medical Journal, The Practice of Ethnomedicine in Northern and Southern Oman",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4927734/",
+      "note": "Ministry of Health-authored review checked for orally transmitted plant knowledge, elder and healer roles, preparation as infusions, pastes, poultices or smoke, and documented uses of frankincense and other plants. The modern survey supports continuity of practices, not proof that every remedy or household used them throughout 1530-1914."
+    },
+    {
+      "id": "omaninfo-fiqain",
+      "title": "Oman Ministry of Information, Fiqain Fort",
+      "url": "https://www.omaninfo.om/mainsections/100/show/7",
+      "note": "Official heritage description checked for a seven-metre well linked vertically through the fort and a washing or bathing basin on each floor. The page’s uncertain and internally awkward construction dating is not relied upon, and a fort’s facilities are not generalized to ordinary homes."
+    },
+    {
+      "id": "oman-coin",
+      "title": "Al Hamra Numismatic Museum, 1894 Baisa al-Jalali",
+      "url": "https://numismatic.museum.om/1463/",
+      "note": "Omani museum object page checked for the first Omani copper coin bearing Muscat’s name, dated 1311 AH/1894 CE, and the exact Arabic reverse inscription. The museum page’s automated English “in front of” is corrected from Arabic imam; transliteration and close translation are editorial."
+    }
+  ],
+  "entities": [
+    {
+      "id": "oman",
+      "card": "data/cards/oman.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-modern"
+          ],
+          "locator": "Primary project data were checked locally for the exact oman, muscat-and-oman and oman-1945 identities, indexed lifetimes, the eleven oman intervals and every historical TopoJSON feature. Bounds and point tests are preserved in the identity audit. Imported shapes are display data, not verified borders or control maps. Primary project GeoJSON was checked locally for the later oman-1945 record. Its modern geometry includes most tested core cities that the historical oman shapes omit. Point tests diagnose atlas geometry only and do not establish legal title.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "qdl-lorimer"
+          ],
+          "locator": "British Library India Office historical compilation checked for Portuguese presence at Muscat from 1507, Ya‘ruba rule and expulsion of the Portuguese in 1650, naval expansion, factional conflict, the Persian invasion and occupation of 1737-1744, and Ahmad bin Said’s rise. It is a colonial-era chronology and is not treated as a neutral voice about Omani society.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1624
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "omaninfo-history"
+          ],
+          "locator": "Official Omani historical account checked for Nasir bin Murshid’s election as the first Ya‘ruba imam in 1624, campaigns to reunify tribes, Sultan bin Saif’s capture of Muscat in 1650, subsequent campaigns in the Indian Ocean and East Africa, and the conventional 1744 start of Al Bu Said rule. Celebratory state language is not repeated as an objective assessment.",
+          "dateScope": {
+            "from": 1624,
+            "to": 1650
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "qdl-lorimer"
+          ],
+          "locator": "British Library India Office historical compilation checked for Portuguese presence at Muscat from 1507, Ya‘ruba rule and expulsion of the Portuguese in 1650, naval expansion, factional conflict, the Persian invasion and occupation of 1737-1744, and Ahmad bin Said’s rise. It is a colonial-era chronology and is not treated as a neutral voice about Omani society.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1744
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "oman-fm-history"
+          ],
+          "locator": "Official state overview checked for Portuguese control of Muscat until 1650, post-1650 influence in East Africa, Ahmad ibn Said’s defeat of Persian invaders and election as imam, the 1798 British treaty and the 1833 United States treaty. The page’s broad national narrative is used only for concrete dated events.",
+          "dateScope": {
+            "from": 1744,
+            "to": 1798
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "oman-fm-history"
+          ],
+          "locator": "Official state overview checked for Portuguese control of Muscat until 1650, post-1650 influence in East Africa, Ahmad ibn Said’s defeat of Persian invaders and election as imam, the 1798 British treaty and the 1833 United States treaty. The page’s broad national narrative is used only for concrete dated events.",
+          "dateScope": {
+            "from": 1798,
+            "to": 1856
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "qdl-canning-award"
+          ],
+          "locator": "British Library India Office précis checked for the 1861 award treating the inheritances of the rulers of Zanzibar and Muscat as distinct and separate, ending Muscat’s claim in return for an annual subsidy. This is evidence of a British-mediated settlement, not a neutral endorsement of imperial arbitration.",
+          "dateScope": {
+            "from": 1856,
+            "to": 1861
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "qdl-british-power"
+          ],
+          "locator": "British Library Partnership Team essay checked for the Al Bu Said sultanate’s western Indian Ocean reach, its reduced position after the 1861 separation of Zanzibar, growing reliance on British power while remaining officially independent, and the 1891 pledge not to cede or mortgage territory to another power.",
+          "dateScope": {
+            "from": 1861,
+            "to": 1913
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "qdl-1913-rebellion"
+          ],
+          "locator": "British Library India Office file description and papers checked for the 1913 Ibadi imamate uprising led by Salim bin Rashid al-Kharusi, interior centres including Nizwa, Izki and Awabi, and British Indian military intervention supporting the sultanate. Colonial labels such as “rebels” are not adopted as neutral description.",
+          "dateScope": {
+            "from": 1913,
+            "to": 1914
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "qdl-lorimer"
+          ],
+          "locator": "Gazetteer historical chronology, Period I and Period II headings: Portuguese at Muscat from 1507, Ya‘ruba era and later Persian occupation; source perspective is disclosed.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "omaninfo-history"
+          ],
+          "locator": "History and Geography, “Ya‘ruba and the expulsion of the Portuguese”: 1624 election, unification campaigns, fleet and 1650 capture; local point test adds the map caveat.",
+          "dateScope": {
+            "year": 1650
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "qdl-lorimer",
+            "oman-fm-history"
+          ],
+          "locator": "Gazetteer chronology for naval development, factional conflict and Persian occupation; Oman Foreign Ministry history for Ahmad bin Said’s expulsion of Persian forces and election.",
+          "dateScope": {
+            "year": 1744
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "oman-fm-history"
+          ],
+          "locator": "Foreign Ministry History: Ahmad’s elected imamate and dynasty, 1798 British friendship treaty and 1833 United States friendship-and-commerce treaty; limitation is interpretive and later evidenced below.",
+          "dateScope": {
+            "year": 1833
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nm-architecture",
+            "unesco-zanzibar-dossier"
+          ],
+          "locator": "National Museum Architectural Heritage, Muscat entry: 1840 transfer to Stone Town; UNESCO nomination dossier, “Rise of Zanzibar,” for the trading economy and local coastal setting.",
+          "dateScope": {
+            "year": 1840
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "unesco-stone-town"
+          ],
+          "locator": "UNESCO Stone Town brief synthesis and criteria (ii)-(iii): Swahili urban foundation, materials, courtyard houses and multi-regional cultural fusion.",
+          "dateScope": {
+            "year": 1850
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "unesco-zanzibar-dossier"
+          ],
+          "locator": "UNESCO nomination dossier, “Rise of Zanzibar”: mid-nineteenth-century import estimate, destinations and predominantly but not exclusively Omani Arab slave/landowning class.",
+          "dateScope": {
+            "year": 1850
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "us-1845-slavery-treaty"
+          ],
+          "locator": "Primary agreement of 2 October 1845, Articles I-IV: prohibitions, seizure authority, African-zone exception and 1 January 1847 effective date.",
+          "dateScope": {
+            "year": 1847
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "qdl-canning-award"
+          ],
+          "locator": "India Office précis of the 1861 Canning Award: distinct inheritances, Muscat’s abandoned claims and $40,000 annual subsidy; cultural-continuity sentence does not assert political continuity.",
+          "dateScope": {
+            "year": 1861
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/5/text",
+          "sourceIds": [
+            "qdl-british-power"
+          ],
+          "locator": "British Library Partnership Team essay, nineteenth-century section: formal independence, reliance after the 1861 separation and territorial restriction in the 1891 agreement.",
+          "dateScope": {
+            "year": 1891
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "experience-jabreen"
+          ],
+          "locator": "Experience Oman Jabreen Fort description: date, builder, knowledge/administration role, named rooms and defensive openings; joke paraphrases the documented combination.",
+          "dateScope": {
+            "year": 1675
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "unesco-bahla"
+          ],
+          "locator": "UNESCO Bahla Fort, brief synthesis: Banu Nebhan dates, fort, harats, sablas, bath houses, souq and falaj; heritage attribution caveat is explicit.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "unesco-aflaj"
+          ],
+          "locator": "UNESCO Aflaj description and OUV, paragraphs on gravity, domestic/agricultural use, communal time shares, sundials, settlement and dating limits.",
+          "dateScope": {
+            "year": 1800
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "omaninfo-fiqain"
+          ],
+          "locator": "Ministry of Information Fiqain Fort page: seven-metre well, vertical openings and washing/bathing basin per floor; construction date is deliberately not used.",
+          "dateScope": {
+            "year": 1800
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "omaninfo-sulaif"
+          ],
+          "locator": "Ministry of Information Harat al-Sulaif description: Ya‘ruba construction, harvest-season movement, house form, decoration and market occupations.",
+          "dateScope": {
+            "year": 1715
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nm-architecture"
+          ],
+          "locator": "National Museum Architectural Heritage, al-Bait al-‘Aod and Buyut al-Qifl entries: date, Indian woodwork, household inscriptions, seasonal use and large storage vessels.",
+          "dateScope": {
+            "year": 1850
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "omaninfo-education"
+          ],
+          "locator": "Ministry of Information Educational Museum, gallery three: seventeenth-nineteenth-century kuttab, Qur’an completion, mosque circles, subjects and named centres; equality caveat marks missing evidence.",
+          "dateScope": {
+            "year": 1800
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "oman-coin"
+          ],
+          "locator": "Al Hamra Numismatic Museum object 1: 1311 AH/1894 CE copper coin and exact reverse. Arabic read directly; transliteration, script direction and correction of imam are editorial.",
+          "dateScope": {
+            "year": 1894
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "oman-ethnomedicine"
+          ],
+          "locator": "Oman Medical Journal review, introduction, methods and plant table: oral transmission, preparation forms and frankincense uses; chronology and efficacy limits explicit.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "oman-biomedicine"
+          ],
+          "locator": "SQU Medical Journal history, three eras and sections “Sent to Explore/Conquer/Heal”: institutions, dates, geographic limits, epidemics, sanitation and clean water; last sentence is humorous paraphrase.",
+          "dateScope": {
+            "year": 1904
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nm-maritime"
+          ],
+          "locator": "National Museum Maritime Heritage, Sultanah and badan sayyad entries: construction, routes, 87-day voyage, London mission and sewn-boat materials; final sentence adds no factual claim.",
+          "dateScope": {
+            "year": 1840
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "qdl-1913-rebellion"
+          ],
+          "locator": "India Office file description and folio 187r: uprising leadership, interior locations and British Indian intervention; terminology caveat explicit.",
+          "dateScope": {
+            "year": 1913
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "loc-country-study"
+          ],
+          "locator": "Institutional country study checked for the Ibadi imamate’s elective ideal, the 1913-1920 coastal/interior conflict, British assistance to the sultan and the 1920 Treaty of As Sib, which left the imam governing the interior and the sultan the coast. The study’s “de facto partition” is an interpretation, not treaty wording.",
+          "dateScope": {
+            "year": 1920
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "oman",
+        "summary": "Oman from Portuguese-held Muscat through the Ya‘ruba and Al Bu Said eras: Indian Ocean power, East Africa, slavery, forts, family life, education, medicine, water and the 1913 imamate conflict.",
+        "card": "cards/oman.json"
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            57.39717397173973,
+            20.940944735555604,
+            59.837998379983816,
+            23.836885708967756
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            57.39717397173973,
+            20.940944735555604,
+            59.837998379983816,
+            23.836885708967756
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            57.39717397173973,
+            20.940944735555604,
+            59.837998379983816,
+            23.836885708967756
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            57.39717397173973,
+            20.940944735555604,
+            59.837998379983816,
+            23.836885708967756
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            57.39717397173973,
+            20.940944735555604,
+            59.837998379983816,
+            23.836885708967756
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            56.11196111961121,
+            19.034488220740286,
+            59.837998379983816,
+            25.462325187087046
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            56.11196111961121,
+            19.034488220740286,
+            59.837998379983816,
+            25.462325187087046
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            56.11196111961121,
+            19.034488220740286,
+            59.837998379983816,
+            25.462325187087046
+          ]
+        },
+        {
+          "file": "world-1878.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1878,
+            "to": 1880,
+            "precision": 3
+          },
+          "bounds": [
+            54.80874808748089,
+            17.01573703238202,
+            59.837998379983816,
+            25.462325208513874
+          ]
+        },
+        {
+          "file": "world-1880.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1880,
+            "to": 1900,
+            "precision": 3
+          },
+          "bounds": [
+            54.80874808748089,
+            17.015737007725157,
+            59.837998379983816,
+            25.462325186985858
+          ]
+        },
+        {
+          "file": "world-1900.json",
+          "properties": {
+            "civ": "oman",
+            "from": 1900,
+            "to": 1914,
+            "precision": 3
+          },
+          "bounds": [
+            54.80874808748089,
+            17.015737007725157,
+            59.837998379983816,
+            25.462325186985858
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    {
+      "id": "oman",
+      "finding": "Indexed identity is Oman, approximately 1530-1914, with eleven intervals: 1530-1600, 1600-1650, 1650-1700, 1700-1715, 1715-1783, 1783-1800, 1800-1815, 1815-1878, 1878-1880, 1880-1900 and 1900-1914. The identical 1530-1715 Polygon has bounds [57.39717397173973,20.940944735555604,59.837998379983816,23.836885708967756] and excludes all tested Omani cities: Muscat, Nizwa, Sohar, Sur, Salalah, Mirbat, Khasab, Buraimi and Duqm. The identical 1783-1878 Polygon has bounds [56.11196111961121,19.034488220740286,59.837998379983816,25.462325187087046] and includes only Nizwa and Duqm among those tests. The 1878-1914 shapes expand south to about 17.016°N but still include only Nizwa and Duqm among the tests. No historical feature includes tested Hormuz, Gwadar, Zanzibar, Mombasa, Lamu, Pemba or Kilwa, so the polygons omit both core ports and overseas reach. The atlas start falls during Portuguese control of Muscat; the endpoint falls during an imamate uprising and is not dissolution."
+    },
+    {
+      "id": "oman-successors",
+      "finding": "The historical oman record must not be merged with muscat-and-oman (approximately 1938-1945) or oman-1945 (1945-open). Their separation creates a 1914-1938 dataset gap. The 1938-1945 muscat-and-oman MultiPolygon has bounds [51.80631806318064,16.654086758288265,59.837998379983816,26.23674290737562], includes tested Nizwa, Salalah, Mirbat and Duqm, and still excludes Muscat, Sohar, Sur, Khasab and Buraimi. The modern oman-1945 GeoJSON has bounds [52,16.651,59.808,26.396] and includes tested Muscat, Nizwa, Sohar, Sur, Salalah, Mirbat, Khasab and Duqm; Buraimi’s test point falls outside or on the simplified border. None of these geometry tests establishes legal title or historical control."
+    }
+  ]
+}
