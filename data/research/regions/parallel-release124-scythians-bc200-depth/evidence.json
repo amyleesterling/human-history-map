@@ -1,0 +1,840 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release124-scythians-bc200 research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "scy-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository record checked: scythians-bc200 is a circa culture record dated 200 BCE to 200 CE and is distinct from other Scythian, Saka, Sarmatian and Alan ids."
+    },
+    {
+      "id": "scy-map300",
+      "title": "Human History Map world-300 BCE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Decoded predecessor seam. The exact scythians-bc200 id is absent, so its later first appearance is an atlas change rather than a documented founding event."
+    },
+    {
+      "id": "scy-map200",
+      "title": "Human History Map world-200 BCE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Decoded exact identity: three separate features share the id, Bactria, Bosporan Kingdom and an unlabeled three-part umbrella, with independently hashed coordinates and strongly discontinuous footprints."
+    },
+    {
+      "id": "scy-map100bc",
+      "title": "Human History Map world-100 BCE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Decoded exact successor: one three-part MultiPolygon, four rings and 328 positions across Central Asia, not a continuation of every 200 BCE component."
+    },
+    {
+      "id": "scy-map1bc",
+      "title": "Human History Map world-1 BCE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded coverage gap. The exact id is absent at the 1 BCE snapshot even though historically documented communities continued in several regions."
+    },
+    {
+      "id": "scy-map100ce",
+      "title": "Human History Map world-100 CE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Decoded exact late feature: one 79-position Polygon around Crimea and the lower Don, far west of the preceding Central Asian footprint."
+    },
+    {
+      "id": "scy-map200ce",
+      "title": "Human History Map world-200 CE topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Decoded ending seam. The exact id is absent at the 200 CE snapshot, which records the end of imported coverage rather than extinction."
+    },
+    {
+      "id": "scy-iranica",
+      "title": "Encyclopaedia Iranica: Scythians",
+      "url": "https://www.iranicaonline.org/articles/scythians/",
+      "note": "Scholarly synthesis used for the overview: terminology, the Crimean kingdom, Hellenization, settlements, political change and survival through mixed later communities."
+    },
+    {
+      "id": "scy-sakas-afghanistan",
+      "title": "Encyclopaedia Iranica: Sakas in Afghanistan",
+      "url": "https://www.iranicaonline.org/articles/sakas-in-afghanistan/",
+      "note": "Scholarly review of Saka and Yuezhi movements, the contested attribution of Bactrian finds, Sakastan and evidence from coins rather than a single migration narrative."
+    },
+    {
+      "id": "scy-indo-dynasty",
+      "title": "Encyclopaedia Iranica: Indo-Scythian Dynasty",
+      "url": "https://www.iranicaonline.org/articles/indo-scythian-dynasty-1/",
+      "note": "Dynastic chronology and evidence for Indo-Scythian rulers from the late second century BCE into the first century CE, including acknowledged chronological uncertainty."
+    },
+    {
+      "id": "scy-language",
+      "title": "Encyclopaedia Iranica: Scythian Language",
+      "url": "https://www.iranicaonline.org/articles/scythian-language/",
+      "note": "Linguistic assessment explaining that Scythian is known mainly through names, glosses and indirect evidence rather than securely preserved continuous native texts."
+    },
+    {
+      "id": "scy-met-hidden",
+      "title": "Metropolitan Museum of Art: Afghanistan, Hidden Treasures",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/afghanistan",
+      "note": "Museum synthesis of Bactria and Tillya Tepe, including six first-century tombs, portable gold, long-distance materials and uncertainty over the buried group’s identity."
+    },
+    {
+      "id": "scy-met-gallery",
+      "title": "Metropolitan Museum of Art: Afghanistan exhibition photo gallery",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/afghanistan/photo-gallery",
+      "note": "Object-level record for the collapsible gold crown and other Tillya Tepe ornaments, including measurements, materials, tomb context and portable construction."
+    },
+    {
+      "id": "scy-year-one",
+      "title": "The Metropolitan Museum of Art: The Year One",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Year_One_Art_of_the_Ancient_World_East_and_West.pdf",
+      "note": "Metropolitan Museum catalogue used to place the six princely Tillya Tepe burials and their mixed artistic traditions in the first century CE."
+    },
+    {
+      "id": "scy-ashmolean-azes",
+      "title": "Ashmolean Heberden Coin Room: Indo-Scythian coin of Azes",
+      "url": "https://hcr.ashmus.ox.ac.uk/coin/hcr58068",
+      "note": "Museum object record for an Azes coin around 48 to 25 BCE with Greek and Kharoshthi-Gandhari royal legends and a mounted ruler."
+    },
+    {
+      "id": "scy-ashmolean-azilises",
+      "title": "Ashmolean Heberden Coin Room: coin of Azilises",
+      "url": "https://hcr.ashmus.ox.ac.uk/coin/hcr57089",
+      "note": "Object record for a copper Indo-Scythian coin with Greek and Kharoshthi legends, an elephant and a humped bull."
+    },
+    {
+      "id": "scy-british-museum-azes",
+      "title": "British Museum: coin of Azes II",
+      "url": "https://www.britishmuseum.org/collection/object/C_1838-EIC-90",
+      "note": "Museum object record for a bilingual Indo-Scythian coin found at the Bimaran stupa complex, with mounted king and Greek and Kharoshthi inscriptions."
+    },
+    {
+      "id": "scy-diophantos",
+      "title": "Searchable Greek Inscriptions: Decree for Diophantos",
+      "url": "https://epigraphy.packhum.org/text/184547?hs=5676-5684",
+      "note": "Digital scholarly edition of the Chersonesan Greek decree naming Palakos, Scythians and Diophantos during the wars around 110 to 107 BCE."
+    },
+    {
+      "id": "scy-iris-olbia",
+      "title": "IRIS Greek Coinage: Olbia results",
+      "url": "https://greekcoinage.org/iris/results?q=mint_facet%3A%22Olbia%22",
+      "note": "Scholarly coin database records issues of Skilurus at Olbia and their civic, divine, agricultural and military imagery."
+    },
+    {
+      "id": "scy-neapolis",
+      "title": "Scythian Neapolis Historical and Archaeological Museum-Reserve",
+      "url": "https://neapolis-scythian.com/en/",
+      "note": "Site museum account of the fortified capital, houses, granary, mausoleum, Greek inscriptions, wine complex and archaeological discoveries."
+    },
+    {
+      "id": "scy-chersonesos-history",
+      "title": "Chersonesos Taurica Museum: ancient history",
+      "url": "https://chersonesos.org/?l=eng&p=history_ant",
+      "note": "Site museum history used for Diophantos’s campaigns and the Roman intervention that relieved a Scythian siege in the 60s CE."
+    },
+    {
+      "id": "scy-ustalma-site",
+      "title": "Chersonesos Taurica Museum: Ust-Alma",
+      "url": "https://chersonesos.org/index.php?l=eng&p=out_ant_ustalma",
+      "note": "Museum account of the large Late Scythian settlement and necropolis at Ust-Alma on Crimea’s western coast."
+    },
+    {
+      "id": "scy-ustalma-crypts",
+      "title": "Russian Archaeology: Early Crypts of the Ust-Alma Burial Ground",
+      "url": "https://www.ra.iaran.ru/?lang=en&page_id=7234",
+      "note": "Peer-reviewed archaeological abstract documenting early crypt construction, multiple chambers and dated assemblages including pottery, brooches, buckles, bracelets and beads."
+    },
+    {
+      "id": "scy-ustalma-warrior",
+      "title": "Ancient Civilizations from Scythia to Siberia: A Warrior Burial from Ust-Alma",
+      "url": "https://brill.com/view/journals/acss/23/1/article-p42_2.xml",
+      "note": "Peer-reviewed study of a mid-first-century CE elite warrior burial with weapons, clothing ornaments, vessels and imported goods."
+    },
+    {
+      "id": "scy-children",
+      "title": "Arts: Children in the Late Scythian Funerary Record",
+      "url": "https://www.mdpi.com/2076-0752/13/2/71",
+      "note": "Peer-reviewed analysis of child dress and burial display, stressing symbolism, social expectation and the limits of assigning ethnicity from objects."
+    },
+    {
+      "id": "scy-sigillata",
+      "title": "Terra Sigillata from the Late Scythian Fortress Alma Kermen",
+      "url": "https://refubium.fu-berlin.de/handle/fub188/13807",
+      "note": "University repository record for a specialist study of roughly 350 terra-sigillata vessels and associated beads, rings and grooming containers."
+    },
+    {
+      "id": "scy-dental",
+      "title": "Dental Pathologies of the Late Scythians from Chervony Mayak",
+      "url": "https://doi.org/10.37445/adiu.2024.04.10",
+      "note": "Peer-reviewed dental study of 106 individuals, relating calculus, caries and tooth wear cautiously to protein, carbohydrates, age and social differences."
+    },
+    {
+      "id": "scy-cinnabar",
+      "title": "Antiquity: Mysterious red cinnabar from Chervony Mayak",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/mysterious-red-cinnabar-from-the-chervony-mayak-burial-ground-ukraine/99A5ECFAA469E559488E1736BC694AEB",
+      "note": "Peer-reviewed report of cinnabar in two female burials, with pigment, cosmetic and funerary interpretations presented as alternatives rather than established medicine."
+    },
+    {
+      "id": "scy-food-isotopes",
+      "title": "PLOS ONE: Isotopes and mobility in the Scythian era",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245996",
+      "note": "Open peer-reviewed study of human diet and mobility through 700 to 200 BCE, showing varied local lives and millet consumption near this card’s opening."
+    },
+    {
+      "id": "scy-unesco-almaty",
+      "title": "UNESCO Silk Roads: Almaty",
+      "url": "https://en.unesco.org/silkroad/content/almaty",
+      "note": "UNESCO regional synthesis describing Saka-period farming, cattle breeding, burial mounds and material remains north of the Tianshan."
+    },
+    {
+      "id": "scy-dai-jewelry",
+      "title": "German Archaeological Institute: Jewelry from Chervony Mayak burial 128",
+      "url": "https://www.dainst.blog/ukrainian-archaeological-heritage/2023/08/17/dai4ukr-stolen-heritage-jewelry-from-burial-128-of-the-late-scythian-necropolis-chervony-mayak-kherson-region/",
+      "note": "Archaeological institute account of gold garment plaques from a woman’s burial and the loss of context caused by looting and war."
+    },
+    {
+      "id": "scy-chervony-necropolis",
+      "title": "Journal of Ancient History and Archaeology: Chervony Mayak necropolis",
+      "url": "https://www.jaha.org.ro/index.php/JAHA/article/view/620",
+      "note": "Peer-reviewed site overview for a Late Scythian hillfort and burial ground on the lower Dnieper, including research and preservation context."
+    }
+  ],
+  "entities": [
+    {
+      "id": "scythians-bc200",
+      "card": "data/cards/scythians-bc200.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "scy-iranica",
+            "scy-index",
+            "scy-map200",
+            "scy-map100bc",
+            "scy-map1bc",
+            "scy-map100ce",
+            "scy-map200ce"
+          ],
+          "locator": "Scholarly synthesis used for the overview: terminology, the Crimean kingdom, Hellenization, settlements, political change and survival through mixed later communities. Exact repository record checked: scythians-bc200 is a circa culture record dated 200 BCE to 200 CE and is distinct from other Scythian, Saka, Sarmatian and Alan ids. Decoded exact identity: three separate features share the id, Bactria, Bosporan Kingdom and an unlabeled three-part umbrella, with independently hashed coordinates and strongly discontinuous footprints. Decoded exact successor: one three-part MultiPolygon, four rings and 328 positions across Central Asia, not a continuation of every 200 BCE component. Decoded coverage gap. The exact id is absent at the 1 BCE snapshot even though historically documented communities continued in several regions. Decoded exact late feature: one 79-position Polygon around Crimea and the lower Don, far west of the preceding Central Asian footprint. Decoded ending seam. The exact id is absent at the 200 CE snapshot, which records the end of imported coverage rather than extinction.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "scy-map200"
+          ],
+          "locator": "Decoded exact identity: three separate features share the id, Bactria, Bosporan Kingdom and an unlabeled three-part umbrella, with independently hashed coordinates and strongly discontinuous footprints.",
+          "dateScope": {
+            "from": -200,
+            "to": -145
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "scy-sakas-afghanistan"
+          ],
+          "locator": "Scholarly review of Saka and Yuezhi movements, the contested attribution of Bactrian finds, Sakastan and evidence from coins rather than a single migration narrative.",
+          "dateScope": {
+            "from": -145,
+            "to": -120
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "scy-neapolis",
+            "scy-iris-olbia"
+          ],
+          "locator": "The Neapolis museum identifies Skilurus’s fortified Crimean capital; the IRIS scholarly coin database records his issues at Olbia.",
+          "dateScope": {
+            "from": -120,
+            "to": -107
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "scy-diophantos",
+            "scy-indo-dynasty",
+            "scy-map100bc"
+          ],
+          "locator": "Digital scholarly edition of the Chersonesan Greek decree naming Palakos, Scythians and Diophantos during the wars around 110 to 107 BCE. Dynastic chronology and evidence for Indo-Scythian rulers from the late second century BCE into the first century CE, including acknowledged chronological uncertainty. Decoded exact successor: one three-part MultiPolygon, four rings and 328 positions across Central Asia, not a continuation of every 200 BCE component.",
+          "dateScope": {
+            "from": -107,
+            "to": -1
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "scy-map1bc",
+            "scy-year-one"
+          ],
+          "locator": "Decoded coverage gap. The exact id is absent at the 1 BCE snapshot even though historically documented communities continued in several regions. Metropolitan Museum catalogue used to place the six princely Tillya Tepe burials and their mixed artistic traditions in the first century CE.",
+          "dateScope": {
+            "from": -1,
+            "to": 60
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "scy-chersonesos-history"
+          ],
+          "locator": "Site museum history used for Diophantos’s campaigns and the Roman intervention that relieved a Scythian siege in the 60s CE.",
+          "dateScope": {
+            "from": 60,
+            "to": 100
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "scy-map100ce",
+            "scy-ustalma-site",
+            "scy-chervony-necropolis"
+          ],
+          "locator": "Decoded exact late feature: one 79-position Polygon around Crimea and the lower Don, far west of the preceding Central Asian footprint. Museum account of the large Late Scythian settlement and necropolis at Ust-Alma on Crimea’s western coast. Peer-reviewed site overview for a Late Scythian hillfort and burial ground on the lower Dnieper, including research and preservation context.",
+          "dateScope": {
+            "from": 100,
+            "to": 200
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "scy-map200"
+          ],
+          "locator": "Exact-feature count, labels, geometry types, position counts and decoded bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "scy-map100bc"
+          ],
+          "locator": "Decoded geometry, SHA-256 record and point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "scy-map1bc"
+          ],
+          "locator": "Exact-id absence in decoded world-bc1 topology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "scy-map100ce"
+          ],
+          "locator": "Decoded bbox, coordinate hash and point tests for the exact feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "scy-index",
+            "scy-map300",
+            "scy-map200ce"
+          ],
+          "locator": "Index identity plus exact-id absence at both endpoint seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "scy-sakas-afghanistan"
+          ],
+          "locator": "Opening terminology and source traditions for Saka and Scythian names.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "scy-sakas-afghanistan",
+            "scy-map200"
+          ],
+          "locator": "Bactrian attribution discussion paired with exact atlas label.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "scy-indo-dynasty"
+          ],
+          "locator": "Dynastic scope, chronology and numismatic-evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "scy-neapolis"
+          ],
+          "locator": "Museum site chronology and mixed urban material context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "scy-language"
+          ],
+          "locator": "Corpus limits, dialect discussion and indirect linguistic evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "scy-iris-olbia"
+          ],
+          "locator": "IRIS Olbia entries attributed to Skilurus and their recorded types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "scy-diophantos"
+          ],
+          "locator": "IOSPE I-squared 352 Greek text and historical names.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "scy-chersonesos-history"
+          ],
+          "locator": "Chersonesos site history for the campaigns and continuing regional occupation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "scy-ashmolean-azes",
+            "scy-ashmolean-azilises"
+          ],
+          "locator": "Museum coin descriptions, rulers, legends and iconography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "scy-chersonesos-history",
+            "scy-map1bc"
+          ],
+          "locator": "Chersonesos museum chronology paired with the atlas coverage gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "scy-neapolis"
+          ],
+          "locator": "Museum excavation summaries for architecture, granary and wine production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "scy-ustalma-site"
+          ],
+          "locator": "Official site description, scale and settlement-necropolis relationship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "scy-unesco-almaty"
+          ],
+          "locator": "UNESCO description of Saka farming and stock breeding; learning explicitly marked as inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "scy-food-isotopes"
+          ],
+          "locator": "Study dates, isotope results and geographic/chronological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "scy-dental"
+          ],
+          "locator": "Sample results for calculus, caries, age and burial-context differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "scy-met-hidden"
+          ],
+          "locator": "Met exhibition synthesis of tomb count, sex, date and identity uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "scy-children"
+          ],
+          "locator": "Peer-reviewed analysis of child costume, identity and funerary representation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "scy-ustalma-crypts"
+          ],
+          "locator": "Crypt plans, reuse, dates and associated finds; kinship limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "scy-ustalma-warrior"
+          ],
+          "locator": "Peer-reviewed object inventory, dating and elite context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "scy-dai-jewelry"
+          ],
+          "locator": "DAI burial context, gold appliqués and preservation history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "scy-met-gallery"
+          ],
+          "locator": "Tomb VI folding crown, dimensions, materials and construction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "scy-year-one"
+          ],
+          "locator": "Museum catalogue materials, mixed iconography and burial setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "scy-sigillata"
+          ],
+          "locator": "Repository catalogue summary for quantities and associated finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "scy-ashmolean-azilises"
+          ],
+          "locator": "Ashmolean object record for metal, ruler, scripts and types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "scy-british-museum-azes"
+          ],
+          "locator": "Museum provenance, object types, scripts and attribution wording.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "scy-unesco-almaty"
+          ],
+          "locator": "Economic evidence used for a clearly labelled education inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "scy-ashmolean-azes"
+          ],
+          "locator": "Exact transliterated museum legend normalized into Greek capitals, date and translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "scy-ashmolean-azes"
+          ],
+          "locator": "Reverse legend, script, language and ruler in the museum catalogue.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "scy-diophantos"
+          ],
+          "locator": "Language, civic genre and honorific purpose of the Greek decree.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "scy-language"
+          ],
+          "locator": "Nature of the linguistic corpus and methodological cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "scy-dental"
+          ],
+          "locator": "Study sample and recorded dental conditions; treatment limit explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "scy-cinnabar"
+          ],
+          "locator": "Mineral identification, burial contexts and competing interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "scy-dental",
+            "scy-cinnabar"
+          ],
+          "locator": "Bounded absence across the reviewed health sources, with survival caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "scy-ustalma-site"
+          ],
+          "locator": "Site location and excavated features; water-system absence limited to reviewed account.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "scy-sigillata"
+          ],
+          "locator": "Published feature list and clarification of archaeological toilette terminology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "scy-neapolis"
+          ],
+          "locator": "Museum history of the 1827 finds and later excavations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "scy-year-one"
+          ],
+          "locator": "The Metropolitan Museum’s Year One catalogue places six princely Tillya Tepe burials and their mixed artistic traditions in first-century Bactria.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "scy-chervony-necropolis",
+            "scy-dai-jewelry"
+          ],
+          "locator": "Site overview and documented context loss.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "scy-children",
+            "scy-ustalma-warrior",
+            "scy-ustalma-crypts"
+          ],
+          "locator": "Comparative funerary evidence and interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "scy-indo-dynasty",
+            "scy-chersonesos-history",
+            "scy-map200ce"
+          ],
+          "locator": "Eastern dynastic chronology, Crimean political changes and exact map endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "scy-map200ce",
+            "scy-chervony-necropolis"
+          ],
+          "locator": "Decoded ending seam. The exact id is absent at the 200 CE snapshot, which records the end of imported coverage rather than extinction. Peer-reviewed site overview for a Late Scythian hillfort and burial ground on the lower Dnieper, including research and preservation context.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "scythians-bc200",
+        "card": "cards/scythians-bc200.json",
+        "dateBasis": "map_coverage",
+        "summary": "An atlas umbrella links Saka and Late Scythian worlds across Asia and Crimea; changing kingdoms, settlements and mixed traditions continued beyond its map cutoff.",
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "scythians-bc200",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            31.926919269192695,
+            44.19440534967315,
+            41.243812438124394,
+            47.81372407749788
+          ]
+        },
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "scythians-bc200",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            46.867068670686706,
+            37.51705261652057,
+            68.5608856088561,
+            51.0252127729665
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "scythians-bc200",
+            "from": -200,
+            "to": -100,
+            "precision": 1,
+            "label": "Bactria"
+          },
+          "bounds": [
+            58.35118351183513,
+            25.026393828935994,
+            77.83817838178385,
+            40.992593977006194
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "scythians-bc200",
+            "from": -200,
+            "to": -100,
+            "precision": 1,
+            "label": "Bosporan Kingdom"
+          },
+          "bounds": [
+            33.39573395733959,
+            44.49163740715302,
+            40.31860318603188,
+            48.775926458921106
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "scythians-bc200",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            30.159301593015925,
+            37.51705261652057,
+            85.55665556655566,
+            57.708095404862874
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact id scythians-bc200 is indexed circa 200 BCE to 200 CE and had no tracked card or override before integration.",
+    "At 200 BCE the id occurs three times: a 53-position Bactria Polygon, a 64-position two-part Bosporan Kingdom MultiPolygon, and a 519-position three-part unlabeled MultiPolygon. Each coordinate array has a separate audited SHA-256.",
+    "At 100 BCE it becomes one 328-position, three-part Central Asian MultiPolygon. It is absent at 1 BCE, then returns at 100 CE as one 79-position Crimean/lower-Don Polygon. These discontinuities are atlas categorization, not literal mobile borders.",
+    "The separate scythians, proto-scythian-culture, saka-kingdom, sarmates, sarmatians and alans ids remain distinct. No appliesTo alias or shared-card substitution is used.",
+    "Every point test and coordinate bound describes imported display geometry only. It cannot establish political control, ethnicity, language, migration or modern territorial claims."
+  ]
+}

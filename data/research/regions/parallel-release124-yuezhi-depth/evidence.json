@@ -1,0 +1,849 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release124-yuezhi research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "yz-index",
+      "title": "Human History Map, historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository record for yuezhi: Yuezhi, circa 200 to 100 BCE. The adjacent kushan-empire record begins at the atlas seam in 100 BCE."
+    },
+    {
+      "id": "yz-map300",
+      "title": "Human History Map, world-300 BCE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Decoded predecessor snapshot has no exact yuezhi feature. Tested Central Asian and Gansu points do not establish a predecessor identity."
+    },
+    {
+      "id": "yz-map200",
+      "title": "Human History Map, world-200 BCE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Decoded exact target feature is one 26-position polygon. It includes Dunhuang and central Hexi test points but excludes tested Ili, Ferghana, Sogdian and Bactrian places."
+    },
+    {
+      "id": "yz-map100",
+      "title": "Human History Map, world-100 BCE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Decoded handoff snapshot has no yuezhi feature and instead draws a very large kushan-empire polygon across Bactria, Central Asia and the northwest subcontinent."
+    },
+    {
+      "id": "yz-map1",
+      "title": "Human History Map, world-1 BCE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded snapshot has neither an exact yuezhi feature nor a kushan-empire feature, exposing an atlas gap rather than a documented political collapse."
+    },
+    {
+      "id": "yz-map100ce",
+      "title": "Human History Map, world-100 CE historical basemap topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Decoded snapshot restores kushan-empire in a smaller Central Asian polygon and assigns another Kushan-labeled feature farther south and west."
+    },
+    {
+      "id": "yz-dynasty",
+      "title": "Encyclopaedia Iranica, Kushan Dynasty I: Dynastic History",
+      "url": "https://www.iranicaonline.org/articles/kushan-dynasty-i-history/",
+      "note": "Lines 41 to 67 trace Yuezhi presence near Gansu, Xiongnu defeats, westward migration, five Bactrian chiefs and Kujula Kadphises becoming king more than a century later."
+    },
+    {
+      "id": "yz-shiji",
+      "title": "University of Washington Silk Road Seattle, The Han Histories",
+      "url": "https://depts.washington.edu/silkroad/texts/hantxt1.html",
+      "note": "Lines 136 to 166 translate Zhang Qian’s mission and report: migration, a royal succession variant, mobile herding, the Oxus court, Bactrian towns, markets and refusal of alliance."
+    },
+    {
+      "id": "yz-ctext",
+      "title": "Chinese Text Project, Shiji 123: Account of Dayuan",
+      "url": "https://ctext.org/shiji/da-wan-lie-zhuan/zhs",
+      "note": "Digital primary text of Shiji chapter 123 preserves the Classical Chinese account and the external Han-era name 大月氏 for the Great Yuezhi."
+    },
+    {
+      "id": "yz-nii-shiji",
+      "title": "National Institute of Informatics and Toyo Bunko, Shiji volume 123",
+      "url": "https://dsr.nii.ac.jp/toyobunko/XI-3-A-b-124/V-123/index.html.en",
+      "note": "Digitized rare-book witness with DOI metadata identifies chapter 123 as the account of Zhang Qian’s mission to the Dayuezhi and later western diplomacy."
+    },
+    {
+      "id": "yz-chinese-turkestan",
+      "title": "Encyclopaedia Iranica, Chinese Turkestan II: In Pre-Islamic Times",
+      "url": "https://www.iranicaonline.org/articles/chinese-turkestan-ii/",
+      "note": "The early-history section follows Zhang Qian from 138 to 126 BCE, Yuezhi settlement west of Ferghana and the later five Bactrian kingdoms."
+    },
+    {
+      "id": "yz-bactria",
+      "title": "Encyclopaedia Iranica, Bactria I: Pre-Islamic Period",
+      "url": "https://www.iranicaonline.org/articles/bactria/bactria-i-pre-islamic-period/",
+      "note": "Lines 54 to 58 describe Yuezhi camps north of the Oxus, Bactrian petty principalities, five xihou, conflicting western names and Kujula’s later consolidation."
+    },
+    {
+      "id": "yz-heliocles",
+      "title": "Encyclopaedia Iranica, Heliocles I",
+      "url": "https://www.iranicaonline.org/articles/heliocles-i/",
+      "note": "Lines 37 to 40 set out a two-stage Yuezhi advance, the 138 to 126 BCE Zhang Qian mission and posthumous imitations of Greek royal coin types."
+    },
+    {
+      "id": "yz-sakas",
+      "title": "Encyclopaedia Iranica, Sakas in Afghanistan",
+      "url": "https://www.iranicaonline.org/articles/sakas-in-afghanistan/",
+      "note": "Lines 33 to 37 distinguish Saka and Yuezhi movements and explain why proposed ethnic assignments of nomadic pottery at Ai Khanum remain hypothetical."
+    },
+    {
+      "id": "yz-origins",
+      "title": "J. P. Mallory, The Problem of Tocharian Origins: An Archaeological Perspective",
+      "url": "https://sino-platonic.org/complete/spp259_tocharian_origins.pdf",
+      "note": "Pages 28 to 32 warn that identifying Yuezhi with Tocharian speakers does not provide a secure archaeological or linguistic starting point without separate demonstration."
+    },
+    {
+      "id": "yz-khalchayan",
+      "title": "Encyclopaedia Iranica, Khalchayan",
+      "url": "https://www.iranicaonline.org/articles/khalchayan/",
+      "note": "Lines 33 to 39 describe excavation, disputed dating, palace setting, painted clay sculptures, rulers, aristocrats, deities and a possible dynastic ancestor."
+    },
+    {
+      "id": "yz-berlin",
+      "title": "Museum of Prehistory and Early History Berlin, Archaeological Treasures from Uzbekistan exhibition texts",
+      "url": "https://www.smb.museum/fileadmin/website/Presse/Pressematerial/2023/05/02_MVF_230503_Usbekistan_Ausstellungstexte.pdf",
+      "note": "PDF pages 32 to 33 describe Khalchayan’s portico, throne room, surrounding rooms, royal-family scenes, warrior elite, ceremonies, musicians, masks and comedians."
+    },
+    {
+      "id": "yz-greek-art",
+      "title": "Encyclopaedia Iranica, Greece VIII: Greek Art in Central Asia, Afghanistan and Northwest India",
+      "url": "https://www.iranicaonline.org/articles/greece-viii/",
+      "note": "Lines 54 to 58 explain how Khalchayan artists used Hellenized sculptural techniques for Iranian royal, battle and equestrian themes."
+    },
+    {
+      "id": "yz-dalverzin",
+      "title": "Encyclopaedia Iranica, Dalverzin Tepe",
+      "url": "https://www.iranicaonline.org/articles/dalverzin-tepe/",
+      "note": "Lines 35 to 38 describe first-century BCE growth, a proposed Yuezhi capital identification and the later Kushan town’s walls, zones and mud-brick construction."
+    },
+    {
+      "id": "yz-city-life",
+      "title": "UNESCO History of Civilizations of Central Asia, City Life in the Kushan Period",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_II%20silk%20road_cities%20and%20urban%20life%20in%20the%20kushan%20kingdom.pdf",
+      "note": "Pages 291 to 300 survey expanding urban networks, citadels, residential and workshop suburbs, temples and excavated Kushan-period cities across Central Asia."
+    },
+    {
+      "id": "yz-met-afghanistan",
+      "title": "Metropolitan Museum of Art, Afghanistan: Hidden Treasures",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/afghanistan",
+      "note": "Tillya Tepe section describes first-century CE nomadic burials, a chieftain and women, gold objects, uncertain causes of death and mixed cultural influences."
+    },
+    {
+      "id": "yz-met-gallery",
+      "title": "Metropolitan Museum of Art, Afghanistan: Hidden Treasures photo gallery",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/afghanistan/photo-gallery",
+      "note": "Object captions document sewn gold appliques, imported stones, dragon motifs, local Bactrian goldsmithing and objects blending steppe, Greek, Indian and Chinese imagery."
+    },
+    {
+      "id": "yz-clothing",
+      "title": "Encyclopaedia Iranica, Clothing V: In Pre-Islamic Eastern Iran",
+      "url": "https://www.iranicaonline.org/articles/clothing-v/",
+      "note": "Lines 51 to 53 reconstruct elite clothing shown at Khalchayan: belted mantles, shirts, trousers or leggings, boots, layered dresses, crowns and shoulder cloths."
+    },
+    {
+      "id": "yz-economy",
+      "title": "Encyclopaedia Iranica, Central Asia X: Economy Before the Timurids",
+      "url": "https://www.iranicaonline.org/articles/central-asia-x/",
+      "note": "Lines 63 to 68 separate mobile Yuezhi from settled agriculture and describe later Kushan canal irrigation, ploughs, markets, workshops and long-distance commerce."
+    },
+    {
+      "id": "yz-food",
+      "title": "UNESCO History of Civilizations of Central Asia, Economy and Social System in Central Asia in the Kushan Age",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_II%20silk%20road_economy%20and%20social%20system%20in%20central%20asia%20in%20the%20kushan%20age.pdf",
+      "note": "Crop-raising section lists excavated millet, barley, wheat, fruits, grapes, melons, fodder, sesame and cotton, with clear Kushan-period rather than early Yuezhi scope."
+    },
+    {
+      "id": "yz-archaeology",
+      "title": "Encyclopaedia Iranica, Archaeology V: Pre-Islamic Central Asia",
+      "url": "https://www.iranicaonline.org/articles/archaeology-v/",
+      "note": "Lines 100 to 102 describe gradual first-century CE Kushan consolidation and the local, Hellenistic, Indian and nomadic strands visible in Bactrian material culture."
+    },
+    {
+      "id": "yz-met-kushan",
+      "title": "Metropolitan Museum of Art, Kushan Empire",
+      "url": "https://www.metmuseum.org/pt/essays/kushan-empire-ca-second-century-b-c-third-century-a-d",
+      "note": "The museum chronology connects the Guishang branch to the Yuezhi, places arrival in Bactria around 135 BCE and associates Kujula Kadphises with later unification."
+    },
+    {
+      "id": "yz-kingship",
+      "title": "Encyclopaedia Iranica, Kingship V: In Eastern Iranian Lands",
+      "url": "https://www.iranicaonline.org/articles/kingship/kingship-v-in-eastern-iranian-lands/",
+      "note": "Lines 61 to 67 analyze Kujula’s Greek coin titles, later Bactrian language, mixed divine images and the royal legitimacy program of Kushan inscriptions."
+    },
+    {
+      "id": "yz-coinage",
+      "title": "Encyclopaedia Iranica, Kushan Dynasty IV: Coinage of the Kushans",
+      "url": "https://www.iranicaonline.org/articles/kushan-dynasty-04/",
+      "note": "Coinage study connects Kujula’s campaigns to the five Yuezhi chiefs and explains rulers, languages, scripts, denominations and iconography on Kushan issues."
+    },
+    {
+      "id": "yz-inscriptions",
+      "title": "Encyclopaedia Iranica, Kushan Dynasty II: Inscriptions of the Kushans",
+      "url": "https://www.iranicaonline.org/articles/kushan-02-inscriptions/",
+      "note": "Lines 37 to 61 cover Rabatak, the royal genealogy, Bactrian, Brahmi and Kharosthi records, and a circa 89 CE health wish without recording a treatment."
+    },
+    {
+      "id": "yz-vima",
+      "title": "Encyclopaedia Iranica, Kadphises, Vima",
+      "url": "https://www.iranicaonline.org/articles/kadphises-vima/",
+      "note": "The epigraphy section gives the Bactrian titulature OOHMO KAΔΦIΣHΣO ϷAO, identifies Vima in the Rabatak genealogy and dates a separate Khalatse record around 112 CE."
+    },
+    {
+      "id": "yz-rabatak",
+      "title": "Smithsonian National Museum of Asian Art, Rabatak Inscription",
+      "url": "https://mads.si.edu/mads/id/FS-FSA.A2024.03_NMAOH_2024.02.02_English",
+      "note": "Museum record identifies the 23-line limestone inscription as Bactrian written in Greek script and summarizes its praise of Kushan king Kanishka."
+    },
+    {
+      "id": "yz-bactrian-language",
+      "title": "Encyclopaedia Iranica, Bactrian Language",
+      "url": "https://www.iranicaonline.org/articles/bactrian-language/",
+      "note": "The writing section documents Bactrian seals and monumental inscriptions in Greek-derived script, especially Surkh Kotal, without claiming Bactrian was the original Yuezhi language."
+    },
+    {
+      "id": "yz-bm-coin",
+      "title": "British Museum collection, coin of Kanishka I",
+      "url": "https://www.britishmuseum.org/collection/object/C_IOC-298",
+      "note": "Museum object record identifies a Kanishka I coin with a Bactrian inscription, providing a concrete successor-period witness to language on portable money."
+    },
+    {
+      "id": "yz-chinese-iranian",
+      "title": "Encyclopaedia Iranica, Chinese-Iranian Relations I: In Pre-Islamic Times",
+      "url": "https://www.iranicaonline.org/articles/chinese-iranian-i/",
+      "note": "The opening section connects Zhang Qian’s Yuezhi mission to late second-century BCE contact and distinguishes evidence from unsubstantiated theories of earlier influence."
+    },
+    {
+      "id": "yz-water",
+      "title": "British Academy, The Excavations at Surkh Kotal and the Problem of Hellenism in Bactria and India",
+      "url": "https://www.thebritishacademy.ac.uk/documents/4847/47p077.pdf",
+      "note": "The excavation report and inscription discussion describe Kushan-period water works, a failing supply and construction or restoration associated with the sanctuary well."
+    },
+    {
+      "id": "yz-central-asia",
+      "title": "Encyclopaedia Iranica, Central Asia III: In Pre-Islamic Times",
+      "url": "https://www.iranicaonline.org/articles/central-asia-iii/",
+      "note": "The Hellenistic and post-Hellenistic section states that Yuezhi established power north of the Oxus and that one branch expanded south as the Kushan empire in the first century CE."
+    },
+    {
+      "id": "yz-oxford",
+      "title": "Oxford Research Encyclopedia of Asian History, The Yuezhi",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546324434",
+      "note": "Craig Benjamin’s Oxford reference overview traces a powerful pastoral confederation near Gansu, Xiongnu defeats, westward migration, resettlement in northern Bactria and the later Kushan transformation, while emphasizing the larger Eurasian consequences."
+    }
+  ],
+  "entities": [
+    {
+      "id": "yuezhi",
+      "card": "data/cards/yuezhi.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "yz-oxford",
+            "yz-map200",
+            "yz-map100"
+          ],
+          "locator": "Oxford’s reference overview traces the confederation, Xiongnu defeats, migration, Bactrian resettlement and Kushan transformation. Decoded 200 and 100 BCE atlas files supply the deliberately rough and chronologically problematic map shapes.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "yz-map200",
+            "yz-dynasty"
+          ],
+          "locator": "Iranica’s Kushan dynastic history places the Yuezhi near Gansu before the defeats; the decoded 200 BCE atlas file supplies the deliberately rough drawn extent.",
+          "dateScope": {
+            "from": -200,
+            "to": -176
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "yz-dynasty"
+          ],
+          "locator": "Iranica’s Kushan dynastic history dates Maodun’s major defeat of the Yuezhi to 176 BCE and traces the resulting westward displacement.",
+          "dateScope": {
+            "from": -176,
+            "to": -162
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "yz-chinese-turkestan"
+          ],
+          "locator": "The early-history section follows Zhang Qian from 138 to 126 BCE, Yuezhi settlement west of Ferghana and the later five Bactrian kingdoms.",
+          "dateScope": {
+            "from": -162,
+            "to": -145
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "yz-heliocles",
+            "yz-met-kushan"
+          ],
+          "locator": "Lines 37 to 40 set out a two-stage Yuezhi advance, the 138 to 126 BCE Zhang Qian mission and posthumous imitations of Greek royal coin types. The museum chronology connects the Guishang branch to the Yuezhi, places arrival in Bactria around 135 BCE and associates Kujula Kadphises with later unification.",
+          "dateScope": {
+            "from": -145,
+            "to": -126
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "yz-shiji"
+          ],
+          "locator": "Lines 136 to 166 translate Zhang Qian’s mission and report: migration, a royal succession variant, mobile herding, the Oxus court, Bactrian towns, markets and refusal of alliance.",
+          "dateScope": {
+            "from": -126,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "yz-bactria",
+            "yz-map100",
+            "yz-map1"
+          ],
+          "locator": "Lines 54 to 58 describe Yuezhi camps north of the Oxus, Bactrian petty principalities, five xihou, conflicting western names and Kujula’s later consolidation. Decoded handoff snapshot has no yuezhi feature and instead draws a very large kushan-empire polygon across Bactria, Central Asia and the northwest subcontinent. Decoded snapshot has neither an exact yuezhi feature nor a kushan-empire feature, exposing an atlas gap rather than a documented political collapse.",
+          "dateScope": {
+            "from": -100,
+            "to": 1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "yz-kingship"
+          ],
+          "locator": "Lines 61 to 67 analyze Kujula’s Greek coin titles, later Bactrian language, mixed divine images and the royal legitimacy program of Kushan inscriptions.",
+          "dateScope": {
+            "from": 1,
+            "to": 30
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "yz-index",
+            "yz-map200"
+          ],
+          "locator": "civilizations-hb exact row; decoded world-bc200 target geometry, type, ring and position count, bbox.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "yz-map200"
+          ],
+          "locator": "Decoded world-bc200 point-in-polygon tests and bbox in identity.json.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "yz-map100",
+            "yz-map1",
+            "yz-map100ce"
+          ],
+          "locator": "Decoded point owners and related features in world-bc100, world-bc1 and world-100.",
+          "dateScope": {
+            "year": -100
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "yz-map300",
+            "yz-map200",
+            "yz-map100"
+          ],
+          "locator": "Exact-civ scan across world-bc300, world-bc200 and world-bc100.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "yz-origins"
+          ],
+          "locator": "Mallory, pages 28 to 32, discussion of the Yuezhi-Tocharian identification problem and required distinctions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "yz-dynasty"
+          ],
+          "locator": "Iranica’s Kushan dynastic history dates Maodun’s 176 BCE defeat in Gansu and the forced movement that followed.",
+          "dateScope": {
+            "year": -176
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "yz-dynasty"
+          ],
+          "locator": "Iranica’s Kushan dynastic history traces the renewed defeat under Laoshang and the greater Yuezhi movement through the Ili region toward Bactria.",
+          "dateScope": {
+            "year": -162
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "yz-shiji"
+          ],
+          "locator": "Lines 154 to 156, Great Yuezhi route, Oxus court and Little Yuezhi notice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "yz-nii-shiji"
+          ],
+          "locator": "Digital Silk Road metadata and chapter description for Shiji volume 123, including the mission, later Han use and 116 BCE second journey.",
+          "dateScope": {
+            "year": -126
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "yz-shiji"
+          ],
+          "locator": "Lines 142 to 146, conquest of Bactria, peaceful life and failed alliance mission.",
+          "dateScope": {
+            "year": -126
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "yz-bactria"
+          ],
+          "locator": "Iranica’s Bactria survey distinguishes Chinese, Greek and Roman labels, describes mobile groups around the end of Greco-Bactrian rule and cautions against a simple one-people handoff.",
+          "dateScope": {
+            "year": -140
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "yz-bactria"
+          ],
+          "locator": "Lines 54 to 56, camps north of Oxus, petty Bactrian principalities and Yuezhi domination.",
+          "dateScope": {
+            "year": -130
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "yz-bactria"
+          ],
+          "locator": "Lines 55 to 58, five xihou names and later victory by the Guishuang chief.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "yz-heliocles"
+          ],
+          "locator": "Lines 38 to 40, coin-hoard evidence and posthumous imitations after the Yuezhi advance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "yz-kingship"
+          ],
+          "locator": "Iranica lines 61 to 63 on coin titles and the first Kushan ruler, dated circa 30 to 80 CE.",
+          "dateScope": {
+            "year": 30
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "yz-sakas"
+          ],
+          "locator": "Lines 35 to 37, proposed ceramic groups and the counterargument against precise ethnic attribution.",
+          "dateScope": {
+            "year": -140
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "yz-khalchayan"
+          ],
+          "locator": "Lines 33 to 39, site identity, disputed palace date, excavation and painted clay sculptures.",
+          "dateScope": {
+            "year": -50
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "yz-berlin"
+          ],
+          "locator": "PDF page 33, section 13.1, one-story palace plan, portico, throne room and surrounding rooms.",
+          "dateScope": {
+            "year": -50
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "yz-dalverzin",
+            "yz-city-life"
+          ],
+          "locator": "Dalverzin lines 35 to 38; UNESCO pages 291 to 300 on Kushan urban layouts and growth.",
+          "dateScope": {
+            "year": -50
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "yz-met-afghanistan"
+          ],
+          "locator": "Tillya Tepe exhibition section, first-century nomadic family cemetery, grave arrangement and objects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "yz-khalchayan"
+          ],
+          "locator": "Lines 38 to 39, wall compositions, named deities, rulers, aristocrats and possible ancestor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "yz-greek-art"
+          ],
+          "locator": "Lines 54 to 56, complex sculpture, battle and ruler scenes, Hellenized techniques serving Iranian themes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "yz-berlin"
+          ],
+          "locator": "PDF page 33, section 13.2, festival and religious scenes with musicians, masks and comedians.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "yz-met-gallery"
+          ],
+          "locator": "Photo-gallery captions for dragon master pendants, Erotes clasps and mixed artistic traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "yz-coinage"
+          ],
+          "locator": "Coinage article, ruler types, languages and changing divine imagery under the Kushans.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "yz-ctext"
+          ],
+          "locator": "Shiji 123 primary text around the killed Yuezhi king, the people’s flight and succession by an heir.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "yz-berlin"
+          ],
+          "locator": "PDF page 33, section 13.2, enthroned king and queen, princes and warrior aristocracy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "yz-met-afghanistan"
+          ],
+          "locator": "Tillya Tepe section, grave positions, household language, uncertain deaths and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "yz-inscriptions"
+          ],
+          "locator": "Lines 37 to 61, multiple scripts and surviving official or dedicatory inscriptions; no early Yuezhi school evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "yz-greek-art"
+          ],
+          "locator": "Lines 54 to 56, technical and iconographic synthesis at Khalchayan; inference limited to skilled production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "yz-shiji"
+          ],
+          "locator": "Lines 154 to 156, mobile herding description and geographic setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "yz-economy"
+          ],
+          "locator": "Lines 63 to 68, mobile Yuezhi contrasted with settled agriculture, then later Kushan canals, markets and crafts.",
+          "dateScope": {
+            "year": -126
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "yz-food"
+          ],
+          "locator": "UNESCO crop-raising section, excavated grains, fruits, industrial and fodder crops; later Kushan-period scope explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "yz-clothing"
+          ],
+          "locator": "Lines 51 to 53, clothing reconstructed from Khalchayan sculpture and its elite context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "yz-met-gallery"
+          ],
+          "locator": "Photo-gallery captions for lotus appliques, imported stones, wear and clothing attachment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "yz-inscriptions"
+          ],
+          "locator": "Line 61, circa 89 CE inscription and health wish; source does not record a therapy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "yz-met-afghanistan"
+          ],
+          "locator": "Tillya Tepe section, explicit statement that cause of death is unknown and alternatives are speculative.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "yz-economy"
+          ],
+          "locator": "Lines 65 to 68, later Kushan canal irrigation, plough and agricultural infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "yz-water"
+          ],
+          "locator": "British Academy excavation report, Surkh Kotal well, failing supply, lining and maintenance responsibilities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "yz-berlin"
+          ],
+          "locator": "PDF page 33 palace plan lists portico, throne hall, surrounding rooms and corridors; no sanitation installation is identified.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "yz-bactrian-language",
+            "yz-origins"
+          ],
+          "locator": "Bactrian writing and inscription sections; Mallory pages 28 to 32 on the insecure Yuezhi-Tocharian language identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "yz-vima",
+            "yz-rabatak"
+          ],
+          "locator": "Vima article, epigraphy section and exact published titulature; Smithsonian record for Bactrian language, Greek script and Rabatak object.",
+          "dateScope": {
+            "year": 132
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "yz-bm-coin",
+            "yz-coinage"
+          ],
+          "locator": "British Museum object IOC-298, Kanishka I and Bactrian inscription; Iranica coinage discussion of legends and types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "yz-chinese-iranian"
+          ],
+          "locator": "Opening section, Yuezhi mission, late second-century BCE Chinese-Iranian contact and limits on proposed earlier influence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "yz-archaeology"
+          ],
+          "locator": "Lines 100 to 102, gradual consolidation and four cultural strands in Kushan Bactria.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "yz-central-asia",
+            "yz-archaeology",
+            "yz-kingship",
+            "yz-map100"
+          ],
+          "locator": "The Hellenistic and post-Hellenistic section states that Yuezhi established power north of the Oxus and that one branch expanded south as the Kushan empire in the first century CE. Lines 100 to 102 describe gradual first-century CE Kushan consolidation and the local, Hellenistic, Indian and nomadic strands visible in Bactrian material culture. Lines 61 to 67 analyze Kujula’s Greek coin titles, later Bactrian language, mixed divine images and the royal legitimacy program of Kushan inscriptions. Decoded handoff snapshot has no yuezhi feature and instead draws a very large kushan-empire polygon across Bactria, Central Asia and the northwest subcontinent.",
+          "dateScope": {
+            "year": 30
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "yuezhi",
+        "card": "cards/yuezhi.json",
+        "dateBasis": "map_coverage",
+        "summary": "A migrating Central Asian confederation that became overlord of Bactria and later contributed the Kushan ruling branch; the atlas’s 200 to 100 BCE geometry is seriously mistimed.",
+        "fell": null,
+        "successors": [
+          "kushan-empire"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "yuezhi",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            72.27972279722798,
+            30.174729559424648,
+            106.04446044460445,
+            48.40818819245763
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target yuezhi is indexed circa 200 to 100 BCE and has no tracked card or override before integration.",
+    "Its only exact feature is world-bc200: one Polygon, one ring, 26 positions, bbox 72.279723 to 106.044460 east and 30.174730 to 48.408188 north.",
+    "Dunhuang and a central Hexi point fall inside that feature; tested Ili, Issyk-Kul, Kashgar, Ferghana, Samarkand, Balkh, Termez, Kabul and Merv points fall outside.",
+    "World-bc100 substitutes a vast kushan-empire feature; world-bc1 has no Kushan; world-100 restores a smaller Kushan extent. These are atlas seams, not verified historical changes.",
+    "Historical chronology places Xiongnu defeats in 176 and 162 BCE, Yuezhi entry into Bactria around 140 to 130 BCE, five regional chiefs afterward and Kujula’s Kushan consolidation around 30 CE.",
+    "The yuezhi and kushan-empire ids remain distinct. The proposed transition links to existing Kushan geometry at the historically supported approximate year rather than sharing the card.",
+    "No polygon, burial assemblage, language or genetic identity is projected onto every person inside the atlas shape."
+  ]
+}

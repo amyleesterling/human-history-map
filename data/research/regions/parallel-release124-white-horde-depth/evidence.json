@@ -1,0 +1,805 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release124-white-horde research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "wh-index",
+      "title": "Human History Map historical-basemap civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact repository entry checked: white-horde is labeled White Horde, carries Golden Horde as an alias, and is indexed circa 1400 to 1530. Related Blue Horde, Golden Horde, Sibir, Nogai and Quazaq records remain distinct ids."
+    },
+    {
+      "id": "wh-map1300",
+      "title": "Human History Map world-1300 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Decoded predecessor snapshot. The exact white-horde id is absent; a broad khanate-of-the-golden-horde polygon covers both eastern and western test points, alongside a second small feature of the same id carrying the label Ryazan."
+    },
+    {
+      "id": "wh-map1400",
+      "title": "Human History Map world-1400 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded first exact target: one Polygon, one ring, 213 positions, bbox 47.831878 to 93.973540 E and 41.138150 to 62.538854 N. It includes Kazan, Tyumen, Tobolsk, Orenburg, Oral and Mangystau tests but excludes Sarai, Sighnaq, Sauran, Otyrar and Turkistan."
+    },
+    {
+      "id": "wh-map1492",
+      "title": "Human History Map world-1492 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded exact target: one Polygon, one ring, 279 positions, bbox 50.326703 to 87.774278 E and 38.896762 to 61.685475 N. Unlike 1400, it includes Sighnaq, Sauran, Otyrar, Turkistan, Saryarka, Mangystau and Orenburg, while excluding Kazan, Tyumen and Tobolsk."
+    },
+    {
+      "id": "wh-map1500",
+      "title": "Human History Map world-1500 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded final exact target: one Polygon, one ring, 281 positions, bbox 50.326703 to 87.774278 E and 38.897558 to 60.001550 N. Its tested inclusions resemble 1492, but its northern edge and coordinate hash differ."
+    },
+    {
+      "id": "wh-map1530",
+      "title": "Human History Map world-1530 topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded successor seam. The exact target vanishes. Tested Sighnaq, Sauran, Otyrar, Turkistan and Saryarka fall in quazaq-khanate; Mangystau in khiva-khanate; western and northern tests fall among Nogai, Kazan and Sibir features."
+    },
+    {
+      "id": "wh-encyclopedia",
+      "title": "Timothy May, White Horde Khanate, The Encyclopedia of Empire",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118455074.wbeoe367",
+      "note": "Scholarly encyclopedia entry checked for the conventional identification of the Ulus of Orda or Aq Orda as the eastern portion of the Jochid realm, its broad Ural-to-Irtysh setting, and the competing Blue Horde name."
+    },
+    {
+      "id": "wh-iranica",
+      "title": "Peter Jackson, Golden Horde, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/golden-horde/",
+      "note": "Scholarly reference checked for Jochi and Orda, the north-eastern wing, Muslim cultural influence, the 1359 succession crisis, Tokhtamysh’s circa-1378 unification, conflict with Timur and fifteenth-century dissolution into smaller states."
+    },
+    {
+      "id": "wh-wings",
+      "title": "Takushi Kawaguchi and Hiroyuki Nagamine, Rethinking the Political System of the Jöchid",
+      "url": "https://real.mtak.hu/38023/",
+      "note": "Peer-reviewed Acta Orientalia study using sources produced within the Jochid world. It finds a durable Right/Left Wing system and argues that late-fourteenth-century usage called the right or whole realm White Horde and the left wing Blue Horde, reversing a common modern convention."
+    },
+    {
+      "id": "wh-coinage",
+      "title": "István Vásáry, The Beginnings of Coinage in the Blue Horde",
+      "url": "https://real.mtak.hu/44776/",
+      "note": "Peer-reviewed numismatic article checked for the eastern Left Wing at Sighnaq, nominal Batuid seniority, practical internal autonomy, the 1359 to 1380 turmoil, Mubarak Khwaja’s 1366 to 1368 coins and regular minting under Urus Khan from 1368/69."
+    },
+    {
+      "id": "wh-turmoil",
+      "title": "Ishayahu Landa, Jochid elites in the Time of Troubles, 1359 to circa 1380",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/between-the-chinggisid-principle-loyalty-and-selfaggrandisement-jochid-elites-in-the-time-of-troubles-1359-to-circa-1380/AEB03260F727D9147A9043682A24804B",
+      "note": "Peer-reviewed Journal of the Royal Asiatic Society study checked for sparse and outsider-heavy sources, Chinggisid legitimacy, regional elites, eastern Togha-Temurid succession at Sighnaq, socioeconomic disruption and Tokhtamysh’s rapid reunification."
+    },
+    {
+      "id": "wh-urus",
+      "title": "M. Nogaibayeva, Urus Khan and ethnopolitical history of White Horde",
+      "url": "https://bulletin-history.kaznu.kz/index.php/1-history/en/article/view/657",
+      "note": "Peer-reviewed KazNU history article checked for Urus Khan’s eastern-steppe power, intervention in wider Golden Horde struggles, resistance to Timur, and the growing influence of tribal leaders during political instability. Genealogy and color terminology remain debated."
+    },
+    {
+      "id": "wh-abulkhayrids",
+      "title": "Yuri Bregel, Abu’l-Khayrids, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/abul-khayrids-dynasty/",
+      "note": "Scholarly reference checked for Abu’l-Khayr’s election in Siberia in 1429, his unification of much of the Uzbek ulus, the later Shaybanid movement into Transoxiana, and Persian and Turkic literary traditions under successor dynasties."
+    },
+    {
+      "id": "wh-kazakh",
+      "title": "Joo-Yup Lee, The Kazakh Khanate, Oxford Research Encyclopedia of Asian History",
+      "url": "https://www.researchgate.net/publication/338291376_Kazakh_Khanate_In_The_Oxford_Research_Encyclopedia_of_Asian_History_Ed_David_Ludden_New_York_Oxford_University_Press",
+      "note": "Author-uploaded Oxford Research Encyclopedia article checked for the eastern Qipchaq steppe, Jochid and Uzbek political inheritance, and the 1450s break of Jani Beg and Giray from Abu’l-Khayr. It warns against forcing formation into one uncontested date."
+    },
+    {
+      "id": "wh-unesco",
+      "title": "UNESCO World Heritage Centre, Silk Roads: Fergana-Syrdarya Corridor",
+      "url": "https://whc.unesco.org/en/tentativelists/6568",
+      "note": "Official tentative-list dossier checked for Sygnak’s Ak-Orda association, houses, irrigated fields and channels; the river corridor’s trade, crafts, baths and agriculture; and the interaction of mobile steppe and settled oasis communities."
+    },
+    {
+      "id": "wh-life",
+      "title": "Orazgul Muhatova, The Way of Living of the Inhabitants of the Kazakh Khanate",
+      "url": "https://pressto.amu.edu.pl/index.php/bp/article/view/1741",
+      "note": "Peer-reviewed study checked for pastoral seasons and early-sixteenth-century Ruzbihan descriptions of portable and cart-mounted homes, summer gatherings, weddings, horse racing, wrestling, singers and storytellers. Later ethnographic details are not projected backward."
+    },
+    {
+      "id": "wh-water",
+      "title": "Erbulat Smagulov, Sauran Medieval Archaeological Complex in South Kazakhstan",
+      "url": "https://www.transoxiana.org/13/smagulov-sauran.php",
+      "note": "Primary archaeologist’s study checked for Sauran’s gardens, vineyards, canals, underground kariz galleries, summer water scarcity, and the finding that Sauran and Mirtobe used separate systems. Waterworks are not treated as proof of household toilets."
+    },
+    {
+      "id": "wh-school",
+      "title": "Sauran madrasa excavations, 2006 field season",
+      "url": "https://archaeology.kz/rus/expeditions/770-raskopki-sauranskogo-medrese-v-polevom-sezone-2006-goda/",
+      "note": "Institutional archaeological field report checked for the 31.5 by 28 metre courtyard madrasa with residential cells, teaching hall and two minarets, identified with the building described by Vasifi in 1515. Attendance and curriculum are not generalized."
+    },
+    {
+      "id": "wh-syganak",
+      "title": "Abai Institute, Syganak",
+      "url": "https://oq.gov.kz/en/abai/syghanaq",
+      "note": "Kazakhstan government cultural-history page checked for Syganak’s caravan market, early-sixteenth-century camel-meat report, mint connections, scholars, excavated saiga bones, bone-working and objects interpreted as related to medicine. Efficacy and universal practice are not inferred."
+    },
+    {
+      "id": "wh-children",
+      "title": "Emma Zilivinskaya, Elusive Traces: Children in the Golden Horde",
+      "url": "https://www.e-anthropology.com/English/Catalog/Archaeology/STM_DWL_37zU_SKANwH6CCpQ6.aspx",
+      "note": "Peer-reviewed Stratum Plus article checked for family sleeping platforms, child mortality evidence, cradles reconstructed from potties and urinal tubes, ceramic whistles, toy dishes, animal figures, balls, astragali and a child-marked room at Sarai. Most examples are comparative, not eastern-White-Horde provenience."
+    },
+    {
+      "id": "wh-ibnbattuta",
+      "title": "UC Berkeley ORIAS, Ibn Battuta in the Lands of the Golden Horde",
+      "url": "https://orias.berkeley.edu/node/170",
+      "note": "University teaching resource quoting the fourteenth-century traveler checked for felt-covered wagon homes, millet and milk dishes, meat, elite women’s property and authority, servants and enslaved attendants. His court journey does not represent every eastern household."
+    },
+    {
+      "id": "wh-crafts",
+      "title": "Yaroslav Pylypchuk, Trade and Crafts in Dasht-i Qipchaq",
+      "url": "https://oriental-world.org.ua/index.php/journal/article/view/593",
+      "note": "Peer-reviewed Oriental World article checked for steppe production of clothing, shoes, tools and weapons; gendered craft roles reported by its sources; imported luxury textiles and jewelry; livestock products; barter; and the coercive trade in captives."
+    },
+    {
+      "id": "wh-yarligh-study",
+      "title": "Lexical-Semantic Analysis of Tokhtamysh’s Yarlïğ to Jogaila",
+      "url": "https://bulpolit.enu.kz/index.php/main/article/view/132",
+      "note": "Peer-reviewed L. N. Gumilyov Eurasian National University article checked for the circa-1393 Jochid diplomatic document, its Golden Horde Turkic chancery language and political vocabulary. The sample is labeled as a document register, not every person’s speech."
+    },
+    {
+      "id": "wh-yarligh-text",
+      "title": "Scholarly edition of Golden Horde khans’ letters, Tokhtamysh document",
+      "url": "https://www.vostlit.info/Texts/Dokumenty/Zolotoord/XIV/1380-1400/Pisma_zol_chanov/text.phtml?id=3955",
+      "note": "Digital edition checked against the described original: two paper sheets, 25 lines in Old Uyghur script, gold-highlighted opening Toqtamïš sözüm, Arabic seal, and date 20 May 1393. The Latin sample is a scholarly transliteration, not a facsimile."
+    },
+    {
+      "id": "wh-continuity",
+      "title": "Marie Favereau and Roman Pochekaev, The Golden Horde, c. 1260 to 1502",
+      "url": "https://publications.hse.ru/en/chapters/898350958",
+      "note": "Cambridge History of the Mongol Empire chapter record checked for the Jochid realm’s Eurasian connections, institutions, political transformations and legacies in successor states. Used for continuity, not for a claim that every successor was simply the same state."
+    }
+  ],
+  "entities": [
+    {
+      "id": "white-horde",
+      "card": "data/cards/white-horde.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "wh-index",
+            "wh-encyclopedia",
+            "wh-continuity"
+          ],
+          "locator": "Exact repository entry checked: white-horde is labeled White Horde, carries Golden Horde as an alias, and is indexed circa 1400 to 1530. Related Blue Horde, Golden Horde, Sibir, Nogai and Quazaq records remain distinct ids. Scholarly encyclopedia entry checked for the conventional identification of the Ulus of Orda or Aq Orda as the eastern portion of the Jochid realm, its broad Ural-to-Irtysh setting, and the competing Blue Horde name. Cambridge History of the Mongol Empire chapter record checked for the Jochid realm’s Eurasian connections, institutions, political transformations and legacies in successor states. Used for continuity, not for a claim that every successor was simply the same state.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "wh-iranica"
+          ],
+          "locator": "Scholarly reference checked for Jochi and Orda, the north-eastern wing, Muslim cultural influence, the 1359 succession crisis, Tokhtamysh’s circa-1378 unification, conflict with Timur and fifteenth-century dissolution into smaller states.",
+          "dateScope": {
+            "from": 1227,
+            "to": 1260
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "wh-wings"
+          ],
+          "locator": "Peer-reviewed Acta Orientalia study using sources produced within the Jochid world. It finds a durable Right/Left Wing system and argues that late-fourteenth-century usage called the right or whole realm White Horde and the left wing Blue Horde, reversing a common modern convention.",
+          "dateScope": {
+            "from": 1260,
+            "to": 1359
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "wh-coinage"
+          ],
+          "locator": "Peer-reviewed numismatic article checked for the eastern Left Wing at Sighnaq, nominal Batuid seniority, practical internal autonomy, the 1359 to 1380 turmoil, Mubarak Khwaja’s 1366 to 1368 coins and regular minting under Urus Khan from 1368/69.",
+          "dateScope": {
+            "from": 1359,
+            "to": 1378
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "wh-iranica"
+          ],
+          "locator": "Scholarly reference checked for Jochi and Orda, the north-eastern wing, Muslim cultural influence, the 1359 succession crisis, Tokhtamysh’s circa-1378 unification, conflict with Timur and fifteenth-century dissolution into smaller states.",
+          "dateScope": {
+            "from": 1378,
+            "to": 1395
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "wh-urus"
+          ],
+          "locator": "Peer-reviewed KazNU history article checked for Urus Khan’s eastern-steppe power, intervention in wider Golden Horde struggles, resistance to Timur, and the growing influence of tribal leaders during political instability. Genealogy and color terminology remain debated.",
+          "dateScope": {
+            "from": 1395,
+            "to": 1429
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "wh-abulkhayrids"
+          ],
+          "locator": "Scholarly reference checked for Abu’l-Khayr’s election in Siberia in 1429, his unification of much of the Uzbek ulus, the later Shaybanid movement into Transoxiana, and Persian and Turkic literary traditions under successor dynasties.",
+          "dateScope": {
+            "from": 1429,
+            "to": 1468
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "wh-kazakh"
+          ],
+          "locator": "Author-uploaded Oxford Research Encyclopedia article checked for the eastern Qipchaq steppe, Jochid and Uzbek political inheritance, and the 1450s break of Jani Beg and Giray from Abu’l-Khayr. It warns against forcing formation into one uncontested date.",
+          "dateScope": {
+            "from": 1468,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "wh-index"
+          ],
+          "locator": "Exact target and related civilization-index entries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "wh-map1300"
+          ],
+          "locator": "Decoded feature ids, duplicate target-like predecessor records and point ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "wh-map1400"
+          ],
+          "locator": "Exact geometry type, position count, bounds, point tests and western Blue Horde feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "wh-map1492"
+          ],
+          "locator": "Exact geometry statistics and audited point-in-polygon changes from 1400.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "wh-map1500",
+            "wh-map1530"
+          ],
+          "locator": "Decoded 1500 target statistics and 1530 point-owner audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "wh-map1400"
+          ],
+          "locator": "Decoded east-west placement and exact civilization ids in the 1400 layer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "wh-wings"
+          ],
+          "locator": "Abstract and article conclusion on right/left wings and color terminology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "wh-wings"
+          ],
+          "locator": "Source-critical terminology conclusion; editorial explanation avoids choosing one color system as timeless.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "wh-turmoil"
+          ],
+          "locator": "Discussion of source scarcity, outsiders and the concentration on Sarai.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "wh-index"
+          ],
+          "locator": "Exact alias and distinct related ids in the repository index.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "wh-iranica"
+          ],
+          "locator": "Opening genealogy and geography, read with the card’s separate social-order evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "wh-coinage"
+          ],
+          "locator": "Article opening on Right/Left Wings, nominal jurisdiction and practical internal autonomy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "wh-unesco"
+          ],
+          "locator": "Sygnak component description, Ak-Orda association, houses, fields and channels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "wh-turmoil"
+          ],
+          "locator": "Chinggisid principle and regional-elite analysis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "wh-wings"
+          ],
+          "locator": "Finding that the bipolar wing structure persisted after Tokhtamysh’s unification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "wh-turmoil"
+          ],
+          "locator": "Crisis chronology and discussion of climate, plague, trade and food supply.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "wh-coinage"
+          ],
+          "locator": "Corrected Hijri dates and interpretation of the first eastern coinage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "wh-coinage",
+            "wh-urus"
+          ],
+          "locator": "Regular Sighnaq minting under Urus and Urus Khan’s wider political interventions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "wh-urus"
+          ],
+          "locator": "Article analysis of tribal leaders and political authority; logistical examples are plain-language implications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "wh-crafts"
+          ],
+          "locator": "Trade-and-crafts evidence for barter and livestock products; explicit limit on extrapolating mint evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "wh-turmoil"
+          ],
+          "locator": "Tokhtamysh’s rapid reunification and the continuing Chinggisid framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "wh-yarligh-text"
+          ],
+          "locator": "Document description, date and narrative content in the scholarly edition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "wh-iranica",
+            "wh-index"
+          ],
+          "locator": "Circa-1378 unification and exact atlas start date; transformation is explicit editorial synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "wh-map1400",
+            "wh-urus"
+          ],
+          "locator": "Point audit compared with the Urus Khan article’s eastern political setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "wh-kazakh"
+          ],
+          "locator": "Oxford Research Encyclopedia’s Kazakh Khanate history treats competing Jochid successors, mobile communities and political reorganization rather than one unchanged White Horde state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "wh-abulkhayrids"
+          ],
+          "locator": "Election and unification of the Uzbek ulus under Abu’l-Khayr.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "wh-map1492"
+          ],
+          "locator": "Point-owner audit and the changed target footprint; political caution is tied to the multi-polity chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "wh-kazakh"
+          ],
+          "locator": "Oxford article summary and formation discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "wh-kazakh"
+          ],
+          "locator": "Oxford article on Jochid inheritance and formation through a new coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "wh-map1530"
+          ],
+          "locator": "Successor point ownership and distinct indexed feature ids; continuity wording avoids an ethnic extinction claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "wh-life"
+          ],
+          "locator": "Study’s seasonal-pasture discussion; labor and planning are conservative implications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "wh-life"
+          ],
+          "locator": "Early-sixteenth-century portable and cart-mounted dwelling description, carefully dated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "wh-ibnbattuta"
+          ],
+          "locator": "ORIAS excerpts on elite women, property, authority, attendants and enslavement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "wh-children"
+          ],
+          "locator": "Family-platform and mortality discussion, with geographic limitation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "wh-life",
+            "wh-school"
+          ],
+          "locator": "Pastoral work and dated madrasa evidence; practical learning is explicitly marked as inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "wh-ibnbattuta"
+          ],
+          "locator": "Attributed food observations and explicit limit on representativeness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "wh-syganak"
+          ],
+          "locator": "Early-sixteenth-century Ruzbihan market report as presented by the government cultural page.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "wh-unesco"
+          ],
+          "locator": "Corridor criteria and Otrar/Sygnak descriptions of agriculture, crafts and steppe-oasis exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "wh-crafts"
+          ],
+          "locator": "Article abstract on household crafts, imported prestige goods and gendered work, with scope warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "wh-crafts"
+          ],
+          "locator": "Article abstract on livestock products, barter and captive trade; human consequence stated plainly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "wh-school"
+          ],
+          "locator": "Field-report conclusion on plan, room functions, minarets and 1515 identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "wh-school"
+          ],
+          "locator": "Madrasa architecture and explicit limits on inferring attendance or access from a building.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "wh-syganak"
+          ],
+          "locator": "Named scholars, mint role and long chronology on the government cultural-history page.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "wh-yarligh-study",
+            "wh-yarligh-text"
+          ],
+          "locator": "Document-language study plus material and script description of the original.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "wh-yarligh-text"
+          ],
+          "locator": "First line identified as Toqtamis sozum and described as written in gold; translation is labeled and restrained.",
+          "dateScope": {
+            "year": 1393
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "wh-water"
+          ],
+          "locator": "Garden, canal, kariz and seasonal-water discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "wh-water"
+          ],
+          "locator": "Detailed fieldwork conclusion that the two kariz systems were structurally separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "wh-syganak"
+          ],
+          "locator": "Archaeological medicine interpretation and horn-processing report, with efficacy limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "wh-children",
+            "wh-water"
+          ],
+          "locator": "Golden Horde potty/cradle evidence contrasted with Sauran waterworks and explicit provenance limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "wh-children"
+          ],
+          "locator": "Toy and sanitation finds from the peer-reviewed archaeology study; humor does not add a factual claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "wh-map1530",
+            "wh-continuity"
+          ],
+          "locator": "Decoded successor seam. The exact target vanishes. Tested Sighnaq, Sauran, Otyrar, Turkistan and Saryarka fall in quazaq-khanate; Mangystau in khiva-khanate; western and northern tests fall among Nogai, Kazan and Sibir features. Cambridge History of the Mongol Empire chapter record checked for the Jochid realm’s Eurasian connections, institutions, political transformations and legacies in successor states. Used for continuity, not for a claim that every successor was simply the same state.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "white-horde",
+        "card": "cards/white-horde.json",
+        "dateBasis": "map_coverage",
+        "summary": "The atlas label outlives the historical eastern Jochid wing; several fifteenth-century successor states continued its people, cities, skills and political traditions.",
+        "summarySource": null,
+        "fell": null,
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "white-horde",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            47.8318783187832,
+            41.13815019620975,
+            93.97353973539737,
+            62.53885415991442
+          ]
+        },
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "white-horde",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            50.326703267032684,
+            38.89676235310158,
+            87.77427774277743,
+            61.68547507634942
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "white-horde",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            50.326703267032684,
+            38.897558190680314,
+            87.77427774277743,
+            60.00155009424681
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Exact target white-horde is indexed circa 1400 to 1530, has Golden Horde as an alias, and has no tracked card or override before integration.",
+    "The 1400, 1492 and 1500 exact features are all single-ring Polygons but have different coordinate counts, bounds, hashes and tested inclusions. Imported geometry is a locator, not a verified frontier.",
+    "The atlas follows the convention east equals White Horde and west equals Blue Horde. Jochid-inside source analysis supports the opposite late-fourteenth-century color usage, so the disagreement is public and no label is treated as timeless.",
+    "Tokhtamysh united the major Jochid wings before the atlas start. The 1400 to 1530 id therefore spans fragmentation and multiple successor polities instead of the lifetime of one unchanged White Horde state.",
+    "The 1530 layer assigns tested target places among separate Quazaq, Nogai, Sibir, Kazan and Khiva records. No appliesTo alias or shared-card substitution is used.",
+    "Daily-life evidence is labeled by place and date. Wider Golden Horde child and sanitation finds are comparative and are not relocated to the eastern core.",
+    "The written sample Toqtamïš sözüm is a scholarly Latin transliteration of a gold-highlighted Old Uyghur-script opening in Tokhtamysh’s 1393 Turkic yarlïğ; it is not a facsimile or a claim of universal speech."
+  ]
+}
