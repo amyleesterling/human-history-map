@@ -1,0 +1,832 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release161-bashkirs research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "ba-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact Bashkirs id, display name, circa flag, and indexed 800 to 900 interval."
+    },
+    {
+      "id": "ba-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported one-line summary audited as a legacy label, not independent historical evidence."
+    },
+    {
+      "id": "ba-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing-card status, one border snapshot, and unreviewed identity, chronology, and border fields."
+    },
+    {
+      "id": "ba-map-700",
+      "title": "Human History Map 700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Pre-start control: no Bashkirs feature and different owners at the fixed test points."
+    },
+    {
+      "id": "ba-map-800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Only exact Bashkirs snapshot, decoded polygon, point membership, shared arcs, and geometry hashes."
+    },
+    {
+      "id": "ba-map-900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Endpoint control: Bashkirs disappears while Oghuz Turks cover the eastern and southern probes."
+    },
+    {
+      "id": "ba-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Post-end control: Kimek-Kipchak Khaganate covers the eastern and southern probes."
+    },
+    {
+      "id": "ba-map-1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Later control: Cuman-Kipchak Confederation covers the eastern and southern probes."
+    },
+    {
+      "id": "ba-overview-arch",
+      "title": "The current state of archaeology in Bashkiria and the Southern Urals",
+      "url": "https://real.mtak.hu/213995/1/12_turka_etal_baskirkonf_2024.pdf",
+      "note": "HUN-REN regional synthesis: Karayakupovo chronology, Cis- and Trans-Ural variants, polyethnic caution, and mixed Ugric and Turkic-associated horizons."
+    },
+    {
+      "id": "ba-overview-lang",
+      "title": "On the Beginnings of the Formation of the Bashkir Language",
+      "url": "https://tudoster.unideb.hu/en/publikacio/BIBFORM126920",
+      "note": "Peer-reviewed historical-linguistic argument against projecting a homogeneous Bashkir-speaking community before the thirteenth century."
+    },
+    {
+      "id": "ba-overview-written",
+      "title": "Bashkir beliefs and Ibn Fadlan",
+      "url": "https://arpad.abtk.hu/hu/repository/magna-hungaria-nyomaban-baskirok-es-magyarok-baskiria-es-a-baskir-nep-szerepe-a-magyarok-korai-torteneteben/a-baskir-hiedelmek-es-ibn-fadlan",
+      "note": "HUN-REN study identifying the 922 account as the first detailed record and separating observation, report, and misunderstanding."
+    },
+    {
+      "id": "ba-chronology",
+      "title": "Chronology and Periodization of Uelgi Burial Ground",
+      "url": "https://arpad.abtk.hu/images/kiadvanyok/aec_6_2018.pdf",
+      "note": "Radiocarbon and artifact chronology placing the earliest Uyelgi complexes around the turn of the ninth century and the early group mainly in the ninth century."
+    },
+    {
+      "id": "ba-uyelgi",
+      "title": "Ethnocultural Situation in the Trans-Urals in the Early 2nd Millennium AD: Evidence from Kurgan 11 at Uyelgi",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/24-52-1/annot-08/",
+      "note": "Russian Academy of Sciences archaeological study identifying at least four cultural horizons and mixed Southern Ural, Srostki, Altai, and Ugric-associated material."
+    },
+    {
+      "id": "ba-monograph",
+      "title": "The Uyelgi Burial Complex, Ninth to Eleventh Centuries, in the Southern Trans-Urals",
+      "url": "https://doi.org/10.55722/Arpad.Kiad.2025.13",
+      "note": "HUN-REN and partner-institution excavation monograph covering Uyelgi fieldwork from 2009-2019 and 2021-2023 and the cemetery sequence across the ninth to eleventh centuries."
+    },
+    {
+      "id": "ba-expedition",
+      "title": "Sixth Russian-Hungarian Ural Archaeological Expedition",
+      "url": "https://btk.ppke.hu/en/6th-russian-hungarian-ural-archaeological-expedition-2018",
+      "note": "University fieldwork report on Kushnarenkovo archaeology, disturbed burials, excavation methods, and mixed nomadic and forest-steppe influences."
+    },
+    {
+      "id": "ba-sallam",
+      "title": "History of Bashkortostan from Ancient Times to the 1860s",
+      "url": "https://djvu.online/file/6RgP1fdcxt0Lh",
+      "note": "Regional scholarly history contrasting the ninth-century Ibn Khordadbeh recension, which lacks Bashkirs, with al-Idrisi’s later version of Sallam’s journey."
+    },
+    {
+      "id": "ba-zimonyi",
+      "title": "Muslim Sources on the Magyars in the Second Half of the Ninth Century",
+      "url": "https://ebook.ek.szte.hu/index.php/btk-magyarnyelviirodalmi-intezet/catalog/download/197/611/1513?inline=1",
+      "note": "Critical source study on layered geographic traditions, Sallam, Jayhani, and the ambiguity between Bashghird and Magyar labels."
+    },
+    {
+      "id": "ba-unesco-steppe",
+      "title": "History of Civilizations of Central Asia, Volume IV",
+      "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ee5bd446-a11d-4a1a-b6ac-64b945c80037?_=111664engo.pdf",
+      "note": "UNESCO synthesis on the late ninth-century Oghuz-Khazar defeat of Pechenegs and the uncertain Bajgird identification."
+    },
+    {
+      "id": "ba-oghuz-pecheneg",
+      "title": "The Oghuz-Pecheneg Battles in the Eighth and Ninth Centuries",
+      "url": "https://acta.bibl.u-szeged.hu/65387/",
+      "note": "University of Szeged study dating the recorded Oghuz occupation of Pecheneg Volga-Ural lands around 893-894 while questioning a simple Khazar alliance narrative."
+    },
+    {
+      "id": "ba-coins",
+      "title": "Muslim Coins as a Commodity and Means of Payment in the Volga-Ural Region",
+      "url": "https://www.researchgate.net/publication/357846082_Muslim_Coins_as_a_Commodity_and_Means_of_Payment_In_International_and_Internal_Trade_In_Volga-Ural_Region_In_8th-_Beginning_of_11th_cc",
+      "note": "Peer-reviewed study of eighth- to early eleventh-century coin movement and the changing roles of Khazar and Volga Bulgar exchange."
+    },
+    {
+      "id": "ba-costume",
+      "title": "Reconstruction of Horse Equipment and Costume of the Southern Trans-Urals in the Ninth to Eleventh Centuries",
+      "url": "https://www.researchgate.net/publication/329183860_REKONSTRUKCIA_KONSKOGO_SNARAZENIA_I_KOSTUMA_UZNOGO_ZAURALIA_IX-XI_VV_PO_MATERIALAM_MOGILNIKOV_UELGI_I_SINEGLAZOVO_1",
+      "note": "Artifact reconstruction from Uyelgi and Sineglazovo: harness, stirrups, bits, plaques, beads, headdress fittings, and a child burial belt."
+    },
+    {
+      "id": "ba-genetics",
+      "title": "Early medieval genetic data from Ural region evaluated in the light of archaeological evidence of ancient Hungarians",
+      "url": "https://www.nature.com/articles/s41598-020-75910-z",
+      "note": "Peer-reviewed ancient-DNA analysis of Uyelgi chronological horizons and genetic continuity, used with an explicit warning that ancestry does not determine ethnicity."
+    },
+    {
+      "id": "ba-ibn",
+      "title": "Mission to the Volga",
+      "url": "https://www.libraryofarabicliterature.org/assets/Mission-to-the-Volga-Yaqut-corrected-2014-03-14.pdf",
+      "note": "Library of Arabic Literature critical Arabic-English edition of Ibn Fadlan’s 921-922 journey and Yaqut’s preserved excerpts."
+    },
+    {
+      "id": "ba-route",
+      "title": "On the route of the Baghdad embassy to Volga Bulgaria",
+      "url": "https://orensteppe.org/node/1279",
+      "note": "Institute of Steppe reconstruction placing the Bashghird encounter around 3 May 922 and arrival among the Volga Bulgars on 12 May."
+    },
+    {
+      "id": "ba-outsider",
+      "title": "The worst of all Turkish peoples: Ibn Fadlan’s travel account as British naval intelligence",
+      "url": "https://link.springer.com/article/10.1057/s41280-026-00429-x",
+      "note": "Peer-reviewed analysis of Ibn Fadlan’s outsider rhetoric, manuscript afterlife, ethnographic authority, and later stereotyping."
+    },
+    {
+      "id": "ba-writing",
+      "title": "Bashghird in medieval Arabic geographical writing",
+      "url": "https://brill.com/previewpdf/book/9789004306110/B9789004306110_005.xml",
+      "note": "Academic edition discussing the Arabic ethnonym Bāshghird, variant readings, and uncertainty in representing foreign names."
+    },
+    {
+      "id": "ba-glottolog",
+      "title": "Glottolog 5.2: Bashkir",
+      "url": "https://glottolog.org/resource/languoid/id/bash1264",
+      "note": "Current scholarly catalog entry for the modern Bashkir language, used only for present-day continuity and classification."
+    },
+    {
+      "id": "ba-written-modern",
+      "title": "Written sources in the Bashkir language of the late nineteenth and early twentieth century",
+      "url": "https://www.ceeol.com/search/article-detail?id=469190",
+      "note": "Russian Academy of Sciences linguistic study locating a substantial Bashkir-language written corpus much later than this card’s interval."
+    },
+    {
+      "id": "ba-trade",
+      "title": "Trade of Volga Bulgaria in the ninth to thirteenth centuries",
+      "url": "https://rosarchras.ru/s0869-60630000402-5-1-ru-40/?sl=en",
+      "note": "Russian Academy of Sciences archaeological synthesis of exchange objects, craft, agriculture, livestock, and routes reaching the Urals and Trans-Urals."
+    },
+    {
+      "id": "ba-land",
+      "title": "The Bashkir Ural",
+      "url": "https://whc.unesco.org/en/tentativelists/5666",
+      "note": "UNESCO description of the western Southern Urals, river valleys, karst, forests, and continuing wild-hive beekeeping traditions."
+    },
+    {
+      "id": "ba-mountain",
+      "title": "Mountainous Urals Biosphere Reserve",
+      "url": "https://www.unesco.org/en/mab/mountainous-urals",
+      "note": "UNESCO description of mountain taiga, mixed forest, valleys, lakes, and current environmental diversity."
+    },
+    {
+      "id": "ba-bees",
+      "title": "The Ural Mountains and Human Origins",
+      "url": "https://whc.unesco.org/document/137848",
+      "note": "UNESCO regional dossier noting long-lived wild-hive beekeeping in present Bashkortostan, used as regional evidence without assigning it to every ninth-century household."
+    }
+  ],
+  "entities": [
+    {
+      "id": "bashkirs",
+      "card": "data/cards/bashkirs.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ba-index",
+            "ba-summary",
+            "ba-coverage",
+            "ba-map-800",
+            "ba-map-900",
+            "ba-overview-arch",
+            "ba-overview-lang",
+            "ba-overview-written"
+          ],
+          "locator": "Exact Bashkirs id, display name, circa flag, and indexed 800 to 900 interval. Imported one-line summary audited as a legacy label, not independent historical evidence. Missing-card status, one border snapshot, and unreviewed identity, chronology, and border fields. Only exact Bashkirs snapshot, decoded polygon, point membership, shared arcs, and geometry hashes. Endpoint control: Bashkirs disappears while Oghuz Turks cover the eastern and southern probes. HUN-REN regional synthesis: Karayakupovo chronology, Cis- and Trans-Ural variants, polyethnic caution, and mixed Ugric and Turkic-associated horizons. Peer-reviewed historical-linguistic argument against projecting a homogeneous Bashkir-speaking community before the thirteenth century. HUN-REN study identifying the 922 account as the first detailed record and separating observation, report, and misunderstanding.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ba-chronology"
+          ],
+          "locator": "Radiocarbon and artifact chronology placing the earliest Uyelgi complexes around the turn of the ninth century and the early group mainly in the ninth century.",
+          "dateScope": {
+            "from": 800,
+            "to": 815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ba-uyelgi"
+          ],
+          "locator": "Russian Academy of Sciences archaeological study identifying at least four cultural horizons and mixed Southern Ural, Srostki, Altai, and Ugric-associated material.",
+          "dateScope": {
+            "from": 815,
+            "to": 830
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ba-expedition"
+          ],
+          "locator": "University fieldwork report on Kushnarenkovo archaeology, disturbed burials, excavation methods, and mixed nomadic and forest-steppe influences.",
+          "dateScope": {
+            "from": 830,
+            "to": 842
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ba-sallam"
+          ],
+          "locator": "Regional scholarly history contrasting the ninth-century Ibn Khordadbeh recension, which lacks Bashkirs, with al-Idrisi’s later version of Sallam’s journey.",
+          "dateScope": {
+            "from": 842,
+            "to": 847
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ba-zimonyi"
+          ],
+          "locator": "Critical source study on layered geographic traditions, Sallam, Jayhani, and the ambiguity between Bashghird and Magyar labels.",
+          "dateScope": {
+            "from": 847,
+            "to": 870
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ba-coins"
+          ],
+          "locator": "Peer-reviewed study of eighth- to early eleventh-century coin movement and the changing roles of Khazar and Volga Bulgar exchange.",
+          "dateScope": {
+            "from": 870,
+            "to": 893
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ba-unesco-steppe"
+          ],
+          "locator": "UNESCO synthesis on the late ninth-century Oghuz-Khazar defeat of Pechenegs and the uncertain Bajgird identification.",
+          "dateScope": {
+            "from": 893,
+            "to": 898
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ba-map-900",
+            "ba-route"
+          ],
+          "locator": "Endpoint control: Bashkirs disappears while Oghuz Turks cover the eastern and southern probes. Institute of Steppe reconstruction placing the Bashghird encounter around 3 May 922 and arrival among the Volga Bulgars on 12 May.",
+          "dateScope": {
+            "from": 898,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ba-index",
+            "ba-coverage",
+            "ba-map-700",
+            "ba-map-800"
+          ],
+          "locator": "Exact indexed truth and pre-start snapshot coverage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ba-map-800"
+          ],
+          "locator": "Decoded component, ring, position, and bounding-box audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ba-map-800"
+          ],
+          "locator": "Fixed point-in-polygon probes against decoded geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ba-map-800"
+          ],
+          "locator": "Point-owner audit for western control locations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ba-map-800"
+          ],
+          "locator": "Direct shared-arc neighbor audit in the target snapshot.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ba-sallam"
+          ],
+          "locator": "Regional narrative checked for ninth-century political attestations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ba-sallam"
+          ],
+          "locator": "Comparison of early and late recensions of Sallam’s route.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ba-zimonyi"
+          ],
+          "locator": "Critical analysis of Bashghird and Magyar naming traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ba-writing"
+          ],
+          "locator": "Foreign-name uncertainty paired with the absence of local language evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ba-genetics"
+          ],
+          "locator": "Uyelgi genetic continuity interpreted within archaeological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ba-chronology"
+          ],
+          "locator": "Published Uyelgi calibrated range and early chronological group.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ba-uyelgi"
+          ],
+          "locator": "Kurgan 11 stratigraphy and cross-regional artifact associations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ba-genetics"
+          ],
+          "locator": "Published chronological horizons and uniparental continuity result.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ba-expedition"
+          ],
+          "locator": "Field report on disturbance and interpretive consequences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ba-chronology"
+          ],
+          "locator": "Comparison of archaeological and radiocarbon dating methods.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ba-costume"
+          ],
+          "locator": "Reconstructed riding equipment from five archaeological complexes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ba-costume"
+          ],
+          "locator": "Horse burial and harness context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ba-uyelgi"
+          ],
+          "locator": "Comb-and-cord pottery from the upper Uyelgi horizon.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ba-trade"
+          ],
+          "locator": "Regional craft and exchange context for metal and livestock equipment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ba-expedition"
+          ],
+          "locator": "Disturbed-burial evidence and recovery limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ba-costume"
+          ],
+          "locator": "Published reconstruction of the child burial belt.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ba-genetics"
+          ],
+          "locator": "Genetic continuity result and its social limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ba-written-modern"
+          ],
+          "locator": "Chronological gap between the target era and substantial Bashkir-language documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ba-ibn"
+          ],
+          "locator": "Named role of the Bashghird convert in the 922 account.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ba-written-modern"
+          ],
+          "locator": "Late date of substantial written-language sources and absence of an early school corpus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ba-mountain"
+          ],
+          "locator": "UNESCO biosphere description of the Southern Ural landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ba-costume"
+          ],
+          "locator": "Horse equipment and vessel-bearing burial contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ba-trade"
+          ],
+          "locator": "Russian Academy synthesis of Volga-Ural exchange networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ba-coins"
+          ],
+          "locator": "Eighth- to early eleventh-century coin circulation analysis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ba-bees"
+          ],
+          "locator": "UNESCO regional beekeeping history with an explicit non-projection limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ba-route"
+          ],
+          "locator": "Reconstructed 922 itinerary and dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ba-ibn"
+          ],
+          "locator": "Critical-edition passages on reported beliefs and mediation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ba-ibn"
+          ],
+          "locator": "Animal-veneration passages in the critical edition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ba-ibn"
+          ],
+          "locator": "Individual convert and embassy service in 922.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ba-outsider"
+          ],
+          "locator": "Peer-reviewed analysis of outsider rhetoric and later reception.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ba-writing"
+          ],
+          "locator": "Survey of foreign ethnonym evidence and absence of a local Bashkir text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ba-writing"
+          ],
+          "locator": "Arabic ethnonym, transliteration, and manuscript caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ba-writing"
+          ],
+          "locator": "Variant readings and foreign-name transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ba-written-modern"
+          ],
+          "locator": "Date and script range of the studied Bashkir-language corpus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ba-glottolog"
+          ],
+          "locator": "Modern language identification used with explicit chronological restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ba-expedition"
+          ],
+          "locator": "Fieldwork corpus checked for medical evidence and its preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ba-monograph"
+          ],
+          "locator": "Uyelgi excavation monograph and explicit settlement-sanitation evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ba-land"
+          ],
+          "locator": "UNESCO Southern Ural river-valley and karst landscape description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ba-genetics"
+          ],
+          "locator": "Ancient-DNA method and the distinction between ancestry and care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ba-outsider"
+          ],
+          "locator": "Source-bias analysis applied to hygiene language.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ba-map-800",
+            "ba-map-900"
+          ],
+          "locator": "Endpoint owner comparison across fixed probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ba-oghuz-pecheneg"
+          ],
+          "locator": "Late ninth-century Oghuz-Pecheneg conflict and alliance debate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ba-map-900",
+            "ba-map-1000",
+            "ba-map-1100"
+          ],
+          "locator": "Post-end owner controls at 1000 and 1100.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ba-glottolog"
+          ],
+          "locator": "Modern language continuity separated from unchanged backward projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ba-monograph"
+          ],
+          "locator": "Multiple cemetery horizons extending beyond the display endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ba-map-800",
+            "ba-map-900",
+            "ba-glottolog"
+          ],
+          "locator": "Only exact Bashkirs snapshot, decoded polygon, point membership, shared arcs, and geometry hashes. Endpoint control: Bashkirs disappears while Oghuz Turks cover the eastern and southern probes. Current scholarly catalog entry for the modern Bashkir language, used only for present-day continuity and classification.",
+          "dateScope": {
+            "year": 900
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "bashkirs",
+        "name": "Bashkirs",
+        "kind": "culture",
+        "region": "Asia",
+        "from": 800,
+        "to": 900,
+        "circa": true,
+        "card": "cards/bashkirs.json",
+        "dateBasis": "map_coverage",
+        "summary": "A cautious Trans-Ural people-label amid polyethnic communities and sparse ninth-century evidence.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "bashkirs",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            55.60435604356044,
+            50.75977763326354,
+            70.38250382503827,
+            57.5781427843833
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
