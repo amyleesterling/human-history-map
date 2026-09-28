@@ -1,0 +1,877 @@
+{
+  "version": 1,
+  "region": "Oceania",
+  "researcher": "Codex parallel release162-papua-new-guinea research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "pg-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, modern display name, imported alias, circa 1492 to 1530 window, and historical basemap provenance."
+    },
+    {
+      "id": "pg-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Two exact observed intervals, two border files, and the missing card status for this record."
+    },
+    {
+      "id": "pg-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-start control proving the exact target feature is absent before the 1492 atlas seam."
+    },
+    {
+      "id": "pg-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "First exact target feature, decoded geometry, probes, topology neighbor, bounds, and 1492 to 1500 properties."
+    },
+    {
+      "id": "pg-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Second exact feature, slightly changed decoded coordinates, unchanged point memberships, and 1500 to 1530 properties."
+    },
+    {
+      "id": "pg-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Exact endpoint control where papua-new-guinea disappears and the separate papuans-1530 record gains a western component."
+    },
+    {
+      "id": "pg-map1700",
+      "title": "Human History Map 1700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Later papuans-1530 geometry after its western component is removed, used only for label and shape comparison."
+    },
+    {
+      "id": "pg-map1715",
+      "title": "Human History Map 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Later papua-new-guinea-1715 label inherits the 1700 eastern geometry, without proving historical institutional continuity."
+    },
+    {
+      "id": "pg-pacific-languages",
+      "title": "Lynch, Ross, and Crowley: Pacific Languages, an Introduction",
+      "url": "https://www.jstor.org/content/oa_book_monograph/j.ctv893h2b",
+      "note": "Open scholarly synthesis of Pacific language histories, diversity, contact, and the limits of broad Papuan classification."
+    },
+    {
+      "id": "pg-uncovering",
+      "title": "ANU Press: Uncovering Pacific Pasts, chapter 34",
+      "url": "https://press-files.anu.edu.au/downloads/press/n9334/html/ch34.xhtml",
+      "note": "History of New Guinea archaeology, highland sequences, changing interpretations, and the difference between evidence and inherited models."
+    },
+    {
+      "id": "pg-fode",
+      "title": "Papua New Guinea Flexible Open and Distance Education: Grade 7 Social Science",
+      "url": "https://www.fode.education.gov.pg/courses/Social%20Science/Grade%207/GRADE.7.SocialScience.S3.pdf",
+      "note": "Government education text locating the early Portuguese encounter on western New Guinea and describing exchange rather than conquest."
+    },
+    {
+      "id": "pg-wanelek",
+      "title": "Gaffney and colleagues: Earliest Pottery on New Guinea Mainland",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4557931/",
+      "note": "Peer reviewed Wanelek evidence for highland pottery, coastal and inland manufacture, polished axes, and long-distance influences."
+    },
+    {
+      "id": "pg-keveoki",
+      "title": "David and colleagues: Keveoki 1 and hiri ceramics",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/keveoki-1-exploring-the-hiri-ceramics-trade-at-a-short-lived-vill/",
+      "note": "Peer reviewed archaeological record for a short-lived Gulf village and ceramics around 450 to 500 calibrated years BP."
+    },
+    {
+      "id": "pg-kula-origin",
+      "title": "Irwin, Shaw, and McAlister: Origins of the Kula Ring",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/the-origins-of-the-kula-ring-archaeological-and-maritime-perspect/",
+      "note": "Peer reviewed regional synthesis of Massim pottery, exchange, seasonal winds, canoe performance, and late prehistoric change."
+    },
+    {
+      "id": "pg-kula-obsidian",
+      "title": "Shaw and colleagues: Village-specific Kula partnerships",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/arco.5224",
+      "note": "Peer reviewed obsidian sourcing showing northern Massim connections by 1350 to 1500 and distinct village histories."
+    },
+    {
+      "id": "pg-ruisasi",
+      "title": "David and colleagues: Ruisasi 1 mass-produced ceramics",
+      "url": "https://pacificarchaeology.org/index.php/journal/article/view/181",
+      "note": "Open peer reviewed Caution Bay evidence for standardized vessels, a pottery midden, marine specialization, and an earlier regional network."
+    },
+    {
+      "id": "pg-kuk-phase5",
+      "title": "ANU Press: Kuk Swamp artefacts and Phase 5 houses",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2540/html/ch20.xhtml",
+      "note": "Archaeological chapter dating sparse Phase 5 houses near 1500, garden drainage, food preparation tools, and sampling limits."
+    },
+    {
+      "id": "pg-kuk-houses",
+      "title": "ANU Press: Kuk Swamp houses and settlement",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2540/html/ch17.xhtml",
+      "note": "Archaeological and later ethnographic comparison of house forms, family use, rebuilding, pigs, and the danger of simple back-projection."
+    },
+    {
+      "id": "pg-island-tech",
+      "title": "ANU Press: Archaeologies of Island Melanesia, technological process",
+      "url": "https://press-files.anu.edu.au/downloads/press/n5484/html/ch13.xhtml",
+      "note": "Archaeological and ethnographic study of pottery production, materials, makers, exchange, and technological process around Madang."
+    },
+    {
+      "id": "pg-vitiaz",
+      "title": "Lilley: Prehistoric exchange in the Vitiaz Strait",
+      "url": "https://openresearch-repository.anu.edu.au/items/ad780e72-176f-4503-b056-4e5ea3c7cf85",
+      "note": "ANU thesis on pottery, obsidian, shell, bone, food remains, and exchange linking New Guinea with the Bismarck Archipelago."
+    },
+    {
+      "id": "pg-mailu",
+      "title": "Irwin: Emergence of Mailu as a central place",
+      "url": "https://openresearch-repository.anu.edu.au/items/07f070f6-8e4b-4794-bc60-ed046a3390b7",
+      "note": "ANU archaeological study of settlement spacing, environmental zones, pottery manufacture, clay sources, and trade in coastal Papua."
+    },
+    {
+      "id": "pg-nimowa",
+      "title": "Shaw and Dickinson: Excavation on Nimowa Island",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/excavation-on-nimowa-island-louisiade-archipelago-papua-new-guine/",
+      "note": "Peer reviewed late prehistoric settlement, pottery, shell, stone, burial, exchange, and decorative continuity in the Louisiades."
+    },
+    {
+      "id": "pg-hiri-agency",
+      "title": "Rethinking agency in hiri exchange relationships",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416522000927",
+      "note": "Peer reviewed synthesis centering Gulf oral traditions, inter-family partnerships, temporary adoption, sago, pottery, and chronological limits."
+    },
+    {
+      "id": "pg-hardy",
+      "title": "Hardy and colleagues: Ceramic analysis and oral traditions",
+      "url": "https://digitalcollections.anu.edu.au/items/1d0086b8-3629-4f93-b884-999b170b1518",
+      "note": "ANU research combining Gadsup and Agarabi oral histories with ceramic chemistry to reconstruct local movements and exchange."
+    },
+    {
+      "id": "pg-writing",
+      "title": "Writing New Guinea Languages: Alphabets and Orthographies",
+      "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/253050/1/PL-C40.311.pdf",
+      "note": "Linguistic study stating that Motu received its first developed orthography and school publication in 1877."
+    },
+    {
+      "id": "pg-language-contact",
+      "title": "ANU Press: Pre-contact encounters and linguistic responses",
+      "url": "https://press-files.anu.edu.au/downloads/press/p60461/html/ch02s04.html",
+      "note": "Scholarly account of multilingual Pacific trade, Papuan and Austronesian contact, and trade-language development."
+    },
+    {
+      "id": "pg-foodways",
+      "title": "Tropical Foodways and Exchange along Northeastern New Guinea",
+      "url": "https://ourarchive.otago.ac.nz/esploro/outputs/journalArticle/Tropical-Foodways-and-Exchange-along-the/9926495665301891",
+      "note": "Peer reviewed last-millennium evidence from shell, animal remains, dental calculus, and pottery residues around Madang."
+    },
+    {
+      "id": "pg-microfossils",
+      "title": "Piperno: Microfossil perspectives on human-plant interaction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1805511/",
+      "note": "Peer reviewed synthesis of Kuk starch and phytolith evidence for ancient banana, taro, cultivation, and preservation limits."
+    },
+    {
+      "id": "pg-pig-debate",
+      "title": "Denham: Evidential basis for early pigs and pottery in Melanesia",
+      "url": "https://pacificarchaeology.org/index.php/journal/article/view/56",
+      "note": "Peer reviewed reassessment showing that pig and pottery chronologies in New Guinea require source criticism and new dates."
+    },
+    {
+      "id": "pg-health",
+      "title": "Papua New Guinea Medical Journal: South-coast bioarchaeology",
+      "url": "https://www.pngimr.org.pg/wp-content/uploads/2019/04/VOL.-60-NO-1-2-MARCH-JUNE-2017.pdf",
+      "note": "Medical journal abstract comparing oral disease and childhood stress at late prehistoric Nebira and Motupore."
+    },
+    {
+      "id": "pg-tools",
+      "title": "Australian Museum: Learning process in highland stone tools",
+      "url": "https://australian.museum/blog-archive/science/learning-process-stone-tools-in-the-highlands/",
+      "note": "Museum account of observed tool manufacture, teaching, raw material choice, and the chronological limits of ethnographic analogy."
+    },
+    {
+      "id": "pg-medicine",
+      "title": "Koch and colleagues: East Sepik medicinal plant survey",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4647451/",
+      "note": "Community and university-linked modern survey showing locally varied plants, preparations, uses, and incomplete clinical validation."
+    },
+    {
+      "id": "pg-landscape",
+      "title": "UNESCO: Cultural Landscapes of the Pacific",
+      "url": "https://whc.unesco.org/document/10062",
+      "note": "UNESCO study of Kuk drainage, cultivation, pigs, exchange, landscape history, and the need to avoid one linear agricultural story."
+    },
+    {
+      "id": "pg-aus-trade",
+      "title": "Australian Museum: New Britain stone-tool geochemistry",
+      "url": "https://journals.australian.museum/pengilley-2021-tech-rep-aust-mus-online-34-2545/",
+      "note": "Museum-published geochemical study tracing flaked and ground tools through intra-island and inter-island movement."
+    }
+  ],
+  "entities": [
+    {
+      "id": "papua-new-guinea",
+      "card": "data/cards/papua-new-guinea.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pg-pacific-languages",
+            "pg-map1492",
+            "pg-map1500"
+          ],
+          "locator": "Open scholarly synthesis of Pacific language histories, diversity, contact, and the limits of broad Papuan classification. First exact target feature, decoded geometry, probes, topology neighbor, bounds, and 1492 to 1500 properties. Second exact feature, slightly changed decoded coordinates, unchanged point memberships, and 1500 to 1530 properties.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pg-map1400",
+            "pg-map1492",
+            "pg-index"
+          ],
+          "locator": "Pre-start control proving the exact target feature is absent before the 1492 atlas seam. First exact target feature, decoded geometry, probes, topology neighbor, bounds, and 1492 to 1500 properties. Exact id, modern display name, imported alias, circa 1492 to 1530 window, and historical basemap provenance.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pg-map1492",
+            "pg-kula-obsidian"
+          ],
+          "locator": "First exact target feature, decoded geometry, probes, topology neighbor, bounds, and 1492 to 1500 properties. Peer reviewed obsidian sourcing showing northern Massim connections by 1350 to 1500 and distinct village histories.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pg-map1492",
+            "pg-map1500"
+          ],
+          "locator": "First exact target feature, decoded geometry, probes, topology neighbor, bounds, and 1492 to 1500 properties. Second exact feature, slightly changed decoded coordinates, unchanged point memberships, and 1500 to 1530 properties.",
+          "dateScope": {
+            "from": 1500,
+            "to": 1505
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pg-kuk-phase5"
+          ],
+          "locator": "Archaeological chapter dating sparse Phase 5 houses near 1500, garden drainage, food preparation tools, and sampling limits.",
+          "dateScope": {
+            "from": 1505,
+            "to": 1510
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pg-keveoki"
+          ],
+          "locator": "Peer reviewed archaeological record for a short-lived Gulf village and ceramics around 450 to 500 calibrated years BP.",
+          "dateScope": {
+            "from": 1510,
+            "to": 1515
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pg-kula-origin"
+          ],
+          "locator": "Peer reviewed regional synthesis of Massim pottery, exchange, seasonal winds, canoe performance, and late prehistoric change.",
+          "dateScope": {
+            "from": 1515,
+            "to": 1521
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pg-language-contact"
+          ],
+          "locator": "Scholarly account of multilingual Pacific trade, Papuan and Austronesian contact, and trade-language development.",
+          "dateScope": {
+            "from": 1521,
+            "to": 1526
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pg-fode",
+            "pg-map1500",
+            "pg-map1530"
+          ],
+          "locator": "Government education text locating the early Portuguese encounter on western New Guinea and describing exchange rather than conquest. Second exact feature, slightly changed decoded coordinates, unchanged point memberships, and 1500 to 1530 properties. Exact endpoint control where papua-new-guinea disappears and the separate papuans-1530 record gains a western component.",
+          "dateScope": {
+            "from": 1526,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pg-index",
+            "pg-coverage",
+            "pg-uncovering"
+          ],
+          "locator": "Exact index and coverage records, combined with the archaeological history warning against inherited unitary models.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pg-map1492"
+          ],
+          "locator": "Decoded target geometry type, component count, positions, bounds, and exact hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pg-map1492",
+            "pg-map1500"
+          ],
+          "locator": "Point-in-polygon results for twenty-two representative mainland, island, and western comparison probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pg-map1492",
+            "pg-map1500"
+          ],
+          "locator": "Cross-snapshot decoded geometry statistics, memberships, bounds, and hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pg-map1530",
+            "pg-map1700",
+            "pg-map1715"
+          ],
+          "locator": "Related-record component counts, exact 1700 to 1715 geometry identity, and different indexed chronologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pg-uncovering"
+          ],
+          "locator": "ANU history of archaeological fieldwork, phase models, revisions, and local sequences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pg-nimowa"
+          ],
+          "locator": "Nimowa stratigraphy and its two calibrated settlement ranges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pg-hardy"
+          ],
+          "locator": "Study methods, named language communities, oral-history guidance, and ceramic analyses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pg-ruisasi"
+          ],
+          "locator": "Ruisasi Square A sherd count, vessel standardization, village context, and chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pg-fode",
+            "pg-map1492"
+          ],
+          "locator": "Official education account of the western landing and exchange, checked against target bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pg-microfossils"
+          ],
+          "locator": "Kuk starch, phytolith, banana, taro, and long-term plant-use evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pg-kuk-phase5"
+          ],
+          "locator": "Phase 5 garden grid, approximate house date, sparse artefacts, and mixed phase attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pg-foodways"
+          ],
+          "locator": "Multi-proxy Madang evidence from shell, fauna, calculus, and pottery residues.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pg-ruisasi"
+          ],
+          "locator": "Marine faunal evidence, pottery midden, regional setting, and earlier calibrated chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pg-pig-debate"
+          ],
+          "locator": "Review of disputed pig and pottery contexts, revised dates, and evidential standards.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pg-keveoki"
+          ],
+          "locator": "Site setting, short occupation, decorated ceramics, date, and hiri recipient context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pg-kula-obsidian"
+          ],
+          "locator": "pXRF obsidian sourcing, northern dates, later southern patterns, and village-specific interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pg-nimowa"
+          ],
+          "locator": "Late settlement range, recovered materials, burial, vessel diversity, and decorative continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pg-vitiaz"
+          ],
+          "locator": "Thesis scope, site materials, direction of exchange, and decentralized systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pg-kula-origin"
+          ],
+          "locator": "Maritime model, seasonal winds, canoe performance, pottery sequence, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pg-kuk-phase5"
+          ],
+          "locator": "Late Phase 5 houses, scarcity, garden setting, and excavation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pg-kuk-houses"
+          ],
+          "locator": "House forms, family and gendered uses, pigs, rebuilding, and archaeological comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pg-kula-obsidian"
+          ],
+          "locator": "Village-specific sourcing, later kinship connections, and chronological distinctions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pg-hiri-agency"
+          ],
+          "locator": "Gulf-centered oral traditions, inter-family partnerships, adoption, and later recording context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pg-nimowa"
+          ],
+          "locator": "Primary burial, associated settlement materials, and regional mortuary significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pg-health"
+          ],
+          "locator": "Sample dates, sites, enamel hypoplasia method, and differing results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pg-tools"
+          ],
+          "locator": "Observed manufacturing, teaching process, materials, and the limits of analogy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pg-ruisasi"
+          ],
+          "locator": "Standardized vessels and the bounded inference from production to learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pg-hardy"
+          ],
+          "locator": "Community oral histories, field survey design, ceramic chemistry, and micro-historical interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pg-kuk-phase5"
+          ],
+          "locator": "Absence of school evidence in the phase report, combined with explicit limits on social inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pg-wanelek"
+          ],
+          "locator": "Petrography, geochemistry, coastal and inland manufacture, and associated technologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pg-island-tech"
+          ],
+          "locator": "Technological-process framework and Madang pottery production and exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pg-aus-trade"
+          ],
+          "locator": "Tool categories, geochemical source matching, and movement at New Britain sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pg-mailu"
+          ],
+          "locator": "Settlement spacing, environmental association, centrality, clay sourcing, and trade questions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pg-nimowa"
+          ],
+          "locator": "Vessel-form diversity, motif continuity, later prehistory, and regional scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pg-health"
+          ],
+          "locator": "Compared oral conditions, childhood indicators, ecological settings, and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pg-medicine"
+          ],
+          "locator": "Four community surveys, local variation, plant parts, preparations, and modern dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pg-foodways"
+          ],
+          "locator": "Multi-proxy foods and the limits of nutritional inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pg-medicine"
+          ],
+          "locator": "Community differences, preparation methods, and the authors' call for clinical validation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pg-uncovering"
+          ],
+          "locator": "Documentary and archaeological evidence limits across the reviewed regional record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pg-landscape"
+          ],
+          "locator": "UNESCO discussion of Kuk cultivation, drainage, maintenance, and landscape history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pg-keveoki"
+          ],
+          "locator": "Former coastal setting, short-lived village, and the documented scope of the report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pg-ruisasi"
+          ],
+          "locator": "Marine habitat use, midden context, and absence of household water-treatment documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pg-vitiaz",
+            "pg-mailu"
+          ],
+          "locator": "Explicit review of the material categories and site questions reported in both archaeological studies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pg-vitiaz",
+            "pg-mailu"
+          ],
+          "locator": "Preservation and discard evidence in the two regional archaeological studies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pg-language-contact"
+          ],
+          "locator": "Pre-contact multilingual exchange, language interaction, and Papuan and Austronesian distinctions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pg-writing"
+          ],
+          "locator": "History of New Guinea orthography and the much later dates of documented local writing systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pg-writing"
+          ],
+          "locator": "Motu orthography history, first school publication, and date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pg-fode",
+            "pg-map1492"
+          ],
+          "locator": "Official account of the landing, documentary perspective, and geometry exclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pg-map1530",
+            "pg-map1700",
+            "pg-map1715"
+          ],
+          "locator": "Exact feature substitutions, component changes, geometry inheritance, and continuity interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pg-map1500",
+            "pg-map1530"
+          ],
+          "locator": "Second exact feature, slightly changed decoded coordinates, unchanged point memberships, and 1500 to 1530 properties. Exact endpoint control where papua-new-guinea disappears and the separate papuans-1530 record gains a western component.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "papua-new-guinea",
+        "name": "Papua New Guinea",
+        "aliases": [
+          "Papua N Guin"
+        ],
+        "kind": "region",
+        "region": "Oceania",
+        "from": 1492,
+        "to": 1530,
+        "circa": true,
+        "card": "cards/papua-new-guinea.json",
+        "dateBasis": "map_coverage",
+        "summary": "Atlas label for diverse eastern New Guinea communities, not one polity.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "papua-new-guinea",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            140.74880748807487,
+            -10.7382262966659,
+            152.26892268922688,
+            -2.794526751180456
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "papua-new-guinea",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            140.74880748807487,
+            -10.739319159538496,
+            152.26892268922688,
+            -2.794645773595647
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact missing record is papua-new-guinea, indexed once with the alias Papua N Guin from 1492 to 1530.",
+    "The imported modern state name is treated as a regional umbrella, not a sixteenth-century polity, people, language family, or fixed cultural unit.",
+    "All fifty border snapshots were audited; two exact features occur in two files and have two decoded hashes but the same shape counts and tested memberships.",
+    "The target includes selected central and eastern mainland probes but excludes many northern, southeastern, island, western, and Torres Strait probes.",
+    "The 1530 papuans-1530 feature is broader, while the 1715 papua-new-guinea-1715 record inherits a later reduced shape; neither is associated to this card.",
+    "Eight teaching periods cover every year from 1492 to 1530 without treating their artificial internal boundaries as local events.",
+    "Local archaeological ranges and later oral or ethnographic evidence are dated and bounded rather than generalized across the atlas polygon.",
+    "No secure community-authored written-language sample for the exact polygon and interval was found; later orthographies and outsider texts are not substituted.",
+    "The 1530 endpoint is an atlas relabeling and continuity, with fell null and no predecessor or successor association."
+  ]
+}

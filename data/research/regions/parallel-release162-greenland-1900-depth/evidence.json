@@ -1,0 +1,860 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release162-greenland-1900 research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "gr-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact Greenland id, display name, circa flag, and indexed 1900 to 1914 interval."
+    },
+    {
+      "id": "gr-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "The exact id has no imported summary; the separate modern Greenland id does."
+    },
+    {
+      "id": "gr-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing-card status, one observed interval, and unreviewed identity, chronology, and border fields."
+    },
+    {
+      "id": "gr-map1880",
+      "title": "Human History Map 1880 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1880.json",
+      "note": "Pre-start control assigning every fixed landward Greenland probe to Denmark."
+    },
+    {
+      "id": "gr-map1900",
+      "title": "Human History Map 1900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1900.json",
+      "note": "Only exact Greenland snapshot, decoded multipolygon, component, probe, and geometry audit."
+    },
+    {
+      "id": "gr-map1914",
+      "title": "Human History Map 1914 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Exact endpoint control returning the same landward probes to Denmark."
+    },
+    {
+      "id": "gr-map1960",
+      "title": "Human History Map 1960 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json",
+      "note": "Later control assigning the island to the separate modern Greenland id."
+    },
+    {
+      "id": "gr-history",
+      "title": "Greenland: History and Society",
+      "url": "https://da.uni.gl/media/tk0nv5pm/volquardsen-2023-greenland-history-and-society.pdf",
+      "note": "University of Greenland synthesis on monopoly trade, sealing policy, colonial hierarchy, literacy, intermediaries, and national awakening."
+    },
+    {
+      "id": "gr-literature",
+      "title": "Greenland: Literature and Cultural Production",
+      "url": "https://www.uni.gl/media/1hebx0rv/volquardsen-2023-greenland-literature-and-cultural-production.pdf",
+      "note": "University of Greenland synthesis on oral history, print, visual counter-narratives, early novels, colonial censorship, and political imagination."
+    },
+    {
+      "id": "gr-socio",
+      "title": "The Socioeconomic Development of Greenland",
+      "url": "https://da.uni.gl/media/rojdzm2b/the-socioeconomic-development-of-greenland_111_final.pdf",
+      "note": "University of Greenland account of trade, administration, population, and the 1911 municipal and provincial councils."
+    },
+    {
+      "id": "gr-parliament",
+      "title": "From Provincial Councils to Parliament to Inatsisartut",
+      "url": "https://inatsisartut.gl/media/ak5btk51/e-publikationer-inatsisartut-det-groenlandske-parlament-kort-fortalt-pjece-vers-2019-pdf-inatsisartut-kort-fortalt-vers-2019-en-web-1.pdf",
+      "note": "Official parliamentary history of the 1908 act, two administrative regions, first 1911 meetings, and advisory limits."
+    },
+    {
+      "id": "gr-colonial",
+      "title": "The colonial period until the war years",
+      "url": "https://trap.gl/en/historie/the-colonial-period-until-the-war-years/",
+      "note": "Expert-authored Greenland history covering the 1905 law, 1908 reform, 1911 councils, East Greenland, and Thule station."
+    },
+    {
+      "id": "gr-buildings",
+      "title": "Greenland's Building Culture and History",
+      "url": "https://en.nka.gl/museum/building-preservation/greenlands-building-culture-and-history/",
+      "note": "Greenland National Museum account of turf houses, shared rooms, trading-post buildings, changing windows, and the Nuuk seminary."
+    },
+    {
+      "id": "gr-architecture",
+      "title": "Building customs and architecture in Greenland",
+      "url": "https://trap.gl/en/kultur/byggeskik/",
+      "note": "Expert architectural history distinguishing early family homes from much later houses designed with separate toilets and installed water."
+    },
+    {
+      "id": "gr-diaries",
+      "title": "Missionaries and catechists official diaries",
+      "url": "https://da.nka.gl/digitale-samlinger/qangagooqgl/om-arkivalierne/missionaerer-og-kateketer-embedsdagboeger/",
+      "note": "Greenland National Archives guide to catechist teaching and Greenlandic work diaries from about 1880 to 1930."
+    },
+    {
+      "id": "gr-gustav",
+      "title": "Gustav Olsen's Thule diaries, 1909 to 1920",
+      "url": "https://da.nka.gl/digitale-samlinger/qangagooqgl/om-arkivalierne/privatarkiver/gustav-olsen/",
+      "note": "Greenland National Archives description of Olsen, Ane Sophie, teaching, population lists, and Thule outside the colony."
+    },
+    {
+      "id": "gr-aasiviit",
+      "title": "Aasiviit",
+      "url": "https://en.nka.gl/intangible-topics/aasiviit/",
+      "note": "Greenland National Museum account of seasonal gathering, barter, news, conflict resolution, courtship, and changing mobility."
+    },
+    {
+      "id": "gr-class",
+      "title": "Lifestyle and class distinctions",
+      "url": "https://en.nka.gl/museum/exhibitions/lifestyle-and-class-distinctions/",
+      "note": "Greenland National Museum interpretation of colonial ethnic hierarchy, export sealing, disease, imported skills, and limited training."
+    },
+    {
+      "id": "gr-transport",
+      "title": "Inuit means of transport",
+      "url": "https://en.nka.gl/museum/exhibitions/inuit-means-of-transport/",
+      "note": "Greenland National Museum overview of qajaqs, umiaqs, dog sledges, tools, regional adaptation, and twentieth-century continuity."
+    },
+    {
+      "id": "gr-skins",
+      "title": "Ammerineq: knowledge of skin treatment",
+      "url": "https://en.nka.gl/intangible-topics/ammerineq/",
+      "note": "Greenland National Museum account of curing skins and using sinew, membrane, stomach, and hide for equipment and clothing."
+    },
+    {
+      "id": "gr-dogs",
+      "title": "Dogs in Greenland",
+      "url": "https://en.nka.gl/museum/dogs/dogs/",
+      "note": "Greenland National Museum history of regional dog use and the 1907 rules separating sled-dog and other dog zones."
+    },
+    {
+      "id": "gr-councils",
+      "title": "Municipal councils archive guide",
+      "url": "https://da.nka.gl/digitale-samlinger/qangagooqgl/om-arkivalierne/kommuneraad/",
+      "note": "Greenland National Archives guide to the 1911 replacement of boards by northern and southern municipal and provincial councils."
+    },
+    {
+      "id": "gr-qaanaaq",
+      "title": "Qaanaaq history",
+      "url": "https://trap.gl/en/kommunerne-og-byerne/avannaata-kommunia/qaanaaq/",
+      "note": "Expert account of Inughuit territory, the private 1910 Thule station, and its status outside the old colonial districts."
+    },
+    {
+      "id": "gr-tasiilaq",
+      "title": "Tasiilaq history",
+      "url": "https://trap.gl/en/kommunerne-og-byerne/kommuneqarfik-sermersooq/tasiilaq/",
+      "note": "Expert regional history of East Greenland contact, the 1894 station, scattered settlement, hunting, and transport constraints."
+    },
+    {
+      "id": "gr-religion",
+      "title": "Religion and religious communities in Greenland",
+      "url": "https://trap.gl/en/kultur/religion-og-trossamfund/",
+      "note": "Expert account of the 1909 Thule mission, Gustav Olsen, and the first Inughuit baptisms in 1912."
+    },
+    {
+      "id": "gr-agriculture",
+      "title": "Agriculture in Greenland",
+      "url": "https://trap.gl/en/natur-og-landskab/kulturlandskaber/",
+      "note": "Expert history of Jens Chemnitz introducing Faroese sheep in 1906 and the limited early South Greenland experiment."
+    },
+    {
+      "id": "gr-flu",
+      "title": "The 1919 to 1921 influenza pandemic in Greenland",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10919313/",
+      "note": "Peer-reviewed study of church records, incomplete medical certification, colonial diagnoses, and early twentieth-century disease evidence."
+    },
+    {
+      "id": "gr-patients",
+      "title": "Patients and doctors in Greenland seventy years ago and today",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11640587/",
+      "note": "Medical-history abstract on 1924 district care, sled transport, hospital limits, crowding, hunger, and tuberculosis."
+    },
+    {
+      "id": "gr-water",
+      "title": "Greenlandic water and sanitation: a context-oriented analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28849342/",
+      "note": "Peer-reviewed historical review showing the long regional and infrastructural variation of water and sanitation systems."
+    },
+    {
+      "id": "gr-storch",
+      "title": "Mathias Storch: Sinnattugaq",
+      "url": "https://www.katak.gl/sites/default/files/2024-12/storch_mathias_-_sinnattugaq_0.pdf",
+      "note": "Greenland National Library digital edition and description of the 1914 first Greenlandic novel and its original title."
+    },
+    {
+      "id": "gr-language",
+      "title": "Language in Greenland",
+      "url": "https://trap.gl/en/kultur/sprog/",
+      "note": "Expert history of Greenlandic writing, early twentieth-century authors, orthographic change, and Sinnattugaq in 1914."
+    },
+    {
+      "id": "gr-hymn",
+      "title": "Nunarput utoqqarsuanngoravit",
+      "url": "https://sangbogen.dk/nunarput-utoqqarsuanngoravit/",
+      "note": "Danish songbook text identifying Henrik Lund's Greenlandic words as written in 1912 and supplying the original lines."
+    },
+    {
+      "id": "gr-photos",
+      "title": "Danish Arctic Institute photo collections",
+      "url": "https://arktiskinstitut.dk/en/the-archives/photo-collections",
+      "note": "Archive guide to over 300,000 Arctic photographs, especially the 1890 to 1960 record of Greenlandic society."
+    },
+    {
+      "id": "gr-thule",
+      "title": "Uummannaq in the Thule station era, 1910 to 1950",
+      "url": "https://en.nka.gl/fileadmin/user_upload/Cruise_Ship_Resources/2017/201702_1.pdf",
+      "note": "Greenland National Museum teaching source on Inughuit families, seasonal movement, traded goods, and housing around the station."
+    },
+    {
+      "id": "gr-mission-law",
+      "title": "Sources for the history of the Greenland mission to the 1905 Church and School Act",
+      "url": "https://www.kildeskriftselskabet.dk/index.php/kildeudgaver/1700-tallet/17-kilder-til-gronlands-missionshistorie-fra-hans-egedes-kaldsbrev-1721-til-lov-om-kirke-og-skolevaesen-i-gronland-i-1905",
+      "note": "Danish Historical Source Society guide to administrative sources and the first unified church and school regulation."
+    },
+    {
+      "id": "gr-sleddog",
+      "title": "The Greenlandic Sled Dog",
+      "url": "https://en.nka.gl/museum/dogs/the-greenlandic-sled-dog/",
+      "note": "Greenland National Museum account of oral skill transmission, regional sled designs, seasonal work, and dog-human cooperation."
+    }
+  ],
+  "entities": [
+    {
+      "id": "greenland",
+      "card": "data/cards/greenland.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "gr-index",
+            "gr-summary",
+            "gr-coverage",
+            "gr-map1880",
+            "gr-map1900",
+            "gr-map1914",
+            "gr-history"
+          ],
+          "locator": "Exact Greenland id, display name, circa flag, and indexed 1900 to 1914 interval. The exact id has no imported summary; the separate modern Greenland id does. Missing-card status, one observed interval, and unreviewed identity, chronology, and border fields. Pre-start control assigning every fixed landward Greenland probe to Denmark. Only exact Greenland snapshot, decoded multipolygon, component, probe, and geometry audit. Exact endpoint control returning the same landward probes to Denmark. University of Greenland synthesis on monopoly trade, sealing policy, colonial hierarchy, literacy, intermediaries, and national awakening.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "gr-class"
+          ],
+          "locator": "Greenland National Museum interpretation of colonial ethnic hierarchy, export sealing, disease, imported skills, and limited training.",
+          "dateScope": {
+            "from": 1900,
+            "to": 1904
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "gr-mission-law"
+          ],
+          "locator": "Danish Historical Source Society guide to administrative sources and the first unified church and school regulation.",
+          "dateScope": {
+            "from": 1904,
+            "to": 1905
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "gr-agriculture",
+            "gr-dogs"
+          ],
+          "locator": "Expert history of Jens Chemnitz introducing Faroese sheep in 1906 and the limited early South Greenland experiment. Greenland National Museum history of regional dog use and the 1907 rules separating sled-dog and other dog zones.",
+          "dateScope": {
+            "from": 1905,
+            "to": 1907
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "gr-socio"
+          ],
+          "locator": "University of Greenland account of trade, administration, population, and the 1911 municipal and provincial councils.",
+          "dateScope": {
+            "from": 1907,
+            "to": 1909
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "gr-gustav",
+            "gr-religion"
+          ],
+          "locator": "Greenland National Archives description of Olsen, Ane Sophie, teaching, population lists, and Thule outside the colony. Expert account of the 1909 Thule mission, Gustav Olsen, and the first Inughuit baptisms in 1912.",
+          "dateScope": {
+            "from": 1909,
+            "to": 1910
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "gr-thule",
+            "gr-councils"
+          ],
+          "locator": "Greenland National Museum teaching source on Inughuit families, seasonal movement, traded goods, and housing around the station. Greenland National Archives guide to the 1911 replacement of boards by northern and southern municipal and provincial councils.",
+          "dateScope": {
+            "from": 1910,
+            "to": 1911
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "gr-parliament"
+          ],
+          "locator": "Official parliamentary history of the 1908 act, two administrative regions, first 1911 meetings, and advisory limits.",
+          "dateScope": {
+            "from": 1911,
+            "to": 1912
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "gr-hymn",
+            "gr-storch"
+          ],
+          "locator": "Danish songbook text identifying Henrik Lund's Greenlandic words as written in 1912 and supplying the original lines. Greenland National Library digital edition and description of the 1914 first Greenlandic novel and its original title.",
+          "dateScope": {
+            "from": 1912,
+            "to": 1914
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "gr-index",
+            "gr-summary",
+            "gr-coverage"
+          ],
+          "locator": "Exact indexed identity, missing status, and separate modern record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "gr-map1900"
+          ],
+          "locator": "Decoded target geometry, topology type, counts, and bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "gr-map1900"
+          ],
+          "locator": "Settlement and paired landward point-in-polygon probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "gr-map1880",
+            "gr-map1900",
+            "gr-map1914",
+            "gr-map1960"
+          ],
+          "locator": "All-snapshot occurrence audit and fixed-probe owner sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "gr-map1900"
+          ],
+          "locator": "Direct shared-arc, component, ring, and island audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "gr-socio"
+          ],
+          "locator": "University synthesis of monopoly trade and sealing dependency.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "gr-colonial"
+          ],
+          "locator": "Colonial interest in father-to-son kayak training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "gr-class"
+          ],
+          "locator": "National Museum interpretation of colonial ethnic hierarchy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "gr-colonial"
+          ],
+          "locator": "1908 administrative separation and 1912 recentralization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "gr-socio"
+          ],
+          "locator": "Population and municipal scale in the 1911 reform.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "gr-parliament"
+          ],
+          "locator": "Official division into northern and southern colonial regions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "gr-tasiilaq"
+          ],
+          "locator": "Tasiilaq founding, outlying settlement, and regional constraints.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "gr-qaanaaq"
+          ],
+          "locator": "Thule district status and delayed state takeover.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "gr-colonial"
+          ],
+          "locator": "Later foundation of Ittoqqortoormiit and endpoint scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "gr-language"
+          ],
+          "locator": "Greenlandic language history and regional variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "gr-transport"
+          ],
+          "locator": "Museum evidence for specialized Inuit transport technologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "gr-skins"
+          ],
+          "locator": "Museum account of skin preparation, parts, and uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "gr-sleddog"
+          ],
+          "locator": "Regional sled design and oral transmission of driving knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "gr-dogs"
+          ],
+          "locator": "National Museum history of the 1907 regional dog rules.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "gr-agriculture"
+          ],
+          "locator": "Exact-date origin and limited scale of modern sheep husbandry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "gr-buildings"
+          ],
+          "locator": "National Museum description of turf-house structure and change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "gr-buildings"
+          ],
+          "locator": "Single-family and communal variants with colonial building types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "gr-aasiviit"
+          ],
+          "locator": "Museum account of seasonal gatherings and social functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "gr-skins",
+            "gr-sleddog"
+          ],
+          "locator": "Intergenerational transmission inferred from documented technical traditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "gr-thule"
+          ],
+          "locator": "Seasonal family movement around Uummannaq and Thule station.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "gr-diaries"
+          ],
+          "locator": "Archive description of catechist teaching duties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "gr-diaries"
+          ],
+          "locator": "Language, date range, and subject matter of catechist diaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "gr-mission-law"
+          ],
+          "locator": "Scope and limits of the 1905 Church and School Act.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "gr-buildings"
+          ],
+          "locator": "Nuuk seminary building and institutional role.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "gr-gustav"
+          ],
+          "locator": "Olsen household teaching and diary evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "gr-patients"
+          ],
+          "locator": "Historical medical account of distance, transport, and care limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "gr-flu"
+          ],
+          "locator": "Peer-reviewed critique of cause-of-death registration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "gr-flu"
+          ],
+          "locator": "Colonial medical categories and biological typologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "gr-patients"
+          ],
+          "locator": "Near-after tuberculosis case and explicit chronological boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "gr-class"
+          ],
+          "locator": "Museum account of limited formal vocational training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "gr-water"
+          ],
+          "locator": "Historical water and sanitation review used to reject uniform projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "gr-architecture"
+          ],
+          "locator": "Building-layout evidence and explicit argument from silence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "gr-buildings"
+          ],
+          "locator": "Functional building list and settlement-scope caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "gr-water"
+          ],
+          "locator": "Explicit source-bounded uncertainty about historical sanitation practices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "gr-water"
+          ],
+          "locator": "Kid-friendly sanitation conclusion with strict source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "gr-literature"
+          ],
+          "locator": "University account of oral tradition, standardization, and print.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "gr-hymn"
+          ],
+          "locator": "Original Greenlandic line, translation, genre, date, and later scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "gr-storch"
+          ],
+          "locator": "Original title form, modern spelling, translation, genre, and publication context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "gr-literature"
+          ],
+          "locator": "Political and aesthetic function of the first novel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "gr-photos"
+          ],
+          "locator": "Arctic Institute photographic range and source-criticism scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "gr-parliament"
+          ],
+          "locator": "Membership, election method, chairing, and advisory status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "gr-councils"
+          ],
+          "locator": "Local council responsibilities and territorial scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "gr-map1900",
+            "gr-map1914"
+          ],
+          "locator": "Exact endpoint repaint and fixed-probe owner comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "gr-map1960",
+            "gr-index"
+          ],
+          "locator": "Separate-record association and anti-projection boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "gr-map1914"
+          ],
+          "locator": "Kid-friendly ending grounded in the atlas seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "gr-map1900",
+            "gr-map1914",
+            "gr-map1960"
+          ],
+          "locator": "Only exact Greenland snapshot, decoded multipolygon, component, probe, and geometry audit. Exact endpoint control returning the same landward probes to Denmark. Later control assigning the island to the separate modern Greenland id.",
+          "dateScope": {
+            "year": 1914
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "greenland",
+        "name": "Greenland",
+        "kind": "state",
+        "region": "North America",
+        "from": 1900,
+        "to": 1914,
+        "circa": true,
+        "card": "cards/greenland.json",
+        "dateBasis": "map_coverage",
+        "summary": "Colonial Greenland through Kalaallit lives, uneven Danish reach, and a rising written public voice.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1900.json",
+          "properties": {
+            "civ": "greenland",
+            "from": 1900,
+            "to": 1914,
+            "precision": 3
+          },
+          "bounds": [
+            -72.5461254612546,
+            59.76029823202392,
+            -12.562325623256214,
+            83.57906683535938
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
