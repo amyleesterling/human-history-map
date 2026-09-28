@@ -1,0 +1,861 @@
+{
+  "version": 1,
+  "region": "The exact 1100 to 1200 Oghuz atlas feature, separated into Khwarazmian oasis rule, steppe communities, and later mobile Oghuz coalitions",
+  "researcher": "Codex parallel release157-oghuz research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "og-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact live id, display name, approximate 1100 to 1200 interval, and generated source field."
+    },
+    {
+      "id": "og-coverage",
+      "title": "Human History Map coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing-card state, single observed interval, and pending identity, chronology, and border review."
+    },
+    {
+      "id": "og-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Exact queue record and imported Oghuz Yabgu State lead that requires correction."
+    },
+    {
+      "id": "og-cards",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Direct check that the exact oghuz id has no indexed runtime card before integration."
+    },
+    {
+      "id": "og-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Exact pre-start seam control and representative point memberships."
+    },
+    {
+      "id": "og-map-1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Only exact target feature, decoded geometry, shared encoded arcs, and representative point memberships."
+    },
+    {
+      "id": "og-map-1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Exact endpoint seam showing the target absent and its former area divided between different atlas layers."
+    },
+    {
+      "id": "og-map-1279",
+      "title": "Human History Map 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Post-end control for representative point memberships after the atlas interval."
+    },
+    {
+      "id": "og-ov-atsiz",
+      "title": "Atsiz Garchai",
+      "url": "https://www.iranicaonline.org/articles/atsz-garcai-ala-al-uiv-nal-dawla-abul-moaffar-h/",
+      "note": "Encyclopaedia Iranica biography of Atsiz, his Khwarazmian base, Mangyshlaq and Jand campaigns, steppe frontier, and literary court."
+    },
+    {
+      "id": "og-ov-eclipse",
+      "title": "The Eclipse of Khurasan in the Twelfth Century",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/eclipse-of-khurasan-in-the-twelfth-century/B12C331E9805C2B6F21856F9281A426C",
+      "note": "Peer-reviewed reassessment linking the post-1153 destruction in Khurasan to Oghuz action after Sanjar was captured."
+    },
+    {
+      "id": "og-ov-dinar",
+      "title": "Malek Dinar",
+      "url": "https://www.iranicaonline.org/articles/dinar-malek/",
+      "note": "Encyclopaedia Iranica biography tracing one 1153 Oghuz chief to later rule in Kerman and its 1198 end."
+    },
+    {
+      "id": "og-sanjar",
+      "title": "Sanjar, Ahmad b. Malekshah",
+      "url": "https://www.iranicaonline.org/articles/sanjar/",
+      "note": "Encyclopaedia Iranica chronology of Khwarazmian vassalage, Qatwan, the 1153 capture, escape, death, and Great Seljuk fragmentation."
+    },
+    {
+      "id": "og-khwarazm-line",
+      "title": "Khwarazmshahs: The Line of Anushtigin",
+      "url": "https://www.iranicaonline.org/articles/khwarazmshah/iii-the-line-of-anustigin/",
+      "note": "Encyclopaedia Iranica synthesis used sparingly for Qutb al-Din, Atsiz, and the bounded Khwarazmian political core."
+    },
+    {
+      "id": "og-revolt",
+      "title": "Oghuz Revolt and the Policy Followed by Khwarezmshah Atsiz",
+      "url": "https://dergipark.org.tr/en/pub/gttad/article/1606678",
+      "note": "Peer-reviewed 2025 study of branches, named beys, sheep tribute, official abuse, battle, and Vatvat letters surrounding the 1153 revolt."
+    },
+    {
+      "id": "og-casnigir",
+      "title": "Chashnigir, Court Food Taster",
+      "url": "https://www.iranicaonline.org/articles/casnigir-literally-taster-pers/",
+      "note": "Encyclopaedia Iranica account of the official whose handling of the Oghuz sheep levy helped ignite the 1153 conflict."
+    },
+    {
+      "id": "og-ilarslan",
+      "title": "Il-Arslan",
+      "url": "https://www.iranicaonline.org/articles/il-arslan/",
+      "note": "Encyclopaedia Iranica biography covering independence after Sanjar, Aytaq and Dehistan, the 1165 Khorasan campaign, and court evidence limits."
+    },
+    {
+      "id": "og-dehestan",
+      "title": "Dehestan",
+      "url": "https://www.iranicaonline.org/articles/dehestan/",
+      "note": "Encyclopaedia Iranica regional history locating the 1161 Oghuz sack and later Khwarazmian campaigning."
+    },
+    {
+      "id": "og-balkh",
+      "title": "Balkh: History from the Arab Conquest to the Mongols",
+      "url": "https://www.iranicaonline.org/articles/bal%E1%B8%B5-ii-history-from-the-arab-conquest-to-the-mongols/",
+      "note": "Encyclopaedia Iranica city history on Oghuz pasture, taxation conflict, 1152 to 1153 fighting, destruction, and temporary occupation."
+    },
+    {
+      "id": "og-ghaznavids",
+      "title": "Ghaznavids",
+      "url": "https://www.iranicaonline.org/articles/ghaznavids/",
+      "note": "Encyclopaedia Iranica history noting Oghuz adventurers who held Ghazna from about 1160 for as long as fifteen years."
+    },
+    {
+      "id": "og-kosrow",
+      "title": "Khosrow Malek",
+      "url": "https://www.iranicaonline.org/articles/kosrow-malek/",
+      "note": "Encyclopaedia Iranica biography separating the last Ghaznavid ruler from Oghuz adventurers occupying Ghazna."
+    },
+    {
+      "id": "og-tekish",
+      "title": "Tekish b. Il-Arslan",
+      "url": "https://www.iranicaonline.org/articles/tekis-b-il-arslan/",
+      "note": "Encyclopaedia Iranica chronology for Tekish, northern tribal recruitment, the 1194 defeat of the last Great Seljuk, and his death in 1200."
+    },
+    {
+      "id": "og-nerazik",
+      "title": "Rural Dwelling in Khorezm, First to Fourteenth Centuries",
+      "url": "https://archive.nyu.edu/handle/2451/39951",
+      "note": "NYU-hosted 1976 archaeological monograph; chapter 3 documents twelfth to early-thirteenth-century Khwarazmian rural settlements and houses."
+    },
+    {
+      "id": "og-nerazik-summary",
+      "title": "On the History of the Khorezm Rural Habitation",
+      "url": "https://abashin.org/wp-content/uploads/2024/05/nerazik-1.pdf",
+      "note": "English article summarizing the central-corridor house form and carefully bounded hypotheses about extended family organization."
+    },
+    {
+      "id": "og-architecture",
+      "title": "Central Asian Architecture in the Eleventh and Twelfth Centuries: Khwarazm and Kavat-kala",
+      "url": "https://8-sredizemnomor-afrika-aziya-6-19v.archisto.info/arh-srednej-azii-11-12v-5.html",
+      "note": "Illustrated architectural history summarizing Kavat-kala estates, mud construction, room groups, and debated towerlike outbuildings."
+    },
+    {
+      "id": "og-kat",
+      "title": "Kath",
+      "url": "https://www.iranicaonline.org/articles/kat-city/",
+      "note": "Encyclopaedia Iranica historical geography of the Oxus, irrigation canals, fertile silt, and destructive river-course shifts in Khwarazm."
+    },
+    {
+      "id": "og-watwat",
+      "title": "Watwat, Rashid-al-Din",
+      "url": "https://www.iranicaonline.org/articles/watwat-rasid-al-din/",
+      "note": "Encyclopaedia Iranica biography documenting madrasa education, bilingual writing, chancery work, court poetry, anecdotes, and uncertain death date."
+    },
+    {
+      "id": "og-poem",
+      "title": "Vatvat qasida 141 in praise of Atsiz Khwarazmshah",
+      "url": "https://ivajeh.ir/ganjine/Rashidoddin-Vatvat/ghasv/65233",
+      "note": "Digital Persian transcription of the exact panegyric couplet used for the written-language sample."
+    },
+    {
+      "id": "og-dlt",
+      "title": "Notes on Some Words Recorded as Oghuz in Divanu Lugati t-Turk",
+      "url": "https://dergipark.org.tr/en/pub/sutad/article/1360912",
+      "note": "Peer-reviewed study of six lexemes explicitly marked Oghuz in the eleventh-century dialect dictionary and their later forms."
+    },
+    {
+      "id": "og-jorjani",
+      "title": "Jorjani, Zayn-al-Din Esmail",
+      "url": "https://www.iranicaonline.org/articles/jorjani-zayn-al-din-esmail/",
+      "note": "Encyclopaedia Iranica biography and linguistic analysis of Jorjani, his patrons, medical encyclopedia, handbook, and Persian-Arabic terminology."
+    },
+    {
+      "id": "og-loc-medicine",
+      "title": "The Treasure of Khvarazm Shah",
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_10608/?sp=10",
+      "note": "Library of Congress manuscript description outlining the encyclopedia’s ten parts, including hygiene, childhood, travel, treatments, and pharmacology."
+    },
+    {
+      "id": "og-med-school",
+      "title": "Chorasmia Medical School from the Beginning until the Mongol Invasion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4920981/",
+      "note": "Peer-reviewed review of Gorganch, Khwarazmian patronage, physicians, and limits of reconstructing a regional medical school."
+    },
+    {
+      "id": "og-toilets",
+      "title": "Improvements of Kazakhstan Medieval Cities on the Great Silk Road",
+      "url": "https://ppublishing.org/media/uploads/journals/journal/EJH-4_2020_TL.pdf",
+      "note": "Archaeological review, pages 5 to 8, of drains, soakaways, toilets, washing rooms, rubbish pits, and baths at comparison sites outside the target polygon."
+    }
+  ],
+  "entities": [
+    {
+      "id": "oghuz",
+      "card": "data/cards/oghuz.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "og-map-1100",
+            "og-map-1200",
+            "og-ov-atsiz",
+            "og-ov-eclipse",
+            "og-ov-dinar"
+          ],
+          "locator": "Only exact target feature, decoded geometry, shared encoded arcs, and representative point memberships. Exact endpoint seam showing the target absent and its former area divided between different atlas layers. Encyclopaedia Iranica biography of Atsiz, his Khwarazmian base, Mangyshlaq and Jand campaigns, steppe frontier, and literary court. Peer-reviewed reassessment linking the post-1153 destruction in Khurasan to Oghuz action after Sanjar was captured. Encyclopaedia Iranica biography tracing one 1153 Oghuz chief to later rule in Kerman and its 1198 end.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "og-map-1100",
+            "og-sanjar"
+          ],
+          "locator": "Only exact target feature, decoded geometry, shared encoded arcs, and representative point memberships. Encyclopaedia Iranica chronology of Khwarazmian vassalage, Qatwan, the 1153 capture, escape, death, and Great Seljuk fragmentation.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1127
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "og-sanjar",
+            "og-map-1100"
+          ],
+          "locator": "Encyclopaedia Iranica chronology of Khwarazmian vassalage, Qatwan, the 1153 capture, escape, death, and Great Seljuk fragmentation. Only exact target feature, decoded geometry, shared encoded arcs, and representative point memberships.",
+          "dateScope": {
+            "from": 1127,
+            "to": 1138
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "og-sanjar"
+          ],
+          "locator": "Encyclopaedia Iranica chronology of Khwarazmian vassalage, Qatwan, the 1153 capture, escape, death, and Great Seljuk fragmentation.",
+          "dateScope": {
+            "from": 1138,
+            "to": 1141
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "og-khwarazm-line",
+            "og-map-1100"
+          ],
+          "locator": "Encyclopaedia Iranica synthesis used sparingly for Qutb al-Din, Atsiz, and the bounded Khwarazmian political core. Only exact target feature, decoded geometry, shared encoded arcs, and representative point memberships.",
+          "dateScope": {
+            "from": 1141,
+            "to": 1152
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "og-balkh"
+          ],
+          "locator": "Encyclopaedia Iranica city history on Oghuz pasture, taxation conflict, 1152 to 1153 fighting, destruction, and temporary occupation.",
+          "dateScope": {
+            "from": 1152,
+            "to": 1157
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "og-ilarslan"
+          ],
+          "locator": "Encyclopaedia Iranica biography covering independence after Sanjar, Aytaq and Dehistan, the 1165 Khorasan campaign, and court evidence limits.",
+          "dateScope": {
+            "from": 1157,
+            "to": 1161
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "og-dehestan"
+          ],
+          "locator": "Encyclopaedia Iranica regional history locating the 1161 Oghuz sack and later Khwarazmian campaigning.",
+          "dateScope": {
+            "from": 1161,
+            "to": 1165
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "og-ghaznavids",
+            "og-kosrow"
+          ],
+          "locator": "Encyclopaedia Iranica history noting Oghuz adventurers who held Ghazna from about 1160 for as long as fifteen years. Encyclopaedia Iranica biography separating the last Ghaznavid ruler from Oghuz adventurers occupying Ghazna.",
+          "dateScope": {
+            "from": 1165,
+            "to": 1175
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "og-kosrow",
+            "og-map-1100"
+          ],
+          "locator": "Encyclopaedia Iranica biography separating the last Ghaznavid ruler from Oghuz adventurers occupying Ghazna. Only exact target feature, decoded geometry, shared encoded arcs, and representative point memberships.",
+          "dateScope": {
+            "from": 1175,
+            "to": 1187
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "og-tekish",
+            "og-map-1200"
+          ],
+          "locator": "Encyclopaedia Iranica chronology for Tekish, northern tribal recruitment, the 1194 defeat of the last Great Seljuk, and his death in 1200. Exact endpoint seam showing the target absent and its former area divided between different atlas layers.",
+          "dateScope": {
+            "from": 1187,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "og-index",
+            "og-coverage",
+            "og-missing",
+            "og-cards"
+          ],
+          "locator": "Exact live index, coverage, missing-card, and card-index records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "og-map-1100"
+          ],
+          "locator": "Exact decoded geometry type, components, rings, positions, bbox, and frozen geometry hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "og-map-1100"
+          ],
+          "locator": "Positive representative point-in-polygon tests for the exact 1100 target.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "og-map-1100"
+          ],
+          "locator": "Negative representative point-in-polygon tests, including lower-Syr controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "og-map-1000",
+            "og-map-1100",
+            "og-map-1200"
+          ],
+          "locator": "Shared-arc neighbors, overlap probe results, and exact start and endpoint seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "og-khwarazm-line"
+          ],
+          "locator": "Dynastic article, succession from Qutb al-Din to Atsiz and the bounded Khwarazmian core.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "og-revolt"
+          ],
+          "locator": "Article abstract, branch divisions, named beys, allegiance, and tax relationship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "og-ilarslan"
+          ],
+          "locator": "Il-Arslan article, independence, Qara Khitai overlordship, and regional interventions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "og-balkh"
+          ],
+          "locator": "Balkh article, events from 1152 through the temporary Oghuz occupation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "og-ghaznavids",
+            "og-kosrow"
+          ],
+          "locator": "Ghaznavid and Khosrow Malek articles on the Oghuz occupation of Ghazna.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "og-casnigir"
+          ],
+          "locator": "Iranica court-office article on the governor’s food taster and the Oghuz sheep levy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "og-revolt"
+          ],
+          "locator": "Revolt study on 1153 defeat, captivity, rescue efforts, and political disintegration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "og-map-1100"
+          ],
+          "locator": "Exact 1100 representative ownership at Merv and the target’s northwest position.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "og-dehestan"
+          ],
+          "locator": "Dehestan article on Aytaq, the sack, and subsequent Khwarazmian campaigns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "og-map-1200"
+          ],
+          "locator": "Endpoint representative memberships and absence of one target or single successor feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "og-casnigir"
+          ],
+          "locator": "Annual sheep-tribute evidence, bounded against unsupported household generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "og-balkh"
+          ],
+          "locator": "Balkh article on Oghuz pasture and taxation; explicit limits of the political narrative.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "og-ghaznavids"
+          ],
+          "locator": "Ghaznavids article on the origin and occupation of the Oghuz newcomers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "og-map-1100"
+          ],
+          "locator": "Positive and negative Mangyshlaq and Ustyurt probe memberships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "og-ilarslan"
+          ],
+          "locator": "Refuge, alliance, and intervention evidence in the Il-Arslan study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "og-nerazik"
+          ],
+          "locator": "Monograph chapter 3, printed pages 67 to 122, and English summary, pages 250 to 255.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "og-nerazik"
+          ],
+          "locator": "Monograph printed pages 73 and 81 to 88, estate plans and debated kaptar-khana functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "og-nerazik"
+          ],
+          "locator": "Monograph printed pages 73 to 84, measured house plans, installations, and finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "og-nerazik"
+          ],
+          "locator": "Monograph printed pages 80 to 84, estate 43 decoration, storage, and service areas.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "og-kat"
+          ],
+          "locator": "Kath article on fertile silt, canal irrigation, flat terrain, and river-course shifts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "og-nerazik-summary"
+          ],
+          "locator": "English article, twelfth-century central-corridor form, storage, farmyard, and household limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "og-nerazik-summary"
+          ],
+          "locator": "English article on rural dwelling and settlement, read with its stated limits on social reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "og-nerazik-summary"
+          ],
+          "locator": "English article, central corridor and store-room form plus warnings about reconstructing household size.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "og-watwat"
+          ],
+          "locator": "Watwat article, chief-secretary role and languages of diplomatic correspondence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "og-kat"
+          ],
+          "locator": "Kath article on river sustenance, canals, fertile silt, and destructive channel shifts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "og-nerazik-summary"
+          ],
+          "locator": "English article and summary, family hypotheses and explicit methodological cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "og-architecture"
+          ],
+          "locator": "Architectural history of Kavat-kala estate layouts, room groups, materials, and uncertain functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "og-loc-medicine"
+          ],
+          "locator": "Library of Congress contents outline, childhood section, and explicit absence of local child testimony.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "og-watwat"
+          ],
+          "locator": "Watwat article, court-assembly and neighboring-house anecdotes, with later-source caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "og-revolt"
+          ],
+          "locator": "Revolt study’s named branches and beys contrasted with its family-evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "og-watwat"
+          ],
+          "locator": "Watwat article, education at the Nezamiya madrasa and professional scribal career.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "og-dlt"
+          ],
+          "locator": "Peer-reviewed article abstract and introductory discussion of six Oghuz-marked lexemes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "og-dlt"
+          ],
+          "locator": "Dialect dictionary evidence, bounded by date, genre, and manuscript survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "og-poem"
+          ],
+          "locator": "Exact opening couplet of digital qasida 141, lines 1 to 2.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "og-poem",
+            "og-watwat"
+          ],
+          "locator": "Poem heading and Watwat biography, patron, genre, career, and textual-survival context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "og-jorjani"
+          ],
+          "locator": "Jorjani article, patrons, encyclopedia, and 1128 to 1136 handbook.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "og-loc-medicine"
+          ],
+          "locator": "Library of Congress description, ten-part contents and hygiene subtopics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "og-jorjani"
+          ],
+          "locator": "Jorjani article, lines on mixed Persian-Arabic technical vocabulary and examples.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "og-med-school"
+          ],
+          "locator": "Review abstract, method, Khwarazmian patronage, named scholars, and institutional limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "og-toilets",
+            "og-map-1100"
+          ],
+          "locator": "Archaeological review pages 5 to 6 and Otrar’s negative target point test.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "og-kat",
+            "og-architecture"
+          ],
+          "locator": "Kath irrigation geography and Kavat-kala architectural synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "og-revolt"
+          ],
+          "locator": "Revolt study, battle outcome and subsequent political disintegration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "og-dehestan"
+          ],
+          "locator": "Dehestan article, 1161 sack and later role in Khwarazmian campaigns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "og-jorjani",
+            "og-med-school"
+          ],
+          "locator": "Medical and scholarly traditions with explicit social-survival limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "og-map-1200",
+            "og-map-1279"
+          ],
+          "locator": "Exact endpoint and post-end representative point memberships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "og-map-1200",
+            "og-map-1279"
+          ],
+          "locator": "Exact endpoint seam showing the target absent and its former area divided between different atlas layers. Post-end control for representative point memberships after the atlas interval.",
+          "dateScope": {
+            "year": 1200
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "oghuz",
+        "name": "Oghuz",
+        "from": 1100,
+        "to": 1200,
+        "circa": true,
+        "kind": "state",
+        "card": "cards/oghuz.json",
+        "summary": "A researched guide to the map’s conflation of Oghuz communities and Khwarazmian space.",
+        "summarySource": null,
+        "dateBasis": "map_coverage",
+        "predecessors": [],
+        "successors": [],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "oghuz",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            50.326703267032684,
+            36.805078153254826,
+            62.32922329223294,
+            49.04827397205382
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
