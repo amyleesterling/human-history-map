@@ -1,0 +1,858 @@
+{
+  "version": 1,
+  "region": "Mesoamerica, Central America and mapped Andean corridor",
+  "researcher": "Codex parallel release141-mesoamerican-hunter-maize research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "mhm-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, accented display label, dates, kind, circa flag and historical-basemaps provenance."
+    },
+    {
+      "id": "mhm-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One exact observed interval, missing-card state and absence of an assigned geographic queue."
+    },
+    {
+      "id": "mhm-map-bc3000",
+      "title": "Human History Map 3000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc3000.json",
+      "note": "Control snapshot establishing that the exact target is absent before it appears."
+    },
+    {
+      "id": "mhm-map-bc2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Only exact target snapshot, decoded geometry, point membership and neighboring owners."
+    },
+    {
+      "id": "mhm-map-bc1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "Endpoint redraw into desert, maize, Olmec, manioc and other editorial layers."
+    },
+    {
+      "id": "mhm-map-bc1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Later control showing that the endpoint owners persist as atlas categories."
+    },
+    {
+      "id": "balsas-starch",
+      "title": "Piperno and colleagues, early maize starch and phytoliths from the Central Balsas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2664021/",
+      "note": "Direct microfossils on tools and in sediment, maize kernel processing, squash and interpretive tests."
+    },
+    {
+      "id": "balsas-context",
+      "title": "Ranere and colleagues, cultural context of early maize and squash in the Central Balsas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2664064/",
+      "note": "Shelter stratigraphy, radiocarbon chronology, flaked and ground stone tools, and seasonal cultivators."
+    },
+    {
+      "id": "coxcatlan-reassess",
+      "title": "Smith, reassessing Coxcatlan Cave domesticates",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1172257/",
+      "note": "Direct AMS dates, stratigraphic movement and the need to test inherited crop chronologies."
+    },
+    {
+      "id": "guila-maize",
+      "title": "Piperno and Flannery, earliest archaeological maize from highland Mexico",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC29388/",
+      "note": "Directly dated Guila Naquitz maize, squash and the long preceramic sequence."
+    },
+    {
+      "id": "belize-isotopes",
+      "title": "Kennett and colleagues, early isotopic evidence for maize as a staple",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7269666/",
+      "note": "Directly dated human diets, burials, age categories and changing maize reliance in Belize."
+    },
+    {
+      "id": "belize-adna",
+      "title": "Nakatsuka and colleagues, south-to-north migration before intensive farming",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8940966/",
+      "note": "Ancient DNA, population movement, admixture, forest clearance and limits on equating genes with language."
+    },
+    {
+      "id": "maize-genomes",
+      "title": "Kistler and colleagues, Central American maize genomes and South American gene flow",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7777085/",
+      "note": "Protracted domestication and later human-mediated movement of maize diversity."
+    },
+    {
+      "id": "gigante-crops",
+      "title": "Kennett and colleagues, crop chronology at El Gigante rockshelter",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10289419/",
+      "note": "Hundreds of direct dates on avocado, squash, maize and beans across episodic shelter use."
+    },
+    {
+      "id": "gigante-maize",
+      "title": "Kistler and colleagues, high-precision maize chronology from El Gigante",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5576806/",
+      "note": "Direct cob dates, row counts, staple productivity and rockshelter context in Honduras."
+    },
+    {
+      "id": "panama-starch",
+      "title": "Perry and colleagues, preceramic maize and root crops in Panama",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1805539/",
+      "note": "Starch on tools from maize, manioc, yams, arrowroot, Calathea and toxic Zamia."
+    },
+    {
+      "id": "monagrillo-tech",
+      "title": "Iizuka and colleagues, manufacture and firing of Monagrillo pottery",
+      "url": "https://repository.si.edu/server/api/core/bitstreams/96ae2249-3a21-44e1-8060-d8fe06acd37c/content",
+      "note": "Clay selection, slab construction, firing temperatures, chronology and seasonal coastal use."
+    },
+    {
+      "id": "monagrillo-summary",
+      "title": "Smithsonian, Monagrillo research summary",
+      "url": "https://research.si.edu/publication-details/?id=103910",
+      "note": "Institutional record for Panama pottery chronology, subsistence and cultural geography."
+    },
+    {
+      "id": "sanjacinto-function",
+      "title": "Pratt, function of early San Jacinto pottery",
+      "url": "https://www.cambridge.org/core/journals/latin-american-antiquity/article/abs/determining-the-function-of-one-of-the-new-worlds-earliest-pottery-assemblages-the-case-of-san-jacinto-colombia/C541C1CAC0437FF1EFCA896B57E131FB",
+      "note": "Fiber-tempered decorated pottery, mobility and serving or storage interpretations."
+    },
+    {
+      "id": "sanjacinto-context",
+      "title": "Oyuela-Caycedo, economic context of early pottery at San Jacinto 1",
+      "url": "https://repositorio.pucp.edu.pe/items/6cde2295-ad7c-4708-91e5-777119bc2171",
+      "note": "University synthesis of seasonal aggregation, wild plant processing and logistical mobility."
+    },
+    {
+      "id": "soconusco-varal",
+      "title": "Lesure, settlement and subsistence in Early Formative Soconusco",
+      "url": "https://escholarship.org/uc/item/2f2148z6",
+      "note": "Permanent villages from about 1900 BCE, estuary use and vessel-form differences."
+    },
+    {
+      "id": "soconusco-privilege",
+      "title": "Clark, Blake and colleagues, origins of privilege in Soconusco",
+      "url": "https://www.scielo.org.mx/scielo.php?lng=es&nrm=iso&pid=S1870-41152006000200122&script=sci_arttext_plus&tlng=es",
+      "note": "Barra and Locona settlements, household inequality, crops and exchange around 1900 to 1500 BCE."
+    },
+    {
+      "id": "soconusco-survey",
+      "title": "Rosenswig and colleagues, settlement in the Cuauhtemoc region of Soconusco",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/009346908791071178",
+      "note": "Systematic survey evidence for early ceramic villages around 1900 BCE."
+    },
+    {
+      "id": "coxcatlan-woman",
+      "title": "Museo Nacional de Antropologia, Coxcatlan burial 5",
+      "url": "https://mna.inah.gob.mx/detalle_pieza_mes.php?id=244",
+      "note": "Directly dated earlier woman, dental disease, skeletal workload, injury and evidence of care."
+    },
+    {
+      "id": "tehuacan-museum",
+      "title": "INAH, Introduction to Puebla archaeology",
+      "url": "https://lugares.inah.gob.mx/en/pagina-de-elemento/2259",
+      "note": "Stone tools, ixtle cord, seeds and cobs preserved in the Tehuacan region."
+    },
+    {
+      "id": "tehuacan-unesco",
+      "title": "UNESCO, Tehuacan-Cuicatlan Valley World Heritage property",
+      "url": "https://whc.unesco.org/en/list/1534",
+      "note": "Biodiversity, cave evidence, domestication and long-term water-management landscape."
+    },
+    {
+      "id": "tehuacan-mab",
+      "title": "UNESCO Man and the Biosphere, Tehuacan-Cuicatlan",
+      "url": "https://www.unesco.org/en/mab/tehuacan-cuicatlan",
+      "note": "Environmental diversity, crop history, present Indigenous communities and continuing land use."
+    },
+    {
+      "id": "chili-origin",
+      "title": "Kraft and colleagues, multiple lines of evidence for chili domestication",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4035960/",
+      "note": "Genetics, archaeology, ecology and historical linguistics point to multiregional crop origins."
+    },
+    {
+      "id": "plant-management",
+      "title": "Casas and colleagues, in situ plant management and domestication in Mesoamerica",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2759202/",
+      "note": "Cultivation, gathering, silviculture and the continuum between wild and domesticated plants."
+    },
+    {
+      "id": "cucurbits",
+      "title": "Archaeobotanical evidence for long-term cucurbit use in the Mesoamerican Neotropics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11091142/",
+      "note": "Bottle gourds, squash diversity, direct measurement and long-term Indigenous selection."
+    },
+    {
+      "id": "panama-environment",
+      "title": "Piperno and Jones, Holocene environmental history of Panama",
+      "url": "https://repository.si.edu/server/api/core/bitstreams/2a3e8726-7c61-4000-bcdd-5791f45c5fc5/content",
+      "note": "Pollen, phytolith and charcoal evidence for forest interference and horticulture."
+    },
+    {
+      "id": "titicaca-gold",
+      "title": "Aldenderfer and colleagues, four-thousand-year-old gold from Lake Titicaca",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2278197/",
+      "note": "Secure burial context, cold-hammered gold, pithouses, storage and mixed food production."
+    },
+    {
+      "id": "titicaca-potato",
+      "title": "Rumold and Aldenderfer, potato starch at Jiskairumoko",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5137686/",
+      "note": "Grinding-tool residues, village features, camelid management and settlement aggregation."
+    },
+    {
+      "id": "titicaca-foods",
+      "title": "Miller and colleagues, Altiplano agricultural origins and resilience",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12192108/",
+      "note": "Quinoa, tubers, animals, human diets, burials and mixed subsistence in the Titicaca Basin."
+    },
+    {
+      "id": "titicaca-exchange",
+      "title": "Stanish and colleagues, obsidian exchange and watercraft in Lake Titicaca",
+      "url": "https://www.cambridge.org/core/journals/latin-american-antiquity/article/abs/evidence-for-early-longdistance-obsidian-exchange-and-watercraft-use-from-the-southern-lake-titicaca-basin-of-bolivia-and-peru/B72CF548784422E698EFE68B46D346B8",
+      "note": "Nonlocal obsidian and evidence for lake transport by about 1600 BCE."
+    },
+    {
+      "id": "titicaca-lake",
+      "title": "Holocene Lake Titicaca levels and sociopolitical development",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9926255/",
+      "note": "Climate, water levels and cautions about connecting environmental change to social change."
+    },
+    {
+      "id": "sanlorenzo-inah",
+      "title": "INAH, San Lorenzo Tenochtitlan archaeological zone",
+      "url": "https://lugares.inah.gob.mx/en/node/4454",
+      "note": "Site chronology begins at the atlas endpoint and records later growth, transport and earthwork."
+    },
+    {
+      "id": "sanlorenzo-cacao",
+      "title": "INAH, theobromine in San Lorenzo pottery",
+      "url": "https://www.revistas.inah.gob.mx/index.php/arqueologia/user/setLocale/en?source=%2Findex.php%2Farqueologia%2Farticle%2Fview%2F3513",
+      "note": "Localized cacao residues in vessels dated across 1800 to 1000 BCE."
+    },
+    {
+      "id": "sanlorenzo-obsidian",
+      "title": "Cobean and colleagues, early Olmec obsidian trade at San Lorenzo",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440313000563",
+      "note": "Geochemical sourcing of securely dated obsidian artifacts and exchange-network limits."
+    },
+    {
+      "id": "cascajal",
+      "title": "INAH, the carved Cascajal block",
+      "url": "https://www.revistas.inah.gob.mx/index.php/arqueologia/article/view/3665/0",
+      "note": "A much later possible writing system around 900 BCE, outside the target interval."
+    },
+    {
+      "id": "cassava-who",
+      "title": "World Health Organization, natural toxins in food",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/natural-toxins-in-food",
+      "note": "Modern science of cyanogenic glycosides and cassava food safety."
+    },
+    {
+      "id": "cassava-processing",
+      "title": "EFSA, cyanogenic glycosides and processing",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009189/",
+      "note": "Experimental evidence for crushing, soaking, fermenting and roasting to reduce cassava cyanide."
+    },
+    {
+      "id": "nixtamal-science",
+      "title": "Mycotoxins during nixtamalization and tortilla production",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6520960/",
+      "note": "Modern food science explaining alkaline cooking, steeping and nutritional effects."
+    },
+    {
+      "id": "nixtamal-archaeology",
+      "title": "Santini and colleagues, archaeological evidence for nixtamalization at La Corona",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1040618224003549",
+      "note": "Direct vessel evidence is much later, illustrating why exact-period claims require caution."
+    },
+    {
+      "id": "belize-fisheries",
+      "title": "Harrison-Buck and colleagues, Late Archaic fisheries in Belize wetlands",
+      "url": "https://doi.org/10.1126/sciadv.adq1444",
+      "note": "Canals, holding ponds, barbed points and evidence for aquatic food strategies around the target era."
+    },
+    {
+      "id": "child-learning",
+      "title": "Arnold and colleagues, ceramic learning in Huancito",
+      "url": "https://www.cambridge.org/core/product/identifier/S0956536117000293/type/journal_article",
+      "note": "Later ethnoarchaeological comparison for childhood observation, practice and household apprenticeship."
+    },
+    {
+      "id": "parasites",
+      "title": "Reinhard and colleagues, food, parasites and epidemiological transitions",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29539449/",
+      "note": "Archaeoparasitology methods, coprolite limits and broad health comparisons."
+    },
+    {
+      "id": "maize-diversity",
+      "title": "FAO, maize diversity and farmers practices in Chiapas",
+      "url": "https://www.fao.org/agrifood-economics/publications/detail/en/c/124331/",
+      "note": "Present seed selection and exchange, used only as a labeled continuity comparison."
+    },
+    {
+      "id": "period-labels",
+      "title": "Cambridge World Prehistory, Archaic and Formative periods of Mesoamerica",
+      "url": "https://www.cambridge.org/core/books/cambridge-world-prehistory/archaic-and-formative-periods-of-mesoamerica/A1B6A59B60EF80206BD2672DA5DB3627",
+      "note": "Scholarly warning that period boundaries depend on changing archaeological criteria."
+    }
+  ],
+  "entities": [
+    {
+      "id": "mesoamerican-hunter-gatherers-and-maize-farmers",
+      "card": "data/cards/mesoamerican-hunter-gatherers-and-maize-farmers.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "mhm-index",
+            "mhm-map-bc2000",
+            "mhm-map-bc1500"
+          ],
+          "locator": "Exact id, accented display label, dates, kind, circa flag and historical-basemaps provenance. Only exact target snapshot, decoded geometry, point membership and neighboring owners. Endpoint redraw into desert, maize, Olmec, manioc and other editorial layers.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "mhm-map-bc2000",
+            "period-labels"
+          ],
+          "locator": "Only exact target snapshot, decoded geometry, point membership and neighboring owners. Scholarly warning that period boundaries depend on changing archaeological criteria.",
+          "dateScope": {
+            "from": -2000,
+            "to": -1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "mhm-index",
+            "mhm-coverage"
+          ],
+          "locator": "Exact index and coverage registry fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "mhm-map-bc2000"
+          ],
+          "locator": "Decoded geometry statistics and point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "mhm-map-bc1500",
+            "mhm-map-bc1000"
+          ],
+          "locator": "Endpoint point owners and later control snapshot.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "cascajal"
+          ],
+          "locator": "Explicit writing absence checked against a later candidate script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "mhm-map-bc3000",
+            "mhm-map-bc2000"
+          ],
+          "locator": "Evidence-level rule anchored to the actual atlas snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "balsas-starch"
+          ],
+          "locator": "Central Balsas ecology and microfossil limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tehuacan-unesco"
+          ],
+          "locator": "Regional biodiversity and caution about dating infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "panama-environment"
+          ],
+          "locator": "Panamanian paleoecology separated from artifact evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "soconusco-varal"
+          ],
+          "locator": "Localized settlement and estuary adaptation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "titicaca-lake"
+          ],
+          "locator": "High-altitude ecology and climate-causation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "balsas-starch"
+          ],
+          "locator": "Direct maize microfossils and tested alternatives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "guila-maize"
+          ],
+          "locator": "Direct macrofossils and gradual domestication.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "coxcatlan-reassess",
+            "cucurbits"
+          ],
+          "locator": "Direct dating, displacement and revised crop chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "chili-origin"
+          ],
+          "locator": "Multiline crop-origin model and its limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "titicaca-potato",
+            "titicaca-foods"
+          ],
+          "locator": "Localized Andean crops contrasted with the atlas name.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "belize-isotopes",
+            "belize-fisheries"
+          ],
+          "locator": "Direct isotope series contrasted with localized fishery evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "gigante-crops",
+            "gigante-maize"
+          ],
+          "locator": "Direct plant chronology and mixed food production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "soconusco-privilege",
+            "sanlorenzo-cacao"
+          ],
+          "locator": "Localized crop, aquatic food and vessel-residue evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "panama-starch",
+            "cassava-who",
+            "cassava-processing"
+          ],
+          "locator": "Tool residues plus modern food-safety comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nixtamal-science",
+            "nixtamal-archaeology"
+          ],
+          "locator": "Processing science separated from later direct archaeological proof.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "balsas-context"
+          ],
+          "locator": "Shelter context and seasonal cultivator interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "soconusco-survey"
+          ],
+          "locator": "Regional survey and scale limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "monagrillo-summary"
+          ],
+          "locator": "Pottery chronology and seasonal settlement model.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "gigante-maize"
+          ],
+          "locator": "Rockshelter preservation and occupation gaps.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "titicaca-gold"
+          ],
+          "locator": "Pithouses, storage and sedentism at one Andean site.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "balsas-context"
+          ],
+          "locator": "Direct lithic assemblage and technology interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "sanjacinto-context",
+            "sanjacinto-function"
+          ],
+          "locator": "Early fiber-tempered pottery and functional inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "monagrillo-tech"
+          ],
+          "locator": "Materials analysis and accurate pottery fun fact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "sanlorenzo-obsidian",
+            "titicaca-exchange"
+          ],
+          "locator": "Two localized sourcing studies kept distinct.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tehuacan-museum"
+          ],
+          "locator": "Preserved fiber and explicit clothing uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "soconusco-varal"
+          ],
+          "locator": "Household evidence without invented kinship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "belize-adna"
+          ],
+          "locator": "Age classes, diet and ancestry kept analytically separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "coxcatlan-woman"
+          ],
+          "locator": "Earlier localized woman and evidence of care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "child-learning"
+          ],
+          "locator": "Later comparison explicitly labeled as comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "plant-management"
+          ],
+          "locator": "Plant-management continuum and learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "coxcatlan-woman"
+          ],
+          "locator": "Bioarchaeological health evidence and scale limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "belize-isotopes"
+          ],
+          "locator": "Isotope method, infancy correction and dietary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tehuacan-mab"
+          ],
+          "locator": "Medicine absence anchored to known regional plant expertise.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tehuacan-unesco",
+            "titicaca-gold"
+          ],
+          "locator": "Water-management evidence and chronological control.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "parasites"
+          ],
+          "locator": "Explicit sanitation and toilet evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "titicaca-gold"
+          ],
+          "locator": "Direct burial and cautious social interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "sanjacinto-function"
+          ],
+          "locator": "Vessel-function inference and belief limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "soconusco-privilege"
+          ],
+          "locator": "Localized hierarchy evidence and coercion limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "balsas-context"
+          ],
+          "locator": "Multipurpose tools and warfare-evidence threshold.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "monagrillo-tech"
+          ],
+          "locator": "Play absence plus source-backed light fact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "cucurbits"
+          ],
+          "locator": "Domestication traits and cumulative Indigenous innovation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "belize-adna",
+            "maize-genomes"
+          ],
+          "locator": "Two genetic records with explicit identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "titicaca-exchange"
+          ],
+          "locator": "Local transport and craft achievement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "mhm-map-bc1500",
+            "sanlorenzo-inah"
+          ],
+          "locator": "Endpoint owners compared with local chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tehuacan-mab",
+            "maize-diversity"
+          ],
+          "locator": "Present continuity comparison without direct genealogical claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "mhm-map-bc1500",
+            "mhm-map-bc1000"
+          ],
+          "locator": "Endpoint redraw into desert, maize, Olmec, manioc and other editorial layers. Later control showing that the endpoint owners persist as atlas categories.",
+          "dateScope": {
+            "year": -1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "mesoamerican-hunter-gatherers-and-maize-farmers",
+        "card": "cards/mesoamerican-hunter-gatherers-and-maize-farmers.json",
+        "dateBasis": "map_coverage",
+        "summary": "Atlas umbrella across parts of Mexico, Central America, Colombia and the Andes, circa 2000 to 1500 BCE.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc2000.json",
+          "properties": {
+            "civ": "mesoamerican-hunter-gatherers-and-maize-farmers",
+            "from": -2000,
+            "to": -1500,
+            "precision": 1
+          },
+          "bounds": [
+            -112.65807842424246,
+            -24.585092751170286,
+            -65.16827296886696,
+            31.548909397261838
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact indexed id and accented display name are preserved; the id is a historical-basemap key, not a self-name.",
+    "One exact Polygon snapshot covers the sole interval from 2000 to 1500 BCE.",
+    "The geometry extends far beyond Mesoamerica into Colombia, Cuzco and the Lake Titicaca region while excluding several nearby coasts.",
+    "The target is not one people, language, state, ancestry, archaeological culture or uniform economy.",
+    "Named sites are localized case studies and are never generalized across the whole polygon.",
+    "Direct finds, scientific inference and later ethnographic or food-science comparison are labeled separately.",
+    "The 1500 BCE endpoint is an atlas redraw into other editorial categories, not a shared collapse or conquest.",
+    "No contemporaneous writing sample is supplied because no secure deciphered script belongs to this exact category and interval.",
+    "Predecessor and successor arrays remain empty because the atlas umbrella is not a historical polity or ethnicity."
+  ]
+}

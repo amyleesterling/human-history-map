@@ -1,0 +1,926 @@
+{
+  "version": 1,
+  "region": "Eastern Iranian plateau, southern Central Asia, Afghanistan and mapped Kashgar corridor",
+  "researcher": "Codex parallel release142-iranian-pastoralists research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "ip-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, display label, dates, kind, circa flag and historical-basemaps provenance."
+    },
+    {
+      "id": "ip-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three exact observed intervals, missing-card state, Asia queue hint and review metadata."
+    },
+    {
+      "id": "ip-map-bc2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Control snapshot before the target appears, including decoded regional point owners."
+    },
+    {
+      "id": "ip-map-bc1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "First exact target polygon, decoded coordinates, bounds, point tests and owner seams."
+    },
+    {
+      "id": "ip-map-bc1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Second exact interval geometry with four additional positions and stable tested membership."
+    },
+    {
+      "id": "ip-map-bc700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Third exact interval geometry with a distinct coordinate hash and stable tested membership."
+    },
+    {
+      "id": "ip-map-bc500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Endpoint disappearance into Achaemenid, Gandharan, other labels and blank eastern space."
+    },
+    {
+      "id": "formation-genomes",
+      "title": "Narasimhan and colleagues, formation of South and Central Asian populations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6822619/",
+      "note": "Genome-wide data from Iran, Turan, the steppe and South Asia, with radiocarbon context and mixture models."
+    },
+    {
+      "id": "uzbek-genomes",
+      "title": "Guarino-Vignon and colleagues, Bronze to Iron Age population dynamics in Uzbekistan",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8557446/",
+      "note": "Ancient genomes show Bronze Age continuity, later mixture and limits of simple population-replacement stories."
+    },
+    {
+      "id": "ulug-genome",
+      "title": "Martinez and colleagues, Bronze Age individual from Ulug Depe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9441711/",
+      "note": "One Ulug Depe genome placed with the BMAC cluster, illustrating both continuity and sample-size limits."
+    },
+    {
+      "id": "mobile-crops",
+      "title": "Spengler and colleagues, early agriculture among Central Eurasian mobile pastoralists",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3996608/",
+      "note": "Direct plant remains from Ojakly, Tasbas and other camps document wheat, barley, millet, peas and mobility."
+    },
+    {
+      "id": "millet-herding",
+      "title": "Hermes and colleagues, early integration of pastoralism and millet cultivation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6743000/",
+      "note": "Animal genetics and isotopes connect sheep, goat, cattle management with millet fodder and cultivation."
+    },
+    {
+      "id": "alay-herds",
+      "title": "Taylor and colleagues, early pastoral economies in the Alay Valley",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0205646",
+      "note": "ZooMS, ancient DNA and radiocarbon dating identify sheep-centered herding with cattle, goats and possible crops."
+    },
+    {
+      "id": "chap-crops",
+      "title": "Motuzaite Matuzeviciute and colleagues, high-elevation agriculture in the central Tien Shan",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7239473/",
+      "note": "Directly dated wheat and barley demonstrate highland cultivation and the small scale of current samples."
+    },
+    {
+      "id": "pamir-crops",
+      "title": "Spengler and colleagues, archaeobotany of the Pamirs and Fergana foothills",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12775865/",
+      "note": "Plant remains reveal varied high-elevation agropastoral strategies and continuing regional evidence gaps."
+    },
+    {
+      "id": "mountain-landscapes",
+      "title": "Miehe and colleagues, long-term agropastoral landscapes in Inner Asian mountains",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8752612/",
+      "note": "Pollen, charcoal and other proxies reconstruct gradual human shaping of mountain grasslands and forests."
+    },
+    {
+      "id": "kunlun-pastoralists",
+      "title": "Li and colleagues, early mounted pastoralists in the Kunlun Mountains",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179056/",
+      "note": "Radiocarbon-dated burials, houses, crops, animals and riding equipment localize early first-millennium lifeways."
+    },
+    {
+      "id": "steppe-dairy",
+      "title": "Wilkin and colleagues, five thousand years of Eastern Steppe dairying",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7212056/",
+      "note": "Dental-calculus proteins document ruminant milk and later horse milk with strong chronological and geographic controls."
+    },
+    {
+      "id": "tarim-genomes",
+      "title": "Zhang and colleagues, genomic origins of Bronze Age Tarim Basin mummies",
+      "url": "https://www.nature.com/articles/s41586-021-04052-7",
+      "note": "Genome-wide data reveal a distinctive Tarim population and reject automatic equations among ancestry, material culture and language."
+    },
+    {
+      "id": "horse-genomes",
+      "title": "Librado and colleagues, origins and spread of domestic horses",
+      "url": "https://www.nature.com/articles/s41586-021-04018-9",
+      "note": "Ancient horse genomes track the rapid second-millennium spread of DOM2 horses without identifying their riders languages."
+    },
+    {
+      "id": "merv-unesco",
+      "title": "UNESCO, State Historical and Cultural Park Ancient Merv",
+      "url": "https://whc.unesco.org/en/list/886/",
+      "note": "Institutional synthesis of Bronze and Iron Age oasis centers, changing river courses and long urban continuity."
+    },
+    {
+      "id": "merv-nomination",
+      "title": "Turkmenistan and UNESCO, Ancient Merv nomination dossier",
+      "url": "https://whc.unesco.org/uploads/nominations/886.pdf",
+      "note": "Detailed site, settlement, canal, mudbrick and landscape documentation for the Murghab oasis."
+    },
+    {
+      "id": "central-asia-unesco",
+      "title": "UNESCO History of Civilizations of Central Asia, Volume I",
+      "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_bae9b83a-6e0c-462e-9136-2618c8e4a6a5?_=094466eng.pdf",
+      "note": "Scholarly synthesis of Bronze and Iron Age settlements, pastoralism, farming, burials, crafts and chronology."
+    },
+    {
+      "id": "iranica-archaeology",
+      "title": "Encyclopaedia Iranica, pre-Islamic archaeology of Central Asia",
+      "url": "https://www.iranicaonline.org/articles/archaeology-v/",
+      "note": "Reference synthesis of Yaz pottery, oasis settlements, fortifications, horses and competing migration interpretations."
+    },
+    {
+      "id": "iranica-iron",
+      "title": "Encyclopaedia Iranica, iron in eastern Iran",
+      "url": "https://www.iranicaonline.org/articles/iron-in-eastern-iran/",
+      "note": "Chronology and archaeological contexts for iron knives, sickles, needles, weapons and continuing bronze use."
+    },
+    {
+      "id": "iranica-bactria",
+      "title": "Encyclopaedia Iranica, pre-Islamic Bactria",
+      "url": "https://www.iranicaonline.org/articles/bactria/bactria-i-pre-islamic-period/",
+      "note": "Geographic and archaeological distinction between Bactrian river oases, later political names and nomadic neighbors."
+    },
+    {
+      "id": "iranica-central-languages",
+      "title": "Encyclopaedia Iranica, Iranian languages in Central Asia",
+      "url": "https://www.iranicaonline.org/articles/central-asia-xiii/",
+      "note": "States the lack of indisputable language evidence before the first millennium and reviews later regional languages."
+    },
+    {
+      "id": "iranica-iranian-languages",
+      "title": "Encyclopaedia Iranica, Iranian languages and scripts",
+      "url": "https://www.iranicaonline.org/articles/iran-vi-iranian-languages-and-scripts/",
+      "note": "Distinguishes reconstructed Proto-Iranian, Old Iranian languages, geographic spread and written documentation."
+    },
+    {
+      "id": "iranica-avesta",
+      "title": "Encyclopaedia Iranica, Avesta history and contents",
+      "url": "https://www.iranicaonline.org/articles/avesta-holy-book/",
+      "note": "Explains oral transmission, uncertain dating, later compilation and the absence of an early manuscript sample."
+    },
+    {
+      "id": "iranica-writing",
+      "title": "Encyclopaedia Iranica, pre-Islamic Persian literature",
+      "url": "https://www.iranicaonline.org/articles/iran-viii1-persian-literature-pre-islamic/",
+      "note": "Identifies the 519 BCE Bisotun Old Persian version as the first securely dateable Iranian-language text."
+    },
+    {
+      "id": "bisotun-unesco",
+      "title": "UNESCO, Bisotun World Heritage property",
+      "url": "https://whc.unesco.org/en/list/1222/",
+      "note": "Dates Darius monumental trilingual inscription to 521 to 520 BCE and identifies its Old Persian version."
+    },
+    {
+      "id": "ulug-overview",
+      "title": "Lhuillier, Bendezu-Sarmiento and Lecomte, Ulug Depe Iron Age overview",
+      "url": "https://sites.google.com/site/iranianarchaeology/d-jia-issues/vol-4-2013",
+      "note": "Excavation synthesis of long stratigraphy, Yaz I and II architecture, pottery and funerary evidence."
+    },
+    {
+      "id": "ulug-subsistence",
+      "title": "Tengberg and colleagues, environment and subsistence at Iron Age Ulug Depe",
+      "url": "https://hal.science/hal-03453541",
+      "note": "Archaeobotanical and archaeozoological results document localized cultivation, herding and environmental use."
+    },
+    {
+      "id": "gonur-painting",
+      "title": "Dubova and colleagues, polychrome painting from Gonur Depe",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/new-polychrome-painting-from-gonur-depe-turkmenistan/11646E3B962E256200499E215AAAEAF8",
+      "note": "Excavated satellite settlement documents ovens, kilns, homes, graves, ornaments and rare steppe-related material."
+    },
+    {
+      "id": "ferizi",
+      "title": "Sabori and colleagues, rounded potsherds at Tepeh Ferizi",
+      "url": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/rounded-potsherds-new-evidence-from-tepeh-ferizi-sabzevar-plain-northeastern-iran/4D067003BA17A3B988B343EFB534654D",
+      "note": "Surface survey and geomorphology reveal a northeastern Iranian settlement, artifacts and post-depositional movement."
+    },
+    {
+      "id": "bronze-sources",
+      "title": "Berger and colleagues, origin of Bronze Age tin and copper in Central Asia",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1224873/full",
+      "note": "Elemental and isotopic analyses investigate ores, mines, alloys and multi-stage Central Asian metal circulation."
+    },
+    {
+      "id": "textile-impressions",
+      "title": "Doumani Dupuy and colleagues, textile impressions among Central Eurasian pastoralists",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/bronze-age-textile-evidence-in-ceramic-impressions-weaving-and-pottery-technology-among-mobile-pastoralists-of-central-eurasia/EC26F8BBAD53DDDCEED5CCC930FF7CF1",
+      "note": "Ceramic impressions preserve woven structures and connect textile skill with mobile pastoral communities."
+    },
+    {
+      "id": "gonur-health",
+      "title": "Kufterin and Dubova, Late Bronze Age skeletal remains from Gonur Depe",
+      "url": "https://www.anthropology.uw.edu.pl/07/bne-07-03.html",
+      "note": "Analysis of 920 people reports childhood stress, dental disease, trauma, infection and joint conditions."
+    },
+    {
+      "id": "gonur-tumor",
+      "title": "Kufterin, tumor-like lesions in a Gonur Depe skeleton",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.2668",
+      "note": "A single Late Bronze Age skeleton illustrates rare pathology and the limits of individual diagnosis."
+    },
+    {
+      "id": "child-learning",
+      "title": "Wallaert-Petre and colleagues, ceramic learning in household settings",
+      "url": "https://www.cambridge.org/core/product/identifier/S0956536117000293/type/journal_article",
+      "note": "Later ethnoarchaeological comparison for observation, practice, mistakes and household craft apprenticeship."
+    },
+    {
+      "id": "fire-temples",
+      "title": "Wu, searching for Zoroastrian fire temples in Central Asia",
+      "url": "https://studiahercynia.ff.cuni.cz/wp-content/uploads/sites/79/2023/12/Xin_Wu_13-53.pdf",
+      "note": "Reviews why most scholars reject labeling Bronze Age Gonur and Togolok buildings as Zoroastrian fire temples."
+    },
+    {
+      "id": "met-bronze-art",
+      "title": "Metropolitan Museum, Art of the Bronze Age",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Art_of_the_Bronze_Age_Southeastern_Iran_Western_Central_Asia_and_the_Indus_Valley.pdf",
+      "note": "Museum catalogue localizes vessels, seals, ornaments, stones, metals and cross-regional stylistic connections."
+    },
+    {
+      "id": "urban-central-asia",
+      "title": "Baumer and Novak, Urban Cultures of Central Asia",
+      "url": "https://www.harappa.com/sites/default/files/pdf/Urban%20Cultures%20of%20Central%20Asia%20from%20the%20Bronze%20Age%20to%20the%20Karakhanids%20-%20978-3-447-11169-0_Free%20Open%20Access%20Download.pdf",
+      "note": "Open scholarly volume on houses, towns, graves, children, institutions and settlement change across Central Asia."
+    },
+    {
+      "id": "austriaca-volume",
+      "title": "Austrian Academy of Sciences, Archaeology of Central Asia during the first millennium BCE",
+      "url": "https://austriaca.at/8449-2toc",
+      "note": "Scholarly volume contents covering Ulug Depe subsistence, Bactra, Chorasmia and regional Iron Age chronology."
+    },
+    {
+      "id": "sedentary-nomadic",
+      "title": "Kohl, Central Asia in the Bronze Age: sedentary and nomadic cultures",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/central-asia-in-the-bronze-age-sedentary-and-nomadic-cultures/7333E4851E081C61A3168FB961320D42",
+      "note": "Regional synthesis emphasizes interaction between oasis settlements and mobile groups rather than a hard binary."
+    },
+    {
+      "id": "isotope-database",
+      "title": "Ventresca Miller and colleagues, North Central Asia isotopic database",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10859260/",
+      "note": "Open dataset of human, animal and plant isotopes with geographic, chronological and contextual metadata."
+    },
+    {
+      "id": "water-history",
+      "title": "Macklin and colleagues, river civilizations of Central Asia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7776828/",
+      "note": "Hydrology, dates and irrigation archaeology show why environmental change cannot be reduced to automatic collapse."
+    },
+    {
+      "id": "caucasus-diet",
+      "title": "Shishlina and colleagues, diet in Bronze Age pastoral communities",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556513/",
+      "note": "Stable isotopes show regional dietary diversity and caution against imagining pastoral diets as only meat and milk."
+    },
+    {
+      "id": "calculus-method",
+      "title": "Akcalı and Lang, dental calculus in archaeology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9734501/",
+      "note": "Review explains how mineralized plaque traps food particles, microbes and other evidence, with interpretive limits."
+    }
+  ],
+  "entities": [
+    {
+      "id": "iranian-pastoralists",
+      "card": "data/cards/iranian-pastoralists.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ip-index",
+            "ip-coverage",
+            "ip-map-bc1500",
+            "ip-map-bc500"
+          ],
+          "locator": "Exact id, display label, dates, kind, circa flag and historical-basemaps provenance. Three exact observed intervals, missing-card state, Asia queue hint and review metadata. First exact target polygon, decoded coordinates, bounds, point tests and owner seams. Endpoint disappearance into Achaemenid, Gandharan, other labels and blank eastern space.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ip-map-bc1500",
+            "mobile-crops",
+            "gonur-painting"
+          ],
+          "locator": "First exact target polygon, decoded coordinates, bounds, point tests and owner seams. Direct plant remains from Ojakly, Tasbas and other camps document wheat, barley, millet, peas and mobility. Excavated satellite settlement documents ovens, kilns, homes, graves, ornaments and rare steppe-related material.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ip-map-bc1000",
+            "iranica-archaeology",
+            "iranica-iron"
+          ],
+          "locator": "Second exact interval geometry with four additional positions and stable tested membership. Reference synthesis of Yaz pottery, oasis settlements, fortifications, horses and competing migration interpretations. Chronology and archaeological contexts for iron knives, sickles, needles, weapons and continuing bronze use.",
+          "dateScope": {
+            "from": -1000,
+            "to": -700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ip-map-bc700",
+            "ip-map-bc500",
+            "austriaca-volume",
+            "bisotun-unesco"
+          ],
+          "locator": "Third exact interval geometry with a distinct coordinate hash and stable tested membership. Endpoint disappearance into Achaemenid, Gandharan, other labels and blank eastern space. Scholarly volume contents covering Ulug Depe subsistence, Bactra, Chorasmia and regional Iron Age chronology. Dates Darius monumental trilingual inscription to 521 to 520 BCE and identifies its Old Persian version.",
+          "dateScope": {
+            "from": -700,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ip-index",
+            "ip-coverage"
+          ],
+          "locator": "Exact index, coverage and initial missing-card metadata.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ip-map-bc1500"
+          ],
+          "locator": "Decoded geometry bounds, positions and point-in-polygon results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ip-map-bc2000",
+            "ip-map-bc1000",
+            "ip-map-bc700",
+            "ip-map-bc500"
+          ],
+          "locator": "All exact snapshots, control maps and endpoint owners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "iranica-central-languages",
+            "iranica-iranian-languages",
+            "iranica-avesta",
+            "iranica-writing",
+            "bisotun-unesco"
+          ],
+          "locator": "Language reconstruction, oral transmission and first securely dated Old Persian.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "formation-genomes"
+          ],
+          "locator": "Ancient genome sample design and multidisciplinary interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "merv-nomination"
+          ],
+          "locator": "Ancient Merv landscape, river shifts, canals and settlement movement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "merv-unesco",
+            "water-history"
+          ],
+          "locator": "UNESCO oasis sequence and hydrological archaeology comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ulug-overview"
+          ],
+          "locator": "Ulug Depe stratigraphy, setting, architecture and pottery sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pamir-crops",
+            "mountain-landscapes"
+          ],
+          "locator": "Pamir archaeobotany and long-term mountain landscape proxies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "kunlun-pastoralists",
+            "tarim-genomes"
+          ],
+          "locator": "Localized Kunlun archaeology and independent Tarim genome results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mobile-crops"
+          ],
+          "locator": "Directly dated Murghab camp grains and interpretation of cultivation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "millet-herding"
+          ],
+          "locator": "Livestock genetics and isotope evidence for millet foddering.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "alay-herds"
+          ],
+          "locator": "ZooMS, radiocarbon chronology and Alay animal economy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ulug-subsistence",
+            "austriaca-volume"
+          ],
+          "locator": "Localized Ulug Depe subsistence evidence within wider Iron Age research.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "horse-genomes"
+          ],
+          "locator": "Ancient horse genomes and archaeological context for horse use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "chap-crops",
+            "ulug-subsistence"
+          ],
+          "locator": "Direct crop remains from highland and foothill settlements.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "steppe-dairy",
+            "caucasus-diet"
+          ],
+          "locator": "Direct dairy proteins and comparative pastoral isotope results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "sedentary-nomadic"
+          ],
+          "locator": "Regional synthesis of pastoral and settled food economies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "calculus-method"
+          ],
+          "locator": "Dental-calculus formation, preserved particles and archaeological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mobile-crops"
+          ],
+          "locator": "Mixed grain package and its different possible uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "gonur-painting"
+          ],
+          "locator": "Excavated Gonur satellite buildings, graves, kilns and painting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "merv-unesco",
+            "iranica-archaeology"
+          ],
+          "locator": "Yaz settlement sequence and competing explanations for change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ulug-overview"
+          ],
+          "locator": "Ulug Depe Iron Age architecture and stratigraphic sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "central-asia-unesco",
+            "sedentary-nomadic"
+          ],
+          "locator": "Regional camp and house variation across interacting economies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "merv-nomination",
+            "water-history"
+          ],
+          "locator": "Oasis waterworks, site plans and explicit sanitation evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "bronze-sources"
+          ],
+          "locator": "Ore geology, alloy chemistry, lead isotopes and recycling limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "iranica-iron"
+          ],
+          "locator": "Eastern Iranian iron chronology, object types and bronze continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "textile-impressions"
+          ],
+          "locator": "Textile impressions, weaving technology and mobile pastoral contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "met-bronze-art"
+          ],
+          "locator": "Museum catalogue contexts, materials, styles and provenance limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ferizi"
+          ],
+          "locator": "Survey extent, geomorphology and post-depositional artifact movement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "urban-central-asia"
+          ],
+          "locator": "Regional house, settlement and burial evidence with social limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ulug-genome",
+            "uzbek-genomes"
+          ],
+          "locator": "Localized genomes, wider mixture models and sample-size cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "gonur-health"
+          ],
+          "locator": "Gonur age groups and documented diversity in child burials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "child-learning",
+            "textile-impressions"
+          ],
+          "locator": "Later apprenticeship comparison and archaeological textile skill evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "gonur-painting"
+          ],
+          "locator": "Excavated activity zones, graves and cautious hierarchy inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "gonur-health"
+          ],
+          "locator": "Large Gonur skeletal sample and reported pathology patterns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "gonur-tumor"
+          ],
+          "locator": "Single pathological case and limits of retrospective diagnosis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "gonur-health",
+            "gonur-tumor"
+          ],
+          "locator": "Health evidence distinguished from unsupported treatment reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "isotope-database"
+          ],
+          "locator": "Isotope dataset scope, metadata and interpretive controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "calculus-method",
+            "urban-central-asia"
+          ],
+          "locator": "Sanitation absence checked against site and biomolecular evidence types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "fire-temples"
+          ],
+          "locator": "Scholarly review of disputed Central Asian fire-temple identifications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "iranica-avesta"
+          ],
+          "locator": "Avestan oral transmission, compilation history and dating uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "urban-central-asia",
+            "central-asia-unesco"
+          ],
+          "locator": "Regional burial forms and limits on reconstructing belief.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "iranica-archaeology"
+          ],
+          "locator": "Fortified centers, weapons and contextual limits on warfare claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "central-asia-unesco"
+          ],
+          "locator": "Earthen architecture and explicit limits on reconstructing play.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "millet-herding",
+            "chap-crops"
+          ],
+          "locator": "Integrated cultivation, foddering and crop transmission evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "bronze-sources"
+          ],
+          "locator": "Metallurgical production, provenance science, recycling and craft skill.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "formation-genomes",
+            "uzbek-genomes"
+          ],
+          "locator": "Ancient DNA mixture patterns separated from language and identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ip-map-bc500"
+          ],
+          "locator": "Exact endpoint point owners and blank eastern seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "iranica-bactria",
+            "iranica-central-languages"
+          ],
+          "locator": "Later regional histories and limits of retrospective language mapping.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ip-map-bc500"
+          ],
+          "locator": "Endpoint disappearance into Achaemenid, Gandharan, other labels and blank eastern space.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "iranian-pastoralists",
+        "card": "cards/iranian-pastoralists.json",
+        "dateBasis": "map_coverage",
+        "summary": "Atlas umbrella across eastern Iran, southern Central Asia, Afghanistan and Kashgar, circa 1500 to 500 BCE.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "iranian-pastoralists",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            50.326703267032684,
+            25.026393828935994,
+            81.84501845018451,
+            46.3565957585035
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "iranian-pastoralists",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            50.326703267032684,
+            25.026393828935994,
+            81.84501845018451,
+            46.3565957585035
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "iranian-pastoralists",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            50.326703267032684,
+            25.026393828935994,
+            81.84501845018451,
+            46.3565957585035
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact indexed id and display name are preserved as historical-basemap metadata, not an ancient self-name.",
+    "Three exact Polygon snapshots cover the continuous indexed lifetime from 1500 to 500 BCE.",
+    "The decoded footprint excludes most of western Iran and reaches east through Central Asia, Afghanistan and Kashgar.",
+    "The target is not one Iranian-speaking people, ethnicity, ancestry, archaeological culture, state or uniform pastoral economy.",
+    "Archaeological material, ancient DNA, historical linguistics and later written records are kept analytically separate.",
+    "Named sites and scientific results remain localized, with later ethnographic or regional comparisons labeled.",
+    "No writing sample is supplied because none is securely attributable to the exact umbrella and interval.",
+    "The 500 BCE endpoint is an atlas redraw dominated by an Achaemenid label, not one shared fall or disappearance.",
+    "Predecessor and successor arrays remain empty because the umbrella is not a historical polity or ethnicity."
+  ]
+}
