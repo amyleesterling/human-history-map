@@ -1,0 +1,1187 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release146-hainan-700 research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "hai-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact live id, Hainan display label, approximate 700 to 1492 lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "hai-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Nine exact consecutive intervals, state kind, nine border files, imported summary, missing card and unreviewed identity, chronology and borders."
+    },
+    {
+      "id": "hai-imported",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Current Wikipedia-derived text describes the modern island and province rather than the medieval atlas layer."
+    },
+    {
+      "id": "hai-map600",
+      "title": "Human History Map 600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "The exact id is absent before its first audited interval."
+    },
+    {
+      "id": "hai-map700",
+      "title": "Human History Map 700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Exact 26-position island Polygon; tested interior, western and southern Hainan points belong to the target while Xuwen and Beihai belong to Tang."
+    },
+    {
+      "id": "hai-map900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Preserves the same target geometry and mainland Tang seam through the 900 to 1000 interval."
+    },
+    {
+      "id": "hai-map1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Retains the island Polygon with tiny coordinate quantization drift; mainland tested points now belong to Song."
+    },
+    {
+      "id": "hai-map1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Returns to the initial component hash while the mainland seam remains Song."
+    },
+    {
+      "id": "hai-map1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Exact target coverage through the last Song-era century of the atlas layer."
+    },
+    {
+      "id": "hai-map1279",
+      "title": "Human History Map 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Target persists while Xuwen and Beihai switch to Yuan; the island geometry changes only by minute coordinate drift."
+    },
+    {
+      "id": "hai-map1300",
+      "title": "Human History Map 1300 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Preserves the 1279 target component and Yuan mainland seam."
+    },
+    {
+      "id": "hai-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Target still covers the island while audited mainland points are claimed by overlapping Yuan and Ming layers."
+    },
+    {
+      "id": "hai-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "The target disappears; audited island points have no automatic owner while the mainland belongs to Ming."
+    },
+    {
+      "id": "hai-museum-history",
+      "title": "Hainan Museum: an introduction to Hainan history",
+      "url": "https://www.hainanmuseum.org/hnbwgcms/info/597",
+      "note": "Provincial museum chronology covers Tang roads and migration, Song maritime traffic, Yuan administration and Ming Qiongzhou Prefecture."
+    },
+    {
+      "id": "hai-museum-life",
+      "title": "Hainan Museum: Hainan minority cultures exhibition",
+      "url": "https://www.hainanmuseum.org/hnbwgcms/node/280",
+      "note": "Museum overview presents houses, textiles, hair ornaments, music, games and tools; used as later material-culture comparison, not automatic medieval fact."
+    },
+    {
+      "id": "hai-tang-government",
+      "title": "Tang governance and social change on Hainan",
+      "url": "https://hndb.hainanu.edu.cn/portal/journal/portal/client/paper/1b33fb867445392cc03112485287382e",
+      "note": "Hainan University article analyzes Tang county building, Feng-Xian family mediation, loose administration and local resistance."
+    },
+    {
+      "id": "hai-yuan-government",
+      "title": "Yuan governance of Hainan",
+      "url": "https://hndb.hainanu.edu.cn/portal/journal/portal/client/paper/0105ebce09c107b82719271b13659ec1",
+      "note": "Hainan University article examines household registration, taxation, corvée, divided jurisdiction and incomplete control."
+    },
+    {
+      "id": "hai-song-education",
+      "title": "Song educational expansion and cultural order on Hainan",
+      "url": "https://hlsy.cbpt.cnki.net/portal/journal/portal/client/paper/7c71d3c2787c18e293cb98929f56b177",
+      "note": "Scholarly article analyzes schools, examinations, ritual institutions and uneven regional reach during Song rule."
+    },
+    {
+      "id": "hai-central-history",
+      "title": "Central Hainan in the Song and Yuan periods",
+      "url": "https://www.ruralchina.cn/xcyj/XCReport/previewPage?ID=4827772&SiteID=18",
+      "note": "Research report discusses special institutions, agriculture, incense, migration, contact and differences between interior and coast."
+    },
+    {
+      "id": "hai-ming-revolt",
+      "title": "Research on Li resistance in Ming Hainan",
+      "url": "https://hndb.hainanu.edu.cn/portal/journal/portal/client/paper/8e05c0df2c4555ecc694fa33dd5d6ade",
+      "note": "Hainan University journal article studies causes and patterns of Ming-period armed resistance and state suppression."
+    },
+    {
+      "id": "hai-ming-officials",
+      "title": "Government officials and frontier development in Ming Hainan",
+      "url": "https://www.sciengine.com/parse/pdf/1000-0690/05EAD0BD94CF4B4B879BE353A82421D6.pdf",
+      "note": "Academic study links officials with farming, schools and registration while documenting the state-building perspective and its limits."
+    },
+    {
+      "id": "hai-gardens",
+      "title": "Landscape and garden history of Hainan",
+      "url": "https://www.mdpi.com/2073-445X/15/3/376",
+      "note": "Peer-reviewed landscape-history synthesis identifies Tang to Ming elite sites while warning that later rebuilding complicates medieval reconstruction."
+    },
+    {
+      "id": "hai-unesco-rainforest",
+      "title": "Hainan Tropical Rainforest and the traditional settlement of the Li ethnic group",
+      "url": "https://whc.unesco.org/en/tentativelists/6582",
+      "note": "UNESCO tentative-list record explains mountain rainforest ecology and long settlement continuity; modern ethnic framing is not projected unchanged backward."
+    },
+    {
+      "id": "hai-climate",
+      "title": "Hainan climate and geography",
+      "url": "https://en.hainan.gov.cn/englishsite/Overview/202506/42752c4d263f4e5f88ac26defeabf8c3.shtml",
+      "note": "Provincial government overview describes tropical monsoon patterns, east-west rainfall differences and typhoon, drought and cold risks."
+    },
+    {
+      "id": "hai-sediment",
+      "title": "Human impacts recorded in sediments off eastern Hainan",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.663634/full",
+      "note": "Peer-reviewed multiproxy core study associates larger Sui to Tang and Song migration with changing erosion and vegetation while stating chronological limitations."
+    },
+    {
+      "id": "hai-maar",
+      "title": "Late Quaternary environment at Shuangchi Maar",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0031018218310058",
+      "note": "Radiocarbon, pollen and charcoal research reconstructs environmental change and demonstrates what lake sediments can and cannot resolve."
+    },
+    {
+      "id": "hai-rivers",
+      "title": "Major rivers of Hainan",
+      "url": "https://en.hainan.gov.cn/englishsite/mr8/202507/dc522c29ed88468ba527a84d17345e67.shtml",
+      "note": "Provincial overview traces major rivers from the central mountains and helps explain settlement, irrigation and transport opportunities."
+    },
+    {
+      "id": "hai-li-category",
+      "title": "From Li people to Li ethnicity",
+      "url": "https://research.cuhk.edu.hk/en/publications/%E5%BE%9E%E9%BB%8E%E4%BA%BA%E5%88%B0%E9%BB%8E%E6%97%8F%E6%B5%B7%E5%8D%97%E4%BA%94%E6%8C%87%E5%B1%B1%E6%B0%91%E6%97%8F%E5%BF%97%E7%9A%84%E5%86%8D%E8%AA%8D%E8%AD%98-from-the-li-people-to-the-li-ethnicity-a-refle-2/",
+      "note": "Chinese University of Hong Kong research explains how missionaries, ethnographers and states helped construct the modern Li ethnic category."
+    },
+    {
+      "id": "hai-hlai-genome",
+      "title": "Genomic history of Hlai-speaking populations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7381617/",
+      "note": "Open peer-reviewed genomic study models complex ancestry and relationships among sampled modern groups; it is not a map of medieval identity."
+    },
+    {
+      "id": "hai-baiyue-genetics",
+      "title": "Genetic study of southern Chinese ancestry",
+      "url": "https://www.sinh.cas.cn/kxyj/kyjz/202210/t20221010_6522524.html",
+      "note": "Chinese Academy of Sciences summary reports population-genetic results and cautions through method that ancestry is not equivalent to dynasty or ethnic label."
+    },
+    {
+      "id": "hai-hlai-writing",
+      "title": "Language vitality among Hlai communities",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7549582/",
+      "note": "Peer-reviewed study distinguishes Hlai varieties and notes that the current Latin-based writing system was created in 1957."
+    },
+    {
+      "id": "hai-mtdna",
+      "title": "Mitochondrial diversity of Hainan populations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3048540/",
+      "note": "Peer-reviewed study explores deep population histories; molecular estimates carry uncertainty and cannot name medieval communities individually."
+    },
+    {
+      "id": "hai-unesco-textiles",
+      "title": "Traditional Li textile techniques",
+      "url": "https://ich.unesco.org/en/RL/traditional-li-textile-techniques-spinning-dyeing-weaving-and-embroidering-02153",
+      "note": "UNESCO documents living spinning, dyeing, weaving and embroidery skills, women’s work and mother-to-daughter teaching; used as later continuity comparison."
+    },
+    {
+      "id": "hai-boat-houses",
+      "title": "Boat-shaped houses and ecological adaptation on Hainan",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12522694/",
+      "note": "Recent open study analyzes surviving villages and environmental adaptation; present structures are comparison evidence, not securely dated medieval houses."
+    },
+    {
+      "id": "hai-song-trade",
+      "title": "Hainan transit trade during the Song",
+      "url": "https://hndb.hainanu.edu.cn/portal/journal/portal/client/paper/ec2db3c1c42e5183a1d2b0e93517b53a",
+      "note": "Hainan University article examines the island’s role in routes and exchange rather than imagining every resident as an overseas merchant."
+    },
+    {
+      "id": "hai-tang-trade",
+      "title": "Maritime trade around Hainan in the Tang",
+      "url": "https://www.pishu.com.cn/skwx_ps/initDatabaseDetail?contentId=6764443&contentType=literature&siteId=14",
+      "note": "Scholarly chapter assembles sparse texts and archaeological evidence for routes and trade, while acknowledging documentary gaps."
+    },
+    {
+      "id": "hai-song-maritime",
+      "title": "Song maritime trade patterns from shipwreck cargoes",
+      "url": "https://link.springer.com/article/10.1007/s41826-020-00029-z",
+      "note": "Peer-reviewed cargo analysis distinguishes official and small-scale networks; used as regional context rather than proof for every Hainan port."
+    },
+    {
+      "id": "hai-museum-maritime",
+      "title": "Hainan Museum: archaeology of the Maritime Silk Road",
+      "url": "https://www.hainanmuseum.org/hnbwgcms/info/3133",
+      "note": "Museum research discusses Jianzhen, recorded spices and offshore discoveries, with location limits kept explicit."
+    },
+    {
+      "id": "hai-coin-science",
+      "title": "Coins from the North Reef shipwreck landscape",
+      "url": "https://doi.org/10.1038/s40494-025-01721-y",
+      "note": "Scientific heritage study dates Tang through early Ming coins from offshore contexts; finds show routes, not island-wide ownership."
+    },
+    {
+      "id": "hai-cotton-history",
+      "title": "Huang Daopo and Hainan textile technology",
+      "url": "https://hndb.hainanu.edu.cn/portal/journal/portal/client/paper/7595340990bd2d67663f31ef4ec99ab7",
+      "note": "Hainan University article assesses traditions connecting the late Song craftswoman with Li cotton tools and techniques."
+    },
+    {
+      "id": "hai-cotton-texts",
+      "title": "Cotton and textile exchange in Song to Yuan sources",
+      "url": "https://crlhd.xmu.edu.cn/info/1037/4832.htm",
+      "note": "Xiamen University research uses primary texts on Hainan cotton goods and stresses a cross-cultural, multi-stage technology history."
+    },
+    {
+      "id": "hai-waterworks",
+      "title": "Historical irrigation and food plants on Hainan",
+      "url": "https://news.hndaily.cn/html/2019-07/29/content_18_1.htm",
+      "note": "Provincial newspaper synthesis cites local gazetteers for Song waterworks, yam references and a 1489 Hongzhi-period canal."
+    },
+    {
+      "id": "hai-yazhou-city",
+      "title": "Yazhou Ancient City",
+      "url": "https://www.visitsanya.com/destination/yazhou-ancient-city-yacheng-ancient-town",
+      "note": "Official Sanya destination record outlines Song and Ming town development; surviving walls and street form include later rebuilding."
+    },
+    {
+      "id": "hai-betel",
+      "title": "Historical use of areca in Hainan medicine",
+      "url": "https://cnki.istiz.org.cn/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2026&filename=YXZX202602014",
+      "note": "Hainan Medical University historical study follows changing knowledge of betel nut from early texts through Song medicine."
+    },
+    {
+      "id": "hai-tcm",
+      "title": "History of Chinese medicine in Hainan",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11615232/",
+      "note": "Indexed history article reports Song-era growth and later Ming medical offices while revealing the institutional focus of surviving sources."
+    },
+    {
+      "id": "hai-su-health",
+      "title": "Su Shi’s health practices during Hainan exile",
+      "url": "https://yizhe.dmu.edu.cn/article/id/6412e773fa89b2af1f87576e",
+      "note": "Medical-history article examines the exiled scholar’s diet, rest and self-care; one literate elite man is not a population sample."
+    },
+    {
+      "id": "hai-song-medicine",
+      "title": "Medicine under the Song state",
+      "url": "https://english.ihns.cas.cn/Publications/books/201404/t20140422_119818.html",
+      "note": "Chinese Academy of Sciences book page summarizes wider Song medical institutions, used only as mainland context for uneven island access."
+    },
+    {
+      "id": "hai-su-poem",
+      "title": "Su Shi and the poem written on crossing the sea in 1100",
+      "url": "https://ctwh.sasu.edu.cn/info/1009/1935.htm",
+      "note": "University cultural-history page gives the date, title and exact Classical Chinese text of June 1100."
+    },
+    {
+      "id": "hai-su-site",
+      "title": "Su Shi in Danzhou, Hainan",
+      "url": "https://www.ehainan.gov.cn/2022-12/23/c_842002.htm",
+      "note": "Provincial government feature localizes Su Shi’s 1097 to 1100 exile and activities in Danzhou."
+    },
+    {
+      "id": "hai-npm-su",
+      "title": "National Palace Museum spotlight on Su Shi",
+      "url": "https://theme.npm.edu.tw/Spotlight11201/en",
+      "note": "Museum exhibition page independently notes his return from Danzhou and preserves the broader calligraphic context of elite writing."
+    },
+    {
+      "id": "hai-tang-exile",
+      "title": "Penal exile in Tang China",
+      "url": "https://www1.ihp.sinica.edu.tw/en/Publications/LegalHistoryStudy/1168/Article/486",
+      "note": "Academia Sinica research examines journeys, hard labor, unfreedom and reintegration rather than romanticizing southern exile."
+    },
+    {
+      "id": "hai-song-exile",
+      "title": "Exiled officials and Hainan in the Song",
+      "url": "https://etds.lib.tku.edu.tw/ETDS/Home/Detail/U0002-0307201122482200",
+      "note": "University thesis studies hardship, cultural interaction and the source bias created by famous banished officials."
+    },
+    {
+      "id": "hai-jianzhen",
+      "title": "Jianzhen’s landing in Yazhou",
+      "url": "https://yz.sanya.gov.cn/yzqsite/zjyz/202607/7c2e4b777322456eb9f9dc13e48313c7.shtml",
+      "note": "Yazhou government history recounts the monk’s 748 landing and stay; later commemoration is distinguished from contemporary evidence."
+    },
+    {
+      "id": "hai-yazhou-song",
+      "title": "Yazhou folk-song tradition",
+      "url": "https://www.ihchina.cn/project_details/12426.html",
+      "note": "China intangible-heritage record documents oral transmission and claimed older influences; present tradition is not treated as a securely recorded medieval performance."
+    },
+    {
+      "id": "hai-hunting",
+      "title": "Collective hunting in Li historical records",
+      "url": "https://hndb.hainanu.edu.cn/portal/journal/portal/client/paper/57fe0b75092829e2772943b50b720f6d",
+      "note": "Hainan University study discusses later written descriptions of organized hunting and their limits for earlier centuries."
+    },
+    {
+      "id": "hai-archaeology",
+      "title": "Hainan Museum archaeological research overview",
+      "url": "https://www.hainanmuseum.org/hnbwgcms/info/3260",
+      "note": "Provincial museum account explains field survey, excavations and offshore work while locating finds beyond the atlas polygon when necessary."
+    }
+  ],
+  "entities": [
+    {
+      "id": "hainan-700",
+      "card": "data/cards/hainan-700.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "hai-index",
+            "hai-coverage",
+            "hai-imported",
+            "hai-map600",
+            "hai-map700",
+            "hai-map900",
+            "hai-map1000",
+            "hai-map1100",
+            "hai-map1200",
+            "hai-map1279",
+            "hai-map1300",
+            "hai-map1400",
+            "hai-map1492"
+          ],
+          "locator": "Exact live id, Hainan display label, approximate 700 to 1492 lifetime and historical-basemaps provenance. Nine exact consecutive intervals, state kind, nine border files, imported summary, missing card and unreviewed identity, chronology and borders. Current Wikipedia-derived text describes the modern island and province rather than the medieval atlas layer. The exact id is absent before its first audited interval. Exact 26-position island Polygon; tested interior, western and southern Hainan points belong to the target while Xuwen and Beihai belong to Tang. Preserves the same target geometry and mainland Tang seam through the 900 to 1000 interval. Retains the island Polygon with tiny coordinate quantization drift; mainland tested points now belong to Song. Returns to the initial component hash while the mainland seam remains Song. Exact target coverage through the last Song-era century of the atlas layer. Target persists while Xuwen and Beihai switch to Yuan; the island geometry changes only by minute coordinate drift. Preserves the 1279 target component and Yuan mainland seam. Target still covers the island while audited mainland points are claimed by overlapping Yuan and Ming layers. The target disappears; audited island points have no automatic owner while the mainland belongs to Ming.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "hai-map700",
+            "hai-tang-government",
+            "hai-jianzhen",
+            "hai-tang-exile"
+          ],
+          "locator": "Exact 26-position island Polygon; tested interior, western and southern Hainan points belong to the target while Xuwen and Beihai belong to Tang. Hainan University article analyzes Tang county building, Feng-Xian family mediation, loose administration and local resistance. Yazhou government history recounts the monk’s 748 landing and stay; later commemoration is distinguished from contemporary evidence. Academia Sinica research examines journeys, hard labor, unfreedom and reintegration rather than romanticizing southern exile.",
+          "dateScope": {
+            "from": 700,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "hai-map700",
+            "hai-sediment",
+            "hai-tang-government"
+          ],
+          "locator": "Exact 26-position island Polygon; tested interior, western and southern Hainan points belong to the target while Xuwen and Beihai belong to Tang. Peer-reviewed multiproxy core study associates larger Sui to Tang and Song migration with changing erosion and vegetation while stating chronological limitations. Hainan University article analyzes Tang county building, Feng-Xian family mediation, loose administration and local resistance.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "hai-map900",
+            "hai-coverage",
+            "hai-museum-history"
+          ],
+          "locator": "Preserves the same target geometry and mainland Tang seam through the 900 to 1000 interval. Nine exact consecutive intervals, state kind, nine border files, imported summary, missing card and unreviewed identity, chronology and borders. Provincial museum chronology covers Tang roads and migration, Song maritime traffic, Yuan administration and Ming Qiongzhou Prefecture.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "hai-map1000",
+            "hai-song-education",
+            "hai-central-history",
+            "hai-song-trade"
+          ],
+          "locator": "Retains the island Polygon with tiny coordinate quantization drift; mainland tested points now belong to Song. Scholarly article analyzes schools, examinations, ritual institutions and uneven regional reach during Song rule. Research report discusses special institutions, agriculture, incense, migration, contact and differences between interior and coast. Hainan University article examines the island’s role in routes and exchange rather than imagining every resident as an overseas merchant.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1097
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "hai-map1000",
+            "hai-su-site",
+            "hai-su-health",
+            "hai-song-exile"
+          ],
+          "locator": "Retains the island Polygon with tiny coordinate quantization drift; mainland tested points now belong to Song. Provincial government feature localizes Su Shi’s 1097 to 1100 exile and activities in Danzhou. Medical-history article examines the exiled scholar’s diet, rest and self-care; one literate elite man is not a population sample. University thesis studies hardship, cultural interaction and the source bias created by famous banished officials.",
+          "dateScope": {
+            "from": 1097,
+            "to": 1100
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "hai-map1100",
+            "hai-song-education",
+            "hai-song-trade"
+          ],
+          "locator": "Returns to the initial component hash while the mainland seam remains Song. Scholarly article analyzes schools, examinations, ritual institutions and uneven regional reach during Song rule. Hainan University article examines the island’s role in routes and exchange rather than imagining every resident as an overseas merchant.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "hai-map1200",
+            "hai-cotton-history",
+            "hai-cotton-texts",
+            "hai-waterworks"
+          ],
+          "locator": "Exact target coverage through the last Song-era century of the atlas layer. Hainan University article assesses traditions connecting the late Song craftswoman with Li cotton tools and techniques. Xiamen University research uses primary texts on Hainan cotton goods and stresses a cross-cultural, multi-stage technology history. Provincial newspaper synthesis cites local gazetteers for Song waterworks, yam references and a 1489 Hongzhi-period canal.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "hai-map1279",
+            "hai-yuan-government"
+          ],
+          "locator": "Target persists while Xuwen and Beihai switch to Yuan; the island geometry changes only by minute coordinate drift. Hainan University article examines household registration, taxation, corvée, divided jurisdiction and incomplete control.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "hai-map1300",
+            "hai-yuan-government",
+            "hai-hlai-genome",
+            "hai-li-category"
+          ],
+          "locator": "Preserves the 1279 target component and Yuan mainland seam. Hainan University article examines household registration, taxation, corvée, divided jurisdiction and incomplete control. Open peer-reviewed genomic study models complex ancestry and relationships among sampled modern groups; it is not a map of medieval identity. Chinese University of Hong Kong research explains how missionaries, ethnographers and states helped construct the modern Li ethnic category.",
+          "dateScope": {
+            "from": 1300,
+            "to": 1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "hai-map1400",
+            "hai-map1492",
+            "hai-ming-officials",
+            "hai-ming-revolt",
+            "hai-waterworks"
+          ],
+          "locator": "Target still covers the island while audited mainland points are claimed by overlapping Yuan and Ming layers. The target disappears; audited island points have no automatic owner while the mainland belongs to Ming. Academic study links officials with farming, schools and registration while documenting the state-building perspective and its limits. Hainan University journal article studies causes and patterns of Ming-period armed resistance and state suppression. Provincial newspaper synthesis cites local gazetteers for Song waterworks, yam references and a 1489 Hongzhi-period canal.",
+          "dateScope": {
+            "from": 1400,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "hai-index",
+            "hai-coverage",
+            "hai-imported"
+          ],
+          "locator": "Exact index identity, coverage status and imported-summary mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "hai-map700",
+            "hai-map1000",
+            "hai-map1279",
+            "hai-map1400"
+          ],
+          "locator": "Exact geometry hashes, bounds and point-in-polygon audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "hai-map700",
+            "hai-map1000",
+            "hai-map1279",
+            "hai-map1400"
+          ],
+          "locator": "Audited mainland point owners at each political seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "hai-archaeology",
+            "hai-sediment",
+            "hai-maar"
+          ],
+          "locator": "Complementary methods and explicit evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "hai-li-category",
+            "hai-hlai-writing",
+            "hai-hlai-genome",
+            "hai-mtdna",
+            "hai-baiyue-genetics"
+          ],
+          "locator": "Identity, language and genetics kept analytically separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "hai-rivers",
+            "hai-unesco-rainforest"
+          ],
+          "locator": "Topography, drainage and settlement ecology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "hai-climate"
+          ],
+          "locator": "Rainfall gradient and documented weather hazards.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "hai-sediment"
+          ],
+          "locator": "Multiproxy environmental reconstruction and chronological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "hai-maar"
+          ],
+          "locator": "Lake-sediment methods and attribution limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "hai-unesco-rainforest",
+            "hai-hunting"
+          ],
+          "locator": "Forest livelihood evidence with later-category caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "hai-tang-government"
+          ],
+          "locator": "County administration, mediation and limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "hai-map900",
+            "hai-museum-history"
+          ],
+          "locator": "Stable atlas color versus changing tenth-century political history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "hai-central-history"
+          ],
+          "locator": "Song-Yuan interior administration and regional variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "hai-yuan-government"
+          ],
+          "locator": "Yuan fiscal aims, divided authority and incomplete enumeration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "hai-ming-officials",
+            "hai-ming-revolt"
+          ],
+          "locator": "Ming prefecture, programs and coercion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "hai-jianzhen",
+            "hai-museum-maritime"
+          ],
+          "locator": "Dated landing and commemoration caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "hai-tang-exile"
+          ],
+          "locator": "Legal and lived dimensions of penal exile.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "hai-su-site",
+            "hai-song-exile",
+            "hai-su-health"
+          ],
+          "locator": "Localized famous exile and source bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "hai-sediment"
+          ],
+          "locator": "Multiple migration pathways and consequences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "hai-tang-trade",
+            "hai-song-maritime",
+            "hai-coin-science"
+          ],
+          "locator": "Maritime movement distinguished from permanent settlement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "hai-central-history"
+          ],
+          "locator": "Documented crops and dietary inference limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "hai-hunting",
+            "hai-archaeology"
+          ],
+          "locator": "Subsistence variety and dating caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "hai-betel",
+            "hai-tcm"
+          ],
+          "locator": "Areca use, medicine and effectiveness caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "hai-central-history",
+            "hai-song-trade"
+          ],
+          "locator": "Interior products and trade-chain labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "hai-waterworks"
+          ],
+          "locator": "Dated irrigation works and cooperative maintenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "hai-cotton-texts"
+          ],
+          "locator": "Primary-text textile evidence and multi-stage production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "hai-cotton-history",
+            "hai-cotton-texts"
+          ],
+          "locator": "Huang Daopo tradition and historiographic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "hai-unesco-textiles"
+          ],
+          "locator": "Later continuity evidence explicitly labeled.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "hai-song-trade",
+            "hai-song-maritime"
+          ],
+          "locator": "Transit trade and distributed supporting labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "hai-coin-science",
+            "hai-museum-maritime",
+            "hai-archaeology"
+          ],
+          "locator": "Offshore methods and exact-footprint caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "hai-yazhou-city",
+            "hai-gardens"
+          ],
+          "locator": "Urban development and later-building caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "hai-boat-houses"
+          ],
+          "locator": "Modern architectural comparison with explicit date limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "hai-unesco-textiles",
+            "hai-cotton-history"
+          ],
+          "locator": "Textile continuity and medieval wardrobe gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "hai-museum-life"
+          ],
+          "locator": "Range of labor and documentary bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "hai-museum-life",
+            "hai-yazhou-song"
+          ],
+          "locator": "Later performance continuity and explicit reconstruction limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "hai-song-exile"
+          ],
+          "locator": "Household diversity and source-selection bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "hai-cotton-history",
+            "hai-unesco-textiles"
+          ],
+          "locator": "Named craftswoman and less-visible women’s labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "hai-unesco-textiles",
+            "hai-museum-life"
+          ],
+          "locator": "Learning by participation with later comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "hai-song-education"
+          ],
+          "locator": "Institutional education and unequal access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "hai-su-site",
+            "hai-song-education"
+          ],
+          "locator": "Elite teaching alongside non-school expertise.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "hai-climate",
+            "hai-song-exile"
+          ],
+          "locator": "Environmental risk and exile-literature bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "hai-tcm",
+            "hai-song-medicine"
+          ],
+          "locator": "Institutional chronology and access limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "hai-su-health",
+            "hai-npm-su"
+          ],
+          "locator": "Elite self-care case and representativeness limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "hai-rivers"
+          ],
+          "locator": "Water sources and domestic-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "hai-archaeology",
+            "hai-boat-houses"
+          ],
+          "locator": "Explicit sanitation evidence gap and non-projection rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "hai-ming-revolt",
+            "hai-ming-officials"
+          ],
+          "locator": "Conflict causes, coercion and official-category bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "hai-tang-exile",
+            "hai-yuan-government"
+          ],
+          "locator": "Non-battle coercion and distributive questions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "hai-museum-life",
+            "hai-song-maritime",
+            "hai-ming-officials",
+            "hai-climate",
+            "hai-yazhou-song"
+          ],
+          "locator": "Cumulative achievements across social and political boundaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "hai-su-poem",
+            "hai-su-site",
+            "hai-npm-su"
+          ],
+          "locator": "Exact poem text, date, translation and Danzhou localization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "hai-hlai-writing",
+            "hai-map1492",
+            "hai-li-category"
+          ],
+          "locator": "Writing-system chronology and audited editorial endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "hai-map1400",
+            "hai-map1492",
+            "hai-hlai-writing"
+          ],
+          "locator": "Target still covers the island while audited mainland points are claimed by overlapping Yuan and Ming layers. The target disappears; audited island points have no automatic owner while the mainland belongs to Ming. Peer-reviewed study distinguishes Hlai varieties and notes that the current Latin-based writing system was created in 1957.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "hainan-700",
+        "card": "cards/hainan-700.json",
+        "dateBasis": "map_coverage",
+        "summary": "An evidence-aware guide to Hainan’s changing dynastic administration, diverse island communities, environment, exile, farming, textiles, trade, learning, medicine and sanitation from 700 to the atlas layer’s editorial end in 1492.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.097212541923398,
+            110.88650886508867,
+            20.01752194692544
+          ]
+        },
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228254034,
+            110.88650886508867,
+            20.01768804172859
+          ]
+        },
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228254034,
+            110.88650886508867,
+            20.01768804172859
+          ]
+        },
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228126307,
+            110.88650886508867,
+            20.017688041597495
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228126307,
+            110.88650886508867,
+            20.017688041597495
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.09721087202159,
+            110.88650886508867,
+            20.01752023319625
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228254034,
+            110.88650886508867,
+            20.01768804172859
+          ]
+        },
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228254034,
+            110.88650886508867,
+            20.01768804172859
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "hainan-700",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            108.5608856088561,
+            18.096048228254034,
+            110.88650886508867,
+            20.01768804172859
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
