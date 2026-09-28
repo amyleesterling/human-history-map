@@ -1,0 +1,969 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release137-jomon research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "jo-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, name, kind, approximate dates and historical-basemaps provenance."
+    },
+    {
+      "id": "jo-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Observed intervals, imported summary status, border count and initially missing card and review."
+    },
+    {
+      "id": "jo-map4000",
+      "title": "Human History Map 4000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc4000.json",
+      "note": "Decoded target and neighboring geometries, exact bounds, hashes and point-in-polygon tests at 4000 BCE."
+    },
+    {
+      "id": "jo-map3000",
+      "title": "Human History Map 3000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc3000.json",
+      "note": "Decoded target and neighboring geometries, hashes and point-in-polygon tests at 3000 BCE."
+    },
+    {
+      "id": "jo-map2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Decoded target and neighboring geometries, hashes and point-in-polygon tests at 2000 BCE."
+    },
+    {
+      "id": "jo-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "Decoded disappearance of the exact target and appearance of the broader late-jomon-culture layer."
+    },
+    {
+      "id": "jo-map400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Decoded atlas split between western Yayoi and eastern late-jomon-culture layers near the archaeological transition."
+    },
+    {
+      "id": "jo-unesco-list",
+      "title": "Jomon Prehistoric Sites in Northern Japan",
+      "url": "https://whc.unesco.org/en/list/1632",
+      "note": "UNESCO synthesis of sedentary hunter-fisher-gatherer lifeways, varied environments, settlements and ritual places from about 13000 BCE to 400 BCE."
+    },
+    {
+      "id": "jo-culture",
+      "title": "What is Jomon Culture?",
+      "url": "https://jomon-japan.jp/en/learn/jomon-culture",
+      "note": "Official heritage overview of the long chronology, six broad phases, pottery, villages, graves and regional variation."
+    },
+    {
+      "id": "jo-sites-overview",
+      "title": "Jomon Prehistoric Sites in Northern Japan overview",
+      "url": "https://jomon-japan.jp/en/learn/jomon-prehistoric-sites-in-northern-japan",
+      "note": "Official overview connecting sites, landforms, resources and changing lifeways across approximately 15000 to 2400 years ago."
+    },
+    {
+      "id": "jo-icomos",
+      "title": "ICOMOS evaluation of Jomon Prehistoric Sites",
+      "url": "https://whc.unesco.org/document/189264",
+      "note": "Expert evaluation of the seventeen-site series, sedentism, ritual practice, integrity and evidentiary limits."
+    },
+    {
+      "id": "jo-sedentarization",
+      "title": "Research on the process of sedentarization in Jomon society",
+      "url": "https://archive.rekihaku.ac.jp/english/education_research/research/list/joint/2007/kobayashi.html",
+      "note": "National Museum of Japanese History research on chronology, settlement analysis and the difficulty of counting contemporaneous houses."
+    },
+    {
+      "id": "jo-beginning",
+      "title": "When did the Jomon period begin?",
+      "url": "https://archive.rekihaku.ac.jp/english/exhibitions/project/old/091014/index.html",
+      "note": "National Museum exhibition on early pottery dating, paste, food residues, regional traditions and scientific methods."
+    },
+    {
+      "id": "jo-wetlands",
+      "title": "The World of Jomon Wetlands",
+      "url": "https://archive.rekihaku.ac.jp/english/exhibitions/project/old/050614/index.html",
+      "note": "National Museum exhibition on exceptional preservation of textiles, baskets, wooden objects, bows, canoes, bark and lacquer."
+    },
+    {
+      "id": "jo-opening",
+      "title": "Opening Doors to the Jomon Period",
+      "url": "https://archive.rekihaku.ac.jp/english/exhibitions/project/old/010320/index.html",
+      "note": "National Museum exhibition evidence for bone tools, salt making, jade, lacquer and ornament production."
+    },
+    {
+      "id": "jo-sannai-pdf",
+      "title": "Sannai-Maruyama Site archaeological guide",
+      "url": "https://jomon-japan.jp/en/wp-content/uploads/2021/02/F006b000002b.pdf",
+      "note": "Official site dossier for 3900 to 2200 BCE houses, graves, storage, craft production and long-distance materials."
+    },
+    {
+      "id": "jo-sannai-dwellings",
+      "title": "Sannai-Maruyama remains and dwellings",
+      "url": "https://sannaimaruyama.pref.aomori.jp/english/about/remains-dwellings/",
+      "note": "Aomori site authority description of ordinary and large pit dwellings and reconstructed building evidence."
+    },
+    {
+      "id": "jo-sites-summary",
+      "title": "Summary of each Jomon archaeological site",
+      "url": "https://jomon-japan.jp/en/visit/summary-of-each-archaeological-site",
+      "note": "Official comparative catalogue of settlement layouts, burials, food remains, tools, ritual structures and site-specific dates."
+    },
+    {
+      "id": "jo-kitakogane",
+      "title": "Kitakogane Site",
+      "url": "https://jomon-japan.jp/en/learn/jomon-sites/kitakogane",
+      "note": "Official site account of a coastal settlement, shell midden, food remains, burials, spring and deposited grinding stones."
+    },
+    {
+      "id": "jo-oyu",
+      "title": "Oyu Stone Circles",
+      "url": "https://jomon-japan.jp/en/learn/jomon-sites/oyu",
+      "note": "Official site account of two large stone circles, graves, buildings, storage and solstitial alignment around 2000 to 1500 BCE."
+    },
+    {
+      "id": "jo-korekawa",
+      "title": "Korekawa Site",
+      "url": "https://jomon-japan.jp/en/learn/jomon-sites/korekawa",
+      "note": "Official site evidence for later lacquered wood, food remains and water-soaking treatment of horse chestnuts."
+    },
+    {
+      "id": "jo-footprints",
+      "title": "The Prayers and Hearts of the Jomon People",
+      "url": "https://hokkaido-digital-museum.jp/en/hokkaido/jomon/j-03/",
+      "note": "Hokkaido Digital Museum discussion of clay tablets bearing children’s footprints and cautious ritual interpretation."
+    },
+    {
+      "id": "jo-pottery-residue",
+      "title": "Earliest evidence for the use of pottery",
+      "url": "https://www.nature.com/articles/nature12109",
+      "note": "Peer-reviewed residue study detecting aquatic processing in very early Japanese pottery and explaining chemical evidence."
+    },
+    {
+      "id": "jo-pottery-continuity",
+      "title": "Long-term use of pottery among hunter-gatherers",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4839459/",
+      "note": "Peer-reviewed lipid analysis of Torihama pottery alongside plant, animal and tool evidence, with clear residue limitations."
+    },
+    {
+      "id": "jo-pottery-environment",
+      "title": "Organic residue analysis and environmental change in Jomon pottery",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6077741/",
+      "note": "Peer-reviewed biomarker study showing how vessel residues track foods while leaving many plant uses archaeologically quiet."
+    },
+    {
+      "id": "jo-plant-management",
+      "title": "Plant management and environmental interaction in Jomon Japan",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440313003877",
+      "note": "Peer-reviewed archaeological synthesis of chestnut and lacquer tree management without equating it with rice-field farming."
+    },
+    {
+      "id": "jo-plant-domestication",
+      "title": "Jomon plant domestication and cultivation",
+      "url": "https://www.jstage.jst.go.jp/article/jaqua/57/4/57_109/_article/-char/en",
+      "note": "Peer-reviewed review of changing seed size in soybean, adzuki bean and barnyard grass and the cultivation debate."
+    },
+    {
+      "id": "jo-plant-caution",
+      "title": "Agriculture and plant use in Jomon Japan",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00438240600708295",
+      "note": "Peer-reviewed warning that agricultural claims require direct plant evidence rather than attractive but unsupported stories."
+    },
+    {
+      "id": "jo-lacquer-paper",
+      "title": "Early Jomon lacquer technology",
+      "url": "https://meiji.repo.nii.ac.jp/record/4448/files/sundaishigaku_170_55.pdf",
+      "note": "Academic analysis of layered lacquer, pigments, additives and skilled production in Early Jomon contexts."
+    },
+    {
+      "id": "jo-lacquer-gov",
+      "title": "The Beauty of Japanese Lacquerware",
+      "url": "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202205/202205_01_en.html",
+      "note": "Japanese government cultural overview of prehistoric lacquer coating, adhesion, durability, water resistance and handling risks."
+    },
+    {
+      "id": "jo-obsidian",
+      "title": "Middle Jomon obsidian exchange networks in Kanto",
+      "url": "https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2022.1015870/full",
+      "note": "Peer-reviewed geochemical sourcing of Kozushima obsidian and changing network connectivity through Middle and Late Jomon."
+    },
+    {
+      "id": "jo-jade",
+      "title": "Origin of Jomon jade artifacts",
+      "url": "https://www.jstage.jst.go.jp/article/jmps/112/5/112_170521/_article",
+      "note": "Mineralogical study linking jade ornaments and tools to the Itoigawa source region in central Honshu."
+    },
+    {
+      "id": "jo-met-hook",
+      "title": "Jomon bone fishhook",
+      "url": "https://www.metmuseum.org/art/collection/search/62318",
+      "note": "Museum object record contextualizing bone fishhooks, needles, harpoons and fishing within shell-midden lifeways."
+    },
+    {
+      "id": "jo-tnm-tools",
+      "title": "Tools for hunting, fishing, and gathering",
+      "url": "https://www.tnm.jp/modules/r_exhibition/index.php?controller=item&id=7438&lang=en",
+      "note": "Tokyo National Museum records for bows, arrows, hooks, harpoons and grinding tools used in varied subsistence work."
+    },
+    {
+      "id": "jo-caries",
+      "title": "Dental caries in Jomon people",
+      "url": "https://www.jstage.jst.go.jp/article/ase1993/103/1/103_1_23/_article/-char/en",
+      "note": "Peer-reviewed multi-site study of cavities and major regional and chronological differences in diet-related dental disease."
+    },
+    {
+      "id": "jo-periodontal",
+      "title": "Periodontal disease in Jomon skeletal remains",
+      "url": "https://www.jstage.jst.go.jp/article/ase/127/1/127_190113/_html/-char/en",
+      "note": "Peer-reviewed skeletal study of periodontal disease, age patterns and regional limits in the available sample."
+    },
+    {
+      "id": "jo-burial-dna",
+      "title": "Ancient DNA analysis of a Jomon double burial",
+      "url": "https://www.jstage.jst.go.jp/article/ase/130/1/130_220129/_html/-char/en",
+      "note": "Peer-reviewed finding that one closely placed adult and child were not a mother-child pair, cautioning against visual kinship assumptions."
+    },
+    {
+      "id": "jo-inequality",
+      "title": "Unearthing Fluctuating Wealth Inequality",
+      "url": "https://doi.org/10.1017/9781009406901",
+      "note": "Cambridge archaeological study of 1150 dwellings finding low measured Late Jomon floor-area inequality while stressing proxy limits."
+    },
+    {
+      "id": "jo-habu",
+      "title": "Ancient Jomon of Japan, chapter one",
+      "url": "https://www.societyforasianart.org/sites/default/files/Habu%20Ancient%20Jomon%20of%20Japan%202004%20Chapter%201.pdf",
+      "note": "Academic synthesis of subsistence-settlement systems, social organization, terminology and changing archaeological interpretations."
+    },
+    {
+      "id": "jo-no-writing",
+      "title": "DNA Tells the Story of the Jomon People",
+      "url": "https://umdb.um.u-tokyo.ac.jp/DPastExh/Publish_db/2000dm2k/english/02/02-02.html",
+      "note": "University of Tokyo museum explanation that no written Jomon records survive and that bones and DNA answer different questions."
+    },
+    {
+      "id": "jo-modern-name",
+      "title": "The origin of Jomon pottery as an archaeological name",
+      "url": "https://www.um.u-tokyo.ac.jp/UMUTopenlab/en/library/f_1.html",
+      "note": "University museum history of Morse, cord-marked pottery and the modern scholarly label rather than an ancient self-name."
+    },
+    {
+      "id": "jo-toilets",
+      "title": "Paleoparasitology of historical toilets and mummies in South Korea",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/92926B590A5DF11B0338FC01C509FB0C/S0031182026101760a.pdf/paleoparasitology_of_historical_toilets_and_mummies_in_south_korea_trends_and_perspectives.pdf",
+      "note": "Peer-reviewed 2026 comparison noting uncertain Jomon toilet form, coprolites in shell middens and current parasite evidence."
+    },
+    {
+      "id": "jo-health-exhibit",
+      "title": "Human Life and Death as Told by Ancient Bones",
+      "url": "https://www.um.u-tokyo.ac.jp/exhibition/2023life_and_death_en.html",
+      "note": "University of Tokyo museum exhibition on Jomon activity, injuries, teeth, burial and limits of skeletal interpretation."
+    },
+    {
+      "id": "jo-violence",
+      "title": "Violence in the prehistoric period of Japan",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4843228/",
+      "note": "Peer-reviewed archipelago-wide skeletal study finding low and spatially restricted violent mortality while avoiding a claim of zero conflict."
+    },
+    {
+      "id": "jo-dog-burials",
+      "title": "Japan’s oldest Jomon dog burials",
+      "url": "https://dogburial.flet.keio.ac.jp/en/",
+      "note": "Keio University project documenting radiocarbon dating, recovery and analysis of deliberately buried Jomon dogs."
+    },
+    {
+      "id": "jo-dog-hunting",
+      "title": "Hunting dogs as environmental adaptations in Jomon Japan",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/hunting-dogs-as-environmental-adaptations-in-jomon-japan/F1469BF53172B3C30B7E9B5F9B67C701",
+      "note": "Peer-reviewed interpretation of later dog burials and canine help tracking wounded game in forest environments."
+    },
+    {
+      "id": "jo-demography",
+      "title": "Regional divergences in Jomon population dynamics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4851332/",
+      "note": "Peer-reviewed radiocarbon study showing eastern regional booms and declines rather than one archipelago-wide demographic curve."
+    },
+    {
+      "id": "jo-transition",
+      "title": "Ancient genomics and the Jomon-Yayoi transition",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8133439/",
+      "note": "Peer-reviewed genomic and chronological review of migration, mixture, rice agriculture and disputed transition dates."
+    },
+    {
+      "id": "jo-transition-time",
+      "title": "The transition from Jomon to Yayoi as a regional process",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10427481/",
+      "note": "Peer-reviewed account of a time-transgressive transition involving farmers and hunter-gatherers rather than a single replacement event."
+    },
+    {
+      "id": "jo-rice-spread",
+      "title": "The spatiotemporal spread of rice farming in prehistoric Japan",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0277379120304698",
+      "note": "Peer-reviewed chronology placing early wet rice in northern Kyushu and tracing a discontinuous spread eastward."
+    },
+    {
+      "id": "jo-food-continuity",
+      "title": "Culinary continuity across the Jomon-Yayoi transition",
+      "url": "https://link.springer.com/article/10.1007/s12520-024-01992-9",
+      "note": "Peer-reviewed pottery-residue evidence for regional persistence and change in cooking as crops and farming spread."
+    },
+    {
+      "id": "jo-north-pacific",
+      "title": "Human paleodemography and paleoecology of the North Pacific Rim",
+      "url": "https://www.cambridge.org/core/journals/quaternary-research/article/human-paleodemography-and-paleoecology-of-the-north-pacific-rim-from-the-mid-to-late-holocene/CEBC030A5EC4FCBC6DD06710D9371847",
+      "note": "Peer-reviewed sequence from Jomon through Epi-Jomon, Satsumon and Okhotsk traditions toward historically recognizable Ainu communities."
+    },
+    {
+      "id": "jo-ryukyu-genomics",
+      "title": "Genomic insights into ancestry in the Southern Ryukyu Islands",
+      "url": "https://www.cambridge.org/core/journals/evolutionary-human-sciences/article/genomic-insights-into-a-tripartite-ancestry-in-the-southern-ryukyu-islands/FF76BBFAD3109519701E7A0FB30A7C12",
+      "note": "Peer-reviewed evidence for Jomon-related ancestry alongside distinct northern and southern Ryukyuan cultural trajectories and later mixture."
+    },
+    {
+      "id": "jo-eastasia-genomics",
+      "title": "Reconstructing the Human Population History of East Asia",
+      "url": "https://www.cambridge.org/core/elements/reconstructing-the-human-population-history-of-east-asia-through-ancient-genomics/0524D629660B5E43FC7094C043D54C6A",
+      "note": "Cambridge synthesis of ancient genomic links and later admixture among archipelago populations, Ainu and Ryukyuans."
+    }
+  ],
+  "entities": [
+    {
+      "id": "jomon",
+      "card": "data/cards/jomon.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "jo-unesco-list",
+            "jo-map4000",
+            "jo-map1500"
+          ],
+          "locator": "UNESCO synthesis of sedentary hunter-fisher-gatherer lifeways, varied environments, settlements and ritual places from about 13000 BCE to 400 BCE. Decoded target and neighboring geometries, exact bounds, hashes and point-in-polygon tests at 4000 BCE. Decoded disappearance of the exact target and appearance of the broader late-jomon-culture layer.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "jo-culture"
+          ],
+          "locator": "Official heritage overview of the long chronology, six broad phases, pottery, villages, graves and regional variation.",
+          "dateScope": {
+            "from": -4000,
+            "to": -3500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "jo-sannai-pdf",
+            "jo-sedentarization"
+          ],
+          "locator": "Official site dossier for 3900 to 2200 BCE houses, graves, storage, craft production and long-distance materials. National Museum of Japanese History research on chronology, settlement analysis and the difficulty of counting contemporaneous houses.",
+          "dateScope": {
+            "from": -3500,
+            "to": -3000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "jo-obsidian"
+          ],
+          "locator": "Peer-reviewed geochemical sourcing of Kozushima obsidian and changing network connectivity through Middle and Late Jomon.",
+          "dateScope": {
+            "from": -3000,
+            "to": -2500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "jo-demography"
+          ],
+          "locator": "Peer-reviewed radiocarbon study showing eastern regional booms and declines rather than one archipelago-wide demographic curve.",
+          "dateScope": {
+            "from": -2500,
+            "to": -2200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "jo-habu"
+          ],
+          "locator": "Academic synthesis of subsistence-settlement systems, social organization, terminology and changing archaeological interpretations.",
+          "dateScope": {
+            "from": -2200,
+            "to": -2000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "jo-oyu"
+          ],
+          "locator": "Official site account of two large stone circles, graves, buildings, storage and solstitial alignment around 2000 to 1500 BCE.",
+          "dateScope": {
+            "from": -2000,
+            "to": -1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "jo-index",
+            "jo-coverage"
+          ],
+          "locator": "Exact index and initial coverage record; official period framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "jo-map4000",
+            "jo-map3000",
+            "jo-map2000"
+          ],
+          "locator": "Decoded geometry structures, position counts and raw-coordinate SHA-256 values.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "jo-map4000",
+            "jo-sites-summary"
+          ],
+          "locator": "Point tests against the exact geometry compared with the official site catalogue.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "jo-map1500",
+            "jo-map400"
+          ],
+          "locator": "Decoded target absence and replacement-layer point owners at the two seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "jo-no-writing",
+            "jo-modern-name"
+          ],
+          "locator": "University museum statements on absent records and the modern origin of the name.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "jo-sites-overview"
+          ],
+          "locator": "Official landscape and resource comparison across the serial heritage sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "jo-sedentarization"
+          ],
+          "locator": "Settlement chronology problems and simultaneous-house caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "jo-sannai-dwellings"
+          ],
+          "locator": "Official dwelling evidence and the distinction between reconstruction and political interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "jo-kitakogane"
+          ],
+          "locator": "Official site description of the midden, spring, deposited tools and burials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "jo-sites-summary"
+          ],
+          "locator": "Official comparative settlement layouts and accumulated structure counts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "jo-pottery-continuity"
+          ],
+          "locator": "Torihama lipids, plant remains, animal evidence and methodological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "jo-pottery-residue"
+          ],
+          "locator": "Aquatic lipid biomarkers and the significance of pottery for cooking.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "jo-plant-management"
+          ],
+          "locator": "Archaeobotanical argument for sophisticated tree management.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "jo-plant-domestication",
+            "jo-plant-caution"
+          ],
+          "locator": "Seed-size evidence paired with published caution about agricultural claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "jo-kitakogane"
+          ],
+          "locator": "Site-specific foods and dental observations, with explicit scope limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "jo-beginning"
+          ],
+          "locator": "Museum evidence for dating, clay paste, regional traditions and analysis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "jo-pottery-environment"
+          ],
+          "locator": "Biomarker method and limitations in interpreting vessel contents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "jo-lacquer-paper",
+            "jo-lacquer-gov"
+          ],
+          "locator": "Layered prehistoric lacquer analysis and material properties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "jo-wetlands"
+          ],
+          "locator": "Wetland-preserved organic artifacts and explicit clothing evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "jo-tnm-tools",
+            "jo-met-hook"
+          ],
+          "locator": "Museum tool records paired with a limit on unsupported gender attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "jo-obsidian"
+          ],
+          "locator": "Geochemical sourcing and network interpretation of Kozushima obsidian.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "jo-jade"
+          ],
+          "locator": "Mineralogical source identification and artifact classes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "jo-sannai-pdf"
+          ],
+          "locator": "Official dossier on nonlocal materials, distances and production evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "jo-wetlands"
+          ],
+          "locator": "Preserved dugout-canoe evidence connected cautiously to travel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "jo-habu"
+          ],
+          "locator": "Academic framing of complex hunter-gatherer settlement and social change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "jo-sannai-pdf"
+          ],
+          "locator": "Official dossier on adult pit graves and child jar burials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "jo-oyu"
+          ],
+          "locator": "Official dimensions, features and cautious solstitial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "jo-icomos"
+          ],
+          "locator": "Expert heritage evaluation of ritual objects and places.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "jo-dog-burials",
+            "jo-dog-hunting"
+          ],
+          "locator": "Dated intentional dog burials and peer-reviewed hunting interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "jo-burial-dna"
+          ],
+          "locator": "Ancient DNA result and its kinship limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "jo-burial-dna",
+            "jo-sedentarization"
+          ],
+          "locator": "Kinship and household inference cautions from DNA and settlement study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "jo-footprints"
+          ],
+          "locator": "Museum object description and qualified interpretation of footprint tablets.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "jo-inequality"
+          ],
+          "locator": "Cambridge floor-area analysis and proxy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "jo-opening"
+          ],
+          "locator": "Museum evidence for skilled crafts and the explicit absence of textual schooling evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "jo-footprints"
+          ],
+          "locator": "Child-presence evidence paired with an interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "jo-sannai-pdf"
+          ],
+          "locator": "Official measurements and reconstructed pit-house evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "jo-wetlands"
+          ],
+          "locator": "Organic preservation record and clothing-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "jo-tnm-tools"
+          ],
+          "locator": "Functional range of museum-recorded subsistence tools.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "jo-pottery-environment"
+          ],
+          "locator": "Residue preservation bias and vessel-use evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "jo-dog-hunting"
+          ],
+          "locator": "Hunting role and burial-based social interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "jo-caries"
+          ],
+          "locator": "Multi-site caries pattern and diet interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "jo-periodontal",
+            "jo-health-exhibit"
+          ],
+          "locator": "Dental-disease study plus museum synthesis of activity and injury evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "jo-health-exhibit",
+            "jo-no-writing"
+          ],
+          "locator": "Skeletal survival evidence and absence of contemporary medical texts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "jo-kitakogane",
+            "jo-korekawa"
+          ],
+          "locator": "Official spring and nut-processing evidence from two sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "jo-toilets"
+          ],
+          "locator": "Current paleoparasitology review on toilet uncertainty and midden coprolites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "jo-violence"
+          ],
+          "locator": "Archipelago-wide violence frequencies and explicit institutional evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "jo-demography"
+          ],
+          "locator": "Regional radiocarbon trends and demographic-proxy caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "jo-map1500"
+          ],
+          "locator": "Exact layer seam and absence of a historical ending claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "jo-rice-spread",
+            "jo-transition-time",
+            "jo-food-continuity"
+          ],
+          "locator": "Rice chronology, time-transgressive transition and culinary persistence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "jo-north-pacific",
+            "jo-ryukyu-genomics",
+            "jo-eastasia-genomics"
+          ],
+          "locator": "Peer-reviewed northern cultural sequence, Ryukyuan regional history and genomic synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "jo-map1500",
+            "jo-transition"
+          ],
+          "locator": "Decoded disappearance of the exact target and appearance of the broader late-jomon-culture layer. Peer-reviewed genomic and chronological review of migration, mixture, rice agriculture and disputed transition dates.",
+          "dateScope": {
+            "year": -1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "jomon",
+        "card": "cards/jomon.json",
+        "dateBasis": "map_coverage",
+        "summary": "A regionally varied archaeological culture of settlement, pottery, fishing, hunting, plant management, craft and exchange. The 1500 BCE atlas endpoint is a relabeled seam, not Jōmon extinction.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc2000.json",
+          "properties": {
+            "civ": "jomon",
+            "from": -2000,
+            "to": -1500,
+            "precision": 1
+          },
+          "bounds": [
+            129.3416861993846,
+            30.88808649737635,
+            139.53997034322296,
+            37.432721660677444
+          ]
+        },
+        {
+          "file": "world-bc3000.json",
+          "properties": {
+            "civ": "jomon",
+            "from": -3000,
+            "to": -2000,
+            "precision": 1
+          },
+          "bounds": [
+            129.34391448190416,
+            30.88754587852037,
+            139.53831993639568,
+            37.433050698632414
+          ]
+        },
+        {
+          "file": "world-bc4000.json",
+          "properties": {
+            "civ": "jomon",
+            "from": -4000,
+            "to": -3000,
+            "precision": 1
+          },
+          "bounds": [
+            129.34391448190416,
+            30.887493027658394,
+            139.53831993639568,
+            37.4325910406655
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

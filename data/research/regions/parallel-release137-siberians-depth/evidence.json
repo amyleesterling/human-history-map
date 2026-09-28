@@ -1,0 +1,877 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release137-siberians research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "sb-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, label, circa 1279 to 1530 lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "sb-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported modern Russian-ethnographic summary, audited as anachronistic for the medieval umbrella feature."
+    },
+    {
+      "id": "sb-map1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Decoded predecessor labels and point owners before the target feature."
+    },
+    {
+      "id": "sb-map1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded immediate predecessor seam, including generic forest, Tungusic, maritime and Mongol labels."
+    },
+    {
+      "id": "sb-map1279",
+      "title": "Human History Map 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded first exact siberians feature, topology, bounds, coordinate hash and point-owner tests."
+    },
+    {
+      "id": "sb-map1300",
+      "title": "Human History Map 1300 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Decoded second interval and verified exact geometry identity with 1279."
+    },
+    {
+      "id": "sb-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded third interval, coordinate change and White Horde and Yuan seams."
+    },
+    {
+      "id": "sb-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded western contraction, topology and Sibir, Oirat and Chagatai point owners."
+    },
+    {
+      "id": "sb-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded single-polygon contraction, changed western bound and premature Moscow seam."
+    },
+    {
+      "id": "sb-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded disappearance and fragmented successor labels, blank space and point-owner tests."
+    },
+    {
+      "id": "sb-forsyth",
+      "title": "James Forsyth, A History of the Peoples of Siberia, Cambridge University Press excerpt",
+      "url": "https://assets.cambridge.org/97805214/77710/excerpt/9780521477710_excerpt.pdf",
+      "note": "Scholarly overview of Siberia before Russian expansion, environmental variety, many Indigenous languages and the danger of treating the region as one people."
+    },
+    {
+      "id": "sb-vajda",
+      "title": "Edward Vajda, Typological Accommodation in Central Siberia, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/language-of-huntergatherers/typological-accommodation-in-central-siberia/A36E3764FE73FD51DFEAAC8CF336EF76",
+      "note": "Language families, multilingual contact, and distinct Ugric, Samoyedic, Yeniseian, Turkic, Mongolic and Tungusic communities."
+    },
+    {
+      "id": "sb-palaeo-languages",
+      "title": "W. K. Matthews, Palaeoasiatic Languages, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/languages-of-the-ussr/palaeoasiatig-languages/9FD1BEAECC82CF9FD39F4D60A21093A6",
+      "note": "Distinct Chukotko-Kamchatkan, Yukaghir, Nivkh and Ket languages; used only as a linguistic classification, not a medieval population census."
+    },
+    {
+      "id": "sb-allsen",
+      "title": "Thomas T. Allsen, The Mongols and Siberia, Cambridge History of the Mongol Empire",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongols-and-siberia/244310CE1767F79C68552AD030AE9B68",
+      "note": "Mongol political, administrative and economic relations with forest peoples, northern products in Eurasian trade and resulting transformations."
+    },
+    {
+      "id": "sb-frank",
+      "title": "Allen J. Frank, The western steppe: Volga-Ural region, Siberia and the Crimea, Cambridge History of Inner Asia",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-inner-asia/western-steppe-volgaural-region-siberia-and-the-crimea/DB26B77ED4D3AB3405F62FE800BC1F96",
+      "note": "Golden Horde fragmentation, regional yurts and formation of fifteenth-century successor states including the Siberian Khanate."
+    },
+    {
+      "id": "sb-hatto",
+      "title": "Arthur Hatto, The World of the Khanty Epic Hero-Princes, Cambridge University Press excerpt",
+      "url": "https://assets.cambridge.org/97811071/03214/excerpt/9781107103214_excerpt.pdf",
+      "note": "Medieval Russian descriptions of multiple Yugra principalities, princes, retinues, social ranks and fortified river settlements; later-recorded epic evidence is separately labeled."
+    },
+    {
+      "id": "sb-martin",
+      "title": "Janet Martin, Treasure of the Land of Darkness, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/treasure-of-the-land-of-darkness/introduction/DF99C341B5B774AC89A8876CE175E3EC",
+      "note": "Medieval Eurasian demand for luxury fur and the special importance of northeastern Europe and northwestern Siberia."
+    },
+    {
+      "id": "sb-biran",
+      "title": "Michal Biran, Forced Migrations and Slavery in the Mongol Empire, Cambridge World History of Slavery",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-world-history-of-slavery/forced-migrations-and-slavery-in-the-mongol-empire-12061368/C183F34FAECBB6F24F029256F6DBE235",
+      "note": "War captives, forced movement, multiple dependency statuses, slave markets and possibilities of manumission under Mongol rule."
+    },
+    {
+      "id": "sb-arctic",
+      "title": "Smithsonian National Museum of Natural History, Arctic Lands and Peoples",
+      "url": "https://naturalhistory.si.edu/education/teaching-resources/anthropology-and-social-studies/arctic-lands-and-peoples",
+      "note": "Distinct Arctic peoples, tundra, forest and coastal ecologies, and long-term hunting and fishing adaptations."
+    },
+    {
+      "id": "sb-crossroads",
+      "title": "William Fitzhugh and Aron Crowell, Crossroads of Continents: Cultures of Siberia and Alaska, Smithsonian Institution Press",
+      "url": "https://repository.si.edu/server/api/core/bitstreams/f979dfba-92de-40e8-b6ab-6dfe34206e5a/content",
+      "note": "Museum synthesis of northeastern Siberian dwellings, clothing, tools, domestic life and oral traditions; used as later comparative evidence, never silently projected backward."
+    },
+    {
+      "id": "sb-transform",
+      "title": "Smithsonian Arctic Studies Center, Culture Contact and Transformations",
+      "url": "https://global.si.edu/projects/arctic-studies-center-culture-contact-and-transformations",
+      "note": "Long-term exchange and transformation in Arctic material technology; museum evidence used with chronology warnings."
+    },
+    {
+      "id": "sb-ustpolui",
+      "title": "Natalia Fedorova and colleagues, Reindeer Imagery in the Making at Ust-Polui in Arctic Siberia, Cambridge Archaeological Journal",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/reindeer-imagery-in-the-making-at-ustpolui-in-arctic-siberia/28E6FBF99E54885C3C8C0636DDC52EC9/share/0125dd2b39651c0f62f6df258e295cd52d42bd38",
+      "note": "Archaeological argument for transport reindeer and later large-scale pastoralism in northwestern Siberia, with regional and chronological limits."
+    },
+    {
+      "id": "sb-zeleny-infant",
+      "title": "Slepchenko and colleagues, Opisthorchiasis in infant remains from medieval Zeleniy Yar, Memorias do Instituto Oswaldo Cruz",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4708016/",
+      "note": "Twelfth- to thirteenth-century lower Ob infant burial, fur, hide, birchbark and parasite evidence for minimally cooked fish; direct but just before the atlas interval."
+    },
+    {
+      "id": "sb-zeleny-children",
+      "title": "Alexander Gusev, Rich Burials of Children at Zeleny Yar, Archaeology, Ethnology and Anthropology of Eurasia",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/20-48-3/annot-06/",
+      "note": "Medieval lower Ob child burials with differentiated goods and cautious discussion of high status."
+    },
+    {
+      "id": "sb-nadym-parasite",
+      "title": "Seo and colleagues, Archaeoparasitological Analysis of Nadym Gorodok, Journal of Parasitology Research",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6960246/",
+      "note": "Fourteenth- and fifteenth-century cultural-layer parasite evidence bearing on diet, movement and health, not proof of a latrine or sewer."
+    },
+    {
+      "id": "sb-nadym-timber",
+      "title": "Shiyatov and colleagues, Construction history and timber use of Nadymskiy Gorodok, Journal of Archaeological Science",
+      "url": "https://elib.sfu-kras.ru/bitstream/handle/2311/142944/construction_history_and_timber_use_of_the_medieval_settlement_nadymskiy_gorodok_in_1.pdf?sequence=1",
+      "note": "Dendrochronology and construction evidence for a long-lived wooden subarctic settlement; building phases do not define one ethnicity."
+    },
+    {
+      "id": "sb-parisento",
+      "title": "Gusev, Plekhanov and Podosenova, A Medieval Burial at Lake Parisento, Archaeology, Ethnology and Anthropology of Eurasia",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/19-47-2/annot-08/",
+      "note": "Child burial on the Gydan Peninsula with imported metal goods and an explicit statement that Arctic western Siberian archaeology remains sparse."
+    },
+    {
+      "id": "sb-atlasovo",
+      "title": "Bagashev and colleagues, A Medieval Yakut Burial Near Lake Atlasovskoye, Archaeology, Ethnology and Anthropology of Eurasia",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/44-2/annot-13/",
+      "note": "Radiocarbon-dated fourteenth- to fifteenth-century Kulun-Atakh burial, birchbark, trauma, heavy physical stress and alternative warrior or enslaved-status interpretations."
+    },
+    {
+      "id": "sb-yakut-burials",
+      "title": "Crubezy and colleagues, Early Yakut Burials of the 14th-17th Centuries, Archaeology, Ethnology and Anthropology of Eurasia",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10611959.2016.1317534",
+      "note": "Early Sakha burials and livestock-herding evidence in pre-Cossack Yakutia, used as a localized Lena case study."
+    },
+    {
+      "id": "sb-burial-bias",
+      "title": "Keyser and colleagues, The genetic legacy of legendary and historical Siberian chieftains, European Journal of Human Genetics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7567834/",
+      "note": "Fifteenth- to nineteenth-century Yakut burial dataset and explicit warning that rare frozen-ground burials are socially and chronologically unrepresentative."
+    },
+    {
+      "id": "sb-franklin-writing",
+      "title": "Simon Franklin, The changing environment, Writing, Society and Culture in Early Rus, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/writing-society-and-culture-in-early-rus-c9501300/changing-environment/C22881EA617C10AE9D1623179BE80AD9",
+      "note": "Absence of plausible indigenous scripts in adjacent northern forest regions and distinction between script-bearing imported objects and local literacy."
+    },
+    {
+      "id": "sb-khanty-epic",
+      "title": "Arthur Hatto, The World of the Khanty Epic Hero-Princes, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/series/university-of-cambridge-oriental-publications/292F0D618E57B4D41F5E51194623D8E0",
+      "note": "Eighteen Khanty heroic epics collected much later and studied as oral tradition; useful for continuity but not verbatim medieval transcription."
+    },
+    {
+      "id": "sb-angara-oral",
+      "title": "Robert G. Bednarik and colleagues, Angara Style Rock Art, Cambridge Archaeological Journal",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/angara-style-rock-art-the-evolution-of-a-regional-emblematic-and-syncretic-style/A363ACC3BCAB89A78A1223CC68DE7903",
+      "note": "Ket and Evenki oral histories, collective memory and material culture, with scholarly cautions about linking later traditions to archaeological populations."
+    },
+    {
+      "id": "sb-yakutia-nature",
+      "title": "Sikora and colleagues, An ancient DNA perspective on Russian conquest of Yakutia, Nature",
+      "url": "https://www.nature.com/articles/s41586-025-09856-5",
+      "note": "Archaeological and biological evidence for Sakha communities before and after Russian conquest beginning in the seventeenth century, including major disruptions and continuity."
+    },
+    {
+      "id": "sb-museum",
+      "title": "Institute of Archaeology and Ethnography SB RAS, Museum of History and Culture of Peoples of Siberia and the Russian Far East",
+      "url": "https://archaeology.nsc.ru/en/museums/museum-far-east/",
+      "note": "Official museum framing of many distinct Siberian and Far Eastern archaeological and ethnographic traditions, including medieval states, local religions and material technologies."
+    }
+  ],
+  "entities": [
+    {
+      "id": "siberians",
+      "card": "data/cards/siberians.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "sb-index",
+            "sb-map1279",
+            "sb-forsyth"
+          ],
+          "locator": "Exact indexed id, label, circa 1279 to 1530 lifetime and historical-basemaps provenance. Decoded first exact siberians feature, topology, bounds, coordinate hash and point-owner tests. Scholarly overview of Siberia before Russian expansion, environmental variety, many Indigenous languages and the danger of treating the region as one people.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "sb-map1279",
+            "sb-allsen"
+          ],
+          "locator": "Decoded first exact siberians feature, topology, bounds, coordinate hash and point-owner tests. Mongol political, administrative and economic relations with forest peoples, northern products in Eurasian trade and resulting transformations.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "sb-map1300",
+            "sb-vajda"
+          ],
+          "locator": "Decoded second interval and verified exact geometry identity with 1279. Language families, multilingual contact, and distinct Ugric, Samoyedic, Yeniseian, Turkic, Mongolic and Tungusic communities.",
+          "dateScope": {
+            "from": 1300,
+            "to": 1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "sb-map1400",
+            "sb-frank"
+          ],
+          "locator": "Decoded third interval, coordinate change and White Horde and Yuan seams. Golden Horde fragmentation, regional yurts and formation of fifteenth-century successor states including the Siberian Khanate.",
+          "dateScope": {
+            "from": 1400,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "sb-map1492",
+            "sb-palaeo-languages"
+          ],
+          "locator": "Decoded western contraction, topology and Sibir, Oirat and Chagatai point owners. Distinct Chukotko-Kamchatkan, Yukaghir, Nivkh and Ket languages; used only as a linguistic classification, not a medieval population census.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "sb-map1500",
+            "sb-map1530"
+          ],
+          "locator": "Decoded single-polygon contraction, changed western bound and premature Moscow seam. Decoded disappearance and fragmented successor labels, blank space and point-owner tests.",
+          "dateScope": {
+            "from": 1500,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "sb-index",
+            "sb-summary"
+          ],
+          "locator": "Exact index, coverage, missing-card state and imported-summary audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "sb-map1279",
+            "sb-map1300"
+          ],
+          "locator": "Exact topology, bounds, positions and SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "sb-map1400"
+          ],
+          "locator": "1400 exact geometry and point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "sb-map1492",
+            "sb-map1500"
+          ],
+          "locator": "1492 and 1500 topology, bounds, positions and coordinate hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "sb-map1100",
+            "sb-map1200",
+            "sb-map1530"
+          ],
+          "locator": "Predecessor and disappearance point-owner comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "sb-vajda"
+          ],
+          "locator": "Central Siberian language-family and contact synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "sb-palaeo-languages"
+          ],
+          "locator": "Named eastern and northeastern language groupings and classification caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "sb-arctic"
+          ],
+          "locator": "Distinct peoples, environments and resource zones.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "sb-museum"
+          ],
+          "locator": "Official museum framing of cultural and chronological plurality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "sb-summary",
+            "sb-index"
+          ],
+          "locator": "Imported-summary contradiction and exact-id preservation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "sb-allsen"
+          ],
+          "locator": "Mongol-forest relations and Eurasian network context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "sb-hatto"
+          ],
+          "locator": "Excerpt discussion of principalities, forts, ranks and households.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "sb-frank"
+          ],
+          "locator": "Golden Horde disintegration and Sibir formation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "sb-map1492"
+          ],
+          "locator": "Point-owner tests at the 1492 seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "sb-map1279",
+            "sb-map1400"
+          ],
+          "locator": "Atlas juxtaposition and absence of any common institution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "sb-martin"
+          ],
+          "locator": "Luxury-fur demand and northwest Siberian supply region.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "sb-parisento"
+          ],
+          "locator": "Date, imported bowl and associated grave goods.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "sb-biran"
+          ],
+          "locator": "Spectrum of dependency, captivity, markets and manumission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "sb-atlasovo"
+          ],
+          "locator": "Trauma, physical stress and competing status interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "sb-khanty-epic"
+          ],
+          "locator": "Later-collected Khanty heroic-epic corpus and its interpretive scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "sb-arctic"
+          ],
+          "locator": "Ecological diversity and long-term Arctic adaptations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "sb-ustpolui"
+          ],
+          "locator": "Regional chronology of transport animals and pastoralism.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "sb-zeleny-infant"
+          ],
+          "locator": "Infant parasite result, fish deposits and dietary inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "sb-nadym-timber"
+          ],
+          "locator": "Location, occupational sequence and timber-building analysis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "sb-transform"
+          ],
+          "locator": "Technology exchange and cultural transformation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "sb-hatto"
+          ],
+          "locator": "Fort households, stores, ranks and evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "sb-zeleny-children"
+          ],
+          "locator": "Child graves, goods and high-status interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "sb-parisento"
+          ],
+          "locator": "Child age, preservation problem and assemblage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "sb-atlasovo"
+          ],
+          "locator": "Ambiguous status, labor stress and violent death.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "sb-crossroads"
+          ],
+          "locator": "Later comparative household-space and social-organization evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "sb-crossroads"
+          ],
+          "locator": "Later material and domestic evidence used only to frame a cautious learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "sb-angara-oral"
+          ],
+          "locator": "Collective memory, oral tradition and archaeological-correlation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "sb-khanty-epic"
+          ],
+          "locator": "Collection chronology and contents of the epic corpus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "sb-vajda",
+            "sb-franklin-writing"
+          ],
+          "locator": "Language plurality and written-sample exclusion rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "sb-franklin-writing"
+          ],
+          "locator": "Imported script-bearing objects versus indigenous literacy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "sb-zeleny-infant"
+          ],
+          "locator": "Direct dietary and health evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "sb-zeleny-children"
+          ],
+          "locator": "Child-burial coverings, containers and clothing materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "sb-crossroads"
+          ],
+          "locator": "Later comparative dwelling diversity and seasonal movement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "sb-nadym-timber"
+          ],
+          "locator": "Timber procurement, construction phases and evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "sb-museum"
+          ],
+          "locator": "Explicit work-and-play evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "sb-zeleny-infant"
+          ],
+          "locator": "Disease evidence and limits on reconstructing care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "sb-nadym-parasite"
+          ],
+          "locator": "Target-period parasite evidence and sampling context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "sb-atlasovo"
+          ],
+          "locator": "Paleopathology and limits on medical reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "sb-map1279",
+            "sb-map1492"
+          ],
+          "locator": "River-spanning geometry and household-water evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "sb-nadym-parasite"
+          ],
+          "locator": "Explicit toilet, waste and sanitation evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "sb-burial-bias"
+          ],
+          "locator": "Burial rarity and representativeness warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "sb-yakut-burials"
+          ],
+          "locator": "Localized pre-Cossack Sakha archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "sb-map1530"
+          ],
+          "locator": "Exact 1530 point-owner and blank-space audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "sb-yakutia-nature"
+          ],
+          "locator": "Seventeenth-century conquest, disruption and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "sb-museum"
+          ],
+          "locator": "Regional plurality and continuity beyond the display interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "sb-map1530",
+            "sb-yakutia-nature"
+          ],
+          "locator": "Decoded disappearance and fragmented successor labels, blank space and point-owner tests. Archaeological and biological evidence for Sakha communities before and after Russian conquest beginning in the seventeenth century, including major disruptions and continuity.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "siberians",
+        "card": "cards/siberians.json",
+        "dateBasis": "map_coverage",
+        "summary": "Atlas umbrella for diverse Indigenous Siberian peoples, 1279 to 1530; never one nation.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "siberians",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            43.70263702637027,
+            50.95747151316971,
+            180,
+            77.59222881269206
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "siberians",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            43.70263702637027,
+            50.95747151316971,
+            180,
+            77.59222881269206
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "siberians",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            43.70263702637027,
+            50.957378279848015,
+            180,
+            77.59213844458831
+          ]
+        },
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "siberians",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            54.01674016740168,
+            50.957471513354804,
+            180,
+            77.59222881292364
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "siberians",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            65.06165061650617,
+            50.957378279848015,
+            180,
+            77.59213844458831
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact indexed id siberians is preserved only as a display key for a circa 1279 to 1530 culture feature.",
+    "The imported summary about ethnic Russians or Siberiaks is rejected as anachronistic for the medieval feature.",
+    "The feature is an umbrella or residual basemap bucket, not one state, nation, people, language or stable cultural horizon.",
+    "Khanty, Mansi, Samoyedic, Yeniseian, Tungusic, Turkic, Mongolic, Yukaghir, Nivkh and Chukotko-Kamchatkan contexts remain distinct.",
+    "The 1279 to 1300 and 1300 to 1400 geometries are identical; later contractions reflect changing imported partitions, not migrations measured by the polygon.",
+    "Golden Horde, Yuan, White Horde, Sibir, Oirat, Chagatai, Moscow and Ming polygons are neighboring atlas records and are not aliases for the target.",
+    "The 1530 seam fragments into named peoples, overbroad states and blank space. It is not a conquest, extinction or valid successor chain.",
+    "No in-period written sample is supplied because no single Siberian language existed and no securely attributable 1279 to 1530 component text was found; adjacent court scripts are not substituted."
+  ]
+}
