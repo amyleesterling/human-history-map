@@ -1,0 +1,3377 @@
+{
+  "version": 1,
+  "region": "Shared regional history for four broad and discontinuous New Guinea atlas records, 800 to 1878",
+  "researcher": "Codex parallel release160-papuans-shared research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "pa-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact four ids, identical display names, approximate intervals, culture kinds, and imported historical-basemaps provenance."
+    },
+    {
+      "id": "pa-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Identical modern Indonesian-Papuan summary and Wikipedia lead attached to all four targets, reviewed only as queue metadata."
+    },
+    {
+      "id": "pa-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact observed intervals, border-file counts, and pending identity, chronology, border, and card review for four records."
+    },
+    {
+      "id": "pa-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "All four exact ids were unassigned missing cards with no staged drafts before this packet."
+    },
+    {
+      "id": "pa-cards",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Direct check that none of the four exact ids already loaded a researched runtime card."
+    },
+    {
+      "id": "pa-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Direct check that none of the four exact ids already had a researched association or corrected summary."
+    },
+    {
+      "id": "pa-map700",
+      "title": "Human History Map 700 to 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Exact pre-start seam control for the earliest papuans feature."
+    },
+    {
+      "id": "pa-map800",
+      "title": "Human History Map 800 to 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "First papuans snapshot, decoded geometry, representative point membership, overlap owners, topology, and hash."
+    },
+    {
+      "id": "pa-map900",
+      "title": "Human History Map 900 to 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Second identical papuans geometry and exact indexed endpoint control."
+    },
+    {
+      "id": "pa-map1000",
+      "title": "Human History Map 1000 to 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Exact seam where the first label disappears despite uninterrupted regional history."
+    },
+    {
+      "id": "pa-map1100",
+      "title": "Human History Map 1100 to 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Pre-start control for papuans-1200 and evidence of an editorial map gap."
+    },
+    {
+      "id": "pa-map1200",
+      "title": "Human History Map 1200 to 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Only papuans-1200 snapshot, decoded polygon, probes, topology, and hash."
+    },
+    {
+      "id": "pa-map1279",
+      "title": "Human History Map 1279 to 1300 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Exact post-end seam control where the papuans-1200 feature disappears from the atlas."
+    },
+    {
+      "id": "pa-map1500",
+      "title": "Human History Map 1500 to 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Exact pre-start seam control immediately before the papuans-1530 feature appears."
+    },
+    {
+      "id": "pa-map1530",
+      "title": "Human History Map 1530 to 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "First papuans-1530 snapshot, decoded three-component geometry and regional probes."
+    },
+    {
+      "id": "pa-map1600",
+      "title": "Human History Map 1600 to 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Unchanged papuans-1530 geometry plus impossible imported global overlap diagnostics."
+    },
+    {
+      "id": "pa-map1650",
+      "title": "Human History Map 1650 to 1700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Reduced eastern papuans-1530 geometry and a shared topology arc with dutch-east-indies."
+    },
+    {
+      "id": "pa-map1700",
+      "title": "Human History Map 1700 to 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Second reduced papuans-1530 geometry, topology neighbor, and impossible imported overlap controls."
+    },
+    {
+      "id": "pa-map1715",
+      "title": "Human History Map 1715 to 1783 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Exact post-end seam where the papuans-1530 feature disappears from the atlas."
+    },
+    {
+      "id": "pa-map1800",
+      "title": "Human History Map 1800 to 1815 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Exact pre-start seam control immediately before the papuans-1815 feature appears."
+    },
+    {
+      "id": "pa-map1815",
+      "title": "Human History Map 1815 to 1878 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Only papuans-1815 snapshot, decoded three-component geometry, probes, topology, and hash."
+    },
+    {
+      "id": "pa-map1878",
+      "title": "Human History Map 1878 to 1880 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1878.json",
+      "note": "Exact post-end seam where the shared cultural label disappears before later colonial partitions."
+    },
+    {
+      "id": "pa-papuan-history",
+      "title": "Towards a Papuan history of languages",
+      "url": "https://openresearch-repository.anu.edu.au/items/62087662-c329-4c7f-93b2-c63fd982f0cc",
+      "note": "Linguistic analysis explaining that Papuan languages comprise separate families and cannot be treated as one genealogical or social unit."
+    },
+    {
+      "id": "pa-west-languages",
+      "title": "Language as a lens into the prehistory of West New Guinea",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/language-as-a-lens-into-the-prehistory-of-west-new-guinea/",
+      "note": "ANU synthesis documenting more than 260 languages, roughly thirty families, and eighteen isolates in western New Guinea."
+    },
+    {
+      "id": "pa-arch-book",
+      "title": "Forty Years in the South Seas",
+      "url": "https://press.anu.edu.au/publications/series/terra-australis/forty-years-south-seas",
+      "note": "Open archaeological volume surveying more than fifty thousand years of New Guinea and western Pacific history and later Austronesian interaction."
+    },
+    {
+      "id": "pa-kuk-unesco",
+      "title": "Kuk Early Agricultural Site",
+      "url": "https://whc.unesco.org/en/list/887",
+      "note": "UNESCO evidence for long-lived wetland management, independent agriculture, bananas, taro, yam, mounds, and drainage ditches."
+    },
+    {
+      "id": "pa-kuk-dispute",
+      "title": "Reading Early Agriculture at Kuk Swamp",
+      "url": "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/reading-early-agriculture-at-kuk-swamp-wahgi-valley-papua-new-guinea-the-archaeological-features-phases-13/396DDC2A85C5ABF3610AA9C0A33C2D18",
+      "note": "Peer-reviewed report presenting competing interpretations and dates rather than hiding scholarly disagreement about early cultivation."
+    },
+    {
+      "id": "pa-waim",
+      "title": "Emergence of a Neolithic in highland New Guinea",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7096170/",
+      "note": "Peer-reviewed Waim excavations on early fiber craft, pestles, figurative stone, axes, obsidian movement, and independent highland innovation."
+    },
+    {
+      "id": "pa-south-arch",
+      "title": "The Archaeology of Southern New Guinea",
+      "url": "https://researchonline.jcu.edu.au/1054/1/1054_Carter_2004_thesis.pdf",
+      "note": "Academic regional synthesis of pottery, settlement, trade, exchange, and cultural interaction on the southern Papuan coast."
+    },
+    {
+      "id": "pa-kikiniu",
+      "title": "Petrographic analyses of Kikiniu ceramics",
+      "url": "https://research.monash.edu/en/publications/petrographic-analyses-of-sand-temperinclusions-in-ceramics-of-kik/",
+      "note": "Peer-reviewed ceramic study identifying Gulf pottery around 1550 to 1000 calibrated years BP and probable sago-linked exchange."
+    },
+    {
+      "id": "pa-sweet-genetics",
+      "title": "Origin of sweet potato genetic diversity in New Guinea",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3656641/",
+      "note": "Peer-reviewed genetic and historical synthesis on disputed introductions, likely post-1500 movement, and rapid highland adoption around 1700."
+    },
+    {
+      "id": "pa-sweet-dispersal",
+      "title": "Ancient and historic dispersals of sweet potato in Oceania",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3568348/",
+      "note": "Peer-reviewed commentary connecting New Guinea lineages mainly with post-European dispersal while retaining uncertainty and earlier taro agriculture."
+    },
+    {
+      "id": "pa-kuk-ten",
+      "title": "Ten Thousand Years of Cultivation at Kuk Swamp",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2540/html/ch16.xhtml?page=25&referer=",
+      "note": "ANU archaeological chapter on later Kuk cultivation, sweet potato, shell and axe movement, and braided local trade routes."
+    },
+    {
+      "id": "pa-unesco-landscape",
+      "title": "Cultural Landscapes of the Pacific",
+      "url": "https://whc.unesco.org/document/10062",
+      "note": "UNESCO thematic study on Kuk, sweet potato, pigs, marriage and compensation exchanges, and non-teleological histories of agriculture."
+    },
+    {
+      "id": "pa-huli",
+      "title": "Frontier Archaeology in the Lower Tagali Valley",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/frontier-archaeology-excavating-huli-colonization-of-the-lower-tagali-valley-papua-new-guinea/902F5A6C9223B1287298519DBE4540CA",
+      "note": "Open peer-reviewed excavation of early nineteenth-century Huli houses, gardens, drains, gendered space, pigs, and oral-genealogical chronology."
+    },
+    {
+      "id": "pa-health",
+      "title": "Bioarchaeological analysis of south-coast New Guinea health",
+      "url": "https://www.pngimr.org.pg/wp-content/uploads/2019/04/VOL.-60-NO-1-2-MARCH-JUNE-2017.pdf",
+      "note": "Papua New Guinea Medical Journal abstract comparing teeth and childhood stress at late prehistoric Nebira and Motupore."
+    },
+    {
+      "id": "pa-nebira",
+      "title": "Prehistoric migration at Nebira",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416511000286",
+      "note": "Peer-reviewed isotope and burial study showing mobility, differentiated graves, and interpretive limits at one south-coast community."
+    },
+    {
+      "id": "pa-dog-burials",
+      "title": "Archaeology of Lapita Dispersal in Oceania",
+      "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/127575/1/The_Archaeology_of_Lapita_Dispersal_in_O.pdf",
+      "note": "ANU archaeological evidence for long-lived settlements, house posts, reused burials, and dog-tooth ornaments at Nebira and neighboring sites."
+    },
+    {
+      "id": "pa-motupore",
+      "title": "Origin and development of Motupore village",
+      "url": "https://www.apscience.org.au/apsf_15_1/",
+      "note": "University-linked archaeological project on Motupore settlement chronology and its relationship to southern coastal exchange."
+    },
+    {
+      "id": "pa-met-oceania",
+      "title": "Arts of Oceania",
+      "url": "https://www.metmuseum.org/de/exhibitions/arts-of-oceania/inside-the-exhibition",
+      "note": "Museum synthesis on regional exchange, kula partnerships, canoe voyaging, pearl shell, Sepik painting, ancestors, and initiation."
+    },
+    {
+      "id": "pa-aus-tools",
+      "title": "Learning Process: Stone tools in the Highlands",
+      "url": "https://australian.museum/blog-archive/science/learning-process-stone-tools-in-the-highlands/",
+      "note": "Australian Museum account of observed highland stone-tool knowledge, manufacture, teaching, and varied work in organic materials."
+    },
+    {
+      "id": "pa-aus-trade",
+      "title": "Geochemistry and sources of stone tools in south-west New Britain",
+      "url": "https://journals.australian.museum/pengilley-2021-tech-rep-aust-mus-online-34-2545/",
+      "note": "Museum-published geochemical study tracing flaked, dressed, and ground tools through intra-island and inter-island exchange."
+    },
+    {
+      "id": "pa-aus-mortar",
+      "title": "Stone mortar and pestle distribution in New Britain",
+      "url": "https://journals.australian.museum/swadling-2004-rec-aust-mus-suppl-29-157161/",
+      "note": "Museum-published archaeological study cautiously connecting dated mortars and pestles with ancient taro cultivation."
+    },
+    {
+      "id": "pa-bm-canoe",
+      "title": "Nineteenth-century New Guinea outrigger canoe model",
+      "url": "https://www.britishmuseum.org/collection/object/E_Oc-3450",
+      "note": "Museum object record for a carved, pigmented southeast New Guinea outrigger model acquired before 1887."
+    },
+    {
+      "id": "pa-bm-mask",
+      "title": "Elema mask from New Guinea",
+      "url": "https://www.britishmuseum.org/collection/object/E_Oc1952-1",
+      "note": "Museum record linking an Elema barkcloth mask to Samuel Macfarlane correspondence and collections present by the 1870s."
+    },
+    {
+      "id": "pa-rattlesnake",
+      "title": "Narrative of the Voyage of HMS Rattlesnake, volume two",
+      "url": "https://www.biodiversitylibrary.org/page/14469180",
+      "note": "Public-domain 1852 primary publication with a Redscar Bay vocabulary collected during the 1846 to 1850 survey."
+    },
+    {
+      "id": "pa-dfa-history",
+      "title": "Papua New Guinea Department of Foreign Affairs history",
+      "url": "https://www.dfa.gov.pg/history/",
+      "note": "Official overview of early European encounters, the nominal Dutch claim of 1828, Moresby surveys, and later partitions."
+    },
+    {
+      "id": "pa-name-history",
+      "title": "Oceanic Negroes: British anthropology of Papuans, 1820 to 1869",
+      "url": "https://press.anu.edu.au/downloads/press/p53561/mobile/ch03.html",
+      "note": "ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters."
+    },
+    {
+      "id": "pa-voyage1545",
+      "title": "Malay Knowledge, Spanish Voyages, and Indigenous Presence",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/00223344.2024.2411987",
+      "note": "Peer-reviewed reconstruction of the 1545 Ortiz de Retes voyage, Indigenous presence, Malay knowledge, place names, and mapping."
+    },
+    {
+      "id": "pa-west-arch",
+      "title": "An Archaeological Review of Western New Guinea",
+      "url": "https://link.springer.com/article/10.1007/s10963-013-9063-8",
+      "note": "Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters."
+    },
+    {
+      "id": "pa-slavery",
+      "title": "Early modern slave trade prices in the Indian Ocean and Indonesian Archipelago",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F3BF7F3CF08AA23010922EB42F3DAAFA/S1740022821000139a.pdf/towards-a-global-perspective-on-early-modern-slave-trade-prices-of-the-enslaved-in-the-indian-ocean-indonesian-archipelago-and-atlantic-worlds.pdf",
+      "note": "Peer-reviewed comparative history documenting Papuan captives in eastern Indonesian slave gifting and trade without making the system island-wide."
+    },
+    {
+      "id": "pa-macfarlane",
+      "title": "Samuel Macfarlane",
+      "url": "https://adb.anu.edu.au/biography/macfarlane-samuel-4090",
+      "note": "Australian Dictionary of Biography chronology for 1871 reconnaissance, 1874 return, village visits, mission stations, languages, and controversy."
+    },
+    {
+      "id": "pa-language-research",
+      "title": "History of Research in Austronesian Languages of Southeast Papua",
+      "url": "https://openresearch-repository.anu.edu.au/server/api/core/bitstreams/c259b2ba-cfdd-4a50-b507-d4f69819e399/content",
+      "note": "ANU linguistic historiography dating Redscar Bay wordlists to 1849 and distinguishing Motu from neighboring languages and later grammars."
+    },
+    {
+      "id": "pa-glottolog",
+      "title": "Murray 1876 language-documentation record",
+      "url": "https://glottolog.org/resource/reference/id/118015",
+      "note": "Glottolog bibliographic classification of Murray’s 1876 book as ethnography and wordlist covering several distinct regional languages."
+    },
+    {
+      "id": "pa-intermediaries",
+      "title": "Indigenous Intermediaries",
+      "url": "https://press.anu.edu.au/downloads/press/p325531/pdf/book.pdf",
+      "note": "ANU Press history centering Indigenous brokers, translators, guides, and knowledge in exploration archives rather than treating voyagers as solitary discoverers."
+    },
+    {
+      "id": "pa-papuan-pasts",
+      "title": "Papuan Pasts",
+      "url": "https://openresearch-repository.anu.edu.au/items/595b355e-703a-4329-9362-ea63c82f5edd",
+      "note": "ANU research volume integrating cultural, linguistic, archaeological, and biological histories while preserving the plurality of Papuan-speaking peoples."
+    },
+    {
+      "id": "pa-nma-colonial",
+      "title": "Papua New Guinea: colonial partition",
+      "url": "https://www.nma.gov.au/defining-moments/resources/papua-new-guinea",
+      "note": "National Museum of Australia account of the 1884 German annexation and British protectorate following earlier Dutch claims."
+    }
+  ],
+  "entities": [
+    {
+      "id": "papuans",
+      "card": "data/cards/papuans.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pa-papuan-pasts"
+          ],
+          "locator": "ANU research volume integrating cultural, linguistic, archaeological, and biological histories while preserving the plurality of Papuan-speaking peoples.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pa-map800",
+            "pa-waim"
+          ],
+          "locator": "First papuans snapshot, decoded geometry, representative point membership, overlap owners, topology, and hash. Peer-reviewed Waim excavations on early fiber craft, pestles, figurative stone, axes, obsidian movement, and independent highland innovation.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pa-map900",
+            "pa-aus-trade"
+          ],
+          "locator": "Second identical papuans geometry and exact indexed endpoint control. Museum-published geochemical study tracing flaked, dressed, and ground tools through intra-island and inter-island exchange.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pa-map1000",
+            "pa-map1100",
+            "pa-kikiniu"
+          ],
+          "locator": "Exact seam where the first label disappears despite uninterrupted regional history. Pre-start control for papuans-1200 and evidence of an editorial map gap. Peer-reviewed ceramic study identifying Gulf pottery around 1550 to 1000 calibrated years BP and probable sago-linked exchange.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pa-map1200",
+            "pa-motupore",
+            "pa-dog-burials"
+          ],
+          "locator": "Only papuans-1200 snapshot, decoded polygon, probes, topology, and hash. University-linked archaeological project on Motupore settlement chronology and its relationship to southern coastal exchange. ANU archaeological evidence for long-lived settlements, house posts, reused burials, and dog-tooth ornaments at Nebira and neighboring sites.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pa-map1279",
+            "pa-map1500",
+            "pa-west-arch"
+          ],
+          "locator": "Exact post-end seam control where the papuans-1200 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1530 feature appears. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pa-map1530",
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "First papuans-1530 snapshot, decoded three-component geometry and regional probes. Peer-reviewed reconstruction of the 1545 Ortiz de Retes voyage, Indigenous presence, Malay knowledge, place names, and mapping. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pa-map1600",
+            "pa-west-arch",
+            "pa-slavery"
+          ],
+          "locator": "Unchanged papuans-1530 geometry plus impossible imported global overlap diagnostics. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters. Peer-reviewed comparative history documenting Papuan captives in eastern Indonesian slave gifting and trade without making the system island-wide.",
+          "dateScope": {
+            "from": 1600,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pa-map1650",
+            "pa-west-arch"
+          ],
+          "locator": "Reduced eastern papuans-1530 geometry and a shared topology arc with dutch-east-indies. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pa-map1700",
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Second reduced papuans-1530 geometry, topology neighbor, and impossible imported overlap controls. Peer-reviewed genetic and historical synthesis on disputed introductions, likely post-1500 movement, and rapid highland adoption around 1700. Peer-reviewed commentary connecting New Guinea lineages mainly with post-European dispersal while retaining uncertainty and earlier taro agriculture.",
+          "dateScope": {
+            "from": 1700,
+            "to": 1715
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pa-map1715",
+            "pa-map1800",
+            "pa-name-history"
+          ],
+          "locator": "Exact post-end seam where the papuans-1530 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1815 feature appears. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1715,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "pa-map1815",
+            "pa-language-research"
+          ],
+          "locator": "Only papuans-1815 snapshot, decoded three-component geometry, probes, topology, and hash. ANU linguistic historiography dating Redscar Bay wordlists to 1849 and distinguishing Motu from neighboring languages and later grammars.",
+          "dateScope": {
+            "from": 1815,
+            "to": 1850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-macfarlane",
+            "pa-intermediaries",
+            "pa-map1878"
+          ],
+          "locator": "Public-domain 1852 primary publication with a Redscar Bay vocabulary collected during the 1846 to 1850 survey. Australian Dictionary of Biography chronology for 1871 reconnaissance, 1874 return, village visits, mission stations, languages, and controversy. ANU Press history centering Indigenous brokers, translators, guides, and knowledge in exploration archives rather than treating voyagers as solitary discoverers. Exact post-end seam where the shared cultural label disappears before later colonial partitions.",
+          "dateScope": {
+            "from": 1850,
+            "to": 1878
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-summaries",
+            "pa-coverage",
+            "pa-missing",
+            "pa-cards",
+            "pa-overrides"
+          ],
+          "locator": "Exact index, summary, coverage, queue, card-index, and override records compared together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pa-map700",
+            "pa-map800",
+            "pa-map900",
+            "pa-map1000",
+            "pa-map1100",
+            "pa-map1200",
+            "pa-map1279",
+            "pa-map1500",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1715",
+            "pa-map1800",
+            "pa-map1815",
+            "pa-map1878"
+          ],
+          "locator": "Deterministic inventory of all manifest snapshots, exact occurrences, file hashes, and adjacent seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1815"
+          ],
+          "locator": "Decoded geometry type, component count, bounds, coordinate hashes, and exact-identity comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1815"
+          ],
+          "locator": "Named-place d3.geoContains probes across every exact target geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700"
+          ],
+          "locator": "Probe-owner audit documenting geographically impossible co-ownership in imported border layers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pa-papuan-history"
+          ],
+          "locator": "ANU linguistic discussion of the logical and comparative-method limits of Papuan as a category.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pa-west-languages"
+          ],
+          "locator": "ANU publication abstract reporting regional language counts and family or isolate diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "ANU archaeological migration synthesis and linguistic treatment of sustained Papuan-Austronesian contact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pa-name-history",
+            "pa-voyage1545"
+          ],
+          "locator": "ANU history of category formation compared with peer-reviewed reconstruction of Malay and Iberian naming.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-papuan-history",
+            "pa-west-languages"
+          ],
+          "locator": "Association judgment bounded by exact atlas metadata and modern linguistic scholarship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco"
+          ],
+          "locator": "UNESCO outstanding universal value, chronology, crops, mounds, and wooden-tool drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pa-kuk-dispute"
+          ],
+          "locator": "Peer-reviewed abstract explicitly laying out competing archaeological interpretations and calibrated dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Science Advances multidisciplinary dates and artifact classes, with authors’ argument for independent social and technical change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pa-aus-mortar"
+          ],
+          "locator": "Australian Museum archaeological distribution study and its cautious crop-correlation proposal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-waim",
+            "pa-map800",
+            "pa-map1200"
+          ],
+          "locator": "Long archaeological chronology compared directly with two arbitrary atlas windows.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-south-arch"
+          ],
+          "locator": "Highland crop evidence and southern regional archaeological synthesis kept geographically separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pa-kikiniu"
+          ],
+          "locator": "Peer-reviewed abstract on ceramic chronology, petrography, rainforest setting, and proposed sago exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional synthesis and Motupore project aims, chronology, and Bay-scale comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pa-aus-trade"
+          ],
+          "locator": "Australian Museum pXRF study of source regions, tool manufacture, procurement, and exchange networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met regional exhibition synthesis used as a carefully dated comparative frame, not direct medieval evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-nebira"
+          ],
+          "locator": "Regional archaeological scope and one community’s differentiated burial evidence used to bound inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Open-area excavation, oral chronology, building interpretation, and authors’ specific regional attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pa-nebira",
+            "pa-dog-burials"
+          ],
+          "locator": "Burial-phase, grave-house, taphonomic, house-post, and ornament evidence from Nebira.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pa-aus-tools",
+            "pa-met-oceania"
+          ],
+          "locator": "Observed craft learning and museum documentation of restricted initiation knowledge, explicitly not back-projected as universal schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pa-unesco-landscape",
+            "pa-huli"
+          ],
+          "locator": "Pacific landscape review on pig exchange and excavated Huli pig-pen interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pa-aus-tools"
+          ],
+          "locator": "Australian Museum account of observations at Legaiyu, Himarata, and Lake Kopiago and their archaeological use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Waim report’s early fiber-craft evidence and associated technological assemblage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pa-bm-canoe"
+          ],
+          "locator": "British Museum object description, materials, technique, acquisition, and broad provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pa-bm-mask"
+          ],
+          "locator": "British Museum record of provenance, correspondence, restoration, replaced material, and recoloring.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met discussion of initiation, controlled ritual knowledge, community arts, and intergenerational transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pa-voyage1545"
+          ],
+          "locator": "Peer-reviewed voyage reconstruction, anchorage, route, Indigenous encounters, naming, and prior Malay information.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pa-west-arch"
+          ],
+          "locator": "Journal of World Prehistory regional review of long-term interaction and early encounter evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pa-slavery"
+          ],
+          "locator": "Peer-reviewed documentary evidence for Papuan origins in eastern Indonesian slave gifting and market systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Genetic and archaeological syntheses on post-contact lineages, chronology, adoption, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pa-kuk-ten"
+          ],
+          "locator": "Kuk chapter’s shell, axe, and sweet-potato movement model through linked local exchanges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pa-dfa-history"
+          ],
+          "locator": "Official chronology distinguishing the 1828 claim from 1898 permanent posts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Dated Admiralty publication and ANU linguistic history identifying Redscar Bay data and later classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pa-intermediaries"
+          ],
+          "locator": "ANU Press collection on Indigenous roles and archival method across exploration histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pa-macfarlane"
+          ],
+          "locator": "Australian Dictionary of Biography voyage, station, language, conflict, and controversy chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact atlas endpoint compared with museum chronology of the 1884 colonial partitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pa-health"
+          ],
+          "locator": "Papua New Guinea Medical Journal abstract, samples, indicators, results, and multifactorial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pa-health",
+            "pa-arch-book"
+          ],
+          "locator": "Evidence-bound negative review across bioarchaeological and regional historical synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-huli"
+          ],
+          "locator": "UNESCO wetland works and excavated house drainage kept separate by time and region.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pa-kuk-dispute",
+            "pa-south-arch"
+          ],
+          "locator": "Explicit negative-evidence audit across highland wetland and southern coastal archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Huli excavation’s drainage, pig-pen, house-conversion, and documented administration or mission hygiene pressure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "Archaeological and linguistic source audit; no invented script or undated modern phrase substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional archaeological source audit distinguishing material evidence from a securely deciphered text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "Voyage and naming sources reviewed for authorship, language, and evidential limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Primary comparative vocabulary and ANU history dating and classifying the Redscar Bay wordlist.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pa-glottolog"
+          ],
+          "locator": "Glottolog bibliographic record, document type, date, and multiple language identifications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-dfa-history",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact post-end seam where the shared cultural label disappears before later colonial partitions. Official overview of early European encounters, the nominal Dutch claim of 1828, Moresby surveys, and later partitions. National Museum of Australia account of the 1884 German annexation and British protectorate following earlier Dutch claims.",
+          "dateScope": {
+            "year": 1878
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "papuans",
+        "name": "Papuans",
+        "from": 800,
+        "to": 1000,
+        "circa": true,
+        "kind": "culture",
+        "card": "cards/papuans.json",
+        "summary": "Distinct New Guinea communities and histories under one atlas umbrella.",
+        "summarySource": null,
+        "dateBasis": "map_coverage",
+        "predecessors": [],
+        "successors": [],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "papuans",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            131.0647106471065,
+            -10.7382262966659,
+            152.26892268922688,
+            -0.5272682662176749
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "papuans",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            131.0647106471065,
+            -10.7382262966659,
+            152.26892268922688,
+            -0.5272682662176749
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papuans-1200",
+      "card": "data/cards/papuans.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pa-index",
+            "pa-map1200"
+          ],
+          "locator": "ANU research volume integrating cultural, linguistic, archaeological, and biological histories while preserving the plurality of Papuan-speaking peoples.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pa-map800",
+            "pa-waim"
+          ],
+          "locator": "First papuans snapshot, decoded geometry, representative point membership, overlap owners, topology, and hash. Peer-reviewed Waim excavations on early fiber craft, pestles, figurative stone, axes, obsidian movement, and independent highland innovation.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pa-map900",
+            "pa-aus-trade"
+          ],
+          "locator": "Second identical papuans geometry and exact indexed endpoint control. Museum-published geochemical study tracing flaked, dressed, and ground tools through intra-island and inter-island exchange.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pa-map1000",
+            "pa-map1100",
+            "pa-kikiniu"
+          ],
+          "locator": "Exact seam where the first label disappears despite uninterrupted regional history. Pre-start control for papuans-1200 and evidence of an editorial map gap. Peer-reviewed ceramic study identifying Gulf pottery around 1550 to 1000 calibrated years BP and probable sago-linked exchange.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pa-map1200",
+            "pa-motupore",
+            "pa-dog-burials"
+          ],
+          "locator": "Only papuans-1200 snapshot, decoded polygon, probes, topology, and hash. University-linked archaeological project on Motupore settlement chronology and its relationship to southern coastal exchange. ANU archaeological evidence for long-lived settlements, house posts, reused burials, and dog-tooth ornaments at Nebira and neighboring sites.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pa-map1279",
+            "pa-map1500",
+            "pa-west-arch"
+          ],
+          "locator": "Exact post-end seam control where the papuans-1200 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1530 feature appears. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pa-map1530",
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "First papuans-1530 snapshot, decoded three-component geometry and regional probes. Peer-reviewed reconstruction of the 1545 Ortiz de Retes voyage, Indigenous presence, Malay knowledge, place names, and mapping. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pa-map1600",
+            "pa-west-arch",
+            "pa-slavery"
+          ],
+          "locator": "Unchanged papuans-1530 geometry plus impossible imported global overlap diagnostics. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters. Peer-reviewed comparative history documenting Papuan captives in eastern Indonesian slave gifting and trade without making the system island-wide.",
+          "dateScope": {
+            "from": 1600,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pa-map1650",
+            "pa-west-arch"
+          ],
+          "locator": "Reduced eastern papuans-1530 geometry and a shared topology arc with dutch-east-indies. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pa-map1700",
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Second reduced papuans-1530 geometry, topology neighbor, and impossible imported overlap controls. Peer-reviewed genetic and historical synthesis on disputed introductions, likely post-1500 movement, and rapid highland adoption around 1700. Peer-reviewed commentary connecting New Guinea lineages mainly with post-European dispersal while retaining uncertainty and earlier taro agriculture.",
+          "dateScope": {
+            "from": 1700,
+            "to": 1715
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pa-map1715",
+            "pa-map1800",
+            "pa-name-history"
+          ],
+          "locator": "Exact post-end seam where the papuans-1530 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1815 feature appears. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1715,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "pa-map1815",
+            "pa-language-research"
+          ],
+          "locator": "Only papuans-1815 snapshot, decoded three-component geometry, probes, topology, and hash. ANU linguistic historiography dating Redscar Bay wordlists to 1849 and distinguishing Motu from neighboring languages and later grammars.",
+          "dateScope": {
+            "from": 1815,
+            "to": 1850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-macfarlane",
+            "pa-intermediaries",
+            "pa-map1878"
+          ],
+          "locator": "Public-domain 1852 primary publication with a Redscar Bay vocabulary collected during the 1846 to 1850 survey. Australian Dictionary of Biography chronology for 1871 reconnaissance, 1874 return, village visits, mission stations, languages, and controversy. ANU Press history centering Indigenous brokers, translators, guides, and knowledge in exploration archives rather than treating voyagers as solitary discoverers. Exact post-end seam where the shared cultural label disappears before later colonial partitions.",
+          "dateScope": {
+            "from": 1850,
+            "to": 1878
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-summaries",
+            "pa-coverage",
+            "pa-missing",
+            "pa-cards",
+            "pa-overrides"
+          ],
+          "locator": "Exact index, summary, coverage, queue, card-index, and override records compared together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pa-map700",
+            "pa-map800",
+            "pa-map900",
+            "pa-map1000",
+            "pa-map1100",
+            "pa-map1200",
+            "pa-map1279",
+            "pa-map1500",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1715",
+            "pa-map1800",
+            "pa-map1815",
+            "pa-map1878"
+          ],
+          "locator": "Deterministic inventory of all manifest snapshots, exact occurrences, file hashes, and adjacent seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1815"
+          ],
+          "locator": "Decoded geometry type, component count, bounds, coordinate hashes, and exact-identity comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1815"
+          ],
+          "locator": "Named-place d3.geoContains probes across every exact target geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700"
+          ],
+          "locator": "Probe-owner audit documenting geographically impossible co-ownership in imported border layers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pa-papuan-history"
+          ],
+          "locator": "ANU linguistic discussion of the logical and comparative-method limits of Papuan as a category.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pa-west-languages"
+          ],
+          "locator": "ANU publication abstract reporting regional language counts and family or isolate diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "ANU archaeological migration synthesis and linguistic treatment of sustained Papuan-Austronesian contact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pa-name-history",
+            "pa-voyage1545"
+          ],
+          "locator": "ANU history of category formation compared with peer-reviewed reconstruction of Malay and Iberian naming.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-papuan-history",
+            "pa-west-languages"
+          ],
+          "locator": "Association judgment bounded by exact atlas metadata and modern linguistic scholarship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco"
+          ],
+          "locator": "UNESCO outstanding universal value, chronology, crops, mounds, and wooden-tool drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pa-kuk-dispute"
+          ],
+          "locator": "Peer-reviewed abstract explicitly laying out competing archaeological interpretations and calibrated dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Science Advances multidisciplinary dates and artifact classes, with authors’ argument for independent social and technical change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pa-aus-mortar"
+          ],
+          "locator": "Australian Museum archaeological distribution study and its cautious crop-correlation proposal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-waim",
+            "pa-map800",
+            "pa-map1200"
+          ],
+          "locator": "Long archaeological chronology compared directly with two arbitrary atlas windows.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-south-arch"
+          ],
+          "locator": "Highland crop evidence and southern regional archaeological synthesis kept geographically separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pa-kikiniu"
+          ],
+          "locator": "Peer-reviewed abstract on ceramic chronology, petrography, rainforest setting, and proposed sago exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional synthesis and Motupore project aims, chronology, and Bay-scale comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pa-aus-trade"
+          ],
+          "locator": "Australian Museum pXRF study of source regions, tool manufacture, procurement, and exchange networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met regional exhibition synthesis used as a carefully dated comparative frame, not direct medieval evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-nebira"
+          ],
+          "locator": "Regional archaeological scope and one community’s differentiated burial evidence used to bound inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Open-area excavation, oral chronology, building interpretation, and authors’ specific regional attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pa-nebira",
+            "pa-dog-burials"
+          ],
+          "locator": "Burial-phase, grave-house, taphonomic, house-post, and ornament evidence from Nebira.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pa-aus-tools",
+            "pa-met-oceania"
+          ],
+          "locator": "Observed craft learning and museum documentation of restricted initiation knowledge, explicitly not back-projected as universal schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pa-unesco-landscape",
+            "pa-huli"
+          ],
+          "locator": "Pacific landscape review on pig exchange and excavated Huli pig-pen interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pa-aus-tools"
+          ],
+          "locator": "Australian Museum account of observations at Legaiyu, Himarata, and Lake Kopiago and their archaeological use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Waim report’s early fiber-craft evidence and associated technological assemblage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pa-bm-canoe"
+          ],
+          "locator": "British Museum object description, materials, technique, acquisition, and broad provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pa-bm-mask"
+          ],
+          "locator": "British Museum record of provenance, correspondence, restoration, replaced material, and recoloring.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met discussion of initiation, controlled ritual knowledge, community arts, and intergenerational transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pa-voyage1545"
+          ],
+          "locator": "Peer-reviewed voyage reconstruction, anchorage, route, Indigenous encounters, naming, and prior Malay information.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pa-west-arch"
+          ],
+          "locator": "Journal of World Prehistory regional review of long-term interaction and early encounter evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pa-slavery"
+          ],
+          "locator": "Peer-reviewed documentary evidence for Papuan origins in eastern Indonesian slave gifting and market systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Genetic and archaeological syntheses on post-contact lineages, chronology, adoption, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pa-kuk-ten"
+          ],
+          "locator": "Kuk chapter’s shell, axe, and sweet-potato movement model through linked local exchanges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pa-dfa-history"
+          ],
+          "locator": "Official chronology distinguishing the 1828 claim from 1898 permanent posts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Dated Admiralty publication and ANU linguistic history identifying Redscar Bay data and later classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pa-intermediaries"
+          ],
+          "locator": "ANU Press collection on Indigenous roles and archival method across exploration histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pa-macfarlane"
+          ],
+          "locator": "Australian Dictionary of Biography voyage, station, language, conflict, and controversy chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact atlas endpoint compared with museum chronology of the 1884 colonial partitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pa-health"
+          ],
+          "locator": "Papua New Guinea Medical Journal abstract, samples, indicators, results, and multifactorial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pa-health",
+            "pa-arch-book"
+          ],
+          "locator": "Evidence-bound negative review across bioarchaeological and regional historical synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-huli"
+          ],
+          "locator": "UNESCO wetland works and excavated house drainage kept separate by time and region.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pa-kuk-dispute",
+            "pa-south-arch"
+          ],
+          "locator": "Explicit negative-evidence audit across highland wetland and southern coastal archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Huli excavation’s drainage, pig-pen, house-conversion, and documented administration or mission hygiene pressure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "Archaeological and linguistic source audit; no invented script or undated modern phrase substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional archaeological source audit distinguishing material evidence from a securely deciphered text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "Voyage and naming sources reviewed for authorship, language, and evidential limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Primary comparative vocabulary and ANU history dating and classifying the Redscar Bay wordlist.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pa-glottolog"
+          ],
+          "locator": "Glottolog bibliographic record, document type, date, and multiple language identifications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-dfa-history",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact post-end seam where the shared cultural label disappears before later colonial partitions. Official overview of early European encounters, the nominal Dutch claim of 1828, Moresby surveys, and later partitions. National Museum of Australia account of the 1884 German annexation and British protectorate following earlier Dutch claims.",
+          "dateScope": {
+            "year": 1878
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "papuans-1200",
+        "name": "Papuans",
+        "from": 1200,
+        "to": 1279,
+        "circa": true,
+        "kind": "culture",
+        "card": "cards/papuans.json",
+        "summary": "Distinct New Guinea communities and histories under one atlas umbrella.",
+        "summarySource": null,
+        "dateBasis": "map_coverage",
+        "predecessors": [],
+        "successors": [],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "papuans-1200",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            131.0647106471065,
+            -10.7382262966659,
+            150.5229052290523,
+            -0.5272682662176749
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papuans-1530",
+      "card": "data/cards/papuans.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pa-index",
+            "pa-map1530",
+            "pa-map1700"
+          ],
+          "locator": "ANU research volume integrating cultural, linguistic, archaeological, and biological histories while preserving the plurality of Papuan-speaking peoples.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pa-map800",
+            "pa-waim"
+          ],
+          "locator": "First papuans snapshot, decoded geometry, representative point membership, overlap owners, topology, and hash. Peer-reviewed Waim excavations on early fiber craft, pestles, figurative stone, axes, obsidian movement, and independent highland innovation.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pa-map900",
+            "pa-aus-trade"
+          ],
+          "locator": "Second identical papuans geometry and exact indexed endpoint control. Museum-published geochemical study tracing flaked, dressed, and ground tools through intra-island and inter-island exchange.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pa-map1000",
+            "pa-map1100",
+            "pa-kikiniu"
+          ],
+          "locator": "Exact seam where the first label disappears despite uninterrupted regional history. Pre-start control for papuans-1200 and evidence of an editorial map gap. Peer-reviewed ceramic study identifying Gulf pottery around 1550 to 1000 calibrated years BP and probable sago-linked exchange.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pa-map1200",
+            "pa-motupore",
+            "pa-dog-burials"
+          ],
+          "locator": "Only papuans-1200 snapshot, decoded polygon, probes, topology, and hash. University-linked archaeological project on Motupore settlement chronology and its relationship to southern coastal exchange. ANU archaeological evidence for long-lived settlements, house posts, reused burials, and dog-tooth ornaments at Nebira and neighboring sites.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pa-map1279",
+            "pa-map1500",
+            "pa-west-arch"
+          ],
+          "locator": "Exact post-end seam control where the papuans-1200 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1530 feature appears. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pa-map1530",
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "First papuans-1530 snapshot, decoded three-component geometry and regional probes. Peer-reviewed reconstruction of the 1545 Ortiz de Retes voyage, Indigenous presence, Malay knowledge, place names, and mapping. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pa-map1600",
+            "pa-west-arch",
+            "pa-slavery"
+          ],
+          "locator": "Unchanged papuans-1530 geometry plus impossible imported global overlap diagnostics. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters. Peer-reviewed comparative history documenting Papuan captives in eastern Indonesian slave gifting and trade without making the system island-wide.",
+          "dateScope": {
+            "from": 1600,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pa-map1650",
+            "pa-west-arch"
+          ],
+          "locator": "Reduced eastern papuans-1530 geometry and a shared topology arc with dutch-east-indies. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pa-map1700",
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Second reduced papuans-1530 geometry, topology neighbor, and impossible imported overlap controls. Peer-reviewed genetic and historical synthesis on disputed introductions, likely post-1500 movement, and rapid highland adoption around 1700. Peer-reviewed commentary connecting New Guinea lineages mainly with post-European dispersal while retaining uncertainty and earlier taro agriculture.",
+          "dateScope": {
+            "from": 1700,
+            "to": 1715
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pa-map1715",
+            "pa-map1800",
+            "pa-name-history"
+          ],
+          "locator": "Exact post-end seam where the papuans-1530 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1815 feature appears. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1715,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "pa-map1815",
+            "pa-language-research"
+          ],
+          "locator": "Only papuans-1815 snapshot, decoded three-component geometry, probes, topology, and hash. ANU linguistic historiography dating Redscar Bay wordlists to 1849 and distinguishing Motu from neighboring languages and later grammars.",
+          "dateScope": {
+            "from": 1815,
+            "to": 1850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-macfarlane",
+            "pa-intermediaries",
+            "pa-map1878"
+          ],
+          "locator": "Public-domain 1852 primary publication with a Redscar Bay vocabulary collected during the 1846 to 1850 survey. Australian Dictionary of Biography chronology for 1871 reconnaissance, 1874 return, village visits, mission stations, languages, and controversy. ANU Press history centering Indigenous brokers, translators, guides, and knowledge in exploration archives rather than treating voyagers as solitary discoverers. Exact post-end seam where the shared cultural label disappears before later colonial partitions.",
+          "dateScope": {
+            "from": 1850,
+            "to": 1878
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-summaries",
+            "pa-coverage",
+            "pa-missing",
+            "pa-cards",
+            "pa-overrides"
+          ],
+          "locator": "Exact index, summary, coverage, queue, card-index, and override records compared together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pa-map700",
+            "pa-map800",
+            "pa-map900",
+            "pa-map1000",
+            "pa-map1100",
+            "pa-map1200",
+            "pa-map1279",
+            "pa-map1500",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1715",
+            "pa-map1800",
+            "pa-map1815",
+            "pa-map1878"
+          ],
+          "locator": "Deterministic inventory of all manifest snapshots, exact occurrences, file hashes, and adjacent seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1815"
+          ],
+          "locator": "Decoded geometry type, component count, bounds, coordinate hashes, and exact-identity comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1815"
+          ],
+          "locator": "Named-place d3.geoContains probes across every exact target geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700"
+          ],
+          "locator": "Probe-owner audit documenting geographically impossible co-ownership in imported border layers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pa-papuan-history"
+          ],
+          "locator": "ANU linguistic discussion of the logical and comparative-method limits of Papuan as a category.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pa-west-languages"
+          ],
+          "locator": "ANU publication abstract reporting regional language counts and family or isolate diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "ANU archaeological migration synthesis and linguistic treatment of sustained Papuan-Austronesian contact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pa-name-history",
+            "pa-voyage1545"
+          ],
+          "locator": "ANU history of category formation compared with peer-reviewed reconstruction of Malay and Iberian naming.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-papuan-history",
+            "pa-west-languages"
+          ],
+          "locator": "Association judgment bounded by exact atlas metadata and modern linguistic scholarship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco"
+          ],
+          "locator": "UNESCO outstanding universal value, chronology, crops, mounds, and wooden-tool drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pa-kuk-dispute"
+          ],
+          "locator": "Peer-reviewed abstract explicitly laying out competing archaeological interpretations and calibrated dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Science Advances multidisciplinary dates and artifact classes, with authors’ argument for independent social and technical change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pa-aus-mortar"
+          ],
+          "locator": "Australian Museum archaeological distribution study and its cautious crop-correlation proposal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-waim",
+            "pa-map800",
+            "pa-map1200"
+          ],
+          "locator": "Long archaeological chronology compared directly with two arbitrary atlas windows.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-south-arch"
+          ],
+          "locator": "Highland crop evidence and southern regional archaeological synthesis kept geographically separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pa-kikiniu"
+          ],
+          "locator": "Peer-reviewed abstract on ceramic chronology, petrography, rainforest setting, and proposed sago exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional synthesis and Motupore project aims, chronology, and Bay-scale comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pa-aus-trade"
+          ],
+          "locator": "Australian Museum pXRF study of source regions, tool manufacture, procurement, and exchange networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met regional exhibition synthesis used as a carefully dated comparative frame, not direct medieval evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-nebira"
+          ],
+          "locator": "Regional archaeological scope and one community’s differentiated burial evidence used to bound inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Open-area excavation, oral chronology, building interpretation, and authors’ specific regional attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pa-nebira",
+            "pa-dog-burials"
+          ],
+          "locator": "Burial-phase, grave-house, taphonomic, house-post, and ornament evidence from Nebira.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pa-aus-tools",
+            "pa-met-oceania"
+          ],
+          "locator": "Observed craft learning and museum documentation of restricted initiation knowledge, explicitly not back-projected as universal schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pa-unesco-landscape",
+            "pa-huli"
+          ],
+          "locator": "Pacific landscape review on pig exchange and excavated Huli pig-pen interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pa-aus-tools"
+          ],
+          "locator": "Australian Museum account of observations at Legaiyu, Himarata, and Lake Kopiago and their archaeological use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Waim report’s early fiber-craft evidence and associated technological assemblage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pa-bm-canoe"
+          ],
+          "locator": "British Museum object description, materials, technique, acquisition, and broad provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pa-bm-mask"
+          ],
+          "locator": "British Museum record of provenance, correspondence, restoration, replaced material, and recoloring.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met discussion of initiation, controlled ritual knowledge, community arts, and intergenerational transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pa-voyage1545"
+          ],
+          "locator": "Peer-reviewed voyage reconstruction, anchorage, route, Indigenous encounters, naming, and prior Malay information.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pa-west-arch"
+          ],
+          "locator": "Journal of World Prehistory regional review of long-term interaction and early encounter evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pa-slavery"
+          ],
+          "locator": "Peer-reviewed documentary evidence for Papuan origins in eastern Indonesian slave gifting and market systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Genetic and archaeological syntheses on post-contact lineages, chronology, adoption, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pa-kuk-ten"
+          ],
+          "locator": "Kuk chapter’s shell, axe, and sweet-potato movement model through linked local exchanges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pa-dfa-history"
+          ],
+          "locator": "Official chronology distinguishing the 1828 claim from 1898 permanent posts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Dated Admiralty publication and ANU linguistic history identifying Redscar Bay data and later classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pa-intermediaries"
+          ],
+          "locator": "ANU Press collection on Indigenous roles and archival method across exploration histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pa-macfarlane"
+          ],
+          "locator": "Australian Dictionary of Biography voyage, station, language, conflict, and controversy chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact atlas endpoint compared with museum chronology of the 1884 colonial partitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pa-health"
+          ],
+          "locator": "Papua New Guinea Medical Journal abstract, samples, indicators, results, and multifactorial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pa-health",
+            "pa-arch-book"
+          ],
+          "locator": "Evidence-bound negative review across bioarchaeological and regional historical synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-huli"
+          ],
+          "locator": "UNESCO wetland works and excavated house drainage kept separate by time and region.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pa-kuk-dispute",
+            "pa-south-arch"
+          ],
+          "locator": "Explicit negative-evidence audit across highland wetland and southern coastal archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Huli excavation’s drainage, pig-pen, house-conversion, and documented administration or mission hygiene pressure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "Archaeological and linguistic source audit; no invented script or undated modern phrase substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional archaeological source audit distinguishing material evidence from a securely deciphered text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "Voyage and naming sources reviewed for authorship, language, and evidential limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Primary comparative vocabulary and ANU history dating and classifying the Redscar Bay wordlist.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pa-glottolog"
+          ],
+          "locator": "Glottolog bibliographic record, document type, date, and multiple language identifications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-dfa-history",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact post-end seam where the shared cultural label disappears before later colonial partitions. Official overview of early European encounters, the nominal Dutch claim of 1828, Moresby surveys, and later partitions. National Museum of Australia account of the 1884 German annexation and British protectorate following earlier Dutch claims.",
+          "dateScope": {
+            "year": 1878
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "papuans-1530",
+        "name": "Papuans",
+        "from": 1530,
+        "to": 1715,
+        "circa": true,
+        "kind": "culture",
+        "card": "cards/papuans.json",
+        "summary": "Distinct New Guinea communities and histories under one atlas umbrella.",
+        "summarySource": null,
+        "dateBasis": "map_coverage",
+        "predecessors": [],
+        "successors": [],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "papuans-1530",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            131.0647106471065,
+            -10.739346747249783,
+            152.26892268922688,
+            -0.5262015898459111
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "papuans-1530",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            131.0647106471065,
+            -10.739346747249783,
+            152.26892268922688,
+            -0.5262015898459111
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "papuans-1530",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            140.74880748807487,
+            -10.739346747249783,
+            152.26892268922688,
+            -2.7951862700451287
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "papuans-1530",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            140.74880748807487,
+            -10.739346747249783,
+            152.26892268922688,
+            -2.7951862700451287
+          ]
+        }
+      ]
+    },
+    {
+      "id": "papuans-1815",
+      "card": "data/cards/papuans.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pa-index",
+            "pa-map1815"
+          ],
+          "locator": "ANU research volume integrating cultural, linguistic, archaeological, and biological histories while preserving the plurality of Papuan-speaking peoples.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pa-map800",
+            "pa-waim"
+          ],
+          "locator": "First papuans snapshot, decoded geometry, representative point membership, overlap owners, topology, and hash. Peer-reviewed Waim excavations on early fiber craft, pestles, figurative stone, axes, obsidian movement, and independent highland innovation.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pa-map900",
+            "pa-aus-trade"
+          ],
+          "locator": "Second identical papuans geometry and exact indexed endpoint control. Museum-published geochemical study tracing flaked, dressed, and ground tools through intra-island and inter-island exchange.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pa-map1000",
+            "pa-map1100",
+            "pa-kikiniu"
+          ],
+          "locator": "Exact seam where the first label disappears despite uninterrupted regional history. Pre-start control for papuans-1200 and evidence of an editorial map gap. Peer-reviewed ceramic study identifying Gulf pottery around 1550 to 1000 calibrated years BP and probable sago-linked exchange.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pa-map1200",
+            "pa-motupore",
+            "pa-dog-burials"
+          ],
+          "locator": "Only papuans-1200 snapshot, decoded polygon, probes, topology, and hash. University-linked archaeological project on Motupore settlement chronology and its relationship to southern coastal exchange. ANU archaeological evidence for long-lived settlements, house posts, reused burials, and dog-tooth ornaments at Nebira and neighboring sites.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pa-map1279",
+            "pa-map1500",
+            "pa-west-arch"
+          ],
+          "locator": "Exact post-end seam control where the papuans-1200 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1530 feature appears. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pa-map1530",
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "First papuans-1530 snapshot, decoded three-component geometry and regional probes. Peer-reviewed reconstruction of the 1545 Ortiz de Retes voyage, Indigenous presence, Malay knowledge, place names, and mapping. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pa-map1600",
+            "pa-west-arch",
+            "pa-slavery"
+          ],
+          "locator": "Unchanged papuans-1530 geometry plus impossible imported global overlap diagnostics. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters. Peer-reviewed comparative history documenting Papuan captives in eastern Indonesian slave gifting and trade without making the system island-wide.",
+          "dateScope": {
+            "from": 1600,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pa-map1650",
+            "pa-west-arch"
+          ],
+          "locator": "Reduced eastern papuans-1530 geometry and a shared topology arc with dutch-east-indies. Peer-reviewed regional synthesis of fragmentary archaeology, long interaction with Island Southeast Asia, trade, and early recorded encounters.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pa-map1700",
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Second reduced papuans-1530 geometry, topology neighbor, and impossible imported overlap controls. Peer-reviewed genetic and historical synthesis on disputed introductions, likely post-1500 movement, and rapid highland adoption around 1700. Peer-reviewed commentary connecting New Guinea lineages mainly with post-European dispersal while retaining uncertainty and earlier taro agriculture.",
+          "dateScope": {
+            "from": 1700,
+            "to": 1715
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pa-map1715",
+            "pa-map1800",
+            "pa-name-history"
+          ],
+          "locator": "Exact post-end seam where the papuans-1530 feature disappears from the atlas. Exact pre-start seam control immediately before the papuans-1815 feature appears. ANU history of the racialized European category Papuan, its earlier usages, and changing descriptions after first encounters.",
+          "dateScope": {
+            "from": 1715,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "pa-map1815",
+            "pa-language-research"
+          ],
+          "locator": "Only papuans-1815 snapshot, decoded three-component geometry, probes, topology, and hash. ANU linguistic historiography dating Redscar Bay wordlists to 1849 and distinguishing Motu from neighboring languages and later grammars.",
+          "dateScope": {
+            "from": 1815,
+            "to": 1850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-macfarlane",
+            "pa-intermediaries",
+            "pa-map1878"
+          ],
+          "locator": "Public-domain 1852 primary publication with a Redscar Bay vocabulary collected during the 1846 to 1850 survey. Australian Dictionary of Biography chronology for 1871 reconnaissance, 1874 return, village visits, mission stations, languages, and controversy. ANU Press history centering Indigenous brokers, translators, guides, and knowledge in exploration archives rather than treating voyagers as solitary discoverers. Exact post-end seam where the shared cultural label disappears before later colonial partitions.",
+          "dateScope": {
+            "from": 1850,
+            "to": 1878
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-summaries",
+            "pa-coverage",
+            "pa-missing",
+            "pa-cards",
+            "pa-overrides"
+          ],
+          "locator": "Exact index, summary, coverage, queue, card-index, and override records compared together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pa-map700",
+            "pa-map800",
+            "pa-map900",
+            "pa-map1000",
+            "pa-map1100",
+            "pa-map1200",
+            "pa-map1279",
+            "pa-map1500",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1715",
+            "pa-map1800",
+            "pa-map1815",
+            "pa-map1878"
+          ],
+          "locator": "Deterministic inventory of all manifest snapshots, exact occurrences, file hashes, and adjacent seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700",
+            "pa-map1815"
+          ],
+          "locator": "Decoded geometry type, component count, bounds, coordinate hashes, and exact-identity comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map1200",
+            "pa-map1530",
+            "pa-map1815"
+          ],
+          "locator": "Named-place d3.geoContains probes across every exact target geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pa-map800",
+            "pa-map900",
+            "pa-map1600",
+            "pa-map1650",
+            "pa-map1700"
+          ],
+          "locator": "Probe-owner audit documenting geographically impossible co-ownership in imported border layers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pa-papuan-history"
+          ],
+          "locator": "ANU linguistic discussion of the logical and comparative-method limits of Papuan as a category.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pa-west-languages"
+          ],
+          "locator": "ANU publication abstract reporting regional language counts and family or isolate diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "ANU archaeological migration synthesis and linguistic treatment of sustained Papuan-Austronesian contact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pa-name-history",
+            "pa-voyage1545"
+          ],
+          "locator": "ANU history of category formation compared with peer-reviewed reconstruction of Malay and Iberian naming.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pa-index",
+            "pa-papuan-history",
+            "pa-west-languages"
+          ],
+          "locator": "Association judgment bounded by exact atlas metadata and modern linguistic scholarship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco"
+          ],
+          "locator": "UNESCO outstanding universal value, chronology, crops, mounds, and wooden-tool drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pa-kuk-dispute"
+          ],
+          "locator": "Peer-reviewed abstract explicitly laying out competing archaeological interpretations and calibrated dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Science Advances multidisciplinary dates and artifact classes, with authors’ argument for independent social and technical change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pa-aus-mortar"
+          ],
+          "locator": "Australian Museum archaeological distribution study and its cautious crop-correlation proposal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-waim",
+            "pa-map800",
+            "pa-map1200"
+          ],
+          "locator": "Long archaeological chronology compared directly with two arbitrary atlas windows.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-south-arch"
+          ],
+          "locator": "Highland crop evidence and southern regional archaeological synthesis kept geographically separate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pa-kikiniu"
+          ],
+          "locator": "Peer-reviewed abstract on ceramic chronology, petrography, rainforest setting, and proposed sago exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional synthesis and Motupore project aims, chronology, and Bay-scale comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pa-aus-trade"
+          ],
+          "locator": "Australian Museum pXRF study of source regions, tool manufacture, procurement, and exchange networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met regional exhibition synthesis used as a carefully dated comparative frame, not direct medieval evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-nebira"
+          ],
+          "locator": "Regional archaeological scope and one community’s differentiated burial evidence used to bound inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Open-area excavation, oral chronology, building interpretation, and authors’ specific regional attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pa-nebira",
+            "pa-dog-burials"
+          ],
+          "locator": "Burial-phase, grave-house, taphonomic, house-post, and ornament evidence from Nebira.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pa-aus-tools",
+            "pa-met-oceania"
+          ],
+          "locator": "Observed craft learning and museum documentation of restricted initiation knowledge, explicitly not back-projected as universal schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pa-unesco-landscape",
+            "pa-huli"
+          ],
+          "locator": "Pacific landscape review on pig exchange and excavated Huli pig-pen interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pa-aus-tools"
+          ],
+          "locator": "Australian Museum account of observations at Legaiyu, Himarata, and Lake Kopiago and their archaeological use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pa-waim"
+          ],
+          "locator": "Waim report’s early fiber-craft evidence and associated technological assemblage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pa-bm-canoe"
+          ],
+          "locator": "British Museum object description, materials, technique, acquisition, and broad provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pa-bm-mask"
+          ],
+          "locator": "British Museum record of provenance, correspondence, restoration, replaced material, and recoloring.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pa-met-oceania"
+          ],
+          "locator": "Met discussion of initiation, controlled ritual knowledge, community arts, and intergenerational transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pa-voyage1545"
+          ],
+          "locator": "Peer-reviewed voyage reconstruction, anchorage, route, Indigenous encounters, naming, and prior Malay information.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pa-west-arch"
+          ],
+          "locator": "Journal of World Prehistory regional review of long-term interaction and early encounter evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pa-slavery"
+          ],
+          "locator": "Peer-reviewed documentary evidence for Papuan origins in eastern Indonesian slave gifting and market systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pa-sweet-genetics",
+            "pa-sweet-dispersal"
+          ],
+          "locator": "Genetic and archaeological syntheses on post-contact lineages, chronology, adoption, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pa-kuk-ten"
+          ],
+          "locator": "Kuk chapter’s shell, axe, and sweet-potato movement model through linked local exchanges.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pa-dfa-history"
+          ],
+          "locator": "Official chronology distinguishing the 1828 claim from 1898 permanent posts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Dated Admiralty publication and ANU linguistic history identifying Redscar Bay data and later classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pa-intermediaries"
+          ],
+          "locator": "ANU Press collection on Indigenous roles and archival method across exploration histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pa-macfarlane"
+          ],
+          "locator": "Australian Dictionary of Biography voyage, station, language, conflict, and controversy chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact atlas endpoint compared with museum chronology of the 1884 colonial partitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pa-health"
+          ],
+          "locator": "Papua New Guinea Medical Journal abstract, samples, indicators, results, and multifactorial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pa-health",
+            "pa-arch-book"
+          ],
+          "locator": "Evidence-bound negative review across bioarchaeological and regional historical synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pa-kuk-unesco",
+            "pa-huli"
+          ],
+          "locator": "UNESCO wetland works and excavated house drainage kept separate by time and region.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pa-kuk-dispute",
+            "pa-south-arch"
+          ],
+          "locator": "Explicit negative-evidence audit across highland wetland and southern coastal archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pa-huli"
+          ],
+          "locator": "Huli excavation’s drainage, pig-pen, house-conversion, and documented administration or mission hygiene pressure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pa-arch-book",
+            "pa-papuan-history"
+          ],
+          "locator": "Archaeological and linguistic source audit; no invented script or undated modern phrase substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pa-south-arch",
+            "pa-motupore"
+          ],
+          "locator": "Regional archaeological source audit distinguishing material evidence from a securely deciphered text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pa-voyage1545",
+            "pa-name-history"
+          ],
+          "locator": "Voyage and naming sources reviewed for authorship, language, and evidential limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pa-rattlesnake",
+            "pa-language-research"
+          ],
+          "locator": "Primary comparative vocabulary and ANU history dating and classifying the Redscar Bay wordlist.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pa-glottolog"
+          ],
+          "locator": "Glottolog bibliographic record, document type, date, and multiple language identifications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pa-map1878",
+            "pa-dfa-history",
+            "pa-nma-colonial"
+          ],
+          "locator": "Exact post-end seam where the shared cultural label disappears before later colonial partitions. Official overview of early European encounters, the nominal Dutch claim of 1828, Moresby surveys, and later partitions. National Museum of Australia account of the 1884 German annexation and British protectorate following earlier Dutch claims.",
+          "dateScope": {
+            "year": 1878
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "papuans-1815",
+        "name": "Papuans",
+        "from": 1815,
+        "to": 1878,
+        "circa": true,
+        "kind": "culture",
+        "card": "cards/papuans.json",
+        "summary": "Distinct New Guinea communities and histories under one atlas umbrella.",
+        "summarySource": null,
+        "dateBasis": "map_coverage",
+        "predecessors": [],
+        "successors": [],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "papuans-1815",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            131.0647106471065,
+            -10.739319159615668,
+            152.26892268922688,
+            -0.526323669082835
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
