@@ -1,0 +1,962 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release138-proto-altaic research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "pa-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, display name, culture kind, approximate 1500 to 323 BCE dates and historical-basemaps provenance."
+    },
+    {
+      "id": "pa-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Five observed intervals, five border files, missing summary, missing card and initially unreviewed identity, chronology and borders."
+    },
+    {
+      "id": "pa-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "Decoded target polygon, coordinates, bounds, point membership, neighbors and 1500 to 1000 BCE interval."
+    },
+    {
+      "id": "pa-map1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Decoded byte-identical target geometry and changed neighboring atlas labels for the 1000 to 700 BCE interval."
+    },
+    {
+      "id": "pa-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Decoded byte-identical target geometry and neighboring atlas layers for the 700 to 500 BCE interval."
+    },
+    {
+      "id": "pa-map500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Decoded target geometry with unchanged tested membership but a different coordinate hash for the 500 to 400 BCE interval."
+    },
+    {
+      "id": "pa-map400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Decoded drastic shrink to a northern residual polygon and simultaneous Xiongnu and Donghu labels for the 400 to 323 BCE interval."
+    },
+    {
+      "id": "pa-map323",
+      "title": "Human History Map 323 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc323.json",
+      "note": "Decoded disappearance of the exact target, patchy replacement coverage and absence of a demonstrated historical fall."
+    },
+    {
+      "id": "pa-transeurasian-nature",
+      "title": "Triangulating the origin of the Transeurasian languages",
+      "url": "https://www.nature.com/articles/s41586-021-04108-8",
+      "note": "A prominent multidisciplinary argument for a Transeurasian family and farming-linked dispersal, useful as one side of an active controversy."
+    },
+    {
+      "id": "pa-transeurasian-critique",
+      "title": "Triangulation fails when neither linguistic, genetic, nor archaeological data support the Transeurasian narrative",
+      "url": "https://www.biorxiv.org/content/10.1101/2022.06.09.495471v1",
+      "note": "Detailed scholarly critique arguing that linguistic, archaeological and genetic evidence does not establish the proposed family or dispersal narrative."
+    },
+    {
+      "id": "pa-vovin",
+      "title": "The End of the Altaic Controversy, bibliographic record",
+      "url": "https://glottolog.org/resource/reference/id/133723",
+      "note": "Glottolog record for Alexander Vovin’s comparative-historical critique of the Altaic etymological reconstruction."
+    },
+    {
+      "id": "pa-altaic-cambridge",
+      "title": "Telling general linguists about Altaic",
+      "url": "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/4062C2C55ABDE1D32E08D74FA26A6330/S0022226798007312a.pdf/telling-general-linguists-about-altaic.pdf",
+      "note": "A published defense showing that Altaic has serious scholarly advocates as well as critics and should be presented as debated."
+    },
+    {
+      "id": "pa-altaic-permutation",
+      "title": "Permutation test applied to lexical reconstructions partially supports the Altaic linguistic macrofamily",
+      "url": "https://www.cambridge.org/core/journals/evolutionary-human-sciences/article/permutation-test-applied-to-lexical-reconstructions-partially-supports-the-altaic-linguistic-macrofamily/DBB4841A08DB2195347CE67A8EF8A593",
+      "note": "Quantitative lexical study reporting partial statistical support while acknowledging contact and unresolved interpretation."
+    },
+    {
+      "id": "pa-bugut",
+      "title": "A Sketch of the Earliest Mongolic Language",
+      "url": "https://brill.com/view/journals/jeal/1/1/article-p162_8.pdf",
+      "note": "Study dating securely interpreted early Mongolic Bugut and Khuis Tolgoi texts to the sixth and early seventh centuries CE, far later than this card."
+    },
+    {
+      "id": "pa-turkic-writing",
+      "title": "Literature of the Turkic Peoples",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_IVb%20silk%20road_oral%20tradition%20and%20the%20literary%20heritage.pdf",
+      "note": "UNESCO history placing surviving Old Turkic inscriptional literature centuries after the atlas interval."
+    },
+    {
+      "id": "pa-pop-dairy",
+      "title": "Bronze Age population dynamics and the rise of dairy pastoralism on the eastern Eurasian steppe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6275519/",
+      "note": "Ancient genomes and milk proteins show local northern Mongolian ancestry alongside adopted sheep, goat and cattle dairying by about 1300 BCE."
+    },
+    {
+      "id": "pa-dairy-5000",
+      "title": "Dairy pastoralism sustained Eastern Eurasian Steppe populations for 5000 years",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7212056/",
+      "note": "Dental calculus proteomics traces ruminant dairy and horse milk consumption while emphasizing regional and chronological differences."
+    },
+    {
+      "id": "pa-early-pastoral",
+      "title": "Early Pastoral Economies and Herding Transitions in Eastern Eurasia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6976682/",
+      "note": "Habitation fauna, structures, horses and transport evidence distinguish changing pastoral economies rather than one timeless nomadic package."
+    },
+    {
+      "id": "pa-genetics",
+      "title": "A Dynamic 6,000-Year Genetic History of Eurasia’s Eastern Steppe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7664836/",
+      "note": "More than 200 ancient genomes reveal repeated mixture and several genetically distinct Bronze Age groups that shared dairy pastoralism."
+    },
+    {
+      "id": "pa-radiocarbon",
+      "title": "Radiocarbon dating and cultural dynamics across Mongolia’s early pastoral transition",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6834239/",
+      "note": "Bayesian modeling clarifies overlapping monument traditions and the late second-millennium expansion of horse-centered practices."
+    },
+    {
+      "id": "pa-slabgrave",
+      "title": "Slab Grave expansion disrupted long co-existence of distinct Bronze Age herders in central Mongolia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12462455/",
+      "note": "New genome-wide evidence separates several herding populations and documents later Slab Grave expansion rather than a single continuous ethnic block."
+    },
+    {
+      "id": "pa-horse-isotopes",
+      "title": "3000 yr-old patterns of mobile pastoralism revealed by multiple isotopes and radiocarbon dating of ancient horses",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12057990/",
+      "note": "Horse tooth isotopes reconstruct repeated movements and suggest that seven deposited horses included a mobile herd managed by a small community."
+    },
+    {
+      "id": "pa-altai-herds",
+      "title": "The spread of herds and horses into the Altai",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9094512/",
+      "note": "Proteomics links long-term ruminant dairying, later horse milk and growing monumentality in western Mongolia."
+    },
+    {
+      "id": "pa-unesco-deer",
+      "title": "Deer Stone Monuments and Related Bronze Age Sites",
+      "url": "https://whc.unesco.org/en/list/1621",
+      "note": "UNESCO synthesis of 1200 to 600 BCE deer stones, khirigsuurs, horse remains, ceremonial landscapes and extraordinary carved art."
+    },
+    {
+      "id": "pa-smithsonian-deer",
+      "title": "Joint Mongolian-Smithsonian Deer Stone Project",
+      "url": "https://mci.si.edu/joint-mongolian-smithsonian-deer-stone-project-hovsgol-aimag-mongolia",
+      "note": "Institutional field-project overview of carved standing stones, Khövsgöl research and association with stone burial mounds."
+    },
+    {
+      "id": "pa-smithsonian-dsk",
+      "title": "The Mongolian Deer Stone-Khirigsuur Complex",
+      "url": "https://repository.si.edu/server/api/core/bitstreams/62c880a2-ca22-40b9-be96-43aa35d2a606/content",
+      "note": "Excavation synthesis of monument plans, shallow human graves, east-facing horse deposits, hearths, feasting remains and preservation limits."
+    },
+    {
+      "id": "pa-horse-sacrifice",
+      "title": "Horse sacrifice and butchery in Bronze Age Mongolia",
+      "url": "https://profiles.si.edu/display/sro_155885",
+      "note": "Smithsonian record for cut-mark and skeletal analysis demonstrating slaughter, dismemberment and meat removal in ritual horse deposits."
+    },
+    {
+      "id": "pa-horse-demography",
+      "title": "Horse demography and use in Bronze Age Mongolia",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1040618215011301",
+      "note": "Age and sex profiles of DSK horses support managed breeding herds and transport use while documenting sample limitations."
+    },
+    {
+      "id": "pa-equine-dentistry",
+      "title": "Origins of equine dentistry",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6055167/",
+      "note": "Directly dated horse teeth show attempted dental care around 1150 BCE and later wolf-tooth extraction alongside metal bits."
+    },
+    {
+      "id": "pa-paleopath",
+      "title": "A palaeopathological analysis of skeletal remains from Bronze Age Mongolia",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30501896/",
+      "note": "Study of 25 northern Mongolian people reports limited visible disease but trauma and joint changes consistent with violence and riding."
+    },
+    {
+      "id": "pa-oxford-bronze",
+      "title": "Bronze Age Mongolia",
+      "url": "https://academic.oup.com/edited-volume/43506/chapter/364132151",
+      "note": "Scholarly synthesis of regional chronologies, sparse settlement evidence, seasonal camps, mixed herds, monuments and uncertain social hierarchy."
+    },
+    {
+      "id": "pa-complexity",
+      "title": "Socially Integrative Facilities and the Emergence of Societal Complexity on the Mongolian Steppe",
+      "url": "https://www.cambridge.org/core/books/abs/social-complexity-in-prehistoric-eurasia/socially-integrative-facilities-and-the-emergence-of-societal-complexity-on-the-mongolian-steppe/2F199BFD38A41FD65EB4EFDD385554EB",
+      "note": "Analysis of how large ritual facilities could coordinate mobile communities without presuming a centralized territorial state."
+    },
+    {
+      "id": "pa-econ-diversification",
+      "title": "Economic Diversification Supported the Growth of Mongolia’s Nomadic Empires",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7054399/",
+      "note": "Stable-isotope evidence shows increasing millet consumption from about 800 BCE and warns against imagining all steppe diets as identical."
+    },
+    {
+      "id": "pa-cereal-networks",
+      "title": "Intensification in pastoralist cereal use coincides with the expansion of trans-regional networks",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6557825/",
+      "note": "Broad isotope and seed study finds cereal uptake varied strongly, with intensive millet use delayed in Mongolia until late in the first millennium BCE."
+    },
+    {
+      "id": "pa-metallurgy",
+      "title": "Ancient bronze technology and nomadic communities of the Middle Gobi Desert",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440310004024",
+      "note": "Metallographic study identifies casting debris, slag, local or regional production and long-distance objects across pre-Xiongnu and Xiongnu contexts."
+    },
+    {
+      "id": "pa-met-art",
+      "title": "Nomadic Art of the Eastern Eurasian Steppes",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2002/nomadic-art",
+      "note": "Museum overview of portable bronze, gold, silver and jade harness fittings, belt ornaments, garment plaques, weapons and vessels."
+    },
+    {
+      "id": "pa-high-altitude",
+      "title": "High altitude hunting, climate change, and pastoral resilience in eastern Eurasia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8275782/",
+      "note": "Ice-patch archaeology recovers organic hunting evidence and shows wild resources remained important within herding economies."
+    },
+    {
+      "id": "pa-reindeer-ice",
+      "title": "Investigating reindeer pastoralism and exploitation of high mountain zones in northern Mongolia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6867603/",
+      "note": "Glacial archaeology demonstrates preservation bias and cautions against projecting historically known reindeer herding unchanged into the Bronze Age."
+    },
+    {
+      "id": "pa-altai-petroglyphs",
+      "title": "Petroglyphic Complexes of the Mongolian Altai",
+      "url": "https://whc.unesco.org/en/list/1382",
+      "note": "UNESCO account of rock art showing long environmental change, herding, hunting and later horse-dependent mobility."
+    },
+    {
+      "id": "pa-gobi-petroglyphs",
+      "title": "Petroglyphic Complexes in the Mongolian Gobi",
+      "url": "https://whc.unesco.org/en/tentativelists/5954/",
+      "note": "Institutional description of riders, herds, hunts, carts and rare cultivation scenes in a multi-period rock-art landscape."
+    },
+    {
+      "id": "pa-icomos",
+      "title": "ICOMOS evaluation of Deer Stone Monuments",
+      "url": "https://whc.unesco.org/archive/2023/whc23-45com-inf8B1-en.pdf",
+      "note": "Expert assessment of dating, integrity, looting, landscape relationships and limits of interpretation for the monument complexes."
+    },
+    {
+      "id": "pa-horse-genomes",
+      "title": "Tracking Five Millennia of Horse Management with Extensive Ancient Genome Time Series",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6547883/",
+      "note": "Ancient horse genomes document changing managed lineages and directly sampled animals from Uushgiin Uvur and later Mongolian sites."
+    },
+    {
+      "id": "pa-earliest-bronze",
+      "title": "The earliest Bronze Age culture of the eastern Eurasian steppe",
+      "url": "https://par.nsf.gov/servlets/purl/10112754",
+      "note": "Peer-reviewed regional synthesis emphasizing long-lived hunter-gatherer traditions, cultural diversity and gradual development of pastoral networks."
+    },
+    {
+      "id": "pa-copper-flow",
+      "title": "Tracing the flows of copper and copper alloys in Early Iron Age eastern Eurasian steppe societies",
+      "url": "https://livrepository.liverpool.ac.uk/3087050/",
+      "note": "University research on ore sources, alloy recipes, primary metal movement, recycling and secondary circulation across steppe networks."
+    },
+    {
+      "id": "pa-fuel",
+      "title": "Burning Resources: Traditional Fuel Uses on the Mongolian Steppe",
+      "url": "https://digitalcommons.wku.edu/stu_hon_theses/588/",
+      "note": "Ethnoarchaeological study of wood, bone and dung fuel that offers cautious analogies for interpreting sparse domestic combustion evidence."
+    },
+    {
+      "id": "pa-khanuy",
+      "title": "Report of the Khanuy Valley Archaeology Project",
+      "url": "https://zooarchaeology.co.uk/resources/Houle%20et%20al.%20-%202010%20-%20Report%20of%20the%20Khanuy%20Valley%20Archaeology%20Project%202010.pdf",
+      "note": "Multidisciplinary field report targeting habitation areas, faunal remains, plants, sediments and camp structure near monuments."
+    }
+  ],
+  "entities": [
+    {
+      "id": "proto-altaic-pastoralists",
+      "card": "data/cards/proto-altaic-pastoralists.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pa-index",
+            "pa-map1500",
+            "pa-map400",
+            "pa-coverage"
+          ],
+          "locator": "Exact indexed id, display name, culture kind, approximate 1500 to 323 BCE dates and historical-basemaps provenance. Decoded target polygon, coordinates, bounds, point membership, neighbors and 1500 to 1000 BCE interval. Decoded drastic shrink to a northern residual polygon and simultaneous Xiongnu and Donghu labels for the 400 to 323 BCE interval. Five observed intervals, five border files, missing summary, missing card and initially unreviewed identity, chronology and borders.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pa-map1500",
+            "pa-earliest-bronze"
+          ],
+          "locator": "Decoded target polygon, coordinates, bounds, point membership, neighbors and 1500 to 1000 BCE interval. Peer-reviewed regional synthesis emphasizing long-lived hunter-gatherer traditions, cultural diversity and gradual development of pastoral networks.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pa-pop-dairy",
+            "pa-radiocarbon",
+            "pa-equine-dentistry"
+          ],
+          "locator": "Ancient genomes and milk proteins show local northern Mongolian ancestry alongside adopted sheep, goat and cattle dairying by about 1300 BCE. Bayesian modeling clarifies overlapping monument traditions and the late second-millennium expansion of horse-centered practices. Directly dated horse teeth show attempted dental care around 1150 BCE and later wolf-tooth extraction alongside metal bits.",
+          "dateScope": {
+            "from": -1300,
+            "to": -1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pa-horse-isotopes",
+            "pa-oxford-bronze"
+          ],
+          "locator": "Horse tooth isotopes reconstruct repeated movements and suggest that seven deposited horses included a mobile herd managed by a small community. Scholarly synthesis of regional chronologies, sparse settlement evidence, seasonal camps, mixed herds, monuments and uncertain social hierarchy.",
+          "dateScope": {
+            "from": -1100,
+            "to": -900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pa-slabgrave",
+            "pa-map700"
+          ],
+          "locator": "New genome-wide evidence separates several herding populations and documents later Slab Grave expansion rather than a single continuous ethnic block. Decoded byte-identical target geometry and neighboring atlas layers for the 700 to 500 BCE interval.",
+          "dateScope": {
+            "from": -900,
+            "to": -700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pa-unesco-deer",
+            "pa-cereal-networks"
+          ],
+          "locator": "UNESCO synthesis of 1200 to 600 BCE deer stones, khirigsuurs, horse remains, ceremonial landscapes and extraordinary carved art. Broad isotope and seed study finds cereal uptake varied strongly, with intensive millet use delayed in Mongolia until late in the first millennium BCE.",
+          "dateScope": {
+            "from": -700,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pa-map500",
+            "pa-copper-flow"
+          ],
+          "locator": "Decoded target geometry with unchanged tested membership but a different coordinate hash for the 500 to 400 BCE interval. University research on ore sources, alloy recipes, primary metal movement, recycling and secondary circulation across steppe networks.",
+          "dateScope": {
+            "from": -500,
+            "to": -400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pa-map400",
+            "pa-map323"
+          ],
+          "locator": "Decoded drastic shrink to a northern residual polygon and simultaneous Xiongnu and Donghu labels for the 400 to 323 BCE interval. Decoded disappearance of the exact target, patchy replacement coverage and absence of a demonstrated historical fall.",
+          "dateScope": {
+            "from": -400,
+            "to": -323
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pa-map1500"
+          ],
+          "locator": "Decoded bounding box and point-in-polygon tests for the exact feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pa-map1500",
+            "pa-map1000",
+            "pa-map700"
+          ],
+          "locator": "Cross-snapshot coordinate hash and topology comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pa-map500"
+          ],
+          "locator": "Exact 500 BCE geometry compared with earlier snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pa-map400"
+          ],
+          "locator": "Point-owner transitions and shrunken residual geometry at the exact seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pa-map323",
+            "pa-coverage"
+          ],
+          "locator": "Endpoint topology gap and exact coverage ledger.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pa-transeurasian-nature",
+            "pa-transeurasian-critique"
+          ],
+          "locator": "Opposed multidisciplinary publications and their explicit claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pa-altaic-cambridge"
+          ],
+          "locator": "Published defense of Altaic as a viable proposal, used with a scope limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pa-altaic-permutation"
+          ],
+          "locator": "Study result and authors’ stated interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pa-vovin"
+          ],
+          "locator": "Comparative-historical critique represented through its bibliographic record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pa-bugut",
+            "pa-turkic-writing"
+          ],
+          "locator": "Dates of securely interpreted later inscriptions and explicit no-sample decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pa-radiocarbon"
+          ],
+          "locator": "Modeled radiocarbon chronology and its interpretive purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pa-genetics"
+          ],
+          "locator": "Genome-wide population structure and shared economic practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pa-dairy-5000"
+          ],
+          "locator": "Dental-calculus proteomics method, species resolution and sampling limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pa-horse-isotopes"
+          ],
+          "locator": "Sequential tooth-isotope result and cautious social inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pa-khanuy"
+          ],
+          "locator": "Multidisciplinary habitation-site sampling design.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pa-early-pastoral"
+          ],
+          "locator": "Faunal evidence and economic transition across eastern Eurasia.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pa-pop-dairy"
+          ],
+          "locator": "Proteomic, genomic and lactase-persistence results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pa-dairy-5000"
+          ],
+          "locator": "Earliest direct horse-milk evidence and explicit recipe caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pa-cereal-networks"
+          ],
+          "locator": "Regional millet chronology and distinction between presence and cultivation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pa-high-altitude",
+            "pa-reindeer-ice"
+          ],
+          "locator": "Ice-patch evidence for hunting, mountain use and organic preservation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pa-early-pastoral"
+          ],
+          "locator": "Osteological evidence for riding and economic diversification of horse use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pa-equine-dentistry"
+          ],
+          "locator": "Microscopic modifications, direct dates and equipment association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pa-horse-demography"
+          ],
+          "locator": "Age and sex estimates with ritual-sample limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pa-horse-sacrifice"
+          ],
+          "locator": "Taphonomic and cut-mark analysis of twenty-one partial horse burials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pa-horse-genomes"
+          ],
+          "locator": "Directly sampled ancient horse genomes and management scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pa-unesco-deer"
+          ],
+          "locator": "UNESCO counts, scale, distribution and artistic assessment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pa-smithsonian-deer"
+          ],
+          "locator": "Field-project observations of form, setting and distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pa-smithsonian-dsk"
+          ],
+          "locator": "Excavated spatial associations, animal deposits and preservation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pa-metallurgy",
+            "pa-copper-flow"
+          ],
+          "locator": "Metallographic production evidence and alloy-circulation research.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pa-met-art"
+          ],
+          "locator": "Museum object categories and first-millennium steppe context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pa-oxford-bronze"
+          ],
+          "locator": "Seasonal-camp evidence and distance estimates in the scholarly synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pa-early-pastoral"
+          ],
+          "locator": "Excavated circular structures and preservation limit on reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pa-fuel"
+          ],
+          "locator": "Ethnoarchaeological fuel categories and analogy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pa-icomos"
+          ],
+          "locator": "Expert evaluation of carved dress and artifact context, with preservation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pa-altai-herds"
+          ],
+          "locator": "Long-term dairy sequence and social investment in monuments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pa-pop-dairy"
+          ],
+          "locator": "Local ancestry and adopted dairying contrasted with cultural and household labels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pa-complexity"
+          ],
+          "locator": "Social integration model and alternatives to centralized rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pa-paleopath"
+          ],
+          "locator": "Bioarchaeological scope and caution against extending a small skeletal sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pa-smithsonian-deer"
+          ],
+          "locator": "Skilled craft and field context used for a bounded learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pa-altai-petroglyphs"
+          ],
+          "locator": "Long-duration rock-art sequence and explicit limits on daily-life inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pa-paleopath"
+          ],
+          "locator": "Sample size, reported pathologies and preservation limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pa-equine-dentistry"
+          ],
+          "locator": "Direct veterinary evidence contrasted with absent human treatment texts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pa-oxford-bronze"
+          ],
+          "locator": "Seasonal landscape logic and camp-placement evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pa-khanuy"
+          ],
+          "locator": "Habitation-research scope and explicit absence of identified standardized sanitation structures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pa-dairy-5000"
+          ],
+          "locator": "Dental-calculus method and preservation caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pa-unesco-deer"
+          ],
+          "locator": "Monument scale and contextual association, paired with a governance limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pa-slabgrave"
+          ],
+          "locator": "Genome-wide expansion result and multicausal interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pa-econ-diversification"
+          ],
+          "locator": "Isotopic shift and diversification conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pa-gobi-petroglyphs"
+          ],
+          "locator": "Multi-period imagery and bounded inference about economy and violence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pa-map323",
+            "pa-genetics"
+          ],
+          "locator": "Exact endpoint combined with later population-history evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pa-map400",
+            "pa-map323",
+            "pa-genetics"
+          ],
+          "locator": "Decoded drastic shrink to a northern residual polygon and simultaneous Xiongnu and Donghu labels for the 400 to 323 BCE interval. Decoded disappearance of the exact target, patchy replacement coverage and absence of a demonstrated historical fall. More than 200 ancient genomes reveal repeated mixture and several genetically distinct Bronze Age groups that shared dairy pastoralism.",
+          "dateScope": {
+            "year": -323
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "proto-altaic-pastoralists",
+        "card": "cards/proto-altaic-pastoralists.json",
+        "dateBasis": "map_coverage",
+        "summary": "A disputed atlas umbrella over many Bronze and Early Iron Age communities. Archaeology shows varied regional herding, hunting, dairying, riding, craft and monument traditions, not one Proto-Altaic people or state.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "proto-altaic-pastoralists",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            81.42381423814237,
+            38.961738663341364,
+            141.25641256412564,
+            59.81775177562703
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "proto-altaic-pastoralists",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            81.42381423814237,
+            38.961738663341364,
+            141.25641256412564,
+            59.81775177562703
+          ]
+        },
+        {
+          "file": "world-bc400.json",
+          "properties": {
+            "civ": "proto-altaic-pastoralists",
+            "from": -400,
+            "to": -323,
+            "precision": 1
+          },
+          "bounds": [
+            99.4851948519485,
+            52.46989881978729,
+            118.1189811898119,
+            59.81775177562703
+          ]
+        },
+        {
+          "file": "world-bc500.json",
+          "properties": {
+            "civ": "proto-altaic-pastoralists",
+            "from": -500,
+            "to": -400,
+            "precision": 1
+          },
+          "bounds": [
+            81.42381423814237,
+            38.961738663341364,
+            141.25641256412564,
+            59.81775177562703
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "proto-altaic-pastoralists",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            81.42381423814237,
+            38.961738663341364,
+            141.25641256412564,
+            59.81775177562703
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
