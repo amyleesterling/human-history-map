@@ -1,0 +1,2471 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release160-malays-shared research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "ml-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact ids, display names, approximate lifetimes, and imported historical-basemaps provenance for all three target records."
+    },
+    {
+      "id": "ml-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported modern ethnicity and language summaries reviewed as leads and rejected as direct evidence for the ancient atlas intervals."
+    },
+    {
+      "id": "ml-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Observed border intervals, source-file counts, and missing-review state for the three exact records."
+    },
+    {
+      "id": "ml-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms that all three exact ids were unassigned missing cards before this research packet."
+    },
+    {
+      "id": "ml-cards",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Direct check that no exact target id already loaded a researched card before packet construction."
+    },
+    {
+      "id": "ml-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Direct check that no exact target id already had a researched identity or chronology override."
+    },
+    {
+      "id": "ml-map-bc300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Pre-start control for the earliest label and representative island point ownership."
+    },
+    {
+      "id": "ml-map-bc200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Sole snapshot containing malays; decoded fourteen-component geometry, point membership, arcs, and source hash."
+    },
+    {
+      "id": "ml-map-bc100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Endpoint control where the early label disappears without a documented population-ending event."
+    },
+    {
+      "id": "ml-map-700",
+      "title": "Human History Map 700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Pre-start control for the medieval malay record and its neighboring atlas categories."
+    },
+    {
+      "id": "ml-map-800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "First medieval malay snapshot; decoded eleven-component geometry and direct topology seams with Srivijaya and Mataram."
+    },
+    {
+      "id": "ml-map-900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Second medieval malay snapshot; unchanged target geometry but changed surrounding owner layers."
+    },
+    {
+      "id": "ml-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Endpoint control where malay disappears while island communities and documented ports continue."
+    },
+    {
+      "id": "ml-map-1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Pre-start control for the late malays-1200 label and regional political layers."
+    },
+    {
+      "id": "ml-map-1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Sole malays-1200 snapshot; decoded three-component Borneo, Sulawesi, and Mindanao-Sulu envelope with topology seams."
+    },
+    {
+      "id": "ml-map-1279",
+      "title": "Human History Map 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Endpoint control where the late cultural label disappears at an editorial snapshot seam."
+    },
+    {
+      "id": "ml-ov-anu",
+      "title": "ANU Press: Malayic Dayak and a Bornean homeland of Malay",
+      "url": "https://press.anu.edu.au/downloads/press/p69411/mobile/ch04s03.html",
+      "note": "University synthesis links conservative Bornean Malayic languages to Proto-Malayic and seventh-century Old Malay while preserving scholarly uncertainty."
+    },
+    {
+      "id": "ml-ov-language",
+      "title": "Cambridge Handbook: geographic and demographic expansion of Malay",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-handbook-of-language-contact/geographic-and-demographic-expansion-of-malay/1F64B4A1BC4AC5D425A02273124203AC",
+      "note": "Authoritative linguistic chapter distinguishes Old Malay, later trade languages, regional varieties, and the evidence behind mapped expansion."
+    },
+    {
+      "id": "ml-ov-ports",
+      "title": "UNESCO Silk Roads: Ancient trading centres in the Malay Peninsula",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/ancient_trading_centres_in_the_malay_peninsula.pdf",
+      "note": "Authoritative archaeological synthesis covers early port discovery, coastal exchange, Chinese ceramics, craft finds, and changing interpretations."
+    },
+    {
+      "id": "ml-ov-ph",
+      "title": "National Museum of the Philippines: Ginikanan/Gigikanan",
+      "url": "https://www.nationalmuseum.gov.ph/exhibitions/nmp-butuan/ginikanan-gigikanan/",
+      "note": "National museum exhibition presents Butuan as a distinct maritime transit port and trading center within wider Southeast Asian exchange."
+    },
+    {
+      "id": "ml-ov-muarojambi",
+      "title": "UNESCO World Heritage Centre: Muarajambi Temple Compound",
+      "url": "https://whc.unesco.org/en/tentativelists/6827",
+      "note": "Official heritage dossier situates Malayu and Srivijaya in trade, Buddhist learning, architecture, and the seventh-to-fourteenth-century Batanghari landscape."
+    },
+    {
+      "id": "ml-bellwood",
+      "title": "ANU: Prehistory of the Indo-Malaysian Archipelago",
+      "url": "https://openresearch-repository.anu.edu.au/items/984d3f27-0364-4e0b-b8bf-37aaa20fedbe/full",
+      "note": "University monograph synthesizes archaeology and language evidence across the archipelago while warning against simple ethnic readings of material culture."
+    },
+    {
+      "id": "ml-proto",
+      "title": "ANU: Notes on the prehistory and internal subgrouping of Malayic",
+      "url": "https://openresearch-repository.anu.edu.au/server/api/core/bitstreams/14504a0e-be5e-4830-b26b-0515af01b409/content",
+      "note": "Comparative linguistic study places the likely Proto-Malayic homeland near western Borneo and explains uncertainty in subgroup reconstruction."
+    },
+    {
+      "id": "ml-oxford",
+      "title": "ANU record: Archaeological correlations for Malayo-Polynesian dispersal",
+      "url": "https://openresearch-repository.anu.edu.au/entities/publication/d555dee1-c551-4984-a9bd-b8a328990dcb",
+      "note": "Oxford handbook chapter record frames more than eight hundred Malayo-Polynesian languages and separates archaeological, genetic, and linguistic arguments."
+    },
+    {
+      "id": "ml-khao-food",
+      "title": "Antiquity: rice, beans, and trade crops on the early maritime route",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/rice-beans-and-trade-crops-on-the-early-maritime-silk-route-in-southeast-asia/CFD0781CA7561FACAD744E0FA3DF8EA7",
+      "note": "Peer-reviewed archaeobotany dates Khao Sam Kaeo and Phu Khao Thong and identifies rice, millets, pulses, cotton, sesame, and mixed communities."
+    },
+    {
+      "id": "ml-khao-port",
+      "title": "Cambridge Archaeological Journal: Southeast Asian port networks",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/southeast-asia-and-the-mediterranean-world-at-the-turn-of-the-first-millennium-ce-networks-commodities-and-cultural-reception/1F34EB90DD00A9F1045137BA977D2531",
+      "note": "Peer-reviewed synthesis identifies specialized glass and stone industries, settlement networks, and fourth-to-first-century BCE port chronology."
+    },
+    {
+      "id": "ml-khao-ceramics",
+      "title": "Cambridge: Indian and Indian-style wares from Khao Sam Kaeo",
+      "url": "https://www.cambridge.org/core/books/abs/early-interactions-between-south-and-southeast-asia/preliminary-study-of-indian-and-indian-style-wares-from-khao-sam-kaeo-chumphon-peninsular-thailand-fourthsecond-centuries-bce/FD1F6F8738386594ADF48C047CCF640B",
+      "note": "Scholarly technological study uses fourth-to-second-century BCE ceramics to examine local production, exchange, and interaction with South Asia."
+    },
+    {
+      "id": "ml-kuala",
+      "title": "UNESCO Silk Roads PDF: Ancient ports in Malaysia",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/ancient_ports_in_malaysia.pdf",
+      "note": "Full archaeological report documents Kuala Selinsing food remains, deep-sea fish, shell, burials, a child grave, pottery, beads, and nonviolent abandonment."
+    },
+    {
+      "id": "ml-kuala-page",
+      "title": "UNESCO Silk Roads: Kuala Selinsing and Pulau Kelumpang preservation",
+      "url": "https://en.unesco.org/silkroad/knowledge-bank/ancient-ports-malaysia",
+      "note": "Authoritative article summarizes the long occupation sequence and oxygen-poor mangrove preservation of food, burials, pottery, gems, and jewelry."
+    },
+    {
+      "id": "ml-bm-bukit",
+      "title": "British Museum: Bukit Tengku Lembu cemetery collection",
+      "url": "https://www.britishmuseum.org/collection/term/AUTH239917",
+      "note": "Museum catalogue dates excavated bowls, stands, urns, and tazzas from a Perlis cemetery to roughly 300 to 200 BCE."
+    },
+    {
+      "id": "ml-bm-bell",
+      "title": "British Museum: second-century BCE bell from Selangor",
+      "url": "https://www.britishmuseum.org/collection/search?page=7&place=Malaysia",
+      "note": "Museum catalogue preserves a firmly catalogued second-century BCE metal object from the peninsula without assigning its maker an ethnicity."
+    },
+    {
+      "id": "ml-bujang",
+      "title": "Department of Museums Malaysia: Lembah Bujang Archaeological Museum",
+      "url": "https://www.jmm.gov.my/en/lembah-bujang-archaeological-museum",
+      "note": "National museum describes third-to-twelfth-century port trade, ceramics, glass beads, architecture, and Hindu-Buddhist material at Bujang Valley."
+    },
+    {
+      "id": "ml-kedukan",
+      "title": "Indonesian Cultural Preservation Agency: Kedukan Bukit inscription",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpcbjambi/prasasti-kedukan-bukit/",
+      "note": "Government heritage record supplies the 682 Old Malay inscription text, dates, voyage, troops, boats, settlement, and prosperity formula."
+    },
+    {
+      "id": "ml-telaga",
+      "title": "Indonesian Cultural Preservation Agency: Telaga Batu inscription",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpcbjambi/prasasti-telaga-batu/",
+      "note": "Government heritage record dates the Old Malay-Pallava inscription and lists royal relatives, officials, scribes, smiths, captains, merchants, washers, servants, and loyalty rituals."
+    },
+    {
+      "id": "ml-damar",
+      "title": "Indonesian Heritage Directorate: resin in Srivijaya trade",
+      "url": "https://kebudayaan.kemdikbud.go.id/dpk/damar-dalam-jaringan-perdagangan-masa-kerajaan-sriwijaya/",
+      "note": "Government archaeology traces damar from inland river collection sites through traders and ship captains to Palembang and overseas exchange."
+    },
+    {
+      "id": "ml-srivijaya",
+      "title": "Cambridge: rise of the Srivijayan thalassocracy",
+      "url": "https://www.cambridge.org/core/books/abs/worlds-of-the-indian-ocean/southeast-asia-the-rise-of-the-sriwijayan-thalassocracy-and-the-javanese-kingdoms/D6E0F847D4F1C3880BB888F20F503C4C",
+      "note": "University history distinguishes Malayu at Jambi from Srivijaya, Chinese records, Old Malay inscriptions, and shifting maritime power."
+    },
+    {
+      "id": "ml-yijing",
+      "title": "Cambridge: Esoteric Buddhism in Mediaeval Maritime Asia",
+      "url": "https://www.cambridge.org/core/books/esoteric-buddhism-in-mediaeval-maritime-asia/A5B46A561DC9C3AB31FEB133BFEE7763/listing?pageNum=1",
+      "note": "Scholarly volume documents Yijing learning Sanskrit at Srivijaya in 671 and the port-capital as an international Buddhist center."
+    },
+    {
+      "id": "ml-nalanda",
+      "title": "Nalanda University: Searching for the Curriculum of Sriwijaya",
+      "url": "https://www.nalandauniv.edu.in/docs/searching-for-curriculum-of-sriwijaya.pdf",
+      "note": "University study links Balaputradeva of Suvarnadvipa with a ninth-century Nalanda monastery and examines transregional education evidence."
+    },
+    {
+      "id": "ml-laguna-nmp",
+      "title": "National Museum of the Philippines: Laguna inscription and Butuan boats",
+      "url": "https://www.nationalmuseum.gov.ph/2022/09/20/the-9th-to-10th-century-archaeological-evidence-of-maritime-relations-between-the-philippines-and-the-islands-of-southeast-asia/",
+      "note": "National museum dates the Laguna Copperplate to 900, identifies Early Kawi writing, and places it beside regional boat and ceramic evidence."
+    },
+    {
+      "id": "ml-laguna-text",
+      "title": "Philippine Studies: Laguna Copperplate inscription text and translation",
+      "url": "https://www.sealang.net/oldmalay/archives/postma1992laguna.pdf",
+      "note": "Peer-reviewed edition gives the ten-line Old Malay-dominant text, Early Kawi transliteration, debt release, people, titles, and places."
+    },
+    {
+      "id": "ml-butuan-unesco",
+      "title": "UNESCO World Heritage Centre: Butuan Archaeological Sites",
+      "url": "https://whc.unesco.org/en/tentativelists/2071",
+      "note": "National Museum nomination documents tenth-to-thirteenth-century boats, trade ceramics, gold workshops, burials, and international port activity."
+    },
+    {
+      "id": "ml-butuan-nmp",
+      "title": "National Museum of the Philippines: Butuan regional museum",
+      "url": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/butuan/",
+      "note": "National museum records boat excavations, waterlogged context, eighth-to-tenth-century dating, and preserved material culture."
+    },
+    {
+      "id": "ml-santubong",
+      "title": "Sarawak Museum Department: archaeology at Santubong",
+      "url": "https://museum.sarawak.gov.my/web/subpage/webpage_view/106",
+      "note": "State museum identifies Santubong as a major eleventh-to-thirteenth-century trading and iron-working center with thousands of ceramic sherds."
+    },
+    {
+      "id": "ml-muarojambi-astano",
+      "title": "Indonesian Heritage Directorate: Candi Astano at Muarojambi",
+      "url": "https://kebudayaan.kemdikbud.go.id/dpk/candi-astano/",
+      "note": "Government archaeology documents a temple enclosure, surrounding ditch, Song-Yuan ceramics, beads, hearth remains, and a temporary pilgrim settlement."
+    },
+    {
+      "id": "ml-sulawesi",
+      "title": "Brill: Political economy and trade in pre-Islamic South Sulawesi",
+      "url": "https://brill.com/display/book/9789004253827/B9789004253827-s002.pdf",
+      "note": "Archaeological synthesis dates widespread Chinese and mainland Southeast Asian trade wares from about the thirteenth century and separates later Bugis kingdoms."
+    },
+    {
+      "id": "ml-dharmasraya",
+      "title": "Indonesian Cultural Preservation Agency: temples of West Sumatra",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpcbsumbar/candi-candi-di-sumatera-barat/",
+      "note": "Government heritage synthesis places Malayu first near Jambi and later Dharmasraya, with the dated 1286 Amoghapasa inscription."
+    },
+    {
+      "id": "ml-pamalayu",
+      "title": "BRIN archaeology journal: Periodization of Candi Simangambat",
+      "url": "https://ejournal.brin.go.id/amerta/article/download/3511/2465/10491",
+      "note": "Government archaeology dates the 1275 Pamalayu expedition and the 1286 Amoghapasa diplomatic gift sent to Malayu."
+    },
+    {
+      "id": "ml-terengganu",
+      "title": "UNESCO Memory of the World: Terengganu Inscribed Stone",
+      "url": "https://www.unesco.org/en/memory-world/batu-bersurat-terengganu-inscribed-stone-terengganu",
+      "note": "Authoritative heritage record identifies the earliest Jawi evidence in the Malay Muslim world; its nomination dates the Malay text to 1303."
+    },
+    {
+      "id": "ml-terengganu-nomination",
+      "title": "UNESCO Memory of the World nomination: Terengganu Inscribed Stone",
+      "url": "https://media.unesco.org/sites/default/files/webform/mow001/malaysiaterengganu.pdf",
+      "note": "Official nomination describes the Malay Jawi inscription, 702 Hijri date corresponding to 1303, law, trade, and cultural setting."
+    },
+    {
+      "id": "ml-terengganu-gov",
+      "title": "Malaysia National Heritage Department: Terengganu Inscribed Stone",
+      "url": "https://www.heritage.gov.my/ms/iv-batu-bersurat-terengganu.html",
+      "note": "Government heritage account identifies early Jawi, regional maritime commerce, religious law, Sanskrit survivals, and continuity of earlier life."
+    },
+    {
+      "id": "ml-talang",
+      "title": "Indonesian archaeology: sago and the Talang Tuo garden",
+      "url": "https://download.garuda.kemdikbud.go.id/article.php?article=914906&title=Etnobotani+sagu+Metroxylon+sagu+warisan+Budaya+Masa+Sriwijaya+di+Lahan+Basah+Air+Sugihan+Sumatera+Selatan&val=14352",
+      "note": "Government-hosted archaeological study links the 684 garden inscription with coconut, areca, sugar palm, sago, bamboo, and edible fruit."
+    },
+    {
+      "id": "ml-kotakapur",
+      "title": "Indonesian Heritage Directorate: Kota Kapur site",
+      "url": "https://kebudayaan.kemdikbud.go.id/dpk/situs-kota-kapur/",
+      "note": "Government archaeology documents a seventh-century Old Malay inscription, stone-laterite structure, religious sculpture, and Bangka setting."
+    },
+    {
+      "id": "ml-ships",
+      "title": "Cambridge: Ships, Sailors and Kingdoms of Ancient Southeast Asia",
+      "url": "https://www.cambridge.org/core/books/abs/sea-in-history-the-ancient-world/ships-sailors-and-kingdoms-of-ancient-southeast-asia/F6AF2DE062AF3622E7259DF563ECF253",
+      "note": "Scholarly maritime history covers seafaring technology, exchange, and political diversity from 500 BCE to 1500 CE."
+    },
+    {
+      "id": "ml-trade",
+      "title": "Cambridge: Commodity flows in the eastern Indian Ocean, 1000 to 1500",
+      "url": "https://www.cambridge.org/core/journals/trans-trans-regional-and-national-studies-of-southeast-asia/article/commodity-flows-diaspora-networking-and-contested-agency-in-the-eastern-indian-ocean-c-10001500/0D6BC7604A0D8F0459BF1565177483CB",
+      "note": "Peer-reviewed study emphasizes merchant agency, diasporas, commodities, port competition, Chola raids, and porous political boundaries."
+    },
+    {
+      "id": "ml-burials",
+      "title": "National Museum of the Philippines: pre-colonial burial traditions",
+      "url": "https://www.nationalmuseum.gov.ph/2021/11/02/pre-colonial-burial-traditions/",
+      "note": "National museum survey distinguishes regional burial practices and dates boat-shaped coffins at several Philippine sites to the twelfth through fifteenth centuries."
+    },
+    {
+      "id": "ml-jmm-writing",
+      "title": "Department of Museums Malaysia: Kedah epigraphy workshop",
+      "url": "https://www.jmm.gov.my/files/pages_files/Berita%20JMM%20Jld%2037%20Bil%202%20%28Mei-Ogos%202022%29.pdf",
+      "note": "National museum publication lists Bujang Valley inscriptions and distinguishes Sanskrit-Pallava records from later Old Malay forms."
+    },
+    {
+      "id": "ml-manuscript",
+      "title": "Malaysia National Heritage Department: Malay manuscripts",
+      "url": "https://www.heritage.gov.my/ms/manuskrip",
+      "note": "Government heritage overview discusses writing materials and makes clear that surviving Malay manuscript culture is substantially later than the target windows."
+    }
+  ],
+  "entities": [
+    {
+      "id": "malays",
+      "card": "data/cards/malays.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ml-ov-anu",
+            "ml-ov-language",
+            "ml-ov-ports",
+            "ml-ov-ph",
+            "ml-ov-muarojambi"
+          ],
+          "locator": "University synthesis links conservative Bornean Malayic languages to Proto-Malayic and seventh-century Old Malay while preserving scholarly uncertainty. Authoritative linguistic chapter distinguishes Old Malay, later trade languages, regional varieties, and the evidence behind mapped expansion. Authoritative archaeological synthesis covers early port discovery, coastal exchange, Chinese ceramics, craft finds, and changing interpretations. National museum exhibition presents Butuan as a distinct maritime transit port and trading center within wider Southeast Asian exchange. Official heritage dossier situates Malayu and Srivijaya in trade, Buddhist learning, architecture, and the seventh-to-fourteenth-century Batanghari landscape.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ml-map-bc300",
+            "ml-map-bc200",
+            "ml-khao-port"
+          ],
+          "locator": "Pre-start control for the earliest label and representative island point ownership. Sole snapshot containing malays; decoded fourteen-component geometry, point membership, arcs, and source hash. Peer-reviewed synthesis identifies specialized glass and stone industries, settlement networks, and fourth-to-first-century BCE port chronology.",
+          "dateScope": {
+            "from": -200,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-kuala"
+          ],
+          "locator": "Endpoint control where the early label disappears without a documented population-ending event. Full archaeological report documents Kuala Selinsing food remains, deep-sea fish, shell, burials, a child grave, pottery, beads, and nonviolent abandonment.",
+          "dateScope": {
+            "from": -100,
+            "to": 200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ml-khao-ceramics",
+            "ml-ships"
+          ],
+          "locator": "Scholarly technological study uses fourth-to-second-century BCE ceramics to examine local production, exchange, and interaction with South Asia. Scholarly maritime history covers seafaring technology, exchange, and political diversity from 500 BCE to 1500 CE.",
+          "dateScope": {
+            "from": 200,
+            "to": 400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ml-kotakapur",
+            "ml-jmm-writing"
+          ],
+          "locator": "Government archaeology documents a seventh-century Old Malay inscription, stone-laterite structure, religious sculpture, and Bangka setting. National museum publication lists Bujang Valley inscriptions and distinguishes Sanskrit-Pallava records from later Old Malay forms.",
+          "dateScope": {
+            "from": 400,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ml-kedukan",
+            "ml-srivijaya"
+          ],
+          "locator": "Government heritage record supplies the 682 Old Malay inscription text, dates, voyage, troops, boats, settlement, and prosperity formula. University history distinguishes Malayu at Jambi from Srivijaya, Chinese records, Old Malay inscriptions, and shifting maritime power.",
+          "dateScope": {
+            "from": 600,
+            "to": 700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ml-map-700",
+            "ml-yijing"
+          ],
+          "locator": "Pre-start control for the medieval malay record and its neighboring atlas categories. Scholarly volume documents Yijing learning Sanskrit at Srivijaya in 671 and the port-capital as an international Buddhist center.",
+          "dateScope": {
+            "from": 700,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-bujang"
+          ],
+          "locator": "First medieval malay snapshot; decoded eleven-component geometry and direct topology seams with Srivijaya and Mataram. National museum describes third-to-twelfth-century port trade, ceramics, glass beads, architecture, and Hindu-Buddhist material at Bujang Valley.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ml-map-900",
+            "ml-laguna-nmp"
+          ],
+          "locator": "Second medieval malay snapshot; unchanged target geometry but changed surrounding owner layers. National museum dates the Laguna Copperplate to 900, identifies Early Kawi writing, and places it beside regional boat and ceramic evidence.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "ml-map-1000",
+            "ml-trade"
+          ],
+          "locator": "Endpoint control where malay disappears while island communities and documented ports continue. Peer-reviewed study emphasizes merchant agency, diasporas, commodities, port competition, Chola raids, and porous political boundaries.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "ml-map-1100",
+            "ml-santubong"
+          ],
+          "locator": "Pre-start control for the late malays-1200 label and regional political layers. State museum identifies Santubong as a major eleventh-to-thirteenth-century trading and iron-working center with thousands of ceramic sherds.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "ml-map-1200",
+            "ml-sulawesi"
+          ],
+          "locator": "Sole malays-1200 snapshot; decoded three-component Borneo, Sulawesi, and Mindanao-Sulu envelope with topology seams. Archaeological synthesis dates widespread Chinese and mainland Southeast Asian trade wares from about the thirteenth century and separates later Bugis kingdoms.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1275
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-terengganu-nomination"
+          ],
+          "locator": "Government archaeology dates the 1275 Pamalayu expedition and the 1286 Amoghapasa diplomatic gift sent to Malayu. Official nomination describes the Malay Jawi inscription, 702 Hijri date corresponding to 1303, law, trade, and cultural setting.",
+          "dateScope": {
+            "from": 1275,
+            "to": 1303
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ml-index",
+            "ml-summary",
+            "ml-missing",
+            "ml-cards",
+            "ml-overrides"
+          ],
+          "locator": "Exact index, imported summaries, missing-card state, card index, and override registry checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ml-coverage",
+            "ml-map-bc200"
+          ],
+          "locator": "Deterministic fifty-snapshot audit, occurrence counts, geometry hash continuity, and coverage comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ml-map-bc200"
+          ],
+          "locator": "Decoded geometry type, component count, bounding box, and fixed point membership probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-map-900"
+          ],
+          "locator": "Decoded unchanged geometry, representative point membership, and direct shared arc ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ml-map-1200"
+          ],
+          "locator": "Decoded three-component geometry and direct topology seams, with interpretation explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ml-proto"
+          ],
+          "locator": "Comparative linguistic homeland argument and limits on translating language reconstruction into ethnicity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ml-proto",
+            "ml-laguna-text"
+          ],
+          "locator": "Historical linguistic distribution of Old Malay, administrative use, and regional expansion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ml-oxford"
+          ],
+          "locator": "Oxford handbook scale of Malayo-Polynesian diversity and careful separation of subgroup relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ml-srivijaya",
+            "ml-dharmasraya"
+          ],
+          "locator": "Named polity chronology compared with broader linguistic and identity uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000"
+          ],
+          "locator": "Atlas gaps and shifting target geography used to bound the shared association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ml-khao-port"
+          ],
+          "locator": "Peer-reviewed settlement chronology, domestic-industrial evidence, and geographic qualification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Direct archaeobotanical identifications and bounded child-friendly humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ml-kuala"
+          ],
+          "locator": "Excavated food, economy, craft, and burial evidence with identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ml-bm-bukit",
+            "ml-bm-bell"
+          ],
+          "locator": "Museum object dates and places, with ethnicity inference explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ml-ships"
+          ],
+          "locator": "Maritime technology and exchange synthesized into bounded labor inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-srivijaya"
+          ],
+          "locator": "Atlas adjacency compared with documented maritime political plurality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ml-bujang"
+          ],
+          "locator": "National museum chronology, finds, and multi-community port interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ml-laguna-text"
+          ],
+          "locator": "Primary inscription text, transaction, people, titles, language mixture, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ml-butuan-nmp"
+          ],
+          "locator": "National museum excavation context, boat dating, and bounded identity inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ml-yijing",
+            "ml-nalanda"
+          ],
+          "locator": "Documented transregional learning with explicit limits on access and scale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ml-santubong"
+          ],
+          "locator": "State museum chronology, ceramics, iron production, and bounded political inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ml-butuan-unesco"
+          ],
+          "locator": "UNESCO/National Museum archaeological dossier and regional identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ml-sulawesi"
+          ],
+          "locator": "Archaeological ceramic chronology, inland circulation, agriculture, and later state formation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ml-muarojambi-astano"
+          ],
+          "locator": "Government archaeological layout, settlement evidence, chronology, and atlas mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-dharmasraya"
+          ],
+          "locator": "Government heritage chronology of expedition, inscription, ruler, and geographic contradiction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ml-kuala"
+          ],
+          "locator": "Excavated child burial and varying grave goods, carefully separated from unsupported biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ml-telaga"
+          ],
+          "locator": "Primary inscription roster, household ties, occupations, and gentle source-aware humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Domestic and subsistence evidence used for bounded household inference and explicit unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ml-butuan-unesco"
+          ],
+          "locator": "Workshop and village evidence supporting bounded labor and learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ml-burials"
+          ],
+          "locator": "National museum regional burial survey and explicit interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ml-bellwood"
+          ],
+          "locator": "Explicit absence grounded in regional prehistoric evidence and evidentiary method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ml-kedukan"
+          ],
+          "locator": "Government transcription lines and bounded English rendering of the 682 inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ml-laguna-text"
+          ],
+          "locator": "Exact opening characters, scholarly transliteration, date formula, translation, language, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-terengganu"
+          ],
+          "locator": "Explicit in-window absence bounded by two securely dated post-window inscriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ml-nalanda"
+          ],
+          "locator": "Documented monastic education contrasted with explicit absence of universal schooling evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Archaeobotanical remains and regional food evidence combined without claiming universal diet.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ml-talang"
+          ],
+          "locator": "Inscription-linked plant list, purpose, and limits as elite public text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ml-damar"
+          ],
+          "locator": "Government archaeological reconstruction of collecting centers and transport roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ml-muarojambi-astano",
+            "ml-yijing"
+          ],
+          "locator": "Archaeological residence and documented Buddhist learning bounded against absent household clinical evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ml-bellwood"
+          ],
+          "locator": "Regional archaeological synthesis supporting caution about projecting later practices backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ml-khao-port"
+          ],
+          "locator": "Excavated drainage and settlement features with sanitation inference explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ml-kuala-page"
+          ],
+          "locator": "UNESCO preservation context and explicit limits on water and waste systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ml-muarojambi-astano"
+          ],
+          "locator": "Government archaeological spatial description with specific sanitation unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ml-butuan-nmp"
+          ],
+          "locator": "National museum discovery and waterlogged context separated from ancient infrastructure claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ml-manuscript"
+          ],
+          "locator": "Corpus boundary and explicit absence of target-period everyday written documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ml-butuan-unesco",
+            "ml-ships"
+          ],
+          "locator": "Archaeological watercraft and maritime synthesis with collective achievement framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ml-khao-ceramics",
+            "ml-santubong"
+          ],
+          "locator": "Specialized production and local adaptation across securely dated archaeological sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000",
+            "ml-map-1279"
+          ],
+          "locator": "Exact target disappearance seams and safe override policy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ml-trade",
+            "ml-pamalayu"
+          ],
+          "locator": "Documented political shocks separated from cultural and demographic continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ml-laguna-nmp"
+          ],
+          "locator": "National museum regional-contact evidence supporting the final interpretive lesson.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000",
+            "ml-map-1279",
+            "ml-terengganu-gov"
+          ],
+          "locator": "Endpoint control where the early label disappears without a documented population-ending event. Endpoint control where malay disappears while island communities and documented ports continue. Endpoint control where the late cultural label disappears at an editorial snapshot seam. Government heritage account identifies early Jawi, regional maritime commerce, religious law, Sanskrit survivals, and continuity of earlier life.",
+          "dateScope": {
+            "year": 1279
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "malays",
+        "name": "Malays",
+        "kind": "culture",
+        "region": "Asia",
+        "from": -200,
+        "to": -100,
+        "circa": true,
+        "card": "cards/malays.json",
+        "dateBasis": "map_coverage",
+        "summary": "Three atlas labels connect many distinct maritime societies.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "malays",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            95.19035190351906,
+            -9.177412376225057,
+            126.3738637386374,
+            18.5522648746185
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malay",
+      "card": "data/cards/malays.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ml-ov-anu",
+            "ml-ov-language",
+            "ml-ov-ports",
+            "ml-ov-ph",
+            "ml-ov-muarojambi"
+          ],
+          "locator": "University synthesis links conservative Bornean Malayic languages to Proto-Malayic and seventh-century Old Malay while preserving scholarly uncertainty. Authoritative linguistic chapter distinguishes Old Malay, later trade languages, regional varieties, and the evidence behind mapped expansion. Authoritative archaeological synthesis covers early port discovery, coastal exchange, Chinese ceramics, craft finds, and changing interpretations. National museum exhibition presents Butuan as a distinct maritime transit port and trading center within wider Southeast Asian exchange. Official heritage dossier situates Malayu and Srivijaya in trade, Buddhist learning, architecture, and the seventh-to-fourteenth-century Batanghari landscape.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ml-map-bc300",
+            "ml-map-bc200",
+            "ml-khao-port"
+          ],
+          "locator": "Pre-start control for the earliest label and representative island point ownership. Sole snapshot containing malays; decoded fourteen-component geometry, point membership, arcs, and source hash. Peer-reviewed synthesis identifies specialized glass and stone industries, settlement networks, and fourth-to-first-century BCE port chronology.",
+          "dateScope": {
+            "from": -200,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-kuala"
+          ],
+          "locator": "Endpoint control where the early label disappears without a documented population-ending event. Full archaeological report documents Kuala Selinsing food remains, deep-sea fish, shell, burials, a child grave, pottery, beads, and nonviolent abandonment.",
+          "dateScope": {
+            "from": -100,
+            "to": 200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ml-khao-ceramics",
+            "ml-ships"
+          ],
+          "locator": "Scholarly technological study uses fourth-to-second-century BCE ceramics to examine local production, exchange, and interaction with South Asia. Scholarly maritime history covers seafaring technology, exchange, and political diversity from 500 BCE to 1500 CE.",
+          "dateScope": {
+            "from": 200,
+            "to": 400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ml-kotakapur",
+            "ml-jmm-writing"
+          ],
+          "locator": "Government archaeology documents a seventh-century Old Malay inscription, stone-laterite structure, religious sculpture, and Bangka setting. National museum publication lists Bujang Valley inscriptions and distinguishes Sanskrit-Pallava records from later Old Malay forms.",
+          "dateScope": {
+            "from": 400,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ml-kedukan",
+            "ml-srivijaya"
+          ],
+          "locator": "Government heritage record supplies the 682 Old Malay inscription text, dates, voyage, troops, boats, settlement, and prosperity formula. University history distinguishes Malayu at Jambi from Srivijaya, Chinese records, Old Malay inscriptions, and shifting maritime power.",
+          "dateScope": {
+            "from": 600,
+            "to": 700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ml-map-700",
+            "ml-yijing"
+          ],
+          "locator": "Pre-start control for the medieval malay record and its neighboring atlas categories. Scholarly volume documents Yijing learning Sanskrit at Srivijaya in 671 and the port-capital as an international Buddhist center.",
+          "dateScope": {
+            "from": 700,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-bujang"
+          ],
+          "locator": "First medieval malay snapshot; decoded eleven-component geometry and direct topology seams with Srivijaya and Mataram. National museum describes third-to-twelfth-century port trade, ceramics, glass beads, architecture, and Hindu-Buddhist material at Bujang Valley.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ml-map-900",
+            "ml-laguna-nmp"
+          ],
+          "locator": "Second medieval malay snapshot; unchanged target geometry but changed surrounding owner layers. National museum dates the Laguna Copperplate to 900, identifies Early Kawi writing, and places it beside regional boat and ceramic evidence.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "ml-map-1000",
+            "ml-trade"
+          ],
+          "locator": "Endpoint control where malay disappears while island communities and documented ports continue. Peer-reviewed study emphasizes merchant agency, diasporas, commodities, port competition, Chola raids, and porous political boundaries.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "ml-map-1100",
+            "ml-santubong"
+          ],
+          "locator": "Pre-start control for the late malays-1200 label and regional political layers. State museum identifies Santubong as a major eleventh-to-thirteenth-century trading and iron-working center with thousands of ceramic sherds.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "ml-map-1200",
+            "ml-sulawesi"
+          ],
+          "locator": "Sole malays-1200 snapshot; decoded three-component Borneo, Sulawesi, and Mindanao-Sulu envelope with topology seams. Archaeological synthesis dates widespread Chinese and mainland Southeast Asian trade wares from about the thirteenth century and separates later Bugis kingdoms.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1275
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-terengganu-nomination"
+          ],
+          "locator": "Government archaeology dates the 1275 Pamalayu expedition and the 1286 Amoghapasa diplomatic gift sent to Malayu. Official nomination describes the Malay Jawi inscription, 702 Hijri date corresponding to 1303, law, trade, and cultural setting.",
+          "dateScope": {
+            "from": 1275,
+            "to": 1303
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ml-index",
+            "ml-summary",
+            "ml-missing",
+            "ml-cards",
+            "ml-overrides"
+          ],
+          "locator": "Exact index, imported summaries, missing-card state, card index, and override registry checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ml-coverage",
+            "ml-map-bc200"
+          ],
+          "locator": "Deterministic fifty-snapshot audit, occurrence counts, geometry hash continuity, and coverage comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ml-map-bc200"
+          ],
+          "locator": "Decoded geometry type, component count, bounding box, and fixed point membership probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-map-900"
+          ],
+          "locator": "Decoded unchanged geometry, representative point membership, and direct shared arc ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ml-map-1200"
+          ],
+          "locator": "Decoded three-component geometry and direct topology seams, with interpretation explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ml-proto"
+          ],
+          "locator": "Comparative linguistic homeland argument and limits on translating language reconstruction into ethnicity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ml-proto",
+            "ml-laguna-text"
+          ],
+          "locator": "Historical linguistic distribution of Old Malay, administrative use, and regional expansion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ml-oxford"
+          ],
+          "locator": "Oxford handbook scale of Malayo-Polynesian diversity and careful separation of subgroup relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ml-srivijaya",
+            "ml-dharmasraya"
+          ],
+          "locator": "Named polity chronology compared with broader linguistic and identity uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000"
+          ],
+          "locator": "Atlas gaps and shifting target geography used to bound the shared association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ml-khao-port"
+          ],
+          "locator": "Peer-reviewed settlement chronology, domestic-industrial evidence, and geographic qualification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Direct archaeobotanical identifications and bounded child-friendly humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ml-kuala"
+          ],
+          "locator": "Excavated food, economy, craft, and burial evidence with identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ml-bm-bukit",
+            "ml-bm-bell"
+          ],
+          "locator": "Museum object dates and places, with ethnicity inference explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ml-ships"
+          ],
+          "locator": "Maritime technology and exchange synthesized into bounded labor inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-srivijaya"
+          ],
+          "locator": "Atlas adjacency compared with documented maritime political plurality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ml-bujang"
+          ],
+          "locator": "National museum chronology, finds, and multi-community port interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ml-laguna-text"
+          ],
+          "locator": "Primary inscription text, transaction, people, titles, language mixture, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ml-butuan-nmp"
+          ],
+          "locator": "National museum excavation context, boat dating, and bounded identity inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ml-yijing",
+            "ml-nalanda"
+          ],
+          "locator": "Documented transregional learning with explicit limits on access and scale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ml-santubong"
+          ],
+          "locator": "State museum chronology, ceramics, iron production, and bounded political inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ml-butuan-unesco"
+          ],
+          "locator": "UNESCO/National Museum archaeological dossier and regional identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ml-sulawesi"
+          ],
+          "locator": "Archaeological ceramic chronology, inland circulation, agriculture, and later state formation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ml-muarojambi-astano"
+          ],
+          "locator": "Government archaeological layout, settlement evidence, chronology, and atlas mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-dharmasraya"
+          ],
+          "locator": "Government heritage chronology of expedition, inscription, ruler, and geographic contradiction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ml-kuala"
+          ],
+          "locator": "Excavated child burial and varying grave goods, carefully separated from unsupported biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ml-telaga"
+          ],
+          "locator": "Primary inscription roster, household ties, occupations, and gentle source-aware humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Domestic and subsistence evidence used for bounded household inference and explicit unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ml-butuan-unesco"
+          ],
+          "locator": "Workshop and village evidence supporting bounded labor and learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ml-burials"
+          ],
+          "locator": "National museum regional burial survey and explicit interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ml-bellwood"
+          ],
+          "locator": "Explicit absence grounded in regional prehistoric evidence and evidentiary method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ml-kedukan"
+          ],
+          "locator": "Government transcription lines and bounded English rendering of the 682 inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ml-laguna-text"
+          ],
+          "locator": "Exact opening characters, scholarly transliteration, date formula, translation, language, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-terengganu"
+          ],
+          "locator": "Explicit in-window absence bounded by two securely dated post-window inscriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ml-nalanda"
+          ],
+          "locator": "Documented monastic education contrasted with explicit absence of universal schooling evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Archaeobotanical remains and regional food evidence combined without claiming universal diet.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ml-talang"
+          ],
+          "locator": "Inscription-linked plant list, purpose, and limits as elite public text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ml-damar"
+          ],
+          "locator": "Government archaeological reconstruction of collecting centers and transport roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ml-muarojambi-astano",
+            "ml-yijing"
+          ],
+          "locator": "Archaeological residence and documented Buddhist learning bounded against absent household clinical evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ml-bellwood"
+          ],
+          "locator": "Regional archaeological synthesis supporting caution about projecting later practices backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ml-khao-port"
+          ],
+          "locator": "Excavated drainage and settlement features with sanitation inference explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ml-kuala-page"
+          ],
+          "locator": "UNESCO preservation context and explicit limits on water and waste systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ml-muarojambi-astano"
+          ],
+          "locator": "Government archaeological spatial description with specific sanitation unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ml-butuan-nmp"
+          ],
+          "locator": "National museum discovery and waterlogged context separated from ancient infrastructure claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ml-manuscript"
+          ],
+          "locator": "Corpus boundary and explicit absence of target-period everyday written documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ml-butuan-unesco",
+            "ml-ships"
+          ],
+          "locator": "Archaeological watercraft and maritime synthesis with collective achievement framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ml-khao-ceramics",
+            "ml-santubong"
+          ],
+          "locator": "Specialized production and local adaptation across securely dated archaeological sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000",
+            "ml-map-1279"
+          ],
+          "locator": "Exact target disappearance seams and safe override policy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ml-trade",
+            "ml-pamalayu"
+          ],
+          "locator": "Documented political shocks separated from cultural and demographic continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ml-laguna-nmp"
+          ],
+          "locator": "National museum regional-contact evidence supporting the final interpretive lesson.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000",
+            "ml-map-1279",
+            "ml-terengganu-gov"
+          ],
+          "locator": "Endpoint control where the early label disappears without a documented population-ending event. Endpoint control where malay disappears while island communities and documented ports continue. Endpoint control where the late cultural label disappears at an editorial snapshot seam. Government heritage account identifies early Jawi, regional maritime commerce, religious law, Sanskrit survivals, and continuity of earlier life.",
+          "dateScope": {
+            "year": 1279
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "malay",
+        "name": "Malay",
+        "kind": "culture",
+        "region": "Asia",
+        "from": 800,
+        "to": 1000,
+        "circa": true,
+        "card": "cards/malays.json",
+        "dateBasis": "map_coverage",
+        "summary": "Three atlas labels connect many distinct maritime societies.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "malay",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            110.63450634506347,
+            -9.177412376225057,
+            126.3738637386374,
+            18.5522648746185
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "malay",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            110.63450634506347,
+            -9.177412376225057,
+            126.3738637386374,
+            18.5522648746185
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malays-1200",
+      "card": "data/cards/malays.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ml-ov-anu",
+            "ml-ov-language",
+            "ml-ov-ports",
+            "ml-ov-ph",
+            "ml-ov-muarojambi"
+          ],
+          "locator": "University synthesis links conservative Bornean Malayic languages to Proto-Malayic and seventh-century Old Malay while preserving scholarly uncertainty. Authoritative linguistic chapter distinguishes Old Malay, later trade languages, regional varieties, and the evidence behind mapped expansion. Authoritative archaeological synthesis covers early port discovery, coastal exchange, Chinese ceramics, craft finds, and changing interpretations. National museum exhibition presents Butuan as a distinct maritime transit port and trading center within wider Southeast Asian exchange. Official heritage dossier situates Malayu and Srivijaya in trade, Buddhist learning, architecture, and the seventh-to-fourteenth-century Batanghari landscape.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ml-map-bc300",
+            "ml-map-bc200",
+            "ml-khao-port"
+          ],
+          "locator": "Pre-start control for the earliest label and representative island point ownership. Sole snapshot containing malays; decoded fourteen-component geometry, point membership, arcs, and source hash. Peer-reviewed synthesis identifies specialized glass and stone industries, settlement networks, and fourth-to-first-century BCE port chronology.",
+          "dateScope": {
+            "from": -200,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-kuala"
+          ],
+          "locator": "Endpoint control where the early label disappears without a documented population-ending event. Full archaeological report documents Kuala Selinsing food remains, deep-sea fish, shell, burials, a child grave, pottery, beads, and nonviolent abandonment.",
+          "dateScope": {
+            "from": -100,
+            "to": 200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ml-khao-ceramics",
+            "ml-ships"
+          ],
+          "locator": "Scholarly technological study uses fourth-to-second-century BCE ceramics to examine local production, exchange, and interaction with South Asia. Scholarly maritime history covers seafaring technology, exchange, and political diversity from 500 BCE to 1500 CE.",
+          "dateScope": {
+            "from": 200,
+            "to": 400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ml-kotakapur",
+            "ml-jmm-writing"
+          ],
+          "locator": "Government archaeology documents a seventh-century Old Malay inscription, stone-laterite structure, religious sculpture, and Bangka setting. National museum publication lists Bujang Valley inscriptions and distinguishes Sanskrit-Pallava records from later Old Malay forms.",
+          "dateScope": {
+            "from": 400,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ml-kedukan",
+            "ml-srivijaya"
+          ],
+          "locator": "Government heritage record supplies the 682 Old Malay inscription text, dates, voyage, troops, boats, settlement, and prosperity formula. University history distinguishes Malayu at Jambi from Srivijaya, Chinese records, Old Malay inscriptions, and shifting maritime power.",
+          "dateScope": {
+            "from": 600,
+            "to": 700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ml-map-700",
+            "ml-yijing"
+          ],
+          "locator": "Pre-start control for the medieval malay record and its neighboring atlas categories. Scholarly volume documents Yijing learning Sanskrit at Srivijaya in 671 and the port-capital as an international Buddhist center.",
+          "dateScope": {
+            "from": 700,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-bujang"
+          ],
+          "locator": "First medieval malay snapshot; decoded eleven-component geometry and direct topology seams with Srivijaya and Mataram. National museum describes third-to-twelfth-century port trade, ceramics, glass beads, architecture, and Hindu-Buddhist material at Bujang Valley.",
+          "dateScope": {
+            "from": 800,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ml-map-900",
+            "ml-laguna-nmp"
+          ],
+          "locator": "Second medieval malay snapshot; unchanged target geometry but changed surrounding owner layers. National museum dates the Laguna Copperplate to 900, identifies Early Kawi writing, and places it beside regional boat and ceramic evidence.",
+          "dateScope": {
+            "from": 900,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "ml-map-1000",
+            "ml-trade"
+          ],
+          "locator": "Endpoint control where malay disappears while island communities and documented ports continue. Peer-reviewed study emphasizes merchant agency, diasporas, commodities, port competition, Chola raids, and porous political boundaries.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "ml-map-1100",
+            "ml-santubong"
+          ],
+          "locator": "Pre-start control for the late malays-1200 label and regional political layers. State museum identifies Santubong as a major eleventh-to-thirteenth-century trading and iron-working center with thousands of ceramic sherds.",
+          "dateScope": {
+            "from": 1100,
+            "to": 1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/10/summary",
+          "sourceIds": [
+            "ml-map-1200",
+            "ml-sulawesi"
+          ],
+          "locator": "Sole malays-1200 snapshot; decoded three-component Borneo, Sulawesi, and Mindanao-Sulu envelope with topology seams. Archaeological synthesis dates widespread Chinese and mainland Southeast Asian trade wares from about the thirteenth century and separates later Bugis kingdoms.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1275
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/11/summary",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-terengganu-nomination"
+          ],
+          "locator": "Government archaeology dates the 1275 Pamalayu expedition and the 1286 Amoghapasa diplomatic gift sent to Malayu. Official nomination describes the Malay Jawi inscription, 702 Hijri date corresponding to 1303, law, trade, and cultural setting.",
+          "dateScope": {
+            "from": 1275,
+            "to": 1303
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ml-index",
+            "ml-summary",
+            "ml-missing",
+            "ml-cards",
+            "ml-overrides"
+          ],
+          "locator": "Exact index, imported summaries, missing-card state, card index, and override registry checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ml-coverage",
+            "ml-map-bc200"
+          ],
+          "locator": "Deterministic fifty-snapshot audit, occurrence counts, geometry hash continuity, and coverage comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ml-map-bc200"
+          ],
+          "locator": "Decoded geometry type, component count, bounding box, and fixed point membership probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-map-900"
+          ],
+          "locator": "Decoded unchanged geometry, representative point membership, and direct shared arc ids.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ml-map-1200"
+          ],
+          "locator": "Decoded three-component geometry and direct topology seams, with interpretation explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ml-proto"
+          ],
+          "locator": "Comparative linguistic homeland argument and limits on translating language reconstruction into ethnicity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ml-proto",
+            "ml-laguna-text"
+          ],
+          "locator": "Historical linguistic distribution of Old Malay, administrative use, and regional expansion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ml-oxford"
+          ],
+          "locator": "Oxford handbook scale of Malayo-Polynesian diversity and careful separation of subgroup relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ml-srivijaya",
+            "ml-dharmasraya"
+          ],
+          "locator": "Named polity chronology compared with broader linguistic and identity uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000"
+          ],
+          "locator": "Atlas gaps and shifting target geography used to bound the shared association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ml-khao-port"
+          ],
+          "locator": "Peer-reviewed settlement chronology, domestic-industrial evidence, and geographic qualification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Direct archaeobotanical identifications and bounded child-friendly humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ml-kuala"
+          ],
+          "locator": "Excavated food, economy, craft, and burial evidence with identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ml-bm-bukit",
+            "ml-bm-bell"
+          ],
+          "locator": "Museum object dates and places, with ethnicity inference explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ml-ships"
+          ],
+          "locator": "Maritime technology and exchange synthesized into bounded labor inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ml-map-800",
+            "ml-srivijaya"
+          ],
+          "locator": "Atlas adjacency compared with documented maritime political plurality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ml-bujang"
+          ],
+          "locator": "National museum chronology, finds, and multi-community port interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ml-laguna-text"
+          ],
+          "locator": "Primary inscription text, transaction, people, titles, language mixture, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ml-butuan-nmp"
+          ],
+          "locator": "National museum excavation context, boat dating, and bounded identity inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ml-yijing",
+            "ml-nalanda"
+          ],
+          "locator": "Documented transregional learning with explicit limits on access and scale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ml-santubong"
+          ],
+          "locator": "State museum chronology, ceramics, iron production, and bounded political inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ml-butuan-unesco"
+          ],
+          "locator": "UNESCO/National Museum archaeological dossier and regional identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ml-sulawesi"
+          ],
+          "locator": "Archaeological ceramic chronology, inland circulation, agriculture, and later state formation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ml-muarojambi-astano"
+          ],
+          "locator": "Government archaeological layout, settlement evidence, chronology, and atlas mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-dharmasraya"
+          ],
+          "locator": "Government heritage chronology of expedition, inscription, ruler, and geographic contradiction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ml-kuala"
+          ],
+          "locator": "Excavated child burial and varying grave goods, carefully separated from unsupported biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ml-telaga"
+          ],
+          "locator": "Primary inscription roster, household ties, occupations, and gentle source-aware humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Domestic and subsistence evidence used for bounded household inference and explicit unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ml-butuan-unesco"
+          ],
+          "locator": "Workshop and village evidence supporting bounded labor and learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ml-burials"
+          ],
+          "locator": "National museum regional burial survey and explicit interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ml-bellwood"
+          ],
+          "locator": "Explicit absence grounded in regional prehistoric evidence and evidentiary method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ml-kedukan"
+          ],
+          "locator": "Government transcription lines and bounded English rendering of the 682 inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ml-laguna-text"
+          ],
+          "locator": "Exact opening characters, scholarly transliteration, date formula, translation, language, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ml-pamalayu",
+            "ml-terengganu"
+          ],
+          "locator": "Explicit in-window absence bounded by two securely dated post-window inscriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ml-nalanda"
+          ],
+          "locator": "Documented monastic education contrasted with explicit absence of universal schooling evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ml-khao-food"
+          ],
+          "locator": "Archaeobotanical remains and regional food evidence combined without claiming universal diet.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ml-talang"
+          ],
+          "locator": "Inscription-linked plant list, purpose, and limits as elite public text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ml-damar"
+          ],
+          "locator": "Government archaeological reconstruction of collecting centers and transport roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ml-muarojambi-astano",
+            "ml-yijing"
+          ],
+          "locator": "Archaeological residence and documented Buddhist learning bounded against absent household clinical evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ml-bellwood"
+          ],
+          "locator": "Regional archaeological synthesis supporting caution about projecting later practices backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ml-khao-port"
+          ],
+          "locator": "Excavated drainage and settlement features with sanitation inference explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ml-kuala-page"
+          ],
+          "locator": "UNESCO preservation context and explicit limits on water and waste systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ml-muarojambi-astano"
+          ],
+          "locator": "Government archaeological spatial description with specific sanitation unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ml-butuan-nmp"
+          ],
+          "locator": "National museum discovery and waterlogged context separated from ancient infrastructure claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ml-manuscript"
+          ],
+          "locator": "Corpus boundary and explicit absence of target-period everyday written documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ml-butuan-unesco",
+            "ml-ships"
+          ],
+          "locator": "Archaeological watercraft and maritime synthesis with collective achievement framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ml-khao-ceramics",
+            "ml-santubong"
+          ],
+          "locator": "Specialized production and local adaptation across securely dated archaeological sites.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000",
+            "ml-map-1279"
+          ],
+          "locator": "Exact target disappearance seams and safe override policy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ml-trade",
+            "ml-pamalayu"
+          ],
+          "locator": "Documented political shocks separated from cultural and demographic continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ml-laguna-nmp"
+          ],
+          "locator": "National museum regional-contact evidence supporting the final interpretive lesson.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ml-map-bc100",
+            "ml-map-1000",
+            "ml-map-1279",
+            "ml-terengganu-gov"
+          ],
+          "locator": "Endpoint control where the early label disappears without a documented population-ending event. Endpoint control where malay disappears while island communities and documented ports continue. Endpoint control where the late cultural label disappears at an editorial snapshot seam. Government heritage account identifies early Jawi, regional maritime commerce, religious law, Sanskrit survivals, and continuity of earlier life.",
+          "dateScope": {
+            "year": 1279
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "malays-1200",
+        "name": "Malays",
+        "kind": "culture",
+        "region": "Asia",
+        "from": 1200,
+        "to": 1279,
+        "circa": true,
+        "card": "cards/malays.json",
+        "dateBasis": "map_coverage",
+        "summary": "Three atlas labels connect many distinct maritime societies.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "malays-1200",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            110.63450634506347,
+            -5.804174142499946,
+            126.3738637386374,
+            9.78322794161916
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
