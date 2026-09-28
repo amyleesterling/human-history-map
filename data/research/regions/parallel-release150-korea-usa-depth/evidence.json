@@ -1,0 +1,936 @@
+{
+  "version": 1,
+  "region": "Southern Korea, with the atlas hybrid label and projected modern-shaped geometry disclosed",
+  "researcher": "Codex parallel release150-korea-usa research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "ku-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact korea-usa id, Korea (USA) label, approximate 1945 to 1960 lifetime, and generated provenance."
+    },
+    {
+      "id": "ku-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "General Korea summary whose peninsula-wide scope does not match the exact southern target geometry."
+    },
+    {
+      "id": "ku-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "State classification, one 1945 to 1960 border interval, one feature, and missing-card status."
+    },
+    {
+      "id": "ku-map-1945",
+      "title": "Human History Map 1945 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Exact target geometry, sampled point ownership, northern feature relationship, and editorial defects."
+    },
+    {
+      "id": "ku-map-1960",
+      "title": "Human History Map 1960 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json",
+      "note": "Atlas endpoint where korea-usa disappears and korea-republic-of begins."
+    },
+    {
+      "id": "ku-map-1994",
+      "title": "Human History Map 1994 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1994.json",
+      "note": "Later control showing continued Republic of Korea ownership after the hybrid id ends."
+    },
+    {
+      "id": "ku-modern-card",
+      "title": "Human History Map South Korea deep card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/korea-republic-of.json",
+      "note": "Existing post-1960 card used only to check continuity and avoid duplicating its modern scope."
+    },
+    {
+      "id": "ku-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Existing korea-republic-of override and its map record beginning in 1960."
+    },
+    {
+      "id": "ku-occupation",
+      "title": "National Institute of Korean History: U.S. military government",
+      "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i501700",
+      "note": "XXIV Corps, government south of the 38th parallel, conflicts over Korean governing bodies, administrative Koreanization, and the 15 August 1948 endpoint."
+    },
+    {
+      "id": "ku-proclamation",
+      "title": "MacArthur Proclamation No. 1 for Korea",
+      "url": "https://contents.history.go.kr/front/hm/view.do?levelId=hm_144_0020",
+      "note": "Contemporaneous proclamation asserting military control south of 38 degrees north and naming English as the official language of military control."
+    },
+    {
+      "id": "ku-frus45",
+      "title": "Foreign Relations of the United States, 1945 occupation directive",
+      "url": "https://history.state.gov/historicaldocuments/frus1945v06/d798",
+      "note": "U.S. instructions on administration, food, schools, archives, utilities, public health, censorship, and displaced people; a policy document rather than an outcome survey."
+    },
+    {
+      "id": "ku-frus47",
+      "title": "Foreign Relations of the United States, 1947 Korea policy memorandum",
+      "url": "https://history.state.gov/historicaldocuments/frus1947v06/d471",
+      "note": "U.S. assessment of political antagonism, economic crisis, education, relief, and self-government; preserve its official perspective."
+    },
+    {
+      "id": "ku-frus48",
+      "title": "Foreign Relations of the United States, 1948 election and transfer memorandum",
+      "url": "https://history.state.gov/historicaldocuments/frus1948v06/d776",
+      "note": "UN-observed election in the accessible area, transfer of functions, troop questions, and southern dependence on northern electric power."
+    },
+    {
+      "id": "ku-frus49",
+      "title": "Foreign Relations of the United States, 1949 military-government termination",
+      "url": "https://history.state.gov/historicaldocuments/frus1949v07p2/d209",
+      "note": "Formal 15 August 1948 termination, later transfer work, and separate troop-withdrawal chronology."
+    },
+    {
+      "id": "ku-curriculum",
+      "title": "National Institute of Korean History: curriculum after liberation",
+      "url": "https://contents.history.go.kr/resources/front/html/txthj_p_03.html",
+      "note": "School reopening, Korean history restoration, textbook replacement, provisional syllabi, and incomplete decolonization through 1954."
+    },
+    {
+      "id": "ku-health",
+      "title": "National Institute of Korean History: public health after liberation",
+      "url": "https://contents.history.go.kr/front/km/view.do?levelId=km_004_0060_0040_0030_0020",
+      "note": "Health-administration sequence, shortages, 1948 contraction, later reorganization, and aid-supported centers and clinics."
+    },
+    {
+      "id": "ku-rice",
+      "title": "National Institute of Korean History: rice supply and hunger",
+      "url": "https://contents.history.go.kr/mobile/km/view.do?levelId=km_026_0070_0010",
+      "note": "Shortage, free-market reversal, collection and rationing, black markets, return migration, cholera, and a March 1946 Daegu school example."
+    },
+    {
+      "id": "ku-water-home",
+      "title": "National Institute of Korean History: water, drainage, kitchens, and housing",
+      "url": "https://contents.history.go.kr/front/km/view.do?levelId=km_013_0060_0020_0010",
+      "note": "A 79-city water count, weak coverage, damaged drains, wastewater disposal, water carrying, kitchens, and 1954 Jeongneung reconstruction homes."
+    },
+    {
+      "id": "ku-busan",
+      "title": "National Institute of Korean History: wartime refugee life in Busan",
+      "url": "https://contents.history.go.kr/mobile/eh/view.do?levelId=eh_r0390_0010",
+      "note": "Teaching page on journeys, scarce camps, makeshift shacks, water queues, dock labor, and street vending; qualitative rather than representative."
+    },
+    {
+      "id": "ku-army-book",
+      "title": "U.S. Army Center of Military History: South to the Naktong, North to the Yalu",
+      "url": "https://history.army.mil/Portals/143/Images/Publications/Publication%20By%20Title%20Images/S%20PDF/CMH_Pub_20-2.pdf?ver=PGb_O0IB_iw%3D",
+      "note": "Official military history for division, surrender, invasion, early campaigns, refugees, and geography; use critically and pair with civilian sources."
+    },
+    {
+      "id": "ku-army-summary",
+      "title": "U.S. Army Center of Military History: Korean War campaign summary",
+      "url": "https://history.army.mil/Research/Reference-Topics/Army-Campaigns/Brief-Summaries/Korean-War/",
+      "note": "High-level invasion, intervention, armistice-negotiation, and July 1953 ceasefire chronology, not a civilian social history."
+    },
+    {
+      "id": "ku-armistice",
+      "title": "National Archives: Korean Armistice Agreement",
+      "url": "https://www.archives.gov/milestone-documents/armistice-agreement-restoration-south-korean-state",
+      "note": "Signed 27 July 1953, suspended open hostilities, created a military arrangement and demilitarized zone, and was not a permanent peace treaty."
+    },
+    {
+      "id": "ku-afak",
+      "title": "National Archives: Armed Forces Assistance to Korea records schedule",
+      "url": "https://www.archives.gov/files/records-mgmt/rcs/schedules/departments/department-of-defense/department-of-the-army/rg-0338/nc1-338-84-03_sf115.pdf",
+      "note": "Record-series description for Army assistance to hospitals, schools, and public facilities; proves program records, not completed outcomes by itself."
+    },
+    {
+      "id": "ku-aid",
+      "title": "National Institute of Korean History: Korea-U.S. aid agreement",
+      "url": "https://contents.history.go.kr/front/hm/view.do?levelId=hm_154_0030",
+      "note": "December 1948 agreement and transition from occupation relief to state-to-state aid involving food, necessities, medicine, and economic support."
+    },
+    {
+      "id": "ku-jeju",
+      "title": "National Institute of Korean History: Jeju 4·3",
+      "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i503000",
+      "note": "1947 shooting and strike, 1948 uprising, armed actors, scorched-earth repression, civilian killing, and social crisis, with contested interpretations."
+    },
+    {
+      "id": "ku-yeosu",
+      "title": "National Institute of Korean History: Yeosu-Suncheon incident",
+      "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i502800",
+      "note": "October 1948 refusal by the 14th Regiment, revolt, state suppression, civilian killing, and security-state consequences; estimates and labels remain contested."
+    },
+    {
+      "id": "ku-land",
+      "title": "National Institute of Korean History: land reform",
+      "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i502070",
+      "note": "Distribution of formerly Japanese-owned land, 1949 law, March 1950 implementation, wartime disruption, falling tenancy, repayment, and pre-sale limits."
+    },
+    {
+      "id": "ku-april",
+      "title": "National Institute of Korean History: April Revolution",
+      "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i500700",
+      "note": "Student protests, March 1960 electoral fraud, police violence, wider participation, and Syngman Rhee resignation announcement on 26 April."
+    },
+    {
+      "id": "ku-schoolgirl",
+      "title": "National Institute of Korean History: Jin Yeong-suk testament",
+      "url": "https://contents.history.go.kr/front/hm/view.do?levelId=hm_149_0035",
+      "note": "Contemporaneous testament of one middle-school student before joining an April 1960 demonstration; one individual voice, not a collective transcript."
+    },
+    {
+      "id": "ku-tent-schools",
+      "title": "National Institute of Korean History: educational expansion and tent schools",
+      "url": "https://contents.history.go.kr/front/ta/print.do?levelId=ta_h71_0070_0050_0030_0040&whereStr=",
+      "note": "Later textbook synthesis of the 6-3-3 system, wartime tent schooling, institutional expansion, and returned specialists."
+    },
+    {
+      "id": "ku-nak-exhibit",
+      "title": "National Archives of Korea: liberation, war, and reconstruction exhibition",
+      "url": "https://archives.go.kr/next/common/archivedata/render.do?filePath=2F757046696c652F70616c67616e2FBAFBC0B8B7CE20C0CCBEEEC1F8203830B3E2C0C720B1E2B7CF2e706466",
+      "note": "Archival exhibition with dated photographs and named records on refugees and reconstruction; use individual captions rather than the exhibition title alone."
+    },
+    {
+      "id": "ku-unhcr",
+      "title": "UNHCR Korea: Korea and refugees in history",
+      "url": "https://www.unhcr.org/kr/about-unhcr/who-we-are/unhcr-korea/korea-and-refugees-in-history",
+      "note": "Institutional retrospective on war displacement, UN intervention, and UNKRA; pair its program history with Korean archival evidence."
+    },
+    {
+      "id": "ku-constitution-ko",
+      "title": "Korean Law Information Center: Constitution of 1948",
+      "url": "https://www.law.go.kr/lsInfoP.do?lsiSeq=53081",
+      "note": "Official enacted Korean text effective 17 July 1948, including Article 1."
+    },
+    {
+      "id": "ku-constitution-en",
+      "title": "Korea Legislation Research Institute: Constitution Article 1 in English",
+      "url": "https://elaw.klri.re.kr/eng_service/lawTwoView.do?hseq=1",
+      "note": "Official English interface giving the unchanged Article 1 clause; the separate Korean historical-law record establishes its 1948 enactment."
+    },
+    {
+      "id": "ku-cleaning",
+      "title": "National Institute of Korean History database: 1950 cleaning campaign speech",
+      "url": "https://db.history.go.kr/contemp/level.do?levelId=dh_018_1950_08_26_0020",
+      "note": "Government rhetoric on DDT, clothing, bedding, dwellings, latrines, waste, lice, fleas, and bedbugs; evidence of a campaign, not safety or compliance."
+    },
+    {
+      "id": "ku-radio",
+      "title": "National Institute of Korean History: GoldStar A-501 radio",
+      "url": "https://contents.history.go.kr/front/km/print.do?levelId=km_020_0050_0040_0040&whereStr=",
+      "note": "1959 A-501 launch, low-voltage design, and imported components; domestic production did not mean every part was Korean."
+    },
+    {
+      "id": "ku-seoul-tb",
+      "title": "Seoul Metropolitan Archives: tuberculosis control",
+      "url": "https://archives.seoul.go.kr/contents/health-01",
+      "note": "Seoul institutions, planned 1950 BCG vaccination, 1954 estimates, later programs, and acknowledged gaps between law and access."
+    },
+    {
+      "id": "ku-sewer",
+      "title": "Seoul Sewerage Science Museum: water and sewer history",
+      "url": "https://sssmuseum.seoul.kr/front/content.do?mcCode=13111",
+      "note": "War damage, untreated Cheonggyecheon sewage, 1958 covering work, low 1960 water coverage, and an 83-city count that conflicts with another source."
+    },
+    {
+      "id": "ku-un1950",
+      "title": "United Nations Security Council report on Korea, 1950",
+      "url": "https://digitallibrary.un.org/nanna/record/605772/files/S_SUPP_1950_3--%5EOR_SC_1950_3%5E-EN.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+      "note": "Official report of medical teams, immunization, and environmental-sanitation programs in refugee camps; program reporting, not an independent outcome study."
+    },
+    {
+      "id": "ku-un1952",
+      "title": "United Nations Korean reconstruction report, 1952",
+      "url": "https://digitallibrary.un.org/record/708481/files/A_2187-EN.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+      "note": "Official report on relief deliveries, refugees, war sufferers, local destitution, and camp return; institutional reporting with incomplete recipient voices."
+    }
+  ],
+  "entities": [
+    {
+      "id": "korea-usa",
+      "card": "data/cards/korea-usa.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ku-index",
+            "ku-summary",
+            "ku-coverage",
+            "ku-map-1945",
+            "ku-map-1960",
+            "ku-map-1994"
+          ],
+          "locator": "Exact korea-usa id, Korea (USA) label, approximate 1945 to 1960 lifetime, and generated provenance. General Korea summary whose peninsula-wide scope does not match the exact southern target geometry. State classification, one 1945 to 1960 border interval, one feature, and missing-card status. Exact target geometry, sampled point ownership, northern feature relationship, and editorial defects. Atlas endpoint where korea-usa disappears and korea-republic-of begins. Later control showing continued Republic of Korea ownership after the hybrid id ends.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ku-occupation",
+            "ku-proclamation",
+            "ku-frus45",
+            "ku-curriculum"
+          ],
+          "locator": "XXIV Corps, government south of the 38th parallel, conflicts over Korean governing bodies, administrative Koreanization, and the 15 August 1948 endpoint. Contemporaneous proclamation asserting military control south of 38 degrees north and naming English as the official language of military control. U.S. instructions on administration, food, schools, archives, utilities, public health, censorship, and displaced people; a policy document rather than an outcome survey. School reopening, Korean history restoration, textbook replacement, provisional syllabi, and incomplete decolonization through 1954.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1946
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ku-rice",
+            "ku-frus45",
+            "ku-frus47",
+            "ku-health"
+          ],
+          "locator": "Shortage, free-market reversal, collection and rationing, black markets, return migration, cholera, and a March 1946 Daegu school example. U.S. instructions on administration, food, schools, archives, utilities, public health, censorship, and displaced people; a policy document rather than an outcome survey. U.S. assessment of political antagonism, economic crisis, education, relief, and self-government; preserve its official perspective. Health-administration sequence, shortages, 1948 contraction, later reorganization, and aid-supported centers and clinics.",
+          "dateScope": {
+            "from": 1946,
+            "to": 1947
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ku-frus47",
+            "ku-frus48",
+            "ku-jeju"
+          ],
+          "locator": "U.S. assessment of political antagonism, economic crisis, education, relief, and self-government; preserve its official perspective. UN-observed election in the accessible area, transfer of functions, troop questions, and southern dependence on northern electric power. 1947 shooting and strike, 1948 uprising, armed actors, scorched-earth repression, civilian killing, and social crisis, with contested interpretations.",
+          "dateScope": {
+            "from": 1947,
+            "to": 1948
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ku-constitution-ko",
+            "ku-frus49",
+            "ku-jeju",
+            "ku-yeosu",
+            "ku-aid"
+          ],
+          "locator": "Official enacted Korean text effective 17 July 1948, including Article 1. Formal 15 August 1948 termination, later transfer work, and separate troop-withdrawal chronology. 1947 shooting and strike, 1948 uprising, armed actors, scorched-earth repression, civilian killing, and social crisis, with contested interpretations. October 1948 refusal by the 14th Regiment, revolt, state suppression, civilian killing, and security-state consequences; estimates and labels remain contested. December 1948 agreement and transition from occupation relief to state-to-state aid involving food, necessities, medicine, and economic support.",
+          "dateScope": {
+            "from": 1948,
+            "to": 1949
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ku-land",
+            "ku-frus48",
+            "ku-yeosu"
+          ],
+          "locator": "Distribution of formerly Japanese-owned land, 1949 law, March 1950 implementation, wartime disruption, falling tenancy, repayment, and pre-sale limits. UN-observed election in the accessible area, transfer of functions, troop questions, and southern dependence on northern electric power. October 1948 refusal by the 14th Regiment, revolt, state suppression, civilian killing, and security-state consequences; estimates and labels remain contested.",
+          "dateScope": {
+            "from": 1949,
+            "to": 1950
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ku-army-book",
+            "ku-un1950"
+          ],
+          "locator": "Official military history for division, surrender, invasion, early campaigns, refugees, and geography; use critically and pair with civilian sources. Official report of medical teams, immunization, and environmental-sanitation programs in refugee camps; program reporting, not an independent outcome study.",
+          "dateScope": {
+            "from": 1950,
+            "to": 1951
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ku-army-summary",
+            "ku-tent-schools",
+            "ku-un1950",
+            "ku-un1952"
+          ],
+          "locator": "High-level invasion, intervention, armistice-negotiation, and July 1953 ceasefire chronology, not a civilian social history. Later textbook synthesis of the 6-3-3 system, wartime tent schooling, institutional expansion, and returned specialists. Official report of medical teams, immunization, and environmental-sanitation programs in refugee camps; program reporting, not an independent outcome study. Official report on relief deliveries, refugees, war sufferers, local destitution, and camp return; institutional reporting with incomplete recipient voices.",
+          "dateScope": {
+            "from": 1951,
+            "to": 1952
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ku-armistice",
+            "ku-un1952"
+          ],
+          "locator": "Signed 27 July 1953, suspended open hostilities, created a military arrangement and demilitarized zone, and was not a permanent peace treaty. Official report on relief deliveries, refugees, war sufferers, local destitution, and camp return; institutional reporting with incomplete recipient voices.",
+          "dateScope": {
+            "from": 1952,
+            "to": 1953
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "ku-afak",
+            "ku-unhcr",
+            "ku-seoul-tb"
+          ],
+          "locator": "Record-series description for Army assistance to hospitals, schools, and public facilities; proves program records, not completed outcomes by itself. Institutional retrospective on war displacement, UN intervention, and UNKRA; pair its program history with Korean archival evidence. Seoul institutions, planned 1950 BCG vaccination, 1954 estimates, later programs, and acknowledged gaps between law and access.",
+          "dateScope": {
+            "from": 1953,
+            "to": 1955
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "ku-radio",
+            "ku-schoolgirl"
+          ],
+          "locator": "1959 A-501 launch, low-voltage design, and imported components; domestic production did not mean every part was Korean. Contemporaneous testament of one middle-school student before joining an April 1960 demonstration; one individual voice, not a collective transcript.",
+          "dateScope": {
+            "from": 1955,
+            "to": 1960
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ku-index",
+            "ku-summary",
+            "ku-coverage"
+          ],
+          "locator": "Exact index entry, imported-summary mismatch, coverage interval, state kind, and missing-card status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ku-map-1945"
+          ],
+          "locator": "Decoded target geometry statistics and audited point-in-polygon results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ku-map-1945"
+          ],
+          "locator": "Audited point ownership, shared-arc relationship, and comparison with the stated 38th-parallel occupation line.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ku-occupation"
+          ],
+          "locator": "NIHK government overview of the formal endpoint and distinction from later institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ku-constitution-ko",
+            "ku-constitution-en"
+          ],
+          "locator": "Official 1948 Korean Article 1, official English clause, editorially segmented transliteration, and formal-text scope warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ku-proclamation"
+          ],
+          "locator": "Proclamation clauses on geographic scope, authority, orders, language, and preservation of order.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ku-occupation"
+          ],
+          "locator": "NIHK account of inherited administration, recognition disputes, Korean staffing, and retained authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ku-frus45"
+          ],
+          "locator": "Occupation directive sections on civil administration, economy, health, education, records, displaced people, and censorship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ku-frus47"
+          ],
+          "locator": "FRUS memorandum assessment and proposals, explicitly bounded as an official U.S. perspective.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ku-frus48"
+          ],
+          "locator": "FRUS election-access language, inauguration, transfer, and withdrawal distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ku-constitution-ko",
+            "ku-constitution-en"
+          ],
+          "locator": "Constitution promulgation and Article 1, with a law-versus-practice evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ku-jeju"
+          ],
+          "locator": "NIHK chronology, actor distinctions, social background, repression, and explicit caution around estimates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ku-yeosu"
+          ],
+          "locator": "NIHK incident chronology, refusal to deploy, suppression, civilian harm, and later security-state consequences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ku-land"
+          ],
+          "locator": "NIHK account of phases, legal dates, tenancy decline, payments, pre-sales, and war interruption.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ku-april",
+            "ku-map-1960"
+          ],
+          "locator": "NIHK protest chronology and the independently fixed 1960 atlas transition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ku-army-book"
+          ],
+          "locator": "Army invasion and early campaign chronology, used only for military sequence and geography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ku-nak-exhibit"
+          ],
+          "locator": "Dated Korean archival photographs and captions on displacement, with limits on generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ku-busan"
+          ],
+          "locator": "Qualitative teaching-page examples of shelter, water collection, and city-specific conditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ku-un1952"
+          ],
+          "locator": "1952 UN reconstruction report categories, deliveries, camp return, and official-reporting limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ku-armistice",
+            "ku-unhcr"
+          ],
+          "locator": "National Archives armistice terms paired with UNHCR retrospective on displacement and unresolved separation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ku-frus45"
+          ],
+          "locator": "Occupation directive on displaced people and relief, bounded against private household inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ku-busan"
+          ],
+          "locator": "Named livelihood examples from the Busan refugee-life teaching page, explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ku-rice"
+          ],
+          "locator": "Dated Daegu school example and surrounding rice-supply context, kept local rather than generalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ku-water-home"
+          ],
+          "locator": "NIHK dated Jeongneung project and explicit distinction between a project and national housing conditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ku-nak-exhibit",
+            "ku-water-home"
+          ],
+          "locator": "Item-level archive captions and NIHK examples of children carrying water, with visual-evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ku-curriculum"
+          ],
+          "locator": "NIHK reopening dates, restored subjects, staffing and textbook conditions, and access caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ku-curriculum"
+          ],
+          "locator": "NIHK account of textbook removal, translation, syllabus change, and continuing colonial-era patterns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ku-tent-schools"
+          ],
+          "locator": "Retrospective institutional history of wartime tent schooling and an explicit experience boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ku-tent-schools"
+          ],
+          "locator": "Institutional retrospective on the school system and expansion, with explicit gaps on access and experience.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ku-schoolgirl"
+          ],
+          "locator": "Named student, school level, contemporaneous publication context, protest decision, and single-voice boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ku-rice"
+          ],
+          "locator": "NIHK chronology of free market, renewed controls, collection, rationing, prices, and black markets.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ku-rice"
+          ],
+          "locator": "Supply and ration evidence plus an explicit boundary against turning rice administration into a complete diet history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ku-land"
+          ],
+          "locator": "NIHK implementation chronology, tenancy effects, compensation and repayment, and wartime disruption.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ku-busan"
+          ],
+          "locator": "Teaching-page examples of dock, porter, vending, and market work, kept city-specific.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ku-aid"
+          ],
+          "locator": "Agreement date, institutional transition, documented aid categories, and distribution boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ku-health"
+          ],
+          "locator": "NIHK administrative sequence, staffing shortage, 1948 contraction, and law-versus-access limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ku-seoul-tb"
+          ],
+          "locator": "Seoul archive 1950 vaccination plan, wartime interruption, later capacity limits, and local scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ku-seoul-tb"
+          ],
+          "locator": "Dated government estimate and documented capacity gaps, with estimate and geographic boundaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ku-health"
+          ],
+          "locator": "NIHK aid-supported facilities, training, later health-center law, and outcome boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ku-un1950"
+          ],
+          "locator": "UN report sections on camp medicine, immunization, and environmental sanitation, bounded to reported programs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ku-water-home",
+            "ku-sewer"
+          ],
+          "locator": "Conflicting 79-city and 83-city institutional counts, shared low-coverage conclusion, and no silent harmonization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ku-sewer"
+          ],
+          "locator": "Museum and K-water historical table for 1960 coverage, interpreted narrowly as service infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ku-busan"
+          ],
+          "locator": "Busan water-queue and carrying examples, with gender and geographic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ku-water-home",
+            "ku-sewer"
+          ],
+          "locator": "NIHK drainage evidence and Seoul museum account of named untreated flow and 1958 works.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ku-cleaning"
+          ],
+          "locator": "Exact latrine and pest-control campaign language plus a candid national toilet-evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ku-afak"
+          ],
+          "locator": "National Archives record-series description and an explicit program-versus-completion boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ku-unhcr",
+            "ku-nak-exhibit"
+          ],
+          "locator": "Institutional retrospective paired with dated Korean archival objects and captions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ku-radio"
+          ],
+          "locator": "NIHK model, launch date, voltage design, imported components, and consumer-access boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ku-nak-exhibit"
+          ],
+          "locator": "Cross-source methodological boundary grounded in the archive exhibition and its item-level captions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ku-map-1960",
+            "ku-map-1994",
+            "ku-modern-card",
+            "ku-overrides"
+          ],
+          "locator": "Exact atlas transition, later continuity controls, and existing deep-card record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ku-map-1960",
+            "ku-map-1994",
+            "ku-modern-card",
+            "ku-overrides",
+            "ku-frus49",
+            "ku-army-summary"
+          ],
+          "locator": "Atlas endpoint where korea-usa disappears and korea-republic-of begins. Later control showing continued Republic of Korea ownership after the hybrid id ends. Existing post-1960 card used only to check continuity and avoid duplicating its modern scope. Existing korea-republic-of override and its map record beginning in 1960. Formal 15 August 1948 termination, later transfer work, and separate troop-withdrawal chronology. High-level invasion, intervention, armistice-negotiation, and July 1953 ceasefire chronology, not a civilian social history.",
+          "dateScope": {
+            "year": 1960
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "korea-usa",
+        "name": "Korea (USA)",
+        "region": "Asia",
+        "card": "cards/korea-usa.json",
+        "dateBasis": "map_coverage",
+        "summary": "A simplified southern-Korea atlas layer spanning U.S. military government, the Republic founded in 1948, war, reconstruction, and political change to 1960.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [
+          "korea-republic-of"
+        ],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1945.json",
+          "properties": {
+            "civ": "korea-usa",
+            "from": 1945,
+            "to": 1960,
+            "precision": 3
+          },
+          "bounds": [
+            125.88785887858882,
+            33.19376725206379,
+            129.58869588695887,
+            37.92731574014893
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Korea (USA) is an atlas shorthand for a southern layer, not a sovereign polity, annexation, citizenship, or fifteen-year military government.",
+    "U.S. Army military government ended on 15 August 1948; the Republic of Korea continued through the remaining interval.",
+    "The geometry projects a later South-Korea-shaped polygon backward, excluding Kaesong and Haeju, leaving sampled Sokcho unowned, and pairing with a northern feature that spills into Dandong.",
+    "The 1960 transition to korea-republic-of is direct state continuity, not a fall or newly founded successor."
+  ]
+}
