@@ -1,0 +1,1422 @@
+{
+  "version": 1,
+  "region": "Interior Pacific Northwest and southern British Columbia as actually mapped",
+  "researcher": "Codex parallel release145-plateau-fichers-hunter-gatherers research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "pm-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact typo-bearing id and name, circa dates, kind and historical-basemaps provenance."
+    },
+    {
+      "id": "pm-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Twenty-seven exact intervals, initial missing-card state and North America queue metadata."
+    },
+    {
+      "id": "pm-map-bc2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Control before the target appears, including sampled point-owner seams."
+    },
+    {
+      "id": "pm-map-bc1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "First exact polygon, coordinate hash, sampled membership and neighboring owners."
+    },
+    {
+      "id": "pm-map-bc100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "A distinct coordinate hash despite unchanged tested membership."
+    },
+    {
+      "id": "pm-map-bc1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Another exact coordinate signature at the BCE to CE seam."
+    },
+    {
+      "id": "pm-map-800",
+      "title": "Human History Map 800 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Northwestern clipping, point-owner change and independently hashed thirteen-position geometry."
+    },
+    {
+      "id": "pm-map-1000",
+      "title": "Human History Map 1000 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "A small but independently hashed coordinate adjustment in the polygon."
+    },
+    {
+      "id": "pm-map-1279",
+      "title": "Human History Map 1279 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Exact coordinate signature shared with the adjacent 1300 snapshot."
+    },
+    {
+      "id": "pm-map-1400",
+      "title": "Human History Map 1400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Last target snapshot before the 1492 atlas seam."
+    },
+    {
+      "id": "pm-map-1492",
+      "title": "Human History Map 1492 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Target absence and many distinct named Indigenous atlas layers."
+    },
+    {
+      "id": "pm-map-1500",
+      "title": "Human History Map 1500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "One polygon with a hole removing sampled Nimiipuu-area points."
+    },
+    {
+      "id": "pm-map-1530",
+      "title": "Human History Map 1530 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Two-component remnant with a tiny central Washington sliver and northern polygon."
+    },
+    {
+      "id": "pm-map-1600",
+      "title": "Human History Map 1600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Endpoint control where named Indigenous layers replace the broad target."
+    },
+    {
+      "id": "bpa-research",
+      "title": "Bonneville Power Administration, Columbia Plateau systemwide research design",
+      "url": "https://www.bpa.gov/-/media/Aep/environmental-initiatives/cultural-resources/cultural-resources-systemwide-research-design.pdf",
+      "note": "Regional archaeological synthesis of chronologies, pithouses, salmon, roots, storage and exchange."
+    },
+    {
+      "id": "bc-williams",
+      "title": "British Columbia, Williams Lake archaeological overview assessment",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/archaeology/forms-publications/aoa_-_williams_lake_forest_district_-_report.pdf",
+      "note": "Localized Interior Plateau settlement, seasonal sites, winter villages and resource evidence."
+    },
+    {
+      "id": "bc-arrow",
+      "title": "British Columbia, Arrow timber supply archaeological overview",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/archaeology/forms-publications/aoa_-_arrow_tsa_-_report.pdf",
+      "note": "Pithouses, hearths, pits, fisheries, root processing and regional archaeological phases."
+    },
+    {
+      "id": "bc-lillooet",
+      "title": "British Columbia, Lillooet Forest District archaeological overview",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/archaeology/forms-publications/aoa_-_lillooet_forest_district_-_report.pdf",
+      "note": "Localized St at imc, Nlaka pamux and Secwepemc archaeology and seasonal aggregation."
+    },
+    {
+      "id": "bridge-subsistence",
+      "title": "Prentiss and colleagues, subsistence and inequality at Bridge River",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416513000597",
+      "note": "Dated village evidence for salmon, roots, berries, deer, dogs, storage and household variability."
+    },
+    {
+      "id": "bridge-inequality",
+      "title": "Prentiss and colleagues, persistent inequality at Bridge River",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10291436/",
+      "note": "Housepit 54 floors, household size estimates, storage, cooking and changing inequality."
+    },
+    {
+      "id": "bridge-research",
+      "title": "University of Montana, Bridge River archaeological project",
+      "url": "https://www.umt.edu/bridge-river/research-activities/",
+      "note": "Xwisten partnership, excavated floors, cache pits, cooking areas and knapping toolkit."
+    },
+    {
+      "id": "bridge-storage",
+      "title": "Prentiss and colleagues, testing food-storage models at Bridge River",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X17306958",
+      "note": "Fifteen dated house floors test storage stress and household change."
+    },
+    {
+      "id": "keatley-dna",
+      "title": "Speller and colleagues, ancient salmon DNA at Keatley Creek",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440305000804",
+      "note": "Ancient DNA identifies salmon species and clarifies a storage-pit assemblage."
+    },
+    {
+      "id": "keatley-ritual",
+      "title": "Hayden and Adams, ritual architecture at Keatley Creek",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/ritual-architecture-in-prehistoric-complex-huntergatherer-communities-a-potential-example-from-keatley-creek-on-the-canadian-plateau/74B50F2B49280F82852DFCDD89CD10CB",
+      "note": "A carefully framed interpretation of unusual architecture and communal activity."
+    },
+    {
+      "id": "kettle-falls",
+      "title": "Chatters and colleagues, radiocarbon chronology at Kettle Falls",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/14614103.2019.1648118",
+      "note": "Fifty dates test changing activity at a major Upper Columbia fishery."
+    },
+    {
+      "id": "chinook-dna",
+      "title": "Butler and colleagues, ancient Chinook salmon diversity",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5761847/",
+      "note": "Hundreds of ancient fish remains from Columbia, Snake and Spokane contexts reveal salmon diversity."
+    },
+    {
+      "id": "camas-study",
+      "title": "Carney and colleagues, four millennia of camas management",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8059633/",
+      "note": "Direct archaeobotanical bulbs, harvest choices, mobility and long-term Pend Oreille stewardship."
+    },
+    {
+      "id": "camas-news",
+      "title": "Oregon State University, ancient camas stewardship report",
+      "url": "https://news.oregonstate.edu/news/legacy-indigenous-stewardship-camas-dates-back-more-3500-years-osu-study-finds",
+      "note": "Accessible institutional summary of evidence for selective harvesting without domestication."
+    },
+    {
+      "id": "earth-oven",
+      "title": "Peacock, camas and hot-rock cookery",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416508000342",
+      "note": "Experimental and later Kalispel comparison for earth ovens, long cooking and interpretation limits."
+    },
+    {
+      "id": "oregon-archaeology",
+      "title": "Oregon archaeology overview, federal publication",
+      "url": "https://www.govinfo.gov/content/pkg/GOVPUB-I53-PURL-LPS118751/pdf/GOVPUB-I53-PURL-LPS118751.pdf",
+      "note": "Projectile-point chronology, bow-and-arrow evidence and regional method cautions."
+    },
+    {
+      "id": "pine-creek",
+      "title": "University of Oregon, Late Archaic Pine Creek pithouse",
+      "url": "https://scholarsbank.uoregon.edu/items/1ce54a12-b989-4905-aa79-942b8e0cfefb/full",
+      "note": "A non-riverine John Day pithouse dominated by deer rather than fish."
+    },
+    {
+      "id": "plateau-autonomy",
+      "title": "Prentiss and colleagues, Plateau autonomy and sociopolitical change",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278416524000230",
+      "note": "Recent archaeological model of households, networks, autonomy and conflict."
+    },
+    {
+      "id": "rock-art",
+      "title": "National Park Service, Columbia River petroglyphs",
+      "url": "https://www.nps.gov/articles/columbia-river-area-petroglyphs.htm",
+      "note": "Documented rock-art sites, uncertain meanings and losses caused by dams."
+    },
+    {
+      "id": "basketry",
+      "title": "Northwest Museum of Arts and Culture, Carrying Tradition",
+      "url": "https://www.northwestmuseum.org/exhibitions/current-exhibitions/carrying-tradition/",
+      "note": "Living Plateau weaving, material knowledge, teaching and cultural continuity."
+    },
+    {
+      "id": "camas-restoration",
+      "title": "Scholars and Nimiipuu partners, Weippe Prairie camas restoration",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3232238/",
+      "note": "Camas ecology, cultural landscape loss and collaborative restoration."
+    },
+    {
+      "id": "smoking",
+      "title": "Tushingham and colleagues, ancient smoking and intoxicant plants",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/evolution-of-smoking-and-intoxicant-plant-use-in-ancient-northwestern-north-america/CBDE7A9E19CCEBE399AF4C703701B2A6",
+      "note": "Chemical and archaeological study of pipes and plant use in the inland Northwest."
+    },
+    {
+      "id": "bc-middle-fraser",
+      "title": "BC Studies, People of the Middle Fraser Canyon review",
+      "url": "https://bcstudies.ubc.ca/book_film_review/people-of-the-middle-fraser-canyon-an-archaeological-history/",
+      "note": "Regional synthesis of climate, salmon, villages and competing change hypotheses."
+    },
+    {
+      "id": "fire-camas",
+      "title": "Oregon State University Extension, Indigenous fire on the Columbia Plateau",
+      "url": "https://extension.oregonstate.edu/catalog/em-9464-not-all-flames-same-columbia-plateau",
+      "note": "Institutional guide to purposeful fire, camas habitat and ecological specificity."
+    },
+    {
+      "id": "nps-camas",
+      "title": "National Park Service, camas stewardship",
+      "url": "https://home.nps.gov/articles/000/camas.htm",
+      "note": "Selective harvesting, continued growth and a later visitor stomachache anecdote."
+    },
+    {
+      "id": "nps-nepe-plants",
+      "title": "National Park Service, plants of Nez Perce country",
+      "url": "https://home.nps.gov/nepe/learn/nature/plants.htm",
+      "note": "Historically localized roots, berries, fibers, woods and medicines."
+    },
+    {
+      "id": "nps-nepe-trees",
+      "title": "National Park Service, trees and shrubs of Nez Perce country",
+      "url": "https://home.nps.gov/nepe/learn/nature/trees-and-shrubs.htm",
+      "note": "Localized woods, bark, fibers, tools, shelters and clothing evidence."
+    },
+    {
+      "id": "nps-nepe-archaeology",
+      "title": "National Park Service, archaeology of the Nez Perce Trail",
+      "url": "https://home.nps.gov/articles/archeology-nez-perce-national-historic-trail.htm",
+      "note": "Culturally modified trees, mobile shelters and archaeological traces."
+    },
+    {
+      "id": "nps-nepe-children",
+      "title": "National Park Service, Nimiipuu childhood education program",
+      "url": "https://home.nps.gov/nepe/learn/education/rangerguided.htm",
+      "note": "Later localized comparison for stories, relatives, observation and teaching."
+    },
+    {
+      "id": "nps-stickgame",
+      "title": "National Park Service, Nimiipuu stick game guide",
+      "url": "https://www.nps.gov/museum/tmc/NEPE/StickGame/StickGame.pdf",
+      "note": "Later localized game evidence for teamwork, etiquette and learning."
+    },
+    {
+      "id": "nps-women",
+      "title": "National Park Service, Nimiipuu women and children",
+      "url": "https://www.nps.gov/articles/000/nimiipuu-women-carry-the-future-on-their-backs.htm",
+      "note": "Later localized family, teaching, work and women-centered knowledge."
+    },
+    {
+      "id": "ctuir-firstfoods",
+      "title": "Confederated Tribes of the Umatilla Indian Reservation, First Foods",
+      "url": "https://ctuir.org/about/first-foods/",
+      "note": "Living seasonal framework linking water, fish, game, roots, berries, ceremony and responsibility."
+    },
+    {
+      "id": "ctuir-upland",
+      "title": "CTUIR Department of Natural Resources, Upland Vision",
+      "url": "https://ctuir.org/media/gpjdzm4z/ctuir-dnr-upland-vision-april-2019.pdf",
+      "note": "Tribal stewardship framework for water, salmon, game, roots, berries and current restoration."
+    },
+    {
+      "id": "nezperce-about",
+      "title": "Nez Perce Tribe, About the Nimiipuu",
+      "url": "https://nezperce.org/about/",
+      "note": "Official living-nation account of identity, government, language and continuity."
+    },
+    {
+      "id": "nezperce-history",
+      "title": "Nez Perce Tribe, History",
+      "url": "https://nezperce.org/about/history/",
+      "note": "Official history of councils, leaders, trade, mobility, fishing and hunting."
+    },
+    {
+      "id": "nezperce-language",
+      "title": "Nez Perce Tribe, Nimipuutimt language",
+      "url": "https://nezperce.org/about/language/",
+      "note": "Living language program and multiple modern writing systems."
+    },
+    {
+      "id": "yakama-language",
+      "title": "Yakama Nation, Ichishkiin language program",
+      "url": "https://yakama.com/programs/language/",
+      "note": "Official living-language education demonstrating distinct identity and continuity."
+    },
+    {
+      "id": "spokane-language",
+      "title": "Spokane Tribe, Salish language program",
+      "url": "https://www.spokanetribe.com/language/",
+      "note": "Official Interior Salish language teaching, curriculum and present revitalization."
+    },
+    {
+      "id": "coeurdalene",
+      "title": "Coeur d Alene Tribe, Our Tribe",
+      "url": "https://www.cdatribe-nsn.gov/our-tribe/",
+      "note": "Official Schitsu umsh identity, language and living community history."
+    },
+    {
+      "id": "coeurdalene-writing",
+      "title": "Coeur d Alene Tribe, reading and writing in Snchitsu umshtsn",
+      "url": "https://www.cdatribe-nsn.gov/culture/language/reading-and-writing-in-the-coeur-dalene-language/",
+      "note": "Official account of a modern orthography developed in 1973."
+    },
+    {
+      "id": "ktunaxa-language",
+      "title": "Ktunaxa Nation, strength of the Ktunaxa language",
+      "url": "https://ktunaxa.org/resources/indigenous-languages-day-and-the-strength-of-the-ktunaxa-language/",
+      "note": "Official account of a distinct language isolate and present revitalization."
+    },
+    {
+      "id": "statimc",
+      "title": "Statimc Government Services",
+      "url": "https://statimc.ca/",
+      "note": "Official living-nation account of territory, seasons, governance and continuity."
+    },
+    {
+      "id": "syilx-salmon",
+      "title": "Okanagan Nation Alliance, ntytyix Chief Salmon",
+      "url": "https://syilx.org/programs-services-and-initiatives/fisheries-and-natural-resources/ntytyix-chief-salmon/",
+      "note": "Syilx-led salmon restoration, cultural responsibility and living continuity."
+    },
+    {
+      "id": "critfc-techniques",
+      "title": "Columbia River Inter-Tribal Fish Commission, fishing techniques",
+      "url": "https://critfc.org/salmon-culture/tribal-salmon-culture/fishing-techniques/",
+      "note": "Tribal account of platforms, dip nets, hoop nets, wood, twine and pitch."
+    }
+  ],
+  "entities": [
+    {
+      "id": "plateau-fichers-and-hunter-gatherers",
+      "card": "data/cards/plateau-fichers-and-hunter-gatherers.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pm-index",
+            "pm-coverage",
+            "pm-map-bc2000",
+            "pm-map-bc1500",
+            "pm-map-1492",
+            "pm-map-1530",
+            "pm-map-1600",
+            "bpa-research",
+            "bridge-inequality",
+            "camas-study"
+          ],
+          "locator": "Exact typo-bearing id and name, circa dates, kind and historical-basemaps provenance. Twenty-seven exact intervals, initial missing-card state and North America queue metadata. Control before the target appears, including sampled point-owner seams. First exact polygon, coordinate hash, sampled membership and neighboring owners. Target absence and many distinct named Indigenous atlas layers. Two-component remnant with a tiny central Washington sliver and northern polygon. Endpoint control where named Indigenous layers replace the broad target. Regional archaeological synthesis of chronologies, pithouses, salmon, roots, storage and exchange. Housepit 54 floors, household size estimates, storage, cooking and changing inequality. Direct archaeobotanical bulbs, harvest choices, mobility and long-term Pend Oreille stewardship.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pm-map-bc1500",
+            "bc-williams"
+          ],
+          "locator": "First exact polygon, coordinate hash, sampled membership and neighboring owners. Localized Interior Plateau settlement, seasonal sites, winter villages and resource evidence.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "bc-williams",
+            "bc-arrow"
+          ],
+          "locator": "Localized Interior Plateau settlement, seasonal sites, winter villages and resource evidence. Pithouses, hearths, pits, fisheries, root processing and regional archaeological phases.",
+          "dateScope": {
+            "from": -1000,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pm-map-bc100",
+            "pm-map-bc1",
+            "oregon-archaeology"
+          ],
+          "locator": "A distinct coordinate hash despite unchanged tested membership. Another exact coordinate signature at the BCE to CE seam. Projectile-point chronology, bow-and-arrow evidence and regional method cautions.",
+          "dateScope": {
+            "from": -500,
+            "to": -1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "chinook-dna",
+            "pm-map-bc1500"
+          ],
+          "locator": "Hundreds of ancient fish remains from Columbia, Snake and Spokane contexts reveal salmon diversity. First exact polygon, coordinate hash, sampled membership and neighboring owners.",
+          "dateScope": {
+            "from": -1,
+            "to": 500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "bridge-storage",
+            "pm-map-800"
+          ],
+          "locator": "Fifteen dated house floors test storage stress and household change. Northwestern clipping, point-owner change and independently hashed thirteen-position geometry.",
+          "dateScope": {
+            "from": 500,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "kettle-falls",
+            "bc-middle-fraser",
+            "pm-map-1000"
+          ],
+          "locator": "Fifty dates test changing activity at a major Upper Columbia fishery. Regional synthesis of climate, salmon, villages and competing change hypotheses. A small but independently hashed coordinate adjustment in the polygon.",
+          "dateScope": {
+            "from": 800,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "bridge-subsistence",
+            "plateau-autonomy"
+          ],
+          "locator": "Dated village evidence for salmon, roots, berries, deer, dogs, storage and household variability. Recent archaeological model of households, networks, autonomy and conflict.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pm-map-1279",
+            "pm-map-1400",
+            "keatley-ritual"
+          ],
+          "locator": "Exact coordinate signature shared with the adjacent 1300 snapshot. Last target snapshot before the 1492 atlas seam. A carefully framed interpretation of unusual architecture and communal activity.",
+          "dateScope": {
+            "from": 1279,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pm-map-1492",
+            "pm-map-1500",
+            "pm-map-1530"
+          ],
+          "locator": "Target absence and many distinct named Indigenous atlas layers. One polygon with a hole removing sampled Nimiipuu-area points. Two-component remnant with a tiny central Washington sliver and northern polygon.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1530
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pm-map-1600",
+            "nezperce-about",
+            "ktunaxa-language"
+          ],
+          "locator": "Endpoint control where named Indigenous layers replace the broad target. Official living-nation account of identity, government, language and continuity. Official account of a distinct language isolate and present revitalization.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pm-index"
+          ],
+          "locator": "Exact indexed identity and editorial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pm-map-bc1500"
+          ],
+          "locator": "Decoded polygon membership and exclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "earth-oven"
+          ],
+          "locator": "Experimental and comparative evidence hierarchy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nezperce-language",
+            "coeurdalene-writing"
+          ],
+          "locator": "Official modern orthography evidence and explicit non-borrowing rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "keatley-dna"
+          ],
+          "locator": "Ancient fish DNA use and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "bc-williams"
+          ],
+          "locator": "Localized site types and seasonal settlement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "bc-lillooet"
+          ],
+          "locator": "Localized communities and seasonal aggregation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "fire-camas"
+          ],
+          "locator": "Indigenous and lightning fire distinctions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "camas-news"
+          ],
+          "locator": "Direct bulb ages, harvest selection and mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "camas-restoration"
+          ],
+          "locator": "Collaborative ecological restoration and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "chinook-dna"
+          ],
+          "locator": "Ancient salmon genetic diversity and archaeological context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pine-creek"
+          ],
+          "locator": "Non-riverine pithouse faunal record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "earth-oven"
+          ],
+          "locator": "Hot-rock cookery and long-duration camas processing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nps-camas"
+          ],
+          "locator": "Later localized anecdote clearly labeled as comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ctuir-firstfoods"
+          ],
+          "locator": "Living tribal First Foods framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "bc-arrow"
+          ],
+          "locator": "Localized feature types and contextual interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "bridge-research"
+          ],
+          "locator": "Community partnership and excavated household sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "keatley-dna"
+          ],
+          "locator": "Species identification and storage-pit context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nezperce-history"
+          ],
+          "locator": "Regional raw materials and exchange synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "critfc-techniques"
+          ],
+          "locator": "Tribal fishing technology and preservation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "bc-arrow"
+          ],
+          "locator": "Housepit architecture and internal features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nps-nepe-archaeology"
+          ],
+          "locator": "Modified trees and mobile-shelter comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nps-nepe-trees"
+          ],
+          "locator": "Localized plant materials and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "bridge-research"
+          ],
+          "locator": "Household refuse zones and explicit toilet evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ctuir-upland"
+          ],
+          "locator": "Living water-centered stewardship framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "bridge-subsistence"
+          ],
+          "locator": "Household size estimates and changing inequality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nezperce-history"
+          ],
+          "locator": "Official localized leadership and council account.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nps-women"
+          ],
+          "locator": "Women-centered localized family evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "plateau-autonomy"
+          ],
+          "locator": "Archaeological model of inequality, autonomy and networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "statimc"
+          ],
+          "locator": "Official living-nation territorial continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nps-nepe-children"
+          ],
+          "locator": "Later localized teaching and story evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nps-stickgame"
+          ],
+          "locator": "Localized game, etiquette and learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "oregon-archaeology"
+          ],
+          "locator": "Artifact typology and learning inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "basketry"
+          ],
+          "locator": "Living weaving knowledge and archaeological attribution caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "yakama-language",
+            "spokane-language"
+          ],
+          "locator": "Distinct official language revitalization programs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nps-nepe-plants"
+          ],
+          "locator": "Localized plant and medicine knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "bridge-storage"
+          ],
+          "locator": "Storage stress and household risk models.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "smoking"
+          ],
+          "locator": "Chemical residue and pipe archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ctuir-upland"
+          ],
+          "locator": "Water dependency paired with explicit archaeological limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "camas-news"
+          ],
+          "locator": "Institutional summary of camas management and preparation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "rock-art"
+          ],
+          "locator": "Recorded sites, dam loss and interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "keatley-ritual"
+          ],
+          "locator": "Cautious architectural ritual inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "plateau-autonomy"
+          ],
+          "locator": "Conflict and sociopolitical model with localization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "bridge-subsistence"
+          ],
+          "locator": "Household variability and inequality evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "syilx-salmon"
+          ],
+          "locator": "Living Syilx salmon restoration and responsibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "camas-news"
+          ],
+          "locator": "Long-term stewardship without domestication.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "kettle-falls"
+          ],
+          "locator": "Dated fishery activity and social coordination.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "coeurdalene",
+            "ktunaxa-language"
+          ],
+          "locator": "Distinct official identities and language histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nezperce-about",
+            "yakama-language",
+            "spokane-language"
+          ],
+          "locator": "Official living continuity across distinct nations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pm-map-1600",
+            "statimc",
+            "syilx-salmon"
+          ],
+          "locator": "Endpoint seam and living continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pm-map-1530",
+            "pm-map-1600",
+            "nezperce-about",
+            "coeurdalene",
+            "statimc"
+          ],
+          "locator": "Two-component remnant with a tiny central Washington sliver and northern polygon. Endpoint control where named Indigenous layers replace the broad target. Official living-nation account of identity, government, language and continuity. Official Schitsu umsh identity, language and living community history. Official living-nation account of territory, seasons, governance and continuity.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "plateau-fichers-and-hunter-gatherers",
+        "card": "cards/plateau-fichers-and-hunter-gatherers.json",
+        "dateBasis": "map_coverage",
+        "summary": "Changing interior Pacific Northwest atlas umbrella, circa 1500 BCE to 1600 CE, preserved under its typo-bearing id.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93539275867428,
+            -111.66771667716677,
+            54.243397515499595
+          ]
+        },
+        {
+          "file": "world-1100.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1100,
+            "to": 1200,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93544171282609,
+            -111.66771667716677,
+            54.24361384186487
+          ]
+        },
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93544171282609,
+            -111.66771667716677,
+            54.24361384186487
+          ]
+        },
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93544171265674,
+            -111.66771667716677,
+            54.24361384167405
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93544171265674,
+            -111.66771667716677,
+            54.24361384167405
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.935390544711865,
+            -111.66771667716677,
+            54.24339502063064
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.935390544711865,
+            -111.66771667716677,
+            54.24339502063064
+          ]
+        },
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            46.94470337310183,
+            -114.2669426694267,
+            54.24290888154164
+          ]
+        },
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-300.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 300,
+            "to": 400,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-400.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 400,
+            "to": 500,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-500.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 500,
+            "to": 600,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-600.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 600,
+            "to": 700,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93544171282609,
+            -111.66771667716677,
+            54.24361384186487
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            -125.75825758257582,
+            41.93544171282609,
+            -111.66771667716677,
+            54.24361384186487
+          ]
+        },
+        {
+          "file": "world-bc1.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -1,
+            "to": 100,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc300.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -300,
+            "to": -200,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc323.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -323,
+            "to": -300,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc400.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -400,
+            "to": -323,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc500.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -500,
+            "to": -400,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "plateau-fichers-and-hunter-gatherers",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            -128.5878858788588,
+            41.93544171282609,
+            -111.66771667716677,
+            55.19337395111452
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact id and display label preserve the atlas typo fichers; public copy explains that fishers was apparently intended.",
+    "Twenty-seven target features form nine exact coordinate signatures plus five absent controls.",
+    "The early one-part polygon spans interior British Columbia, Washington, Oregon, Idaho and western Montana while excluding coast and lower Columbia samples, so the label is not literal cultural geography.",
+    "The 1500 geometry adds a hole around sampled Nimiipuu-area points; 1530 leaves one tiny central Washington sliver plus a northern component.",
+    "The 1492 gap and 1600 endpoint are atlas seams rather than population absence, migration dates, collapse or extinction.",
+    "Named Plateau peoples, nations and languages remain distinct; archaeological, scientific, late comparative and living evidence are labeled by place and time.",
+    "No written sample is supplied because no contemporaneous text securely represents the exact umbrella across its footprint and interval."
+  ]
+}
