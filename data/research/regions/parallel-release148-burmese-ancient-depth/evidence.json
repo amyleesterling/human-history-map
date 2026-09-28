@@ -1,0 +1,991 @@
+{
+  "version": 1,
+  "region": "Southeast Asia",
+  "researcher": "Codex parallel release148-burmese-ancient research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "brm-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, culture kind, approximate 1500 to 500 BCE lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "brm-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three exact observed intervals, three border files, imported summary and missing reviewed card."
+    },
+    {
+      "id": "brm-imported",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Current modern Burmese-surname paragraph is unrelated to second- and first-millennium BCE archaeology."
+    },
+    {
+      "id": "brm-map2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Predecessor seam: tested northern points are split between Thai and Austro-Asiatic rice-culture labels."
+    },
+    {
+      "id": "brm-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "First exact Burmese component, its enormous bounds and point owners for 1500 to 1000 BCE."
+    },
+    {
+      "id": "brm-map1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Unchanged exact component for 1000 to 700 BCE."
+    },
+    {
+      "id": "brm-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Nearly unchanged component with one additional ring position for 700 to 500 BCE."
+    },
+    {
+      "id": "brm-map500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "The exact target disappears at its indexed endpoint without a mapped local successor."
+    },
+    {
+      "id": "brm-map400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "A broad Austro-Asiatic rice-culture layer owns nearly all tested Myanmar and Yunnan points."
+    },
+    {
+      "id": "brm-ucl-chronology",
+      "title": "A first absolute chronology for Late Neolithic to Early Bronze Age Myanmar",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10061564/",
+      "note": "Open UCL record for 52 AMS dates, stratigraphy, pottery, burials, fauna and the Nyaunggan to Oakaie sequence."
+    },
+    {
+      "id": "brm-mafm",
+      "title": "The Mission Archéologique Française au Myanmar: past, present and future",
+      "url": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/mission-archeologique-francaise-au-myanmar-past-present-and-future/8780D0AD51264079D48A5D0B8B036308",
+      "note": "Myanmar-French collaborative fieldwork, burial methods and limits of the late prehistoric dataset."
+    },
+    {
+      "id": "brm-iron-handbook",
+      "title": "A New Chrono-Cultural Approach to the Iron Age in Myanmar",
+      "url": "https://academic.oup.com/edited-volume/42054/chapter-abstract/355847117",
+      "note": "Oxford synthesis stresses geographically limited graves and distinguishes Chindwin and Samon sequences."
+    },
+    {
+      "id": "brm-arch-overview",
+      "title": "Archaeological Studies in Myanmar",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546310042",
+      "note": "Oxford overview links local ecosystems and resources to varied prehistoric occupation without inventing one people."
+    },
+    {
+      "id": "brm-oakaie-dating",
+      "title": "Dating the Myanmar Bronze Age",
+      "url": "https://researchonline.jcu.edu.au/48113/",
+      "note": "University repository article on Oakaie cemetery dates, preservation problems and early first-millennium BCE typology."
+    },
+    {
+      "id": "brm-metallurgy",
+      "title": "Metallurgical traditions and metal exchange networks in late prehistoric central Myanmar",
+      "url": "https://discovery.ucl.ac.uk/1534487/1/Pryce%20et%20al_AASC2017.pdf",
+      "note": "Open technical study of alloys, microscopy, lead isotopes and distant copper sources."
+    },
+    {
+      "id": "brm-beads",
+      "title": "Late Neolithic to Early-Mid Bronze Age stone bead production",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352226720301860",
+      "note": "Study of 605 roughouts, preforms, drilling waste and finished beads from settlement and burial contexts."
+    },
+    {
+      "id": "brm-social-isotopes",
+      "title": "Social differences in Neolithic/Bronze Age Myanmar",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X18302098",
+      "note": "Pilot strontium-isotope study of eighteen people explores locality, sex patterning and cautious kinship hypotheses."
+    },
+    {
+      "id": "brm-diet",
+      "title": "Living in the dry zone",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X23000755",
+      "note": "Stable-isotope research on diet, managed animals and the absence of preserved plant remains at Oakaie to Nyaunggan."
+    },
+    {
+      "id": "brm-mobility",
+      "title": "Mobility patterning during the Neolithic and Bronze Age in north-central Myanmar",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440325002675",
+      "note": "Open 2025 strontium study compares broader Neolithic and more local Bronze Age mobility."
+    },
+    {
+      "id": "brm-care",
+      "title": "An osteobiography of care at Nyaunggan",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/oa.70160",
+      "note": "Open study of an adolescent who survived serious childhood trauma and later lived with impairment."
+    },
+    {
+      "id": "brm-adna",
+      "title": "Ancient genomes document multiple waves of migration in Southeast Asian prehistory",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6476732/",
+      "note": "Science ancient-DNA study includes Oakaie individuals and warns that present languages reflect later movements."
+    },
+    {
+      "id": "brm-bioarch",
+      "title": "Bronze Age Myanmar: people from Nyaunggan cemetery",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/bronze-age-myanmar-burma-a-report-on-the-people-from-the-cemetery-of-nyaunggan-upper-myanmar/E9DA61A1F3A2B36D3AECDBC258C7A07B",
+      "note": "Bioarchaeological report on excavated people rather than ethnic labels inferred from artifacts."
+    },
+    {
+      "id": "brm-ywa-htin",
+      "title": "Ywa Htin: Iron Age Burials in the Samon Valley",
+      "url": "https://www.persee.fr/doc/asean_0859-9009_2010_num_25_1_2135",
+      "note": "Scholarly review anchors later Iron Age burial evidence and publication limits."
+    },
+    {
+      "id": "brm-nyaunggan-note",
+      "title": "Nyaung-gan: A Preliminary Note on a Bronze Age Cemetery",
+      "url": "https://www.burmalibrary.org/sites/burmalibrary.org/files/obl/docs/Moore_AP01.pdf",
+      "note": "Early field report on forty-three burials, pottery, stone ornaments and bronze objects; used with newer dating."
+    },
+    {
+      "id": "brm-badahlin",
+      "title": "Badah-lin and associated caves",
+      "url": "https://whc.unesco.org/en/tentativelists/822/",
+      "note": "UNESCO tentative-list record for much earlier rock art, stone tools and workshop evidence in Shan State."
+    },
+    {
+      "id": "brm-inle",
+      "title": "Holocene environmental change at Inle Lake",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/holocene-environmental-change-at-inle-lake-shan-state-myanmar-and/",
+      "note": "ANU palaeoenvironmental study uses pollen, charcoal and diatoms to reconstruct changing lake and vegetation histories."
+    },
+    {
+      "id": "brm-landscapes",
+      "title": "An abundance of riches: Myanmar’s many landscapes",
+      "url": "https://www.britishmuseum.org/blog/abundance-riches-myanmars-many-landscapes",
+      "note": "British Museum introduction distinguishes dry-zone, river, coast and highland environments and later political plurality."
+    },
+    {
+      "id": "brm-pyu-unesco",
+      "title": "Pyu Ancient Cities",
+      "url": "https://whc.unesco.org/en/list/1444/",
+      "note": "UNESCO dates Pyu urban transformation from about 200 BCE, after this card, and documents later walls and waterworks."
+    },
+    {
+      "id": "brm-bm-timeline",
+      "title": "Myanmar’s connected cultures: a timeline",
+      "url": "https://www.britishmuseum.org/exhibitions/burma-myanmar/myanmars-many-cultures-timeline",
+      "note": "British Museum places Pyu urban centers from about 200 BCE and emphasizes cultural plurality."
+    },
+    {
+      "id": "brm-bm-pyu",
+      "title": "Pyu culture collection term",
+      "url": "https://www.britishmuseum.org/collection/term/THES293704",
+      "note": "Museum catalogue separates Pyu material beginning about 200 BCE from much later Bamar history."
+    },
+    {
+      "id": "brm-burmese-history",
+      "title": "Burmese: historical phonology",
+      "url": "https://www.cambridge.org/core/books/abs/historical-phonology-of-tibetan-burmese-and-chinese/burmese/CAECA9BA3FF80C3E4770795D13589F17",
+      "note": "Linguistic scholarship places attested Burmese at Pagan and its oldest document in 1113 CE."
+    },
+    {
+      "id": "brm-ethnicity",
+      "title": "Ethnicity and loyalty in precolonial Myanmar",
+      "url": "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/ethnic-hatred-and-universal-benevolence-ethnicity-and-loyalty-in-precolonial-myanmar-and-britain/0F96BB022327E8D95C5A280E320FC503",
+      "note": "Historical study dates Burmese-speaking lowland entry and written ethnonyms many centuries after the atlas interval."
+    },
+    {
+      "id": "brm-glottolog",
+      "title": "Burmese",
+      "url": "https://glottolog.org/resource/languoid/id/nucl1310",
+      "note": "Glottolog identifies documented Burmese as a distinct Sino-Tibetan language, not an archaeological culture label."
+    },
+    {
+      "id": "brm-dian",
+      "title": "Myanmar bronzes and the Dian cultures of Yunnan",
+      "url": "https://soas-repository.worktribe.com/output/387367/myanmar-bronzes-and-the-dian-cultures-of-yunnan",
+      "note": "SOAS study compares artifacts while warning that similarity does not collapse Myanmar and Yunnan traditions."
+    },
+    {
+      "id": "brm-yunnan-arc",
+      "title": "A late second/early first millennium BCE interaction arc",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030544032200070X",
+      "note": "Archaeometallurgical research connects Southwest China and mainland Southeast Asia through exchange, not one ethnic territory."
+    },
+    {
+      "id": "brm-yunnan-crops",
+      "title": "Origins of multi-cropping agriculture in Southwestern China",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9373101/",
+      "note": "Open archaeobotanical study shows varied rice, millet and wheat histories within Yunnan."
+    },
+    {
+      "id": "brm-jicha",
+      "title": "Southbound transmission of metallurgy at Jicha, Yunnan",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/southbound-transmission-of-metallurgy-new-excavations-at-jicha-in-the-hengduan-mountains-yunnan/C5E3CC9CC6A40DD6A240E79EF48FD33F",
+      "note": "Excavation and radiocarbon evidence for a distinct Yunnan settlement and cemetery around 700 BCE."
+    },
+    {
+      "id": "brm-iron-networks",
+      "title": "Myanmar’s role in Iron Age interaction networks",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X16300062",
+      "note": "Glass and copper research documents later first-millennium BCE networks linking South and Southeast Asia."
+    },
+    {
+      "id": "brm-food-production",
+      "title": "Early Food Production in Southeast Asia",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-world-prehistory/early-food-production-in-southeast-asia/73003DE9A960352736863B7DA5F25169",
+      "note": "Regional synthesis supplies comparison while cautioning that domesticated-plant and animal evidence varies by site."
+    },
+    {
+      "id": "brm-water",
+      "title": "Water Management in the Urban Cultural Heritage of Myanmar",
+      "url": "https://www.cambridge.org/core/journals/trans-trans-regional-and-national-studies-of-southeast-asia/article/water-management-in-the-urban-cultural-heritage-of-myanmar/D8FC4F75C83338FCE2624A44C0D8C6EE",
+      "note": "Later case studies explain wet- and dry-zone water problems; used only as comparison, not Bronze Age proof."
+    },
+    {
+      "id": "brm-mdn",
+      "title": "Characteristics of Bronze Age in Myanmar",
+      "url": "https://www.mdn.gov.mm/en/characteristics-bronze-age-myanmar",
+      "note": "Myanmar public source relays Department of Archaeology finds while retaining speculative language that requires caution."
+    },
+    {
+      "id": "brm-metal-overview",
+      "title": "Metal Exchange Networks in Prehistoric Southeast Asia",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546319937",
+      "note": "Oxford overview situates copper-bronze consumption and later iron within regional technological networks."
+    },
+    {
+      "id": "brm-subsistence",
+      "title": "Living in the middle of the edge",
+      "url": "https://link.springer.com/article/10.1007/s12520-025-02265-9",
+      "note": "Open palaeodiet study compares humans and animals while explicitly testing environmental and sex differences."
+    },
+    {
+      "id": "brm-halin-sequence",
+      "title": "A four-millennia sequence from Halin",
+      "url": "https://ourarchive.otago.ac.nz/esploro/outputs/journalArticle/Late-prehistoric-and-early-historic-chronology/9926511554301891",
+      "note": "University record for Halin chronology bridging prehistoric deposits and later Pyu occupation."
+    },
+    {
+      "id": "brm-pyu-dates",
+      "title": "A Thousand Years before Bagan",
+      "url": "https://www.cambridge.org/core/books/abs/bagan-and-the-world/thousand-years-before-bagan-radiocarbon-dates-and-myanmars-ancient-pyu-cities/0F0C574F1E15EAF91616517928428FBF",
+      "note": "Cambridge chapter explains radiocarbon evidence for Pyu cities and the limits of inscription-free dating."
+    }
+  ],
+  "entities": [
+    {
+      "id": "burmese",
+      "card": "data/cards/burmese.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "brm-index",
+            "brm-coverage",
+            "brm-imported",
+            "brm-map2000",
+            "brm-map1500",
+            "brm-map1000",
+            "brm-map700",
+            "brm-map500",
+            "brm-map400"
+          ],
+          "locator": "Exact id, culture kind, approximate 1500 to 500 BCE lifetime and historical-basemaps provenance. Three exact observed intervals, three border files, imported summary and missing reviewed card. Current modern Burmese-surname paragraph is unrelated to second- and first-millennium BCE archaeology. Predecessor seam: tested northern points are split between Thai and Austro-Asiatic rice-culture labels. First exact Burmese component, its enormous bounds and point owners for 1500 to 1000 BCE. Unchanged exact component for 1000 to 700 BCE. Nearly unchanged component with one additional ring position for 700 to 500 BCE. The exact target disappears at its indexed endpoint without a mapped local successor. A broad Austro-Asiatic rice-culture layer owns nearly all tested Myanmar and Yunnan points.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "brm-map2000",
+            "brm-map1500",
+            "brm-arch-overview"
+          ],
+          "locator": "Predecessor seam: tested northern points are split between Thai and Austro-Asiatic rice-culture labels. First exact Burmese component, its enormous bounds and point owners for 1500 to 1000 BCE. Oxford overview links local ecosystems and resources to varied prehistoric occupation without inventing one people.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "brm-arch-overview",
+            "brm-badahlin"
+          ],
+          "locator": "Oxford overview links local ecosystems and resources to varied prehistoric occupation without inventing one people. UNESCO tentative-list record for much earlier rock art, stone tools and workshop evidence in Shan State.",
+          "dateScope": {
+            "from": -1400,
+            "to": -1300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "brm-ucl-chronology",
+            "brm-oakaie-dating"
+          ],
+          "locator": "Open UCL record for 52 AMS dates, stratigraphy, pottery, burials, fauna and the Nyaunggan to Oakaie sequence. University repository article on Oakaie cemetery dates, preservation problems and early first-millennium BCE typology.",
+          "dateScope": {
+            "from": -1300,
+            "to": -1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "brm-mdn",
+            "brm-metal-overview",
+            "brm-food-production"
+          ],
+          "locator": "Myanmar public source relays Department of Archaeology finds while retaining speculative language that requires caution. Oxford overview situates copper-bronze consumption and later iron within regional technological networks. Regional synthesis supplies comparison while cautioning that domesticated-plant and animal evidence varies by site.",
+          "dateScope": {
+            "from": -1200,
+            "to": -1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "brm-map1500",
+            "brm-map1000",
+            "brm-metal-overview"
+          ],
+          "locator": "First exact Burmese component, its enormous bounds and point owners for 1500 to 1000 BCE. Unchanged exact component for 1000 to 700 BCE. Oxford overview situates copper-bronze consumption and later iron within regional technological networks.",
+          "dateScope": {
+            "from": -1100,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "brm-oakaie-dating",
+            "brm-bioarch"
+          ],
+          "locator": "University repository article on Oakaie cemetery dates, preservation problems and early first-millennium BCE typology. Bioarchaeological report on excavated people rather than ethnic labels inferred from artifacts.",
+          "dateScope": {
+            "from": -1000,
+            "to": -900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "brm-beads",
+            "brm-social-isotopes"
+          ],
+          "locator": "Study of 605 roughouts, preforms, drilling waste and finished beads from settlement and burial contexts. Pilot strontium-isotope study of eighteen people explores locality, sex patterning and cautious kinship hypotheses.",
+          "dateScope": {
+            "from": -900,
+            "to": -800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "brm-subsistence",
+            "brm-yunnan-arc",
+            "brm-map700"
+          ],
+          "locator": "Open palaeodiet study compares humans and animals while explicitly testing environmental and sex differences. Archaeometallurgical research connects Southwest China and mainland Southeast Asia through exchange, not one ethnic territory. Nearly unchanged component with one additional ring position for 700 to 500 BCE.",
+          "dateScope": {
+            "from": -800,
+            "to": -700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "brm-iron-handbook",
+            "brm-jicha"
+          ],
+          "locator": "Oxford synthesis stresses geographically limited graves and distinguishes Chindwin and Samon sequences. Excavation and radiocarbon evidence for a distinct Yunnan settlement and cemetery around 700 BCE.",
+          "dateScope": {
+            "from": -700,
+            "to": -600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "brm-iron-networks",
+            "brm-pyu-unesco",
+            "brm-map500"
+          ],
+          "locator": "Glass and copper research documents later first-millennium BCE networks linking South and Southeast Asia. UNESCO dates Pyu urban transformation from about 200 BCE, after this card, and documents later walls and waterworks. The exact target disappears at its indexed endpoint without a mapped local successor.",
+          "dateScope": {
+            "from": -600,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "brm-index",
+            "brm-coverage"
+          ],
+          "locator": "Exact identity fields and category warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "brm-map1500"
+          ],
+          "locator": "Exact component bounds and audited inside points.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "brm-map1500",
+            "brm-map1000",
+            "brm-map700"
+          ],
+          "locator": "Audited exclusions and neighboring layer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "brm-burmese-history",
+            "brm-ethnicity"
+          ],
+          "locator": "Later language and ethnolinguistic chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "brm-glottolog",
+            "brm-adna"
+          ],
+          "locator": "Disciplinary separation and no ethnic inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "brm-ucl-chronology"
+          ],
+          "locator": "Radiocarbon, stratigraphy and ceramic cross-checking.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "brm-oakaie-dating"
+          ],
+          "locator": "Preservation problem and methodological transparency.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "brm-mafm"
+          ],
+          "locator": "Field methods and collaborative research.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "brm-badahlin"
+          ],
+          "locator": "Deep-time discovery and attribution limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "brm-halin-sequence",
+            "brm-pyu-dates"
+          ],
+          "locator": "Stratigraphic continuity without cultural projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "brm-map1500",
+            "brm-landscapes"
+          ],
+          "locator": "Environmental diversity across the exact geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "brm-diet",
+            "brm-arch-overview"
+          ],
+          "locator": "Central dry-zone setting and anti-uniformity warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "brm-inle"
+          ],
+          "locator": "Palaeoenvironmental method and geographic caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "brm-yunnan-arc"
+          ],
+          "locator": "Exchange corridors and chain-mobility caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "brm-water",
+            "brm-bm-timeline"
+          ],
+          "locator": "Explicitly later water-management comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "brm-diet",
+            "brm-subsistence"
+          ],
+          "locator": "Dietary isotope result and interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "brm-diet"
+          ],
+          "locator": "Direct archaeobotanical evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "brm-diet"
+          ],
+          "locator": "Faunal evidence and use ambiguity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "brm-food-production",
+            "brm-yunnan-crops"
+          ],
+          "locator": "Regional comparison and polygon heterogeneity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "brm-nyaunggan-note"
+          ],
+          "locator": "Funerary food evidence and belief caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "brm-ucl-chronology"
+          ],
+          "locator": "Ceramic operating sequence and identity guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "brm-beads"
+          ],
+          "locator": "Evidence-grounded craft fun fact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "brm-metallurgy",
+            "brm-nyaunggan-note"
+          ],
+          "locator": "Metal repertoire and age-label caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "brm-metallurgy"
+          ],
+          "locator": "Archaeometallurgical method and political limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "brm-dian",
+            "brm-jicha",
+            "brm-yunnan-arc"
+          ],
+          "locator": "Cross-border comparison without cultural collapse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "brm-arch-overview"
+          ],
+          "locator": "Settlement evidence and house-form limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "brm-mdn",
+            "brm-metal-overview"
+          ],
+          "locator": "Work reconstruction from multiple material classes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "brm-mafm"
+          ],
+          "locator": "Clothing evidence gap and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "brm-social-isotopes",
+            "brm-mobility"
+          ],
+          "locator": "Human versus object mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "brm-ucl-chronology"
+          ],
+          "locator": "Play evidence gap framed as a kid question.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "brm-social-isotopes"
+          ],
+          "locator": "Small-sample family and residence evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "brm-adna"
+          ],
+          "locator": "Ancient-DNA result, sample limit and no language equation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "brm-mafm"
+          ],
+          "locator": "Infant burial practice and representativeness limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "brm-beads"
+          ],
+          "locator": "Learning inferred cautiously from craft complexity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "brm-social-isotopes",
+            "brm-bioarch"
+          ],
+          "locator": "Gender-role guardrail and evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "brm-care"
+          ],
+          "locator": "Localized osteobiography and care inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "brm-bioarch"
+          ],
+          "locator": "Bioarchaeological scope and diagnostic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "brm-care"
+          ],
+          "locator": "Medical evidence gap and no invented remedy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "brm-oakaie-dating"
+          ],
+          "locator": "Mortuary variation and belief uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "brm-ywa-htin",
+            "brm-iron-handbook"
+          ],
+          "locator": "Later mortuary comparison and continuity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "brm-landscapes"
+          ],
+          "locator": "Water need and local infrastructure uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "brm-mdn"
+          ],
+          "locator": "Refuse evidence and formation processes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "brm-mafm"
+          ],
+          "locator": "Explicit in-period toilet evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "brm-bm-timeline",
+            "brm-water"
+          ],
+          "locator": "Later sanitation and water comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "brm-landscapes"
+          ],
+          "locator": "Ordinary maintenance with inference labeled.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "brm-nyaunggan-note"
+          ],
+          "locator": "Weapon-function ambiguity and no invented state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "brm-iron-networks",
+            "brm-metal-overview"
+          ],
+          "locator": "Later exchange network and identity guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "brm-burmese-history",
+            "brm-bm-pyu"
+          ],
+          "locator": "Explicit absence of a secure contemporaneous sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "brm-beads",
+            "brm-care"
+          ],
+          "locator": "Evidence-based achievement summary and attribution caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "brm-map500",
+            "brm-map400",
+            "brm-bm-timeline"
+          ],
+          "locator": "Audited ending, later Pyu development and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "brm-map500",
+            "brm-map400",
+            "brm-pyu-unesco",
+            "brm-burmese-history"
+          ],
+          "locator": "The exact target disappears at its indexed endpoint without a mapped local successor. A broad Austro-Asiatic rice-culture layer owns nearly all tested Myanmar and Yunnan points. UNESCO dates Pyu urban transformation from about 200 BCE, after this card, and documents later walls and waterworks. Linguistic scholarship places attested Burmese at Pagan and its oldest document in 1113 CE.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "burmese",
+        "card": "cards/burmese.json",
+        "dateBasis": "map_coverage",
+        "summary": "An evidence-aware guide to late Neolithic and Bronze Age communities inside the atlas’s vast, anachronistically named Burmese layer, with exact geometry, daily life, methods and later Pyu/Bamar distinctions.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "burmese",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            89.68229682296823,
+            20.43934282094422,
+            105.66645666456668,
+            29.40745610872078
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "burmese",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            89.68229682296823,
+            20.43934282094422,
+            105.66645666456668,
+            29.40745610872078
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "burmese",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            89.68229682296823,
+            20.43934282094422,
+            105.66645666456668,
+            29.40745610872078
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
