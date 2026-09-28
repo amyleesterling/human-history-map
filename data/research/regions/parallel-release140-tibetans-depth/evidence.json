@@ -1,0 +1,920 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release140-tibetans research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "tb-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id “tibetans,” display label “Tibetans,” culture kind, approximate 1500 to 500 BCE lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "tb-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three exact observed intervals, three border files, imported-summary status, missing card and unreviewed identity, chronology and border fields before this packet."
+    },
+    {
+      "id": "tb-import",
+      "title": "Human History Map imported civilization summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "The pre-existing modern-demographic Wikipedia summary that this packet replaces with interval-appropriate archaeology."
+    },
+    {
+      "id": "tb-map-bc1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "Decoded first exact target polygon, one feature, sixteen positions, bounds, hash, tested point ownership and 1500 to 1000 BCE coverage."
+    },
+    {
+      "id": "tb-map-bc1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Decoded byte-identical reuse of the 1500 BCE geometry and tested owner seams for the 1000 to 700 BCE interval."
+    },
+    {
+      "id": "tb-map-bc700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Decoded seventeen-position target geometry with a changed hash but identical tested-point membership for the 700 to 500 BCE interval."
+    },
+    {
+      "id": "tb-map-bc500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Confirmed exact-id disappearance at the indexed endpoint; no target polygon or tested target point owner remains in this snapshot."
+    },
+    {
+      "id": "tb-archaeology-book",
+      "title": "The Archaeology of the Tibetan Plateau",
+      "url": "https://www.cambridge.org/core/books/abs/archaeology-of-the-tibetan-plateau/archaeology-of-the-tibetan-plateau/7613FA352F704ECF92571B659D395D4F",
+      "note": "Current archaeological synthesis emphasizing regional sequences, local material cultures, subsistence, mobility, burials and the documentary break before empire."
+    },
+    {
+      "id": "tb-bangga",
+      "title": "Early agropastoral settlement and cultural change in central Tibet in the first millennium BC: excavations at Bangga",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/early-agropastoral-settlement-and-cultural-change-in-central-tibet-in-the-first-millennium-bc-excavations-at-bangga/086688A04FDD4DF7AF46FE8F0126BF91",
+      "note": "Excavation, flotation, ceramics, lithics, architecture, crops and fauna at Bangga, with careful comparison to Qugong and Changguogou."
+    },
+    {
+      "id": "tb-chen",
+      "title": "Agriculture facilitated permanent human occupation of the Tibetan Plateau after 3600 B.P.",
+      "url": "https://www.science.org/doi/10.1126/science.1259172",
+      "note": "Radiocarbon-dated crop and animal evidence linking cold-tolerant barley, wheat and sheep with sustained higher-elevation settlement after about 3600 BP."
+    },
+    {
+      "id": "tb-margins-crops",
+      "title": "Early evidence for the use of wheat and barley as staple crops on the margins of the Tibetan Plateau",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4426421/",
+      "note": "Direct crop dates and archaeobotanical evidence for changing millet, wheat and barley use on the northeastern plateau margins."
+    },
+    {
+      "id": "tb-moving-agriculture",
+      "title": "Moving agriculture onto the Tibetan plateau: the archaeobotanical evidence",
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/209052",
+      "note": "Peer-reviewed synthesis of Karuo and Kyung-lung plant evidence, millet beginnings, later barley-wheat-pea systems, caprines and complementary wild foods."
+    },
+    {
+      "id": "tb-changguo-crops",
+      "title": "A Study on Ancient Barley, Wheat and Millet Discovered at Changguo of Tibet",
+      "url": "https://zwxb.chinacrops.org/EN/abstract/abstract2474.shtml",
+      "note": "Published identification of naked barley, wheat and foxtail millet at Changguogou in the Yarlung region."
+    },
+    {
+      "id": "tb-geospatial",
+      "title": "Geospatial modelling of farmer to herder interactions maps cultural geography of Bronze and Iron Age Tibet, 3600 to 2200 BP",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10837149/",
+      "note": "Archaeological distribution and mobility modelling reveal several interaction zones rather than one plateau-wide culture or territory."
+    },
+    {
+      "id": "tb-qaidam",
+      "title": "Radiocarbon chronology and settlement patterns in the Bronze Age of the Qaidam Basin, Northwestern China",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568209/",
+      "note": "Radiocarbon, survey, charred crops, grinding tools and fauna support flexible and sometimes mobile agropastoral lifeways in a northeastern basin."
+    },
+    {
+      "id": "tb-yak-adna",
+      "title": "Evidence for early domestic yak, taurine cattle, and their hybrids on the Tibetan Plateau",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10848728/",
+      "note": "Ancient DNA and zooarchaeology at Bangga identify domestic yak, cattle and hybrids around 2500 BP, alongside caprines, horses, corrals, butchery and dung."
+    },
+    {
+      "id": "tb-dairy",
+      "title": "Paleoproteomic evidence reveals dairying supported prehistoric occupation of the highland Tibetan Plateau",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10096579/",
+      "note": "Milk proteins in ancient dental calculus, including goat milk at Gepaseru in 1500 to 1312 BCE, document dairy among women, men, adults, children and varied burials."
+    },
+    {
+      "id": "tb-scu-dairy",
+      "title": "Research reveals the history of dairy consumption among ancient Tibetan Plateau populations",
+      "url": "https://cas.scu.edu.cn/info/1065/1601.htm",
+      "note": "Sichuan University archaeological-science account explains dental-calculus paleoproteomics and reports dairy among women, men, adults, children, elites and commoners."
+    },
+    {
+      "id": "tb-sheep",
+      "title": "The Genome Landscape of Tibetan Sheep Reveals Adaptive Introgression from Argali and the History of Early Human Settlements",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6367989/",
+      "note": "Sheep genomic history combined with an archaeological site synthesis; useful for livestock dispersal with explicit limits on equating animal genes and human identity."
+    },
+    {
+      "id": "tb-himalaya-genomes",
+      "title": "Ancient genomes from the Himalayas illuminate the genetic history of Tibetans and their Tibeto-Burman speaking neighbors",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8904508/",
+      "note": "Thirty-eight high-altitude individuals include people dated to 1420 BCE and later; ancestry relationships are distinguished from language, culture and modern ethnicity."
+    },
+    {
+      "id": "tb-plateau-genomes",
+      "title": "Human genetic history on the Tibetan Plateau in the past 5100 years",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10022901/",
+      "note": "Broad ancient-genome transect, radiocarbon control and kinship estimation show continuity plus regional interactions without defining a prehistoric nation."
+    },
+    {
+      "id": "tb-southern-genomes",
+      "title": "Ancient genomes reveal basal Asian ancestries and dynamic population interactions over time on the southern Tibetan Plateau",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12589885/",
+      "note": "Ancient genomes indicate repeated interaction and admixture on the southern plateau; genetic clusters do not supply names, speech or political boundaries."
+    },
+    {
+      "id": "tb-epas1",
+      "title": "Altitude adaptation in Tibetans caused by introgression of Denisovan-like DNA",
+      "url": "https://www.nature.com/articles/nature13408",
+      "note": "EPAS1 study identifies Denisovan-related ancestry involved in present-day Tibetan high-altitude physiology, a deep biological history that cannot label Bronze Age artifacts."
+    },
+    {
+      "id": "tb-denisovan-review",
+      "title": "Denisovans and Homo sapiens on the Tibetan Plateau: dispersals and adaptations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9140327/",
+      "note": "Review separates very ancient hominin occupation, later Homo sapiens settlement, cultural adaptations and genetic selection at altitude."
+    },
+    {
+      "id": "tb-nwya-devu",
+      "title": "The earliest human occupation of the high-altitude Tibetan Plateau 40 thousand to 30 thousand years ago",
+      "url": "https://www.science.org/doi/10.1126/science.aat8824",
+      "note": "Excavated stone-tool assemblages at Nwya Devu provide deep background for human use of the plateau, tens of millennia before the atlas interval."
+    },
+    {
+      "id": "tb-chusang",
+      "title": "Permanent human occupation of the central Tibetan Plateau in the early Holocene",
+      "url": "https://www.science.org/doi/10.1126/science.aag0357",
+      "note": "Dating of Chusang hand- and footprints demonstrates early central-plateau presence while illustrating chronological debate and method."
+    },
+    {
+      "id": "tb-baishiya",
+      "title": "Middle and Late Pleistocene Denisovan subsistence at Baishiya Karst Cave",
+      "url": "https://www.nature.com/articles/s41586-024-07612-9",
+      "note": "Zooarchaeology and proteomics reveal Denisovan-related occupation and animal use far earlier than this card; included only as deep regional background."
+    },
+    {
+      "id": "tb-osl",
+      "title": "Direct dating of lithic surface artifacts using luminescence",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11210310/",
+      "note": "Optically stimulated luminescence offers direct burial ages for surface stone artifacts while requiring geomorphic and environmental controls."
+    },
+    {
+      "id": "tb-zongri",
+      "title": "Foraging and farming: archaeobotanical and zooarchaeological evidence for Neolithic exchange on the Tibetan Plateau",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/foraging-and-farming-archaeobotanical-and-zooarchaeological-evidence-for-neolithic-exchange-on-the-tibetan-plateau/3D0055D256894AFD65FF859BE1041503",
+      "note": "Imported and locally imitated ceramics, plant and animal remains, and varied burials at Zongri demonstrate interaction without simple ethnic equations."
+    },
+    {
+      "id": "tb-metal",
+      "title": "On the early metal objects and early Metal Age in Tibet",
+      "url": "https://www.degruyterbrill.com/de/document/doi/10.1515/char-2016-0008/html",
+      "note": "Review of copper, bronze, iron and composite objects argues for a complicated early Metal Age rather than a simple technology-to-people migration story."
+    },
+    {
+      "id": "tb-textiles",
+      "title": "New Evidence for Prehistoric Textile Production and Social Complexity on the Southeastern Tibetan Plateau",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00934690.2024.2416756",
+      "note": "Spindle whorls, loom evidence and fabric traces from the Yanyuan Basin document household and later socially differentiated textile work."
+    },
+    {
+      "id": "tb-health",
+      "title": "Bioarchaeological profile of stress and dental disease among ancient high altitude Himalayan communities of Nepal",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28407333/",
+      "note": "Teeth and skeletons reveal site-specific dental disease and stress patterns; the studied communities and dates prevent automatic plateau-wide generalization."
+    },
+    {
+      "id": "tb-sding-chung",
+      "title": "Sding Chung: an early multi-burial cave site on the Tibetan Plateau",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/sding-chung-an-early-multiburial-cave-site-on-the-tibetan-plateau/951DA434BC69868D3F157DD89AFB9CA1",
+      "note": "Excavation of a multi-burial cave emphasizes regional mortuary diversity and limits on reading belief or kinship directly from graves."
+    },
+    {
+      "id": "tb-mustang",
+      "title": "Mustang: Nepal, for 4,000 years",
+      "url": "https://archeologie.culture.gouv.fr/fr/mustang",
+      "note": "French Ministry of Culture archaeological overview of sparse research, high-mountain routes and second-millennium BCE occupation in Upper Mustang."
+    },
+    {
+      "id": "tb-idp-annals",
+      "title": "Cave 17: the Library Cave; the Tibetan annals",
+      "url": "https://idp.bl.uk/discover/learning/dunhuang/collection-items/cave-17-the-library-cave/",
+      "note": "British Library International Dunhuang Programme dates the earliest surviving Tibetan historical records and Old Tibetan script to the imperial era."
+    },
+    {
+      "id": "tb-tibetic-languages",
+      "title": "The Tibetic Languages: an introduction to the family of languages derived from Old Tibetan",
+      "url": "https://lacito.cnrs.fr/en/the-tibetic-languages-2/",
+      "note": "CNRS linguistics overview presents Tibetic as a diverse family derived from historically attested Old Tibetan, not a label recoverable from prehistoric pots."
+    },
+    {
+      "id": "tb-bordering-languages",
+      "title": "Bordering Tibetan Languages",
+      "url": "https://www.cambridge.org/core/books/bordering-tibetan-languages/56DD3C2B065D05993018B5B89CE66D4A/listing",
+      "note": "Scholarly volume explains literary Tibetan as an imperial-era standard and modern speech diversity, distinguishing language, identity and state projects."
+    },
+    {
+      "id": "tb-unicode",
+      "title": "Unicode Core Specification: Tibetan",
+      "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+      "note": "Authoritative technical history and structure of Tibetan script; useful for dating the writing tradition far after 500 BCE."
+    },
+    {
+      "id": "tb-met-buddhism",
+      "title": "Himalayan Region, 500 to 1000 A.D.",
+      "url": "https://www.metmuseum.org/toah/ht/06/ssh.html",
+      "note": "Metropolitan Museum chronology places the Yarlung state and active Tibetan Buddhist court patronage in the seventh to ninth centuries CE."
+    },
+    {
+      "id": "tb-eve-empire",
+      "title": "The Tibetan Plateau on the Eve of Empire",
+      "url": "https://www.cambridge.org/core/books/abs/archaeology-of-the-tibetan-plateau/tibetan-plateau-on-the-eve-of-empire/71E65C3496203F3C381BB3A730E4F23B",
+      "note": "Archaeological synthesis places the political formation and written evidence of the Tibetan Empire many centuries after this atlas record."
+    },
+    {
+      "id": "tb-oeaw-burials",
+      "title": "Secrets of Tibetan burial mounds",
+      "url": "https://www.oeaw.ac.at/en/news-1/secrets-of-tibetan-burial-mounds",
+      "note": "Austrian Academy project on central Tibetan mound landscapes, mostly imperial-era and therefore explicitly used as later contrast."
+    },
+    {
+      "id": "tb-fao-steppe",
+      "title": "Grasslands of the World: The Tibetan Steppe",
+      "url": "https://www.fao.org/4/y8344e/y8344e0f.htm",
+      "note": "Institutional ecological overview of cold desert, steppe, meadow, river headwaters, grazing risks and later herding practice; used only for environmental context and labeled comparison."
+    },
+    {
+      "id": "tb-palaeolandscapes",
+      "title": "Palaeoenvironmental proxies indicate long-term development of agro-pastoralist landscapes in Inner Asian mountains",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8752612/",
+      "note": "Pollen, charcoal and other proxies show that mountain agropastoral landscapes developed through long human-environment interaction rather than a single migration."
+    },
+    {
+      "id": "tb-western-himalaya",
+      "title": "Prehistoric agricultural decision making in the western Himalayas: ecological and social variables",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/prehistoric-agricultural-decision-making-in-the-western-himalayas-ecological-and-social-variables/C3E2CB6790A2236E22C5309FBFF95804",
+      "note": "Comparative archaeobotany situates Qugong, Changguogou and Bangga mixed cropping after 1500 BCE within high-elevation choices and constraints."
+    },
+    {
+      "id": "tb-agriculture-review",
+      "title": "The emergence, development, and impact of prehistoric agriculture on the Tibetan plateau",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440325000652",
+      "note": "Recent synthesis describes successive millet, mixed millet-barley-wheat and barley-wheat systems while emphasizing spatial and chronological variation."
+    },
+    {
+      "id": "tb-linguistic-prehistory",
+      "title": "The linguistic (pre)history on the eastern Tibetan Plateau: archaeology, palaeoclimate and linguistics",
+      "url": "https://www.sciencedirect.com/science/article/pii/S295023652600006X",
+      "note": "Multidisciplinary study models language and archaeological dispersals cautiously and warns that material patterns do not simply identify speech communities."
+    },
+    {
+      "id": "tb-language-dating",
+      "title": "Dated language phylogenies shed light on the ancestry of Sino-Tibetan",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6534992/",
+      "note": "One statistical language-family model linking diversification and early farming; included as a model with uncertainty, never as a direct identification of the atlas population."
+    },
+    {
+      "id": "tb-modern-diversity",
+      "title": "Tibetan language studies at Oxford",
+      "url": "https://www.ames.ox.ac.uk/tibetan",
+      "note": "University overview distinguishes Central Tibetan, Khams, Amdo and related but separate Tibetic languages, illustrating why the atlas name cannot cover all speakers."
+    }
+  ],
+  "entities": [
+    {
+      "id": "tibetans",
+      "card": "data/cards/tibetans.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tb-index",
+            "tb-map-bc1500"
+          ],
+          "locator": "Exact indexed id “tibetans,” display label “Tibetans,” culture kind, approximate 1500 to 500 BCE lifetime and historical-basemaps provenance. Decoded first exact target polygon, one feature, sixteen positions, bounds, hash, tested point ownership and 1500 to 1000 BCE coverage.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tb-map-bc1500",
+            "tb-changguo-crops",
+            "tb-dairy",
+            "tb-himalaya-genomes"
+          ],
+          "locator": "Decoded first exact target polygon, one feature, sixteen positions, bounds, hash, tested point ownership and 1500 to 1000 BCE coverage. Published identification of naked barley, wheat and foxtail millet at Changguogou in the Yarlung region. Milk proteins in ancient dental calculus, including goat milk at Gepaseru in 1500 to 1312 BCE, document dairy among women, men, adults, children and varied burials. Thirty-eight high-altitude individuals include people dated to 1420 BCE and later; ancestry relationships are distinguished from language, culture and modern ethnicity.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tb-map-bc1000",
+            "tb-bangga",
+            "tb-metal",
+            "tb-geospatial"
+          ],
+          "locator": "Decoded byte-identical reuse of the 1500 BCE geometry and tested owner seams for the 1000 to 700 BCE interval. Excavation, flotation, ceramics, lithics, architecture, crops and fauna at Bangga, with careful comparison to Qugong and Changguogou. Review of copper, bronze, iron and composite objects argues for a complicated early Metal Age rather than a simple technology-to-people migration story. Archaeological distribution and mobility modelling reveal several interaction zones rather than one plateau-wide culture or territory.",
+          "dateScope": {
+            "from": -1000,
+            "to": -700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tb-map-bc700",
+            "tb-map-bc500",
+            "tb-bangga"
+          ],
+          "locator": "Decoded seventeen-position target geometry with a changed hash but identical tested-point membership for the 700 to 500 BCE interval. Confirmed exact-id disappearance at the indexed endpoint; no target polygon or tested target point owner remains in this snapshot. Excavation, flotation, ceramics, lithics, architecture, crops and fauna at Bangga, with careful comparison to Qugong and Changguogou.",
+          "dateScope": {
+            "from": -700,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tb-index",
+            "tb-coverage"
+          ],
+          "locator": "Exact index and coverage identity fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tb-import",
+            "tb-agriculture-review"
+          ],
+          "locator": "Imported-summary text compared with current archaeological chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tb-map-bc1500",
+            "tb-map-bc1000"
+          ],
+          "locator": "Decoded TopoJSON hashes, bounds and tested point membership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tb-map-bc700",
+            "tb-map-bc500"
+          ],
+          "locator": "Decoded geometry hashes and endpoint absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tb-geospatial",
+            "tb-linguistic-prehistory",
+            "tb-language-dating"
+          ],
+          "locator": "Atlas seam interpreted against multidisciplinary model limits.",
+          "dateScope": null,
+          "uncertainty": "Language dispersal chronologies remain model-dependent."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tb-bangga"
+          ],
+          "locator": "Bangga methods and plateau synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tb-chen",
+            "tb-margins-crops"
+          ],
+          "locator": "Direct crop dating and regional synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tb-osl"
+          ],
+          "locator": "Luminescence method, limitations and geomorphic controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tb-nwya-devu",
+            "tb-chusang",
+            "tb-baishiya",
+            "tb-denisovan-review"
+          ],
+          "locator": "Deep-time sites and review chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tb-plateau-genomes",
+            "tb-himalaya-genomes",
+            "tb-southern-genomes"
+          ],
+          "locator": "Ancient-genome scope, dates and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tb-fao-steppe"
+          ],
+          "locator": "Environmental zones; later ecology explicitly treated as comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tb-epas1",
+            "tb-denisovan-review"
+          ],
+          "locator": "High-altitude physiology and genetic adaptation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tb-palaeolandscapes",
+            "tb-chen"
+          ],
+          "locator": "Environmental proxies and mixed subsistence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tb-geospatial",
+            "tb-western-himalaya"
+          ],
+          "locator": "Subsistence interaction model and ecological choices.",
+          "dateScope": null,
+          "uncertainty": "Specific journeys remain unobserved."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tb-map-bc1000",
+            "tb-qaidam"
+          ],
+          "locator": "Geometry reuse versus localized archaeological records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tb-changguo-crops",
+            "tb-moving-agriculture"
+          ],
+          "locator": "Published crop identifications and synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tb-chen",
+            "tb-margins-crops",
+            "tb-agriculture-review"
+          ],
+          "locator": "Regional crop and livestock transition evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tb-dairy"
+          ],
+          "locator": "Earliest directly reported plateau dairy peptide and method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tb-western-himalaya"
+          ],
+          "locator": "Grinding tools and culinary inference.",
+          "dateScope": null,
+          "uncertainty": "Exact dishes are not preserved."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tb-moving-agriculture",
+            "tb-qaidam"
+          ],
+          "locator": "Regional evidence for diverse subsistence choices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tb-sheep"
+          ],
+          "locator": "Livestock distributions and animal-genome limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tb-yak-adna"
+          ],
+          "locator": "Possible versus genetically supported yak identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tb-yak-adna"
+          ],
+          "locator": "Bangga faunal, genomic, corral and manure evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tb-qaidam"
+          ],
+          "locator": "Qaidam settlement, crop and faunal pattern.",
+          "dateScope": null,
+          "uncertainty": "Household mobility varies and exact routes are unknown."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "tb-mustang"
+          ],
+          "locator": "High-mountain corridors and modeled interactions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tb-bangga"
+          ],
+          "locator": "Bangga architecture and corral evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tb-zongri"
+          ],
+          "locator": "Ceramic comparison and exchange caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tb-textiles"
+          ],
+          "locator": "Textile tools, preservation and social interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tb-fao-steppe"
+          ],
+          "locator": "Material possibilities with later ethnographic comparison explicitly limited.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tb-metal"
+          ],
+          "locator": "Early Metal Age synthesis and technological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tb-plateau-genomes"
+          ],
+          "locator": "Kinship estimation and settlement evidence.",
+          "dateScope": null,
+          "uncertainty": "Specific family forms are unattested."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tb-dairy"
+          ],
+          "locator": "Sex, age and burial-context distribution of dairy peptides.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tb-textiles"
+          ],
+          "locator": "Textile labor and grave-context interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tb-qaidam"
+          ],
+          "locator": "Domestic and agropastoral skill contexts.",
+          "dateScope": null,
+          "uncertainty": "Learning process is inferred; formal schooling is unattested."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "tb-sding-chung",
+            "tb-himalaya-genomes"
+          ],
+          "locator": "Regional mortuary and sampled-individual evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "tb-health",
+            "tb-denisovan-review"
+          ],
+          "locator": "Bioarchaeological capabilities and environmental stresses.",
+          "dateScope": null,
+          "uncertainty": "Exact treatments are unattested."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "tb-health"
+          ],
+          "locator": "Limits of site-specific bioarchaeological comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tb-scu-dairy"
+          ],
+          "locator": "Paleoproteomic sampling and negative-evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tb-fao-steppe"
+          ],
+          "locator": "Hydrological context and settlement evidence.",
+          "dateScope": null,
+          "uncertainty": "Specific water routines are unattested."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "tb-yak-adna"
+          ],
+          "locator": "Corral/manure evidence and absence of attributed sanitation infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Human waste practice remains unknown."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "tb-sding-chung",
+            "tb-zongri"
+          ],
+          "locator": "Mortuary diversity and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "tb-textiles"
+          ],
+          "locator": "Status indicators and political inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "tb-metal",
+            "tb-archaeology-book"
+          ],
+          "locator": "Weapons and political limits.",
+          "dateScope": null,
+          "uncertainty": "Scale and organization of conflict remain uncertain."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "tb-met-buddhism",
+            "tb-idp-annals"
+          ],
+          "locator": "Buddhist and manuscript chronologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "tb-eve-empire",
+            "tb-oeaw-burials"
+          ],
+          "locator": "Imperial-era chronology and later mound evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "tb-chen",
+            "tb-palaeolandscapes"
+          ],
+          "locator": "Synthesis of cultural adaptations and regional diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "tb-textiles",
+            "tb-zongri"
+          ],
+          "locator": "Craft evidence and regional comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "tb-tibetic-languages",
+            "tb-modern-diversity",
+            "tb-linguistic-prehistory"
+          ],
+          "locator": "Tibetic classification and prehistoric language limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "tb-idp-annals",
+            "tb-unicode",
+            "tb-bordering-languages"
+          ],
+          "locator": "Script and Old Tibetan documentary chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tb-map-bc500",
+            "tb-eve-empire",
+            "tb-agriculture-review"
+          ],
+          "locator": "Endpoint seam and long-term continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tb-map-bc500",
+            "tb-eve-empire",
+            "tb-idp-annals"
+          ],
+          "locator": "Confirmed exact-id disappearance at the indexed endpoint; no target polygon or tested target point owner remains in this snapshot. Archaeological synthesis places the political formation and written evidence of the Tibetan Empire many centuries after this atlas record. British Library International Dunhuang Programme dates the earliest surviving Tibetan historical records and Old Tibetan script to the imperial era.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "tibetans",
+        "card": "cards/tibetans.json",
+        "dateBasis": "map_coverage",
+        "summary": "A cautious archaeological guide to many plateau communities mapped under an anachronistic “Tibetans” label from 1500 to 500 BCE, with local farming, herding, craft, exchange and high-altitude adaptation kept separate from later empire, script and Buddhism.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "tibetans",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            76.52416524165244,
+            27.116695554096793,
+            105.30645306453067,
+            43.02483176535698
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "tibetans",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            76.52416524165244,
+            27.116695554096793,
+            105.30645306453067,
+            43.02483176535698
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "tibetans",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            76.52416524165244,
+            27.116695554096793,
+            105.30645306453067,
+            43.02483176535698
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
