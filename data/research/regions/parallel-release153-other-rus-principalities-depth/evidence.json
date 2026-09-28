@@ -1,0 +1,960 @@
+{
+  "version": 1,
+  "region": "Chernihiv, Smolensk, Polotsk, Turov, Moscow, Tver, Torzhok, and adjoining lands inside the exact 1200 atlas aggregate",
+  "researcher": "Codex parallel release153-other-rus-principalities research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "or-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact generated id, display name, approximate 1200 to 1279 interval, and circa flag."
+    },
+    {
+      "id": "or-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Confirms that the exact target has no imported summary."
+    },
+    {
+      "id": "or-coverage",
+      "title": "Human History Map research coverage audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact observed interval and the one border snapshot containing the target."
+    },
+    {
+      "id": "or-missing",
+      "title": "Human History Map missing-card audit",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact id was missing a substantive indexed card."
+    },
+    {
+      "id": "or-cards",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms the exact id was absent before this packet."
+    },
+    {
+      "id": "or-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no accepted researched override existed for the exact id."
+    },
+    {
+      "id": "or-map-1100",
+      "title": "Human History Map 1100 border topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Pre-start control snapshot and point ownership before the aggregate appears."
+    },
+    {
+      "id": "or-map-1200",
+      "title": "Human History Map 1200 border topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Only exact target feature, decoded polygon, topology, memberships, interval, and direct seams."
+    },
+    {
+      "id": "or-map-1279",
+      "title": "Human History Map 1279 border topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Exact endpoint control showing the coarse replacement by the Ryazan label."
+    },
+    {
+      "id": "or-map-1300",
+      "title": "Human History Map 1300 border topology",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Post-end control showing Golden Horde, Moscow, Novgorod, and Lithuania labels."
+    },
+    {
+      "id": "or-overview-pre",
+      "title": "Martin Dimnik, The Rus principalities, 1125 to 1246",
+      "url": "https://www.cambridge.org/core/books/cambridge-history-of-russia/rus-principalities-11251246/E34ACDA963FD2080F778025DDC29C7BD",
+      "note": "Cambridge History of Russia chapter summary on separate principalities, dynastic succession, and rivalry for Kyiv."
+    },
+    {
+      "id": "or-overview-post",
+      "title": "Lawrence N. Langer, The Rus principalities under Mongol rule",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/rus-principalities/911C3421D072F30E76F46B3AD73DCA9D",
+      "note": "Cambridge History of the Mongol Empire summary on attacks, tribute, basqaqs, church exemption, and khanly charters."
+    },
+    {
+      "id": "or-overview-trade",
+      "title": "Goetz translation of the 1229 Smolensk treaty",
+      "url": "https://www.schaeken.nl/lu/research/online/editions/1229/1229atranslgerm.html",
+      "note": "Scholarly-hosted treaty translation on merchants, debts, portage, wax, metals, and free Dvina passage."
+    },
+    {
+      "id": "or-overview-life",
+      "title": "Old Rus daily life and culture, full Institute volume",
+      "url": "https://archaeolog.ru/media/books_arch_ussr/ArchaeologyUSSR_16.pdf",
+      "note": "Institute of Archaeology RAS volume on household objects, dress, transport, devotional art, writing, and cultural continuity."
+    },
+    {
+      "id": "or-princely-system",
+      "title": "Cambridge History of Russia, Volume I contents and summaries",
+      "url": "https://www.cambridge.org/core/books/cambridge-history-of-russia/F527C755BDC941F3CA7B68032259F1AB",
+      "note": "Volume summary on princely warlords, rival Smolensk and Chernihiv dynasties, and thirteenth-century political structures."
+    },
+    {
+      "id": "or-olhovych",
+      "title": "Encyclopedia of Ukraine, Olhovych house",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CO%5CL%5COlhovychhouse.htm",
+      "note": "Chernihiv dynasty, cohesion, Cuman alliances, competition for Kyiv, and disruption during the Mongol invasion."
+    },
+    {
+      "id": "or-batu",
+      "title": "Encyclopedia of Ukraine, Batu Khan",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CB%5CA%5CBatuKhan.htm",
+      "note": "Campaign chronology, Chernihiv and Kyiv sacks, westward invasion, Volga return, and Golden Horde establishment."
+    },
+    {
+      "id": "or-kyiv",
+      "title": "Encyclopedia of Ukraine, Kyiv principality",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CY%5CKyivprincipality.htm",
+      "note": "Competing princely houses, destruction in 1240, continued principality, and later political transformation."
+    },
+    {
+      "id": "or-cher-politics",
+      "title": "Encyclopedia of Ukraine, Chernihiv principality",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CH%5CChernihivprincipality.htm",
+      "note": "Dynastic ambitions, Kalka, 1239 sack, fragmentation, Bryansk continuity, and later Horde control."
+    },
+    {
+      "id": "or-polotsk",
+      "title": "Encyclopedia of Ukraine, Polatsk principality",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CP%5CO%5CPolatskprincipality.htm",
+      "note": "Smolensk influence, thirteenth-century pressure from Livonian and Lithuanian powers, and later annexation."
+    },
+    {
+      "id": "or-turov",
+      "title": "Encyclopedia of Ukraine, Turiv-Pynsk principality",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CT%5CU%5CTuriv6Pynskprincipality.htm",
+      "note": "Appanage division, farming, hunting, fishing, beekeeping, routes, Mongol control, and Galicia-Volhynia influence."
+    },
+    {
+      "id": "or-invasion",
+      "title": "Encyclopedia of Ukraine, History of Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CHI%5CHistoryofUkraine.htm",
+      "note": "Kalka in 1223 and the differentiated sequence of the 1237 to 1241 Mongol campaigns."
+    },
+    {
+      "id": "or-mykhailo",
+      "title": "Encyclopedia of Ukraine, Mykhailo Vsevolodovych",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CM%5CY%5CMykhailoVsevolodovych.htm",
+      "note": "Chernihiv prince, flight after 1239, return, journey to Sarai, execution, and later religious memory."
+    },
+    {
+      "id": "or-mongol-rule",
+      "title": "Janet Martin, The Russian lands within the Golden Horde",
+      "url": "https://www.cambridge.org/core/books/abs/medieval-russia-9801584/russian-lands-within-the-golden-horde/A4FC326BD71218567359D995DC5FE337",
+      "note": "Cambridge synthesis on invasion, persistent principalities, intermarriage, tribute, and diverging regional trajectories."
+    },
+    {
+      "id": "or-tribute",
+      "title": "Horace W. Dewey, Russia’s Debt to the Mongols in Suretyship and Collective Responsibility",
+      "url": "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/abs/russias-debt-to-the-mongols-in-suretyship-and-collective-responsibility/B7ED9208F3D154EDFB6A572CA4C84041",
+      "note": "Scholarly discussion of tribute, censuses, surety, collective responsibility, and the limits of describing Mongol rule."
+    },
+    {
+      "id": "or-treaty-edition",
+      "title": "Jos Schaeken, 1229 Smolensk treaty edition",
+      "url": "https://www.schaeken.nl/lu/research/online/editions/1229/index.html",
+      "note": "Scholarly online edition of the Smolensk, Riga, and Gotland commercial treaty and its recensions."
+    },
+    {
+      "id": "or-treaty-language",
+      "title": "German, Latin, and Church Slavonic in the 1229 Smolensk treaty",
+      "url": "https://rjano.ruslang.ru/en/archive/2021-1/226-276",
+      "note": "Peer-reviewed linguistic study locating composition in Riga and explaining the treaty multilingual textual history."
+    },
+    {
+      "id": "or-smolensk-house",
+      "title": "Institute of Archaeology RAS, Excavations in Smolensk",
+      "url": "https://archaeolog.ru/press/articles/n219",
+      "note": "Dense eleventh-to-thirteenth-century estates, log construction, ovens, floors, finds, seals, and a thirteenth-century scabbard tip."
+    },
+    {
+      "id": "or-smolensk-fire",
+      "title": "Institute of Archaeology RAS, a Rus residence in Smolensk",
+      "url": "https://archaeolog.ru/press/articles/drevnerusskiy-terem-na-meste-budushchego-studencheskogo-kampusa-v-smolenske",
+      "note": "Twelfth and thirteenth-century buildings, pottery, spindle whorls, bracelets, crosses, plinth marks, and a later fire."
+    },
+    {
+      "id": "or-smolensk-flood",
+      "title": "Krenke and colleagues, Lower Town of Old Rus Smolensk",
+      "url": "https://rjsvd.com/0869-6063/article/view/655811",
+      "note": "Peer-reviewed reconstruction of settlement, Dnieper terraces, floods, erosion, and thirteenth-century contraction."
+    },
+    {
+      "id": "or-polotsk-life",
+      "title": "G. V. Shtykhov, Towns of the Polotsk land, ninth to thirteenth centuries",
+      "url": "https://djvu.online/file/SH1yfORGspl6y",
+      "note": "Archaeological monograph on houses, drainage, crops, fishing, crafts, textiles, imported goods, and river trade."
+    },
+    {
+      "id": "or-cher-suburbs-2018",
+      "title": "Motsia, Zhyhola, and Skorokhod, Chernihiv suburbs research",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/70",
+      "note": "Peer-reviewed excavation report on estates, household equipment, piety, jewelry, amphorae, coins, and scales."
+    },
+    {
+      "id": "or-cher-suburbs-2022",
+      "title": "Motsia and colleagues, Chernihiv suburbs in 2022",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/355",
+      "note": "Peer-reviewed report on early-thirteenth-century houses, antler working, fires, abandonment, and post-invasion cemetery use."
+    },
+    {
+      "id": "or-healing",
+      "title": "A. Potapova, Healing practices in Rus",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/726",
+      "note": "Institute of Archaeology NAS Ukraine synthesis of medical texts, archaeology, trauma, monastic, professional, women, and folk healing."
+    },
+    {
+      "id": "or-banya",
+      "title": "Ethan Pollock, Older Even Than the Tsar",
+      "url": "https://academic.oup.com/book/32455/chapter-abstract/268805691",
+      "note": "Oxford University Press history of early Rus bathhouses, law, belief, hygiene, pleasure, healing, and danger."
+    },
+    {
+      "id": "or-education",
+      "title": "Encyclopedia of Ukraine, Education",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CE%5CD%5CEducation.htm",
+      "note": "Carefully qualified evidence for cathedral, church, court education, object inscriptions, and the absence of a uniform school system."
+    },
+    {
+      "id": "or-family-law",
+      "title": "Rosanne Gretchen Mulcahy, Canon law in medieval Russia",
+      "url": "https://discovery.ucl.ac.uk/10108838/1/Canon_law_in_medieval_Russia_.pdf",
+      "note": "University College London thesis on the Kormchaia, inheritance provisions, children, widows, canon law, and source limits."
+    },
+    {
+      "id": "or-child-polotsk",
+      "title": "Makouskaya and Plavinski, A child in the world of the dead",
+      "url": "https://www.e-anthropology.com/English/Catalog/Archaeology/STM_DWL_KMwM_QTQiavs0JrlM.aspx",
+      "note": "Peer-reviewed study of child burials, mortality baselines, grave goods, and Christianization in eleventh-to-thirteenth-century Polotsk."
+    },
+    {
+      "id": "or-polotsk-unesco",
+      "title": "UNESCO tentative list, Polotsk churches",
+      "url": "https://whc.unesco.org/en/tentativelists/1893/",
+      "note": "Polotsk geography, twelfth-century Transfiguration Church, architect, original fabric, frescoes, and layered St Sophia remains."
+    },
+    {
+      "id": "or-chernihiv-unesco",
+      "title": "UNESCO enhanced protection list, Savior Cathedral of Chernihiv",
+      "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/06/Enhanced-Protection-List-2024_Eng_compressed.pdf",
+      "note": "Official cultural-property record for the eleventh-century cathedral and its Constantinopolitan-linked builders."
+    },
+    {
+      "id": "or-smol-2-3",
+      "title": "Gramoty, Smolensk birchbark document 2/3",
+      "url": "https://gramoty.ru/birchbark/document/show/smolensk/2/3/",
+      "note": "HSE and Institute of Slavic Studies catalogue: private household fragment, 1260 to 1280, transcript and translation."
+    },
+    {
+      "id": "or-smol-9-8",
+      "title": "Gramoty, Smolensk birchbark document 9/8",
+      "url": "https://gramoty.ru/birchbark/document/show/smolensk/9/8/",
+      "note": "HSE and Institute of Slavic Studies catalogue: debt-collection letter around 1200 to 1220 with translation."
+    },
+    {
+      "id": "or-mstislavl-1",
+      "title": "Gramoty, Mstislavl birchbark document 1",
+      "url": "https://gramoty.ru/birchbark/document/show/mstislavl/1/",
+      "note": "HSE and Institute of Slavic Studies catalogue: 1210s business fragment mentioning wheat and four and a half grivnas."
+    },
+    {
+      "id": "or-rus-life",
+      "title": "Institute of Archaeology RAS, Old Rus daily life and culture",
+      "url": "https://archaeolog.ru/el-bib/el-cat/el-series/arch-sssr/archaeologyussr_16",
+      "note": "Academic synthesis of household objects, utensils, clothes, footwear, transport, music, ornament, writing, and cultural continuity."
+    },
+    {
+      "id": "or-belarus",
+      "title": "Encyclopedia of Ukraine, Belarus",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CB%5CE%5CBelarus.htm",
+      "note": "Western Rus principalities, trade, Mindaugas, thirteenth-century political shifts, and later Lithuanian expansion."
+    }
+  ],
+  "entities": [
+    {
+      "id": "other-rus-principalities",
+      "card": "data/cards/other-rus-principalities.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "or-index",
+            "or-map-1200",
+            "or-map-1279",
+            "or-map-1300",
+            "or-overview-pre",
+            "or-overview-post",
+            "or-overview-trade",
+            "or-overview-life"
+          ],
+          "locator": "Exact generated id, display name, approximate 1200 to 1279 interval, and circa flag. Only exact target feature, decoded polygon, topology, memberships, interval, and direct seams. Exact endpoint control showing the coarse replacement by the Ryazan label. Post-end control showing Golden Horde, Moscow, Novgorod, and Lithuania labels. Cambridge History of Russia chapter summary on separate principalities, dynastic succession, and rivalry for Kyiv. Cambridge History of the Mongol Empire summary on attacks, tribute, basqaqs, church exemption, and khanly charters. Scholarly-hosted treaty translation on merchants, debts, portage, wax, metals, and free Dvina passage. Institute of Archaeology RAS volume on household objects, dress, transport, devotional art, writing, and cultural continuity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "or-map-1100",
+            "or-map-1200",
+            "or-princely-system"
+          ],
+          "locator": "Pre-start control snapshot and point ownership before the aggregate appears. Only exact target feature, decoded polygon, topology, memberships, interval, and direct seams. Volume summary on princely warlords, rival Smolensk and Chernihiv dynasties, and thirteenth-century political structures.",
+          "dateScope": {
+            "from": 1200,
+            "to": 1205
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "or-olhovych",
+            "or-polotsk"
+          ],
+          "locator": "Chernihiv dynasty, cohesion, Cuman alliances, competition for Kyiv, and disruption during the Mongol invasion. Smolensk influence, thirteenth-century pressure from Livonian and Lithuanian powers, and later annexation.",
+          "dateScope": {
+            "from": 1205,
+            "to": 1211
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "or-turov",
+            "or-polotsk"
+          ],
+          "locator": "Appanage division, farming, hunting, fishing, beekeeping, routes, Mongol control, and Galicia-Volhynia influence. Smolensk influence, thirteenth-century pressure from Livonian and Lithuanian powers, and later annexation.",
+          "dateScope": {
+            "from": 1211,
+            "to": 1223
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "or-invasion",
+            "or-cher-politics"
+          ],
+          "locator": "Kalka in 1223 and the differentiated sequence of the 1237 to 1241 Mongol campaigns. Dynastic ambitions, Kalka, 1239 sack, fragmentation, Bryansk continuity, and later Horde control.",
+          "dateScope": {
+            "from": 1223,
+            "to": 1229
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "or-treaty-edition",
+            "or-treaty-language"
+          ],
+          "locator": "Scholarly online edition of the Smolensk, Riga, and Gotland commercial treaty and its recensions. Peer-reviewed linguistic study locating composition in Riga and explaining the treaty multilingual textual history.",
+          "dateScope": {
+            "from": 1229,
+            "to": 1237
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "or-invasion",
+            "or-map-1200"
+          ],
+          "locator": "Kalka in 1223 and the differentiated sequence of the 1237 to 1241 Mongol campaigns. Only exact target feature, decoded polygon, topology, memberships, interval, and direct seams.",
+          "dateScope": {
+            "from": 1237,
+            "to": 1239
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "or-batu",
+            "or-cher-suburbs-2022"
+          ],
+          "locator": "Campaign chronology, Chernihiv and Kyiv sacks, westward invasion, Volga return, and Golden Horde establishment. Peer-reviewed report on early-thirteenth-century houses, antler working, fires, abandonment, and post-invasion cemetery use.",
+          "dateScope": {
+            "from": 1239,
+            "to": 1241
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "or-mykhailo"
+          ],
+          "locator": "Chernihiv prince, flight after 1239, return, journey to Sarai, execution, and later religious memory.",
+          "dateScope": {
+            "from": 1241,
+            "to": 1246
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "or-tribute"
+          ],
+          "locator": "Scholarly discussion of tribute, censuses, surety, collective responsibility, and the limits of describing Mongol rule.",
+          "dateScope": {
+            "from": 1246,
+            "to": 1257
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "or-belarus",
+            "or-map-1279"
+          ],
+          "locator": "Western Rus principalities, trade, Mindaugas, thirteenth-century political shifts, and later Lithuanian expansion. Exact endpoint control showing the coarse replacement by the Ryazan label.",
+          "dateScope": {
+            "from": 1257,
+            "to": 1279
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "or-index",
+            "or-summary",
+            "or-coverage",
+            "or-missing",
+            "or-cards",
+            "or-overrides"
+          ],
+          "locator": "Exact identity and all missing-content checks in repository data.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "or-map-1200"
+          ],
+          "locator": "Decoded topology type, ring and position counts, and exact bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "or-map-1200"
+          ],
+          "locator": "Point-in-polygon checks for named included and excluded representative locations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "or-map-1200",
+            "or-princely-system"
+          ],
+          "locator": "Shared-arc audit paired with Cambridge warning about changing principalities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "or-map-1279",
+            "or-map-1300",
+            "or-mongol-rule"
+          ],
+          "locator": "Exact endpoint and post-end point-owner transitions, bounded by Cambridge regional history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "or-princely-system"
+          ],
+          "locator": "Cambridge chapter summary on lateral succession and princely hierarchy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "or-olhovych"
+          ],
+          "locator": "Olhovych entry on dynasty, Cuman alliances, and competition for Kyiv.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "or-polotsk"
+          ],
+          "locator": "Polotsk entry on Smolensk domination and thirteenth-century invasions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "or-turov",
+            "or-map-1200"
+          ],
+          "locator": "Turov-Pinsk appanage chronology paired with audited Pinsk ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "or-princely-system",
+            "or-rus-life"
+          ],
+          "locator": "Cambridge political synthesis paired with the Institute material-culture volume.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "or-treaty-edition"
+          ],
+          "locator": "1229 treaty provisions and named commercial parties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "or-treaty-language"
+          ],
+          "locator": "Peer-reviewed analysis of composition, languages, and textual transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "or-polotsk-life"
+          ],
+          "locator": "Archaeological monograph chapters on crafts, imports, and workshop evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "or-smolensk-house"
+          ],
+          "locator": "Excavation report lines on estates, log buildings, floors, ovens, and insulation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "or-cher-suburbs-2018"
+          ],
+          "locator": "Peer-reviewed Chernihiv suburb excavation abstract and its scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "or-invasion",
+            "or-cher-politics"
+          ],
+          "locator": "Kalka chronology, Chernihiv death, Mongol departure, and distinction from the 1237 campaign.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "or-invasion",
+            "or-map-1200"
+          ],
+          "locator": "Campaign sequence paired strictly with the frozen atlas geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "or-cher-politics"
+          ],
+          "locator": "Chernihiv capture date and post-invasion fragmentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "or-kyiv",
+            "or-map-1200"
+          ],
+          "locator": "Kyiv competition, sack, and continuity paired with its separate atlas ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "or-cher-suburbs-2022"
+          ],
+          "locator": "Excavators’ alternative fire dating and post-invasion cemetery evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "or-mongol-rule"
+          ],
+          "locator": "Cambridge chapter summary on invasion, regional divergence, and continuing princely ties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "or-tribute"
+          ],
+          "locator": "Dewey on surety, collective responsibility, census debate, and administrative limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "or-mykhailo"
+          ],
+          "locator": "Biographical chronology and explicit distinction between event and later cult.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "or-cher-politics"
+          ],
+          "locator": "Chernihiv successor structure and regional divergence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "or-rus-life"
+          ],
+          "locator": "Institute synthesis conclusion on material and cultural continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "or-family-law"
+          ],
+          "locator": "Mulcahy thesis on inheritance models, widows, manuscript dating, and source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "or-family-law",
+            "or-child-polotsk",
+            "or-rus-life",
+            "or-smol-9-8"
+          ],
+          "locator": "Legal, burial, archaeological, and letter evidence limits, with gentle ordinary-life humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "or-child-polotsk"
+          ],
+          "locator": "Peer-reviewed childhood archaeology abstract and mortality-method warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "or-education"
+          ],
+          "locator": "Education entry on institutions, object inscriptions, women, and system limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "or-smol-9-8"
+          ],
+          "locator": "Exact catalogue date, debt content, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "or-turov"
+          ],
+          "locator": "Turov-Pinsk economy, environment, and route description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "or-polotsk-life"
+          ],
+          "locator": "Polotsk plant, animal, fishing, garden, and tool evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "or-smolensk-flood"
+          ],
+          "locator": "Peer-reviewed reconstruction of terraces, flood rhythm, contraction, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "or-smolensk-fire"
+          ],
+          "locator": "Precisely dated burned-floor finds and cautious household interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "or-mstislavl-1"
+          ],
+          "locator": "Catalogue transcription, translation, date, locality, and fragment status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "or-polotsk-unesco"
+          ],
+          "locator": "UNESCO tentative-list description, dates, patron, architect, fabric, and frescoes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "or-chernihiv-unesco"
+          ],
+          "locator": "UNESCO enhanced-protection record and careful continuity inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "or-smolensk-fire"
+          ],
+          "locator": "Excavation report on masonry, plinth signs, mortar, and tentative function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "or-cher-suburbs-2022"
+          ],
+          "locator": "Excavated antler, building chronology, and workshop interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "or-rus-life"
+          ],
+          "locator": "Institute material-culture synthesis and preservation-aware interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "or-healing"
+          ],
+          "locator": "Peer-reviewed synthesis of overlapping medical traditions and evidence types.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "or-healing"
+          ],
+          "locator": "Healing review on women and foreign practitioners, explicitly bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "or-healing"
+          ],
+          "locator": "Healing review on trauma and explicit locality and inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "or-banya"
+          ],
+          "locator": "Oxford history of early Rus bathing and careful geographic limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "or-polotsk-life",
+            "or-smolensk-house"
+          ],
+          "locator": "Polotsk drainage and Smolensk building evidence plus explicit toilet-evidence absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "or-smol-9-8"
+          ],
+          "locator": "Gramoty date, sender, recipient, debt amounts, and fragment status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "or-mstislavl-1"
+          ],
+          "locator": "Mstislavl catalogue record and explicit reconstruction limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "or-smol-2-3"
+          ],
+          "locator": "Exact catalogue transcription, diplomatic transliteration, English translation, date, and limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "or-smol-2-3"
+          ],
+          "locator": "Document preservation statement, translated fragments, and context limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "or-map-1279",
+            "or-mongol-rule"
+          ],
+          "locator": "Exact point-owner seam paired with Cambridge regional continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "or-map-1279",
+            "or-map-1300",
+            "or-mongol-rule"
+          ],
+          "locator": "Exact endpoint control showing the coarse replacement by the Ryazan label. Post-end control showing Golden Horde, Moscow, Novgorod, and Lithuania labels. Cambridge synthesis on invasion, persistent principalities, intermarriage, tribute, and diverging regional trajectories.",
+          "dateScope": {
+            "year": 1279
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "other-rus-principalities",
+        "name": "Other Rus Principalities",
+        "kind": "state",
+        "region": "Europe",
+        "from": 1200,
+        "to": 1279,
+        "circa": true,
+        "dateBasis": "map_coverage",
+        "card": "cards/other-rus-principalities.json",
+        "summary": "Aggregate of distinct Rus principalities; its 1279 Ryazan handoff is cartographic.",
+        "summarySource": null,
+        "predecessors": [],
+        "successors": [
+          "ryazan"
+        ],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1200.json",
+          "properties": {
+            "civ": "other-rus-principalities",
+            "from": 1200,
+            "to": 1279,
+            "precision": 1
+          },
+          "bounds": [
+            24.168841688416904,
+            50.340887803419804,
+            39.30699306993071,
+            58.72144934966637
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Other Rus Principalities is a generated atlas aggregate, not one sovereign polity.",
+    "The one 1200 Polygon contains several distinct principalities and excludes other major Rus polities colored separately.",
+    "The 1279 Ryazan replacement and 1300 Golden Horde replacement are coarse atlas seams, not exact historical borders or population endings."
+  ]
+}
