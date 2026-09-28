@@ -1,0 +1,855 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release138-karasuk-culture research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "ks-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, label, kind, circa 1500 to 500 BCE lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "ks-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported overview and its very broad Aral-to-Yenisei geographic claim, audited rather than accepted as a precise culture boundary."
+    },
+    {
+      "id": "ks-map2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Decoded pre-feature snapshot, point owners and overlapping Andronovo and Afanasevo predecessor labels."
+    },
+    {
+      "id": "ks-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "Decoded first exact Karasuk feature, topology, bounds, coordinate hash and point-owner tests."
+    },
+    {
+      "id": "ks-map1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Decoded second interval and verified coordinate-for-coordinate identity with the 1500 BCE geometry."
+    },
+    {
+      "id": "ks-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Decoded third interval, one-position topology change, unchanged bounds and continuing late label."
+    },
+    {
+      "id": "ks-map500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Decoded target disappearance, blank Minusinsk points and neighboring Achaemenid and pastoralist labels."
+    },
+    {
+      "id": "ks-legrand",
+      "title": "Sophie Legrand, The emergence of the Karasuk culture, Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/emergence-of-the-scythians-bronze-age-to-iron-age-in-south-siberia/E0852ACA856D27383FE1A580A41527B2",
+      "note": "Peer-reviewed synthesis of the Minusinsk Basin setting, Karasuk emergence, metallurgy, pastoralism and Tagar succession."
+    },
+    {
+      "id": "ks-svyatko2009",
+      "title": "Svyatko and colleagues, New radiocarbon dates and a review of the chronology of prehistoric populations from the Minusinsk Basin",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7EEB3640F2AE465182A97B587B7D84C2/S0033822200033798a.pdf/new_radiocarbon_dates_and_a_review_of_the_chronology_of_prehistoric_populations_from_the_minusinsk_basin_southern_siberia_russia.pdf",
+      "note": "Direct dates, competing archaeological chronologies, Classic and Kamenniy Log phases, sample caveats and ninth-century transition."
+    },
+    {
+      "id": "ks-currentchron",
+      "title": "Polyakov and colleagues, Current state of the chronology for the palaeometal period of the Minusinsk basins",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X19303153",
+      "note": "Modern review emphasizing difficult absolute chronology and the overly broad traditional Late Bronze Age Karasuk concept."
+    },
+    {
+      "id": "ks-reservoir",
+      "title": "Svyatko and colleagues, A lack of freshwater reservoir effects in human radiocarbon dates in the Minusinsk Basin",
+      "url": "https://link.springer.com/article/10.1007/s12520-016-0383-3",
+      "note": "Paired dating, river reservoir-effect tests, fifteenth- to ninth-century chronology and variable millet and fish signals."
+    },
+    {
+      "id": "ks-milletreview",
+      "title": "Svyatko and colleagues, Millet consumption in Siberia prior to the mid-second millennium BC?",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/millet-consumption-in-siberia-prior-to-midsecond-millennium-bc-a-review-of-recent-developments/4BAFC3FEF09FBE9A5C4F6AB712DB97F3",
+      "note": "Review correcting earlier dates and linking reliable Late Bronze Age millet evidence, tools and changing contacts without assuming one uniform diet."
+    },
+    {
+      "id": "ks-unesco",
+      "title": "History of Civilizations of Central Asia, Volume I, pastoral and nomadic tribes chapter",
+      "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_bae9b83a-6e0c-462e-9136-2618c8e4a6a5?_=094466eng.pdf",
+      "note": "UNESCO scholarly synthesis of Karasuk graves, pottery, bronze casting, livestock, horse gear, settlements and regional transition."
+    },
+    {
+      "id": "ks-museum",
+      "title": "Khakass National Museum, Karasuk culture: ancient bronze founders",
+      "url": "https://hnkm.ru/khakasia/drevnyaya-kultura/karasukskaya-kultura",
+      "note": "Regional museum account of the culture name, Torgazhaks settlement, house forms, furnaces, pottery, burials and engraved pebbles."
+    },
+    {
+      "id": "ks-settlementbias",
+      "title": "Monumental Myopia: bringing the later prehistoric settlements of southern Siberia into focus, Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/monumental-myopia-bringing-the-later-prehistoric-settlements-of-southern-siberia-into-focus/7C5E2D8849DBA17ED4192E7358EB3E99",
+      "note": "Peer-reviewed survey showing how conspicuous monuments and cemeteries can bias reconstructions while settlements remain harder to locate."
+    },
+    {
+      "id": "ks-gender",
+      "title": "Katheryn Linduff and Karen Rubinson, Archaeology and Gender in the Russian Far East",
+      "url": "https://www.archaeology-gender-europe.org/docs/bersenev.pdf",
+      "note": "Academic volume summarizing analysis of about four hundred sexed Karasuk graves, cemetery clusters, family organization and gendered grave goods."
+    },
+    {
+      "id": "ks-gender-book",
+      "title": "Smithsonian Libraries, Are All Warriors Male? Gender Roles on the Ancient Eurasian Steppe",
+      "url": "https://www.si.edu/object/are-all-warriors-male-gender-roles-ancient-eurasian-steppe-edited-katheryn-m-linduff-and-karen-s%3Asiris_sil_965633",
+      "note": "Museum-library record for the scholarly volume containing the Karasuk gender and mortuary analysis used with explicit burial-to-life cautions."
+    },
+    {
+      "id": "ks-aley",
+      "title": "Marchenko and colleagues, Karasuk People in the Aley Steppe",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/26-54-1/annot-05/",
+      "note": "Institute report combining radiocarbon, craniometry and XRF for an early burial, while distinguishing Karasuk parallels from local traditions."
+    },
+    {
+      "id": "ks-pyatiletka",
+      "title": "Selin and colleagues, An Unusual Burial at Pyatiletka-1 Mound 6",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/26-54-2/annot-05/",
+      "note": "Multidisciplinary burial study using radiocarbon dates, pottery fabric, local clay, birch identification and cautious cultural comparison."
+    },
+    {
+      "id": "ks-crania",
+      "title": "Kozintsev, The Origin of the Karasuk People: Craniometric Evidence",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/24-52-2/annot-16/",
+      "note": "Twenty-four male cranial samples show internal and regional variation between Classic and Kamenniy Log associated groups."
+    },
+    {
+      "id": "ks-genetics",
+      "title": "Jeong and colleagues, Bronze Age population dynamics and the rise of dairy pastoralism on the eastern Eurasian steppe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6275519/",
+      "note": "Genome-wide evidence that sampled Karasuk-associated individuals were highly heterogeneous; material traditions are not genetic ethnic labels."
+    },
+    {
+      "id": "ks-dental",
+      "title": "Murphy and colleagues, Dental palaeopathological analysis of Eneolithic to Early Iron Age populations from the Minusinsk Basin",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S156301101500015X",
+      "note": "Comparative study of calculus, caries, enamel stress and age patterns in 214 people, including Karasuk-associated remains."
+    },
+    {
+      "id": "ks-mirrors",
+      "title": "Exploring Complexity in Bronze Age Exchange Networks by Revisiting the Bronze Mirrors of Central Asia and China",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/exploring-complexity-in-bronze-age-exchange-networks-by-revisiting-the-bronze-mirrors-of-central-asia-and-china/8A7A35E5B253408FD12B3738F1849003",
+      "note": "Peer-reviewed warning that wide distributions and technological connections form complex networks rather than a single migrating culture."
+    },
+    {
+      "id": "ks-hsu",
+      "title": "Hsu and colleagues, Tracing the flows of copper and copper alloys in the Early Iron Age societies of the eastern Eurasian steppe",
+      "url": "https://livrepository.liverpool.ac.uk/3087050/",
+      "note": "University repository record for chemical and trace-element research distinguishing copper, alloy and finished-object circulation around Minusinsk."
+    },
+    {
+      "id": "ks-nrich",
+      "title": "National Research Institute of Cultural Heritage, Korean Archaeological Dictionary: Karasuk culture",
+      "url": "https://portal.nrich.go.kr/kor/archeologyUsrView.do?idx=10447",
+      "note": "Official heritage dictionary entry on rectangular semi-subterranean houses, hearth rows, hand-built pottery, graves and bronze objects."
+    },
+    {
+      "id": "ks-nrich-wiki",
+      "title": "Korean Archaeological Dictionary mirror: Karasuk culture",
+      "url": "https://dka.nrich.go.kr/wiki/index.php?title=600-4600",
+      "note": "National heritage institute dictionary mirror used for pottery and occupation-deposit evidence without expanding its ethnic interpretations."
+    },
+    {
+      "id": "ks-ehraf",
+      "title": "Yale eHRAF Archaeology, Early Nomad or Karasuk tradition",
+      "url": "https://ehrafarchaeology.yale.edu/traditions/rl60/description",
+      "note": "Comparative archaeological description explicitly treating related groups as independent and interacting rather than politically integrated."
+    },
+    {
+      "id": "ks-rockart",
+      "title": "ICOMOS, Rock Art in Central Asia",
+      "url": "https://isc-car.org/wp-content/uploads/2023/10/rock-art-in-central-asia-2011a.pdf",
+      "note": "Heritage synthesis of Minusinsk Basin geography and the uncertainty of assigning rock-art styles to Karasuk, transitional or Scythian periods."
+    },
+    {
+      "id": "ks-boyary",
+      "title": "Raman spectroscopy of coloring materials at the Boyary I rock-art site",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/25-53-2/annot-05/",
+      "note": "Institute study using Raman spectroscopy; a possible Karasuk date rests on style and remains explicitly tentative."
+    },
+    {
+      "id": "ks-iron",
+      "title": "Nesterov, The Beginning of Iron Metallurgy in East Asia",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/22-50-3/annot-05/",
+      "note": "Regional review distinguishing widespread Karasuk-type bronzes from later and uneven adoption of iron technologies."
+    },
+    {
+      "id": "ks-altai-millet",
+      "title": "Millet in the Bronze Age Altai Mountains: discovery, progress and research prospects, npj Heritage Science",
+      "url": "https://www.nature.com/articles/s40494-025-01871-z",
+      "note": "Recent review of millet evidence, dental health and the limits of connecting pathology directly to cereal consumption."
+    },
+    {
+      "id": "ks-oxford",
+      "title": "University of Oxford, New radiocarbon dates and review of Minusinsk Basin chronology",
+      "url": "https://www.arch.ox.ac.uk/node/374601",
+      "note": "University record identifying the directly dated Afanasievo, Okunevo, Andronovo, Karasuk and Tagar sequence used in chronology research."
+    },
+    {
+      "id": "ks-jettmar",
+      "title": "Karl Jettmar, The Karasuk Culture and its South-Eastern Affinities",
+      "url": "https://archiv.ub.uni-heidelberg.de/propylaeumdok/1541/1/Jettmar_The_Karasuk_culture_1950.pdf",
+      "note": "Digitized museum-journal study documenting early typological arguments from knives and warning how interpretations have changed since 1950."
+    },
+    {
+      "id": "ks-finalbronze",
+      "title": "Lazaretov and colleagues, The Final Bronze Age in the Minusinsk Basin",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/23-51-1/annot-11/",
+      "note": "Institute study reclassifying 900 to 700 BCE burials and showing overlap between continuing Late Bronze Age and emerging Tagar traits."
+    },
+    {
+      "id": "ks-trepanation",
+      "title": "Slepchenko and colleagues, Trepanation in a Late Bronze Age individual from southern Siberia",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.2543",
+      "note": "Peer-reviewed report of one healed cranial opening in a peripheral and culturally debated burial; evidence of survival, not a general medical system."
+    }
+  ],
+  "entities": [
+    {
+      "id": "karasuk-culture",
+      "card": "data/cards/karasuk-culture.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ks-legrand"
+          ],
+          "locator": "Peer-reviewed synthesis of the Minusinsk Basin setting, Karasuk emergence, metallurgy, pastoralism and Tagar succession.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ks-map1500",
+            "ks-oxford"
+          ],
+          "locator": "Decoded first exact Karasuk feature, topology, bounds, coordinate hash and point-owner tests. University record identifying the directly dated Afanasievo, Okunevo, Andronovo, Karasuk and Tagar sequence used in chronology research.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ks-oxford"
+          ],
+          "locator": "University record identifying the directly dated Afanasievo, Okunevo, Andronovo, Karasuk and Tagar sequence used in chronology research.",
+          "dateScope": {
+            "from": -1400,
+            "to": -1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ks-currentchron",
+            "ks-milletreview"
+          ],
+          "locator": "Modern review emphasizing difficult absolute chronology and the overly broad traditional Late Bronze Age Karasuk concept. Review correcting earlier dates and linking reliable Late Bronze Age millet evidence, tools and changing contacts without assuming one uniform diet.",
+          "dateScope": {
+            "from": -1200,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ks-map1000",
+            "ks-svyatko2009"
+          ],
+          "locator": "Decoded second interval and verified coordinate-for-coordinate identity with the 1500 BCE geometry. Direct dates, competing archaeological chronologies, Classic and Kamenniy Log phases, sample caveats and ninth-century transition.",
+          "dateScope": {
+            "from": -1000,
+            "to": -900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ks-finalbronze",
+            "ks-map700"
+          ],
+          "locator": "Institute study reclassifying 900 to 700 BCE burials and showing overlap between continuing Late Bronze Age and emerging Tagar traits. Decoded third interval, one-position topology change, unchanged bounds and continuing late label.",
+          "dateScope": {
+            "from": -900,
+            "to": -700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ks-map700",
+            "ks-map500"
+          ],
+          "locator": "Decoded third interval, one-position topology change, unchanged bounds and continuing late label. Decoded target disappearance, blank Minusinsk points and neighboring Achaemenid and pastoralist labels.",
+          "dateScope": {
+            "from": -700,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ks-index",
+            "ks-summary"
+          ],
+          "locator": "Exact index, coverage state and imported-summary audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ks-map1500"
+          ],
+          "locator": "1500 BCE exact topology, bounds and coordinate SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ks-map1000"
+          ],
+          "locator": "1000 BCE exact geometry identity and point tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ks-map700"
+          ],
+          "locator": "700 BCE topology, coordinate hash and inclusion tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ks-map2000",
+            "ks-map500"
+          ],
+          "locator": "Pre-feature and post-feature point-owner seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ks-ehraf"
+          ],
+          "locator": "Political integration and archaeological-tradition caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ks-svyatko2009"
+          ],
+          "locator": "Direct-date phase ranges and coexistence debate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ks-currentchron"
+          ],
+          "locator": "Modern periodization review and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ks-aley"
+          ],
+          "locator": "Early outlying burial context and cautious geographic inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ks-crania",
+            "ks-genetics"
+          ],
+          "locator": "Bioanthropological heterogeneity and identity limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ks-currentchron"
+          ],
+          "locator": "Minusinsk geography and core-region distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ks-settlementbias"
+          ],
+          "locator": "Settlement-survey bias and survival caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ks-museum"
+          ],
+          "locator": "Torgazhaks and semi-subterranean house evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ks-milletreview"
+          ],
+          "locator": "Livestock and cultivation-tool synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ks-reservoir"
+          ],
+          "locator": "Freshwater-reservoir testing and fish-diet caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ks-jettmar"
+          ],
+          "locator": "Knife forms, casting and typological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ks-hsu"
+          ],
+          "locator": "Metal circulation, alloy practice and craft evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ks-aley"
+          ],
+          "locator": "XRF alloy result and multi-method interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ks-nrich-wiki"
+          ],
+          "locator": "Pottery manufacture and ornament evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ks-unesco"
+          ],
+          "locator": "Weapons, horse gear and conflict-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ks-mirrors"
+          ],
+          "locator": "Exchange-network complexity and object-distribution caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ks-aley"
+          ],
+          "locator": "Ore-zone mobility interpretation and evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ks-milletreview"
+          ],
+          "locator": "Corrected millet chronology and contact inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ks-pyatiletka"
+          ],
+          "locator": "Multidisciplinary regional comparison and migration method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ks-map1500",
+            "ks-ehraf"
+          ],
+          "locator": "Map reach versus independent-group model.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ks-nrich"
+          ],
+          "locator": "Grave construction and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ks-unesco"
+          ],
+          "locator": "Food-offering context and daily-diet limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ks-unesco"
+          ],
+          "locator": "Grave wealth variation and inequality caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ks-gender"
+          ],
+          "locator": "Cemetery clustering and kinship inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ks-museum",
+            "ks-rockart"
+          ],
+          "locator": "Engraved-pebble evidence and interpretive caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ks-gender"
+          ],
+          "locator": "Family structure from mortuary clusters with explicit limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ks-gender-book"
+          ],
+          "locator": "Gendered grave goods and social-role caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ks-gender-book"
+          ],
+          "locator": "Children in cemetery organization and evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ks-museum"
+          ],
+          "locator": "Learning inference from repeated skilled production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ks-settlementbias",
+            "ks-rockart"
+          ],
+          "locator": "Play evidence absence and object-function caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ks-altai-millet"
+          ],
+          "locator": "Diet synthesis and millet-health caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ks-gender-book"
+          ],
+          "locator": "Clothing ornaments and preservation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ks-nrich"
+          ],
+          "locator": "Semi-subterranean house size and hearth arrangement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ks-gender",
+            "ks-jettmar"
+          ],
+          "locator": "Work-tool evidence and gender-assignment limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ks-nrich"
+          ],
+          "locator": "Hearth, vessel and household-work evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ks-dental"
+          ],
+          "locator": "Dental paleopathology findings and limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ks-dental",
+            "ks-trepanation"
+          ],
+          "locator": "Medicine evidence boundary and isolated healed trepanation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ks-reservoir"
+          ],
+          "locator": "Regional water geography and water-system absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ks-settlementbias"
+          ],
+          "locator": "Explicit sanitation and toilet evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ks-nrich-wiki"
+          ],
+          "locator": "Domestic-deposit interpretation and waste-practice limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ks-finalbronze"
+          ],
+          "locator": "Ninth-century transition and continuity framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ks-jettmar"
+          ],
+          "locator": "Eponym, research history and historiographic caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ks-svyatko2009",
+            "ks-oxford"
+          ],
+          "locator": "Radiocarbon sample selection and anomaly handling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ks-pyatiletka",
+            "ks-boyary"
+          ],
+          "locator": "Scientific-method portfolio and interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ks-rockart"
+          ],
+          "locator": "Explicit no-writing sample, display fields and material substitutes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ks-finalbronze",
+            "ks-map500",
+            "ks-iron"
+          ],
+          "locator": "Institute study reclassifying 900 to 700 BCE burials and showing overlap between continuing Late Bronze Age and emerging Tagar traits. Decoded target disappearance, blank Minusinsk points and neighboring Achaemenid and pastoralist labels. Regional review distinguishing widespread Karasuk-type bronzes from later and uneven adoption of iron technologies.",
+          "dateScope": {
+            "year": -800
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "karasuk-culture",
+        "card": "cards/karasuk-culture.json",
+        "dateBasis": "map_coverage",
+        "summary": "Late Bronze Age archaeological traditions, chiefly documented in the Minusinsk Basin; the atlas span is overbroad.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "karasuk-culture",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            50.50670506705069,
+            41.31471057883323,
+            100.02520025200255,
+            57.60164485404451
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "karasuk-culture",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            50.50670506705069,
+            41.31471057883323,
+            100.02520025200255,
+            57.60164485404451
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "karasuk-culture",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            50.50670506705069,
+            41.31471057883323,
+            100.02520025200255,
+            57.60164485404451
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "Preserve exact id karasuk-culture and treat it as an archaeological classification, never a state, nation, ethnicity or language.",
+    "The atlas polygon and 1500 to 500 BCE interval are explicit audit objects, not accepted historical borders or consensus periodization.",
+    "No predecessor or successor links are inferred: neighboring labels and Tagar transition do not establish one-to-one entity continuity.",
+    "No contemporaneous writing is securely attributed; visual motifs are not converted into a fabricated script sample."
+  ]
+}
