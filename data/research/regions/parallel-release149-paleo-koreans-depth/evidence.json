@@ -1,0 +1,990 @@
+{
+  "version": 1,
+  "region": "East Asia",
+  "researcher": "Codex parallel release149-paleo-koreans research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "pk-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, display name, culture kind, approximate 1500 to 500 BCE lifetime, and historical-basemaps provenance."
+    },
+    {
+      "id": "pk-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three observed intervals, three border files, no outside-lifetime features, and missing content status."
+    },
+    {
+      "id": "pk-map2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Predecessor seam uses a separate Koreans id over a much larger peninsula-and-Manchuria polygon."
+    },
+    {
+      "id": "pk-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "First exact Paleo-Koreans polygon, its topology, bounds, points, exclusions, and neighbors."
+    },
+    {
+      "id": "pk-map1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Unchanged exact polygon for the 1000 to 700 BCE interval and adjacent Western Zhou, Sinic, and Late Jomon layers."
+    },
+    {
+      "id": "pk-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Unchanged exact polygon for the 700 to 500 BCE interval and adjacent Eastern Zhou, Sinic, and Late Jomon layers."
+    },
+    {
+      "id": "pk-map500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "The exact target vanishes at its indexed endpoint and audited Korean points have no mapped owner."
+    },
+    {
+      "id": "pk-map400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Later seam introduces Gojoseon across a differently shaped peninsula-and-Liaodong area."
+    },
+    {
+      "id": "pk-nmk-bronze",
+      "title": "Bronze Age: Development of Farming, Villages, and Metals",
+      "url": "https://www.museum.go.kr/ENG/contents/E0201030300.do?showHallId=760&showroomCode=DM0004",
+      "note": "National Museum of Korea gallery guide to plain pottery, village farming, stone tools, rare bronze, ornaments, and dolmens."
+    },
+    {
+      "id": "pk-unesco",
+      "title": "Gochang, Hwasun and Ganghwa Dolmen Sites",
+      "url": "https://whc.unesco.org/en/list/977/",
+      "note": "UNESCO synthesis of hundreds of first-millennium BCE dolmens, quarrying, transport, tomb construction, and research value."
+    },
+    {
+      "id": "pk-rice",
+      "title": "Rice in ancient Korea: status symbol or community food?",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/rice-in-ancient-korea-status-symbol-or-community-food/4D01669D39C19C2D44E1877712326497",
+      "note": "Archaeobotanical evidence from Sangdong-dong and Songguk-ri tests whether rice was restricted to elites."
+    },
+    {
+      "id": "pk-millet-language",
+      "title": "Millet vs rice: evaluating farming and language dispersal in Korea",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10427441/",
+      "note": "Open archaeological critique separates material change and crop movement from uncertain prehistoric language assignment."
+    },
+    {
+      "id": "pk-agri-origins",
+      "title": "Agricultural origins in the Korean Peninsula",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/div-classtitleagricultural-origins-in-the-korean-peninsuladiv/F88FA6F3C593245136092ACC07BEFB5A",
+      "note": "Direct scientific evidence and archaeobotanical methods for early cultivation on the peninsula."
+    },
+    {
+      "id": "pk-population",
+      "title": "Population Fluctuation and Adoption of Food Production in Prehistoric Korea",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/population-fluctuation-and-the-adoption-of-food-production-in-prehistoric-korea-using-radiocarbon-dates-as-a-proxy-for-population-change/119C076B9B66F74F971F39AB7B331702",
+      "note": "Summed radiocarbon probabilities test population change around millet and rice adoption without assuming simple causation."
+    },
+    {
+      "id": "pk-household",
+      "title": "Intragroup social differentiation and household inequality in Mumun settlements",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278416525000248",
+      "note": "Gini analysis of house sizes and pottery across seventy-three settlements finds cooperation alongside household wealth differences."
+    },
+    {
+      "id": "pk-paddy",
+      "title": "Paddy rice, aggregation, and Mumun social organization in Ulsan",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352226723000193",
+      "note": "Settlement-distribution study connects paddy labor, aggregation, permanent villages, and social organization cautiously."
+    },
+    {
+      "id": "pk-diet",
+      "title": "Enhanced dietary reconstruction of Korean prehistoric populations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10971582/",
+      "note": "Open compound-specific isotope study of people and animals from dated Mumun sites, with preservation and sampling cautions."
+    },
+    {
+      "id": "pk-millet-isotope",
+      "title": "Direct isotopic evidence for millet consumption in the Middle Mumun",
+      "url": "https://www.sciencedirect.com/science/article/pii/S030544032100042X",
+      "note": "Human bone collagen demonstrates important foxtail and broomcorn millet consumption in central inland communities."
+    },
+    {
+      "id": "pk-nukdo",
+      "title": "Stable isotope evidence of human diet at Nukdo shell midden",
+      "url": "https://www.sciencedirect.com/science/article/pii/S030544030900020X",
+      "note": "Human and animal isotope study tests terrestrial, marine, and plant foods near the late Mumun boundary."
+    },
+    {
+      "id": "pk-textile",
+      "title": "Population movements through the archaeology of textile production",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10427276/",
+      "note": "Open synthesis documents spindle whorls and weights at Early and Middle Mumun sites while keeping linguistic inference separate."
+    },
+    {
+      "id": "pk-climate",
+      "title": "Late Holocene climate variability in central Korea",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0031018221004909",
+      "note": "Pollen, geochemistry, and fire records reconstruct changing monsoon conditions and possible, not deterministic, social impacts."
+    },
+    {
+      "id": "pk-transition",
+      "title": "The Transition from Foraging to Farming in Prehistoric Korea",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/658488",
+      "note": "Current Anthropology review uses archaeobotany to evaluate environment, mobility, migration, and mixed food strategies."
+    },
+    {
+      "id": "pk-songguk-crops",
+      "title": "Carbonized Crops from Songguk-ri and Plant Cultivation in the Mumun Period",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001782985",
+      "note": "Flotation and wet-sieving recovered rice, wheat, two millets, soybean, and azuki bean from houses and pits."
+    },
+    {
+      "id": "pk-songguk-aks",
+      "title": "Buyeo Songguk-ri Prehistoric Settlement",
+      "url": "https://encykorea.aks.ac.kr/Article/E0024420",
+      "note": "Academy of Korean Studies site report covers twenty-five excavation seasons, 117 houses, pits, fences, buildings, graves, crops, and tools."
+    },
+    {
+      "id": "pk-songguk-heritage",
+      "title": "Archaeological Site in Songguk-ri, Buyeo",
+      "url": "https://www.heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1333402490000&pageNo=1_1_2_0",
+      "note": "Korea Heritage Service record establishes protected-site identity and official archaeological status."
+    },
+    {
+      "id": "pk-chuncheon-prehistory",
+      "title": "Prehistorical Gangwon permanent exhibition",
+      "url": "https://chuncheon.museum.go.kr/eng/sub02_0102.do",
+      "note": "National museum evidence for harvesting knives, preserved willow arrow shafts, daggers, mirrors, and regional Bronze Age craft."
+    },
+    {
+      "id": "pk-chuncheon-dolmens",
+      "title": "The Dolmen Garden",
+      "url": "https://chuncheon.museum.go.kr/eng/sub03_01.do?partCode=08",
+      "note": "Chuncheon National Museum records excavated and restored local dolmens with pottery and harvesting tools."
+    },
+    {
+      "id": "pk-knife",
+      "title": "Semi-lunar Stone Knife",
+      "url": "https://www.museum.go.kr/ENG/contents/E0201030300.do?relicId=29898&schM=view&showHallId=760",
+      "note": "National Museum description explains shapes, hand loops, and use for harvesting grain ears."
+    },
+    {
+      "id": "pk-dagger",
+      "title": "Liaoning-type Bronze Dagger",
+      "url": "https://www.museum.go.kr/ENG/contents/E0403000000.do?relicId=4379&schM=relic_represent_view",
+      "note": "Museum object history dates the dagger tradition and explains detachable hilts and Liaoning connections."
+    },
+    {
+      "id": "pk-mirror",
+      "title": "Mirrors with Fine Linear Designs",
+      "url": "https://www.museum.go.kr/ENG/contents/E0401000000.do?relicRecommendId=519718&schM=view",
+      "note": "Museum conservation account explains alloying, sand casting, polishing, burial contexts, and ritual interpretations near the later boundary."
+    },
+    {
+      "id": "pk-landscape",
+      "title": "Landscapes shared by visibility in Songguk-ri culture",
+      "url": "https://link.springer.com/article/10.1007/s12520-019-00987-1",
+      "note": "Spatial analysis of foothill settlements, water and farmland access, storage, craft, visibility, and possible kin connections."
+    },
+    {
+      "id": "pk-bippa",
+      "title": "Archaeology of Early Agriculture in the Korean Peninsula",
+      "url": "https://journals.lib.washington.edu/index.php/BIPPA/article/download/11765/10394/0",
+      "note": "Open research review describes fields, settlements, river settings, ditches, dating, and regional agricultural variability."
+    },
+    {
+      "id": "pk-toilets",
+      "title": "Paleoparasitology of historical toilets and mummies in South Korea",
+      "url": "https://www.cambridge.org/core/journals/parasitology/article/paleoparasitology-of-historical-toilets-and-mummies-in-south-korea-trends-and-perspectives/92926B590A5DF11B0338FC01C509FB0C",
+      "note": "Review explicitly finds no conclusively identified Bronze Age toilet and distinguishes evidence from later facilities."
+    },
+    {
+      "id": "pk-skeleton",
+      "title": "Physical Anthropology of Bronze Age People on the Korean Peninsula",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002158259",
+      "note": "Review of the small, uneven excavated skeletal sample and limits on biological or ethnic conclusions."
+    },
+    {
+      "id": "pk-language-history",
+      "title": "A History of the Korean Language",
+      "url": "https://assets.cambridge.org/97805216/61898/excerpt/9780521661898_excerpt.htm",
+      "note": "Cambridge history explains late written evidence, later Three Kingdoms transcriptions, and limits of Old Korean reconstruction."
+    },
+    {
+      "id": "pk-archaeolinguistic",
+      "title": "Archaeolinguistic evidence for Koreanic dispersal",
+      "url": "https://www.cambridge.org/core/journals/evolutionary-human-sciences/article/archaeolinguistic-evidence-for-the-farminglanguage-dispersal-of-koreanic/CE1DF81011ED49CED531AA6475959157",
+      "note": "Study emphasizes that archaeological materials can move without securely identifying spoken language and records are late."
+    },
+    {
+      "id": "pk-idu",
+      "title": "Idu writing",
+      "url": "https://encykorea.aks.ac.kr/Article/E0044081",
+      "note": "Academy of Korean Studies account dates surviving Korean-language Chinese-character adaptations to the Three Kingdoms and later eras."
+    },
+    {
+      "id": "pk-millet-spread",
+      "title": "Discontinuous spread of millet agriculture in eastern Asia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6760930/",
+      "note": "Open multi-region study tracks dated millet movement without equating crops, genes, languages, or ethnic groups."
+    },
+    {
+      "id": "pk-wild-resources",
+      "title": "Wild resources and resilience in early East Asian agriculture",
+      "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2022.1017909/full",
+      "note": "Large archaeobotanical compilation shows changing but continuing use of nuts and wild plants alongside crops."
+    },
+    {
+      "id": "pk-social-household",
+      "title": "Social Change and Household Geography in Mumun South Korea",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/686313",
+      "note": "Household archaeology traces spatial segmentation and a shift toward smaller dwellings without naming exact family systems."
+    },
+    {
+      "id": "pk-women",
+      "title": "Women and Femininity in Prehistoric Korea",
+      "url": "https://www.ijkaa.org/v.5/0/79/104",
+      "note": "Gender archaeology review warns that sparse evidence and older research practices often make women archaeologically invisible."
+    },
+    {
+      "id": "pk-conflict",
+      "title": "Leadership in the Emergent Baekje State",
+      "url": "https://doi.org/10.1515/opar-2022-0313",
+      "note": "Later state-formation study reviews Mumun palisades, ditches, burned houses, daggers, and arrowheads as possible conflict evidence."
+    },
+    {
+      "id": "pk-bronze-production",
+      "title": "How are Bronze Objects Made?",
+      "url": "https://www.museum.go.kr/ENG/contents/E0201030300.do?relicId=29952&schM=view&showHallId=760",
+      "note": "National Museum notes rare bronze, uncertain local copper smelting, absent peninsula tin deposits, and casting evidence."
+    },
+    {
+      "id": "pk-red-pottery",
+      "title": "Production and distribution of red-burnished pottery in the Nam River basin",
+      "url": "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002850763",
+      "note": "Metric analysis distinguishes largely household plain pottery from wider-circulating, more specialized red-burnished wares."
+    },
+    {
+      "id": "pk-ceramic-pxrf",
+      "title": "Geochemical pXRF analysis of Korean Bronze Age pottery",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003134300",
+      "note": "Non-destructive portable X-ray fluorescence study tests ceramic composition and provenance rather than relying only on appearance."
+    },
+    {
+      "id": "pk-bronze-article",
+      "title": "Bronze Culture of Korea",
+      "url": "https://www.ijkaa.org/v.1/0/6/68",
+      "note": "National Museum journal distinguishes regional bronze traditions, dates, stone-tool coexistence, and contested ethnic interpretations."
+    },
+    {
+      "id": "pk-pyeonggeo",
+      "title": "The Pyeonggeo-dong settlements",
+      "url": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/pyeonggeodong-settlements-sustained-farming-villages-of-prehistoric-and-early-historic-korea/7D477E2DD667BFE8D3848FDEA86D6B31",
+      "note": "Large salvage project combines AMS dating, field soils, crop remains, footprints, and settlement sequences."
+    },
+    {
+      "id": "pk-jungdo",
+      "title": "Bronze Age settlement nucleation in the North Han River basin",
+      "url": "https://www.riss.kr/search/detail/DetailView.do?control_no=f660646fe28a29adffe0bdc3ef48d419&p_mat_type=be54d9b8bc7cdb09",
+      "note": "Radiocarbon and bootstrap study cautions against treating pottery types as exact population clocks at Jungdo."
+    },
+    {
+      "id": "pk-attached-pottery",
+      "title": "Attached-rim pottery in Seoul and Gyeonggi",
+      "url": "https://www.ijkaa.org/v.4/0/132/94",
+      "note": "National Museum journal uses associations and typology to track later pottery change near and beyond the card endpoint."
+    }
+  ],
+  "entities": [
+    {
+      "id": "paleo-koreans",
+      "card": "data/cards/paleo-koreans.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pk-index",
+            "pk-map1500"
+          ],
+          "locator": "Exact id, display name, culture kind, approximate 1500 to 500 BCE lifetime, and historical-basemaps provenance. First exact Paleo-Koreans polygon, its topology, bounds, points, exclusions, and neighbors.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pk-map2000",
+            "pk-map1500",
+            "pk-nmk-bronze"
+          ],
+          "locator": "Predecessor seam uses a separate Koreans id over a much larger peninsula-and-Manchuria polygon. First exact Paleo-Koreans polygon, its topology, bounds, points, exclusions, and neighbors. National Museum of Korea gallery guide to plain pottery, village farming, stone tools, rare bronze, ornaments, and dolmens.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pk-agri-origins"
+          ],
+          "locator": "Direct scientific evidence and archaeobotanical methods for early cultivation on the peninsula.",
+          "dateScope": {
+            "from": -1400,
+            "to": -1300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pk-millet-language"
+          ],
+          "locator": "Open archaeological critique separates material change and crop movement from uncertain prehistoric language assignment.",
+          "dateScope": {
+            "from": -1300,
+            "to": -1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pk-population"
+          ],
+          "locator": "Summed radiocarbon probabilities test population change around millet and rice adoption without assuming simple causation.",
+          "dateScope": {
+            "from": -1200,
+            "to": -1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pk-pyeonggeo"
+          ],
+          "locator": "Large salvage project combines AMS dating, field soils, crop remains, footprints, and settlement sequences.",
+          "dateScope": {
+            "from": -1100,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pk-household"
+          ],
+          "locator": "Gini analysis of house sizes and pottery across seventy-three settlements finds cooperation alongside household wealth differences.",
+          "dateScope": {
+            "from": -1000,
+            "to": -900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pk-paddy"
+          ],
+          "locator": "Settlement-distribution study connects paddy labor, aggregation, permanent villages, and social organization cautiously.",
+          "dateScope": {
+            "from": -900,
+            "to": -800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pk-rice"
+          ],
+          "locator": "Archaeobotanical evidence from Sangdong-dong and Songguk-ri tests whether rice was restricted to elites.",
+          "dateScope": {
+            "from": -800,
+            "to": -700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pk-climate"
+          ],
+          "locator": "Pollen, geochemistry, and fire records reconstruct changing monsoon conditions and possible, not deterministic, social impacts.",
+          "dateScope": {
+            "from": -700,
+            "to": -600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pk-bronze-article"
+          ],
+          "locator": "National Museum journal distinguishes regional bronze traditions, dates, stone-tool coexistence, and contested ethnic interpretations.",
+          "dateScope": {
+            "from": -600,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pk-index",
+            "pk-coverage"
+          ],
+          "locator": "Live index and coverage identity fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pk-map1500",
+            "pk-map1000",
+            "pk-map700"
+          ],
+          "locator": "Exact topology, component hash and bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pk-map1500"
+          ],
+          "locator": "Point-in-polygon ownership and exclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pk-map2000",
+            "pk-map1500"
+          ],
+          "locator": "Predecessor seam and neighboring Sinic ownership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pk-map500",
+            "pk-map400"
+          ],
+          "locator": "Endpoint absence and later Gojoseon seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pk-transition"
+          ],
+          "locator": "Methods for farming transitions and chronological uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pk-songguk-aks",
+            "pk-songguk-heritage"
+          ],
+          "locator": "Songguk-ri field history, features and protected status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pk-jungdo"
+          ],
+          "locator": "Jungdo chronology and population-method caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pk-ceramic-pxrf"
+          ],
+          "locator": "Non-destructive ceramic provenance method and limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pk-diet"
+          ],
+          "locator": "Isotope method, preservation bias and sample scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pk-millet-isotope"
+          ],
+          "locator": "Direct human millet isotope evidence and sample limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pk-rice"
+          ],
+          "locator": "Rice access at two excavated settlements.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pk-knife"
+          ],
+          "locator": "Museum object description and light shape-based fun fact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pk-nukdo"
+          ],
+          "locator": "Late Mumun coastal diet and regional comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pk-social-household",
+            "pk-landscape"
+          ],
+          "locator": "Household space, storage location and interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pk-social-household"
+          ],
+          "locator": "Dwelling form and limits of household inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pk-songguk-aks"
+          ],
+          "locator": "Excavated house plans and perishable architecture.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pk-bippa",
+            "pk-landscape"
+          ],
+          "locator": "Water access, agricultural works and infrastructure caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pk-toilets"
+          ],
+          "locator": "Explicit Bronze Age toilet evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pk-songguk-aks",
+            "pk-ceramic-pxrf"
+          ],
+          "locator": "Feature diversity, context, and waste interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pk-household"
+          ],
+          "locator": "House-size and pottery inequality results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pk-women"
+          ],
+          "locator": "Gender archaeology and evidentiary caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pk-skeleton"
+          ],
+          "locator": "Human-remains sample and biological inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pk-textile"
+          ],
+          "locator": "Textile equipment as evidence for learned skill, not schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pk-social-household",
+            "pk-landscape"
+          ],
+          "locator": "Changing household space and cautious kin interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pk-textile"
+          ],
+          "locator": "Spinning and weaving equipment with preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pk-red-pottery"
+          ],
+          "locator": "Pottery production scale and distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pk-chuncheon-prehistory"
+          ],
+          "locator": "Regional stone tools and preserved wooden arrow shafts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pk-bronze-production"
+          ],
+          "locator": "Metal rarity, raw-material constraints and production uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pk-ceramic-pxrf"
+          ],
+          "locator": "Ceramic science and typological method limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pk-dagger"
+          ],
+          "locator": "Dagger form, date and regional connection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pk-bronze-article"
+          ],
+          "locator": "Regional bronze variation and rejected ethnic shortcuts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pk-mirror"
+          ],
+          "locator": "Bronze mirror technology, meaning and chronology guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pk-millet-spread"
+          ],
+          "locator": "Dated crop dispersal and non-ethnic interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pk-attached-pottery"
+          ],
+          "locator": "Later ceramic transition and fuzzy chronological boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pk-skeleton"
+          ],
+          "locator": "Palaeopathological potential and sampling limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pk-diet",
+            "pk-millet-isotope"
+          ],
+          "locator": "Long-term diet reconstruction and medical limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pk-language-history",
+            "pk-skeleton"
+          ],
+          "locator": "Absence of texts and limits on medical reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pk-toilets"
+          ],
+          "locator": "Settlement health risk and direct-evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pk-songguk-crops",
+            "pk-wild-resources"
+          ],
+          "locator": "Food diversity and nutritional inference caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pk-unesco"
+          ],
+          "locator": "Dolmen construction, landscape and belief limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pk-chuncheon-dolmens"
+          ],
+          "locator": "Excavated dolmen condition and associated finds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pk-songguk-aks",
+            "pk-women"
+          ],
+          "locator": "Burial types, goods, status and gender caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pk-conflict"
+          ],
+          "locator": "Multiple conflict indicators and alternative explanations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pk-mirror",
+            "pk-language-history"
+          ],
+          "locator": "Ritual-object interpretation and no-text guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pk-nmk-bronze",
+            "pk-knife"
+          ],
+          "locator": "Everyday technological achievements beyond bronze.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pk-unesco",
+            "pk-household"
+          ],
+          "locator": "Collective engineering and political inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pk-language-history",
+            "pk-archaeolinguistic"
+          ],
+          "locator": "Explicit in-period writing absence and later evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pk-idu"
+          ],
+          "locator": "Later writing chronology and modern-label warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pk-map500",
+            "pk-map400",
+            "pk-attached-pottery"
+          ],
+          "locator": "Endpoint continuity and no forced successor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pk-map500",
+            "pk-map400",
+            "pk-attached-pottery"
+          ],
+          "locator": "The exact target vanishes at its indexed endpoint and audited Korean points have no mapped owner. Later seam introduces Gojoseon across a differently shaped peninsula-and-Liaodong area. National Museum journal uses associations and typology to track later pottery change near and beyond the card endpoint.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "paleo-koreans",
+        "card": "cards/paleo-koreans.json",
+        "dateBasis": "map_coverage",
+        "summary": "An evidence-aware guide to localized Mumun-period communities inside the atlas’s anachronistically named Paleo-Koreans polygon, with exact geometry, daily life, research methods and later-language guardrails.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "paleo-koreans",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            124.40824408244083,
+            34.26961957921718,
+            129.46629466294667,
+            40.29582673528593
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "paleo-koreans",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            124.40824408244083,
+            34.26961957921718,
+            129.46629466294667,
+            40.29582673528593
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "paleo-koreans",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            124.40824408244083,
+            34.26961957921718,
+            129.46629466294667,
+            40.29582673528593
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
