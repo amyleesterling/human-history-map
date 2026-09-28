@@ -1,0 +1,4281 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release158-nahua-shared research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "nh-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance."
+    },
+    {
+      "id": "nh-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Nahua summaries reviewed only as leads and not treated as independent historical evidence."
+    },
+    {
+      "id": "nh-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact observed interval and one-border-file status for all six unreviewed records."
+    },
+    {
+      "id": "nh-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "All six exact ids were unassigned missing cards before this packet."
+    },
+    {
+      "id": "nh-cards-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Direct check that none of the six exact ids already loaded a researched card."
+    },
+    {
+      "id": "nh-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Direct check that none of the six exact ids already had a researched association."
+    },
+    {
+      "id": "nh-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-start control for all six exact ids and representative regional points."
+    },
+    {
+      "id": "nh-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership."
+    },
+    {
+      "id": "nh-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Exact endpoint control where all six labels disappear and other atlas identities remain."
+    },
+    {
+      "id": "nh-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance."
+    },
+    {
+      "id": "nh-mexica-card",
+      "title": "Human History Map researched Mexihcah Triple Alliance card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/mexihcah-triple-alliance.json",
+      "note": "Existing separate card establishes that the Mexica-led alliance already has its own identity and must not absorb all Nahua peoples."
+    },
+    {
+      "id": "nh-ov-inpi",
+      "title": "INPI National Catalogue: Nahua / Nahuatl people",
+      "url": "https://catalogo.inpi.gob.mx/nahua-nahuatl/",
+      "note": "National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities."
+    },
+    {
+      "id": "nh-ov-politics",
+      "title": "Alfredo López Austin, Political organization in Postclassic central Mexico",
+      "url": "https://ru.historicas.unam.mx/handle/20.500.12525/2292?locale-attribute=en",
+      "note": "UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state."
+    },
+    {
+      "id": "nh-nawat",
+      "title": "William R. Fowler, El complejo Guazapa en El Salvador",
+      "url": "https://revistas.ues.edu.sv/index.php/launiversidad/article/download/180/235/826",
+      "note": "University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity."
+    },
+    {
+      "id": "nh-nawat-history",
+      "title": "University of El Salvador, Nahua-Pipil historical framework",
+      "url": "https://repositorio.ues.edu.sv/server/api/core/bitstreams/1a8904b2-c89a-47b1-bbe5-9cad5425d354/content",
+      "note": "University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology."
+    },
+    {
+      "id": "nh-nawat-live",
+      "title": "El Salvador Ministry of Culture: Witzapan and the Nawat language",
+      "url": "https://www.cultura.gob.sv/witzapan-conmemoro-el-dia-de-la-lengua-materna-y-de-la-lengua-nahuat/",
+      "note": "Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization."
+    },
+    {
+      "id": "nh-inali",
+      "title": "INALI Catalogue of Nahuatl language varieties",
+      "url": "https://www.inali.gob.mx/sitios/clin-inali/html/v_nahuatl.html",
+      "note": "Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references."
+    },
+    {
+      "id": "nh-triple",
+      "title": "UNAM Noticonquista: The Triple Alliance among central Mexican Nahuas",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/767/767",
+      "note": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers."
+    },
+    {
+      "id": "nh-altepetl",
+      "title": "UNAM Noticonquista: The Altepetl",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/765/744",
+      "note": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships."
+    },
+    {
+      "id": "nh-tlaxcala",
+      "title": "UNAM Noticonquista: Tlaxcala, a composite and multiethnic altepetl",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/1719/1719",
+      "note": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi."
+    },
+    {
+      "id": "nh-guerrero",
+      "title": "INAH Guerrero museum: archaeology and pre-Hispanic history",
+      "url": "https://lugares.inah.gob.mx/es/pagina-de-elemento/2195",
+      "note": "Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs."
+    },
+    {
+      "id": "nh-ixcateopan",
+      "title": "INAH Ixcateopan archaeological zone",
+      "url": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-ixcateopan",
+      "note": "Official site history distinguishes Chontal and Nahua actors, Mexica alliances, conquest, and tribute obligations in northern Guerrero."
+    },
+    {
+      "id": "nh-frontier",
+      "title": "UNAM Noticonquista: Independent territories beyond the Isthmus",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2254/2254",
+      "note": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control."
+    },
+    {
+      "id": "nh-met-chronology",
+      "title": "Metropolitan Museum of Art: Mexico, 1400 to 1600",
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/08/canm.html",
+      "note": "Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits."
+    },
+    {
+      "id": "nh-inah-templo",
+      "title": "INAH: Templo Mayor",
+      "url": "https://lugares.inah.gob.mx/en/node/4463",
+      "note": "Official archaeological record dates Ahuizotl, construction phases, sacred precinct buildings, flood repairs, and continuing excavation."
+    },
+    {
+      "id": "nh-met-tenochtitlan",
+      "title": "Metropolitan Museum of Art: Tenochtitlan",
+      "url": "https://www.metmuseum.org/essays/tenochtitlan",
+      "note": "Museum essay covers the lake capital, canals, causeways, neighborhoods, houses, markets, engineering, and urban crafts."
+    },
+    {
+      "id": "nh-inah-chinampas",
+      "title": "INAH: excavated chinampas and canals",
+      "url": "https://arqueologiamexicana.mx/node/989",
+      "note": "Archaeological report identifies canal-and-field features in one Tenochtitlan neighborhood and supports a localized chinampa discussion."
+    },
+    {
+      "id": "nh-unesco-xochimilco",
+      "title": "UNESCO: Historic Centre of Mexico City and Xochimilco",
+      "url": "https://whc.unesco.org/en/list/412/",
+      "note": "World Heritage record describes the surviving canal and chinampa landscape while distinguishing it from the whole Nahua world."
+    },
+    {
+      "id": "nh-getty-market",
+      "title": "Digital Florentine Codex, Book 9, folio 1r",
+      "url": "https://florentinecodex.getty.edu/en/book/9/folio/1r",
+      "note": "Postconquest Nahua account of merchant history; useful with explicit 1577 manuscript and retrospective limits."
+    },
+    {
+      "id": "nh-getty-storage",
+      "title": "Digital Florentine Codex, Book 8, folio 28v",
+      "url": "https://florentinecodex.getty.edu/book/8/folio/28v",
+      "note": "Postconquest Nahua record of palace storage, stewards, foodstuffs, and tribute officers."
+    },
+    {
+      "id": "nh-inah-book",
+      "title": "INAH repository: Mexico, From the Olmecs to the Aztecs",
+      "url": "https://deas.inah.gob.mx/pdf/biblioteca/repositorio/repositorio%2821040%29-4563.pdf",
+      "note": "Scholarly synthesis discusses foods, clothing, household learning, schools, markets, rank, and the limits of colonial manuscript evidence."
+    },
+    {
+      "id": "nh-mendoza",
+      "title": "University of Kentucky: Codex Mendoza, folio 60 recto",
+      "url": "https://uknowledge.uky.edu/world_mexico_codices/12/",
+      "note": "University record for the colonial manuscript scenes of age-marked household work and childhood instruction."
+    },
+    {
+      "id": "nh-inah-education",
+      "title": "INAH educational study: Mexica schools",
+      "url": "https://www.inah.gob.mx/images/interactivos/20220721_Cuadernillo_Escuelas%20mexicas.pdf",
+      "note": "Official educational booklet describes calmecac and telpochcalli roles while limiting the evidence to Mexica institutions."
+    },
+    {
+      "id": "nh-yale",
+      "title": "Yale eHRAF World Cultures: Aztec culture summary",
+      "url": "https://ehrafworldcultures.yale.edu/cultures/NU07/summary",
+      "note": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope."
+    },
+    {
+      "id": "nh-getty-home",
+      "title": "Getty Research Institute: Digital Florentine Codex",
+      "url": "https://florentinecodex.getty.edu/",
+      "note": "Project history dates the bilingual alphabetic manuscript to 1577 and names its Nahua authors, artists, and Franciscan frame."
+    },
+    {
+      "id": "nh-boturini-writing",
+      "title": "INAH Codex Boturini study: pre-Hispanic Nahua pictographic writing",
+      "url": "https://codiceboturini.inah.gob.mx/approaches_text.php?textID=4",
+      "note": "Official study explains amoxtli materiality and pictorial, calendrical, logographic, phonetic, numerical, and performative dimensions."
+    },
+    {
+      "id": "nh-alphabetic",
+      "title": "UNAM: The first alphabetic records in New Spain",
+      "url": "https://publicaciones.iib.unam.mx/index.php/boletin/article/view/681",
+      "note": "Bibliographic study places alphabetic Nahuatl recording after the conquest and distinguishes it from earlier pictorial writing."
+    },
+    {
+      "id": "nh-met-stone",
+      "title": "Metropolitan Museum of Art: Aztec Stone Sculpture",
+      "url": "https://www.metmuseum.org/essays/aztec-stone-sculpture",
+      "note": "Museum essay describes quarrying, carving, grinding, polishing, painting, tools, and the limits of gray surviving surfaces."
+    },
+    {
+      "id": "nh-met-tribute",
+      "title": "Metropolitan Museum of Art: ancient tribute manuscripts",
+      "url": "https://www.metmuseum.org/pt/perspectives/golden-kingdoms-ancient-tributes",
+      "note": "Museum essay explains tribute goods and the colonial date and patronage of the Codex Mendoza."
+    },
+    {
+      "id": "nh-met-drum",
+      "title": "Metropolitan Museum of Art: Teponaztli drum",
+      "url": "https://www.metmuseum.org/art/collection/search/312583",
+      "note": "Object record describes manufacture, imagery, sound, ceremony, weddings, processions, dances, ballgames, and later use."
+    },
+    {
+      "id": "nh-getty-calendar",
+      "title": "Digital Florentine Codex, Book 2, folio 3r",
+      "url": "https://florentinecodex.getty.edu/book/2/folio/3r",
+      "note": "Postconquest Nahua calendrical account and festival sequence, used with manuscript-date caution."
+    },
+    {
+      "id": "nh-met-templo",
+      "title": "Metropolitan Museum of Art: Tenochtitlan, Templo Mayor",
+      "url": "https://www.metmuseum.org/essays/tenochtitlan-templo-mayor",
+      "note": "Museum essay connects layered construction with Huitzilopochtli, Tlaloc, war, rain, agriculture, and state ceremony."
+    },
+    {
+      "id": "nh-inah-huei",
+      "title": "INAH: Huei Tzompantli",
+      "url": "https://lugares.inah.gob.mx/en/node/5907",
+      "note": "Official archaeology record documents postholes, skull-built architecture, studied remains, phases, sex and age variation."
+    },
+    {
+      "id": "nh-getty-medicine",
+      "title": "Digital Florentine Codex, Book 10, folio 108r",
+      "url": "https://florentinecodex.getty.edu/book/10/folio/108r",
+      "note": "Postconquest Nahua text records particular plants, washes, drinks, and remedies without proving efficacy or universal practice."
+    },
+    {
+      "id": "nh-getty-birth",
+      "title": "Digital Florentine Codex, Book 6, folio 138v",
+      "url": "https://florentinecodex.getty.edu/book/6/folio/138v",
+      "note": "Postconquest Nahua account describes midwifery, difficult birth, prayer, embodied intervention, and manuscript editorial context."
+    },
+    {
+      "id": "nh-badianus",
+      "title": "Tufts University: The Badianus Manuscript",
+      "url": "https://tischlibrary.tufts.edu/special-collections-badianus-manuscript",
+      "note": "University collection dates the illustrated Indigenous medicinal manuscript to 1552 and explains its colonial college setting."
+    },
+    {
+      "id": "nh-sanitation",
+      "title": "UNAM record: potable water and sanitation in Tenochtitlan",
+      "url": "https://produccion.siia.unam.mx/Publicaciones/ProdCientif/PublicacionFrw.aspx?id=357959&scopus=0",
+      "note": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses."
+    },
+    {
+      "id": "nh-water",
+      "title": "INAH: Tlaloc and Chapultepec waterworks",
+      "url": "https://www.inah.gob.mx/index.php/foto-del-dia/tlaloc-y-chapultepec-un-lugar-consagrado-al-agua",
+      "note": "Official source connects Chapultepec springs, aqueduct engineering, ritual meanings, and Tenochtitlan water supply."
+    },
+    {
+      "id": "nh-tlatelolco",
+      "title": "INAH: urbanism and architecture at Tlatelolco",
+      "url": "https://lugares.inah.gob.mx/images/publicaciones/325_urbanismo_y_arquitectura_low.pdf",
+      "note": "Archaeological study covers urban water, unequal conduits, drainage, building phases, subsidence, and flood management."
+    },
+    {
+      "id": "nh-cempoala",
+      "title": "INAH Cempoala archaeological guide",
+      "url": "https://www.mener.inah.gob.mx/archivos/Cempoala.pdf",
+      "note": "Official guide dates Cortes arrival in 1519 and describes Totonac Cempoala, Mexica tributary pressure, and the inland alliance route."
+    },
+    {
+      "id": "nh-contact-war",
+      "title": "UNAM Noticonquista: war according to Indigenous conquerors",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2679/2676",
+      "note": "University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals."
+    },
+    {
+      "id": "nh-conquest",
+      "title": "UNAM Noticonquista: military impact of Tenochtitlan fall",
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2811/2811",
+      "note": "University account dates the 1521 siege outcome and centers the enormous Indigenous coalition and post-surrender violence."
+    },
+    {
+      "id": "nh-loc-huex",
+      "title": "Library of Congress: Huexotzinco Codex, 1531",
+      "url": "https://www.loc.gov/item/mss47662-2657/",
+      "note": "Official object record identifies eight painted amatl panels used by a Nahua community in a colonial taxation lawsuit."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nahua",
+      "card": "data/cards/nahua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-ov-inpi",
+            "nh-ov-politics",
+            "nh-nawat"
+          ],
+          "locator": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance. Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities. UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state. University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nh-frontier"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control. Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nh-yale",
+            "nh-guerrero"
+          ],
+          "locator": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope. Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-map1500"
+          ],
+          "locator": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses. Exact endpoint control where all six labels disappear and other atlas identities remain.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-summary",
+            "nh-coverage",
+            "nh-missing",
+            "nh-cards-index",
+            "nh-overrides"
+          ],
+          "locator": "Exact live index, imported-summary hash, coverage, missing-card, card-index, and override records checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-map1530"
+          ],
+          "locator": "Deterministic inventory of exactly fifty tracked world snapshots; exact occurrence count, interval, and source SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Decoded geometry, topology, twenty-one target-pair classifications, and exact-identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Fixed named-place and generated interior-witness probes for all seven exact target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-mexica-card"
+          ],
+          "locator": "Raw TopoJSON arc audit, neighboring identities, and exact pre-start and end-seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nh-inali"
+          ],
+          "locator": "INALI variety and self-designation catalog; no present-day count projected backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Exact label wording and southern footprint compared with University of El Salvador historical and linguistic discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "UNAM definition and discussion of political independence, territory, water, rulers, and tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "UNAM account of Tlaxcala political divisions, independence, Nahuatl speakers, and Otomi population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-ixcateopan"
+          ],
+          "locator": "INAH museum diversity synthesis and Ixcateopan account of distinct Chontal, Nahua, and Mexica actors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "UNAM reconstruction of alliance traditions and shifting three-part political centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nh-inah-templo"
+          ],
+          "locator": "INAH reign dates, construction phases, flood repairs, and sacred precinct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nh-altepetl",
+            "nh-met-tribute"
+          ],
+          "locator": "UNAM tribute framework and museum analysis of tribute goods and manuscript limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Independent Tlaxcala and its complex political composition before the 1519 alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nh-ixcateopan",
+            "nh-met-chronology"
+          ],
+          "locator": "INAH local frontier account and Met regional chronology on the Purépecha limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nh-inah-chinampas",
+            "nh-unesco-xochimilco"
+          ],
+          "locator": "Localized archaeological field-and-canal evidence and living Xochimilco landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Food and household summary bounded to source region and evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nh-getty-market",
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Retrospective merchant account and urban market synthesis, both explicitly localized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nh-getty-storage",
+            "nh-met-tribute"
+          ],
+          "locator": "Florentine palace-storage account and museum distinction between tribute goods and other exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan",
+            "nh-inah-book"
+          ],
+          "locator": "Urban transport and broader central Mexican economy, with geographic limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Museum description of houses, neighborhoods, construction, and archaeological survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "University manuscript record, date, age markers, tasks, and colonial commissioning context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Research summary on household, rank, property, marriage, and social categories, applied cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nh-yale",
+            "nh-inah-book"
+          ],
+          "locator": "Gendered labor and social rank in research synthesis, with local variation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nh-met-drum"
+          ],
+          "locator": "Met object record for manufacture, sound, ceremonial settings, weddings, dances, and later use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "Colonial manuscript scenes used as remembered educational norms with explicit date limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nh-inah-education"
+          ],
+          "locator": "INAH school definitions, social settings, subjects, and institutional differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nh-inah-book",
+            "nh-inah-education"
+          ],
+          "locator": "Education synthesis compared with official school account; universal claim deliberately rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nh-mendoza",
+            "nh-inah-book"
+          ],
+          "locator": "Colonial scenes and education synthesis, with gendered archival imbalance made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nh-met-drum",
+            "nh-getty-calendar"
+          ],
+          "locator": "Performance object and retrospective festival calendar; rules and participation not universalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nh-met-stone"
+          ],
+          "locator": "Museum technical discussion of materials, tools, finishing, pigments, and workshop labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH study of material books, pictorial syntax, signs, numbers, sound values, and reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nh-alphabetic",
+            "nh-getty-home"
+          ],
+          "locator": "UNAM dating of first alphabetic records and Getty dating of the 1577 bilingual codex.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH discussion of pictorial materiality and performance; no false alphabetic transcription substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-met-stone"
+          ],
+          "locator": "Regional museum synthesis and technical sculpture study used to resist one-style generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nh-getty-calendar"
+          ],
+          "locator": "Florentine festival and calendrical account, explicitly postconquest and regionally bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nh-met-templo",
+            "nh-altepetl"
+          ],
+          "locator": "Templo Mayor interpretation and local altepetl patron-deity framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nh-getty-calendar",
+            "nh-getty-home"
+          ],
+          "locator": "Postconquest manuscript calendar and project history used with explicit source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nh-inah-huei"
+          ],
+          "locator": "Official archaeological context, phases, architecture, and studied human remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nh-boturini-writing",
+            "nh-getty-home"
+          ],
+          "locator": "Pictorial reading practices and 1577 collaborative colonial manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nh-badianus",
+            "nh-getty-medicine"
+          ],
+          "locator": "Dated colonial medicinal manuscript and specific Nahua remedy text, with efficacy and back-projection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nh-getty-birth"
+          ],
+          "locator": "Postconquest Nahua childbirth account and its specific literary and medical context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nh-water",
+            "nh-tlatelolco"
+          ],
+          "locator": "INAH waterworks and archaeological urban-infrastructure evidence, localized to the lake cities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nh-sanitation"
+          ],
+          "locator": "Scholarly review of aqueducts, privies, canoe collection, reuse, wastewater, and absent citywide drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-guerrero"
+          ],
+          "locator": "Tenochtitlan sanitation contrasted with Guerrero regional diversity; explicit negative-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nh-cempoala"
+          ],
+          "locator": "INAH guide dates Cortes arrival and first Cempoala relationship to 1519, outside the card interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nh-cempoala",
+            "nh-tlaxcala"
+          ],
+          "locator": "INAH Cempoala chronology and UNAM Tlaxcala political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nh-contact-war"
+          ],
+          "locator": "UNAM analysis of autonomous armies, local strategies, and the changing coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nh-conquest",
+            "nh-map1500"
+          ],
+          "locator": "UNAM siege outcome and exact atlas endpoint compared directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nh-loc-huex",
+            "nh-inali"
+          ],
+          "locator": "Library of Congress object record and official contemporary language-variety catalog.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nh-map1500",
+            "nh-map1530",
+            "nh-contact-war",
+            "nh-inali",
+            "nh-nawat-live"
+          ],
+          "locator": "Exact endpoint control where all six labels disappear and other atlas identities remain. Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance. University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals. Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references. Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nahua",
+        "kind": "culture",
+        "dateBasis": "map_coverage",
+        "card": "cards/nahua.json",
+        "summary": "Related Nahua peoples and city-states, never one Mexica empire.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahua",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -102.45522455224553,
+            18.960094906974604,
+            -102.21042210422104,
+            19.148111464264204
+          ]
+        },
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahua",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -90.0711007110071,
+            13.297478593311467,
+            -88.49788497884978,
+            14.418665563619285
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nahua-guerrero",
+      "card": "data/cards/nahua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-guerrero"
+          ],
+          "locator": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance. Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities. UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state. University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nh-frontier"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control. Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nh-yale",
+            "nh-guerrero"
+          ],
+          "locator": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope. Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-map1500"
+          ],
+          "locator": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses. Exact endpoint control where all six labels disappear and other atlas identities remain.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-summary",
+            "nh-coverage",
+            "nh-missing",
+            "nh-cards-index",
+            "nh-overrides"
+          ],
+          "locator": "Exact live index, imported-summary hash, coverage, missing-card, card-index, and override records checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-map1530"
+          ],
+          "locator": "Deterministic inventory of exactly fifty tracked world snapshots; exact occurrence count, interval, and source SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Decoded geometry, topology, twenty-one target-pair classifications, and exact-identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Fixed named-place and generated interior-witness probes for all seven exact target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-mexica-card"
+          ],
+          "locator": "Raw TopoJSON arc audit, neighboring identities, and exact pre-start and end-seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nh-inali"
+          ],
+          "locator": "INALI variety and self-designation catalog; no present-day count projected backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Exact label wording and southern footprint compared with University of El Salvador historical and linguistic discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "UNAM definition and discussion of political independence, territory, water, rulers, and tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "UNAM account of Tlaxcala political divisions, independence, Nahuatl speakers, and Otomi population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-ixcateopan"
+          ],
+          "locator": "INAH museum diversity synthesis and Ixcateopan account of distinct Chontal, Nahua, and Mexica actors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "UNAM reconstruction of alliance traditions and shifting three-part political centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nh-inah-templo"
+          ],
+          "locator": "INAH reign dates, construction phases, flood repairs, and sacred precinct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nh-altepetl",
+            "nh-met-tribute"
+          ],
+          "locator": "UNAM tribute framework and museum analysis of tribute goods and manuscript limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Independent Tlaxcala and its complex political composition before the 1519 alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nh-ixcateopan",
+            "nh-met-chronology"
+          ],
+          "locator": "INAH local frontier account and Met regional chronology on the Purépecha limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nh-inah-chinampas",
+            "nh-unesco-xochimilco"
+          ],
+          "locator": "Localized archaeological field-and-canal evidence and living Xochimilco landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Food and household summary bounded to source region and evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nh-getty-market",
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Retrospective merchant account and urban market synthesis, both explicitly localized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nh-getty-storage",
+            "nh-met-tribute"
+          ],
+          "locator": "Florentine palace-storage account and museum distinction between tribute goods and other exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan",
+            "nh-inah-book"
+          ],
+          "locator": "Urban transport and broader central Mexican economy, with geographic limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Museum description of houses, neighborhoods, construction, and archaeological survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "University manuscript record, date, age markers, tasks, and colonial commissioning context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Research summary on household, rank, property, marriage, and social categories, applied cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nh-yale",
+            "nh-inah-book"
+          ],
+          "locator": "Gendered labor and social rank in research synthesis, with local variation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nh-met-drum"
+          ],
+          "locator": "Met object record for manufacture, sound, ceremonial settings, weddings, dances, and later use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "Colonial manuscript scenes used as remembered educational norms with explicit date limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nh-inah-education"
+          ],
+          "locator": "INAH school definitions, social settings, subjects, and institutional differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nh-inah-book",
+            "nh-inah-education"
+          ],
+          "locator": "Education synthesis compared with official school account; universal claim deliberately rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nh-mendoza",
+            "nh-inah-book"
+          ],
+          "locator": "Colonial scenes and education synthesis, with gendered archival imbalance made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nh-met-drum",
+            "nh-getty-calendar"
+          ],
+          "locator": "Performance object and retrospective festival calendar; rules and participation not universalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nh-met-stone"
+          ],
+          "locator": "Museum technical discussion of materials, tools, finishing, pigments, and workshop labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH study of material books, pictorial syntax, signs, numbers, sound values, and reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nh-alphabetic",
+            "nh-getty-home"
+          ],
+          "locator": "UNAM dating of first alphabetic records and Getty dating of the 1577 bilingual codex.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH discussion of pictorial materiality and performance; no false alphabetic transcription substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-met-stone"
+          ],
+          "locator": "Regional museum synthesis and technical sculpture study used to resist one-style generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nh-getty-calendar"
+          ],
+          "locator": "Florentine festival and calendrical account, explicitly postconquest and regionally bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nh-met-templo",
+            "nh-altepetl"
+          ],
+          "locator": "Templo Mayor interpretation and local altepetl patron-deity framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nh-getty-calendar",
+            "nh-getty-home"
+          ],
+          "locator": "Postconquest manuscript calendar and project history used with explicit source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nh-inah-huei"
+          ],
+          "locator": "Official archaeological context, phases, architecture, and studied human remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nh-boturini-writing",
+            "nh-getty-home"
+          ],
+          "locator": "Pictorial reading practices and 1577 collaborative colonial manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nh-badianus",
+            "nh-getty-medicine"
+          ],
+          "locator": "Dated colonial medicinal manuscript and specific Nahua remedy text, with efficacy and back-projection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nh-getty-birth"
+          ],
+          "locator": "Postconquest Nahua childbirth account and its specific literary and medical context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nh-water",
+            "nh-tlatelolco"
+          ],
+          "locator": "INAH waterworks and archaeological urban-infrastructure evidence, localized to the lake cities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nh-sanitation"
+          ],
+          "locator": "Scholarly review of aqueducts, privies, canoe collection, reuse, wastewater, and absent citywide drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-guerrero"
+          ],
+          "locator": "Tenochtitlan sanitation contrasted with Guerrero regional diversity; explicit negative-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nh-cempoala"
+          ],
+          "locator": "INAH guide dates Cortes arrival and first Cempoala relationship to 1519, outside the card interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nh-cempoala",
+            "nh-tlaxcala"
+          ],
+          "locator": "INAH Cempoala chronology and UNAM Tlaxcala political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nh-contact-war"
+          ],
+          "locator": "UNAM analysis of autonomous armies, local strategies, and the changing coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nh-conquest",
+            "nh-map1500"
+          ],
+          "locator": "UNAM siege outcome and exact atlas endpoint compared directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nh-loc-huex",
+            "nh-inali"
+          ],
+          "locator": "Library of Congress object record and official contemporary language-variety catalog.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nh-map1500",
+            "nh-map1530",
+            "nh-contact-war",
+            "nh-inali",
+            "nh-nawat-live"
+          ],
+          "locator": "Exact endpoint control where all six labels disappear and other atlas identities remain. Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance. University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals. Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references. Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nahua-guerrero",
+        "name": "Nahua (Guerrero)",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "kind": "culture",
+        "dateBasis": "map_coverage",
+        "card": "cards/nahua.json",
+        "summary": "Nahua communities in Guerrero’s diverse borderlands, distinct from a single Mexica political identity.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahua-guerrero",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -100.29520295202951,
+            17.121403574657222,
+            -98.40518405184052,
+            18.758253602825476
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nahua-mexico",
+      "card": "data/cards/nahua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-triple"
+          ],
+          "locator": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance. Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities. UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state. University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nh-frontier"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control. Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nh-yale",
+            "nh-guerrero"
+          ],
+          "locator": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope. Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-map1500"
+          ],
+          "locator": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses. Exact endpoint control where all six labels disappear and other atlas identities remain.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-summary",
+            "nh-coverage",
+            "nh-missing",
+            "nh-cards-index",
+            "nh-overrides"
+          ],
+          "locator": "Exact live index, imported-summary hash, coverage, missing-card, card-index, and override records checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-map1530"
+          ],
+          "locator": "Deterministic inventory of exactly fifty tracked world snapshots; exact occurrence count, interval, and source SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Decoded geometry, topology, twenty-one target-pair classifications, and exact-identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Fixed named-place and generated interior-witness probes for all seven exact target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-mexica-card"
+          ],
+          "locator": "Raw TopoJSON arc audit, neighboring identities, and exact pre-start and end-seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nh-inali"
+          ],
+          "locator": "INALI variety and self-designation catalog; no present-day count projected backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Exact label wording and southern footprint compared with University of El Salvador historical and linguistic discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "UNAM definition and discussion of political independence, territory, water, rulers, and tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "UNAM account of Tlaxcala political divisions, independence, Nahuatl speakers, and Otomi population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-ixcateopan"
+          ],
+          "locator": "INAH museum diversity synthesis and Ixcateopan account of distinct Chontal, Nahua, and Mexica actors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "UNAM reconstruction of alliance traditions and shifting three-part political centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nh-inah-templo"
+          ],
+          "locator": "INAH reign dates, construction phases, flood repairs, and sacred precinct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nh-altepetl",
+            "nh-met-tribute"
+          ],
+          "locator": "UNAM tribute framework and museum analysis of tribute goods and manuscript limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Independent Tlaxcala and its complex political composition before the 1519 alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nh-ixcateopan",
+            "nh-met-chronology"
+          ],
+          "locator": "INAH local frontier account and Met regional chronology on the Purépecha limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nh-inah-chinampas",
+            "nh-unesco-xochimilco"
+          ],
+          "locator": "Localized archaeological field-and-canal evidence and living Xochimilco landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Food and household summary bounded to source region and evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nh-getty-market",
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Retrospective merchant account and urban market synthesis, both explicitly localized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nh-getty-storage",
+            "nh-met-tribute"
+          ],
+          "locator": "Florentine palace-storage account and museum distinction between tribute goods and other exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan",
+            "nh-inah-book"
+          ],
+          "locator": "Urban transport and broader central Mexican economy, with geographic limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Museum description of houses, neighborhoods, construction, and archaeological survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "University manuscript record, date, age markers, tasks, and colonial commissioning context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Research summary on household, rank, property, marriage, and social categories, applied cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nh-yale",
+            "nh-inah-book"
+          ],
+          "locator": "Gendered labor and social rank in research synthesis, with local variation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nh-met-drum"
+          ],
+          "locator": "Met object record for manufacture, sound, ceremonial settings, weddings, dances, and later use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "Colonial manuscript scenes used as remembered educational norms with explicit date limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nh-inah-education"
+          ],
+          "locator": "INAH school definitions, social settings, subjects, and institutional differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nh-inah-book",
+            "nh-inah-education"
+          ],
+          "locator": "Education synthesis compared with official school account; universal claim deliberately rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nh-mendoza",
+            "nh-inah-book"
+          ],
+          "locator": "Colonial scenes and education synthesis, with gendered archival imbalance made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nh-met-drum",
+            "nh-getty-calendar"
+          ],
+          "locator": "Performance object and retrospective festival calendar; rules and participation not universalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nh-met-stone"
+          ],
+          "locator": "Museum technical discussion of materials, tools, finishing, pigments, and workshop labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH study of material books, pictorial syntax, signs, numbers, sound values, and reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nh-alphabetic",
+            "nh-getty-home"
+          ],
+          "locator": "UNAM dating of first alphabetic records and Getty dating of the 1577 bilingual codex.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH discussion of pictorial materiality and performance; no false alphabetic transcription substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-met-stone"
+          ],
+          "locator": "Regional museum synthesis and technical sculpture study used to resist one-style generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nh-getty-calendar"
+          ],
+          "locator": "Florentine festival and calendrical account, explicitly postconquest and regionally bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nh-met-templo",
+            "nh-altepetl"
+          ],
+          "locator": "Templo Mayor interpretation and local altepetl patron-deity framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nh-getty-calendar",
+            "nh-getty-home"
+          ],
+          "locator": "Postconquest manuscript calendar and project history used with explicit source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nh-inah-huei"
+          ],
+          "locator": "Official archaeological context, phases, architecture, and studied human remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nh-boturini-writing",
+            "nh-getty-home"
+          ],
+          "locator": "Pictorial reading practices and 1577 collaborative colonial manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nh-badianus",
+            "nh-getty-medicine"
+          ],
+          "locator": "Dated colonial medicinal manuscript and specific Nahua remedy text, with efficacy and back-projection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nh-getty-birth"
+          ],
+          "locator": "Postconquest Nahua childbirth account and its specific literary and medical context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nh-water",
+            "nh-tlatelolco"
+          ],
+          "locator": "INAH waterworks and archaeological urban-infrastructure evidence, localized to the lake cities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nh-sanitation"
+          ],
+          "locator": "Scholarly review of aqueducts, privies, canoe collection, reuse, wastewater, and absent citywide drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-guerrero"
+          ],
+          "locator": "Tenochtitlan sanitation contrasted with Guerrero regional diversity; explicit negative-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nh-cempoala"
+          ],
+          "locator": "INAH guide dates Cortes arrival and first Cempoala relationship to 1519, outside the card interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nh-cempoala",
+            "nh-tlaxcala"
+          ],
+          "locator": "INAH Cempoala chronology and UNAM Tlaxcala political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nh-contact-war"
+          ],
+          "locator": "UNAM analysis of autonomous armies, local strategies, and the changing coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nh-conquest",
+            "nh-map1500"
+          ],
+          "locator": "UNAM siege outcome and exact atlas endpoint compared directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nh-loc-huex",
+            "nh-inali"
+          ],
+          "locator": "Library of Congress object record and official contemporary language-variety catalog.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nh-map1500",
+            "nh-map1530",
+            "nh-contact-war",
+            "nh-inali",
+            "nh-nawat-live"
+          ],
+          "locator": "Exact endpoint control where all six labels disappear and other atlas identities remain. Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance. University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals. Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references. Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nahua-mexico",
+        "name": "Nahua (Mexico)",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "kind": "culture",
+        "dateBasis": "map_coverage",
+        "card": "cards/nahua.json",
+        "summary": "Nahua communities around the Basin of Mexico, including states with different rulers and alliances.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahua-mexico",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -100.01080010800108,
+            18.951800058858893,
+            -98.68958689586896,
+            19.905707592166394
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nahua-michoacan",
+      "card": "data/cards/nahua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance. Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities. UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state. University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nh-frontier"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control. Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nh-yale",
+            "nh-guerrero"
+          ],
+          "locator": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope. Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-map1500"
+          ],
+          "locator": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses. Exact endpoint control where all six labels disappear and other atlas identities remain.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-summary",
+            "nh-coverage",
+            "nh-missing",
+            "nh-cards-index",
+            "nh-overrides"
+          ],
+          "locator": "Exact live index, imported-summary hash, coverage, missing-card, card-index, and override records checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-map1530"
+          ],
+          "locator": "Deterministic inventory of exactly fifty tracked world snapshots; exact occurrence count, interval, and source SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Decoded geometry, topology, twenty-one target-pair classifications, and exact-identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Fixed named-place and generated interior-witness probes for all seven exact target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-mexica-card"
+          ],
+          "locator": "Raw TopoJSON arc audit, neighboring identities, and exact pre-start and end-seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nh-inali"
+          ],
+          "locator": "INALI variety and self-designation catalog; no present-day count projected backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Exact label wording and southern footprint compared with University of El Salvador historical and linguistic discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "UNAM definition and discussion of political independence, territory, water, rulers, and tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "UNAM account of Tlaxcala political divisions, independence, Nahuatl speakers, and Otomi population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-ixcateopan"
+          ],
+          "locator": "INAH museum diversity synthesis and Ixcateopan account of distinct Chontal, Nahua, and Mexica actors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "UNAM reconstruction of alliance traditions and shifting three-part political centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nh-inah-templo"
+          ],
+          "locator": "INAH reign dates, construction phases, flood repairs, and sacred precinct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nh-altepetl",
+            "nh-met-tribute"
+          ],
+          "locator": "UNAM tribute framework and museum analysis of tribute goods and manuscript limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Independent Tlaxcala and its complex political composition before the 1519 alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nh-ixcateopan",
+            "nh-met-chronology"
+          ],
+          "locator": "INAH local frontier account and Met regional chronology on the Purépecha limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nh-inah-chinampas",
+            "nh-unesco-xochimilco"
+          ],
+          "locator": "Localized archaeological field-and-canal evidence and living Xochimilco landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Food and household summary bounded to source region and evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nh-getty-market",
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Retrospective merchant account and urban market synthesis, both explicitly localized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nh-getty-storage",
+            "nh-met-tribute"
+          ],
+          "locator": "Florentine palace-storage account and museum distinction between tribute goods and other exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan",
+            "nh-inah-book"
+          ],
+          "locator": "Urban transport and broader central Mexican economy, with geographic limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Museum description of houses, neighborhoods, construction, and archaeological survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "University manuscript record, date, age markers, tasks, and colonial commissioning context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Research summary on household, rank, property, marriage, and social categories, applied cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nh-yale",
+            "nh-inah-book"
+          ],
+          "locator": "Gendered labor and social rank in research synthesis, with local variation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nh-met-drum"
+          ],
+          "locator": "Met object record for manufacture, sound, ceremonial settings, weddings, dances, and later use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "Colonial manuscript scenes used as remembered educational norms with explicit date limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nh-inah-education"
+          ],
+          "locator": "INAH school definitions, social settings, subjects, and institutional differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nh-inah-book",
+            "nh-inah-education"
+          ],
+          "locator": "Education synthesis compared with official school account; universal claim deliberately rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nh-mendoza",
+            "nh-inah-book"
+          ],
+          "locator": "Colonial scenes and education synthesis, with gendered archival imbalance made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nh-met-drum",
+            "nh-getty-calendar"
+          ],
+          "locator": "Performance object and retrospective festival calendar; rules and participation not universalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nh-met-stone"
+          ],
+          "locator": "Museum technical discussion of materials, tools, finishing, pigments, and workshop labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH study of material books, pictorial syntax, signs, numbers, sound values, and reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nh-alphabetic",
+            "nh-getty-home"
+          ],
+          "locator": "UNAM dating of first alphabetic records and Getty dating of the 1577 bilingual codex.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH discussion of pictorial materiality and performance; no false alphabetic transcription substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-met-stone"
+          ],
+          "locator": "Regional museum synthesis and technical sculpture study used to resist one-style generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nh-getty-calendar"
+          ],
+          "locator": "Florentine festival and calendrical account, explicitly postconquest and regionally bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nh-met-templo",
+            "nh-altepetl"
+          ],
+          "locator": "Templo Mayor interpretation and local altepetl patron-deity framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nh-getty-calendar",
+            "nh-getty-home"
+          ],
+          "locator": "Postconquest manuscript calendar and project history used with explicit source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nh-inah-huei"
+          ],
+          "locator": "Official archaeological context, phases, architecture, and studied human remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nh-boturini-writing",
+            "nh-getty-home"
+          ],
+          "locator": "Pictorial reading practices and 1577 collaborative colonial manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nh-badianus",
+            "nh-getty-medicine"
+          ],
+          "locator": "Dated colonial medicinal manuscript and specific Nahua remedy text, with efficacy and back-projection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nh-getty-birth"
+          ],
+          "locator": "Postconquest Nahua childbirth account and its specific literary and medical context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nh-water",
+            "nh-tlatelolco"
+          ],
+          "locator": "INAH waterworks and archaeological urban-infrastructure evidence, localized to the lake cities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nh-sanitation"
+          ],
+          "locator": "Scholarly review of aqueducts, privies, canoe collection, reuse, wastewater, and absent citywide drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-guerrero"
+          ],
+          "locator": "Tenochtitlan sanitation contrasted with Guerrero regional diversity; explicit negative-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nh-cempoala"
+          ],
+          "locator": "INAH guide dates Cortes arrival and first Cempoala relationship to 1519, outside the card interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nh-cempoala",
+            "nh-tlaxcala"
+          ],
+          "locator": "INAH Cempoala chronology and UNAM Tlaxcala political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nh-contact-war"
+          ],
+          "locator": "UNAM analysis of autonomous armies, local strategies, and the changing coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nh-conquest",
+            "nh-map1500"
+          ],
+          "locator": "UNAM siege outcome and exact atlas endpoint compared directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nh-loc-huex",
+            "nh-inali"
+          ],
+          "locator": "Library of Congress object record and official contemporary language-variety catalog.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nh-map1500",
+            "nh-map1530",
+            "nh-contact-war",
+            "nh-inali",
+            "nh-nawat-live"
+          ],
+          "locator": "Exact endpoint control where all six labels disappear and other atlas identities remain. Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance. University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals. Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references. Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nahua-michoacan",
+        "name": "Nahua (Michoacan)",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "kind": "culture",
+        "dateBasis": "map_coverage",
+        "card": "cards/nahua.json",
+        "summary": "Western Nahua communities beside the powerful Purépecha frontier, with local identities and shifting allegiances.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahua-michoacan",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -103.74043740437403,
+            18.05457398767544,
+            -102.44442444424443,
+            18.856409305528132
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nahua-morelos-puebla-tlaxcala-veracruz-hidalgo-san-luis-potosi",
+      "card": "data/cards/nahua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-tlaxcala",
+            "nh-ov-inpi"
+          ],
+          "locator": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance. Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities. UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state. University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nh-frontier"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control. Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nh-yale",
+            "nh-guerrero"
+          ],
+          "locator": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope. Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-map1500"
+          ],
+          "locator": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses. Exact endpoint control where all six labels disappear and other atlas identities remain.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-summary",
+            "nh-coverage",
+            "nh-missing",
+            "nh-cards-index",
+            "nh-overrides"
+          ],
+          "locator": "Exact live index, imported-summary hash, coverage, missing-card, card-index, and override records checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-map1530"
+          ],
+          "locator": "Deterministic inventory of exactly fifty tracked world snapshots; exact occurrence count, interval, and source SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Decoded geometry, topology, twenty-one target-pair classifications, and exact-identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Fixed named-place and generated interior-witness probes for all seven exact target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-mexica-card"
+          ],
+          "locator": "Raw TopoJSON arc audit, neighboring identities, and exact pre-start and end-seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nh-inali"
+          ],
+          "locator": "INALI variety and self-designation catalog; no present-day count projected backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Exact label wording and southern footprint compared with University of El Salvador historical and linguistic discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "UNAM definition and discussion of political independence, territory, water, rulers, and tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "UNAM account of Tlaxcala political divisions, independence, Nahuatl speakers, and Otomi population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-ixcateopan"
+          ],
+          "locator": "INAH museum diversity synthesis and Ixcateopan account of distinct Chontal, Nahua, and Mexica actors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "UNAM reconstruction of alliance traditions and shifting three-part political centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nh-inah-templo"
+          ],
+          "locator": "INAH reign dates, construction phases, flood repairs, and sacred precinct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nh-altepetl",
+            "nh-met-tribute"
+          ],
+          "locator": "UNAM tribute framework and museum analysis of tribute goods and manuscript limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Independent Tlaxcala and its complex political composition before the 1519 alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nh-ixcateopan",
+            "nh-met-chronology"
+          ],
+          "locator": "INAH local frontier account and Met regional chronology on the Purépecha limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nh-inah-chinampas",
+            "nh-unesco-xochimilco"
+          ],
+          "locator": "Localized archaeological field-and-canal evidence and living Xochimilco landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Food and household summary bounded to source region and evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nh-getty-market",
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Retrospective merchant account and urban market synthesis, both explicitly localized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nh-getty-storage",
+            "nh-met-tribute"
+          ],
+          "locator": "Florentine palace-storage account and museum distinction between tribute goods and other exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan",
+            "nh-inah-book"
+          ],
+          "locator": "Urban transport and broader central Mexican economy, with geographic limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Museum description of houses, neighborhoods, construction, and archaeological survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "University manuscript record, date, age markers, tasks, and colonial commissioning context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Research summary on household, rank, property, marriage, and social categories, applied cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nh-yale",
+            "nh-inah-book"
+          ],
+          "locator": "Gendered labor and social rank in research synthesis, with local variation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nh-met-drum"
+          ],
+          "locator": "Met object record for manufacture, sound, ceremonial settings, weddings, dances, and later use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "Colonial manuscript scenes used as remembered educational norms with explicit date limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nh-inah-education"
+          ],
+          "locator": "INAH school definitions, social settings, subjects, and institutional differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nh-inah-book",
+            "nh-inah-education"
+          ],
+          "locator": "Education synthesis compared with official school account; universal claim deliberately rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nh-mendoza",
+            "nh-inah-book"
+          ],
+          "locator": "Colonial scenes and education synthesis, with gendered archival imbalance made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nh-met-drum",
+            "nh-getty-calendar"
+          ],
+          "locator": "Performance object and retrospective festival calendar; rules and participation not universalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nh-met-stone"
+          ],
+          "locator": "Museum technical discussion of materials, tools, finishing, pigments, and workshop labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH study of material books, pictorial syntax, signs, numbers, sound values, and reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nh-alphabetic",
+            "nh-getty-home"
+          ],
+          "locator": "UNAM dating of first alphabetic records and Getty dating of the 1577 bilingual codex.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH discussion of pictorial materiality and performance; no false alphabetic transcription substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-met-stone"
+          ],
+          "locator": "Regional museum synthesis and technical sculpture study used to resist one-style generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nh-getty-calendar"
+          ],
+          "locator": "Florentine festival and calendrical account, explicitly postconquest and regionally bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nh-met-templo",
+            "nh-altepetl"
+          ],
+          "locator": "Templo Mayor interpretation and local altepetl patron-deity framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nh-getty-calendar",
+            "nh-getty-home"
+          ],
+          "locator": "Postconquest manuscript calendar and project history used with explicit source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nh-inah-huei"
+          ],
+          "locator": "Official archaeological context, phases, architecture, and studied human remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nh-boturini-writing",
+            "nh-getty-home"
+          ],
+          "locator": "Pictorial reading practices and 1577 collaborative colonial manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nh-badianus",
+            "nh-getty-medicine"
+          ],
+          "locator": "Dated colonial medicinal manuscript and specific Nahua remedy text, with efficacy and back-projection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nh-getty-birth"
+          ],
+          "locator": "Postconquest Nahua childbirth account and its specific literary and medical context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nh-water",
+            "nh-tlatelolco"
+          ],
+          "locator": "INAH waterworks and archaeological urban-infrastructure evidence, localized to the lake cities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nh-sanitation"
+          ],
+          "locator": "Scholarly review of aqueducts, privies, canoe collection, reuse, wastewater, and absent citywide drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-guerrero"
+          ],
+          "locator": "Tenochtitlan sanitation contrasted with Guerrero regional diversity; explicit negative-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nh-cempoala"
+          ],
+          "locator": "INAH guide dates Cortes arrival and first Cempoala relationship to 1519, outside the card interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nh-cempoala",
+            "nh-tlaxcala"
+          ],
+          "locator": "INAH Cempoala chronology and UNAM Tlaxcala political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nh-contact-war"
+          ],
+          "locator": "UNAM analysis of autonomous armies, local strategies, and the changing coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nh-conquest",
+            "nh-map1500"
+          ],
+          "locator": "UNAM siege outcome and exact atlas endpoint compared directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nh-loc-huex",
+            "nh-inali"
+          ],
+          "locator": "Library of Congress object record and official contemporary language-variety catalog.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nh-map1500",
+            "nh-map1530",
+            "nh-contact-war",
+            "nh-inali",
+            "nh-nawat-live"
+          ],
+          "locator": "Exact endpoint control where all six labels disappear and other atlas identities remain. Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance. University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals. Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references. Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nahua-morelos-puebla-tlaxcala-veracruz-hidalgo-san-luis-potosi",
+        "name": "Nahua (Morelos, Puebla, Tlaxcala, Veracruz, Hidalgo, San Luis Potosí)",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "kind": "culture",
+        "dateBasis": "map_coverage",
+        "card": "cards/nahua.json",
+        "summary": "Regionally varied Nahua communities across several modern Mexican states, never one synchronized government.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahua-morelos-puebla-tlaxcala-veracruz-hidalgo-san-luis-potosi",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -99.42759427594275,
+            17.43799027774044,
+            -94.09234092340922,
+            22.439783691518087
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nahuas",
+      "card": "data/cards/nahua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-ixcateopan"
+          ],
+          "locator": "Exact six ids, display labels, approximate 1492 to 1500 intervals, and imported historical-basemaps provenance. Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. National Indigenous catalogue describes broad geographic distribution, historical dispersal, cultural diversity, and contemporary Nahua communities. UNAM study stresses that political evidence is regionally uneven and reconstructs multiple central Mexican organizations rather than one Nahua state. University of El Salvador archaeological study distinguishes Salvadoran Nawat-speaking Pipil histories, evidence, and debates from central Mexican Nahuatl and Mexica political identity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Sole snapshot containing the six exact target ids; decoded polygons, arcs, overlaps, hashes, and point membership. University research distinguishes Mexican Nahuatl from Central American Nawat and reviews evidence and disagreement about migration chronology.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "University essay defines independent altepetl through water, land, patron deity, ruler, capital, territory, and tributary relationships.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nh-frontier"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "University history explains the shifting three-part alliance tradition and distinct Nahua political centers.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Study identifies Tlaxcala as independent of Mexica rule, politically complex, and home to Nahuatl speakers and other peoples including Otomi.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nh-frontier",
+            "nh-met-chronology"
+          ],
+          "locator": "University account places Ahuizotl-era southern campaigns and trade within contested corridors rather than solid continuous control. Museum chronology covers Mexica expansion, the independent Purépecha frontier, and regional political limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nh-yale",
+            "nh-guerrero"
+          ],
+          "locator": "Research summary covers households, rank, gendered work, property, marriage, childhood, and explicit cultural scope. Museum synthesis emphasizes three millennia of diverse Guerrero societies, technologies, economies, politics, lifeways, arts, and funerary customs.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-map1500"
+          ],
+          "locator": "Scholarly review reports aqueducts, lack of citywide drainage, public and household privies, canoe collection, fertilizer, and dye uses. Exact endpoint control where all six labels disappear and other atlas identities remain.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-summary",
+            "nh-coverage",
+            "nh-missing",
+            "nh-cards-index",
+            "nh-overrides"
+          ],
+          "locator": "Exact live index, imported-summary hash, coverage, missing-card, card-index, and override records checked together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-map1530"
+          ],
+          "locator": "Deterministic inventory of exactly fifty tracked world snapshots; exact occurrence count, interval, and source SHA-256.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Decoded geometry, topology, twenty-one target-pair classifications, and exact-identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nh-map1492"
+          ],
+          "locator": "Fixed named-place and generated interior-witness probes for all seven exact target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nh-map1400",
+            "nh-map1492",
+            "nh-map1500",
+            "nh-mexica-card"
+          ],
+          "locator": "Raw TopoJSON arc audit, neighboring identities, and exact pre-start and end-seam controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nh-inali"
+          ],
+          "locator": "INALI variety and self-designation catalog; no present-day count projected backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nh-index",
+            "nh-map1492",
+            "nh-nawat-history"
+          ],
+          "locator": "Exact label wording and southern footprint compared with University of El Salvador historical and linguistic discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nh-altepetl"
+          ],
+          "locator": "UNAM definition and discussion of political independence, territory, water, rulers, and tribute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "UNAM account of Tlaxcala political divisions, independence, Nahuatl speakers, and Otomi population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-ixcateopan"
+          ],
+          "locator": "INAH museum diversity synthesis and Ixcateopan account of distinct Chontal, Nahua, and Mexica actors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nh-triple"
+          ],
+          "locator": "UNAM reconstruction of alliance traditions and shifting three-part political centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nh-inah-templo"
+          ],
+          "locator": "INAH reign dates, construction phases, flood repairs, and sacred precinct evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nh-altepetl",
+            "nh-met-tribute"
+          ],
+          "locator": "UNAM tribute framework and museum analysis of tribute goods and manuscript limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nh-tlaxcala"
+          ],
+          "locator": "Independent Tlaxcala and its complex political composition before the 1519 alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nh-ixcateopan",
+            "nh-met-chronology"
+          ],
+          "locator": "INAH local frontier account and Met regional chronology on the Purépecha limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nh-inah-chinampas",
+            "nh-unesco-xochimilco"
+          ],
+          "locator": "Localized archaeological field-and-canal evidence and living Xochimilco landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Food and household summary bounded to source region and evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nh-getty-market",
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Retrospective merchant account and urban market synthesis, both explicitly localized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nh-getty-storage",
+            "nh-met-tribute"
+          ],
+          "locator": "Florentine palace-storage account and museum distinction between tribute goods and other exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan",
+            "nh-inah-book"
+          ],
+          "locator": "Urban transport and broader central Mexican economy, with geographic limits retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nh-met-tenochtitlan"
+          ],
+          "locator": "Museum description of houses, neighborhoods, construction, and archaeological survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "University manuscript record, date, age markers, tasks, and colonial commissioning context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nh-yale"
+          ],
+          "locator": "Research summary on household, rank, property, marriage, and social categories, applied cautiously.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nh-yale",
+            "nh-inah-book"
+          ],
+          "locator": "Gendered labor and social rank in research synthesis, with local variation retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nh-met-drum"
+          ],
+          "locator": "Met object record for manufacture, sound, ceremonial settings, weddings, dances, and later use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nh-mendoza"
+          ],
+          "locator": "Colonial manuscript scenes used as remembered educational norms with explicit date limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nh-inah-education"
+          ],
+          "locator": "INAH school definitions, social settings, subjects, and institutional differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nh-inah-book",
+            "nh-inah-education"
+          ],
+          "locator": "Education synthesis compared with official school account; universal claim deliberately rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nh-mendoza",
+            "nh-inah-book"
+          ],
+          "locator": "Colonial scenes and education synthesis, with gendered archival imbalance made explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nh-met-drum",
+            "nh-getty-calendar"
+          ],
+          "locator": "Performance object and retrospective festival calendar; rules and participation not universalized.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nh-met-stone"
+          ],
+          "locator": "Museum technical discussion of materials, tools, finishing, pigments, and workshop labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH study of material books, pictorial syntax, signs, numbers, sound values, and reading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nh-alphabetic",
+            "nh-getty-home"
+          ],
+          "locator": "UNAM dating of first alphabetic records and Getty dating of the 1577 bilingual codex.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nh-boturini-writing"
+          ],
+          "locator": "INAH discussion of pictorial materiality and performance; no false alphabetic transcription substituted.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nh-guerrero",
+            "nh-met-stone"
+          ],
+          "locator": "Regional museum synthesis and technical sculpture study used to resist one-style generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nh-getty-calendar"
+          ],
+          "locator": "Florentine festival and calendrical account, explicitly postconquest and regionally bounded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nh-met-templo",
+            "nh-altepetl"
+          ],
+          "locator": "Templo Mayor interpretation and local altepetl patron-deity framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nh-getty-calendar",
+            "nh-getty-home"
+          ],
+          "locator": "Postconquest manuscript calendar and project history used with explicit source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nh-inah-huei"
+          ],
+          "locator": "Official archaeological context, phases, architecture, and studied human remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nh-boturini-writing",
+            "nh-getty-home"
+          ],
+          "locator": "Pictorial reading practices and 1577 collaborative colonial manuscript context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nh-badianus",
+            "nh-getty-medicine"
+          ],
+          "locator": "Dated colonial medicinal manuscript and specific Nahua remedy text, with efficacy and back-projection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nh-getty-birth"
+          ],
+          "locator": "Postconquest Nahua childbirth account and its specific literary and medical context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nh-water",
+            "nh-tlatelolco"
+          ],
+          "locator": "INAH waterworks and archaeological urban-infrastructure evidence, localized to the lake cities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nh-sanitation"
+          ],
+          "locator": "Scholarly review of aqueducts, privies, canoe collection, reuse, wastewater, and absent citywide drainage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nh-sanitation",
+            "nh-guerrero"
+          ],
+          "locator": "Tenochtitlan sanitation contrasted with Guerrero regional diversity; explicit negative-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nh-cempoala"
+          ],
+          "locator": "INAH guide dates Cortes arrival and first Cempoala relationship to 1519, outside the card interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nh-cempoala",
+            "nh-tlaxcala"
+          ],
+          "locator": "INAH Cempoala chronology and UNAM Tlaxcala political independence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nh-contact-war"
+          ],
+          "locator": "UNAM analysis of autonomous armies, local strategies, and the changing coalition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nh-conquest",
+            "nh-map1500"
+          ],
+          "locator": "UNAM siege outcome and exact atlas endpoint compared directly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nh-loc-huex",
+            "nh-inali"
+          ],
+          "locator": "Library of Congress object record and official contemporary language-variety catalog.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nh-map1500",
+            "nh-map1530",
+            "nh-contact-war",
+            "nh-inali",
+            "nh-nawat-live"
+          ],
+          "locator": "Exact endpoint control where all six labels disappear and other atlas identities remain. Post-contact control demonstrating later New Spain repaint rather than Nahua disappearance. University history treats 1519 to 1521 as a shifting multiethnic Mesoamerican conflict in which autonomous forces pursued local goals. Official catalog lists distinct Nahuatl varieties, community self-designations, and wide modern geographic references. Official account documents Nawat as a living language in western El Salvador and describes current intergenerational revitalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nahuas",
+        "name": "Nahuas",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "kind": "culture",
+        "dateBasis": "map_coverage",
+        "card": "cards/nahua.json",
+        "summary": "A western Nahua atlas footprint presented as cultural geography, not a single state or empire.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nahuas",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -104.4820448204482,
+            19.27944655942973,
+            -104.04284042840428,
+            19.62644770560391
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
