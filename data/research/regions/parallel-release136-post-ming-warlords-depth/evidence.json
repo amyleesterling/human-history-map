@@ -1,0 +1,922 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release136-post-ming-warlords research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "pm-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, imported label, approximate 1650 to 1715 lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "pm-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Two observed intervals, state classification and initially missing card, summary, review and identity audit."
+    },
+    {
+      "id": "pm-map1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Decoded Ming predecessor display, point owners and target absence before the indexed interval."
+    },
+    {
+      "id": "pm-map1650",
+      "title": "Human History Map 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Decoded exact target multipolygon, bounds, coordinate count, hash, point tests and neighboring Qing layer."
+    },
+    {
+      "id": "pm-map1700",
+      "title": "Human History Map 1700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Decoded unchanged target geometry decades after the historical Southern Ming and Three Feudatories endings."
+    },
+    {
+      "id": "pm-map1715",
+      "title": "Human History Map 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Decoded target disappearance and transfer of its exact footprint into the Qing display polygon."
+    },
+    {
+      "id": "pm-transition-historiography",
+      "title": "The transnational historiography of a dynastic transition, Modern Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/transnational-historiography-of-a-dynastic-transition-writing-the-mingqing-transition-in-seventeenthcentury-china-korea-and-japan/9D660C38138C725154EA64427E018413",
+      "note": "Peer-reviewed framing of 1618 to 1683 as a plural struggle among Ming, Qing and other claimants rather than one handover."
+    },
+    {
+      "id": "pm-southern-ming",
+      "title": "Lynn A. Struve, The Southern Ming, 1644-1662, Cambridge History of China",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-china/southern-ming-16441662/97FA570559404A627906FBF78D0C3A09",
+      "note": "Authoritative political and social history of the Southern Ming courts, commanders, refugees, unrest and final defeat."
+    },
+    {
+      "id": "pm-faure",
+      "title": "David Faure, The End of Empire, Emperor and Ancestor",
+      "url": "https://academic.oup.com/stanford-scholarship-online/book/20640/chapter-abstract/179948693",
+      "note": "Scholarly account of competing 1646 Guangdong courts, Zhaoqing, Guangzhou and Pearl River resistance."
+    },
+    {
+      "id": "pm-iu-guide",
+      "title": "Lynn A. Struve, The Ming-Qing Conflict: A Historiography and Source Guide",
+      "url": "https://scholarworks.iu.edu/dspace/bitstreams/55d2a287-2245-478e-ab24-b988971a082d/download",
+      "note": "Indiana University source guide assessing records for Sun Kewang, Anlong, Li Dingguo and the move to Kunming."
+    },
+    {
+      "id": "pm-vienna-letters",
+      "title": "Epistolary Activities in the Early Southern Ming Period, Journal of the European Association for Chinese Studies",
+      "url": "https://journals.univie.ac.at/index.php/jeacs/article/download/8623/9331/28529",
+      "note": "Peer-reviewed study of wartime letters, disrupted transmission and Sun Kewang control of the Yongli court at Anlong."
+    },
+    {
+      "id": "pm-oxford-military",
+      "title": "The Qing Empire and Its Military, Oxford Research Encyclopedia of Military History",
+      "url": "https://academic.oup.com/edited-volume/63143/chapter/568216247",
+      "note": "Scholarly synthesis of Qing conquest armies, autonomous feudatories, the 1673 revolt and its defeat in 1681."
+    },
+    {
+      "id": "pm-kangxi",
+      "title": "Jonathan D. Spence, The Kang-hsi Reign, Cambridge History of China",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-china/kanghsi-reign/3E88B3AB1A05C3CF0AAF1C826E3B91C4",
+      "note": "Authoritative account of Kangxi rule and consolidation, with a dedicated map of suppressing the Three Feudatories."
+    },
+    {
+      "id": "pm-qing-institutions",
+      "title": "Qing Military Institutions and Their Effects on Government, Economy, and Society",
+      "url": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/qing-military-institutions-and-their-effects-on-government-economy-and-society-16401800/E1FDAA965C5B67C12274B2B3408AE206",
+      "note": "Peer-reviewed analysis of campaign finance, Banner and Green Standard forces, supply burdens and post-1681 security."
+    },
+    {
+      "id": "pm-yellow-tiger",
+      "title": "Kenneth M. Swope, On the Trail of the Yellow Tiger, University of Nebraska Press",
+      "url": "https://www.nebraskapress.unl.edu/nebraska/9781496206268/on-the-trail-of-the-yellow-tiger/",
+      "note": "Academic monograph on war, trauma, rival armies, social dislocation and reconstruction in southwest China during the Ming-Qing transition."
+    },
+    {
+      "id": "pm-zheng",
+      "title": "The Shogun’s Chinese Partners, Journal of Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/shoguns-chinese-partners-the-alliance-between-tokugawa-japan-and-the-zheng-family-in-seventeenthcentury-maritime-east-asia/87BD36F06E071BB77C8B6CDD4EFFEC69",
+      "note": "Peer-reviewed study distinguishing the maritime Zheng organization and its Japanese relations from inland southwest regimes."
+    },
+    {
+      "id": "pm-zheng-book",
+      "title": "Xing Hang, Conflict and Commerce in Maritime East Asia, Cambridge University Press excerpt",
+      "url": "https://assets.cambridge.org/97811071/21843/excerpt/9781107121843_excerpt.pdf",
+      "note": "Cambridge book introduction tracing the Zheng organization, its Three Feudatories alliance, 1681 reversal and 1683 surrender."
+    },
+    {
+      "id": "pm-bm-yongli",
+      "title": "Yongli tongbao coin, British Museum 1886,1006.780",
+      "url": "https://www.britishmuseum.org/collection/object/C_1886-1006-780",
+      "note": "Museum record for a four-character Yongli copper-alloy cash coin issued by Zhu Youlang and dated 1646 to 1659."
+    },
+    {
+      "id": "pm-bm-zheng",
+      "title": "Zheng Chenggong Yongli tongbao coin, British Museum 1883,0802.1480",
+      "url": "https://www.britishmuseum.org/collection/object/C_1883-0802-1480",
+      "note": "Museum record for a Yongli-inscribed cash coin minted in Japan and issued by Zheng Chenggong from 1651 to 1670."
+    },
+    {
+      "id": "pm-met-dissent",
+      "title": "The Art of Dissent in 17th-Century China, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2011/the-art-of-dissent",
+      "note": "Museum synthesis of Ming loyalist painting, calligraphy, trauma, refusal of Qing service and new individual styles."
+    },
+    {
+      "id": "pm-jesuit",
+      "title": "A Tale of Dynastic Change in China, Archivum Historicum Societatis Iesu",
+      "url": "https://arsi.jesuits.global/wp-content/uploads/2022/05/AHSI-2019.I_2-Yuval-Givon.pdf",
+      "note": "Peer-reviewed correction of Jesuit accounts about baptized members of the Yongli household and their European representation."
+    },
+    {
+      "id": "pm-decentering",
+      "title": "De-centering Chinese History, Journal of Chinese History",
+      "url": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/decentering-chinese-history/469B3E1C6844B38C3BA425CACCC7BAF1",
+      "note": "Peer-reviewed account of tusi reciprocity and limited Han cultural reach in seventeenth-century Yunnan and Guizhou."
+    },
+    {
+      "id": "pm-lady-qu",
+      "title": "Lady Qu’s Inscriptions: Literacy and Sovereignty in a Native Domain, Journal of Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/lady-qus-inscriptions-literacy-and-sovereignty-in-a-native-domain-southwest-china/62184B58597E84773B85C33D0CBFAC32",
+      "note": "Peer-reviewed study of Chinese and Nasu inscriptions, Yi sovereignty, female rule and strategic multilingual self-presentation."
+    },
+    {
+      "id": "pm-cant-conquest",
+      "title": "The Cant of Conquest: Tusi Offices and China’s Southwest Frontier",
+      "url": "https://academic.oup.com/california-scholarship-online/book/14992/chapter-abstract/169370137",
+      "note": "Scholarly analysis of sixteenth- and seventeenth-century Guizhou texts and the shift between indirect and direct rule."
+    },
+    {
+      "id": "pm-labor",
+      "title": "Tributary Labour Relations in China During the Ming-Qing Transition",
+      "url": "https://www.cambridge.org/core/journals/international-review-of-social-history/article/tributary-labour-relations-in-china-during-the-mingqing-transition-seventeenth-to-eighteenth-centuries/7AC034138FC2F5591D10313C256F2E53",
+      "note": "Peer-reviewed study of bond service, conquest violence, work relations and elite-focused accommodation during the transition."
+    },
+    {
+      "id": "pm-family",
+      "title": "Women, Families, and Gender Relations, Cambridge History of China",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-china/women-families-and-gender-relations/373E1DAA9054CB8C1702A6BB746E57D2",
+      "note": "Scholarly synthesis of seventeenth-century commoner households, gendered labor, lineages, mobility and women’s medicine."
+    },
+    {
+      "id": "pm-diasporas",
+      "title": "Early Modern Patterns, 1500-1740, Chinese Diasporas",
+      "url": "https://www.cambridge.org/core/books/chinese-diasporas/early-modern-patterns-15001740/208DFE0E936E027668CF42DC99CA20E1",
+      "note": "Scholarly account of split families, male migration, female domestic labor, lineage strategies and frontier intermarriage."
+    },
+    {
+      "id": "pm-work",
+      "title": "Work Ethics and Work Valuations in Ming China, International Review of Social History",
+      "url": "https://www.cambridge.org/core/journals/international-review-of-social-history/article/work-ethics-and-work-valuations-in-a-period-of-commercialization-ming-china-15001644/4FA7B22851A0B0D2E37700E494A6570B",
+      "note": "Peer-reviewed evidence on rural subsistence, market towns, agricultural tasks, textile work and gendered labor."
+    },
+    {
+      "id": "pm-food",
+      "title": "Ming model feast dishes, British Museum 1927,1214.9",
+      "url": "https://www.britishmuseum.org/collection/object/A_1927-1214-9",
+      "note": "Museum discussion of rice in southern China, varied foods, feasting and the limits of elite burial models."
+    },
+    {
+      "id": "pm-climate",
+      "title": "Nine Sloughs: Climate History of the Yuan and Ming Dynasties",
+      "url": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/nine-sloughs-profiling-the-climate-history-of-the-yuan-and-ming-dynasties-12601644/DA1645CAA478E868C91AB3BBEB8BC58F",
+      "note": "Peer-reviewed reconstruction of late Ming weather, harvest shocks, famine and extreme grain-price evidence."
+    },
+    {
+      "id": "pm-porcelain",
+      "title": "Social and economic factors in Jingdezhen porcelain, 1620-1683",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/social-and-economic-factors-in-the-chinese-porcelain-industry-in-jingdezhen-during-the-late-ming-and-early-qing-period-ca-16201683/25D04FB482A6F9C6F033EA62B50E0430",
+      "note": "Peer-reviewed study of porcelain production through dynastic breakdown, rebellion, markets and changing patronage."
+    },
+    {
+      "id": "pm-print",
+      "title": "Printing and Book Culture in Late Imperial China",
+      "url": "https://academic.oup.com/california-scholarship-online/book/35512",
+      "note": "Scholarly collection on urban and rural publishers, expanding audiences, niche markets, non-Han texts and genealogy printing."
+    },
+    {
+      "id": "pm-education",
+      "title": "Education in Premodern China and Japan, Oxford Handbook of the History of Education",
+      "url": "https://academic.oup.com/edited-volume/34437/chapter-abstract/292230178",
+      "note": "Scholarly overview of curricula, schools, examinations, teachers, literacy and unequal educational access by gender."
+    },
+    {
+      "id": "pm-schools",
+      "title": "Community Schools and the State in Ming China, American Historical Review",
+      "url": "https://academic.oup.com/ahr/article-abstract/112/2/477/41216",
+      "note": "Academic review explaining community schools, basic literacy, Confucian ethics, local patrons and the gap between mandate and access."
+    },
+    {
+      "id": "pm-met-children",
+      "title": "Children playing in the palace garden, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/45656",
+      "note": "Museum record for an elite Ming image of twenty-two boys, hobbyhorses, games and a masonry slide."
+    },
+    {
+      "id": "pm-met-clothing",
+      "title": "Birthday Portraits of an Official and His Wife, Metropolitan Museum Journal",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Ngan_Metropolitan_Museum_Journal_v_53_2018.pdf",
+      "note": "Museum research on late Ming household portraiture, rank badges, wedding dress and women’s use of status-marked clothing."
+    },
+    {
+      "id": "pm-queue",
+      "title": "Freeing Chinese Men on the María Luz, Journal of Global History",
+      "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/freeing-chinese-men-on-the-maria-luz-gender-and-the-latin-american-coolie-trade/46F099E07D2109185AF6F7A3070FFC2D",
+      "note": "Peer-reviewed discussion of the Qing queue as compulsory male subjecthood and a repeatedly contested political sign."
+    },
+    {
+      "id": "pm-wellcome-materia",
+      "title": "Chinese Materia medica, seventeenth century, Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/xubfvsuu",
+      "note": "Collection record for the 1638 illustrated edition cataloguing 452 medicinal substances, features, seasons and recipes."
+    },
+    {
+      "id": "pm-wellcome-acupuncture",
+      "title": "Seventeenth-century Chinese acupuncture chart, Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/mg48ykd6",
+      "note": "Collection record for a Ming Tianqi-period woodblock diagram of acu-moxa points and named channels."
+    },
+    {
+      "id": "pm-epidemic",
+      "title": "Response to Epidemic Disease in Ancient China and its Characteristics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9009840/",
+      "note": "Peer-reviewed review of prescriptions, drug shops, isolation, corpse burial, ritual, variolation and late Ming epidemic theory."
+    },
+    {
+      "id": "pm-nightsoil",
+      "title": "Nightsoil and the Great Divergence, Journal of Global History",
+      "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/abs/nightsoil-and-the-great-divergence-human-waste-the-urban-economy-and-economic-productivity-15001900/7BAF3FDD51DC9D5470727BEA804F3268",
+      "note": "Peer-reviewed global history of urban waste collection, fertilizer markets and sanitation from 1500 to 1900."
+    },
+    {
+      "id": "pm-yunnan-infrastructure",
+      "title": "Writing Yunnan into China, International Journal of Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/international-journal-of-asian-studies/article/writing-yunnan-into-china-a-case-study-on-li-yuanyang-14971580-a-yunnanese-scholar/EF217B10DA6E604C6DDB3A9297FA1370",
+      "note": "Peer-reviewed evidence for Yunnan granaries, irrigation, walls, bridges and the political language attached to public works."
+    },
+    {
+      "id": "pm-huangguoshu",
+      "title": "Huangguoshu Scenic Area and Tunpu settlements, UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/6380",
+      "note": "UNESCO description of Guizhou Ming-Qing courtyard houses, stone construction, military-settler villages and irrigation works."
+    },
+    {
+      "id": "pm-lingqu",
+      "title": "Lingqu Canal, UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/5814",
+      "note": "UNESCO technical description of the enduring canal, locks, weirs, transport, irrigation and Pearl-Yangtze watershed connection."
+    }
+  ],
+  "entities": [
+    {
+      "id": "post-ming-warlords",
+      "card": "data/cards/post-ming-warlords.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pm-transition-historiography",
+            "pm-map1650",
+            "pm-map1700"
+          ],
+          "locator": "Peer-reviewed framing of 1618 to 1683 as a plural struggle among Ming, Qing and other claimants rather than one handover. Decoded exact target multipolygon, bounds, coordinate count, hash, point tests and neighboring Qing layer. Decoded unchanged target geometry decades after the historical Southern Ming and Three Feudatories endings.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pm-southern-ming"
+          ],
+          "locator": "Authoritative political and social history of the Southern Ming courts, commanders, refugees, unrest and final defeat.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1652
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pm-iu-guide"
+          ],
+          "locator": "Indiana University source guide assessing records for Sun Kewang, Anlong, Li Dingguo and the move to Kunming.",
+          "dateScope": {
+            "from": 1652,
+            "to": 1656
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pm-vienna-letters"
+          ],
+          "locator": "Peer-reviewed study of wartime letters, disrupted transmission and Sun Kewang control of the Yongli court at Anlong.",
+          "dateScope": {
+            "from": 1656,
+            "to": 1659
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pm-southern-ming"
+          ],
+          "locator": "Authoritative political and social history of the Southern Ming courts, commanders, refugees, unrest and final defeat.",
+          "dateScope": {
+            "from": 1659,
+            "to": 1662
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pm-oxford-military"
+          ],
+          "locator": "Scholarly synthesis of Qing conquest armies, autonomous feudatories, the 1673 revolt and its defeat in 1681.",
+          "dateScope": {
+            "from": 1662,
+            "to": 1673
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pm-kangxi"
+          ],
+          "locator": "Authoritative account of Kangxi rule and consolidation, with a dedicated map of suppressing the Three Feudatories.",
+          "dateScope": {
+            "from": 1673,
+            "to": 1678
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pm-qing-institutions"
+          ],
+          "locator": "Peer-reviewed analysis of campaign finance, Banner and Green Standard forces, supply burdens and post-1681 security.",
+          "dateScope": {
+            "from": 1678,
+            "to": 1681
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pm-map1700",
+            "pm-map1715"
+          ],
+          "locator": "Decoded unchanged target geometry decades after the historical Southern Ming and Three Feudatories endings. Decoded target disappearance and transfer of its exact footprint into the Qing display polygon.",
+          "dateScope": {
+            "from": 1681,
+            "to": 1715
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pm-index",
+            "pm-coverage"
+          ],
+          "locator": "Exact index and initial coverage entries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pm-map1650"
+          ],
+          "locator": "Decoded target topology, bounds, coordinate count and hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pm-map1650"
+          ],
+          "locator": "Positive and negative point-in-polygon tests for the exact geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pm-map1650",
+            "pm-map1700"
+          ],
+          "locator": "Exact cross-snapshot geometry equality and historical mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pm-map1600",
+            "pm-map1715",
+            "pm-yellow-tiger",
+            "pm-zheng-book"
+          ],
+          "locator": "Cross-snapshot owners and separate historical ending dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pm-southern-ming"
+          ],
+          "locator": "Multiple courts, Yongli position and commander power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pm-oxford-military"
+          ],
+          "locator": "Feudatory origins, provinces, Qing service and later revolt.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pm-zheng",
+            "pm-bm-zheng",
+            "pm-map1650"
+          ],
+          "locator": "Separate Zheng organization, coin evidence and negative geometry tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pm-yellow-tiger"
+          ],
+          "locator": "Differences among commanders rather than a flat label.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pm-faure"
+          ],
+          "locator": "Competing Guangdong courts and rapid defeat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pm-southern-ming"
+          ],
+          "locator": "Former rebel forces and Yongli military alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pm-iu-guide"
+          ],
+          "locator": "Anlong court control and source-guide assessment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pm-iu-guide"
+          ],
+          "locator": "Li Dingguo counteroffensive and limits of battlefield success.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pm-vienna-letters"
+          ],
+          "locator": "Wartime epistolary process and transmission limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pm-jesuit"
+          ],
+          "locator": "Yongli household conversions and correction of Jesuit representation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pm-oxford-military"
+          ],
+          "locator": "Wu Sangui service, Yongli capture and autonomous Yunnan base.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pm-qing-institutions"
+          ],
+          "locator": "Feudatory expense, threat and abolition crisis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pm-kangxi"
+          ],
+          "locator": "Rebellion coalition and Zhou proclamation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pm-kangxi"
+          ],
+          "locator": "Changing feudatory allegiances and civilian-facing requisition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pm-oxford-military",
+            "pm-decentering"
+          ],
+          "locator": "Revolt ending, political consolidation and social limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pm-qing-institutions"
+          ],
+          "locator": "Southern campaigning, environment and military logistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pm-qing-institutions"
+          ],
+          "locator": "Banner and Green Standard roles in final operations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pm-labor"
+          ],
+          "locator": "Continuing fiscal needs, coercion and gap between quota and collection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pm-lingqu"
+          ],
+          "locator": "Lingqu technical system, route and long chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pm-yellow-tiger"
+          ],
+          "locator": "Broken communications, refugees, disease and social unrest.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pm-decentering"
+          ],
+          "locator": "Southwest diversity and limits of court categories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pm-decentering"
+          ],
+          "locator": "Tusi reciprocity, education demands and limited cultural reach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pm-lady-qu"
+          ],
+          "locator": "Bilingual inscriptions and strategic sovereignty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pm-cant-conquest"
+          ],
+          "locator": "Guizhou texts, indirect rule and conquest rhetoric.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pm-labor"
+          ],
+          "locator": "Bond service, labor hierarchy and elite-focused accommodation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pm-work"
+          ],
+          "locator": "Rural production, textile labor and regional variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pm-food"
+          ],
+          "locator": "Southern staple, varied foods and elite model-feast caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pm-climate"
+          ],
+          "locator": "Weather, famine prices and access distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pm-porcelain"
+          ],
+          "locator": "Porcelain adaptation and geographic caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pm-print"
+          ],
+          "locator": "Late imperial publishing, audiences and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pm-family"
+          ],
+          "locator": "Commoner households, lineages and mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pm-diasporas"
+          ],
+          "locator": "Split households, female labor and patriarchal limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pm-education"
+          ],
+          "locator": "Curriculum, gendered access and household learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pm-schools"
+          ],
+          "locator": "Community schools, patrons and uneven access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pm-met-children"
+          ],
+          "locator": "Object date, elite setting, games and documentary limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pm-food",
+            "pm-climate"
+          ],
+          "locator": "Food diversity, feasting and wartime scarcity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pm-met-clothing",
+            "pm-queue"
+          ],
+          "locator": "Textile status, women’s rank imagery and compulsory queue.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pm-huangguoshu"
+          ],
+          "locator": "Tunpu house forms, materials, infrastructure and survival caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pm-work",
+            "pm-print"
+          ],
+          "locator": "Market life, social activity and evidence survival limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pm-met-dissent"
+          ],
+          "locator": "Ming loyalist artistic innovation and class-specific archive.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pm-wellcome-materia"
+          ],
+          "locator": "Seventeenth-century materia medica contents and access limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pm-wellcome-acupuncture",
+            "pm-epidemic"
+          ],
+          "locator": "Acu-moxa chart and plural epidemic responses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pm-yunnan-infrastructure"
+          ],
+          "locator": "Yunnan public works, irrigation and safe-water caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pm-nightsoil"
+          ],
+          "locator": "Late imperial waste markets and explicit southwest evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pm-bm-yongli",
+            "pm-map1715"
+          ],
+          "locator": "Exact coin legend, reading order, translation, form caveat and ending distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pm-map1715",
+            "pm-zheng-book"
+          ],
+          "locator": "Decoded target disappearance and transfer of its exact footprint into the Qing display polygon. Cambridge book introduction tracing the Zheng organization, its Three Feudatories alliance, 1681 reversal and 1683 surrender.",
+          "dateScope": {
+            "year": 1715
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "post-ming-warlords",
+        "card": "cards/post-ming-warlords.json",
+        "dateBasis": "map_coverage",
+        "summary": "An atlas umbrella for successive Southern Ming and rebel-held southwest zones, preserved from 1650 to 1715 despite historical endings in 1662 and 1681.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "post-ming-warlords",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            97.5231752317523,
+            18.09657159578434,
+            116.08496084960848,
+            28.8389655721342
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "post-ming-warlords",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            97.5231752317523,
+            18.09657159578434,
+            116.08496084960848,
+            28.8389655721342
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id post-ming-warlords is preserved, but the card treats it as an atlas umbrella rather than one historical state name.",
+    "The exact approximate interval is 1650 to 1715 in two observed border files. It spans successive and opposed regimes rather than a continuous government.",
+    "No appliesTo alias is added. Ming Dynasty, Qing Dynasty, Zheng maritime history, Taiwan and neighboring records remain distinct.",
+    "The target geometry is an unchanged 166-position MultiPolygon in 1650 and 1700 with SHA-256 b32847b1355f4dc47a2d9ed2b13eb16ecce5ee3ce139ae2cf76086498e2085d1.",
+    "The 1700 persistence is historically impossible for both the Yongli court and Three Feudatories revolt, so the card exposes rather than naturalizes it.",
+    "The 1715 disappearance is an atlas redraw into Qing geometry, not a historical fall. The override records fell null and no successor or predecessor arrays are inferred.",
+    "The writing sample is the target-period Yongli cash legend 永曆通寶 with pinyin, translation, reading order and non-facsimile caveat.",
+    "Daily-life evidence separates general late imperial comparisons, material objects and nearby surviving infrastructure from secure exact southwest evidence."
+  ]
+}
