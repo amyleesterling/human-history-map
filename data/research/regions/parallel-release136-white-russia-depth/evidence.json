@@ -1,0 +1,942 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release136-white-russia research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "wr-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, imported label, approximate 1920 to 1938 lifetime and historical-basemaps provenance."
+    },
+    {
+      "id": "wr-map1914",
+      "title": "Human History Map 1914 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Decoded Russian Empire ownership at Belarusian and wider comparison points before the target id appears."
+    },
+    {
+      "id": "wr-map1920",
+      "title": "Human History Map 1920 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1920.json",
+      "note": "Decoded the exact Belarus-sized target polygon, coordinate hash, point tests and simultaneous neighboring features."
+    },
+    {
+      "id": "wr-map1930",
+      "title": "Human History Map 1930 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Decoded the severe geometry mismatch in which white-russia covers most of the Soviet Union while excluding western Belarus."
+    },
+    {
+      "id": "wr-map1938",
+      "title": "Human History Map 1938 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "Decoded disappearance of the exact id and replacement by the broad ussr feature, which is a display seam rather than a political ending."
+    },
+    {
+      "id": "wr-map1945",
+      "title": "Human History Map 1945 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Decoded later USSR ownership of Minsk, Brest and Grodno for a cautious map-seam comparison after the target interval."
+    },
+    {
+      "id": "wr-cambridge",
+      "title": "Jakub Zejmis, Belarus in the 1920s: Ambiguities of National Formation",
+      "url": "https://www.cambridge.org/core/journals/nationalities-papers/article/abs/belarus-in-the-1920s-ambiguities-of-national-formation/E649BAFA70B0BC667857D9AFC50AFD4D",
+      "note": "Peer-reviewed account of the restored BSSR, institutions, Belarusian cultural development, Sovietization and the 1925 exile-government accommodation."
+    },
+    {
+      "id": "wr-oxford-bssr",
+      "title": "Oxford Academic, Soviet Belarus: the BSSR",
+      "url": "https://academic.oup.com/book/62878/chapter-abstract/565352791",
+      "note": "Current scholarly synthesis of Soviet Belarus formation, 1920s cultural revival, integration into the USSR and Stalinist purges."
+    },
+    {
+      "id": "wr-loc-country",
+      "title": "Library of Congress, Belarus and Moldova: Country Studies",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/be/belarusmoldovaco00fedo_0/belarusmoldovaco00fedo_0.pdf",
+      "note": "Federal Research Division synthesis checked for war, partition, the BSSR, Belarusization, Stalinist policies and western Belarus under Poland."
+    },
+    {
+      "id": "wr-riga",
+      "title": "League of Nations Treaty Series, Treaty of Peace signed at Riga, 18 March 1921",
+      "url": "https://treaties.un.org/doc/Publication/UNTS/LON/Volume%206/v6.pdf",
+      "note": "Official published treaty text fixing the Polish-Soviet frontier and extending Russian and Ukrainian undertakings specifically to Belarus."
+    },
+    {
+      "id": "wr-un-belarus",
+      "title": "United Nations, Belarus member state",
+      "url": "https://www.un.org/en/about-us/member-states/belarus",
+      "note": "Official UN record confirms the Byelorussian SSR existed internationally after the atlas 1938 seam and became a founding UN member in 1945."
+    },
+    {
+      "id": "wr-union",
+      "title": "Library of Congress Law Library, Treaty on the Creation of the Soviet Union",
+      "url": "https://blogs.loc.gov/law/2013/01/treaty-on-the-creation-of-the-soviet-union-signed-sealed-and-delivered/",
+      "note": "Legal history of the 30 December 1922 union treaty signed by Russia, Ukraine, Belarus and the Transcaucasian federation."
+    },
+    {
+      "id": "wr-proclamation",
+      "title": "Russian State Archive, 1920 Declaration of Soviet Belarus",
+      "url": "https://pswar.rusarchives.ru/deklaraciya-o-provozglashenii-nezavisimosti-sovetskoy-socialisticheskoy-respubliki-belorussii",
+      "note": "Digitized primary archival record of the 1920 declaration restoring the Soviet Socialist Republic of Belarus."
+    },
+    {
+      "id": "wr-rudling",
+      "title": "Per Anders Rudling, The Rise and Fall of Belarusian Nationalism, 1906 to 1931",
+      "url": "https://www.jstor.org/stable/j.ctt1287p7r",
+      "note": "Scholarly monograph checked for repeated statehood declarations, Belarusization, national institutions and Stalinist suppression."
+    },
+    {
+      "id": "wr-rudling-excerpt",
+      "title": "University of Pittsburgh Press excerpt, The Rise and Fall of Belarusian Nationalism",
+      "url": "https://upittpress.org/wp-content/uploads/2019/07/9780822963080exr.pdf",
+      "note": "Publisher excerpt explains partition, Belarusian national formation and the onset of Stalinist transformation by 1931."
+    },
+    {
+      "id": "wr-constitution",
+      "title": "1927 Constitution of the Belarusian SSR facsimile",
+      "url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BD%D1%81%D1%82%D1%8B%D1%82%D1%83%D1%86%D1%8B%D1%8F_%D0%91%D0%A1%D0%A1%D0%A0_(1927).pdf",
+      "note": "Public-domain scan used for the exact Belarusian title sample, document date, original spelling and material appearance."
+    },
+    {
+      "id": "wr-legal",
+      "title": "National Legal Internet Portal of Belarus, Constitution of 1927",
+      "url": "https://pravo.by/pravovaya-informatsiya/pomniki-gistoryi-prava-belarusi/kanstytutsyynae-prava-belarusi/kanstytutsyi-belarusi/konstitutsiya-1927-goda/",
+      "note": "Official legal-history page paired with the primary scan for constitutional date, polity context and original Belarusian title."
+    },
+    {
+      "id": "wr-polity",
+      "title": "Archontology, Belarus polity style 1920 to 1991",
+      "url": "https://www.archontology.org/nations/belarus/01_polity2.php",
+      "note": "Reference chronology checked for original Belarusian polity spelling, transliteration, four-language provision and word-order changes."
+    },
+    {
+      "id": "wr-library",
+      "title": "Library Assembly of Eurasia, National Library of Belarus",
+      "url": "https://bae.rsl.ru/nlb",
+      "note": "Institutional history records the library founding within Belarusian State University in 1922, initial holdings and early readers."
+    },
+    {
+      "id": "wr-bsu",
+      "title": "Math-Net.Ru, Belarusian State University",
+      "url": "https://www.mathnet.ru/php/organisation.phtml?fletter=u&option_lang=eng&orgid=762",
+      "note": "Academic directory history records the university founding in 1921 and the creation of several specialist institutes in the 1920s and 1930s."
+    },
+    {
+      "id": "wr-polish-school",
+      "title": "Oleh Kazak, Minsk Polish Pedagogical Technical School, 1922 to 1937",
+      "url": "https://visnyk-ist.uzhnu.edu.ua/article/view/202213",
+      "note": "Peer-reviewed study of teacher training for Polish-language schools within Soviet Belarus and its national-cultural policy context."
+    },
+    {
+      "id": "wr-bemporad",
+      "title": "Elissa Bemporad, Becoming Soviet Jews: The Bolshevik Experiment in Minsk",
+      "url": "https://www.jstor.org/stable/j.ctt16gznx1",
+      "note": "Scholarly monograph on Yiddish schooling, work, gender, religion, family continuity, Sovietization and terror in interwar Minsk."
+    },
+    {
+      "id": "wr-yivo-belarus",
+      "title": "YIVO Encyclopedia, Belarus",
+      "url": "https://encyclopedia.yivo.org/article.aspx/Belarus",
+      "note": "Scholarly reference for the republic four official languages and Jewish cultural and institutional life."
+    },
+    {
+      "id": "wr-yivo-minsk",
+      "title": "YIVO Encyclopedia, Minsk",
+      "url": "https://encyclopedia.yivo.org/article.aspx/Minsk",
+      "note": "City evidence for Yiddish schools, kindergarten, theater, publishing, scholarship and a four-language railway-station sign."
+    },
+    {
+      "id": "wr-yivo-schools",
+      "title": "YIVO Encyclopedia, Soviet Yiddish-Language Schools",
+      "url": "https://encyclopedia.yivo.org/article.aspx/Soviet_Yiddish-Language_Schools",
+      "note": "Scholarly chronology of mother-tongue schooling in Belorussia, rising enrollment, secular curriculum and the 1938 liquidation."
+    },
+    {
+      "id": "wr-family",
+      "title": "Aliaksandr Huzhalouski, Destroying Family: Sexual Revolution in 1920s Soviet Belarus",
+      "url": "https://www.belhistory.eu/english_version/belarusian-historical-review-volume-22-fascicles-12-4243-december-2015/aliaksandr-huzalouski-destroying-family-sexual-revolution-in-1920s-soviet-belarus-as-it-mirrored-in-periodicals",
+      "note": "Belarusian Historical Review article on family debate, marriage, sexuality, periodical evidence and homeless children in the 1920s."
+    },
+    {
+      "id": "wr-women-magazine",
+      "title": "University of Warsaw repository, Belarusian Worker and Peasant Woman",
+      "url": "https://open.icm.edu.pl/items/c3cec5b6-5da4-4100-b45b-ea2d60ca74cc",
+      "note": "Academic study of a 1924 to 1939 BSSR magazine and its changing public ideal for women family, economic, social and political roles."
+    },
+    {
+      "id": "wr-ushmm-minsk",
+      "title": "United States Holocaust Memorial Museum, Minsk",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/minsk",
+      "note": "Museum account and Dora Rivkina profile provide a bounded 1933 to 1939 glimpse of one Minsk family, school, dance, swimming and Young Pioneers."
+    },
+    {
+      "id": "wr-ethnomuseum",
+      "title": "Russian Ethnographic Museum, Belarusians in the late nineteenth and early twentieth century",
+      "url": "https://www.sakhalin.ethnomuseum.ru/en/expositions/exhibitions/belarusians/",
+      "note": "Museum object-based description of rural houses, stoves, food preparation, homespun clothing and gendered crafts, used with an early-period continuity warning."
+    },
+    {
+      "id": "wr-housing",
+      "title": "Communes, hostels and barracks: communal living in Soviet cities",
+      "url": "https://www.degruyterbrill.com/document/doi/10.7765/9781847792631.00008/html",
+      "note": "Academic chapter on proposed and experienced forms of Soviet urban communal housing in the 1920s."
+    },
+    {
+      "id": "wr-minsk-housing",
+      "title": "Built Heritage, Minsk wooden suburbs as urban heritage",
+      "url": "https://link.springer.com/article/10.1186/s43238-026-00277-5",
+      "note": "Archive-based urban study of worker suburbs, 1923 housing redistribution, migration and wooden housing, with later plumbing evidence used only as a cautious continuity clue."
+    },
+    {
+      "id": "wr-office-life",
+      "title": "Dzmitry Kryvashei, Daily Routine of a Belarusian Official in the 1920s and 1930s",
+      "url": "https://journals.umcs.pl/f/article/download/11349/8593",
+      "note": "Period-specific research on office hours, Belarusization, wages, ration cards, workplace assistance and organized leisure in the BSSR."
+    },
+    {
+      "id": "wr-hoover-minsk",
+      "title": "Hoover Institution, The Adventures of the ARA in Minsk",
+      "url": "https://www.hoover.org/research/adventures-ara-minsk",
+      "note": "Archival narrative of American Relief Administration work in Belarus from 1920 to 1923 and dependence of hospitals and children homes on relief."
+    },
+    {
+      "id": "wr-hoover-health",
+      "title": "Ann E. Healy, Belarus in Crisis: Medicine and Relief after War",
+      "url": "https://www.hoover.org/sites/default/files/issues/resources/_hoov-20-03-issue.pdf",
+      "note": "Archive-based study of clinics, orphanages, vaccines, disinfecting machines, baths, soap, water purification and medical shortages in early Soviet Belarus."
+    },
+    {
+      "id": "wr-zamoiski-health",
+      "title": "Andrei Zamoiski, Face to the Countryside: Healthcare in Soviet Belarus",
+      "url": "https://gce.unisg.ch/fileadmin/user_upload/HSG_ROOT/Institut_GCE/Euxeinos/34/Zamoiski_69-89.pdf",
+      "note": "Archive-based study of rural doctors, feldshers, maternity care, sports, unsafe water, sanitation campaigns, folk healers and coercion from the 1920s through 1930s."
+    },
+    {
+      "id": "wr-pharmacy",
+      "title": "Formation and development of the State pharmacy service in Minsk, 1918 to 1944",
+      "url": "https://remedium-journal.ru/journal/article/view/1458",
+      "note": "Peer-reviewed pharmacy history with documented 1920 nationalization and staff counts for the Minsk pharmacy administration in 1925 and 1926."
+    },
+    {
+      "id": "wr-collectivization",
+      "title": "Lynne Viola, Peasant Rebels Under Stalin",
+      "url": "https://academic.oup.com/book/47736",
+      "note": "Archive-based scholarly account of forced collectivization and varied peasant resistance across the Soviet Union from 1928 to 1932."
+    },
+    {
+      "id": "wr-polish-peasants",
+      "title": "Andrei Zamoiski, The Polish Peasantry in Soviet Belarus",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/09546545.2022.2171551",
+      "note": "Peer-reviewed BSSR case study of Polish rural communities during the transition from NEP to forced collectivization."
+    },
+    {
+      "id": "wr-loc-internal",
+      "title": "Library of Congress, Internal Workings of the Soviet Union",
+      "url": "https://www.loc.gov/exhibits/archives/intn.html",
+      "note": "Archival exhibit covering industrialization, collectivization, famine, religious persecution, censorship and the Great Terror."
+    },
+    {
+      "id": "wr-kurapaty",
+      "title": "Sciences Po, Kurapaty: NKVD Mass Killings in Soviet Belarus",
+      "url": "https://www.sciencespo.fr/mass-violence-war-massacre-resistance/en/document/kurapaty-1937-1941-nkvd-mass-killings-soviet-belarus.html",
+      "note": "Research encyclopedia entry on Belarusian partition, Stalinist repression and the evidence and estimate disputes surrounding Kurapaty."
+    },
+    {
+      "id": "wr-national-ops",
+      "title": "The Historical Journal, Understanding Stalin Terror against Western Minorities",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/understanding-stalins-terror-against-western-minorities-the-national-operations-of-the-nkvd-in-contemporary-academic-research/C857CFCE5920997FA2BFF04444B18760",
+      "note": "Peer-reviewed review of the 1937 to 1938 NKVD national operations and their impact on Poles, Belarusians, Ukrainians and other targeted people."
+    },
+    {
+      "id": "wr-cinema",
+      "title": "Universal Lithuanian Encyclopedia, Cinema of Belarus",
+      "url": "https://www.vle.lt/straipsnis/baltarusijos-kinas/",
+      "note": "Encyclopedia chronology for Belgoskino, early newsreels, the first feature film and production outside Minsk because local facilities were limited."
+    },
+    {
+      "id": "wr-family-body",
+      "title": "The Family, the Body, and the Self: Jewish life in the Soviet 1920s",
+      "url": "https://uplopen.com/en/books/11647/files/e67bb3fe-e6f5-4b16-a451-5a1a95539347.pdf",
+      "note": "Open scholarly book with travel accounts of Minsk-region family life, food and clothing plus evidence of unequal access for disenfranchised households."
+    },
+    {
+      "id": "wr-ara-photo",
+      "title": "Hoover Institution, A True Picture of Famine and Revival",
+      "url": "https://histories.hoover.org/bread-medicine/floyd-traynham/",
+      "note": "Curated archive explains the scope and limits of ARA photographs documenting famine relief and daily life in 1922 and 1923."
+    }
+  ],
+  "entities": [
+    {
+      "id": "white-russia",
+      "card": "data/cards/white-russia.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "wr-index",
+            "wr-map1920",
+            "wr-map1930",
+            "wr-oxford-bssr"
+          ],
+          "locator": "Exact indexed id, imported label, approximate 1920 to 1938 lifetime and historical-basemaps provenance. Decoded the exact Belarus-sized target polygon, coordinate hash, point tests and simultaneous neighboring features. Decoded the severe geometry mismatch in which white-russia covers most of the Soviet Union while excluding western Belarus. Current scholarly synthesis of Soviet Belarus formation, 1920s cultural revival, integration into the USSR and Stalinist purges.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "wr-proclamation",
+            "wr-map1920",
+            "wr-hoover-minsk"
+          ],
+          "locator": "Digitized primary archival record of the 1920 declaration restoring the Soviet Socialist Republic of Belarus. Decoded the exact Belarus-sized target polygon, coordinate hash, point tests and simultaneous neighboring features. Archival narrative of American Relief Administration work in Belarus from 1920 to 1923 and dependence of hospitals and children homes on relief.",
+          "dateScope": {
+            "from": 1920,
+            "to": 1921
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "wr-riga",
+            "wr-hoover-health"
+          ],
+          "locator": "Official published treaty text fixing the Polish-Soviet frontier and extending Russian and Ukrainian undertakings specifically to Belarus. Archive-based study of clinics, orphanages, vaccines, disinfecting machines, baths, soap, water purification and medical shortages in early Soviet Belarus.",
+          "dateScope": {
+            "from": 1921,
+            "to": 1922
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "wr-union",
+            "wr-library",
+            "wr-bsu"
+          ],
+          "locator": "Legal history of the 30 December 1922 union treaty signed by Russia, Ukraine, Belarus and the Transcaucasian federation. Institutional history records the library founding within Belarusian State University in 1922, initial holdings and early readers. Academic directory history records the university founding in 1921 and the creation of several specialist institutes in the 1920s and 1930s.",
+          "dateScope": {
+            "from": 1922,
+            "to": 1924
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "wr-cambridge"
+          ],
+          "locator": "Peer-reviewed account of the restored BSSR, institutions, Belarusian cultural development, Sovietization and the 1925 exile-government accommodation.",
+          "dateScope": {
+            "from": 1924,
+            "to": 1926
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "wr-constitution",
+            "wr-polish-school",
+            "wr-cinema"
+          ],
+          "locator": "Public-domain scan used for the exact Belarusian title sample, document date, original spelling and material appearance. Peer-reviewed study of teacher training for Polish-language schools within Soviet Belarus and its national-cultural policy context. Encyclopedia chronology for Belgoskino, early newsreels, the first feature film and production outside Minsk because local facilities were limited.",
+          "dateScope": {
+            "from": 1926,
+            "to": 1928
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "wr-collectivization",
+            "wr-polish-peasants"
+          ],
+          "locator": "Archive-based scholarly account of forced collectivization and varied peasant resistance across the Soviet Union from 1928 to 1932. Peer-reviewed BSSR case study of Polish rural communities during the transition from NEP to forced collectivization.",
+          "dateScope": {
+            "from": 1928,
+            "to": 1930
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "wr-rudling-excerpt",
+            "wr-loc-internal"
+          ],
+          "locator": "Publisher excerpt explains partition, Belarusian national formation and the onset of Stalinist transformation by 1931. Archival exhibit covering industrialization, collectivization, famine, religious persecution, censorship and the Great Terror.",
+          "dateScope": {
+            "from": 1930,
+            "to": 1933
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "wr-ushmm-minsk",
+            "wr-national-ops",
+            "wr-kurapaty"
+          ],
+          "locator": "Museum account and Dora Rivkina profile provide a bounded 1933 to 1939 glimpse of one Minsk family, school, dance, swimming and Young Pioneers. Peer-reviewed review of the 1937 to 1938 NKVD national operations and their impact on Poles, Belarusians, Ukrainians and other targeted people. Research encyclopedia entry on Belarusian partition, Stalinist repression and the evidence and estimate disputes surrounding Kurapaty.",
+          "dateScope": {
+            "from": 1933,
+            "to": 1938
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "wr-index",
+            "wr-map1920"
+          ],
+          "locator": "Index label and exact 1920 point tests establish Belarus, not White armies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "wr-map1914",
+            "wr-map1920",
+            "wr-riga"
+          ],
+          "locator": "1914 and 1920 point owners plus Treaty of Riga partition scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "wr-map1930"
+          ],
+          "locator": "1930 topology type, bbox, parts and point containment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "wr-map1938",
+            "wr-un-belarus"
+          ],
+          "locator": "1938 exact-id absence, USSR point owners and post-seam BSSR continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "wr-map1945",
+            "wr-map1920"
+          ],
+          "locator": "1945 comparison and explicit prohibition on back-projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "wr-cambridge",
+            "wr-rudling"
+          ],
+          "locator": "Restoration date, preceding BNR and multiple statehood projects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "wr-riga"
+          ],
+          "locator": "Official treaty date, parties, frontier and Belarus clause.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "wr-union"
+          ],
+          "locator": "Union treaty date, founding republics and federal-power caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "wr-loc-country"
+          ],
+          "locator": "1924 to 1926 eastern district transfers and boundary change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "wr-cambridge"
+          ],
+          "locator": "1925 BNR exile-government split and institutional return.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "wr-rudling",
+            "wr-rudling-excerpt"
+          ],
+          "locator": "Belarusization as affirmative action and Soviet integration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "wr-yivo-belarus",
+            "wr-legal"
+          ],
+          "locator": "Four-language constitutional provision and lived-practice caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "wr-yivo-minsk",
+            "wr-yivo-schools"
+          ],
+          "locator": "Interwar Minsk Yiddish institutions and 1938 liquidation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "wr-polish-school"
+          ],
+          "locator": "Polish teacher-training institution dates and national-policy setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "wr-bsu",
+            "wr-library"
+          ],
+          "locator": "University and library founding dates, opening collection and readership.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "wr-bsu"
+          ],
+          "locator": "University growth and specialist-institute formation with political limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "wr-cinema"
+          ],
+          "locator": "Belgoskino chronology, genres, first feature and off-site production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "wr-cambridge",
+            "wr-rudling"
+          ],
+          "locator": "Nation-building institutions and later Stalinist suppression.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "wr-loc-internal"
+          ],
+          "locator": "Central industrialization priorities and consumer-cost caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "wr-collectivization",
+            "wr-polish-peasants"
+          ],
+          "locator": "Archival collectivization and BSSR minority-peasant case study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "wr-hoover-minsk",
+            "wr-family"
+          ],
+          "locator": "Children homes, homelessness and material shortages.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "wr-family"
+          ],
+          "locator": "Family and gender debate in BSSR periodicals with practice caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "wr-bemporad"
+          ],
+          "locator": "Gender, acculturation and family continuity in Jewish Minsk.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "wr-women-magazine"
+          ],
+          "locator": "Women magazine dates, prescribed roles and source-type limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "wr-ushmm-minsk"
+          ],
+          "locator": "Dora Rivkina 1933 to 1939 profile and individual-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "wr-ethnomuseum"
+          ],
+          "locator": "Museum house, stove functions and temporal caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "wr-ethnomuseum",
+            "wr-family-body"
+          ],
+          "locator": "Object-based food traditions plus interwar household scarcity variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "wr-ethnomuseum"
+          ],
+          "locator": "Homespun garments, gendered crafts and museum-survival bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "wr-minsk-housing",
+            "wr-housing"
+          ],
+          "locator": "Minsk worker districts, 1923 redistribution and wider communal forms.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "wr-office-life"
+          ],
+          "locator": "BSSR office schedule, compensation, ration cards and workplace welfare.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "wr-yivo-minsk"
+          ],
+          "locator": "Four-language Minsk railway-station sign and interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "wr-bemporad",
+            "wr-loc-internal"
+          ],
+          "locator": "Religious repression and household continuity without belief inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "wr-library",
+            "wr-cinema"
+          ],
+          "locator": "Cultural institutions and film as entertainment plus state messaging.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "wr-ushmm-minsk"
+          ],
+          "locator": "Dora school, performance, swimming, dance and Pioneer activities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "wr-ara-photo"
+          ],
+          "locator": "ARA photo archive scope, documentary value and selection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "wr-zamoiski-health"
+          ],
+          "locator": "Postwar medical collapse, rural insecurity and mixed providers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "wr-hoover-health"
+          ],
+          "locator": "Minsk clinics, hospital, vaccine doses and relief supplies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "wr-zamoiski-health"
+          ],
+          "locator": "Mozyr malaria brigade and trachoma clean-water campaign.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "wr-pharmacy"
+          ],
+          "locator": "Minsk pharmacy nationalization and 1925 to 1926 staff counts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "wr-ethnomuseum"
+          ],
+          "locator": "Folk remedies, combined care and museum-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "wr-zamoiski-health"
+          ],
+          "locator": "Township pipes, wells, unsafe rivers and household labor implication.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "wr-hoover-health"
+          ],
+          "locator": "Kozirova baths and high-capacity disinfecting equipment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "wr-hoover-health"
+          ],
+          "locator": "ARA supplies and Minsk water purification with reach caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "wr-zamoiski-health"
+          ],
+          "locator": "Sanitary commissions, inspections, wells, education and fines.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "wr-minsk-housing"
+          ],
+          "locator": "Explicit toilet evidence gap and cautious later-infrastructure clue.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "wr-constitution",
+            "wr-legal",
+            "wr-polity"
+          ],
+          "locator": "Exact period title, transliteration, translation and multilingual caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "wr-rudling",
+            "wr-rudling-excerpt"
+          ],
+          "locator": "Constitutional claims versus Stalinist suppression of national culture.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "wr-collectivization",
+            "wr-loc-internal"
+          ],
+          "locator": "Coercion, famine connection and regional non-equivalence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "wr-national-ops",
+            "wr-kurapaty"
+          ],
+          "locator": "National operations, Kurapaty evidence, estimate and archive caveats.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "wr-map1938",
+            "wr-loc-country"
+          ],
+          "locator": "Atlas endpoint versus BSSR and Belarus continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "wr-map1938",
+            "wr-loc-country"
+          ],
+          "locator": "Decoded disappearance of the exact id and replacement by the broad ussr feature, which is a display seam rather than a political ending. Federal Research Division synthesis checked for war, partition, the BSSR, Belarusization, Stalinist policies and western Belarus under Poland.",
+          "dateScope": {
+            "year": 1938
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "white-russia",
+        "card": "cards/white-russia.json",
+        "dateBasis": "map_coverage",
+        "summary": "Soviet Belarus or the Byelorussian SSR in the atlas 1920 to 1938 display window, with a documented 1930 geometry error.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "white-russia",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            27.08127081270814,
+            51.28263886101619,
+            32.70092700927009,
+            56.140998048232
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "white-russia",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            -180,
+            35.25103108026382,
+            180,
+            77.59235058482932
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact id is preserved, but White Russia is identified as an old English exonym for Belarus or Belorussia, not the anti-Bolshevik White movement.",
+    "The 1920 Polygon is Belarus-sized and includes Minsk, Vitebsk, Mogilev, Gomel, Polotsk and Slutsk while excluding Brest and Grodno under the separate Poland feature.",
+    "The 1930 MultiPolygon is a severe source-data mismatch covering most of the USSR, including Moscow, Leningrad, Kyiv, Crimea, Omsk and Irkutsk. It is not treated as Belarusian territory.",
+    "The 1938 replacement by ussr is a display seam. The override records fell null, continuity status and no inferred predecessor or successor links.",
+    "The researched subject is the Soviet Socialist Republic of Belarus and Byelorussian SSR during 1920 to 1938, not all Belarusian people, western Belarus under Poland or later independent Belarus.",
+    "The writing sample is the exact Belarusian title of the 1927 constitution in period Cyrillic spelling, with transliteration, translation and a multilingual-population caveat.",
+    "Daily life distinguishes town and countryside, family and institution, different language and faith communities, relief-era evidence and the changing 1920s to 1930s political climate."
+  ]
+}

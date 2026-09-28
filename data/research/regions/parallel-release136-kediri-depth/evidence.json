@@ -1,0 +1,864 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release136-kediri research, integrated by Codex",
+  "checkedAt": "2026-09-27",
+  "sources": [
+    {
+      "id": "kd-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, imported name, approximate 1279 to 1492 interval and historical-basemaps provenance."
+    },
+    {
+      "id": "kd-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported overview that correctly gestures toward historical Kediri but conflicts with the indexed interval and cannot repair the polygon."
+    },
+    {
+      "id": "kd-map1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Decoded preceding east-java feature, exact geometry comparison and point-owner tests during the actual Kediri period."
+    },
+    {
+      "id": "kd-map1279",
+      "title": "Human History Map 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Decoded first exact kediri feature, topology, bounds, coordinate hash, islands and point tests."
+    },
+    {
+      "id": "kd-map1300",
+      "title": "Human History Map 1300 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1300.json",
+      "note": "Decoded second exact interval and verified geometry identity with the 1279 snapshot."
+    },
+    {
+      "id": "kd-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded third exact interval, minute coordinate change, bounds, hash and repeated overextension."
+    },
+    {
+      "id": "kd-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded target disappearance and historically impossible replacement of tested Java points by malaysian-islamic-states."
+    },
+    {
+      "id": "kd-brill-jong",
+      "title": "P. E. de Josselin de Jong, The Character of the Hindu-Javanese State, Bijdragen tot de Taal-, Land- en Volkenkunde",
+      "url": "https://brill.com/view/journals/bki/131/2/article-p277_7.pdf",
+      "note": "Peer-reviewed synthesis of Airlangga division, Kadiri dominance and Ken Angrok victory in 1222, used with its historiographic cautions."
+    },
+    {
+      "id": "kd-brill-bosch",
+      "title": "F. D. K. Bosch, The Old-Javanese Bathing Place Jalatunda, Bijdragen tot de Taal-, Land- en Volkenkunde",
+      "url": "https://brill.com/view/journals/bki/112/1/article-p1_1.pdf",
+      "note": "Peer-reviewed chronology identifying Śrṅga or Kertajaya as the last Kadiri ruler and separating text traditions from securely dated inscriptions."
+    },
+    {
+      "id": "kd-brill-capfigure",
+      "title": "Lydia Kieven, Following the Cap-Figure in Majapahit Temple Reliefs, Brill",
+      "url": "https://brill.com/display/book/9789004258655/9789004258655_webready_content_text.pdf",
+      "note": "Scholarly political outline of Airlangga partition, Panjalu or Kediri, the 1222 transition to Singhasari and later Majapahit contexts."
+    },
+    {
+      "id": "kd-brill-arjuna",
+      "title": "Arjunawiwāha: The Marriage of Arjuna of Mpu Kanwa, Brill introduction",
+      "url": "https://brill.com/display/book/9789004253940/B9789004253940-s002.pdf",
+      "note": "Scholarly introduction to Airlangga, the 1041 Pucangan inscription, 1042 retirement and division into Janggala and Panjalu."
+    },
+    {
+      "id": "kd-panji",
+      "title": "Mengenal Cerita Panji, Direktorat Warisan dan Diplomasi Budaya",
+      "url": "https://kebudayaan.kemdikbud.go.id/ditwdb/mengenal-cerita-panji/",
+      "note": "Official cultural-history discussion of Panjalu centered at Daha, Janggala and the later spread and many versions of Panji stories."
+    },
+    {
+      "id": "kd-besole",
+      "title": "Situs Besole: Sisa-sisa Kerajaan Kadiri, Berkala Arkeologi",
+      "url": "https://berkalaarkeologi.kemdikbud.go.id/index.php/berkalaarkeologi/article/download/378/345",
+      "note": "Official archaeological journal study of Kadiri inscriptions, ruler sequence, Daha and cautiously attributed brick remains at Besole."
+    },
+    {
+      "id": "kd-plumbangan",
+      "title": "Gapura Plumbangan dan Sejarahnya, Balai Pelestarian Kebudayaan Wilayah XI",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpkw11/gapura-plumbangan-dan-sejarahnya/",
+      "note": "Official heritage account of the 1120 Panumbangan inscription and Bameswara sima grant, while distinguishing the surviving gateway."
+    },
+    {
+      "id": "kd-panataran",
+      "title": "Candi Panataran: Candi Kerajaan Masa Majapahit, official archaeology article",
+      "url": "https://download.garuda.kemdikbud.go.id/article.php?article=914952&title=Candi+Panataran+Candi+Kerajaan+Masa+Majapahit&val=14352",
+      "note": "Archaeological study separating the 1197 Śrṅga Palah inscription from the mostly later Majapahit sanctuary complex."
+    },
+    {
+      "id": "kd-tanda",
+      "title": "The Figure of the Taṇḍa in Old Javanese Literary and Epigraphic Records, Bijdragen tot de Taal-, Land- en Volkenkunde",
+      "url": "https://brill.com/view/journals/bki/175/2-3/article-p309_8.xml",
+      "note": "Peer-reviewed comparison of elite warrior or guard titles in epigraphy and literature from Kediri through later periods."
+    },
+    {
+      "id": "kd-hantang",
+      "title": "Titi Surti Nastiti, Perkembangan Aksara Kwadrat di Jawa Tengah, Jawa Timur, dan Bali, Kementerian Pendidikan dan Kebudayaan",
+      "url": "https://repositori.kemdikbud.go.id/17184/1/94-930-3-PB.pdf",
+      "note": "Official peer-reviewed epigraphic study of Hantang stone D 9, Jayabhaya, 1057 Śaka or 1135 CE and the quadrate phrase pañjalu jayati."
+    },
+    {
+      "id": "kd-prasasti",
+      "title": "Praśāsti, Direktorat Pelindungan Kebudayaan",
+      "url": "https://kebudayaan.kemdikbud.go.id/dpk/prasasti/",
+      "note": "Official explanation of stone, copper and palm-leaf inscriptions as formal royal or high-official documents with sacred and legal force."
+    },
+    {
+      "id": "kd-citralekha",
+      "title": "Prasasti dan Citralekha, Balai Pelestarian Cagar Budaya Yogyakarta",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpcbyogyakarta/prasasti-dan-citralekha/",
+      "note": "Official account of specialized inscription writers who mastered Old Javanese language, script, court formulae and bureaucracy."
+    },
+    {
+      "id": "kd-anu-time",
+      "title": "In Search of Lost Time: The Pāṇḍawa Story in the Javanese Cultural Tradition, Australian National University Open Research",
+      "url": "https://openresearch-repository.anu.edu.au/bitstreams/b634e47e-5966-4419-821e-86d295c19a5d/download",
+      "note": "University research on Jayabhaya court literature, the Bhāratayuddha and creative Old Javanese adaptation rather than simple copying."
+    },
+    {
+      "id": "kd-creese",
+      "title": "Helen Creese, The Balinese Kakawin Tradition, Bijdragen tot de Taal-, Land- en Volkenkunde",
+      "url": "https://brill.com/downloadpdf/journals/bki/155/1/article-p45_3.pdf",
+      "note": "Peer-reviewed chronology of surviving East Javanese kakawin, patrons and poets, including Kediri works and later manuscript transmission."
+    },
+    {
+      "id": "kd-salyawadha",
+      "title": "Traces of Śalyawadha in the Old Javanese Bhāratayuddha and Balinese Literature, Bijdragen tot de Taal-, Land- en Volkenkunde",
+      "url": "https://brill.com/view/journals/bki/175/1/article-p105_12.xml",
+      "note": "Peer-reviewed study of the 1157 Bhāratayuddha and later Balinese adaptations, used to keep composition distinct from surviving copies."
+    },
+    {
+      "id": "kd-irrigation",
+      "title": "Beberapa Prasasti yang Berisi tentang Irigasi Sawah, Direktorat Pelindungan Kebudayaan",
+      "url": "https://kebudayaan.kemdikbud.go.id/dpk/beberapa-prasasti-yang-berisi-tentang-irigasi-sawah/",
+      "note": "Official epigraphic survey of dams, dikes, reservoirs and channels, including Brantas flood control immediately before the Kediri partition."
+    },
+    {
+      "id": "kd-kamalagyan",
+      "title": "Berguru Pada Leluhur, Direktorat Warisan dan Diplomasi Budaya",
+      "url": "https://kebudayaan.kemdikbud.go.id/ditwdb/berguru-pada-leluhur/",
+      "note": "Official discussion of Airlangga 1037 Wringin Sapta dam, Brantas floods, boat traffic and water officials as close pre-Kediri infrastructure context."
+    },
+    {
+      "id": "kd-tondowongso",
+      "title": "Tondowongso: Menyingkap Peradaban Kediri, Kementerian Pendidikan dan Kebudayaan repository",
+      "url": "https://repositori.kemendikdasmen.go.id/19295/",
+      "note": "Official archaeological monograph on the Tondowongso brick sanctuary, its eleventh to thirteenth-century horizon, layout, sculpture and research limits."
+    },
+    {
+      "id": "kd-brin-tondowongso",
+      "title": "Arca-arca dari Situs Tondowongso dan Gurah, Berkala Arkeologi",
+      "url": "https://ejournal.brin.go.id/berkalaarkeologi/article/view/4649",
+      "note": "Peer-reviewed archaeological study of Brahma, Candra, Surya, Nandi and yoni finds and the limits of unfinished site research."
+    },
+    {
+      "id": "kd-cambridge-sculpture",
+      "title": "Lesley Pullen, Kediri and Singhasāri: Stone Sculpture from the Eleventh to the Fourteenth Century, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/patterned-splendour/kediri-and-singhasari-stone-sculpture-from-the-eleventh-to-the-fourteenth-century/1DF85E01F7018B3EB122CDBBA597BBFD",
+      "note": "Scholarly art-history chapter stressing how little securely attributable Kediri sculpture survives and discussing the debated Boro Gaṇeśa."
+    },
+    {
+      "id": "kd-chufanchi",
+      "title": "Zhao Rugua, Zhufan zhi, translated by Hirth and Rockhill as Chau Ju-Kua, Cornell University Library scan",
+      "url": "https://archive.org/details/cu31924023289345",
+      "note": "Primary thirteenth-century Chinese compilation on Java trade, farming, clothing, entertainment, government and healing, read with geographic and reporting cautions."
+    },
+    {
+      "id": "kd-lingwai",
+      "title": "The Lingwai Daida of Zhou Qufei: A Translation and Critical Edition, University of Tuscia repository",
+      "url": "https://dspace.unitus.it/handle/2067/46906",
+      "note": "University-hosted annotated translation of a 1178 geographic work explaining that information often came through traders, sailors and earlier texts."
+    },
+    {
+      "id": "kd-textiles",
+      "title": "Judith H. Maxwell, Texts and Textiles in Medieval Java, Bulletin de l’École française d’Extrême-Orient",
+      "url": "https://www.persee.fr/doc/befeo_0336-1519_1993_num_80_1_2194",
+      "note": "Peer-reviewed analysis of textiles as valued goods, literary images and sima-charter evidence, with explicit source-survival cautions."
+    },
+    {
+      "id": "kd-subhadra",
+      "title": "Helen Creese, Subhadrāwiwāha: an Old Javanese kakawin, Australian National University Open Research",
+      "url": "https://openresearch-repository.anu.edu.au/items/a9282ce7-9c75-4b3f-81b5-f48ec4323d15",
+      "note": "University thesis on marriage forms and ceremonies in Old Javanese kakawin, while dating this particular poem much later than Kediri."
+    },
+    {
+      "id": "kd-amerta-roles",
+      "title": "Muhamad Alnoza and Dian Sulistyowati, Konstruksi Masyarakat Jawa Kuno terhadap Transgender Perempuan, AMERTA",
+      "url": "https://ejournal.brin.go.id/amerta/article/download/3293/2289/10110",
+      "note": "Peer-reviewed epigraphic table including Kediri-period Padlĕgan I and Kĕmulan occupational terms, walyan healers and sima administrative structure."
+    }
+  ],
+  "entities": [
+    {
+      "id": "kediri",
+      "card": "data/cards/kediri.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "kd-index",
+            "kd-map1279",
+            "kd-brill-jong"
+          ],
+          "locator": "Exact indexed id, imported name, approximate 1279 to 1492 interval and historical-basemaps provenance. Decoded first exact kediri feature, topology, bounds, coordinate hash, islands and point tests. Peer-reviewed synthesis of Airlangga division, Kadiri dominance and Ken Angrok victory in 1222, used with its historiographic cautions.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "kd-brill-arjuna"
+          ],
+          "locator": "Scholarly introduction to Airlangga, the 1041 Pucangan inscription, 1042 retirement and division into Janggala and Panjalu.",
+          "dateScope": {
+            "from": 1042,
+            "to": 1050
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "kd-brill-capfigure"
+          ],
+          "locator": "Scholarly political outline of Airlangga partition, Panjalu or Kediri, the 1222 transition to Singhasari and later Majapahit contexts.",
+          "dateScope": {
+            "from": 1050,
+            "to": 1117
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "kd-besole",
+            "kd-plumbangan"
+          ],
+          "locator": "Official archaeological journal study of Kadiri inscriptions, ruler sequence, Daha and cautiously attributed brick remains at Besole. Official heritage account of the 1120 Panumbangan inscription and Bameswara sima grant, while distinguishing the surviving gateway.",
+          "dateScope": {
+            "from": 1117,
+            "to": 1135
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "kd-hantang",
+            "kd-anu-time"
+          ],
+          "locator": "Official peer-reviewed epigraphic study of Hantang stone D 9, Jayabhaya, 1057 Śaka or 1135 CE and the quadrate phrase pañjalu jayati. University research on Jayabhaya court literature, the Bhāratayuddha and creative Old Javanese adaptation rather than simple copying.",
+          "dateScope": {
+            "from": 1135,
+            "to": 1157
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "kd-besole"
+          ],
+          "locator": "Official archaeological journal study of Kadiri inscriptions, ruler sequence, Daha and cautiously attributed brick remains at Besole.",
+          "dateScope": {
+            "from": 1157,
+            "to": 1182
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "kd-creese"
+          ],
+          "locator": "Peer-reviewed chronology of surviving East Javanese kakawin, patrons and poets, including Kediri works and later manuscript transmission.",
+          "dateScope": {
+            "from": 1182,
+            "to": 1194
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "kd-panataran",
+            "kd-amerta-roles"
+          ],
+          "locator": "Archaeological study separating the 1197 Śrṅga Palah inscription from the mostly later Majapahit sanctuary complex. Peer-reviewed epigraphic table including Kediri-period Padlĕgan I and Kĕmulan occupational terms, walyan healers and sima administrative structure.",
+          "dateScope": {
+            "from": 1194,
+            "to": 1205
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "kd-brill-bosch"
+          ],
+          "locator": "Peer-reviewed chronology identifying Śrṅga or Kertajaya as the last Kadiri ruler and separating text traditions from securely dated inscriptions.",
+          "dateScope": {
+            "from": 1205,
+            "to": 1222
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "kd-index",
+            "kd-summary"
+          ],
+          "locator": "Exact index, coverage and imported-summary comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "kd-brill-capfigure"
+          ],
+          "locator": "Airlangga division, Kadiri dominance and 1222 transition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "kd-map1279"
+          ],
+          "locator": "Exact 1279 topology, bounds and coordinate hash.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "kd-map1279"
+          ],
+          "locator": "Positive and negative point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "kd-map1300",
+            "kd-map1400"
+          ],
+          "locator": "1300 identity and 1400 geometry comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "kd-map1200"
+          ],
+          "locator": "Preceding owner, matching geometry and identity distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "kd-brill-capfigure"
+          ],
+          "locator": "1222 Singhasari transition and record distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "kd-map1300",
+            "kd-panataran"
+          ],
+          "locator": "Target interval compared with separately treated Majapahit context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "kd-brill-capfigure"
+          ],
+          "locator": "Place-name continuity and state-identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "kd-map1492"
+          ],
+          "locator": "1492 owner tests and non-successor conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "kd-brill-arjuna"
+          ],
+          "locator": "Pucangan inscription, retirement and division caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "kd-plumbangan"
+          ],
+          "locator": "Panumbangan date, ruler and sima grant.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "kd-hantang"
+          ],
+          "locator": "Hantang date, formula and evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "kd-besole"
+          ],
+          "locator": "Ruler sequence and epigraphic gaps.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "kd-brill-bosch"
+          ],
+          "locator": "Last ruler, 1222 defeat and text-inscription comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "kd-prasasti"
+          ],
+          "locator": "Official document types, uses and survival bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "kd-plumbangan"
+          ],
+          "locator": "Sima structure, fiscal privileges and obligations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "kd-citralekha"
+          ],
+          "locator": "Citralekha skills and administrative function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "kd-lingwai"
+          ],
+          "locator": "Lingwai Daida Java account and compilation-source caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "kd-tanda"
+          ],
+          "locator": "Epigraphic and literary taṇḍa evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "kd-irrigation"
+          ],
+          "locator": "Brantas alluvium, Kelud setting and water works.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "kd-kamalagyan"
+          ],
+          "locator": "Kamalagyan or Wringin Sapta dam chronology and purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "kd-irrigation"
+          ],
+          "locator": "Epigraphic water terms, officials and maintenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "kd-chufanchi"
+          ],
+          "locator": "Zhufan zhi pp. 77-78, crops, ploughing and rent.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "kd-chufanchi",
+            "kd-map1279"
+          ],
+          "locator": "Zhufan zhi trade lists and excluded delta geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "kd-anu-time"
+          ],
+          "locator": "Jayabhaya patronage, 1157 date and vernacular adaptation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "kd-creese"
+          ],
+          "locator": "Kediri kakawin chronology and patrons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "kd-salyawadha"
+          ],
+          "locator": "Composition and later Balinese transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "kd-brin-tondowongso"
+          ],
+          "locator": "Tondowongso deity sculptures and interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "kd-citralekha",
+            "kd-creese"
+          ],
+          "locator": "Specialist literacy and absence of ordinary enrollment evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "kd-tondowongso"
+          ],
+          "locator": "Site horizon, brick layout and dating limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "kd-besole"
+          ],
+          "locator": "Besole brick remains and cautious attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "kd-panataran"
+          ],
+          "locator": "1197 Palah inscription and later complex phases.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "kd-brin-tondowongso"
+          ],
+          "locator": "Tondowongso and Gurah sculptures and research status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "kd-cambridge-sculpture"
+          ],
+          "locator": "Survival scarcity and debated Boro Gaṇeśa.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "kd-subhadra"
+          ],
+          "locator": "Kakawin marriage study and dating caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "kd-amerta-roles"
+          ],
+          "locator": "Sima charters, royal employees and occupational groups.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "kd-subhadra",
+            "kd-textiles"
+          ],
+          "locator": "Literary and textile evidence with social-range caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "kd-anu-time",
+            "kd-citralekha"
+          ],
+          "locator": "Advanced learning evidence and childhood-data limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "kd-creese"
+          ],
+          "locator": "Kakawin performance tradition and audience caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "kd-chufanchi"
+          ],
+          "locator": "Zhufan zhi pp. 77-78 food and crop list.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "kd-textiles"
+          ],
+          "locator": "Textile value, charter evidence and social differentiation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "kd-lingwai"
+          ],
+          "locator": "Lingwai Daida dwelling report and source limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "kd-amerta-roles",
+            "kd-irrigation"
+          ],
+          "locator": "Occupational titles and agrarian infrastructure work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "kd-lingwai"
+          ],
+          "locator": "Lingwai Daida entertainment report and compilation caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "kd-amerta-roles"
+          ],
+          "locator": "Kĕmulan occupational table and explicit treatment-data limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "kd-kamalagyan",
+            "kd-tondowongso"
+          ],
+          "locator": "Flood-control and sacred-site evidence with use distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "kd-tondowongso",
+            "kd-cambridge-sculpture"
+          ],
+          "locator": "Archaeological survival limits and absence of direct sanitation evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "kd-hantang"
+          ],
+          "locator": "Hantang D 9 date, formula, translation and script-display caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "kd-panji"
+          ],
+          "locator": "1222 political ending and later Panji transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "kd-brill-bosch",
+            "kd-panji"
+          ],
+          "locator": "Peer-reviewed chronology identifying Śrṅga or Kertajaya as the last Kadiri ruler and separating text traditions from securely dated inscriptions. Official cultural-history discussion of Panjalu centered at Daha, Janggala and the later spread and many versions of Panji stories.",
+          "dateScope": {
+            "year": 1222
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "kediri",
+        "card": "cards/kediri.json",
+        "dateBasis": "map_coverage",
+        "summary": "Historical Kediri or Panjalu, circa 1042 to 1222; the indexed 1279 to 1492 display interval is erroneous.",
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1279.json",
+          "properties": {
+            "civ": "kediri",
+            "from": 1279,
+            "to": 1300,
+            "precision": 1
+          },
+          "bounds": [
+            109.11529115291154,
+            -9.17741237630517,
+            118.98298982989832,
+            -1.3691953500567422
+          ]
+        },
+        {
+          "file": "world-1300.json",
+          "properties": {
+            "civ": "kediri",
+            "from": 1300,
+            "to": 1400,
+            "precision": 1
+          },
+          "bounds": [
+            109.11529115291154,
+            -9.17741237630517,
+            118.98298982989832,
+            -1.3691953500567422
+          ]
+        },
+        {
+          "file": "world-1400.json",
+          "properties": {
+            "civ": "kediri",
+            "from": 1400,
+            "to": 1492,
+            "precision": 1
+          },
+          "bounds": [
+            109.11529115291154,
+            -9.178114581428261,
+            118.98298982989832,
+            -1.3693186809692577
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact imported id kediri is preserved, while public copy identifies the historical Kediri or Panjalu kingdom and dates it circa 1042 to 1222.",
+    "The indexed 1279 to 1492 interval is impossible for historical Kediri and overlaps the Singhasari aftermath and Majapahit era.",
+    "The preceding east-java record is a generic regional bucket and is not aliased to Kediri, Janggala or Singhasari.",
+    "Majapahit remains a separately carded coverage record. Later Daha or Kediri identities are not merged into Panjalu without evidence.",
+    "The imported geometry includes southern Borneo and eastern Sumbawa, omits the Brantas delta and key north-coast ports, and cannot be treated as sovereignty.",
+    "The 1492 malaysian-islamic-states replacement is an impossible atlas seam. The override keeps fell null and provides no inferred successor.",
+    "Historical periods cover 1042 to 1222 rather than allowing the atlas error to overwrite the kingdom chronology.",
+    "The authentic written sample is the 1135 Hantang phrase pañjalu jayati, shown in scholarly transliteration with original-glyph facsimile limits."
+  ]
+}
