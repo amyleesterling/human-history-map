@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release159-vallabhi research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "va-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact Vallabhi id, display name, circa flag, and indexed 800 to 1000 interval."
+    },
+    {
+      "id": "va-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Maitraka-era summary audited as background, not authority for survival after 800."
+    },
+    {
+      "id": "va-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing-card status, two border snapshots, and unreviewed identity, chronology, and border fields."
+    },
+    {
+      "id": "va-map-700",
+      "title": "Human History Map 700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Pre-start seam control assigning the tested footprint mainly to the Maitraka Kingdom."
+    },
+    {
+      "id": "va-map-800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "First exact Vallabhi feature, decoded polygon, point membership, neighbors, and geometry hashes."
+    },
+    {
+      "id": "va-map-900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Second exact Vallabhi feature, byte-equivalent decoded geometry, point membership, and neighbors."
+    },
+    {
+      "id": "va-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Endpoint seam repainting the tested target footprint to the generic Rajput Kingdoms feature."
+    },
+    {
+      "id": "va-map-1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Post-end control assigning most tested places to the Solanki feature."
+    },
+    {
+      "id": "va-phantom",
+      "title": "Some phantom dynasties of early and medieval India",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/some-phantom-dynasties-of-early-and-medieval-india-epigraphic-evidence-and-the-abhorrence-of-a-vacuum1/0FDCBDA5C5A702A889A74AF6A2D29418",
+      "note": "Epigraphic critique identifying 766 as the latest secure Maitraka royal date and warning against invented continuity."
+    },
+    {
+      "id": "va-archaeology",
+      "title": "Archaeology of Gujarat",
+      "url": "https://gsl.lbsnaa.gov.in/opac-tmpl/bootstrap/Books/114107.pdf",
+      "note": "Government academy study of Valabhi archaeology, Maitraka chronology, copper plates, sites, and material remains."
+    },
+    {
+      "id": "va-buddhist",
+      "title": "Buddhist Monuments by Debala Mitra",
+      "url": "https://books.google.com/books/about/Buddhist_monuments.html?id=U-02uAEACAAJ",
+      "note": "Authoritative archaeological monograph on Valabhi monasteries, grants, tablets, endowments, medicine, and surviving remains."
+    },
+    {
+      "id": "va-endowments",
+      "title": "Buddhist Endowments by Saiva Kings under the Maitrakas of Valabhi",
+      "url": "https://doi.org/10.1163/24685968-05010002",
+      "note": "Peer-reviewed charter study quantifying Maitraka beneficiaries and examining donors, monasteries, wells, and gardens."
+    },
+    {
+      "id": "va-land-system",
+      "title": "The Land System in Ancient India",
+      "url": "https://ignca.gov.in/Asi_data/48173.pdf",
+      "note": "Official digitization discussing Maliya plates, named plots, cultivators, crops, stepwells, and land rights."
+    },
+    {
+      "id": "va-economies",
+      "title": "Comparative Economies, 700 to 1500 CE",
+      "url": "https://www.egyankosh.ac.in/bitstream/123456789/44505/1/Unit-7.pdf",
+      "note": "IGNOU teaching edition on agrarian taxes, grain shares, tolls, labor obligations, and regional economic structures."
+    },
+    {
+      "id": "va-census",
+      "title": "District Census Handbook, Bhavnagar",
+      "url": "https://censusindia.gov.in/nada/index.php/catalog/28789/download/31971/35005_1991_BHA.pdf",
+      "note": "Official district history summarizing Vallabhi decline and the later evidentiary gap around the old capital."
+    },
+    {
+      "id": "va-temples",
+      "title": "The Temples of Gujarat",
+      "url": "https://ignca.gov.in/Asi_data/47990.pdf",
+      "note": "Archaeological Survey architectural corpus documenting regional shrines and the limits of stylistic dating."
+    },
+    {
+      "id": "va-maru-gurjara",
+      "title": "Genesis and Development of Maru-Gurjara Temple Architecture",
+      "url": "https://ignca.gov.in/Asi_data/57638.pdf",
+      "note": "Scholarly architectural history of post-Maitraka local dynasties, Mularaja, merchants, ministers, and religious patronage."
+    },
+    {
+      "id": "va-sculpture",
+      "title": "The Saga of Indian Sculpture",
+      "url": "https://ignca.gov.in/Asi_data/6168.pdf",
+      "note": "Archaeological Survey synthesis placing Maitraka decline near 770 and tracing later western Indian traditions."
+    },
+    {
+      "id": "va-temple-sculpture",
+      "title": "Indian Temple Sculpture",
+      "url": "https://ignca.gov.in/Asi_data/5085.pdf",
+      "note": "Official art-historical survey of Gurjara-Pratihara power and western Indian architectural production after 800."
+    },
+    {
+      "id": "va-radhanpur",
+      "title": "Historical and Literary Inscriptions: Radhanpur plates",
+      "url": "https://www.ebharatisampat.in/pdfs/ebharati-pdf-1682923997Historical-And-Literary-Inscriptions-Split-6.pdf",
+      "note": "Scholarly inscription corpus reproducing the primary record, Sanskrit text, date, language, script, and 808 grant context."
+    },
+    {
+      "id": "va-radhanpur-text",
+      "title": "Corpus Inscriptionum Indicarum transcription collection",
+      "url": "https://ignca.gov.in/Asi_data/22771.pdf",
+      "note": "Official transcription source cross-checking the Radhanpur Sanskrit wording used for the writing sample."
+    },
+    {
+      "id": "va-rashtrakuta-list",
+      "title": "Rashtrakutas and Their Times",
+      "url": "https://books.google.com/books?id=9Zo5AQAAIAAJ",
+      "note": "Authoritative monograph reconstructing Rashtrakuta Gujarat from grants at Radhanpur, Baroda, Surat, Sanjan, and Cambay."
+    },
+    {
+      "id": "va-paramara",
+      "title": "History of the Paramara Dynasty",
+      "url": "https://ignca.gov.in/Asi_data/35392.pdf",
+      "note": "Scholarly synthesis citing the 812 Baroda charter and Karkaraja role in Gujarat frontier politics."
+    },
+    {
+      "id": "va-harsola",
+      "title": "The Harsola Grants of Siyaka",
+      "url": "https://zenodo.org/records/11466859",
+      "note": "Scholarly edition and translation of two 949 copper grants naming villages, officers, grantees, and dues."
+    },
+    {
+      "id": "va-arama",
+      "title": "Arama and public works in Indian inscriptions",
+      "url": "https://ignca.gov.in/Asi_data/22951.pdf",
+      "note": "Official epigraphic study quoting the 930 Cambay charter list of shelters, waterworks, gardens, and temples."
+    },
+    {
+      "id": "va-dharmasastra",
+      "title": "History of Dharmasastra",
+      "url": "https://ignca.gov.in/Asi_data/8253.pdf",
+      "note": "Authoritative reference discussing the 930 Cambay plates and royal gift rituals in their documentary setting."
+    },
+    {
+      "id": "va-pratihara-palaces",
+      "title": "Some notes on the palaces of the imperial Gurjara-Pratiharas",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/some-notes-on-the-palaces-of-the-imperialgurjara-pratiharas/720B602DA476925B536800005B17E8B0",
+      "note": "Peer-reviewed contextual study of Gurjara-Pratihara political scale, grants, monuments, and courtly representation."
+    }
+  ],
+  "entities": [
+    {
+      "id": "vallabhi",
+      "card": "data/cards/vallabhi.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "va-index",
+            "va-summary",
+            "va-coverage",
+            "va-map-800",
+            "va-map-900",
+            "va-map-1000",
+            "va-phantom",
+            "va-maru-gurjara"
+          ],
+          "locator": "Exact Vallabhi id, display name, circa flag, and indexed 800 to 1000 interval. Imported Maitraka-era summary audited as background, not authority for survival after 800. Missing-card status, two border snapshots, and unreviewed identity, chronology, and border fields. First exact Vallabhi feature, decoded polygon, point membership, neighbors, and geometry hashes. Second exact Vallabhi feature, byte-equivalent decoded geometry, point membership, and neighbors. Endpoint seam repainting the tested target footprint to the generic Rajput Kingdoms feature. Epigraphic critique identifying 766 as the latest secure Maitraka royal date and warning against invented continuity. Scholarly architectural history of post-Maitraka local dynasties, Mularaja, merchants, ministers, and religious patronage.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "va-sculpture"
+          ],
+          "locator": "Archaeological Survey synthesis placing Maitraka decline near 770 and tracing later western Indian traditions.",
+          "dateScope": {
+            "from": 800,
+            "to": 808
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "va-radhanpur"
+          ],
+          "locator": "Scholarly inscription corpus reproducing the primary record, Sanskrit text, date, language, script, and 808 grant context.",
+          "dateScope": {
+            "from": 808,
+            "to": 812
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "va-paramara"
+          ],
+          "locator": "Scholarly synthesis citing the 812 Baroda charter and Karkaraja role in Gujarat frontier politics.",
+          "dateScope": {
+            "from": 812,
+            "to": 835
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "va-rashtrakuta-list"
+          ],
+          "locator": "Authoritative monograph reconstructing Rashtrakuta Gujarat from grants at Radhanpur, Baroda, Surat, Sanjan, and Cambay.",
+          "dateScope": {
+            "from": 835,
+            "to": 871
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "va-pratihara-palaces"
+          ],
+          "locator": "Peer-reviewed contextual study of Gurjara-Pratihara political scale, grants, monuments, and courtly representation.",
+          "dateScope": {
+            "from": 871,
+            "to": 930
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "va-dharmasastra"
+          ],
+          "locator": "Authoritative reference discussing the 930 Cambay plates and royal gift rituals in their documentary setting.",
+          "dateScope": {
+            "from": 930,
+            "to": 949
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "va-paramara"
+          ],
+          "locator": "Scholarly synthesis citing the 812 Baroda charter and Karkaraja role in Gujarat frontier politics.",
+          "dateScope": {
+            "from": 949,
+            "to": 961
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "va-temples"
+          ],
+          "locator": "Archaeological Survey architectural corpus documenting regional shrines and the limits of stylistic dating.",
+          "dateScope": {
+            "from": 961,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "va-index",
+            "va-coverage",
+            "va-map-700"
+          ],
+          "locator": "Exact index row, pre-start control, and coverage registry entry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "va-map-800",
+            "va-map-900"
+          ],
+          "locator": "Decoded geometry counts, bounds, and matching hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "va-map-800"
+          ],
+          "locator": "Fixed representative point membership for the target.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "va-map-800"
+          ],
+          "locator": "Fixed nonmember probes and capital-area comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "va-map-800",
+            "va-map-900"
+          ],
+          "locator": "Direct shared-arc neighbors in both target snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "va-radhanpur"
+          ],
+          "locator": "Primary edition translation and boundary clauses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "va-land-system"
+          ],
+          "locator": "Maliya plate plots, plants, occupations, and wells.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "va-economies"
+          ],
+          "locator": "Agrarian taxes, tolls, and labor obligation discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "va-harsola"
+          ],
+          "locator": "Translated village grants, dues, pasture, and assembly.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "va-dharmasastra"
+          ],
+          "locator": "Documentary genre and elite gift context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "va-rashtrakuta-list"
+          ],
+          "locator": "Dated Gujarat inscription sequence from 808 through 930.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "va-dharmasastra"
+          ],
+          "locator": "Cambay plate date, place, and ritual context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "va-temple-sculpture"
+          ],
+          "locator": "Western Indian power and architectural context after 800.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "va-temples"
+          ],
+          "locator": "Regional temple corpus and stylistic dating limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "va-map-800",
+            "va-map-900"
+          ],
+          "locator": "Target members and unchanged broad geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "va-endowments"
+          ],
+          "locator": "Peer-reviewed proportions and cross-religious patronage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "va-buddhist"
+          ],
+          "locator": "Dudda monastery foundation and later support records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "va-buddhist"
+          ],
+          "locator": "Enumerated monastery provisions in earlier grants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "va-radhanpur-text"
+          ],
+          "locator": "Recipient qualifications and ritual formula in transcription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "va-arama"
+          ],
+          "locator": "Cambay charter public works and merit list.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "va-radhanpur-text"
+          ],
+          "locator": "Normalized Sanskrit line in the official transcription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "va-radhanpur"
+          ],
+          "locator": "Facsimile, findspot, date, and script caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "va-radhanpur-text"
+          ],
+          "locator": "Transcribed charter structure and documentary purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "va-harsola"
+          ],
+          "locator": "Named writer and sign manual in 949 grants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "va-rashtrakuta-list"
+          ],
+          "locator": "Chronological register and documentary survival pattern.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "va-harsola"
+          ],
+          "locator": "Father-son recipients and stated social identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "va-buddhist"
+          ],
+          "locator": "Elite female founder and kinship description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "va-endowments"
+          ],
+          "locator": "Recorded founder categories and chronological limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "va-land-system"
+          ],
+          "locator": "Named cultivators, occupations, and legal land categories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "va-radhanpur-text"
+          ],
+          "locator": "Address clause and named social groups in 808.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "va-archaeology"
+          ],
+          "locator": "Vedic learning and wider Valabhi documentary context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "va-sculpture"
+          ],
+          "locator": "Valabhi institutional inheritance and chronological restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "va-census"
+          ],
+          "locator": "Official regional history and post-Valabhi evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "va-economies"
+          ],
+          "locator": "Occupational systems and limits of economic documents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "va-archaeology"
+          ],
+          "locator": "Elite learning evidence and documentary selection bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "va-land-system"
+          ],
+          "locator": "Plants and productive landscape in Maliya plates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "va-archaeology"
+          ],
+          "locator": "Vala surface remains and excavated religious objects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "va-economies"
+          ],
+          "locator": "Agrarian production, payments, and labor obligations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "va-temple-sculpture"
+          ],
+          "locator": "Architectural production and patronage context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "va-harsola"
+          ],
+          "locator": "Pasture, village dues, and documentary omissions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "va-arama"
+          ],
+          "locator": "Public works list in the Cambay record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "va-endowments"
+          ],
+          "locator": "Earlier monastery grant with cisterns and wells.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "va-buddhist"
+          ],
+          "locator": "Pre-800 monastic medicine and provision lists.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "va-census"
+          ],
+          "locator": "Official regional history and absence of dated sanitation evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "va-arama"
+          ],
+          "locator": "Infrastructure list and explicit operational evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "va-sculpture"
+          ],
+          "locator": "Latest secure Maitraka horizon and continuity warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "va-map-800",
+            "va-map-900"
+          ],
+          "locator": "Byte-equivalent decoded geometry across both snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "va-map-900",
+            "va-map-1000"
+          ],
+          "locator": "Endpoint point-owner changes and target disappearance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "va-temple-sculpture"
+          ],
+          "locator": "Post-Maitraka transition and later western Indian patronage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "va-map-1000",
+            "va-map-1100"
+          ],
+          "locator": "Post-end owner control and continuity distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "va-map-900",
+            "va-map-1000",
+            "va-map-1100",
+            "va-census"
+          ],
+          "locator": "Second exact Vallabhi feature, byte-equivalent decoded geometry, point membership, and neighbors. Endpoint seam repainting the tested target footprint to the generic Rajput Kingdoms feature. Post-end control assigning most tested places to the Solanki feature. Official district history summarizing Vallabhi decline and the later evidentiary gap around the old capital.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "vallabhi",
+        "name": "Vallabhi",
+        "kind": "state",
+        "region": "Asia",
+        "from": 800,
+        "to": 1000,
+        "circa": true,
+        "card": "cards/vallabhi.json",
+        "dateBasis": "map_coverage",
+        "summary": "Post-Maitraka Gujarat beneath an inherited name and oversized atlas polygon.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "vallabhi",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            68.89568895688959,
+            20.65086144789501,
+            73.91413914139142,
+            24.223176036397348
+          ]
+        },
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "vallabhi",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            68.89568895688959,
+            20.65086144789501,
+            73.91413914139142,
+            24.223176036397348
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
