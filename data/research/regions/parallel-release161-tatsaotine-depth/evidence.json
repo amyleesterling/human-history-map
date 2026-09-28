@@ -1,0 +1,962 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release161-tatsaotine research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "ts-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, Yellowknives alias, circa dates, and historical basemap provenance."
+    },
+    {
+      "id": "ts-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Seven observed map intervals, seven border files, and the exact missing card status."
+    },
+    {
+      "id": "ts-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "First exact target feature, two enormous components, point ownership, shared arcs, and 1530 to 1600 properties."
+    },
+    {
+      "id": "ts-map1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Second exact target feature and nearly copied two component geometry for 1600 to 1650."
+    },
+    {
+      "id": "ts-map1650",
+      "title": "Human History Map 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Third exact target feature and copied two component geometry for 1650 to 1700."
+    },
+    {
+      "id": "ts-map1700",
+      "title": "Human History Map 1700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Fourth target feature, small western coordinate change, and 1700 to 1715 properties."
+    },
+    {
+      "id": "ts-map1715",
+      "title": "Human History Map 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Western component disappears while a remote eastern polygon remains for 1715 to 1783."
+    },
+    {
+      "id": "ts-map1783",
+      "title": "Human History Map 1783 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Remote eastern target polygon and simultaneous Rupert's Land ownership at all tested Great Slave Lake points."
+    },
+    {
+      "id": "ts-map1800",
+      "title": "Human History Map 1800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Copied remote eastern polygon for the final target interval and the 1815 Canada repaint."
+    },
+    {
+      "id": "ts-joint-strategy",
+      "title": "Yellowknives Dene First Nation and City of Yellowknife Joint Economic Development Strategy",
+      "url": "https://www.yellowknife.ca/en/city-government/resources/Reports/Economic_Development/Yellowknives-Dene-First-Nation-City-of-Yellowknife-Joint-Economic-Development-Strategy.pdf",
+      "note": "Pages 9 to 12 identify Dettah and Ndilo, T'satsaot'ine relationships, copper technology, and the danger of confusing Yellowknives and Tlicho identities."
+    },
+    {
+      "id": "ts-identity-presentation",
+      "title": "Yellowknives Dene First Nation Presentation",
+      "url": "https://reviewboard.ca/upload/project_document/YKDFN%20Presentation.pdf",
+      "note": "First Nation presentation identifying communities, names, copper history, land relationships, and contemporary continuity."
+    },
+    {
+      "id": "ts-traditional-knowledge",
+      "title": "Weledeh Yellowknives Dene: A Traditional Knowledge Study of Ek'ati",
+      "url": "https://reviewboard.ca/upload/project_document/YKDFN%20TK%20Reports%20for%20Intervention%20small.pdf",
+      "note": "Community directed study, especially pages 20 to 43, on identity, seasonal movement, family labor, water, plants, camps, canoes, dogs, caribou, and copper."
+    },
+    {
+      "id": "ts-caribou",
+      "title": "Jay Project Developer Assessment Report, Section 12: Barren Ground Caribou",
+      "url": "https://reviewboard.ca/upload/project_document/EA1314-01_S_12_Barren-Ground_Caribou.PDF",
+      "note": "Section 12.3.2 summarizes Yellowknives knowledge of canoe hunting, caribou leaders, deflection markers, sharing, and trail caches."
+    },
+    {
+      "id": "ts-wildlife",
+      "title": "Jay Project Developer Assessment Report, Section 13: Wildlife and Wildlife Habitat",
+      "url": "https://reviewboard.ca/upload/project_document/EA1314-01_S_13_Wildlife_and_Wildlife_Habitat.PDF",
+      "note": "Yellowknives evidence on ptarmigan nets, feathers, children's charms, ravens, food, and animal knowledge."
+    },
+    {
+      "id": "ts-case2",
+      "title": "PWNHC This Land Is Our Home: Spear the Water",
+      "url": "https://www.nwtexhibits.ca/navigator/ykdene/cases/case-2-en.html",
+      "note": "Community museum case about the named Mackay Lake crossing and caribou hunting from canoes."
+    },
+    {
+      "id": "ts-case3",
+      "title": "PWNHC This Land Is Our Home: Lemahshi, Let's Trade",
+      "url": "https://www.nwtexhibits.ca/navigator/ykdene/cases/case-3-en.html",
+      "note": "Fred Sangris account of Contwoyto Lake meetings, shared food, trade goods, language difference, portage, and dog travel."
+    },
+    {
+      "id": "ts-case4",
+      "title": "PWNHC This Land Is Our Home: Journey by Needle and Thread",
+      "url": "https://www.nwtexhibits.ca/navigator/ykdene/cases/case-4-en.html",
+      "note": "Named women, family teaching, sewing work, travel, shared machinery, and aid to poorly equipped newcomers."
+    },
+    {
+      "id": "ts-case5",
+      "title": "PWNHC This Land Is Our Home: Fishing",
+      "url": "https://www.nwtexhibits.ca/navigator/ykdene/cases/case-5-en.html",
+      "note": "Museum fish net made from twisted willow inner bark and Fred Sangris testimony about women setting river nets."
+    },
+    {
+      "id": "ts-case6",
+      "title": "PWNHC This Land Is Our Home: Twins",
+      "url": "https://www.nwtexhibits.ca/navigator/ykdene/cases/case-6-en.html",
+      "note": "Named 1960 midwife, mother, daughters, emergency newborn care, cold weather care, and family provenance."
+    },
+    {
+      "id": "ts-case8",
+      "title": "PWNHC This Land Is Our Home: Copper",
+      "url": "https://www.nwtexhibits.ca/navigator/ykdene/cases/case-8-en.html",
+      "note": "Early nineteenth century hammered copper bar and unfinished knife blade in a community curated exhibit."
+    },
+    {
+      "id": "ts-old-providence",
+      "title": "Prince of Wales Northern Heritage Centre: Old Fort Providence",
+      "url": "https://www.nwtexhibits.ca/nv/ftprov.htm",
+      "note": "Official heritage account of the 1789 North West Company post near Wool Bay and Great Slave Lake trade."
+    },
+    {
+      "id": "ts-yamoria",
+      "title": "Prince of Wales Northern Heritage Centre: Giant Beaver on the Weledeh River",
+      "url": "https://www.nwtexhibits.ca/yamoria/",
+      "note": "Yellowknives Dene story in English and Wiilideh, with named places, safe travel, fishing, and community attribution."
+    },
+    {
+      "id": "ts-yamoria-map",
+      "title": "Prince of Wales Northern Heritage Centre: Yamoria Place Names Map",
+      "url": "https://www.nwtexhibits.ca/yamoria/documents/Yamoria-Map.pdf",
+      "note": "Community language map linking oral narratives and Dene place names across a broad northern landscape."
+    },
+    {
+      "id": "ts-dene-laws",
+      "title": "Prince of Wales Northern Heritage Centre: Dene Laws",
+      "url": "https://www.nwtexhibits.ca/yamoria/documents/Yamoria-Dene-Laws.pdf",
+      "note": "Community language resource presenting sharing, respect, care, and related teachings in several Dene languages."
+    },
+    {
+      "id": "ts-wayfinding",
+      "title": "Cannon, Herbert, and Sangris, Stellar Wayfinding among Indigenous Peoples of the North American Arctic",
+      "url": "https://par.nsf.gov/servlets/purl/10346070",
+      "note": "Pages 183 to 186 document Fred Sangris's learned Yellowknives practices with stars, landmarks, cairns, family teaching, and weather limits."
+    },
+    {
+      "id": "ts-wayfinding-journal",
+      "title": "Cannon, Herbert, and Sangris, Yellowknives Dene and Gwich'in Stellar Wayfinding",
+      "url": "https://journalhosting.ucalgary.ca/index.php/arctic/article/download/75292/55890/229914",
+      "note": "Journal hosted article copy, pages 183 to 186, for cairns, cloud limits, landmarks, and intergenerational learning."
+    },
+    {
+      "id": "ts-state-knowledge",
+      "title": "Government of the Northwest Territories: Revised State of Knowledge Report",
+      "url": "https://www.gov.nt.ca/ecc/en/node/1538",
+      "note": "Pages 79 to 81 synthesize late eighteenth and early nineteenth century posts, Yellowknives range, Akaitcho, conflict, trade, and later change."
+    },
+    {
+      "id": "ts-thanadelthur",
+      "title": "Parks Canada: Thanadelthur national historic person",
+      "url": "https://www.canada.ca/en/parks-canada/news/2017/08/thanadelthur_d_1717.html",
+      "note": "Official account of a Dene woman interpreter and negotiator, 1715 to 1717 peace, regional copper reports, and trade context."
+    },
+    {
+      "id": "ts-hearne",
+      "title": "Library and Archives Canada: Samuel Hearne journal",
+      "url": "https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Record?IdNumber=104833&app=fonandcol",
+      "note": "Archival description of Hearne's 1770 to 1772 journey with Matonabbee and Dene companions to the Coppermine River."
+    },
+    {
+      "id": "ts-mackenzie",
+      "title": "Library and Archives Canada: Sir Alexander Mackenzie journal",
+      "url": "https://recherche-collection-search.bac-lac.gc.ca/fra/accueil/notice?IdNumber=105003&app=fonandcol",
+      "note": "Archival description and provenance of Mackenzie's 1789 northern journey and its surviving journal transcript."
+    },
+    {
+      "id": "ts-akaitcho-profile",
+      "title": "Helm and Gillespie: Akaitcho, Arctic 36",
+      "url": "https://journalhosting.ucalgary.ca/index.php/arctic/article/view/65318",
+      "note": "Peer reviewed profile separating Akaitcho's documented 1820s leadership, Yellowknives geography, provisioning, violence, rescue, and later dispersal."
+    },
+    {
+      "id": "ts-language",
+      "title": "Yellowknives Dene First Nation: Language, Culture and History",
+      "url": "https://ykdene.com/government/language-culture-history/",
+      "note": "First Nation page describing living Wiilideh and Tetsot'ine languages as carriers of knowledge, skills, identity, health, and culture."
+    },
+    {
+      "id": "ts-phonology",
+      "title": "Jaker: Tetsot'ine Prefix Vowel Length",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9462611/",
+      "note": "Peer reviewed community supported description of Tetsot'ine Yatie, speakers, dialect status, research methods, and modern linguistic notation."
+    },
+    {
+      "id": "ts-neh",
+      "title": "National Endowment for the Humanities: Yellowknife Verb Grammar Award",
+      "url": "https://awardsearch.neh.gov/AwardDetail.aspx?gn=FN-249645-16",
+      "note": "Public grant record for modern collaborative documentation of the endangered Yellowknife language variety and planned verb grammar."
+    },
+    {
+      "id": "ts-copper-study",
+      "title": "Cooper and colleagues: Native Copper Provenance in the Arctic and Subarctic",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X17307253",
+      "note": "Peer reviewed archaeological study distinguishing regions, sources, exchange, and precontact copper use, including Wiilideh and Tetsot'ine associations."
+    },
+    {
+      "id": "ts-framework",
+      "title": "Akaitcho Dene First Nations Framework Agreement",
+      "url": "https://www.eia.gov.nt.ca/sites/eia/files/adfn_framework_agreement.pdf",
+      "note": "Parties' agreement identifying current constituent First Nations, asserted land relationships, distinct culture, and continuing negotiation."
+    }
+  ],
+  "entities": [
+    {
+      "id": "t-atsaot-ine",
+      "card": "data/cards/t-atsaot-ine.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ts-joint-strategy",
+            "ts-map1530",
+            "ts-map1715",
+            "ts-map1783"
+          ],
+          "locator": "Pages 9 to 12 identify Dettah and Ndilo, T'satsaot'ine relationships, copper technology, and the danger of confusing Yellowknives and Tlicho identities. First exact target feature, two enormous components, point ownership, shared arcs, and 1530 to 1600 properties. Western component disappears while a remote eastern polygon remains for 1715 to 1783. Remote eastern target polygon and simultaneous Rupert's Land ownership at all tested Great Slave Lake points.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ts-map1530",
+            "ts-index"
+          ],
+          "locator": "First exact target feature, two enormous components, point ownership, shared arcs, and 1530 to 1600 properties. Exact id, imported name, Yellowknives alias, circa dates, and historical basemap provenance.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ts-map1600"
+          ],
+          "locator": "Second exact target feature and nearly copied two component geometry for 1600 to 1650.",
+          "dateScope": {
+            "from": 1600,
+            "to": 1650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ts-map1650",
+            "ts-coverage"
+          ],
+          "locator": "Third exact target feature and copied two component geometry for 1650 to 1700. Seven observed map intervals, seven border files, and the exact missing card status.",
+          "dateScope": {
+            "from": 1650,
+            "to": 1700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ts-map1700"
+          ],
+          "locator": "Fourth target feature, small western coordinate change, and 1700 to 1715 properties.",
+          "dateScope": {
+            "from": 1700,
+            "to": 1715
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ts-map1715",
+            "ts-thanadelthur"
+          ],
+          "locator": "Western component disappears while a remote eastern polygon remains for 1715 to 1783. Official account of a Dene woman interpreter and negotiator, 1715 to 1717 peace, regional copper reports, and trade context.",
+          "dateScope": {
+            "from": 1715,
+            "to": 1760
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ts-map1715",
+            "ts-hearne"
+          ],
+          "locator": "Western component disappears while a remote eastern polygon remains for 1715 to 1783. Archival description of Hearne's 1770 to 1772 journey with Matonabbee and Dene companions to the Coppermine River.",
+          "dateScope": {
+            "from": 1760,
+            "to": 1783
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ts-map1783",
+            "ts-mackenzie",
+            "ts-old-providence"
+          ],
+          "locator": "Remote eastern target polygon and simultaneous Rupert's Land ownership at all tested Great Slave Lake points. Archival description and provenance of Mackenzie's 1789 northern journey and its surviving journal transcript. Official heritage account of the 1789 North West Company post near Wool Bay and Great Slave Lake trade.",
+          "dateScope": {
+            "from": 1783,
+            "to": 1800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ts-map1800",
+            "ts-state-knowledge"
+          ],
+          "locator": "Copied remote eastern polygon for the final target interval and the 1815 Canada repaint. Pages 79 to 81 synthesize late eighteenth and early nineteenth century posts, Yellowknives range, Akaitcho, conflict, trade, and later change.",
+          "dateScope": {
+            "from": 1800,
+            "to": 1815
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ts-identity-presentation"
+          ],
+          "locator": "First Nation identity discussion, communities, naming, and copper history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ts-map1530",
+            "ts-map1600",
+            "ts-map1650",
+            "ts-map1700"
+          ],
+          "locator": "Decoded target geometries, bounding boxes, and point membership across the first four files.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ts-map1715"
+          ],
+          "locator": "Decoded 1715 polygon, component count, bounds, and changed representative point owners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ts-map1783",
+            "ts-map1800"
+          ],
+          "locator": "Target hashes and point owner probes in both late snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ts-coverage",
+            "ts-map1530",
+            "ts-map1715"
+          ],
+          "locator": "Coverage count, unique decoded hashes, and direct shared arc inventory.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ts-copper-study"
+          ],
+          "locator": "Abstract and regional discussion of native copper use, movement, and attribution limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ts-case8"
+          ],
+          "locator": "Object labels and manufacturing stages in the community curated copper case.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ts-copper-study"
+          ],
+          "locator": "Archaeological synthesis of innovation, working methods, exchange, and multiple communities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ts-identity-presentation"
+          ],
+          "locator": "First Nation presentation, community authority, homeland, and chronological limits on retrospective use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ts-hearne"
+          ],
+          "locator": "Archival provenance, manuscript history, published edition differences, and scope description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ts-traditional-knowledge"
+          ],
+          "locator": "Seasonal round and resource descriptions in the community study, pages 26 to 31.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ts-case2"
+          ],
+          "locator": "Community museum account of the Mackay Lake crossing and canoe hunting technique.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ts-caribou"
+          ],
+          "locator": "Jay assessment section 12.3.2 on deflection, selection, caches, and sharing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ts-wildlife"
+          ],
+          "locator": "Jay assessment wildlife section on birds, nets, feathers, and raven observation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ts-case5"
+          ],
+          "locator": "Fish net material, construction, and named testimony in the museum case.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ts-traditional-knowledge"
+          ],
+          "locator": "Ekati study travel sequence, portage labor, dogs, tipi, food, women, and children.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ts-case3"
+          ],
+          "locator": "Fred Sangris 2015 account of Kok'eeti meetings, travel, exchange, and chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ts-wayfinding"
+          ],
+          "locator": "Pages 183 to 186, stellar bearing sequence and return to landmark navigation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ts-wayfinding-journal"
+          ],
+          "locator": "Pages 183 to 186, cairns, cloud limits, memory, and intergenerational learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ts-yamoria-map"
+          ],
+          "locator": "Community language place name map and its geographically linked narratives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ts-caribou"
+          ],
+          "locator": "Assessment descriptions of caribou products, clothing, shelters, and equipment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ts-case4"
+          ],
+          "locator": "Named women, family teaching, shared equipment, travel, aid, and the later date of the recollections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ts-case4"
+          ],
+          "locator": "Named learner, residential school context, aunt's teaching, and beadwork recollection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ts-case4"
+          ],
+          "locator": "Museum machine provenance, shared use, products, routes, and dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ts-case8"
+          ],
+          "locator": "Community curated copper objects, production stages, portability, and teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ts-wildlife"
+          ],
+          "locator": "Family camp work, seasonal tasks, ability, and caregiving summarized in the Jay materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ts-wildlife"
+          ],
+          "locator": "Yellowknives family labor, gathering, childcare, and animal work summarized in the Jay materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ts-case6"
+          ],
+          "locator": "Named mother, midwife, twins, emergency care, clothing, date, and object provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ts-wildlife"
+          ],
+          "locator": "Jay wildlife section on ptarmigan use and children's sure-footedness charms.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ts-language"
+          ],
+          "locator": "First Nation statement on passing languages, knowledge, skills, customs, values, and culture between generations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ts-case3"
+          ],
+          "locator": "Named lake, meeting partners, listed goods, sharing, and the term lemahshi.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ts-thanadelthur"
+          ],
+          "locator": "Parks Canada backgrounder on her identity, interpretation, journey, peace, and trade.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ts-hearne"
+          ],
+          "locator": "Archival scope, guide identification, company purpose, route, and documentary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ts-old-providence"
+          ],
+          "locator": "Official site history, founding date, location, trade function, and Indigenous setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ts-akaitcho-profile"
+          ],
+          "locator": "Peer reviewed biography, geography, provisioning, negotiation, rescue, conflict, and leadership scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ts-traditional-knowledge"
+          ],
+          "locator": "Community study references to medicine plant gathering and the limits of the recorded detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ts-case6"
+          ],
+          "locator": "Named midwife testimony, immediate newborn care, cord care, warmth, and second delivery.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ts-caribou"
+          ],
+          "locator": "Caribou sharing and caches combined with seasonal resource planning in the assessment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ts-case6"
+          ],
+          "locator": "Named midwife, emergency birth, cold-weather newborn care, family provenance, and chronological limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ts-akaitcho-profile"
+          ],
+          "locator": "Documented 1821 rescue and care used only as post-window continuity context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ts-case2"
+          ],
+          "locator": "Community museum case on the named lake crossing, canoe hunting, water setting, and household-treatment limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ts-yamoria"
+          ],
+          "locator": "Yellowknives Dene version of the giant beaver story and named river places.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ts-copper-study"
+          ],
+          "locator": "Archaeological preservation and material bias used to bound sanitation inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ts-mackenzie"
+          ],
+          "locator": "Negative finding from the reviewed travel journal corpus, with preservation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ts-traditional-knowledge"
+          ],
+          "locator": "Modern water and waste recommendations, explicitly separated from target-period sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ts-phonology"
+          ],
+          "locator": "Article introduction, language name and status, speaker acknowledgments, and notation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ts-neh"
+          ],
+          "locator": "Modern documentation project date and scope establish why its orthography cannot be back-projected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ts-language"
+          ],
+          "locator": "Yellowknives Dene First Nation language and culture program statement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ts-dene-laws"
+          ],
+          "locator": "Museum education resource, language versions, and named ethical teachings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ts-map1800",
+            "ts-framework"
+          ],
+          "locator": "Atlas endpoint seam and living Akaitcho institutions documented by the parties themselves.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ts-map1800",
+            "ts-framework"
+          ],
+          "locator": "Copied remote eastern polygon for the final target interval and the 1815 Canada repaint. Parties' agreement identifying current constituent First Nations, asserted land relationships, distinct culture, and continuing negotiation.",
+          "dateScope": {
+            "year": 1815
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "t-atsaot-ine",
+        "name": "T'atsaot'ine",
+        "aliases": [
+          "Yellowknives",
+          "Copper People"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 1530,
+        "to": 1815,
+        "circa": true,
+        "card": "cards/t-atsaot-ine.json",
+        "dateBasis": "map_coverage",
+        "summary": "T'atsaot'ine, or Copper People, connects to Yellowknives Dene history around Great Slave Lake; the atlas polygons are badly misplaced.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            -123.07983079830798,
+            58.89622734350522,
+            -61.20961209612096,
+            73.8793971126915
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            -123.07983079830798,
+            58.89622734350522,
+            -61.20961209612096,
+            73.8793971126915
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1650,
+            "to": 1700,
+            "precision": 3
+          },
+          "bounds": [
+            -123.07983079830798,
+            58.89622734350522,
+            -61.20961209612096,
+            73.8793971126915
+          ]
+        },
+        {
+          "file": "world-1700.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1700,
+            "to": 1715,
+            "precision": 3
+          },
+          "bounds": [
+            -123.07983079830798,
+            58.89622734350522,
+            -61.20961209612096,
+            73.8793971126915
+          ]
+        },
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            -89.99549995499954,
+            61.78945422040995,
+            -61.20961209612096,
+            73.8793971126915
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            -89.99549995499954,
+            61.790141484595964,
+            -61.20961209612096,
+            73.87907817777484
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "t-atsaot-ine",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            -89.99549995499954,
+            61.790141484595964,
+            -61.20961209612096,
+            73.87907817777484
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": [
+    "The exact missing record is t-atsaot-ine, indexed once as T'atsaot'ine with Yellowknives alias from 1530 to 1815.",
+    "The label is treated as a people and cultural history, not the centralized state kind imported by the basemap pipeline.",
+    "Living Yellowknives Dene communities and historic T'atsaot'ine relationships overlap but are not reduced to one timeless membership list.",
+    "All fifty border snapshots were audited; seven exact features occur in seven files and form five unique decoded geometries.",
+    "Every exact target polygon excludes Yellowknife, Dettah, and Ndilo; the 1715, 1783, and 1800 versions retain only a distant eastern Arctic component.",
+    "The 1530 to 1815 interval is map coverage, not a foundation or extinction chronology.",
+    "Later oral histories and museum objects are labeled as remembered knowledge or comparison rather than silently back-projected facts.",
+    "No secure contemporaneous written-language sample exists for the exact people and window; later orthographies and outsider spellings are not substituted.",
+    "The 1815 endpoint is a Canada repaint and continuity, with fell null and no invented successor association."
+  ]
+}
