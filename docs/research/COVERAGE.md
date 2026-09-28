@@ -10,9 +10,9 @@ Regional queues are work-planning hints; cross-continental identities require re
 | --- | ---: |
 | indexedRecords | 3045 |
 | summaries | 2512 |
-| cards | 1342 |
-| uniqueCardFiles | 1168 |
-| missingCards | 1703 |
+| cards | 1346 |
+| uniqueCardFiles | 1172 |
+| missingCards | 1699 |
 | independentlyReviewedNarratives | 50 |
 | reviewedIdentities | 10 |
 | reviewedChronologies | 0 |
@@ -22,10 +22,10 @@ Regional queues are work-planning hints; cross-continental identities require re
 | Geographic queue hint | Records | Cards present | Narratives independently reviewed |
 | --- | ---: | ---: | ---: |
 | Africa | 255 | 245 | 18 |
-| Asia | 485 | 396 | 0 |
+| Asia | 485 | 398 | 0 |
 | Europe | 367 | 290 | 19 |
-| North America | 994 | 225 | 10 |
-| Oceania | 399 | 37 | 3 |
+| North America | 994 | 226 | 10 |
+| Oceania | 399 | 38 | 3 |
 | South America | 452 | 81 | 3 |
 | Unlocated | 111 | 85 | 1 |
 

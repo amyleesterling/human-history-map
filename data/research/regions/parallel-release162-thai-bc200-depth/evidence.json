@@ -1,0 +1,938 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release162-thai-bc200 research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "tb-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed identity, name, kind, interval, approximation flag, and the separate earlier thai record."
+    },
+    {
+      "id": "tb-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing-card status, observed interval, border-file count, ownership, and unreviewed audit fields."
+    },
+    {
+      "id": "tb-missing",
+      "title": "Human History Map missing-card queue",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms thai-bc200 is independently missing and has no staged draft or assigned research packet."
+    },
+    {
+      "id": "tb-import",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Shows the unusable modern Muay Thai import attached to this second-century BCE atlas record."
+    },
+    {
+      "id": "tb-map300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Decoded pre-appearance control for point ownership, neighboring labels, overlaps, and atlas seams."
+    },
+    {
+      "id": "tb-map200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Decoded exact target geometry, point probes, shared topology arcs, owners, interval, and target feature count."
+    },
+    {
+      "id": "tb-map100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Decoded exact endpoint control demonstrating disappearance without one synchronized historical replacement."
+    },
+    {
+      "id": "tb-map1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Decoded post-end control illustrating later atlas repainting and persistent geographic gaps."
+    },
+    {
+      "id": "tb-thai-card",
+      "title": "Human History Map earlier Thai-label research card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/thai.json",
+      "note": "Documents the separate 2000 to 1500 BCE anachronistic record and why its geography cannot be shared here."
+    },
+    {
+      "id": "tb-kra-oxford",
+      "title": "The Kra-Dai Languages",
+      "url": "https://academic.oup.com/edited-volume/61882/chapter-abstract/547720885",
+      "note": "Academic linguistic overview distinguishing Thai and Tai from the wider diverse Kra-Dai language family."
+    },
+    {
+      "id": "tb-dian-wetlands",
+      "title": "Bronze Age wetland landscapes and political formations in southwest China",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278416515000835",
+      "note": "Archaeological synthesis of Dian basin settlements, political economy, rice farming, livestock, bronze, and mortuary evidence."
+    },
+    {
+      "id": "tb-pyu-nomination",
+      "title": "Pyu Ancient Cities World Heritage nomination dossier",
+      "url": "https://whc.unesco.org/uploads/nominations/1444.pdf",
+      "note": "Official archaeological dossier for chronology, urban landscapes, water control, production, trade, religion, and burials."
+    },
+    {
+      "id": "tb-kra-chula",
+      "title": "Kra-Dai Languages",
+      "url": "https://www.arts.chula.ac.th/chulaseal/publication/kra-dai-languages/",
+      "note": "University linguistic overview of family diversity, modern distribution, and historical spread across southern China and Southeast Asia."
+    },
+    {
+      "id": "tb-kra-phylo",
+      "title": "Phylogenetic evidence reveals early Kra-Dai divergence and dispersal",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10616200/",
+      "note": "Peer-reviewed language-tree model whose uncertainty prevents assigning reconstructed speech to archaeological sites or broad polygons."
+    },
+    {
+      "id": "tb-dian-hk",
+      "title": "Hunting and Rituals: Treasures from the Ancient Dian Kingdom",
+      "url": "https://hk.history.museum/en/web/mh/exhibition/2004_past_01.html",
+      "note": "Public museum account of excavated Dian cemeteries, bronzes, material culture, everyday scenes, warfare, and ritual."
+    },
+    {
+      "id": "tb-dian-swroad",
+      "title": "The Southwest Silk Road: artistic exchange and transmission in early China",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/southwest-silk-road-artistic-exchange-and-transmission-in-early-china/52A6FFFC54AD12882A1657CB32BBE485",
+      "note": "Peer-reviewed study of Dian bronzes, cowrie containers, imagery, exchange, and distinctive lost-wax metalworking."
+    },
+    {
+      "id": "tb-dian-agriculture",
+      "title": "Two-season agriculture and irrigated rice during the Dian",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10124801/",
+      "note": "Open research record for directly dated crops, mixed agriculture, vertical landscapes, seasonal cropping, and cautious irrigation inference."
+    },
+    {
+      "id": "tb-dian-seal",
+      "title": "Gold Seal of the King of Dian",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202110/t20211028_251978.shtml",
+      "note": "National Museum of China object record for material, snake knob, seal-script inscription, find context, and 109 BCE interpretation."
+    },
+    {
+      "id": "tb-dian-seal-context",
+      "title": "Seal of the King of Dian and Han relations",
+      "url": "https://www.neac.gov.cn/seac/c103614/202308/1167088.shtml",
+      "note": "Official contextual account connecting the excavated inscription with the 109 BCE settlement and its ambiguous political status."
+    },
+    {
+      "id": "tb-dian-cowrie",
+      "title": "Dian cowrie container",
+      "url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/CI00004220",
+      "note": "Official museum object page identifying a characteristic bronze cowrie container from the Dian cultural sphere."
+    },
+    {
+      "id": "tb-dian-weaving",
+      "title": "Dian cowrie container with weaving scene",
+      "url": "https://quod.lib.umich.edu/h/hart/x-782091/1",
+      "note": "University library object record for a second-to-first-century BCE Shizhaishan bronze scene showing textile production."
+    },
+    {
+      "id": "tb-dian-crania",
+      "title": "Cranial features of Dian Culture remains from Shaomaoshan cemetery",
+      "url": "https://www.anthropol.ac.cn/CN/Y2014/V33/I02/187",
+      "note": "Physical anthropology study demonstrating what skeletal analysis can investigate and the limits of one cemetery sample."
+    },
+    {
+      "id": "tb-yelang-gov",
+      "title": "Archaeological exploration of the Kele site",
+      "url": "https://www.eguizhou.gov.cn/2022-03/30/c_729217.htm",
+      "note": "Government report on Yelang-period tombs, relics, mapping, drones, soil survey, and continuing archaeological uncertainty."
+    },
+    {
+      "id": "tb-yelang-metallurgy",
+      "title": "Yelang metallurgy and Han imperial governance of Southwest China",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305440325002171",
+      "note": "Peer-reviewed study of local and imported metal traditions and the shift toward Han commanderies after 135 BCE."
+    },
+    {
+      "id": "tb-guangxi-drums",
+      "title": "Chemical datasets of ancient bronze drums from Guangxi",
+      "url": "https://www.nature.com/articles/s40494-022-00808-0",
+      "note": "Open scientific study of drum alloying, ore signatures, decoration, chronology, communication, and interpretive limits."
+    },
+    {
+      "id": "tb-lingnan",
+      "title": "Growth and Stability Among Complex Societies in Prehistoric Lingnan",
+      "url": "https://student-journals.ucl.ac.uk/pia/article/id/283/print/",
+      "note": "Archaeological regional study of rice communities, status differences, external contacts, and varied pathways before 200 BCE."
+    },
+    {
+      "id": "tb-pyu-transition",
+      "title": "From the Iron Age to early cities at Sri Ksetra and Beikthano",
+      "url": "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/abs/from-the-iron-age-to-early-cities-at-sri-ksetra-and-beikthano-myanmar/6D02C584F0EA67B366D3EC5E13D668BA",
+      "note": "Peer-reviewed synthesis of early Pyu water control, iron, domestic ceramics, brickwork, funerary culture, literacy, and Buddhism."
+    },
+    {
+      "id": "tb-pyu-soc",
+      "title": "Pyu Ancient Cities conservation and archaeology report",
+      "url": "https://whc.unesco.org/document/185052",
+      "note": "Official field report describing ritual buildings, wells, cremation deposits, and hundreds of burial urns at Sri Ksetra."
+    },
+    {
+      "id": "tb-pyu-workshop",
+      "title": "Pyu Ancient Cities heritage workshop proceedings",
+      "url": "https://www.iseas.edu.sg/wp-content/uploads/2016/04/heritage_workshop_proceedings_complete_compressed.pdf",
+      "note": "Institutional proceedings on excavation, conservation, mortuary remains, landscapes, and responsible interpretation of the Pyu sites."
+    },
+    {
+      "id": "tb-samon-mission",
+      "title": "Mission Archéologique Française au Myanmar: past, present and future",
+      "url": "https://www.antiquity.ac.uk/projgall/pryce338",
+      "note": "Project report on eleven seasons of collaborative late-prehistoric cemetery excavation in the Samon River valley."
+    },
+    {
+      "id": "tb-samon-child",
+      "title": "Infant and child burials in the Samon Valley, Myanmar",
+      "url": "https://stillbirthday.com/wp-content/uploads/2011/08/Samon-Valley-Myanmar-Iron-Age.pdf",
+      "note": "Archaeological conference paper on child burial forms, grave grouping, miniature goods, and regional comparison."
+    },
+    {
+      "id": "tb-banwang-health",
+      "title": "Excavation and physical anthropology at Ban Wang Hi",
+      "url": "https://physicalanthro.sac.or.th/paper/48?lang=en",
+      "note": "Thai specialist database summarizing age groups, oral health, skeletal preservation, burial clusters, goods, and status interpretation."
+    },
+    {
+      "id": "tb-banwang-excavation",
+      "title": "Excavation at Ban Wang Hi, Lamphun Province",
+      "url": "https://thesiamsociety.org/knowledge-hub/uploads/research/151/663f508c65f85.pdf",
+      "note": "Detailed excavation report for a northern Thai cemetery used only as a just-outside-the-polygon edge comparator."
+    },
+    {
+      "id": "tb-thai-inscription",
+      "title": "King Ram Khamhaeng Inscription",
+      "url": "https://www.nat.go.th/mow/th-th/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%88%E0%B8%B3%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%AD%E0%B8%B5%E0%B8%A2%E0%B8%94/ArticleId/699",
+      "note": "Thailand National Archives record dating the Thai-language Ram Khamhaeng inscription to 1292 CE."
+    },
+    {
+      "id": "tb-shiji",
+      "title": "Records of the Grand Historian: Southwestern Yi",
+      "url": "https://ctext.org/shiji/xi-nan-yi-lie-zhuan/zhs",
+      "note": "Digitized primary text describing many southwestern leaders, settlements, farming, diplomacy, campaigns, and Han-era categories."
+    },
+    {
+      "id": "tb-han-resettlement",
+      "title": "Resettlement strategies and Han expansion into southwest China",
+      "url": "https://doi.org/10.1007/s12520-019-00938-w",
+      "note": "Peer-reviewed archaeological study of expansion from 135 BCE, migration, colonial encounters, Dian autonomy, and the 109 BCE seal."
+    },
+    {
+      "id": "tb-plants-sw",
+      "title": "People and Plants in Ancient Southwest China",
+      "url": "https://edizionicafoscari.it/media/pdf/books/978-88-6969-936-8/978-88-6969-936-8.pdf",
+      "note": "Open scholarly synthesis of first-millennium BCE crops, Dian sites, environment, texts, exchange, and 122 to 109 BCE events."
+    },
+    {
+      "id": "tb-han-impact",
+      "title": "China’s Early Impact on Eastern Yunnan",
+      "url": "https://journals.lib.washington.edu/index.php/JIPA/article/view/14728",
+      "note": "Archaeological comparison of historical accounts with Dian burial objects before and after Han incorporation."
+    },
+    {
+      "id": "tb-dian-settlement",
+      "title": "Rediscovering the settlement system of the Dian kingdom",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A01A5609269675FE61CEF53D63E5F612/S0003598X00062815a.pdf/rediscovering-the-settlement-system-of-the-dian-kingdom-in-bronze-age-southern-china.pdf",
+      "note": "Peer-reviewed landscape survey mapping Dian settlements, hierarchy, wetlands, political centers, and later imperial reorganization."
+    },
+    {
+      "id": "tb-dian-social",
+      "title": "Reconsidering social hierarchy in Dian culture",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416505000309",
+      "note": "Mortuary analysis of hundreds of Dian graves testing hierarchy while warning against conflating texts, images, and burials."
+    },
+    {
+      "id": "tb-dian-survey",
+      "title": "Preliminary findings from the Lake Dian Basin survey",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/char-2015-0015/html",
+      "note": "Joint archaeological survey report covering fieldwalking, cores, Bronze Age sites, and mixed Bronze Age to Han remains."
+    },
+    {
+      "id": "tb-pyu-stele",
+      "title": "A First-Century Stele from Sriksetra",
+      "url": "https://www.persee.fr/doc/befeo_0336-1519_2012_num_99_1_6151?pageId=T1_19",
+      "note": "Scholarly chronology review reporting broad radiocarbon ranges and the need to separate earliest activity from later cities."
+    },
+    {
+      "id": "tb-pyu-water",
+      "title": "Water Management System of Sriksetra and Beikthano",
+      "url": "https://zenodo.org/records/22353739",
+      "note": "Research presentation on canals, reservoirs, drainage, water capture, and interpretation at two Pyu cities."
+    },
+    {
+      "id": "tb-pyu-water-conference",
+      "title": "New evidence for Sri Ksetra water management",
+      "url": "https://aseasuk.org/wp-content/uploads/2023/12/aseas-conference-2023-book-of-abstracts-final.pdf",
+      "note": "Archaeology conference abstract emphasizing phased water systems, radiocarbon evidence, and later landscape alteration."
+    }
+  ],
+  "entities": [
+    {
+      "id": "thai-bc200",
+      "card": "data/cards/thai-bc200.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tb-index",
+            "tb-map200",
+            "tb-map100",
+            "tb-kra-oxford",
+            "tb-dian-wetlands",
+            "tb-pyu-nomination"
+          ],
+          "locator": "Exact indexed identity, name, kind, interval, approximation flag, and the separate earlier thai record. Decoded exact target geometry, point probes, shared topology arcs, owners, interval, and target feature count. Decoded exact endpoint control demonstrating disappearance without one synchronized historical replacement. Academic linguistic overview distinguishing Thai and Tai from the wider diverse Kra-Dai language family. Archaeological synthesis of Dian basin settlements, political economy, rice farming, livestock, bronze, and mortuary evidence. Official archaeological dossier for chronology, urban landscapes, water control, production, trade, religion, and burials.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tb-map300",
+            "tb-dian-social",
+            "tb-lingnan"
+          ],
+          "locator": "Decoded pre-appearance control for point ownership, neighboring labels, overlaps, and atlas seams. Mortuary analysis of hundreds of Dian graves testing hierarchy while warning against conflating texts, images, and burials. Archaeological regional study of rice communities, status differences, external contacts, and varied pathways before 200 BCE.",
+          "dateScope": {
+            "from": -300,
+            "to": -250
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tb-dian-settlement",
+            "tb-samon-mission"
+          ],
+          "locator": "Peer-reviewed landscape survey mapping Dian settlements, hierarchy, wetlands, political centers, and later imperial reorganization. Project report on eleven seasons of collaborative late-prehistoric cemetery excavation in the Samon River valley.",
+          "dateScope": {
+            "from": -250,
+            "to": -200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tb-map200",
+            "tb-pyu-stele"
+          ],
+          "locator": "Decoded exact target geometry, point probes, shared topology arcs, owners, interval, and target feature count. Scholarly chronology review reporting broad radiocarbon ranges and the need to separate earliest activity from later cities.",
+          "dateScope": {
+            "from": -200,
+            "to": -175
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "tb-dian-agriculture",
+            "tb-pyu-transition"
+          ],
+          "locator": "Open research record for directly dated crops, mixed agriculture, vertical landscapes, seasonal cropping, and cautious irrigation inference. Peer-reviewed synthesis of early Pyu water control, iron, domestic ceramics, brickwork, funerary culture, literacy, and Buddhism.",
+          "dateScope": {
+            "from": -175,
+            "to": -150
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tb-yelang-gov",
+            "tb-guangxi-drums"
+          ],
+          "locator": "Government report on Yelang-period tombs, relics, mapping, drones, soil survey, and continuing archaeological uncertainty. Open scientific study of drum alloying, ore signatures, decoration, chronology, communication, and interpretive limits.",
+          "dateScope": {
+            "from": -150,
+            "to": -135
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "tb-han-resettlement",
+            "tb-shiji"
+          ],
+          "locator": "Peer-reviewed archaeological study of expansion from 135 BCE, migration, colonial encounters, Dian autonomy, and the 109 BCE seal. Digitized primary text describing many southwestern leaders, settlements, farming, diplomacy, campaigns, and Han-era categories.",
+          "dateScope": {
+            "from": -135,
+            "to": -122
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "tb-plants-sw",
+            "tb-shiji"
+          ],
+          "locator": "Open scholarly synthesis of first-millennium BCE crops, Dian sites, environment, texts, exchange, and 122 to 109 BCE events. Digitized primary text describing many southwestern leaders, settlements, farming, diplomacy, campaigns, and Han-era categories.",
+          "dateScope": {
+            "from": -122,
+            "to": -111
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "tb-map200",
+            "tb-shiji"
+          ],
+          "locator": "Decoded exact target geometry, point probes, shared topology arcs, owners, interval, and target feature count. Digitized primary text describing many southwestern leaders, settlements, farming, diplomacy, campaigns, and Han-era categories.",
+          "dateScope": {
+            "from": -111,
+            "to": -109
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "tb-dian-seal",
+            "tb-dian-seal-context",
+            "tb-map100"
+          ],
+          "locator": "National Museum of China object record for material, snake knob, seal-script inscription, find context, and 109 BCE interpretation. Official contextual account connecting the excavated inscription with the 109 BCE settlement and its ambiguous political status. Decoded exact endpoint control demonstrating disappearance without one synchronized historical replacement.",
+          "dateScope": {
+            "from": -109,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tb-index",
+            "tb-coverage",
+            "tb-missing",
+            "tb-import"
+          ],
+          "locator": "Exact index, coverage, and missing-card fields compared with the imported modern-sport text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tb-map200"
+          ],
+          "locator": "Decoded geometry metrics and positive representative point probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tb-map200"
+          ],
+          "locator": "Negative and edge representative point probes from decoded topology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tb-map200"
+          ],
+          "locator": "Direct shared-arc audit and explicit warning against historical overreading.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tb-index",
+            "tb-thai-card"
+          ],
+          "locator": "Comparison with the distinct earlier Thai-label record and shareability decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tb-kra-phylo"
+          ],
+          "locator": "Modern linguistic classification separated from archaeological identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tb-kra-phylo"
+          ],
+          "locator": "Model uncertainty and limits on assigning reconstructed languages to people.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tb-dian-seal"
+          ],
+          "locator": "Archaeological and textual identification of one bounded polity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tb-pyu-stele"
+          ],
+          "locator": "Pyu chronology and local identity carefully separated from the target label.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tb-yelang-gov",
+            "tb-yelang-metallurgy"
+          ],
+          "locator": "Yelang locality, blended material traditions, and limits on identity inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tb-dian-hk"
+          ],
+          "locator": "Museum excavation history, major sites, finds, and mortuary bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tb-dian-settlement"
+          ],
+          "locator": "Regional settlement survey and balance between ordinary and elite evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tb-pyu-stele"
+          ],
+          "locator": "Published dated sequence and explanation of chronological method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tb-samon-mission"
+          ],
+          "locator": "Project duration, cemetery focus, and evidence bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tb-banwang-excavation",
+            "tb-map200"
+          ],
+          "locator": "Just-outside excavation compared with exact decoded edge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tb-dian-agriculture"
+          ],
+          "locator": "Crop identifications, ecological niches, earlier dates, and bounded continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tb-dian-swroad"
+          ],
+          "locator": "Bronze iconography and limits of elite representation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tb-pyu-water"
+          ],
+          "locator": "Water-management landscape and cautious social inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tb-samon-mission"
+          ],
+          "locator": "Cemetery goods and limits on reconstructing food preparation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tb-dian-agriculture",
+            "tb-pyu-water-conference"
+          ],
+          "locator": "Cross-regional food synthesis bounded by diverse environments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tb-dian-swroad"
+          ],
+          "locator": "Documented casting tradition and bounded production-chain inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tb-dian-cowrie"
+          ],
+          "locator": "Museum object type, value, mortuary context, and distribution limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tb-guangxi-drums"
+          ],
+          "locator": "Scientific drum analysis and interpretive boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tb-pyu-transition"
+          ],
+          "locator": "Pyu production range and chronological limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "tb-samon-mission"
+          ],
+          "locator": "Late-prehistoric artifact categories, exchange, and identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tb-dian-weaving"
+          ],
+          "locator": "Specific textile imagery and its representational limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tb-dian-weaving"
+          ],
+          "locator": "Dated object scene and bounded labor interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tb-banwang-health",
+            "tb-map200"
+          ],
+          "locator": "Age groups, burial clusters, and exact edge qualification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tb-samon-child"
+          ],
+          "locator": "Child burial forms and careful limits on family reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tb-dian-social"
+          ],
+          "locator": "Mortuary inequality and alternative interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tb-dian-agriculture",
+            "tb-dian-swroad"
+          ],
+          "locator": "Skill complexity used for bounded learning inference and explicit school absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tb-guangxi-drums",
+            "tb-pyu-water-conference"
+          ],
+          "locator": "Technical knowledge and plausible learning settings without invented institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tb-dian-seal",
+            "tb-dian-seal-context"
+          ],
+          "locator": "Original characters, transliteration, translation, object, findspot, and date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tb-dian-seal-context"
+          ],
+          "locator": "Non-representativeness of the local court inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "tb-thai-inscription"
+          ],
+          "locator": "Official later control preventing back-projection of Thai writing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "tb-banwang-health"
+          ],
+          "locator": "Reported oral health, preservation, sex estimation, and skeletal condition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "tb-dian-crania"
+          ],
+          "locator": "Cranial study used to explain bioarchaeological scope and limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tb-banwang-health",
+            "tb-dian-crania"
+          ],
+          "locator": "Evidence limits with gentle, source-aware humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tb-plants-sw"
+          ],
+          "locator": "Explicit medical evidence absence and caution about plant function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "tb-pyu-soc",
+            "tb-dian-survey"
+          ],
+          "locator": "Water-health synthesis with distinct infrastructure questions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "tb-pyu-water"
+          ],
+          "locator": "Water-feature functions and sanitation distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "tb-pyu-soc"
+          ],
+          "locator": "Official excavation context for well, ash, burning, and urns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "tb-pyu-soc",
+            "tb-dian-survey"
+          ],
+          "locator": "Explicit latrine absence across the reviewed archaeological corpus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "tb-pyu-soc",
+            "tb-banwang-excavation"
+          ],
+          "locator": "Feature interpretation method and caution against latrine guessing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "tb-pyu-water",
+            "tb-dian-settlement"
+          ],
+          "locator": "Specific known infrastructure contrasted with absent umbrella sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "tb-dian-social"
+          ],
+          "locator": "Dian achievement and power interpreted together.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "tb-han-resettlement"
+          ],
+          "locator": "Mechanisms and uneven consequences of Han incorporation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "tb-pyu-transition"
+          ],
+          "locator": "Pyu achievements with chronological and identity bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "tb-guangxi-drums",
+            "tb-plants-sw"
+          ],
+          "locator": "Plural technological and economic achievements synthesized from regional evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tb-map100",
+            "tb-pyu-transition"
+          ],
+          "locator": "Exact endpoint seam and evidence for multiple continuities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tb-map100",
+            "tb-map1",
+            "tb-han-impact",
+            "tb-pyu-workshop",
+            "tb-kra-chula"
+          ],
+          "locator": "Decoded exact endpoint control demonstrating disappearance without one synchronized historical replacement. Decoded post-end control illustrating later atlas repainting and persistent geographic gaps. Archaeological comparison of historical accounts with Dian burial objects before and after Han incorporation. Institutional proceedings on excavation, conservation, mortuary remains, landscapes, and responsible interpretation of the Pyu sites. University linguistic overview of family diversity, modern distribution, and historical spread across southern China and Southeast Asia.",
+          "dateScope": {
+            "year": -100
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "thai-bc200",
+        "name": "Thai",
+        "kind": "culture",
+        "region": "Asia",
+        "from": -200,
+        "to": -100,
+        "circa": true,
+        "card": "cards/thai-bc200.json",
+        "dateBasis": "map_coverage",
+        "summary": "A cautious guide to the many Dian, Pyu, Himalayan, and other communities hidden beneath an anachronistic 200 to 100 BCE “Thai” atlas label.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "thai-bc200",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            83.24543245432454,
+            18.516320532783723,
+            111.25731257312572,
+            33.63644617305074
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
