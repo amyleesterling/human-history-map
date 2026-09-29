@@ -1,0 +1,901 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release177-later-han-947 research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "lh-seams-index",
+      "title": "Human History Map civilization seams index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/civilizations-seams.json",
+      "note": "Exact id, imported identity, historical interval, capital, fall, predecessor, and successor metadata."
+    },
+    {
+      "id": "lh-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One reviewed overlay interval, missing-card status, and Asia queue metadata for the exact record."
+    },
+    {
+      "id": "lh-missing",
+      "title": "Human History Map missing card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact record lacks a staged detailed card and retains an imported summary."
+    },
+    {
+      "id": "lh-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no detailed runtime card currently exists for exact id later-han-947."
+    },
+    {
+      "id": "lh-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed override currently changes the exact target identity or lifetime."
+    },
+    {
+      "id": "lh-china-overlay",
+      "title": "Human History Map China seams overlay",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/borders/china-seams.geojson",
+      "note": "Exact target polygon, stored lifetime, precision, note, and neighboring regime geometries."
+    },
+    {
+      "id": "lh-map-900",
+      "title": "Human History Map world borders at 900",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Pre-dynastic control context and exact-id absence in the historical-basemap snapshots."
+    },
+    {
+      "id": "lh-map-1000",
+      "title": "Human History Map world borders at 1000",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Post-dynastic control context and exact-id absence in the historical-basemap snapshots."
+    },
+    {
+      "id": "lh-map-1100",
+      "title": "Human History Map world borders at 1100",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Later control context showing why broad snapshot ownership cannot extend this four-year dynasty."
+    },
+    {
+      "id": "lh-associations",
+      "title": "Human History Map card association rules",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/scripts/lib/card-associations.mjs",
+      "note": "Repository rules used to validate predecessor, successor, and fall associations."
+    },
+    {
+      "id": "lh-archontology",
+      "title": "China: Later Han chronology, 947 to 951",
+      "url": "https://www.archontology.org/nations/china/later_han/00_947_951_s.php",
+      "note": "Specialist regnal chronology for Liu Zhiyuan, Liu Chengyou, Kaifeng, and the 947 to 951 dynasty."
+    },
+    {
+      "id": "lh-jstor-annals-han",
+      "title": "Historical Records of the Five Dynasties, Annals X: Han",
+      "url": "https://www.jstor.org/stable/10.7312/davi12826.18",
+      "note": "Scholarly translation of Ouyang Xiu on the Later Han founder, court, reign, and succession."
+    },
+    {
+      "id": "lh-jstor-families",
+      "title": "Historical Records of the Five Dynasties, Hereditary Houses: Han",
+      "url": "https://www.jstor.org/stable/10.7312/davi12826.26",
+      "note": "Scholarly translation covering Empress Li, the ruling family, court resources, and kin politics."
+    },
+    {
+      "id": "lh-jstor-subjects",
+      "title": "Historical Records of the Five Dynasties, Biographies of Han Subjects",
+      "url": "https://www.jstor.org/stable/10.7312/davi12826.32",
+      "note": "Scholarly translation of biographies for officials, writers, commanders, and court decisions."
+    },
+    {
+      "id": "lh-jstor-annals-zhou",
+      "title": "Historical Records of the Five Dynasties, Annals XI: Zhou",
+      "url": "https://www.jstor.org/stable/10.7312/davi12826.19",
+      "note": "Scholarly translation for Guo Wei, the 951 transition, and the founding of Later Zhou."
+    },
+    {
+      "id": "lh-cambridge-history",
+      "title": "The Cambridge History of China, Volume 5, Part One excerpt",
+      "url": "https://assets.cambridge.org/97805218/12481/excerpt/9780521812481_excerpt.pdf",
+      "note": "Academic synthesis identifying the Shatuo founder, Taiyuan base, Liao withdrawal, and short reign."
+    },
+    {
+      "id": "lh-uw-liao",
+      "title": "The Khitans and the Liao Dynasty",
+      "url": "https://depts.washington.edu/silkroad/exhibit/khitans/essay.html",
+      "note": "University account of Liao power, the fall of Later Jin, and withdrawal from north China in 947."
+    },
+    {
+      "id": "lh-drought",
+      "title": "Drought and locust disasters in the Five Dynasties period",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1040618214009215",
+      "note": "Peer-reviewed environmental reconstruction documenting severe Yellow River drought and locust crises in 942 to 944."
+    },
+    {
+      "id": "lh-ctext-liu",
+      "title": "Chinese Text Project Data Wiki: Liu Zhiyuan",
+      "url": "https://ctext.org/datawiki.pl?if=gb&remap=gb&res=625539",
+      "note": "Primary-text linked authority record for the founder, personal names, reign title, and dynastic identity."
+    },
+    {
+      "id": "lh-zz-285",
+      "title": "Zizhi Tongjian, volume 285",
+      "url": "https://24histories.com/zizhitongjian/285",
+      "note": "Primary chronicle translation for 945 to 946 warfare, shortages, provisioning, and Liu Zhiyuan before accession."
+    },
+    {
+      "id": "lh-zz-289",
+      "title": "Zizhi Tongjian, volume 289",
+      "url": "https://24histories.com/zizhitongjian/289",
+      "note": "Primary chronicle translation for 950 rebellions, purges, Guo Wei revolt, death, relief, and transition."
+    },
+    {
+      "id": "lh-zz-290",
+      "title": "Zizhi Tongjian, volume 290",
+      "url": "https://24histories.com/zizhitongjian/290",
+      "note": "Primary chronicle translation for the early Later Zhou settlement and continuing Northern Han opposition."
+    },
+    {
+      "id": "lh-british-coin",
+      "title": "British Museum: coin, Han Yuan tongbao",
+      "url": "https://www.britishmuseum.org/collection/object/C_1979-0305-5",
+      "note": "Catalogued Later Han bronze cash coin dated 947 to 948 with dimensions, weight, ruler, and inscription."
+    },
+    {
+      "id": "lh-nmc-coin",
+      "title": "National Museum of China: Han Yuan tongbao coin",
+      "url": "https://www.chnmuseum.cn/zp/zpml/hb/202203/t20220301_253956.shtml",
+      "note": "Official museum catalog with exact legend, Qianyou dating, measurements, calligraphic forms, and reverse marks."
+    },
+    {
+      "id": "lh-bok-coin",
+      "title": "Bank of Korea Currency Museum: Han Yuan Tong Bao",
+      "url": "https://www.bok.or.kr/museum/singl/crrncySearch/view.do?crrncySn=4588&listType=G&menuNo=700127&pageIndex=214",
+      "note": "Official currency museum record for a 948 issue, diameter, and Kaiyuan coin model."
+    },
+    {
+      "id": "lh-met-jar",
+      "title": "Metropolitan Museum: jar, Five Dynasties",
+      "url": "https://www.metmuseum.org/art/collection/search/42449",
+      "note": "Museum object record for tenth-century Hebei Xing ware associated with court use and overseas exchange."
+    },
+    {
+      "id": "lh-cleveland-mirror",
+      "title": "Cleveland Museum: mirror with birds and floral motifs",
+      "url": "https://www.clevelandart.org/art/1995.394",
+      "note": "Museum object record for an early to mid tenth-century Chinese bronze mirror and its dimensions."
+    },
+    {
+      "id": "lh-cleveland-jar",
+      "title": "Cleveland Museum: jar, northern China",
+      "url": "https://www.clevelandart.org/art/1959.47",
+      "note": "Museum object record for northern Chinese glazed stoneware made during the ninth or tenth century."
+    },
+    {
+      "id": "lh-met-ceramics",
+      "title": "Highlights of Chinese Ceramics",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Highlights_of_Chinese_Ceramics_The_Metropolitan_Museum_of_Art_Bulletin_v_33_no_3_Fall_1975.pdf",
+      "note": "Museum scholarship showing ceramic production and technical continuity during Five Dynasties political division."
+    },
+    {
+      "id": "lh-smithsonian-epitaph",
+      "title": "Smithsonian: epitaph for Widow Gao, 935",
+      "url": "https://www.si.edu/es/object/epitaph-widow-gao-867-935-standard-script-tanggaoshimuzhiming%3Afsg_F1976.22",
+      "note": "Museum record for a near-contemporary standard-script funerary inscription naming a woman and calligrapher."
+    },
+    {
+      "id": "lh-sinica-rubbings",
+      "title": "Academia Sinica: Five Dynasties and Song rubbings database",
+      "url": "https://dap.ihp.sinica.edu.tw/en/database/8/",
+      "note": "Research database describing epitaph evidence for family, marriage, women, mobility, office, and funerals."
+    },
+    {
+      "id": "lh-ntnu-epitaphs",
+      "title": "A study of Five Dynasties epitaph writing",
+      "url": "https://jntnu.ntnu.edu.tw/jll/PaperContent.aspx?ItemId=1902&cid=273&loc=en",
+      "note": "University journal study noting expanded epitaph production and its concentration among officials and families."
+    },
+    {
+      "id": "lh-tackett",
+      "title": "The transformation of medieval Chinese elites",
+      "url": "https://history.berkeley.edu/sites/default/files/tackett_dissertation.pdf",
+      "note": "University dissertation mapping northern officeholder burials around Kaifeng, Luoyang, Taiyuan, and other centers."
+    },
+    {
+      "id": "lh-schottenhammer",
+      "title": "A Buried Past: epitaphs and social history",
+      "url": "https://epub.ub.uni-muenchen.de/16114/1/a_buried_past.pdf",
+      "note": "University scholarship on epitaphs as evidence for kinship, careers, marriage, migration, and elite memory."
+    },
+    {
+      "id": "lh-ictm-musicians",
+      "title": "ICTM conference abstracts: Wang Chuzhi tomb musicians",
+      "url": "https://ictmusic.org/sites/default/files/documents/world%20conferences/books%20of%20abstracts/abstracts%202004%20ictm%20world%20conference.pdf",
+      "note": "Scholarly conference research on tenth-century tomb musicians and performance imagery in north China."
+    },
+    {
+      "id": "lh-nyu-screens",
+      "title": "Jonathan Hay: screens and spatial culture in tenth-century China",
+      "url": "https://ifa.nyu.edu/assets/pdfs/faculty/hay_PDFs/Unpublished_talk/10th-12-%20Hay.pdf",
+      "note": "University art-historical study of screens, interiors, representation, and social space around the tenth century."
+    },
+    {
+      "id": "lh-umd-printing",
+      "title": "Printing, canon, and the Nine Classics project",
+      "url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/82e566dd-d030-4201-9942-4cfee8d18033/content",
+      "note": "University dissertation covering the 932 to 953 woodblock printing project and textual authentication."
+    },
+    {
+      "id": "lh-field-rubbings",
+      "title": "Field Museum: Chinese rubbings collection",
+      "url": "https://www.fieldmuseum.org/project-narrative/science/chinese-rubbings-collection",
+      "note": "Museum explanation of ink rubbing as a method for transmitting inscriptions and carved texts."
+    },
+    {
+      "id": "lh-kci-medicine",
+      "title": "Medical governance from Sui through Five Dynasties",
+      "url": "https://journal.kci.go.kr/jkmc/archive/articleView?artiId=ART001215852",
+      "note": "Peer-reviewed study of changing medical institutions and policy across the Sui, Tang, and Five Dynasties."
+    },
+    {
+      "id": "lh-cambridge-poppy",
+      "title": "Buddhist medical practices and the opium poppy in Song China",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/39939D159A8C3CB9F65266D8FFD2F6DF/S0025727319000450a.pdf/div-class-title-a-gift-from-the-buddhist-monastery-the-role-of-buddhist-medical-practices-in-the-assimilation-of-the-opium-poppy-in-chinese-medicine-during-the-song-dynasty-960-1279-div.pdf",
+      "note": "Peer-reviewed medical history using early Song memory of tenth-century court beverages and Buddhist transmission."
+    },
+    {
+      "id": "lh-ucl-kaifeng",
+      "title": "Urban archaeology and the buried cities of Kaifeng",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10183429/1/Manuscript_with_author_details_revised.pdf",
+      "note": "University archaeology study of Kaifeng stratigraphy, water, bridges, streets, and later urban infrastructure."
+    },
+    {
+      "id": "lh-columbia-book",
+      "title": "Columbia University Press: Historical Records of the Five Dynasties",
+      "url": "https://cup.columbia.edu/book/historical-records-of-the-five-dynasties/9780231128278/",
+      "note": "University press description of Ouyang Xiu, the translated work, its perspective, and scholarly apparatus."
+    },
+    {
+      "id": "lh-jstor-imperial",
+      "title": "Imperial China 900 to 1800: The Five Dynasties",
+      "url": "https://www.jstor.org/stable/j.ctv1cbn3m5.5",
+      "note": "Academic chapter situating the Five Dynasties within political fragmentation and institutional continuity."
+    },
+    {
+      "id": "lh-smithsonian-book",
+      "title": "Smithsonian Libraries: The Five Dynasties and Ten Kingdoms",
+      "url": "https://www.si.edu/object/five-dynasties-and-ten-kingdoms-edited-peter-lorge%3Asiris_sil_1036906",
+      "note": "Institutional catalog record for a scholarly volume on the period and its historiographic framing."
+    }
+  ],
+  "entities": [
+    {
+      "id": "later-han-947",
+      "card": "data/cards/later-han-947.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "lh-archontology",
+            "lh-jstor-annals-han"
+          ],
+          "locator": "Specialist regnal chronology for Liu Zhiyuan, Liu Chengyou, Kaifeng, and the 947 to 951 dynasty. Scholarly translation of Ouyang Xiu on the Later Han founder, court, reign, and succession.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "lh-drought"
+          ],
+          "locator": "Peer-reviewed environmental reconstruction documenting severe Yellow River drought and locust crises in 942 to 944.",
+          "dateScope": {
+            "from": 943,
+            "to": 944
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "lh-zz-285"
+          ],
+          "locator": "Primary chronicle translation for 945 to 946 warfare, shortages, provisioning, and Liu Zhiyuan before accession.",
+          "dateScope": {
+            "from": 944,
+            "to": 945
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "lh-zz-285"
+          ],
+          "locator": "Primary chronicle translation for 945 to 946 warfare, shortages, provisioning, and Liu Zhiyuan before accession.",
+          "dateScope": {
+            "from": 945,
+            "to": 946
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "lh-uw-liao"
+          ],
+          "locator": "University account of Liao power, the fall of Later Jin, and withdrawal from north China in 947.",
+          "dateScope": {
+            "from": 946,
+            "to": 947
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "lh-cambridge-history"
+          ],
+          "locator": "Academic synthesis identifying the Shatuo founder, Taiyuan base, Liao withdrawal, and short reign.",
+          "dateScope": {
+            "from": 947,
+            "to": 948
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "lh-ctext-liu"
+          ],
+          "locator": "Primary-text linked authority record for the founder, personal names, reign title, and dynastic identity.",
+          "dateScope": {
+            "from": 948,
+            "to": 949
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "lh-zz-289"
+          ],
+          "locator": "Primary chronicle translation for 950 rebellions, purges, Guo Wei revolt, death, relief, and transition.",
+          "dateScope": {
+            "from": 949,
+            "to": 950
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "lh-zz-289"
+          ],
+          "locator": "Primary chronicle translation for 950 rebellions, purges, Guo Wei revolt, death, relief, and transition.",
+          "dateScope": {
+            "from": 950,
+            "to": 951
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "lh-seams-index",
+            "lh-ctext-liu"
+          ],
+          "locator": "Exact index identity, founder, capital, base, and explicit namesake guardrails.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "lh-coverage",
+            "lh-missing",
+            "lh-card-index",
+            "lh-overrides"
+          ],
+          "locator": "Coverage, missing status, absence of prior card, and stored lifetime.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "lh-map-900",
+            "lh-map-1000",
+            "lh-map-1100",
+            "lh-china-overlay"
+          ],
+          "locator": "Fifty-snapshot absence and exact overlay topology and bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "lh-china-overlay"
+          ],
+          "locator": "Named inside and outside probes plus interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "lh-china-overlay",
+            "lh-jstor-imperial",
+            "lh-smithsonian-book"
+          ],
+          "locator": "Identical predecessor and successor outline and broader historical interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "lh-smithsonian-book"
+          ],
+          "locator": "Founder career, accession route, capital entry, and limits of nominal authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "lh-jstor-subjects"
+          ],
+          "locator": "Founder death, young successor, senior ministers, and political tension.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "lh-jstor-subjects"
+          ],
+          "locator": "Su Fengji biography, documentary work, kin connection, and career path.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "lh-jstor-families"
+          ],
+          "locator": "Empress Li advice, palace stores, soldier rewards, and source genre.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "lh-columbia-book"
+          ],
+          "locator": "Later compilation, moral perspective, translation context, and speech caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "lh-jstor-imperial"
+          ],
+          "locator": "Military provisioning categories and household fiscal consequences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "lh-jstor-subjects"
+          ],
+          "locator": "Rebellion suppression, enhanced commanders, and structural military dilemma.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "lh-british-coin"
+          ],
+          "locator": "Exact museum coin date, metal, dimensions, weight, and economic limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "lh-nmc-coin"
+          ],
+          "locator": "Official catalog date, measurements, reverse marks, and gentle bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "lh-bok-coin"
+          ],
+          "locator": "Official museum issue date, size, model, function, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "lh-jstor-families"
+          ],
+          "locator": "Empress origin and marriage tradition with representativeness limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "lh-jstor-families"
+          ],
+          "locator": "Household purge, collective punishment, and political kinship risk.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "lh-sinica-rubbings"
+          ],
+          "locator": "Epitaph topics, social bias, and missing ordinary families.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "lh-ntnu-epitaphs"
+          ],
+          "locator": "Epitaph expansion, elite concentration, and visibility limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "lh-tackett"
+          ],
+          "locator": "Elite burial geography, mobility, continuity, and class bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "lh-smithsonian-book"
+          ],
+          "locator": "Subsistence work, environmental and military disruption, and source silence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "lh-met-jar"
+          ],
+          "locator": "Object date, Hebei production, court and exchange context, and ownership limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "lh-cleveland-jar"
+          ],
+          "locator": "Northern jar date, material continuity, likely functions, and attribution limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "lh-met-ceramics"
+          ],
+          "locator": "Ceramic continuity, production chain, workers, and regime-change interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "lh-zz-285"
+          ],
+          "locator": "Provisioning network, rural-urban exchange, and crisis-source limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "lh-jstor-subjects"
+          ],
+          "locator": "Education pathways and explicit limits for children outside elite biographies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "lh-umd-printing"
+          ],
+          "locator": "Nine Classics dates, editorial work, continuity, and access limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "lh-field-rubbings"
+          ],
+          "locator": "Rubbing method, transmission value, modern collection, and historical limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "lh-smithsonian-epitaph"
+          ],
+          "locator": "Near-contemporary dated object, script, named woman, calligrapher, and context boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "lh-nmc-coin",
+            "lh-british-coin"
+          ],
+          "locator": "Exact coin legend, romanization, script description, translation, object, and date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "lh-cleveland-mirror"
+          ],
+          "locator": "Mirror date, material, motifs, domestic setting, and gentle limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "lh-ictm-musicians"
+          ],
+          "locator": "Tomb musician imagery, performance context, elite commission, and representativeness limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "lh-nyu-screens"
+          ],
+          "locator": "Screen functions, elite spatial culture, and ordinary housing evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "lh-schottenhammer"
+          ],
+          "locator": "Epitaph ritual, production, formulas, social patterns, and representation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "lh-columbia-book"
+          ],
+          "locator": "Chronicle selection, ritual focus, missing leisure, and evidence response.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "lh-kci-medicine"
+          ],
+          "locator": "Long medical institutional history and exact-regime evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "lh-drought"
+          ],
+          "locator": "Health risks from war and famine plus missing patient-level evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "lh-cambridge-poppy"
+          ],
+          "locator": "Earlier court remedy tradition, transmission context, and no backdating.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "lh-zz-289"
+          ],
+          "locator": "Post-battle burials, famine victims, restored order, and medical evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "lh-kci-medicine"
+          ],
+          "locator": "Ordinary health needs and explicit absence of exact-regime practitioners and institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "lh-ucl-kaifeng"
+          ],
+          "locator": "Kaifeng water systems, buried layers, dating problem, and no automatic backdating.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "lh-china-overlay"
+          ],
+          "locator": "Environmental range, water users, necessary supply, and infrastructure caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "lh-ucl-kaifeng"
+          ],
+          "locator": "Later urban features, dating requirement, toilets, and gentle time-travel humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "lh-ucl-kaifeng"
+          ],
+          "locator": "Explicit bounded absence for toilets, waste systems, workers, and health effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "lh-smithsonian-book"
+          ],
+          "locator": "Urban and military waste pressures, source silence, and balanced inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "lh-jstor-imperial"
+          ],
+          "locator": "Restoration, capital move, institutions, duration, and collective labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "lh-bok-coin"
+          ],
+          "locator": "Coinage achievement, modeled design, production, authority, and circulation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "lh-jstor-imperial"
+          ],
+          "locator": "Rebellion victory, empowered generals, purge response, and structural consequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "lh-zz-290",
+            "lh-associations"
+          ],
+          "locator": "Exact successor, dissolution, separate Northern Han, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "lh-seams-index",
+            "lh-china-overlay"
+          ],
+          "locator": "Editorial chronology, namesake separation, full audit, and geometry restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "lh-jstor-annals-zhou",
+            "lh-china-overlay"
+          ],
+          "locator": "Scholarly translation for Guo Wei, the 951 transition, and the founding of Later Zhou. Exact target polygon, stored lifetime, precision, note, and neighboring regime geometries.",
+          "dateScope": {
+            "year": 951
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "later-han-947",
+        "name": "Later Han (Five Dynasties)",
+        "aliases": [
+          "Later Han of the Five Dynasties",
+          "後漢",
+          "Hou Han (947 to 951)"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 947,
+        "to": 951,
+        "circa": false,
+        "card": "cards/later-han-947.json",
+        "dateBasis": "historical",
+        "summary": "North Chinese dynasty founded by Liu Zhiyuan in 947 and replaced by Later Zhou in 951.",
+        "summarySource": null,
+        "fell": {
+          "year": 951,
+          "to": [
+            "later-zhou"
+          ],
+          "text": "Guo Wei took Kaifeng and founded Later Zhou."
+        },
+        "predecessors": [
+          "later-jin-936"
+        ],
+        "successors": [
+          "later-zhou"
+        ]
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": []
+    }
+  ],
+  "batchIdentityNotes": []
+}
