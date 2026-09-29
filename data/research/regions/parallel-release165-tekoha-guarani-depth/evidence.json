@@ -1,0 +1,955 @@
+{
+  "version": 1,
+  "region": "South America",
+  "researcher": "Codex parallel release165-tekoha-guarani research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "tg-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, display spelling, 1492 to 1500 interval, circa flag, and nearby Guarani-labelled records."
+    },
+    {
+      "id": "tg-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing-card status, state default, one observed interval, border count, and unreviewed identity, chronology, and border fields."
+    },
+    {
+      "id": "tg-missing",
+      "title": "Human History Map missing-card queue",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact card is missing and has no source lead or staged draft."
+    },
+    {
+      "id": "tg-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Confirms that no imported summary exists for this exact id."
+    },
+    {
+      "id": "tg-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded pre-appearance control and representative owners before the exact feature."
+    },
+    {
+      "id": "tg-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index."
+    },
+    {
+      "id": "tg-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded endpoint control showing removal of the exact feature and a broad regional repaint."
+    },
+    {
+      "id": "tg-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded later control showing unchanged representative owners after the 1500 repaint."
+    },
+    {
+      "id": "tg-tupis-card",
+      "title": "Human History Map Tupis card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/tupis.json",
+      "note": "Existing broad related card audited and rejected because it has a different id, interval, geometry, and linguistic scope."
+    },
+    {
+      "id": "tg-savanna-card",
+      "title": "Human History Map Savanna hunter-gatherers card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/savanna-hunter-gatherers.json",
+      "note": "Existing overlapping umbrella card audited and rejected as a substitute for a Guarani-specific atlas correction."
+    },
+    {
+      "id": "tg-pampas-card",
+      "title": "Human History Map Pampas cultures card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/pampas-cultures.json",
+      "note": "Existing southern regional card audited to prevent geographic proximity from becoming shared identity."
+    },
+    {
+      "id": "tg-shellfish-card",
+      "title": "Human History Map Shellfish gatherers card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/shellfish-gatherers.json",
+      "note": "Existing Atlantic coast card audited and rejected because its evidence and chronology differ."
+    },
+    {
+      "id": "tg-ache-card",
+      "title": "Human History Map Aché card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/ache.json",
+      "note": "Existing Aché card audited to keep a distinct living people separate from the atlas umbrella."
+    },
+    {
+      "id": "tg-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no exact override exists and records distinct associations for related researched cards."
+    },
+    {
+      "id": "tg-isa-nandeva",
+      "title": "Guarani Ñandeva",
+      "url": "https://pib.socioambiental.org/en/Povo%3AGuarani_%C3%91andeva",
+      "note": "Instituto Socioambiental synthesis of tekoha as land, forest, water, plants, remedies, extended-family relations, and specific historical attachment rather than abstract territory."
+    },
+    {
+      "id": "tg-isa-kaiowa",
+      "title": "Guarani Kaiowá",
+      "url": "https://pib.socioambiental.org/en/Povo%3AGuarani_Kaiow%C3%A1",
+      "note": "Institutional synthesis distinguishing Ñandeva, Kaiowa, and Mbyá language, custom, ritual, social organization, religion, and historical experience."
+    },
+    {
+      "id": "tg-isa-mbya",
+      "title": "Guarani Mbyá",
+      "url": "https://pib.socioambiental.org/en/Povo%3AGuarani_Mbya",
+      "note": "Institutional synthesis of Mbyá settlement, kinship, reciprocity, mobility, forest, farming, water, and spiritual leadership, used with explicit modern and subgroup scope."
+    },
+    {
+      "id": "tg-iphan-language",
+      "title": "Guarani Mbyá language identification",
+      "url": "https://indl.iphan.gov.br/identificacao-e-caracterizacao-da-lingua-referencia/identificacao-e-caracterizacao-da-lingua-referencia-guarani-mbya/",
+      "note": "Brazilian cultural heritage inventory identifying Mbyá as one Guarani language reference alongside Ñandeva, Avá, and Kaiowa."
+    },
+    {
+      "id": "tg-paraguay-plan",
+      "title": "Paraguay National Plan for Indigenous Peoples",
+      "url": "https://www.pj.gov.py/images/contenido/ddh/Plan_Nacional_Pueblos_Indigena.pdf",
+      "note": "Official plan explaining territory as geographic, spiritual, cultural, historical, and practical, and quoting the Guarani point that land becomes tekoha through community presence and practice."
+    },
+    {
+      "id": "tg-conacyt-architecture",
+      "title": "Recovery of vernacular Guarani architecture",
+      "url": "https://www.conacyt.gov.py/sites/default/files/upload_editores/u294/Rescate-de-la-arquitectura-vernacula-guarani-ENFOQUE-TERRITORIAL.pdf",
+      "note": "Paraguayan CONACYT-supported study of tekoha, built space, forests, domestic structures, collective places, and historically specific Guarani architecture."
+    },
+    {
+      "id": "tg-iphan-parana",
+      "title": "Archaeological heritage of Paraná",
+      "url": "https://www.gov.br/iphan/pt-br/superintendencias/parana/patrimonio-arqueologico",
+      "note": "IPHAN overview of eight-thousand-year lithic sites, two-thousand-year ceramic horticultural sites, rock art, and later colonial contexts in Paraná."
+    },
+    {
+      "id": "tg-iphan-ceramists",
+      "title": "Tupiguarani potters, volume one",
+      "url": "https://bibliotecadigital.iphan.gov.br/items/4fabf4d1-4201-498d-82ed-d973911769ab",
+      "note": "IPHAN-hosted regional syntheses emphasizing variation in pottery and archaeological traditions across Brazil, Argentina, and adjacent regions."
+    },
+    {
+      "id": "tg-usp-regional",
+      "title": "A model of regional Guarani occupation in southern Brazil",
+      "url": "https://revistas.usp.br/revmae/es/article/view/89827",
+      "note": "University of São Paulo journal study of settlement distribution, site structure, artifacts, social networks, intercultural contact, and varied environmental zones around Laguna dos Patos."
+    },
+    {
+      "id": "tg-habitus-settlements",
+      "title": "Regional organization of Guarani settlements",
+      "url": "https://seer.pucgoias.edu.br/index.php/habitus/article/view/8642",
+      "note": "Peer-reviewed ceramic analysis across eleven sites in the Taquari-Antas basin used to show regional settlement organization and variability."
+    },
+    {
+      "id": "tg-usp-celia",
+      "title": "Guarani archaeology at the Célia Maria site",
+      "url": "https://revistas.usp.br/revmae/es/article/download/109370/107858/196186",
+      "note": "Dated precolonial São Paulo site and reconstruction of pottery-making gestures and vessel forms from analyzed rim fragments."
+    },
+    {
+      "id": "tg-scielo-ethnoarch",
+      "title": "An ethnoarchaeological view of Guarani occupation in São Paulo",
+      "url": "https://www.scielo.br/j/ha/a/fqV8gvvDJ8wrnCHVYjBBPfx/",
+      "note": "Peer-reviewed discussion of black-earth house traces, settlements, fertile soil, water, fishing, hunting, forest agriculture, and the limits of ethnographic analogy."
+    },
+    {
+      "id": "tg-habitus-micro",
+      "title": "Functional taxonomy and plant microremains in Guarani vessels",
+      "url": "https://seer.pucgoias.edu.br/index.php/habitus/article/view/8629",
+      "note": "Peer-reviewed Misiones study of vessel forms, phytoliths, maize and squash starch, storage, cooking, serving, and analogy limits."
+    },
+    {
+      "id": "tg-unicamp-pots",
+      "title": "Daily life in the Taquari Valley through pottery",
+      "url": "https://www2.unicamp.br/chaa/rhaa/downloads/Revista_18_completa.pdf",
+      "note": "University journal study reconstructing seventy-two vessels used for cooking, storing, serving, eating, and drinking at one southern Brazilian site."
+    },
+    {
+      "id": "tg-museum-ufsc",
+      "title": "Guarani populations in Santa Catarina",
+      "url": "https://museu.ufsc.br/marque-virtual/3-populacoes-guarani/",
+      "note": "Federal university museum account placing Guarani arrival on the Santa Catarina coast around 1000 CE and presenting archaeological materials as regional evidence."
+    },
+    {
+      "id": "tg-unlp-expansion",
+      "title": "A model for Guarani expansion in the La Plata Basin",
+      "url": "https://sedici.unlp.edu.ar/handle/10915/107642",
+      "note": "University repository record for a radiocarbon and thermoluminescence synthesis of geographic and temporal site distribution."
+    },
+    {
+      "id": "tg-iguazu",
+      "title": "Archaeology at Iguazú Falls",
+      "url": "https://revistas.unlp.edu.ar/relaciones/article/view/14657",
+      "note": "Peer-reviewed systematic survey of Iguazú National Park finding lithic-only contexts, Guarani pottery contexts, and radiocarbon dates."
+    },
+    {
+      "id": "tg-frontiers-arenal",
+      "title": "Arenal Central and Guarani occupation of the Paraná Delta",
+      "url": "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2025.1535551/full",
+      "note": "Peer-reviewed synthesis of a southern-edge residential site, chronology, subsistence, ceramics, burials, mobility, and evidence limits."
+    },
+    {
+      "id": "tg-pottery-women",
+      "title": "Guarani pottery beyond rigid norms",
+      "url": "https://www.scielo.br/j/bgoeldi/a/ddzdHVjFNHRSNPLVkWK5CpG/?lang=pt",
+      "note": "Peer-reviewed ethnoarchaeological discussion of Guarani pottery made by women, variation, technical choices, and the limits of rigid ceramic norms."
+    },
+    {
+      "id": "tg-ferments",
+      "title": "Archaeology of fermented drinks among Tupi-Guarani peoples",
+      "url": "https://www.scielo.br/j/ea/a/pt3bsKHrDSqSszYKsJ4P6Zq/",
+      "note": "Peer-reviewed analysis of fermented beverages, vessel forms, social practice, and the danger of treating broad archaeological style as uniform society."
+    },
+    {
+      "id": "tg-health-plants",
+      "title": "Current Mbyá-Guarani medicinal plant exchanges",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8173782/",
+      "note": "Community-participatory study in seven southern Brazilian territories documenting plant exchanges and the relation among forest, health, education, knowledge, and culture."
+    },
+    {
+      "id": "tg-child-play",
+      "title": "Childhood and teaching among Guarani Mbyá",
+      "url": "https://www.revistas.udesc.br/index.php/orfeu/en/article/view/10548",
+      "note": "Ethnomusicological research showing children as learners and teachers through music and play in a specific modern Mbyá setting."
+    },
+    {
+      "id": "tg-oral-writing",
+      "title": "Between song and pen: Guarani Mbyá knowledge",
+      "url": "https://revistas.usp.br/ep/es/article/view/28089",
+      "note": "Peer-reviewed research with Mbyá participants treating oral and written practice within broader production, acquisition, and transmission of knowledge."
+    },
+    {
+      "id": "tg-child-centers",
+      "title": "Guarani Mbyá children and Indigenous education centers",
+      "url": "https://revistas.usp.br/ceru/es/article/view/89153",
+      "note": "Research on Mbyá educators, children, memory, oral knowledge, identity, and modern Indigenous early education in São Paulo."
+    },
+    {
+      "id": "tg-birth-cohort",
+      "title": "Housing, water, and sanitation in a Guarani birth cohort",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10193232/",
+      "note": "Modern study across sixty-three Guarani villages recording substantial diversity in water sources, toilets, waste removal, housing, and child environments."
+    },
+    {
+      "id": "tg-first-writing",
+      "title": "Ruiz de Montoya works reissued",
+      "url": "https://cultura.gov.py/2011/08/se-reedita-obra-de-antonio-ruiz-de-montoya/",
+      "note": "Paraguay cultural ministry account dating Montoya’s Guarani dictionary to 1639 and grammar and bilingual catechism to 1640, well after this card."
+    },
+    {
+      "id": "tg-language-academy",
+      "title": "Guarani Language Academy",
+      "url": "https://spl.gov.py/es/academia-de-la-lengua-guarani/",
+      "note": "Paraguay language authority explaining present orthographic, lexical, grammatical, and community-sovereignty work and the modern official alphabet."
+    },
+    {
+      "id": "tg-iphan-stewardship",
+      "title": "Brazilian archaeological heritage",
+      "url": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-arqueologico",
+      "note": "Official explanation of archaeological stewardship, protected sites, pottery, tools, adornment, and the public duty to preserve contexts."
+    },
+    {
+      "id": "tg-uruguay",
+      "title": "Guarani presence in present-day Uruguay",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278416519301199",
+      "note": "Peer-reviewed synthesis stressing scattered, fragmentary, and unevenly contextualized evidence for Guarani presence in Uruguay."
+    },
+    {
+      "id": "tg-south-limit",
+      "title": "Construction of Guarani archaeological unity at its southern limit",
+      "url": "https://revistas.inapl.gob.ar/index.php/series_especiales/article/view/1644",
+      "note": "CONICET study of how archaeologists constructed a Guarani unit and the similarities and differences within southern evidence."
+    },
+    {
+      "id": "tg-guaranization",
+      "title": "When everyone becomes Guarani",
+      "url": "https://repositorio.ufgd.edu.br/jspui/handle/prefix/928",
+      "note": "University dissertation showing how sixteenth-century writings generalized diverse peoples into a broad, homogeneous Guarani category."
+    },
+    {
+      "id": "tg-terere",
+      "title": "Practices and knowledge of tereré and pohã ñana",
+      "url": "https://ich.unesco.org/en/RL/practices-and-traditional-knowledge-of-terere-in-the-culture-of-poha-nana-guarani-ancestral-drink-in-paraguay-01603",
+      "note": "UNESCO documentation of a living Paraguayan practice involving medicinal herbs, social transmission, and Guarani language, included only as later continuity."
+    },
+    {
+      "id": "tg-unesco-arete",
+      "title": "Arete Guasu and Indigenous-language documentation",
+      "url": "https://www.unesco.org/es/articles/el-arete-guasu-y-el-dia-internacional-de-la-lengua-materna-un-compromiso-con-la-diversidad",
+      "note": "UNESCO account of living Guarani celebration, community-produced language documentation, ancestry, renewal, and cultural continuity in specific Paraguayan communities."
+    },
+    {
+      "id": "tg-starch",
+      "title": "Plant foods and landscapes in southern Brazil",
+      "url": "https://repositori-api.upf.edu/api/core/bitstreams/d9a682b8-891f-4b21-a7e9-1254394b0fa0/content",
+      "note": "Peer-reviewed synthesis of maize, manioc, beans, starch residues, settlement change, and cautions around archaeological cultural labels."
+    },
+    {
+      "id": "tg-coastal-settlement",
+      "title": "Guarani archaeology on the southern Santa Catarina coast",
+      "url": "https://revista.sabnet.org/ojs/index.php/sab/article/view/501",
+      "note": "Peer-reviewed regional study of settlements among rivers, dunes, lagoons, and the Atlantic coast."
+    },
+    {
+      "id": "tg-ceramic-science",
+      "title": "Archaeometry of Guarani pottery in southern Brazil",
+      "url": "https://revistas.usp.br/revmae/en/article/view/89894",
+      "note": "University journal study using X-ray fluorescence to test pottery composition and question purely visual classifications."
+    }
+  ],
+  "entities": [
+    {
+      "id": "tekoha-guarani",
+      "card": "data/cards/tekoha-guarani.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tg-index",
+            "tg-map1492",
+            "tg-map1500",
+            "tg-south-limit",
+            "tg-iphan-language",
+            "tg-iphan-ceramists"
+          ],
+          "locator": "Exact id, display spelling, 1492 to 1500 interval, circa flag, and nearby Guarani-labelled records. Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index. Decoded endpoint control showing removal of the exact feature and a broad regional repaint. CONICET study of how archaeologists constructed a Guarani unit and the similarities and differences within southern evidence. Brazilian cultural heritage inventory identifying Mbyá as one Guarani language reference alongside Ñandeva, Avá, and Kaiowa. IPHAN-hosted regional syntheses emphasizing variation in pottery and archaeological traditions across Brazil, Argentina, and adjacent regions.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tg-index",
+            "tg-map1400",
+            "tg-map1492",
+            "tg-isa-nandeva"
+          ],
+          "locator": "Exact id, display spelling, 1492 to 1500 interval, circa flag, and nearby Guarani-labelled records. Decoded pre-appearance control and representative owners before the exact feature. Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index. Instituto Socioambiental synthesis of tekoha as land, forest, water, plants, remedies, extended-family relations, and specific historical attachment rather than abstract territory.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tg-map1492"
+          ],
+          "locator": "Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tg-unlp-expansion"
+          ],
+          "locator": "University repository record for a radiocarbon and thermoluminescence synthesis of geographic and temporal site distribution.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "tg-iguazu"
+          ],
+          "locator": "Peer-reviewed systematic survey of Iguazú National Park finding lithic-only contexts, Guarani pottery contexts, and radiocarbon dates.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tg-scielo-ethnoarch"
+          ],
+          "locator": "Peer-reviewed discussion of black-earth house traces, settlements, fertile soil, water, fishing, hunting, forest agriculture, and the limits of ethnographic analogy.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "tg-habitus-micro"
+          ],
+          "locator": "Peer-reviewed Misiones study of vessel forms, phytoliths, maize and squash starch, storage, cooking, serving, and analogy limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "tg-uruguay"
+          ],
+          "locator": "Peer-reviewed synthesis stressing scattered, fragmentary, and unevenly contextualized evidence for Guarani presence in Uruguay.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "tg-map1492",
+            "tg-map1500",
+            "tg-map1530"
+          ],
+          "locator": "Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index. Decoded endpoint control showing removal of the exact feature and a broad regional repaint. Decoded later control showing unchanged representative owners after the 1500 repaint.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tg-index",
+            "tg-coverage",
+            "tg-missing",
+            "tg-summaries",
+            "tg-map1492"
+          ],
+          "locator": "Exact occurrence, card status, geometry, and bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tg-map1492"
+          ],
+          "locator": "Representative inclusion and exclusion probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tg-map1492"
+          ],
+          "locator": "Direct shared arcs and their interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tg-map1400",
+            "tg-map1492",
+            "tg-map1500",
+            "tg-map1530"
+          ],
+          "locator": "Complete seam interpretation from audited representative owners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tg-tupis-card",
+            "tg-savanna-card",
+            "tg-pampas-card",
+            "tg-shellfish-card",
+            "tg-ache-card",
+            "tg-overrides"
+          ],
+          "locator": "Related-card audit and separate-card decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tg-isa-nandeva"
+          ],
+          "locator": "Tekoha meaning and specific community relation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tg-paraguay-plan"
+          ],
+          "locator": "Official Indigenous-plan account of territory and tekoha.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tg-isa-kaiowa"
+          ],
+          "locator": "Explicit subgroup variation and anti-flattening safeguard.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tg-isa-mbya"
+          ],
+          "locator": "Mbyá mobility, reciprocity, and settlement networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tg-guaranization"
+          ],
+          "locator": "Colonial generalization and historiographic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tg-usp-regional"
+          ],
+          "locator": "Regional settlement evidence and environmental variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tg-scielo-ethnoarch"
+          ],
+          "locator": "Black-earth and house analogy with limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tg-conacyt-architecture"
+          ],
+          "locator": "Architecture and territory with chronological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tg-museum-ufsc",
+            "tg-coastal-settlement"
+          ],
+          "locator": "Coastal chronology and environmental placement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tg-uruguay"
+          ],
+          "locator": "Fragmentary Uruguay evidence and context quality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tg-starch"
+          ],
+          "locator": "Plant-food range and regional archaeological context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tg-habitus-micro"
+          ],
+          "locator": "Microremain evidence and method limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tg-starch"
+          ],
+          "locator": "Mixed economy and settlement resources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tg-frontiers-arenal"
+          ],
+          "locator": "Southern-edge subsistence with geographic limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tg-ferments"
+          ],
+          "locator": "Fermentation, serving, sociality, and gentle dishwashing humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tg-usp-celia"
+          ],
+          "locator": "Dated pottery and technical reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tg-unicamp-pots"
+          ],
+          "locator": "Vessel functions and identity limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tg-habitus-settlements"
+          ],
+          "locator": "Regional ceramic variation and multiple causes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tg-ceramic-science"
+          ],
+          "locator": "Archaeometry and classification limits with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "tg-iphan-stewardship"
+          ],
+          "locator": "Artifact classes, context, and stewardship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tg-isa-kaiowa"
+          ],
+          "locator": "Extended-family organization with temporal limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tg-isa-mbya"
+          ],
+          "locator": "Visiting and reciprocal networks with exact-period limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tg-usp-celia",
+            "tg-pottery-women"
+          ],
+          "locator": "Craft sequence and gender caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tg-usp-regional"
+          ],
+          "locator": "Daily work synthesis and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tg-habitus-settlements"
+          ],
+          "locator": "Regional site comparison and social interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tg-iphan-parana"
+          ],
+          "locator": "Archaeological complexity and explicit absence of school detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tg-child-play"
+          ],
+          "locator": "Children as learners and teachers in a scoped modern study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tg-child-centers"
+          ],
+          "locator": "Modern Indigenous education and chronological placement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tg-oral-writing"
+          ],
+          "locator": "Orality, writing, and knowledge safeguard.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "tg-usp-celia"
+          ],
+          "locator": "Skill transmission inference and gentle fingerprint humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "tg-health-plants"
+          ],
+          "locator": "Modern medicinal-plant exchange and non-retrojection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "tg-starch"
+          ],
+          "locator": "Material health supports and medical-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tg-health-plants"
+          ],
+          "locator": "Care inference and prohibition on invented treatments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tg-health-plants"
+          ],
+          "locator": "Land-health relation and historical dynamism.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "tg-iphan-stewardship",
+            "tg-frontiers-arenal"
+          ],
+          "locator": "Burial evidence, stewardship, and scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "tg-coastal-settlement"
+          ],
+          "locator": "Water access, settlement choice, and infrastructure limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "tg-habitus-micro",
+            "tg-unicamp-pots"
+          ],
+          "locator": "Liquid vessels, cleaning, and inference boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "tg-usp-regional"
+          ],
+          "locator": "Activity areas and explicit sanitation-feature absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "tg-birth-cohort"
+          ],
+          "locator": "Modern sanitation diversity and anti-retrojection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "tg-iphan-parana"
+          ],
+          "locator": "Explicit toilet absence and gentle evidence humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "tg-usp-regional",
+            "tg-starch"
+          ],
+          "locator": "Plural achievements without state framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "tg-iguazu",
+            "tg-habitus-micro",
+            "tg-ceramic-science"
+          ],
+          "locator": "Multi-method archaeology and epistemic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "tg-first-writing"
+          ],
+          "locator": "Exact-period writing absence and earliest cited colonial publications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "tg-language-academy"
+          ],
+          "locator": "Modern orthography scope and explicit sample decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tg-terere"
+          ],
+          "locator": "Living continuity and rejection of frozen-survival framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tg-map1500",
+            "tg-map1530",
+            "tg-unesco-arete"
+          ],
+          "locator": "Decoded endpoint control showing removal of the exact feature and a broad regional repaint. Decoded later control showing unchanged representative owners after the 1500 repaint. UNESCO account of living Guarani celebration, community-produced language documentation, ancestry, renewal, and cultural continuity in specific Paraguayan communities.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "tekoha-guarani",
+        "name": "Tekohá (Guarani)",
+        "kind": "culture",
+        "region": "South America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/tekoha-guarani.json",
+        "dateBasis": "map_coverage",
+        "summary": "A regional guide that corrects one oversized atlas polygon while respecting distinct Guarani peoples, tekoha, evidence, and continuity.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "tekoha-guarani",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -65.15885158851589,
+            -33.05413267731784,
+            -40.18540185401852,
+            -14.259389321787971
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

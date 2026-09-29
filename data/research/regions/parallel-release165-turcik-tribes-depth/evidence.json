@@ -1,0 +1,840 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release165-turcik-tribes research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "tt-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported spelling, circa dates, culture kind, and historical-basemap provenance."
+    },
+    {
+      "id": "tt-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval and border file, with this exact card still missing."
+    },
+    {
+      "id": "tt-map323",
+      "title": "Human History Map 323 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc323.json",
+      "note": "Earlier control snapshot where the exact target id is absent."
+    },
+    {
+      "id": "tt-map300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Immediate pre-start control used for seam and ownership comparisons."
+    },
+    {
+      "id": "tt-map200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Sole exact target geometry, properties, point probes, owners, bounds, and shared arcs."
+    },
+    {
+      "id": "tt-map100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Exact endpoint control where the target id is absent and the map is reclassified."
+    },
+    {
+      "id": "tt-map1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Later control showing further Transbaikal owner changes without this exact id."
+    },
+    {
+      "id": "tt-west-overview",
+      "title": "The Urals and Western Siberia in the Bronze and Iron Ages",
+      "url": "https://www.cambridge.org/core/books/the-urals-and-western-siberia-in-the-bronze-and-iron-ages/C7F9363397D8E282D033873D1040D70B",
+      "note": "Cambridge synthesis of western Siberian archaeology, interactions, metallurgy, pastoralism, and cultural change."
+    },
+    {
+      "id": "tt-east-overview",
+      "title": "Prehistoric Mongolian Archaeology in the Early 21st Century",
+      "url": "https://link.springer.com/article/10.1007/s10814-020-09152-y",
+      "note": "Peer reviewed synthesis of eastern steppe and Xiongnu archaeology, settlements, mobility, hierarchy, and evidentiary gaps."
+    },
+    {
+      "id": "tt-turk-name",
+      "title": "The establishment and dissolution of the Turk empire",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-early-inner-asia/establishment-and-dissolution-of-the-turk-empire/6B26D9FE6F2BB2CE093683B425C3FA92",
+      "note": "Cambridge history states that the name Turk and securely attributable Turkic text cannot be traced with certainty before the sixth century CE."
+    },
+    {
+      "id": "tt-tagar-chron",
+      "title": "New radiocarbon dates and a review of Minusinsk Basin chronology",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7EEB3640F2AE465182A97B587B7D84C2/S0033822200033798a.pdf/new_radiocarbon_dates_and_a_review_of_the_chronology_of_prehistoric_populations_from_the_minusinsk_basin_southern_siberia_russia.pdf",
+      "note": "Radiocarbon study of Minusinsk sequences, including broad and uncertain Tagar and Tes phase ranges."
+    },
+    {
+      "id": "tt-tes-chron",
+      "title": "Radiocarbon chronology of post-Scythian burial practices in the Minusinsk Basin",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/radiocarbon-chronology-of-postscythian-burial-practices-in-the-minusinsk-basin-southern-siberia/8CB184C7D2575EDF29DD5532A99EEFCE",
+      "note": "Large new series showing diverse mortuary practices and gradual overlap rather than a clean cultural replacement."
+    },
+    {
+      "id": "tt-tagar-dwellings",
+      "title": "Current problems in the study of Tagar dwellings",
+      "url": "https://livrepository.liverpool.ac.uk/3090323/",
+      "note": "University repository study emphasizing the weak settlement sample and unresolved classification of Tagar houses."
+    },
+    {
+      "id": "tt-tagar-diet",
+      "title": "Iron Age pastoral nomadism and agriculture in the eastern Eurasian steppe",
+      "url": "https://pureadmin.qub.ac.uk/ws/files/4924543/Iron_Age_Pastoral_Nomadism_and_Agriculture_in_the_Eastern_Eurasian_Steppe_Implications_from_Dental_Palaeopathology_and_Stable_Carbon_and_Nitrogen_Isotopes.pdf",
+      "note": "Peer reviewed dental and isotope comparison of Ai-Dai in Minusinsk and Aymyrlyg in Tuva."
+    },
+    {
+      "id": "tt-tagar-dental",
+      "title": "Dental palaeopathology in Eneolithic to Early Iron Age Minusinsk",
+      "url": "https://pure.qub.ac.uk/en/publications/dental-palaeopathological-analysis-of-the-eneolithic-early-iron-a/",
+      "note": "University research record reporting caries, calculus, enamel hypoplasia, age, sex, and dietary interpretation."
+    },
+    {
+      "id": "tt-sargat-chron",
+      "title": "Radiocarbon chronology of Sargat culture sites in Western Siberia",
+      "url": "https://www.ra.iaran.ru/?lang=ru&page_id=4764",
+      "note": "Russian Archaeology study of 118 contexts from settlements and cemeteries, dating and uneven sampling."
+    },
+    {
+      "id": "tt-sargat-houses",
+      "title": "Architectural traditions of the Trans-Urals forest-steppe in the Early Iron Age",
+      "url": "https://journal.asu.ru/tpai/article/download/10477/8689/",
+      "note": "Peer reviewed study of Sargat dwelling types, building methods, insulation, and multi-chamber household complexes."
+    },
+    {
+      "id": "tt-sargat-gender",
+      "title": "Sargat burial sites in the Middle Irtysh: a gender analysis",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/10-38-3/annot-06/",
+      "note": "Siberian Branch RAS study treating bodies and burial objects together while framing gender conclusions as hypotheses."
+    },
+    {
+      "id": "tt-sargat-belts",
+      "title": "Woven belts from Sargat mound 7 at Chepkul-9",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/09-37-4/annot-05/",
+      "note": "Siberian Branch RAS textile study of wool and plant-fiber belts dated broadly from the third century BCE to first century CE."
+    },
+    {
+      "id": "tt-sargat-spindles",
+      "title": "Ceramic spindle whorls from the Galechnoye-1 Sargat settlement",
+      "url": "https://sciact.archaeology.nsc.ru/public/article/778/en",
+      "note": "Siberian Branch RAS record of textile-production tools from a western Siberian forest-steppe settlement."
+    },
+    {
+      "id": "tt-sargat-children",
+      "title": "Women and children in the Sargat culture",
+      "url": "https://www.archaeology-gender-europe.org/docs/bersenev.pdf",
+      "note": "Scholarly chapter using varied child and adult graves to examine age, gender, status, and mortuary selection."
+    },
+    {
+      "id": "tt-sargat-kinship",
+      "title": "Kinship analysis of human remains from Sargat mounds",
+      "url": "https://old.archaeology.nsc.ru/ru/publish/journal/doc/2017/454.pdf",
+      "note": "Siberian Branch RAS paleogenetic study of nine people from two Baraba forest-steppe mounds."
+    },
+    {
+      "id": "tt-sargat-dental",
+      "title": "Biological affinities among western Siberian forest-steppe groups",
+      "url": "https://ojs.srce.hr/index.php/paleodontology/article/view/26117",
+      "note": "Study of non-metric dental traits in 480 people, revealing differences among river basins and Baraba."
+    },
+    {
+      "id": "tt-ivolga-dwellings",
+      "title": "New results from dwellings at the Ivolga Fortress",
+      "url": "https://www.mra-ihae.ru/doc/2022.2/MIA-2022-2_077-087.pdf",
+      "note": "Excavation report on three dwellings, burned abandonment, pottery, household objects, animal bones, and stratigraphy."
+    },
+    {
+      "id": "tt-xiongnu-settlements",
+      "title": "Settlement patterns and domestic economy of the Xiongnu in Khanui Valley",
+      "url": "https://www.researchgate.net/profile/Jean-Luc-Houle/publication/284756504_Settlement_patterns_and_domestic_economy_of_the_Xiongnu_in_Khanui_Valley_Mongolia/links/630b562361e4553b9545a4b2/Settlement-patterns-and-domestic-economy-of-the-Xiongnu-in-Khanui-Valley-Mongolia.pdf",
+      "note": "Primary settlement study on seasonal location patterns, domestic economy, mixed production, and regional variation."
+    },
+    {
+      "id": "tt-ivolga-zoo",
+      "title": "Ivolginsk Xiongnu Fortress archaeozoological research",
+      "url": "https://www.researchgate.net/publication/340178509_Ivolginsk_Xiongnu_Fortress_in_Transbaikalia_archaeozoological_research_based_on_excavations_2017",
+      "note": "Published excavation study identifying diverse domestic and hunted animal taxa at Ivolga."
+    },
+    {
+      "id": "tt-ivolga-habitat",
+      "title": "Cultivating Complexity: Ivolga and its environment",
+      "url": "https://academic.oup.com/book/62201/chapter/549769735",
+      "note": "Oxford synthesis locating Ivolga among steppe, taiga, pine forest, and the Selenga River."
+    },
+    {
+      "id": "tt-parasites",
+      "title": "Parasites provide evidence for fish consumption among Iron Age Siberian pastoralists",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11464790/",
+      "note": "Open access archaeoparasitology at Tunnug 1 showing dietary variety and infection risks from fish and animal foods."
+    },
+    {
+      "id": "tt-tuva-trauma",
+      "title": "Iron Age Archaeology and Trauma from Aymyrlyg, South Siberia",
+      "url": "https://www.fulcrum.org/concern/monographs/c821gm82w",
+      "note": "University-hosted monograph record integrating skeletal trauma, health, diet, occupations, and warfare at Aymyrlyg."
+    },
+    {
+      "id": "tt-pazyryk-saddles",
+      "title": "Antiquities from the Pazyryk Burial Mounds",
+      "url": "https://www.hermitagemuseum.org/uploads/files/publications/d41d8cd98f00b204e9800998ecf8427e1731921615.pdf",
+      "note": "State Hermitage catalogue documenting earlier Altai leather-cushion saddles, decorated saddle cloths, horse gear, clothing, and preservation."
+    },
+    {
+      "id": "tt-proto-reconstruction",
+      "title": "Proto-Turkic: Reconstruction Problems",
+      "url": "https://www.tdkbelleten.gov.tr/ozet/276/eng",
+      "note": "Specialist linguistic study presenting Proto-Turkic as scholarly reconstruction rather than an excavated written language."
+    },
+    {
+      "id": "tt-baikal-dating",
+      "title": "Radiocarbon reservoir offsets in the Cis-Baikal region",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/analyzing-radiocarbon-reservoir-offsets-through-stable-nitrogen-isotopes-and-bayesian-modeling-a-case-study-using-paired-human-and-faunal-remains-from-the-cisbaikal-region-siberia/E2B23F1E853C13D045026531E7B4D87A",
+      "note": "Paired human and animal dating study showing how freshwater foods can distort chronology and reveal diet."
+    }
+  ],
+  "entities": [
+    {
+      "id": "turcik-tribes",
+      "card": "data/cards/turcik-tribes.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "tt-index",
+            "tt-coverage",
+            "tt-map200",
+            "tt-west-overview",
+            "tt-east-overview"
+          ],
+          "locator": "Exact id, imported spelling, circa dates, culture kind, and historical-basemap provenance. One observed interval and border file, with this exact card still missing. Sole exact target geometry, properties, point probes, owners, bounds, and shared arcs. Cambridge synthesis of western Siberian archaeology, interactions, metallurgy, pastoralism, and cultural change. Peer reviewed synthesis of eastern steppe and Xiongnu archaeology, settlements, mobility, hierarchy, and evidentiary gaps.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "tt-map200"
+          ],
+          "locator": "Sole exact target geometry, properties, point probes, owners, bounds, and shared arcs.",
+          "dateScope": {
+            "from": -200,
+            "to": -188
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "tt-sargat-chron"
+          ],
+          "locator": "Russian Archaeology study of 118 contexts from settlements and cemeteries, dating and uneven sampling.",
+          "dateScope": {
+            "from": -188,
+            "to": -176
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "tt-tagar-chron"
+          ],
+          "locator": "Radiocarbon study of Minusinsk sequences, including broad and uncertain Tagar and Tes phase ranges.",
+          "dateScope": {
+            "from": -176,
+            "to": -164
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "tt-tagar-diet"
+          ],
+          "locator": "Peer reviewed dental and isotope comparison of Ai-Dai in Minusinsk and Aymyrlyg in Tuva.",
+          "dateScope": {
+            "from": -164,
+            "to": -152
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "tt-ivolga-habitat"
+          ],
+          "locator": "Oxford synthesis locating Ivolga among steppe, taiga, pine forest, and the Selenga River.",
+          "dateScope": {
+            "from": -152,
+            "to": -140
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "tt-map200"
+          ],
+          "locator": "Sole exact target geometry, properties, point probes, owners, bounds, and shared arcs.",
+          "dateScope": {
+            "from": -140,
+            "to": -128
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "tt-parasites"
+          ],
+          "locator": "Open access archaeoparasitology at Tunnug 1 showing dietary variety and infection risks from fish and animal foods.",
+          "dateScope": {
+            "from": -128,
+            "to": -116
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "tt-map200",
+            "tt-map100",
+            "tt-map1"
+          ],
+          "locator": "Sole exact target geometry, properties, point probes, owners, bounds, and shared arcs. Exact endpoint control where the target id is absent and the map is reclassified. Later control showing further Transbaikal owner changes without this exact id.",
+          "dateScope": {
+            "from": -116,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "tt-index",
+            "tt-coverage"
+          ],
+          "locator": "Exact index and coverage matches for spelling, id, kind, dates, provenance, interval, and missing-card status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "tt-map200"
+          ],
+          "locator": "Exact feature count, geometry type, ring and position counts, decoded bounds, and coordinate hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "tt-map200"
+          ],
+          "locator": "Point-in-polygon membership for 26 named probes across and beyond the decoded target feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "tt-map200"
+          ],
+          "locator": "Direct shared-arc audit against every feature in the sole exact target snapshot.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "tt-map323",
+            "tt-map300",
+            "tt-map200",
+            "tt-map100",
+            "tt-map1"
+          ],
+          "locator": "Cross-snapshot target counts, probe owners, and changed-point seam comparison before and after the indexed interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "tt-sargat-chron"
+          ],
+          "locator": "Study sample size, site classes, chronological conclusions, and explicit warning about geographic and qualitative imbalance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "tt-tes-chron"
+          ],
+          "locator": "Tagar and Tes chronological debate, mortuary variation, calibrated sequences, and gradual-transition findings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "tt-tagar-dwellings"
+          ],
+          "locator": "Repository abstract on the weak settlement record, historiography, dwelling types, and classification problems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "tt-tes-chron"
+          ],
+          "locator": "Radiocarbon sample size, mortuary variability, modeled chronology, and gradual-transition conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "tt-turk-name"
+          ],
+          "locator": "Cambridge discussion of the first securely identifiable Turk name and texts, with cautions about earlier attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "tt-sargat-houses"
+          ],
+          "locator": "English abstract and conclusions on dwelling types, wall techniques, insulation, chambers, and household complexes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "tt-sargat-houses"
+          ],
+          "locator": "Documented embedded structures, mixed construction, insulation, passages, and limits of architectural inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "tt-ivolga-habitat"
+          ],
+          "locator": "Published settlement features, crop list, faunal categories, chronology, and environmental setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "tt-ivolga-dwellings"
+          ],
+          "locator": "Excavation descriptions of three dwelling depressions, fill histories, finds, burning, and stratigraphic interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "tt-tagar-diet"
+          ],
+          "locator": "Dental pathology and stable carbon and nitrogen isotope results comparing the two southern Siberian cemeteries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "tt-pazyryk-saddles"
+          ],
+          "locator": "Hermitage catalogue description of preserved Pazyryk saddles, materials, decoration, and chronological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "tt-xiongnu-settlements"
+          ],
+          "locator": "Settlement survey patterns, seasonal interpretation, and Ivolga within the wider Xiongnu archaeological landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "tt-tuva-trauma"
+          ],
+          "locator": "Monograph scope, integrated evidence, documented traumatic lesions, and occupational and warfare interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "tt-ivolga-zoo"
+          ],
+          "locator": "Faunal assemblage and environmental reconstruction at the fortified settlement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "tt-tagar-diet"
+          ],
+          "locator": "Comparison of pastoral, agricultural, and aquatic dietary contributions across Ai-Dai and Aymyrlyg.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "tt-sargat-belts"
+          ],
+          "locator": "Material identification, dating, manufacturing reconstruction, burial context, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "tt-sargat-belts"
+          ],
+          "locator": "Looting context, analytical methods, textile technology, and interpretive value of preserved belt remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "tt-sargat-spindles"
+          ],
+          "locator": "Settlement context, tool class, cultural attribution, textile-production function, and limits on worker identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "tt-ivolga-dwellings"
+          ],
+          "locator": "House-fill assemblages, stratigraphic contexts, and household interpretation from the Ivolga excavation report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "tt-xiongnu-settlements"
+          ],
+          "locator": "Synthesis of production, exchange, settlement diversity, Xiongnu scale, and archaeological interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "tt-sargat-gender"
+          ],
+          "locator": "Method, scope, gender hypotheses, and the distinction between mortuary pattern and living social rules.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "tt-sargat-belts",
+            "tt-sargat-gender"
+          ],
+          "locator": "Female burial context, textile placement, cemetery comparison, and cautious gender interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "tt-sargat-children"
+          ],
+          "locator": "Published child burial cases, grave construction, goods, adult associations, and interpretation of age and status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "tt-sargat-dental"
+          ],
+          "locator": "Sample size, regional grouping, dental-trait comparisons, continuity findings, and limits of biological attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "tt-xiongnu-settlements"
+          ],
+          "locator": "Settlement and cemetery context, domestic facilities, occupational scale, and bounded household inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "tt-sargat-kinship"
+          ],
+          "locator": "Sample size, two-mound context, close kin results, absent parent-child pairing, and household limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "tt-sargat-spindles",
+            "tt-sargat-houses"
+          ],
+          "locator": "Material requirements of spinning and construction, separated from undocumented formal educational institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "tt-pazyryk-saddles",
+            "tt-ivolga-habitat"
+          ],
+          "locator": "Documented riding equipment and subsistence evidence used for a bounded inference about practical learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "tt-sargat-houses"
+          ],
+          "locator": "Household layouts and functional chamber differences, with explicit limits on reconstructing informal teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "tt-turk-name"
+          ],
+          "locator": "First secure Turkic text boundary and absence of evidence linking writing to the target communities and interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "tt-tagar-dental"
+          ],
+          "locator": "Dental conditions, age and sex patterns, dietary interpretation, and limitations of palaeopathological evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "tt-tagar-diet"
+          ],
+          "locator": "Combined dental and isotope method, dietary results, population scale, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "tt-parasites"
+          ],
+          "locator": "Identified helminth eggs, dietary pathways, fish evidence, and authors’ cautious interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "tt-tuva-trauma"
+          ],
+          "locator": "Osteological trauma corpus, integrated interpretation, surgery chapter, and limits on reconstructing treatment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "tt-baikal-dating"
+          ],
+          "locator": "Freshwater reservoir effect, paired samples, isotope comparison, Bayesian method, and chronological implications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "tt-ivolga-habitat"
+          ],
+          "locator": "Site setting, river proximity, environment, fish and crop evidence, and absence of documented domestic water systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "tt-baikal-dating"
+          ],
+          "locator": "Reservoir offsets and dietary nitrogen evidence distinguished from unsupported domestic-water claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "tt-parasites"
+          ],
+          "locator": "Parasite taxa, archaeological soil sampling, likely transmission pathways, and limits on sanitation inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "tt-ivolga-dwellings"
+          ],
+          "locator": "Occupation fill, abandonment, burned structures, mixed finds, and stratigraphic caution about waste behavior.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "tt-tagar-dwellings",
+            "tt-ivolga-dwellings"
+          ],
+          "locator": "Settlement publication scopes and explicit absence of a securely identified sanitation installation in the reviewed evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "tt-turk-name",
+            "tt-index"
+          ],
+          "locator": "Exact atlas spelling compared with the scholarly boundary for the historical name Turk.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "tt-turk-name"
+          ],
+          "locator": "Cambridge statement on the first securely attributable Turkic texts and chronological limit of the Turk name.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "tt-sargat-dental",
+            "tt-proto-reconstruction"
+          ],
+          "locator": "Biological and archaeological classifications explicitly separated from unattested linguistic attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "tt-sargat-belts",
+            "tt-xiongnu-settlements"
+          ],
+          "locator": "Documented technologies and practices synthesized while preserving regional and social plurality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "tt-map100",
+            "tt-tes-chron"
+          ],
+          "locator": "Exact map endpoint contrasted with longer archaeological sequences and gradual regional transitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "tt-map200",
+            "tt-map100",
+            "tt-map1"
+          ],
+          "locator": "Sole exact target geometry, properties, point probes, owners, bounds, and shared arcs. Exact endpoint control where the target id is absent and the map is reclassified. Later control showing further Transbaikal owner changes without this exact id.",
+          "dateScope": {
+            "year": -100
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "turcik-tribes",
+        "name": "Northern Eurasian Communities",
+        "aliases": [
+          "Turcik tribes"
+        ],
+        "kind": "culture",
+        "region": "Asia",
+        "from": -200,
+        "to": -100,
+        "circa": true,
+        "card": "cards/turcik-tribes.json",
+        "dateBasis": "map_coverage",
+        "summary": "Diverse northern Eurasian communities grouped by one misspelled atlas umbrella from 200 to 100 BCE.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "turcik-tribes",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            64.7448474484745,
+            48.310032489754974,
+            124.1346413464135,
+            59.81775177562703
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
