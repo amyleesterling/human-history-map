@@ -1,0 +1,896 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release175-saces research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "s-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact saces id, imported name, approximate lifetime, and historical basemap provenance."
+    },
+    {
+      "id": "s-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Confirms that no imported summary is associated with the exact saces id."
+    },
+    {
+      "id": "s-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing review state, inherited state kind, Asia queue, border count, and observed interval."
+    },
+    {
+      "id": "s-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing id, no source lead, and no staged draft."
+    },
+    {
+      "id": "s-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact saces card association currently exists."
+    },
+    {
+      "id": "s-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id saces override currently exists."
+    },
+    {
+      "id": "s-map200bc",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Pre-layer control showing that the exact saces feature is absent."
+    },
+    {
+      "id": "s-map100bc",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Only exact saces geometry, interval properties, representative ownership, and shared arcs."
+    },
+    {
+      "id": "s-map1bc",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Endpoint control showing removal of the exact feature at the 1 BCE layer."
+    },
+    {
+      "id": "s-map100ce",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Later control confirming continued absence of the exact saces feature."
+    },
+    {
+      "id": "s-unesco-early",
+      "title": "UNESCO, Silk Roads: Early Period in Zhetysu",
+      "url": "https://whc.unesco.org/en/tentativelists/6567/",
+      "note": "Official synthesis of Saka kurgans, exchange, preservation, and chronology in Zhetysu."
+    },
+    {
+      "id": "s-current-anth",
+      "title": "An Imagined Past? Nomadic Narratives in Central Asian Archaeology",
+      "url": "https://doi.org/10.1086/714245",
+      "note": "Peer-reviewed reassessment of mixed settlement, farming, herding, craft, and ethnic labels."
+    },
+    {
+      "id": "s-semi-culture",
+      "title": "Eurasian National University, culture of the Sakas of Semirechye",
+      "url": "https://repository.enu.kz/handle/enu/16582",
+      "note": "University repository study of Saka archaeology, chronology, evidence, and research questions in Semirechye."
+    },
+    {
+      "id": "s-han-records",
+      "title": "Chinese Text Project, Han Shu Western Regions",
+      "url": "https://ctext.org/han-shu/xi-yu-zhuan/ens",
+      "note": "Digital primary text and translation interface for Wusun, western routes, envoys, and diplomacy."
+    },
+    {
+      "id": "s-han-notes",
+      "title": "University of Washington, annotated Western Regions background",
+      "url": "https://depts.washington.edu/silkroad/texts/hhshu/notes1.html",
+      "note": "Scholarly annotations locating Wusun herding and routes in Ili, Naryn, Chu, and Issyk-Kul."
+    },
+    {
+      "id": "s-uw-saka",
+      "title": "University of Washington, Sakas and Scythians",
+      "url": "https://depts.washington.edu/silkroad/exhibit/sakas/essay.html",
+      "note": "Academic exhibit essay on Saka terminology, migrations, Chinese evidence, and regional distinctions."
+    },
+    {
+      "id": "s-unesco-nomads",
+      "title": "UNESCO, Nomads of northern Central Asia after Alexander",
+      "url": "https://ru.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_II%20silk%20road_the%20nomads%20of%20northern%20central%20asia%20after%20the%20invansion%20of%20alexander.pdf",
+      "note": "UNESCO history chapter on Wusun and mixed Saka communities, herding, farming, and settlements."
+    },
+    {
+      "id": "s-antiquity-chron",
+      "title": "Antiquity, Iron Age society and chronology in south-east Kazakhstan",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/div-classtitleiron-age-society-and-chronology-in-south-east-kazakhstandiv/4B559CE6693435DDAC3C21BC6D68E2C0",
+      "note": "Peer-reviewed archaeological chronology independent of simple documentary and ethnic frameworks."
+    },
+    {
+      "id": "s-met-chronology",
+      "title": "Metropolitan Museum, Central and North Asia 200 BCE to 1 CE",
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/04/nc.html",
+      "note": "Museum chronology of mobile groups, political change, exchange, and pastoral lifeways."
+    },
+    {
+      "id": "s-unesco-states",
+      "title": "UNESCO, States in north-western Central Asia",
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_II%20silk%20road_states%20in%20north-western%20central%20asia_0.pdf",
+      "note": "UNESCO history chapter on mixed pastoral, agricultural, settlement, irrigation, and craft economies."
+    },
+    {
+      "id": "s-rakhat-east",
+      "title": "Archaeology.kz, research in eastern Semirechye",
+      "url": "https://archaeology.kz/en/expeditions/265-research-in-the-eastern-semirechye",
+      "note": "Kazakhstan archaeological portal report on settlements, fields, wintering sites, and burial landscapes."
+    },
+    {
+      "id": "s-frontiers-agri",
+      "title": "Frontiers, agriculture as a complement to northern Central Asian pastoralism",
+      "url": "https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2026.1918428/full",
+      "note": "Peer-reviewed pottery-impression study of millet, barley, domestic vessels, water, and uncertainty."
+    },
+    {
+      "id": "s-rakhat-2019",
+      "title": "Archaeology.kz, Rakhat settlement excavations",
+      "url": "https://archaeology.kz/en/expeditions/1127-archaelogical-excavations-of-the-rakhat-settlement-in-the-2019-field-season",
+      "note": "Kazakhstan field report on stratigraphy, ceramics, kiln evidence, animal bone, and chronology."
+    },
+    {
+      "id": "s-kaznu-settlement",
+      "title": "KazNU, Saka and Wusun settlements of Zhetysu",
+      "url": "https://bulletin-history.kaznu.kz/index.php/1-history/ru/article/download/959/685",
+      "note": "University archaeology study of dwellings, ceramics, grinding tools, settlements, and farming evidence."
+    },
+    {
+      "id": "s-round-dwellings",
+      "title": "Samara Journal, round dwellings of the Saka in Zhetysu",
+      "url": "https://snv63.ru/2309-4370/article/view/21648",
+      "note": "Peer-reviewed architectural study of early Iron Age dwellings and household construction."
+    },
+    {
+      "id": "s-fitz-labels",
+      "title": "Fitzwilliam Museum, Gold of the Great Steppe labels",
+      "url": "https://steppe-gold.fitzmuseum.cam.ac.uk/resources/labels",
+      "note": "Museum catalogue labels for textiles, portable objects, clothing, horse gear, and craft."
+    },
+    {
+      "id": "s-fitz-exhibition",
+      "title": "Fitzwilliam Museum, Gold of the Great Steppe exhibition",
+      "url": "https://fitzmuseum.cam.ac.uk/plan-your-visit/exhibitions/gold-of-the-great-steppe",
+      "note": "Museum overview of Saka archaeology, status, artistic work, and burial evidence."
+    },
+    {
+      "id": "s-cambridge-gold",
+      "title": "University of Cambridge, Gold of the Great Steppe",
+      "url": "https://www.cam.ac.uk/stories/gold-of-the-great-steppe-exhibition",
+      "note": "University museum story on goldwork, microbeads, animals, clothing, and exchange."
+    },
+    {
+      "id": "s-mdpi-style",
+      "title": "Arts, Saka animal style in context",
+      "url": "https://doi.org/10.3390/arts12010023",
+      "note": "Peer-reviewed study of Saka materials, technologies, forms, uses, and regional interpretation."
+    },
+    {
+      "id": "s-bozbarmak",
+      "title": "Scientific Reports, kinship at Boz-Barmak",
+      "url": "https://doi.org/10.1038/s41598-026-62891-8",
+      "note": "Peer-reviewed ancient DNA study of twelve Saka-period individuals from Kyrgyzstan."
+    },
+    {
+      "id": "s-issyk-museum",
+      "title": "Esik Museum-Reserve, the Saka prince and museum collection",
+      "url": "https://issykrm.kz/?lang=en&page_id=1284",
+      "note": "Official museum account of the young Issyk burial, costume, objects, and discovery."
+    },
+    {
+      "id": "s-kz-archmuseum",
+      "title": "National Academy archaeology museum exhibition",
+      "url": "https://www.gylymordasy.gov.kz/en/museum/muzey-arkheologii/exhibition-and-display-activities/",
+      "note": "Official Kazakhstan museum synthesis of the Issyk youth, ornaments, weapons, and craft."
+    },
+    {
+      "id": "s-nmk-gallery",
+      "title": "National Museum of Kazakhstan exhibition activity",
+      "url": "https://nmrk.kz/en/structure/exhibition-activities/",
+      "note": "National museum description of Saka objects, artistic traditions, and social interpretation."
+    },
+    {
+      "id": "s-medicine",
+      "title": "Archaeological data on the history of medicine in Kazakhstan",
+      "url": "https://e-history.kz/upload/iblock/fc6/fc617c2a9e3fdd6b362d87009e7da2da.pdf",
+      "note": "Scholarly review of sparse fracture, trepanation, injury, and healing evidence."
+    },
+    {
+      "id": "s-diet-pa",
+      "title": "New isotopic data on Saka-period diet in central Kazakhstan",
+      "url": "https://doi.org/10.24852/pa2020.3.33.208.218",
+      "note": "Peer-reviewed isotope study of varied diets, millet evidence, sample size, and limits."
+    },
+    {
+      "id": "s-diet-diversity",
+      "title": "Journal of Archaeological Science, millet consumption across Kazakhstan",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440315001223",
+      "note": "Peer-reviewed stable-isotope study of dietary diversity and increasing millet consumption."
+    },
+    {
+      "id": "s-lurje",
+      "title": "Vestnik drevnei istorii, the unknown script of Bactria",
+      "url": "https://consilium.orscience.ru/0321-0391/article/view/648605",
+      "note": "Peer-reviewed reassessment identifying the Issyk bowl as a possible Bactrian import."
+    },
+    {
+      "id": "s-wiley-script",
+      "title": "Transactions of the Philological Society, Bactrian in Issyk-Kushan script",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1467-968x.70032",
+      "note": "Peer-reviewed new readings that retain uncertainty around the Issyk inscription and script."
+    },
+    {
+      "id": "s-enu-inscribed",
+      "title": "Eurasian National University, inscribed vessels from southern Kazakhstan",
+      "url": "https://repository.enu.kz/handle/enu/27577",
+      "note": "University study reviewing contested interpretations of the Issyk silver bowl inscription."
+    },
+    {
+      "id": "s-khotanese-bl",
+      "title": "British Library International Dunhuang Programme, Khotanese manuscript",
+      "url": "https://idp.bl.uk/collection/D19F75C7A53D475AA160E6CE1750D0E5/",
+      "note": "Institutional catalogue entry locating a later Khotanese Brahmi manuscript at Dandan Uiliq."
+    },
+    {
+      "id": "s-unesco-fergana",
+      "title": "UNESCO, Fergana-Syrdarya Corridor",
+      "url": "https://whc.unesco.org/en/tentativelists/6649",
+      "note": "Official heritage synthesis of river corridors, irrigation canals, settlements, and pastoral exchange."
+    },
+    {
+      "id": "s-iranica-excavations",
+      "title": "Encyclopaedia Iranica, Excavations in Central Asia",
+      "url": "https://www.iranicaonline.org/articles/excavations-iii/",
+      "note": "Scholarly synthesis of Saka archaeology, changing Wusun-era burial practice, and regional continuity."
+    }
+  ],
+  "entities": [
+    {
+      "id": "saces",
+      "card": "data/cards/saces.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-unesco-early",
+            "s-current-anth",
+            "s-semi-culture"
+          ],
+          "locator": "Exact saces id, imported name, approximate lifetime, and historical basemap provenance. Confirms that no imported summary is associated with the exact saces id. Missing review state, inherited state kind, Asia queue, border count, and observed interval. Official synthesis of Saka kurgans, exchange, preservation, and chronology in Zhetysu. Peer-reviewed reassessment of mixed settlement, farming, herding, craft, and ethnic labels. University repository study of Saka archaeology, chronology, evidence, and research questions in Semirechye.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "s-han-records"
+          ],
+          "locator": "Digital primary text and translation interface for Wusun, western routes, envoys, and diplomacy.",
+          "dateScope": {
+            "from": -100,
+            "to": -88
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "s-han-notes"
+          ],
+          "locator": "Scholarly annotations locating Wusun herding and routes in Ili, Naryn, Chu, and Issyk-Kul.",
+          "dateScope": {
+            "from": -88,
+            "to": -76
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "s-uw-saka"
+          ],
+          "locator": "Academic exhibit essay on Saka terminology, migrations, Chinese evidence, and regional distinctions.",
+          "dateScope": {
+            "from": -76,
+            "to": -64
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "s-unesco-nomads"
+          ],
+          "locator": "UNESCO history chapter on Wusun and mixed Saka communities, herding, farming, and settlements.",
+          "dateScope": {
+            "from": -64,
+            "to": -52
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "s-antiquity-chron"
+          ],
+          "locator": "Peer-reviewed archaeological chronology independent of simple documentary and ethnic frameworks.",
+          "dateScope": {
+            "from": -52,
+            "to": -40
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "s-met-chronology"
+          ],
+          "locator": "Museum chronology of mobile groups, political change, exchange, and pastoral lifeways.",
+          "dateScope": {
+            "from": -40,
+            "to": -28
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "s-unesco-states"
+          ],
+          "locator": "UNESCO history chapter on mixed pastoral, agricultural, settlement, irrigation, and craft economies.",
+          "dateScope": {
+            "from": -28,
+            "to": -16
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "s-rakhat-east"
+          ],
+          "locator": "Kazakhstan archaeological portal report on settlements, fields, wintering sites, and burial landscapes.",
+          "dateScope": {
+            "from": -16,
+            "to": -1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-missing"
+          ],
+          "locator": "Exact repository identity, missing status, inherited kind, and cautious display scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "s-map200bc",
+            "s-map100bc",
+            "s-map1bc",
+            "s-card-index",
+            "s-overrides"
+          ],
+          "locator": "Full snapshot occurrence audit, interval properties, and current association absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "s-map100bc"
+          ],
+          "locator": "Decoded geometry type, components, rings, positions, bounds, hash stability, and map caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "s-map100bc"
+          ],
+          "locator": "Representative point tests, polygon hole, inclusions, exclusions, and interpretive caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "s-map100bc"
+          ],
+          "locator": "Direct shared arcs, overlap tests, neighbor ids, and rejection of political inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "s-uw-saka"
+          ],
+          "locator": "Comparative terminology, linguistic association, and umbrella-name limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "s-han-records"
+          ],
+          "locator": "Han-era Wusun context, Sai memory, diplomacy, and outsider-source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "s-antiquity-chron"
+          ],
+          "locator": "Archaeological chronology and the limits of ethnic attribution from objects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "s-index",
+            "s-card-index"
+          ],
+          "locator": "Exact-id distinction from related atlas records and association guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "s-han-notes"
+          ],
+          "locator": "Route geography, identification uncertainty, source viewpoint, and daily-life evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "s-unesco-nomads"
+          ],
+          "locator": "Seasonal mobility, pasture, water, farming, dwellings, and rejection of simple stereotypes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "s-han-notes"
+          ],
+          "locator": "Mountain routes, travel logistics, political boundaries, and local knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "s-fitz-labels"
+          ],
+          "locator": "Portable material culture, clothing, horse gear, exchange, and ownership caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "s-cambridge-gold"
+          ],
+          "locator": "Goldworking skill, production relationships, elite burial bias, and ordinary materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "s-met-chronology"
+          ],
+          "locator": "Pastoral risk, changing routes, evidence limits, and gentle evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "s-kaznu-settlement"
+          ],
+          "locator": "Settlement tools, dwellings, ceramics, farming, and mobility limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "s-round-dwellings"
+          ],
+          "locator": "House construction, varied plans, household inference limits, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "s-rakhat-2019"
+          ],
+          "locator": "Rakhat stratigraphy, finds, multi-period occupation, and dating caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "s-frontiers-agri"
+          ],
+          "locator": "Crop impressions, riparian settlement, mixed economy, and limits on farming intensity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "s-frontiers-agri"
+          ],
+          "locator": "Water requirements, irrigation uncertainty, and separation from sanitation infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "s-frontiers-agri"
+          ],
+          "locator": "Millet and barley impressions, domestic vessel forms, and dietary inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "s-unesco-nomads"
+          ],
+          "locator": "Herding, cultivation, domestic tools, possible foods, and attribution caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "s-kaznu-settlement"
+          ],
+          "locator": "Household tools, food processing, labor visibility, and limits on assigning roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "s-fitz-labels"
+          ],
+          "locator": "Textile materials, garment construction, elite plaques, and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "s-mdpi-style"
+          ],
+          "locator": "Animal-style technology, use, portability, regional comparison, and identity limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "s-bozbarmak"
+          ],
+          "locator": "Ancient DNA sample, kin degrees, chronology, and limits on generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "s-bozbarmak"
+          ],
+          "locator": "Sex-linked genetic pattern, cautious patrilocal interpretation, and sampling limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "s-issyk-museum"
+          ],
+          "locator": "Issyk youth, grave goods, elite commemoration, and childhood interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "s-fitz-exhibition"
+          ],
+          "locator": "Elite graves, gender visibility, status display, and funerary bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "s-han-records"
+          ],
+          "locator": "Elite marriage diplomacy, named actors, and limits for ordinary family history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "s-mdpi-style"
+          ],
+          "locator": "Technical repetition as evidence for learning and limits on reconstructing schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "s-kaznu-settlement"
+          ],
+          "locator": "Practical knowledge domains and explicit boundary against invented formal education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "s-lurje",
+            "s-enu-inscribed"
+          ],
+          "locator": "Issyk bowl chronology, possible import, script reassessment, and sample exclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "s-wiley-script"
+          ],
+          "locator": "Evolving decipherment, attribution problems, and evidence threshold for writing sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "s-khotanese-bl"
+          ],
+          "locator": "Later Khotanese manuscripts, script, geography, and rejection as exact-period sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "s-medicine"
+          ],
+          "locator": "Sparse evidence, healed fracture, chronology, care possibility, and diagnostic limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "s-medicine"
+          ],
+          "locator": "Trepanation observations, healing evidence, competing interpretations, and geographic limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "s-medicine"
+          ],
+          "locator": "Weapon injury, possible hazards, and boundary between trauma and treatment evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "s-diet-pa"
+          ],
+          "locator": "Isotope sample, varied diet, millet interpretation, and medical limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "s-diet-diversity"
+          ],
+          "locator": "Regional dietary variation, millet signal, individual limits, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "s-rakhat-2019"
+          ],
+          "locator": "Settlement debris, absence of identified sanitation infrastructure, and evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "s-unesco-fergana"
+          ],
+          "locator": "Regional canals, chronological scope, and distinction among water systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "s-rakhat-2019"
+          ],
+          "locator": "Refuse categories, site formation, stratigraphic separation, and household limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "s-kz-archmuseum"
+          ],
+          "locator": "Museum burial evidence, preservation bias, and weak visibility of routine sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "s-round-dwellings"
+          ],
+          "locator": "Dwelling evidence, explicit toilet absence, scope, and gentle evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "s-unesco-states"
+          ],
+          "locator": "Integrated regional economy, adaptation, household variation, and achievement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "s-fitz-labels"
+          ],
+          "locator": "Portable crafts, engineering choices, exchange, achievement, and wealth caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "s-cambridge-gold"
+          ],
+          "locator": "Craft precision, collaboration, social display, and achievement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "s-nmk-gallery"
+          ],
+          "locator": "Heritage preservation, public interpretation, research process, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "s-map1bc",
+            "s-map100ce"
+          ],
+          "locator": "Atlas endpoint, later absence, association guardrail, and transformation decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "s-iranica-excavations"
+          ],
+          "locator": "Scholarly synthesis of Saka archaeology, changing Wusun-era burial practice, and regional continuity.",
+          "dateScope": {
+            "year": -1
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "saces",
+        "name": "Saka communities of the Tian Shan and Jetysu",
+        "aliases": [
+          "Saces",
+          "Saka communities",
+          "Sacae of Jetysu"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": -100,
+        "to": -1,
+        "circa": true,
+        "card": "cards/saces.json",
+        "dateBasis": "map_coverage",
+        "summary": "Saka-related communities in Tian Shan and Jetysu amid Wusun-era change.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "saces",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            65.20925209252093,
+            39.693067772210455,
+            80.22140221402213,
+            46.35936070787541
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
