@@ -1,0 +1,983 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release167-emirate-of-bin-shal-an research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "bs-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, spelling, dates, circa flag, and historical basemap provenance."
+    },
+    {
+      "id": "bs-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three observed intervals, three border files, imported state classification, and missing-card status."
+    },
+    {
+      "id": "bs-map1914",
+      "title": "Human History Map 1914 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Pre-interval control snapshot, regional owners, and neighboring-summary hazard audit."
+    },
+    {
+      "id": "bs-map1920",
+      "title": "Human History Map 1920 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1920.json",
+      "note": "First exact feature, geometry, owners, seams, and point probes."
+    },
+    {
+      "id": "bs-map1930",
+      "title": "Human History Map 1930 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Second exact feature, unchanged geometry, owners, and internal seam."
+    },
+    {
+      "id": "bs-map1938",
+      "title": "Human History Map 1938 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "Third exact feature, Saudi overlap, owners, and direct seams."
+    },
+    {
+      "id": "bs-map1945",
+      "title": "Human History Map 1945 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Endpoint control where the exact feature disappears while Saudi Arabia remains."
+    },
+    {
+      "id": "bs-qdl-range",
+      "title": "Military report on Arabia, 1924: Ruwala entry",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100038406030.0x00003d",
+      "note": "Contemporary British description of Nuri al-Sha'lan and Ruwala seasonal geography from Syria through Wadi Sirhan to al-Jawf."
+    },
+    {
+      "id": "bs-qdl-jauf",
+      "title": "Report on Ibn Sha'lan's attempt on al-Jawf, 1920",
+      "url": "https://www.qdl.qa/archive/81055/vdc_100040166139.0x000046",
+      "note": "Primary report of a failed attempt to take al-Jawf in November 1920."
+    },
+    {
+      "id": "bs-qdl-ibnsaud",
+      "title": "Ibn Saud letter concerning al-Jawf and Ibn Sha'lan",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100034196446.0x00008c",
+      "note": "Primary diplomatic claim about sovereignty, negotiations, and removal of an official after contacts with Ibn Sha'lan."
+    },
+    {
+      "id": "bs-qdl-kuwait",
+      "title": "Kuwait Conference record concerning Ibn Sha'lan",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023733256.0x000096",
+      "note": "Primary conference record where an independent state under Ibn Sha'lan was proposed and rejected."
+    },
+    {
+      "id": "bs-qdl-hadda",
+      "title": "Hadda Agreement text, 1925",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100075776572.0x000072",
+      "note": "Primary treaty text protecting established grazing, residence, property, and movement across a new boundary."
+    },
+    {
+      "id": "bs-qdl-border",
+      "title": "Just a line in the sand? Making the Arabian border, 1925",
+      "url": "https://qdl.qa/just-line-sand-making-arabian-border-1925",
+      "note": "Qatar Digital Library essay on Wadi Sirhan, Ruwala allegiance, routes, and border making."
+    },
+    {
+      "id": "bs-qdl-bio",
+      "title": "Military report on Arabia: Nuri al-Sha'lan biography",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100038406030.0x000073",
+      "note": "Contemporary biographical entry identifying Nuri as paramount Ruwala chief and describing political relationships."
+    },
+    {
+      "id": "bs-qdl-visit",
+      "title": "List of visitors to Kuwait, 1938",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100107848349.0x00003d",
+      "note": "Contemporary record identifying Fawwaz al-Sha'lan as emir of the Ruwala during a Kuwait visit."
+    },
+    {
+      "id": "bs-oxford",
+      "title": "Tribal agency and translocalization in the post-Ottoman Middle East",
+      "url": "https://academic.oup.com/histres/article/98/282/599/8155496",
+      "note": "Academic study of Ruwala agency, al-Jawf claims, borders, Saudi relations, and the 1935 marriage alliance."
+    },
+    {
+      "id": "bs-khoury",
+      "title": "The Tribal Shaykh, French Tribal Policy, and the Nationalist Movement in Syria",
+      "url": "https://politicsofsyria.weebly.com/uploads/1/3/5/2/13525224/the_tribal_shaykh.pdf",
+      "note": "Academic study of Nuri, Fawwaz, French policy, Damascus ties, education, and Nuri's death in 1942."
+    },
+    {
+      "id": "bs-camel",
+      "title": "The Camel Dispute: A History of British and Saudi Relations",
+      "url": "https://repository.graduateinstitute.ch/record/300187/files/9781474487986.pdf",
+      "note": "Academic account of the 1929 to 1934 Ruwala-Amarat dispute, migrations, and Fawwaz's role."
+    },
+    {
+      "id": "bs-mofa",
+      "title": "History of the Kingdom of Saudi Arabia",
+      "url": "https://mofa.gov.sa/en/ksa/Pages/history.aspx",
+      "note": "Saudi official chronology of Abdulaziz's titles and the 1932 proclamation of the kingdom."
+    },
+    {
+      "id": "bs-state",
+      "title": "A Guide to the United States' History of Recognition, Diplomatic, and Consular Relations: Saudi Arabia",
+      "url": "https://history.state.gov/countries/saudi-arabia",
+      "note": "United States Office of the Historian chronology of recognition, the 1932 name change, and diplomatic relations."
+    },
+    {
+      "id": "bs-frus",
+      "title": "United States recognition of the Kingdom of the Hejaz and Nejd, 1931",
+      "url": "https://history.state.gov/historicaldocuments/frus1931v02/d532",
+      "note": "Primary diplomatic exchange recognizing the government ruled by Ibn Saud before the 1932 renaming."
+    },
+    {
+      "id": "bs-cbrl",
+      "title": "Desert Air Routes project",
+      "url": "https://www.cbrl.ac.uk/research-blog/desert-air-routes-project-an-archaeological-journey-from-the-neolithic-to-the-birth-of-international-air-travel/",
+      "note": "Council for British Research in the Levant caption identifying Nuri bin Haza al-Sha'lan as emir of the Ruwala, 1847 to 1942."
+    },
+    {
+      "id": "bs-chatty",
+      "title": "The Sha'laan district of Damascus",
+      "url": "https://ojs.st-andrews.ac.uk/index.php/syria/article/download/895/745/2089",
+      "note": "Academic account of Nuri al-Sha'lan's Damascus residence and the district that developed around it."
+    },
+    {
+      "id": "bs-aub",
+      "title": "Al-Kulliyah, American University of Beirut, 1934-1935",
+      "url": "https://libraries.aub.edu.lb/sp/public/aub-kullyah/capaub_alkulliyah_1934-1935_v21.pdf",
+      "note": "Contemporary university publication acknowledging Emir Fawwaz's hospitality to Ruwala field researchers and medical assistance."
+    },
+    {
+      "id": "bs-musil-catalog",
+      "title": "The Manners and Customs of the Rwala Bedouins, catalog record",
+      "url": "https://commons.ptsem.edu/id/mannerscustomsof00musi",
+      "note": "Catalog record for Alois Musil's 1928 outsider ethnography, based substantially on earlier fieldwork and oral evidence."
+    },
+    {
+      "id": "bs-musil-44",
+      "title": "Musil 1928, page 44",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/44/mode/2up",
+      "note": "Seasonal mobility, camel herding, supplies, and distinctions among mobile and settled people."
+    },
+    {
+      "id": "bs-musil-46",
+      "title": "Musil 1928, page 46",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/46/mode/2up",
+      "note": "Household, patrilineal kin, tent leadership, and women's domestic authority in the source's account."
+    },
+    {
+      "id": "bs-musil-50",
+      "title": "Musil 1928, page 50",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/50/mode/2up",
+      "note": "Chiefly selection, hereditary standing, consultation, and limits on authority."
+    },
+    {
+      "id": "bs-musil-61",
+      "title": "Musil 1928, page 61",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/61/mode/2up",
+      "note": "Black tent materials, construction, repair, and women's work."
+    },
+    {
+      "id": "bs-musil-64",
+      "title": "Musil 1928, page 64",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/64/mode/2up",
+      "note": "Tent divisions, guest space, family space, and movable partitions."
+    },
+    {
+      "id": "bs-musil-69",
+      "title": "Musil 1928, page 69",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/69/mode/2up",
+      "note": "Hide water bags, buckets, troughs, and household equipment."
+    },
+    {
+      "id": "bs-musil-72",
+      "title": "Musil 1928, page 72",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/72/mode/2up",
+      "note": "Tent orientation, wind, heat, movable walls, and weather adjustments."
+    },
+    {
+      "id": "bs-musil-76",
+      "title": "Musil 1928, page 76",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/76/mode/2up",
+      "note": "Striking, loading, transporting, and rebuilding tents during household moves."
+    },
+    {
+      "id": "bs-musil-77",
+      "title": "Musil 1928, page 77",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/77/mode/2up",
+      "note": "Camp selection, kin grouping, pasture and water scouts, and traces left by camps."
+    },
+    {
+      "id": "bs-musil-86",
+      "title": "Musil 1928, page 86",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/86/mode/2up",
+      "note": "Milk, grain, meals, food preparation, and the risk of shortage."
+    },
+    {
+      "id": "bs-musil-93",
+      "title": "Musil 1928, page 93",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/93/mode/2up",
+      "note": "Locusts, edible plants, food variety, and opportunistic gathering."
+    },
+    {
+      "id": "bs-musil-94",
+      "title": "Musil 1928, page 94",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/94/mode/2up",
+      "note": "Water fetching, herd water, household use, and rationing."
+    },
+    {
+      "id": "bs-musil-97",
+      "title": "Musil 1928, page 97",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/97/mode/2up",
+      "note": "Small hand rinses before eating and water-conscious meal practice."
+    },
+    {
+      "id": "bs-musil-112",
+      "title": "Musil 1928, page 112",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/112/mode/2up",
+      "note": "Clerks, paper from Damascus, reed pens, ink, and letter writing."
+    },
+    {
+      "id": "bs-musil-134",
+      "title": "Musil 1928, page 134",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/134/mode/2up",
+      "note": "Water scarcity, washing, sand cleaning, plant cleanser, and soap, recorded through a biased outsider lens."
+    },
+    {
+      "id": "bs-musil-243",
+      "title": "Musil 1928, page 243",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/243/mode/2up",
+      "note": "Childbirth narratives, women relatives, naming, and limits of the observer's account."
+    },
+    {
+      "id": "bs-musil-255",
+      "title": "Musil 1928, page 255",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/255/mode/2up",
+      "note": "Children's changing work, observation, listening, poetry, and practical learning."
+    },
+    {
+      "id": "bs-musil-258",
+      "title": "Musil 1928, page 258",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/258/mode/2up",
+      "note": "Children's games, running, songs, group play, and girls' gatherings."
+    },
+    {
+      "id": "bs-musil-338",
+      "title": "Musil 1928, page 338",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/338/mode/2up",
+      "note": "Well use, camel watering, drawing equipment, and watering order."
+    },
+    {
+      "id": "bs-musil-340",
+      "title": "Musil 1928, page 340",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/340/mode/2up",
+      "note": "Large pools, shared access, animal use, and contamination risks."
+    },
+    {
+      "id": "bs-musil-455",
+      "title": "Musil 1928, page 455",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/455/mode/2up",
+      "note": "Hospitality, coffee preparation, guest obligations, protection, and household hosting."
+    },
+    {
+      "id": "bs-musil-662",
+      "title": "Musil 1928, page 662",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/662/mode/2up",
+      "note": "Inheritance and family property rules as recorded by the outsider author."
+    },
+    {
+      "id": "bs-musil-666",
+      "title": "Musil 1928, page 666",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/666/mode/2up",
+      "note": "Illness categories, plant preparations, poultices, splints, and mixed practical and ritual care."
+    },
+    {
+      "id": "bs-musil-668",
+      "title": "Musil 1928, page 668",
+      "url": "https://archive.org/details/mannerscustomsof00musi/page/668/mode/2up",
+      "note": "Wound care, isolation in a separate tent, and close-relative nursing."
+    }
+  ],
+  "entities": [
+    {
+      "id": "emirate-of-bin-shal-an",
+      "card": "data/cards/emirate-of-bin-shal-an.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "bs-index",
+            "bs-coverage",
+            "bs-map1920",
+            "bs-map1930",
+            "bs-map1938",
+            "bs-qdl-range",
+            "bs-mofa"
+          ],
+          "locator": "Exact imported id, spelling, dates, circa flag, and historical basemap provenance. Three observed intervals, three border files, imported state classification, and missing-card status. First exact feature, geometry, owners, seams, and point probes. Second exact feature, unchanged geometry, owners, and internal seam. Third exact feature, Saudi overlap, owners, and direct seams. Contemporary British description of Nuri al-Sha'lan and Ruwala seasonal geography from Syria through Wadi Sirhan to al-Jawf. Saudi official chronology of Abdulaziz's titles and the 1932 proclamation of the kingdom.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "bs-qdl-jauf",
+            "bs-qdl-ibnsaud",
+            "bs-map1920"
+          ],
+          "locator": "Primary report of a failed attempt to take al-Jawf in November 1920. Primary diplomatic claim about sovereignty, negotiations, and removal of an official after contacts with Ibn Sha'lan. First exact feature, geometry, owners, seams, and point probes.",
+          "dateScope": {
+            "from": 1920,
+            "to": 1923
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "bs-qdl-kuwait",
+            "bs-qdl-hadda",
+            "bs-qdl-border"
+          ],
+          "locator": "Primary conference record where an independent state under Ibn Sha'lan was proposed and rejected. Primary treaty text protecting established grazing, residence, property, and movement across a new boundary. Qatar Digital Library essay on Wadi Sirhan, Ruwala allegiance, routes, and border making.",
+          "dateScope": {
+            "from": 1923,
+            "to": 1926
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "bs-musil-catalog",
+            "bs-musil-44"
+          ],
+          "locator": "Catalog record for Alois Musil's 1928 outsider ethnography, based substantially on earlier fieldwork and oral evidence. Seasonal mobility, camel herding, supplies, and distinctions among mobile and settled people.",
+          "dateScope": {
+            "from": 1926,
+            "to": 1929
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "bs-camel",
+            "bs-oxford",
+            "bs-frus"
+          ],
+          "locator": "Academic account of the 1929 to 1934 Ruwala-Amarat dispute, migrations, and Fawwaz's role. Academic study of Ruwala agency, al-Jawf claims, borders, Saudi relations, and the 1935 marriage alliance. Primary diplomatic exchange recognizing the government ruled by Ibn Saud before the 1932 renaming.",
+          "dateScope": {
+            "from": 1929,
+            "to": 1932
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "bs-state",
+            "bs-oxford"
+          ],
+          "locator": "United States Office of the Historian chronology of recognition, the 1932 name change, and diplomatic relations. Academic study of Ruwala agency, al-Jawf claims, borders, Saudi relations, and the 1935 marriage alliance.",
+          "dateScope": {
+            "from": 1932,
+            "to": 1935
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "bs-qdl-visit",
+            "bs-chatty",
+            "bs-map1938"
+          ],
+          "locator": "Contemporary record identifying Fawwaz al-Sha'lan as emir of the Ruwala during a Kuwait visit. Academic account of Nuri al-Sha'lan's Damascus residence and the district that developed around it. Third exact feature, Saudi overlap, owners, and direct seams.",
+          "dateScope": {
+            "from": 1935,
+            "to": 1938
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "bs-map1938",
+            "bs-cbrl"
+          ],
+          "locator": "Third exact feature, Saudi overlap, owners, and direct seams. Council for British Research in the Levant caption identifying Nuri bin Haza al-Sha'lan as emir of the Ruwala, 1847 to 1942.",
+          "dateScope": {
+            "from": 1938,
+            "to": 1942
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "bs-khoury",
+            "bs-map1945",
+            "bs-state"
+          ],
+          "locator": "Academic study of Nuri, Fawwaz, French policy, Damascus ties, education, and Nuri's death in 1942. Endpoint control where the exact feature disappears while Saudi Arabia remains. United States Office of the Historian chronology of recognition, the 1932 name change, and diplomatic relations.",
+          "dateScope": {
+            "from": 1942,
+            "to": 1945
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "bs-index",
+            "bs-coverage"
+          ],
+          "locator": "Exact index and coverage fields for id, spelling, dates, provenance, intervals, and missing content.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "bs-map1920",
+            "bs-map1930",
+            "bs-map1938"
+          ],
+          "locator": "All exact occurrences, decoded dimensions, bounds, hashes, and equality across target snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "bs-map1920",
+            "bs-qdl-border"
+          ],
+          "locator": "Point-in-polygon results compared with QDL evidence about Wadi Sirhan, al-Jawf, routes, and Ruwala allegiance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "bs-map1938",
+            "bs-state"
+          ],
+          "locator": "Exact dual ownership at interior probes contrasted with official diplomatic chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "bs-qdl-bio",
+            "bs-cbrl"
+          ],
+          "locator": "Titles and group affiliation in contemporary and institutional biographical evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "bs-musil-50"
+          ],
+          "locator": "Recorded rules and expectations of Rwala chiefly selection and authority, bounded by source perspective.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "bs-qdl-jauf"
+          ],
+          "locator": "Primary November 1920 report of the attempt, defeat, and geographical object of the conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "bs-qdl-kuwait"
+          ],
+          "locator": "Proposal and rejection in the primary Kuwait Conference record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "bs-qdl-ibnsaud"
+          ],
+          "locator": "Authorship, sovereignty claim, negotiations, and administrative dispute in the primary letter.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "bs-qdl-bio"
+          ],
+          "locator": "Contemporary description of leadership, political relationships, and the distinction from territorial statehood.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "bs-musil-44"
+          ],
+          "locator": "Mobility, subsistence, and source chronology in the opening ethnographic chapters.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "bs-musil-77"
+          ],
+          "locator": "Camp selection, scouting, kin grouping, resource assessment, and material traces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "bs-musil-76"
+          ],
+          "locator": "Sequence and material requirements of moving a household tent.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "bs-qdl-hadda"
+          ],
+          "locator": "Primary treaty provisions concerning grazing, residence, property, movement, and security.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "bs-qdl-border"
+          ],
+          "locator": "QDL synthesis of British strategic reasoning about Wadi Sirhan, routes, and Ruwala relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "bs-musil-61"
+          ],
+          "locator": "Materials, weaving, repair, and construction tasks in the ethnographic description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "bs-musil-64"
+          ],
+          "locator": "Interior divisions, guest space, family space, and adjustable partitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "bs-musil-72"
+          ],
+          "locator": "Tent orientation and wall adjustments for wind, heat, and weather.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "bs-musil-86"
+          ],
+          "locator": "Meal ingredients, preparation, seasonal access, and shortage in the food chapters.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "bs-musil-93"
+          ],
+          "locator": "Documented gathered foods and the limits of the outsider source.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "bs-musil-46"
+          ],
+          "locator": "Kinship terminology, household authority, property, and the author's generalizing frame.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "bs-musil-243"
+          ],
+          "locator": "Recorded childbirth narratives, assisting relatives, naming, and evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "bs-musil-662"
+          ],
+          "locator": "Recorded inheritance principles and the distinction between stated rule and lived practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "bs-musil-455"
+          ],
+          "locator": "Hosting sequence, coffee, guest obligations, and social meaning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "bs-chatty"
+          ],
+          "locator": "Academic history of the Damascus residence and district, with its chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "bs-musil-255"
+          ],
+          "locator": "Age-linked tasks, listening, poetry, public knowledge, and practical learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "bs-musil-258"
+          ],
+          "locator": "Games, running, songs, gendered description, and limits of personal experience.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "bs-aub"
+          ],
+          "locator": "Contemporary university acknowledgments of Fawwaz, field access, and medical help.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "bs-musil-112"
+          ],
+          "locator": "Writing tools, paper supply, specialist clerks, and correspondence context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "bs-musil-catalog"
+          ],
+          "locator": "Publication context and the distinction between outsider transcription and an attributable community-authored sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "bs-musil-666"
+          ],
+          "locator": "Illness categories, preparations, poultices, splints, ritual elements, and efficacy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "bs-musil-668"
+          ],
+          "locator": "Wound care, separate shelter, relatives' nursing, and limits on medical inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "bs-musil-243"
+          ],
+          "locator": "Childbirth assistance and the observer's restricted evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "bs-musil-134"
+          ],
+          "locator": "Recorded cleaning materials, water constraints, and critical treatment of authorial bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "bs-aub"
+          ],
+          "locator": "Named medical acknowledgment and its narrow institutional setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "bs-musil-94"
+          ],
+          "locator": "Household and herd water collection, labor, distance, and rationing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "bs-musil-69"
+          ],
+          "locator": "Water containers, approximate capacity, construction, and uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "bs-musil-338"
+          ],
+          "locator": "Well equipment, watering sequence, animals, and coordinated labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "bs-musil-340"
+          ],
+          "locator": "Shared pools, animal access, contamination, and limits on generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "bs-musil-64",
+            "bs-musil-134"
+          ],
+          "locator": "Detailed domestic inventory and cleaning account, neither of which securely documents a latrine.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "bs-musil-72"
+          ],
+          "locator": "Weather-responsive placement and adjustment of tent cloths.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "bs-musil-77"
+          ],
+          "locator": "Camp arrangement, selection factors, and material traces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "bs-musil-97"
+          ],
+          "locator": "Hand rinsing and meal etiquette in the ethnographic account.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "bs-camel"
+          ],
+          "locator": "Academic account of Fawwaz's movement, mediation, and the camel dispute.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "bs-oxford"
+          ],
+          "locator": "Documented marriage alliance and its political context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "bs-qdl-visit"
+          ],
+          "locator": "Exact title and group affiliation in a contemporary administrative list.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "bs-khoury"
+          ],
+          "locator": "Death date, succession, family roles, and Syrian political context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "bs-map1938",
+            "bs-map1945"
+          ],
+          "locator": "Exact presence, overlap, disappearance, owners, and absence of a geometry transition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "bs-qdl-hadda",
+            "bs-musil-455"
+          ],
+          "locator": "Cross-border rights and documented household hospitality synthesized with explicit geographic limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "bs-map1914",
+            "bs-map1938",
+            "bs-map1945"
+          ],
+          "locator": "Related atlas ids, direct seams, overlaps, and neighboring-summary hazard audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "bs-map1938",
+            "bs-map1945",
+            "bs-khoury"
+          ],
+          "locator": "Third exact feature, Saudi overlap, owners, and direct seams. Endpoint control where the exact feature disappears while Saudi Arabia remains. Academic study of Nuri, Fawwaz, French policy, Damascus ties, education, and Nuri's death in 1942.",
+          "dateScope": {
+            "year": 1945
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "emirate-of-bin-shal-an",
+        "name": "Ibn Sha'lan and the Ruwala (disputed atlas label)",
+        "aliases": [
+          "Emirate of Bin Shal'an"
+        ],
+        "kind": "region",
+        "region": "Asia",
+        "from": 1920,
+        "to": 1945,
+        "circa": true,
+        "card": "cards/emirate-of-bin-shal-an.json",
+        "dateBasis": "map_coverage",
+        "summary": "A disputed atlas label whose polygon conflicts with documented Ruwala geography from 1920 to 1945.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1920.json",
+          "properties": {
+            "civ": "emirate-of-bin-shal-an",
+            "from": 1920,
+            "to": 1930,
+            "precision": 3
+          },
+          "bounds": [
+            39.88299882998831,
+            15.345583579667625,
+            56.02916029160292,
+            28.862128153700915
+          ]
+        },
+        {
+          "file": "world-1930.json",
+          "properties": {
+            "civ": "emirate-of-bin-shal-an",
+            "from": 1930,
+            "to": 1938,
+            "precision": 3
+          },
+          "bounds": [
+            39.88299882998831,
+            15.345583579667625,
+            56.02916029160292,
+            28.862128153700915
+          ]
+        },
+        {
+          "file": "world-1938.json",
+          "properties": {
+            "civ": "emirate-of-bin-shal-an",
+            "from": 1938,
+            "to": 1945,
+            "precision": 3
+          },
+          "bounds": [
+            39.88299882998831,
+            15.345583579667625,
+            56.02916029160292,
+            28.862128153700915
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
