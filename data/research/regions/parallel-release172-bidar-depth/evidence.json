@@ -1,0 +1,986 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release172-bidar research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "bi-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, label, approximate atlas lifetime, and historical basemap provenance."
+    },
+    {
+      "id": "bi-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Observed intervals, inferred state kind, border file count, and missing research review."
+    },
+    {
+      "id": "bi-missing",
+      "title": "Human History Map missing card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Missing exact record, imported city summary, source history, and absence of staged drafts."
+    },
+    {
+      "id": "bi-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card is associated with the exact imported id."
+    },
+    {
+      "id": "bi-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed override yet corrects the exact imported id."
+    },
+    {
+      "id": "bi-map-1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-start control for exact-id absence and tested point ownership."
+    },
+    {
+      "id": "bi-map-1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "First exact-id feature, decoded polygon, point membership, and start seam."
+    },
+    {
+      "id": "bi-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Second exact-id feature and first internal geometry change."
+    },
+    {
+      "id": "bi-map-1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Third exact-id feature and stable sixteenth-century geometry regime."
+    },
+    {
+      "id": "bi-map-1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Fourth exact-id feature, identical to the 1530 decoded geometry."
+    },
+    {
+      "id": "bi-map-1650",
+      "title": "Human History Map 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Post-conquest exact-id feature and fourth decoded geometry regime."
+    },
+    {
+      "id": "bi-map-1700",
+      "title": "Human History Map 1700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1700.json",
+      "note": "Indexed endpoint control where the exact id disappears."
+    },
+    {
+      "id": "bi-map-1715",
+      "title": "Human History Map 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Later control confirming continuing exact-id absence."
+    },
+    {
+      "id": "bi-iranica-dynasty",
+      "title": "Baridshahi Dynasty, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/baridsahi-a-dynasty-of-indo-muslim-kings-of-the-deccan-plateau-that-ruled-from-897-1491-92-to-1028-1619-in-one-of-the-five/",
+      "note": "Authoritative chronology, political identity, Qasim Barid, Ali Barid, Talikota, cultural achievements, decline, and annexation."
+    },
+    {
+      "id": "bi-mahmud-gawan",
+      "title": "Mahmud Gawan: Deccanis and Westerners, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/mahmud-gawan-14111481-deccanis-and-westerners/905D841D5CE0D775A3619A22E8071818",
+      "note": "Scholarly chapter on Bidar as a Bahmani capital, its transregional networks, court, and institutional inheritance."
+    },
+    {
+      "id": "bi-iranica-politics",
+      "title": "Deccan: Political and literary history, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/deccan/deccan-i-political-and-literary-history/",
+      "note": "Regional political history of the Bahmani successor states, their alliances, conflicts, literature, and conquests."
+    },
+    {
+      "id": "bi-iranica-art",
+      "title": "Deccan: Architecture and art, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/deccan/deccan-ii-architecture-and-art/",
+      "note": "Scholarly survey of Bidar buildings, craftsmen, tiles, Persian connections, and Deccani artistic development."
+    },
+    {
+      "id": "bi-cambridge-islam",
+      "title": "The Sultanates of the Deccan, Cambridge History of Islam",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-islam/sultanates-of-the-deccan-sixteenth-to-eighteenth-centuries/F4E4915819A142C494E31D8B699972C1",
+      "note": "Authoritative synthesis of sixteenth-century Deccan politics, alliances, Talikota, encroachment, and annexation."
+    },
+    {
+      "id": "bi-soas-sultanates",
+      "title": "Deccan Sultanates, SOAS Research Online",
+      "url": "https://soas-repository.worktribe.com/output/379052/deccan-sultanates",
+      "note": "Scholarly overview placing Bidar among the distinct, short-lived Deccan successor sultanates."
+    },
+    {
+      "id": "bi-gazetteer",
+      "title": "Dynastic History of the Deccan, Maharashtra State Gazetteers",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_II/dynastic.pdf",
+      "note": "Government historical synthesis with a dedicated Barid Shahi narrative and regional chronology."
+    },
+    {
+      "id": "bi-asi-architecture",
+      "title": "Indo-Islamic Architecture, Archaeological Survey of India",
+      "url": "https://ignca.gov.in/Asi_data/35603.pdf",
+      "note": "Archaeological Survey overview of Deccan architecture, including the Barid Shahi tomb tradition and Ali Barid tomb."
+    },
+    {
+      "id": "bi-yazdani",
+      "title": "Bidar: Its History and Monuments, Ghulam Yazdani",
+      "url": "https://www.rarebooksocietyofindia.org/book_archive/196174216674_10153272681276675.pdf",
+      "note": "Foundational archaeological monograph documenting Bidar buildings, inscriptions, waterworks, chronology, and layered patronage."
+    },
+    {
+      "id": "bi-asi-tombs",
+      "title": "Barid Shahi Tombs, Archaeological Survey of India Dharwad Circle",
+      "url": "https://www.asidharwadcircle.in/monument/barid-shahi-tombs/",
+      "note": "Official monument record for the Barid Shahi royal tomb complex at Bidar."
+    },
+    {
+      "id": "bi-karnataka-monuments",
+      "title": "Historical Monuments, Bidar District Government",
+      "url": "https://bidar.nic.in/en/adventures/",
+      "note": "Government description of fort planning, palaces, kitchen, bath, cistern, harem rooms, tombs, and layered architecture."
+    },
+    {
+      "id": "bi-census",
+      "title": "District Census Handbook Bidar, Census of India",
+      "url": "https://censusindia.gov.in/nada/index.php/catalog/592/download/2016/DH_2011_2904_PART_A_DCHB_BIDAR.pdf",
+      "note": "Official district handbook summarizing Bidar geography, history, fort, monuments, settlements, and regional setting."
+    },
+    {
+      "id": "bi-madrasa-gov",
+      "title": "Mahmud Gawan Madrasa, Incredible India",
+      "url": "https://www.incredibleindia.gov.in/en/karnataka/bidar/mahmud-gawan-madrasa",
+      "note": "Government tourism record describing the inherited madrasa, library, lecture halls, rooms, curriculum, and later damage."
+    },
+    {
+      "id": "bi-pondi-madrasa",
+      "title": "History of India 650 to 1526, Pondicherry University",
+      "url": "https://dde.pondiuni.edu.in/files/StudyMaterials/UG/BA-History/2year/BAHS1924HistoryofIndia650-1526CE.pdf",
+      "note": "University study material on Mahmud Gawan Madrasa architecture, library, teaching halls, and residential arrangements."
+    },
+    {
+      "id": "bi-courts-book",
+      "title": "The Courts of the Deccan Sultanates, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/courts-of-the-deccan-sultanates/A03674E679DF37F9147247A4C36190A3",
+      "note": "Scholarly synthesis of diverse courtly society, transregional networks, knowledge, bodily practice, and learned skills."
+    },
+    {
+      "id": "bi-courtly",
+      "title": "Courtly Disposition, The Courts of the Deccan Sultanates",
+      "url": "https://www.cambridge.org/core/books/courts-of-the-deccan-sultanates/courtly-disposition/77874AC47F9649BBEF670F4DFECDD7FB",
+      "note": "Scholarly chapter on education, diet, medicine, physicians, hospitals, perfumes, sociability, and bodily knowledge."
+    },
+    {
+      "id": "bi-merchants",
+      "title": "Courts, Merchants and Commodities, The Courts of the Deccan Sultanates",
+      "url": "https://www.cambridge.org/core/books/abs/courts-of-the-deccan-sultanates/courts-merchants-and-commodities/3253C309C8CCD79493B9591FD6299090",
+      "note": "Scholarly chapter on Deccan trade, revenue, merchants, commodities, consumption, and courtly exchange."
+    },
+    {
+      "id": "bi-social",
+      "title": "A Social History of the Deccan, 1300 to 1761",
+      "url": "https://www.cambridge.org/core/books/a-social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708",
+      "note": "Authoritative social history emphasizing mobility, piety, labor, language, regional identities, and individual lives."
+    },
+    {
+      "id": "bi-rama-raya",
+      "title": "Rama Raya: Elite mobility in a Persianized world",
+      "url": "https://www.cambridge.org/core/books/abs/social-history-of-the-deccan-13001761/rama-raya-14841565-elite-mobility-in-a-persianized-world/EABCC41A5AAFC5E0672C759AB59C053A",
+      "note": "Scholarly chapter documenting mobile, multilingual Deccan elites and connections involving Bidar before Talikota."
+    },
+    {
+      "id": "bi-karez",
+      "title": "Rehabilitation of the Qanat and Karez system of Bidar, Deccan Heritage Foundation",
+      "url": "https://www.deccan-heritage-foundation.org/restoration-projects/rehabilitation-and-revitalisation-of-the-qanat-karez-system-of-bidar-karnataka/",
+      "note": "Conservation documentation for the fifteenth-century underground water system, geology, distribution, and continued use."
+    },
+    {
+      "id": "bi-oxford-water",
+      "title": "Water in Hyderabad and the Deccan, Oxford Academic",
+      "url": "https://academic.oup.com/book/63254/chapter-abstract/571546721",
+      "note": "Scholarly regional framework for water as an environmental, technical, social, and political resource in the Deccan."
+    },
+    {
+      "id": "bi-bidri-science",
+      "title": "Bidri ware, Scientific Analysis of Ancient and Historic Metals",
+      "url": "https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780750616119500157",
+      "note": "Scientific account of high-zinc alloy, blackening, inlay, earliest surviving objects, and unresolved origins."
+    },
+    {
+      "id": "bi-bidri-tandf",
+      "title": "Bidriware: history, technique and conservation",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/23311983.2023.2221886",
+      "note": "Peer-reviewed study of Bidri alloy, casting, engraving, inlay, blackening, soil traditions, and debated origins."
+    },
+    {
+      "id": "bi-bidri-sage",
+      "title": "Enigmas of bidri, Studies in Conservation",
+      "url": "https://journals.sagepub.com/doi/10.1179/174329305X64286",
+      "note": "Peer-reviewed technical discussion of Bidri composition, manufacture, corrosion, conservation, and unresolved questions."
+    },
+    {
+      "id": "bi-soas-bidri",
+      "title": "Learning through objects: Bidriware in the SOAS Collections",
+      "url": "https://www.soas.ac.uk/about/blogs/learning-through-objects-bidriware-soas-collections",
+      "note": "University collection account of craft stages, teaching objects, uncertain origins, products, and movement among centers."
+    },
+    {
+      "id": "bi-nizam-report",
+      "title": "Annual Report of the Archaeological Department of Hyderabad State",
+      "url": "https://ignca.gov.in/Asi_data/15322.pdf",
+      "note": "Official archaeological report on Barid Shahi history, coin evidence, inscriptions, monuments, chronology, and dynastic limits."
+    },
+    {
+      "id": "bi-ignou-craft",
+      "title": "Traditions and Perceptions of Crafts in Bharat, IGNOU",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/107734/1/Unit-10.pdf",
+      "note": "University teaching resource placing Bidri within Indian craft traditions and skilled production."
+    },
+    {
+      "id": "bi-epigraphia",
+      "title": "Epigraphia Indica, Arabic and Persian Supplement 1937 to 1938",
+      "url": "https://ignca.gov.in/Asi_data/75161.pdf",
+      "note": "Archaeological epigraphy publication containing five Bidar inscriptions, original texts, translations, dates, and contexts."
+    },
+    {
+      "id": "bi-ancient-india",
+      "title": "Ancient India Number 5, Archaeological Survey of India",
+      "url": "https://ignca.gov.in/Asi_data/18136.pdf",
+      "note": "Archaeological Survey report on the bilingual Persian and Marathi Ashtur well inscriptions and Barid court context."
+    },
+    {
+      "id": "bi-met-catalog",
+      "title": "Sultans of Deccan India 1500 to 1700, Metropolitan Museum of Art",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Sultans_of_Deccan_India_1500_1700.pdf",
+      "note": "Museum scholarship on Deccani architecture, manuscripts, metalwork, Bidri production, materials, and artistic exchange."
+    },
+    {
+      "id": "bi-met-box",
+      "title": "Bidri Box for Holding Pan, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/453366",
+      "note": "Museum record for a Bidar-attributed zinc-alloy box, silver and brass inlay, architecture-inspired form, and pan use."
+    },
+    {
+      "id": "bi-bm-flask",
+      "title": "Bidri ware flask, British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/A_1878-1230-758",
+      "note": "Museum object record explaining blackened zinc-rich Bidri alloy, silver and brass inlay, form, and Deccan attribution."
+    }
+  ],
+  "entities": [
+    {
+      "id": "bidar",
+      "card": "data/cards/bidar.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "bi-index",
+            "bi-map-1492",
+            "bi-map-1650",
+            "bi-iranica-dynasty",
+            "bi-mahmud-gawan"
+          ],
+          "locator": "Exact imported id, label, approximate atlas lifetime, and historical basemap provenance. First exact-id feature, decoded polygon, point membership, and start seam. Post-conquest exact-id feature and fourth decoded geometry regime. Authoritative chronology, political identity, Qasim Barid, Ali Barid, Talikota, cultural achievements, decline, and annexation. Scholarly chapter on Bidar as a Bahmani capital, its transregional networks, court, and institutional inheritance.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "bi-social"
+          ],
+          "locator": "Authoritative social history emphasizing mobility, piety, labor, language, regional identities, and individual lives.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1505
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "bi-iranica-politics"
+          ],
+          "locator": "Regional political history of the Bahmani successor states, their alliances, conflicts, literature, and conquests.",
+          "dateScope": {
+            "from": 1505,
+            "to": 1528
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "bi-cambridge-islam"
+          ],
+          "locator": "Authoritative synthesis of sixteenth-century Deccan politics, alliances, Talikota, encroachment, and annexation.",
+          "dateScope": {
+            "from": 1528,
+            "to": 1542
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "bi-iranica-art"
+          ],
+          "locator": "Scholarly survey of Bidar buildings, craftsmen, tiles, Persian connections, and Deccani artistic development.",
+          "dateScope": {
+            "from": 1542,
+            "to": 1565
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "bi-rama-raya"
+          ],
+          "locator": "Scholarly chapter documenting mobile, multilingual Deccan elites and connections involving Bidar before Talikota.",
+          "dateScope": {
+            "from": 1565,
+            "to": 1581
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "bi-soas-sultanates"
+          ],
+          "locator": "Scholarly overview placing Bidar among the distinct, short-lived Deccan successor sultanates.",
+          "dateScope": {
+            "from": 1581,
+            "to": 1591
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "bi-gazetteer"
+          ],
+          "locator": "Government historical synthesis with a dedicated Barid Shahi narrative and regional chronology.",
+          "dateScope": {
+            "from": 1591,
+            "to": 1609
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "bi-ancient-india"
+          ],
+          "locator": "Archaeological Survey report on the bilingual Persian and Marathi Ashtur well inscriptions and Barid court context.",
+          "dateScope": {
+            "from": 1609,
+            "to": 1619
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "bi-index",
+            "bi-coverage",
+            "bi-missing",
+            "bi-card-index",
+            "bi-overrides"
+          ],
+          "locator": "Repository identity, map lifetime, missing content, and exact association decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "bi-map-1400",
+            "bi-map-1492",
+            "bi-map-1500",
+            "bi-map-1530",
+            "bi-map-1600",
+            "bi-map-1650",
+            "bi-map-1700",
+            "bi-map-1715"
+          ],
+          "locator": "Full snapshot inventory, five exact features, and controls before and after coverage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "bi-map-1492",
+            "bi-map-1500"
+          ],
+          "locator": "Decoded geometry type, ring and position counts, bounding box, and membership tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "bi-map-1530",
+            "bi-map-1600",
+            "bi-map-1650"
+          ],
+          "locator": "Geometry regime hashes and direct arc seam behavior across internal snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "bi-map-1650",
+            "bi-map-1700",
+            "bi-map-1715"
+          ],
+          "locator": "Historical correction, post-conquest feature, indexed endpoint, and later absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "bi-social"
+          ],
+          "locator": "Qasim Barid, de facto control, regalia, and bounded interpretation of the start.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "bi-iranica-politics"
+          ],
+          "locator": "Amir Barid, Bahmani shadow kings, diplomacy, and source-selection limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "bi-iranica-art"
+          ],
+          "locator": "Ali Barid kingship, reign length, cultural apex, and scale distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "bi-rama-raya"
+          ],
+          "locator": "Talikota coalition, victory, continued rivalry, and strict identity separation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "bi-cambridge-islam"
+          ],
+          "locator": "Post-Ali succession, encroachment, and distinction between state decline and social continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "bi-karnataka-monuments"
+          ],
+          "locator": "Government monument inventory for citadel, urban fortification, access, and evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "bi-census"
+          ],
+          "locator": "Official handbook context for the layered fort and limits of dynastic attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "bi-karnataka-monuments"
+          ],
+          "locator": "Palace layout, harem association, service spaces, and family evidence boundaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "bi-yazdani"
+          ],
+          "locator": "Monument documentation for materials, patronage, layered construction, and household contrast.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "bi-asi-tombs"
+          ],
+          "locator": "Official tomb record, completed and unfinished monuments, and restrained gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "bi-census"
+          ],
+          "locator": "Regional environment and explicit limits on projecting later crop evidence backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "bi-merchants"
+          ],
+          "locator": "Scholarly evidence for trade, administrative involvement, commodities, and consumption limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "bi-courtly"
+          ],
+          "locator": "Deccan dietary writing, court context, and explicit limits on ordinary menus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "bi-bidri-science",
+            "bi-bidri-tandf"
+          ],
+          "locator": "Scientific craft sequence, earliest objects, and bounded origin chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "bi-met-box"
+          ],
+          "locator": "Museum object function, materials, status, date, and gentle evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "bi-courts-book"
+          ],
+          "locator": "Social diversity, mobility, overlapping roles, and documentary selection effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "bi-courts-book"
+          ],
+          "locator": "Transregional networks, kinship, employment, mobility, and limits of court representation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "bi-karnataka-monuments"
+          ],
+          "locator": "Named royal family burials and strict limits on reconstructing intimate household life.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "bi-ancient-india"
+          ],
+          "locator": "Bilingual epigraphy, named patronage, linguistic plurality, and literacy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "bi-iranica-politics"
+          ],
+          "locator": "Religious plurality, sectarian tension, cooperation, and limits of single-label interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "bi-social"
+          ],
+          "locator": "Evidence-bounded childhood learning and absence of a standardized curriculum.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "bi-madrasa-gov"
+          ],
+          "locator": "Inherited madrasa spaces, chronology, possible use, and limits on access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "bi-pondi-madrasa"
+          ],
+          "locator": "University summary of subjects and explicit limits on curriculum continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "bi-courtly"
+          ],
+          "locator": "Courtly knowledge and embodied training with gentle humor about novice invisibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "bi-epigraphia"
+          ],
+          "locator": "Epigraphic scripts, multilingual administration, specialist literacy, and category distinctions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "bi-courtly"
+          ],
+          "locator": "Scholarly account of medical traditions, texts, diet, climate, and plural practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "bi-courtly"
+          ],
+          "locator": "Earlier hospital, physician diversity, poor patients, and explicit continuity limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "bi-cambridge-islam"
+          ],
+          "locator": "Conflict-related health risks and evidence-bounded reconstruction of care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "bi-yazdani"
+          ],
+          "locator": "Elite bodily amenities and unequal access to resources shaping health.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "bi-social"
+          ],
+          "locator": "Method for separating material facilities, learned medicine, and undocumented patient experience.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "bi-karez"
+          ],
+          "locator": "Conservation evidence for date, groundwater capture, channels, shafts, geology, and adaptation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "bi-oxford-water"
+          ],
+          "locator": "Regional water framework for multiple uses, unequal access, quality, and governance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "bi-karnataka-monuments"
+          ],
+          "locator": "Official monument evidence for baths and storage with urban access limits and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "bi-yazdani"
+          ],
+          "locator": "Dated Barid well, named builder and ruler, and bounded infrastructure inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "bi-karez",
+            "bi-asi-architecture"
+          ],
+          "locator": "Explicit evidence-bounded absence for toilets, sewers, refuse service, and waste routines.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "bi-asi-architecture"
+          ],
+          "locator": "Architectural transition, Persian influence, and collective labor behind court monuments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "bi-epigraphia"
+          ],
+          "locator": "Full original, script, transliteration, translation, object, date, patronage, and maker limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "bi-epigraphia"
+          ],
+          "locator": "Paired Persian and Marathi records, public function, craft, and chronology correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "bi-met-catalog"
+          ],
+          "locator": "Museum scholarship on artistic exchange, multiple media, political scale, and object mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "bi-bidri-sage",
+            "bi-ignou-craft"
+          ],
+          "locator": "Technical conservation evidence, variable recipes, skilled control, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "bi-cambridge-islam"
+          ],
+          "locator": "Bijapuri pressure, conquest, annexation, and distinction between sovereignty and population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "bi-soas-sultanates"
+          ],
+          "locator": "Strict identity separation from predecessor, conqueror, Mughal, and Hyderabad governments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "bi-gazetteer"
+          ],
+          "locator": "Human and material continuity after institutional ending, with clear sovereignty boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "bi-soas-bidri",
+            "bi-bm-flask"
+          ],
+          "locator": "Craft continuation, multiple centers, later objects, and rejection of backward attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "bi-map-1650",
+            "bi-map-1700",
+            "bi-map-1715"
+          ],
+          "locator": "Endpoint seam, historical mismatch, and exact-id association guard.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "bi-nizam-report",
+            "bi-map-1650",
+            "bi-map-1700"
+          ],
+          "locator": "Official archaeological report on Barid Shahi history, coin evidence, inscriptions, monuments, chronology, and dynastic limits. Post-conquest exact-id feature and fourth decoded geometry regime. Indexed endpoint control where the exact id disappears.",
+          "dateScope": {
+            "year": 1619
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "bidar",
+        "name": "Bidar Sultanate (Barid Shahi dynasty)",
+        "aliases": [
+          "Barid Shahi dynasty",
+          "Bidar Sultanate"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 1492,
+        "to": 1619,
+        "circa": true,
+        "card": "cards/bidar.json",
+        "dateBasis": "historical",
+        "summary": "Bidar-centered Barid Shahi state, formed through de facto control of the Bahmani capital and annexed by Bijapur in 1619.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "bidar",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            77.07137071370715,
+            16.464728098829596,
+            78.32058320583207,
+            19.012628945040817
+          ]
+        },
+        {
+          "file": "world-1500.json",
+          "properties": {
+            "civ": "bidar",
+            "from": 1500,
+            "to": 1530,
+            "precision": 1
+          },
+          "bounds": [
+            77.07137071370715,
+            16.4652945412616,
+            78.32058320583207,
+            19.01230414160662
+          ]
+        },
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "bidar",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            77.07137071370715,
+            16.46539959482773,
+            78.32058320583207,
+            19.012579167037018
+          ]
+        },
+        {
+          "file": "world-1600.json",
+          "properties": {
+            "civ": "bidar",
+            "from": 1600,
+            "to": 1650,
+            "precision": 1
+          },
+          "bounds": [
+            77.07137071370715,
+            16.46539959482773,
+            78.32058320583207,
+            19.012579167037018
+          ]
+        },
+        {
+          "file": "world-1650.json",
+          "properties": {
+            "civ": "bidar",
+            "from": 1650,
+            "to": 1700,
+            "precision": 1
+          },
+          "bounds": [
+            77.07137071370715,
+            16.46539959482773,
+            78.32058320583207,
+            19.012579167037018
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

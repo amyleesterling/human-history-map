@@ -1,0 +1,960 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release173-nejd research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact generated id, imported name, approximate 1783 to 1878 lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported generic regional summary awaiting researched replacement for this exact state-class record."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three observed intervals and pending identity, chronology, border, and content review."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no runtime card is associated with this exact id before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no reviewed override exists for the exact target before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, imported summary status, and empty staged-drafts list."
+    },
+    {
+      "id": "atlas-map1715",
+      "title": "Human History Map 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "Pre-appearance control for the exact id and representative points."
+    },
+    {
+      "id": "atlas-map1783",
+      "title": "Human History Map 1783 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "First exact target feature, decoded geometry, representative points, and topology tests."
+    },
+    {
+      "id": "atlas-map1800",
+      "title": "Human History Map 1800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Second exact target feature and identical decoded geometry regime."
+    },
+    {
+      "id": "atlas-map1815",
+      "title": "Human History Map 1815 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Third exact target feature and long declared interval crossing the 1818 rupture."
+    },
+    {
+      "id": "atlas-map1878",
+      "title": "Human History Map 1878 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1878.json",
+      "note": "Target disappearance before the historical end of the Second Saudi State."
+    },
+    {
+      "id": "atlas-map1900",
+      "title": "Human History Map 1900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1900.json",
+      "note": "Post-disappearance control assigning the sampled interior to a generic Arabia layer."
+    },
+    {
+      "id": "atlas-map1914",
+      "title": "Human History Map 1914 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Later Arabia Nejd layer control, distinct from the exact target and its historical states."
+    },
+    {
+      "id": "atlas-arabia-card",
+      "title": "Human History Map researched Arabia Nejd card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/arabia-nejd.json",
+      "note": "Existing later Najd research establishes adjacent coverage without substituting for this exact id."
+    },
+    {
+      "id": "cambridge-overview",
+      "title": "Madawi Al-Rasheed, Society and politics, 1744 to 1818 and 1824 to 1891",
+      "url": "https://www.cambridge.org/core/books/abs/history-of-saudi-arabia/society-and-politics-17441818-and-18241891/8DB5A4A8F4EB199F6EBAB1C79C6BD3D1",
+      "note": "Cambridge synthesis defining the paired First and Second Saudi State scope, Ottoman context, Najdi society, and political chronology."
+    },
+    {
+      "id": "cambridge-sample",
+      "title": "A History of Saudi Arabia, chapter sample",
+      "url": "https://assets.cambridge.org/052164/335X/sample/052164335Xws.pdf",
+      "note": "Cambridge sample on Diriyah farmers, merchants, artisans, scholars, enslaved people, dates, livestock, coastal dependence, and long-distance trade."
+    },
+    {
+      "id": "cambridge-chronology",
+      "title": "A History of Saudi Arabia, second edition chronology",
+      "url": "https://assets.cambridge.org/97805217/47547/frontmatter/9780521747547_frontmatter.pdf",
+      "note": "Cambridge chronology for rulers, expansion, Diriyah destruction, Riyadh restoration, Ottoman occupation of al-Ahsa, and Rashidi victory."
+    },
+    {
+      "id": "cambridge-riyadh-rulers",
+      "title": "Al Saud rulers in Riyadh, 1824 to 1891",
+      "url": "https://www.cambridge.org/core/books/abs/history-of-saudi-arabia/al-saud-rulers-in-riyadh-18241891/0DDAB4D9D8152F985580287EBE0C7CF3",
+      "note": "Cambridge appendix securing the Second Saudi State period and succession in Riyadh."
+    },
+    {
+      "id": "cambridge-firearms",
+      "title": "Arabians for guns: Wahhabi matchlocks, world trade, and the rise of the first Saudi state",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/arabians-for-guns-wahhabi-matchlocks-world-trade-and-the-rise-of-the-first-saudi-state/3606B23BB80F31DF6FF46C8ACC0BE651",
+      "note": "Peer-reviewed evidence on firearms, caravan imports, exports, mobilization, enslaved labor, siege damage, and limits of gunmaking legends."
+    },
+    {
+      "id": "cambridge-hajj",
+      "title": "The Saudis as Managers of the Hajj",
+      "url": "https://www.cambridge.org/core/books/abs/hajj/saudis-as-managers-of-the-hajj/D5E72CDDDC99AC670B1E797DF2FABAA4",
+      "note": "Cambridge chapter on Najdi pilgrimage restrictions, First Saudi control of the holy cities, seven Hajj seasons, and contested reforms."
+    },
+    {
+      "id": "cambridge-civilwar",
+      "title": "Civil War, Foreign Intervention, and the Question of Political Legitimacy",
+      "url": "https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/abs/civil-war-foreign-intervention-and-the-question-of-political-legitimacy-a-nineteenth-century-saud-qs-dilemma/ED75C48D438142467D5FAB3C80710B1B",
+      "note": "Peer-reviewed study of the post-1865 Saudi civil war, foreign intervention, juristic choices, and the Second State demise."
+    },
+    {
+      "id": "cambridge-arabia",
+      "title": "Arabia to the end of the First World War",
+      "url": "https://www.cambridge.org/core/books/abs/new-cambridge-history-of-islam/arabia-to-the-end-of-the-first-world-war/13DC64A2DFC4280AFAA4B2F29ACF8B43",
+      "note": "Cambridge regional synthesis emphasizing nineteenth-century Najd connections toward Iraq rather than isolation."
+    },
+    {
+      "id": "cambridge-rashidi",
+      "title": "The tribal partners of empire in Arabia: the Ottomans and the Rashidis of Najd, 1880 to 1918",
+      "url": "https://www.cambridge.org/core/journals/new-perspectives-on-turkey/article/tribal-partners-of-empire-in-arabia-the-ottomans-and-the-rashidis-of-najd-18801918/AF3C3A2725F297AF9371DF46799D9725",
+      "note": "Peer-reviewed analysis of Ottoman-Rashidi partnership, Rashidi regional power, Saudi decline, and Abd al-Rahman in exile."
+    },
+    {
+      "id": "cambridge-intro",
+      "title": "A History of Saudi Arabia, introduction",
+      "url": "https://www.cambridge.org/core/books/abs/history-of-saudi-arabia/introduction/5A336E8394415A63DE76F5AC1A9648C0",
+      "note": "Cambridge discussion of repeated Arabian state formation, conquest, political fragility, and the distinction between earlier Saudi polities and the 1932 kingdom."
+    },
+    {
+      "id": "oxford-lineages",
+      "title": "Kadizadeli Ottoman Scholarship, Muhammad ibn Abd al-Wahhab, and the Rise of the Saudi State",
+      "url": "https://academic.oup.com/jis/article/26/3/265/709610",
+      "note": "Oxford study of scholarly travel, ijazas, competing Najdi scholarship, the 1744 alliance, and Kitab al-Tawhid."
+    },
+    {
+      "id": "loc-country",
+      "title": "Saudi Arabia: A Country Study",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/sa/saudiarabiacount00metz_0/saudiarabiacount00metz_0.pdf",
+      "note": "Library of Congress historical synthesis on the alliance, Diriyah, 1818 destruction, reform persistence, local politics, and later restoration."
+    },
+    {
+      "id": "qdl-sevenstates",
+      "title": "The Seven Independent Arabian States: Nejd",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023898369.0x00002b",
+      "note": "Digitized India Office handbook describing Faisal, succession conflict, Ottoman al-Ahsa, Rashidi victories, and the 1891 ending."
+    },
+    {
+      "id": "qdl-precis",
+      "title": "Precis of Nejd Affairs, 1804 to 1904",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100041590756.0x00002d",
+      "note": "Contemporary imperial compilation on the post-1865 civil war, Ottoman intervention, al-Ahsa, and rival claims."
+    },
+    {
+      "id": "qdl-pelly",
+      "title": "Notes relating to Lewis Pellys Visit to Riyadh",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023416648.0x000031",
+      "note": "Digitized 1865 travel and intelligence notes on Faisal ibn Turki, Riyadh, geography, antiquities, and evidentiary bias."
+    },
+    {
+      "id": "qdl-boundaries",
+      "title": "Boundaries of South-Eastern Arabia and Qatar, historical precis",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100056574350.0x00007e",
+      "note": "India Office retrospective on First Saudi expansion, Egyptian conquest, Gulf policy, and territorial uncertainty."
+    },
+    {
+      "id": "qdl-wahhabi-history",
+      "title": "Historical note on the Wahhabi movement and Nejd",
+      "url": "https://www.qdl.qa/download/pdf/81055_vdc_100000000912.0x000055_en.pdf",
+      "note": "Digitized India Office history of Ibrahim Pashas 1818 conquest, Diriyahs destruction, occupation, and later Saudi restoration."
+    },
+    {
+      "id": "unesco-aturif",
+      "title": "UNESCO, At-Turaif District in ad-Diriyah",
+      "url": "https://whc.unesco.org/en/list/1329/",
+      "note": "World Heritage evidence on the first Saudi capital, oasis edge, palaces, urban fabric, Najdi architecture, and religious role."
+    },
+    {
+      "id": "unesco-nomination",
+      "title": "At-Turaif District in ad-Diriyah, nomination text",
+      "url": "https://whc.unesco.org/document/168964",
+      "note": "Detailed heritage evidence on mud brick, plaster, stone, timber, palm matting, courtyards, majlis rooms, roofs, wells, and toilet towers."
+    },
+    {
+      "id": "unesco-criteria",
+      "title": "At-Turaif criteria for nomination",
+      "url": "https://whc.unesco.org/document/168966",
+      "note": "UNESCO description of high ventilation openings, toilet towers, courtyards, oasis wells, water table, clay, and social urban form."
+    },
+    {
+      "id": "unesco-decision",
+      "title": "UNESCO decision 34 COM 8B.15 on At-Turaif",
+      "url": "https://whc.unesco.org/en/decisions/3994",
+      "note": "World Heritage Committee decision on adobe adaptation, wells operated by animals, oasis settlement, and heritage significance."
+    },
+    {
+      "id": "unesco-alahsa",
+      "title": "UNESCO, Al-Ahsa Oasis, an Evolving Cultural Landscape",
+      "url": "https://whc.unesco.org/en/list/1563",
+      "note": "World Heritage evidence on date palms, canals, springs, wells, drainage, markets, crafts, and long-lived oasis agriculture."
+    },
+    {
+      "id": "unesco-alahsa-history",
+      "title": "Al-Ahsa Oasis nomination history",
+      "url": "https://whc.unesco.org/document/160478",
+      "note": "Detailed evidence on traditional gravity and mugharraf irrigation, shallow groundwater, drainage, and small-scale cultivation."
+    },
+    {
+      "id": "saudipedia-women",
+      "title": "Saudipedia, Women in the First Saudi State",
+      "url": "https://saudipedia.com/en/women-in-the-first-saudi-state",
+      "note": "Official heritage synthesis on women in teaching, commerce, crafts, household production, poetry, charity, and asylum."
+    },
+    {
+      "id": "saudipedia-social",
+      "title": "Saudipedia, Social Life in the First Saudi State",
+      "url": "https://saudipedia.com/en/social-life-in-the-first-saudi-state",
+      "note": "Official heritage synthesis on extended households, gendered work, farming, pastoral movement, food, majlis gatherings, poetry, news, and games."
+    },
+    {
+      "id": "saudipedia-quality",
+      "title": "Saudipedia, Quality of Life in the First Saudi State",
+      "url": "https://saudipedia.com/en/quality-of-life-in-the-first-saudi-state",
+      "note": "Official heritage synthesis on student endowments, teaching rooms, accommodation, markets, baths, agriculture, and architecture."
+    },
+    {
+      "id": "saudipedia-market",
+      "title": "Saudipedia, Markets in the First Saudi State",
+      "url": "https://saudipedia.com/en/markets-in-the-first-saudi-state",
+      "note": "Official heritage synthesis on al-Mawsim market, separate trading times or sections, livestock, jewelry, weapons, textiles, and lessons."
+    },
+    {
+      "id": "saudipedia-house",
+      "title": "Saudipedia, What Distinguishes the Traditional Najdi House?",
+      "url": "https://saudipedia.com/en/what-distinguishes-the-traditional-najdi-house",
+      "note": "Heritage description of courtyard houses, indirect entrances, majlis and family stairs, one or two storeys, and connected walls."
+    },
+    {
+      "id": "founding-day",
+      "title": "Saudi Founding Day historical guide",
+      "url": "https://www.foundingday.sa/en/-/media/FoundingDay/PDFs/Guides/EN/foundingday-book-guideline-en.pdf",
+      "note": "Darah-backed official guide on Diriyah households, food, clothing, womens commerce, education, poetry, and source traditions."
+    },
+    {
+      "id": "eui-learning",
+      "title": "Guido Steinberg, Ecology, Knowledge, and Trade in Central Arabia",
+      "url": "https://cadmus.eui.eu/bitstreams/5db85872-333e-5c01-b1f1-d7ad8539a020/download",
+      "note": "European University Institute paper on Najdi books, manuscripts, copying, legal learning, expensive materials, and trade networks."
+    },
+    {
+      "id": "pmc-health",
+      "title": "Health Education in Saudi Arabia: Historical overview",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4996289/",
+      "note": "Peer-reviewed review locating organized state health services after this card and documenting later traditional healers, Quranic recitation, herbs, cautery, and cupping with chronological limits."
+    },
+    {
+      "id": "worldcat-tawhid",
+      "title": "WorldCat, Kitab at-tawheed explained",
+      "url": "https://search.worldcat.org/title/Kitab-at-tawheed-explained-shrh-ktab-altwhyd/oclc/944922422",
+      "note": "Library catalog authority record for Muhammad ibn Abd al-Wahhab and the Arabic title Kitab al-Tawhid."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nejd",
+      "card": "data/cards/nejd.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map1815",
+            "cambridge-overview"
+          ],
+          "locator": "Exact generated id, imported name, approximate 1783 to 1878 lifetime, and historical-basemap provenance. Third exact target feature and long declared interval crossing the 1818 rupture. Cambridge synthesis defining the paired First and Second Saudi State scope, Ottoman context, Najdi society, and political chronology.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "cambridge-chronology"
+          ],
+          "locator": "Cambridge chronology for rulers, expansion, Diriyah destruction, Riyadh restoration, Ottoman occupation of al-Ahsa, and Rashidi victory.",
+          "dateScope": {
+            "from": 1744,
+            "to": 1765
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "cambridge-sample"
+          ],
+          "locator": "Cambridge sample on Diriyah farmers, merchants, artisans, scholars, enslaved people, dates, livestock, coastal dependence, and long-distance trade.",
+          "dateScope": {
+            "from": 1765,
+            "to": 1792
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "cambridge-firearms"
+          ],
+          "locator": "Peer-reviewed evidence on firearms, caravan imports, exports, mobilization, enslaved labor, siege damage, and limits of gunmaking legends.",
+          "dateScope": {
+            "from": 1792,
+            "to": 1804
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "qdl-boundaries",
+            "cambridge-hajj"
+          ],
+          "locator": "India Office retrospective on First Saudi expansion, Egyptian conquest, Gulf policy, and territorial uncertainty. Cambridge chapter on Najdi pilgrimage restrictions, First Saudi control of the holy cities, seven Hajj seasons, and contested reforms.",
+          "dateScope": {
+            "from": 1804,
+            "to": 1818
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "loc-country"
+          ],
+          "locator": "Library of Congress historical synthesis on the alliance, Diriyah, 1818 destruction, reform persistence, local politics, and later restoration.",
+          "dateScope": {
+            "from": 1818,
+            "to": 1824
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "cambridge-riyadh-rulers"
+          ],
+          "locator": "Cambridge appendix securing the Second Saudi State period and succession in Riyadh.",
+          "dateScope": {
+            "from": 1824,
+            "to": 1843
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "qdl-pelly"
+          ],
+          "locator": "Digitized 1865 travel and intelligence notes on Faisal ibn Turki, Riyadh, geography, antiquities, and evidentiary bias.",
+          "dateScope": {
+            "from": 1843,
+            "to": 1865
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "qdl-precis"
+          ],
+          "locator": "Contemporary imperial compilation on the post-1865 civil war, Ottoman intervention, al-Ahsa, and rival claims.",
+          "dateScope": {
+            "from": 1865,
+            "to": 1891
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-missing"
+          ],
+          "locator": "Exact repository identity, imported regional mismatch, current content state, and editorial correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map1783",
+            "atlas-map1800",
+            "atlas-map1815"
+          ],
+          "locator": "Complete snapshot audit, target count, intervals, geometry type, components, rings, positions, and one regime.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map1783",
+            "atlas-map1800",
+            "atlas-map1815"
+          ],
+          "locator": "Representative point-in-polygon tests repeated across every exact target feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map1783",
+            "atlas-map1800",
+            "atlas-map1815"
+          ],
+          "locator": "Direct shared-arc topology, point ownership, and polygon-overlap results for all target snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map1715",
+            "atlas-map1815",
+            "atlas-map1878",
+            "atlas-map1900",
+            "atlas-map1914",
+            "atlas-arabia-card"
+          ],
+          "locator": "Cross-snapshot appearance, disappearance, later related record, and historical continuity beyond atlas seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "oxford-lineages"
+          ],
+          "locator": "Oxford analysis of the alliance, reform doctrine, scholarly travel, and documented Najdi opposition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "cambridge-sample"
+          ],
+          "locator": "Cambridge description of Diriyahs mixed population, small surplus, trade, and political economy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "cambridge-firearms"
+          ],
+          "locator": "Peer-reviewed reconstruction of mobilization, arms, mounted status, and variable campaign forces.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "cambridge-hajj"
+          ],
+          "locator": "Cambridge evidence on seven Hajj seasons, personal supervision, policy changes, and external conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "loc-country"
+          ],
+          "locator": "Library of Congress distinction between destroyed political authority and continuing religious networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "cambridge-arabia"
+          ],
+          "locator": "Trade flows, export animals, imported arms, and the argument against assumed isolation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "qdl-boundaries"
+          ],
+          "locator": "India Office retrospective on variable control, agents, force, and Gulf relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "unesco-aturif"
+          ],
+          "locator": "UNESCO evidence on capital functions, urban ensemble, oasis setting, architecture, and damaged remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "cambridge-chronology"
+          ],
+          "locator": "Chronology of expansion compared with the audited geometrys documented omissions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "qdl-wahhabi-history"
+          ],
+          "locator": "Archival retrospective on the Egyptian campaign, destruction, civilian loss, and political ending.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "cambridge-riyadh-rulers"
+          ],
+          "locator": "Cambridge periodization and ruler list for the restored Riyadh polity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "qdl-sevenstates"
+          ],
+          "locator": "India Office historical synthesis on capture, exile, return, tribute, and negotiated power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "qdl-pelly"
+          ],
+          "locator": "Contemporary mission purpose, court visit, geographic observations, and archival standpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "cambridge-civilwar"
+          ],
+          "locator": "Peer-reviewed study of legal reasoning, succession conflict, intervention, and political legitimacy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "cambridge-rashidi"
+          ],
+          "locator": "Peer-reviewed analysis of Rashidi state power, Ottoman partnership, and Saudi defeat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "saudipedia-social"
+          ],
+          "locator": "Official synthesis of extended households, gendered labor, shared farm work, and variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "saudipedia-social"
+          ],
+          "locator": "Heritage synthesis of mobility, pastoral trade, food exchange, evening poetry, and news.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "saudipedia-women"
+          ],
+          "locator": "Official evidence on household production, animals, textiles, retail work, and source framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "saudipedia-women"
+          ],
+          "locator": "Named women in teaching, authorization, book endowment, poetry, and charity with access limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "founding-day"
+          ],
+          "locator": "Darah-backed guide to household foods, preservation, production, and womens daily labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "unesco-nomination"
+          ],
+          "locator": "UNESCO nomination evidence on materials, structural systems, courtyards, storeys, and roofs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "saudipedia-house"
+          ],
+          "locator": "Heritage description of entrance, courtyard, rooms, stairs, majlis, storeys, and joined walls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "unesco-decision"
+          ],
+          "locator": "World Heritage Committee evidence on water table, wells, animal operation, oasis, and settlement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "unesco-criteria"
+          ],
+          "locator": "UNESCO architectural evidence for toilet towers plus explicit household and sewer limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "unesco-alahsa-history"
+          ],
+          "locator": "UNESCO nomination history on groundwater, gravity and lifting irrigation, drainage, and small plots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "cambridge-sample"
+          ],
+          "locator": "Economic evidence on occupations, limited surplus, merchant travel, and outside dependence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "cambridge-firearms"
+          ],
+          "locator": "Peer-reviewed firearm imports, chronology, trade mechanisms, repair, and rejected founder legend.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "unesco-alahsa"
+          ],
+          "locator": "World Heritage evidence on oasis scale, crops, markets, water systems, and continuity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "saudipedia-market"
+          ],
+          "locator": "Official account of market users, gender organization, goods, animals, and teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "cambridge-arabia"
+          ],
+          "locator": "Cambridge regional synthesis on Najds outward connections and nineteenth-century spatial orientation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "oxford-lineages"
+          ],
+          "locator": "Oxford reconstruction of travel, teachers, ijazas, scholarly lineages, and opposition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "saudipedia-quality"
+          ],
+          "locator": "Official heritage evidence on endowments, rooms, food, katatib, subjects, and mosque study.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "eui-learning"
+          ],
+          "locator": "Scholarly evidence on manuscript costs, copying priorities, ownership, marginalia, and trade.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "eui-learning"
+          ],
+          "locator": "Evidence from manuscript survival used with explicit social and archival limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "oxford-lineages",
+            "worldcat-tawhid"
+          ],
+          "locator": "Secure author attribution, Arabic title, transliteration, translation, script direction, and genre.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pmc-health"
+          ],
+          "locator": "Peer-reviewed institutional chronology used to bound claims about state medicine before 1891.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pmc-health"
+          ],
+          "locator": "Later documented care practices presented with an explicit non-retrojection warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pmc-health"
+          ],
+          "locator": "Explicit evidence boundary derived from the institutional review and missing period household documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "qdl-wahhabi-history"
+          ],
+          "locator": "Archival campaign evidence connecting violence, irrigation damage, food insecurity, and civilians.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "unesco-nomination"
+          ],
+          "locator": "Built evidence on wells, bath facilities, toilet features, and the bounded absence of sewers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "unesco-aturif"
+          ],
+          "locator": "UNESCO urban ensemble, functions, adaptation, archaeology, and modern heritage context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "cambridge-intro"
+          ],
+          "locator": "Scholarly synthesis of state formation, society, expansion, and contested authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "qdl-precis"
+          ],
+          "locator": "Contemporary retrospective on succession war, outside intervention, al-Ahsa, and shifting alliances.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "qdl-sevenstates"
+          ],
+          "locator": "India Office account of 1891 defeat, Riyadh control, exile, and subsequent political order.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "cambridge-rashidi"
+          ],
+          "locator": "Scholarly context for exile, later return, distinct state formation, and chronological separation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "qdl-sevenstates",
+            "atlas-map1878",
+            "atlas-map1900",
+            "atlas-map1914",
+            "atlas-arabia-card"
+          ],
+          "locator": "Digitized India Office handbook describing Faisal, succession conflict, Ottoman al-Ahsa, Rashidi victories, and the 1891 ending. Target disappearance before the historical end of the Second Saudi State. Post-disappearance control assigning the sampled interior to a generic Arabia layer. Later Arabia Nejd layer control, distinct from the exact target and its historical states. Existing later Najd research establishes adjacent coverage without substituting for this exact id.",
+          "dateScope": {
+            "year": 1891
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nejd",
+        "name": "First and Second Saudi States in Najd",
+        "aliases": [
+          "Nejd",
+          "Najd",
+          "Saudi States in Najd, 1744-1891",
+          "Emirates of Diriyah and Najd"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 1744,
+        "to": 1891,
+        "circa": false,
+        "card": "cards/nejd.json",
+        "dateBasis": "historical",
+        "summary": "Two interrupted Saudi states ruled from Diriyah and Riyadh before Rashidi victory ended the second in 1891.",
+        "summarySource": null,
+        "fell": 1891,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "nejd",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            41.798217982179835,
+            18.610217704842512,
+            53.37233372333725,
+            25.954534445726622
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "nejd",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            41.798217982179835,
+            18.610217704842512,
+            53.37233372333725,
+            25.954534445726622
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "nejd",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            41.798217982179835,
+            18.610217704842512,
+            53.37233372333725,
+            25.954534445726622
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
