@@ -1,0 +1,916 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release168-catacomb-culture research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "cc-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, label, culture kind, circa flag, generated provenance, and indexed 2000 to 1500 BCE map lifetime."
+    },
+    {
+      "id": "cc-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing card state, one border file, observed interval, Europe queue, and unresolved identity, chronology, and border reviews."
+    },
+    {
+      "id": "cc-missing",
+      "title": "Human History Map missing card queue",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms that catacomb-culture remains unfilled and has no staged draft."
+    },
+    {
+      "id": "cc-import",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported 2500 to 1950 BCE summary checked as a research lead rather than accepted chronology."
+    },
+    {
+      "id": "cc-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no exact override and supports an exact-id-only proposal."
+    },
+    {
+      "id": "cc-map3000",
+      "title": "Human History Map 3000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc3000.json",
+      "note": "Decoded pre-start point owners and absence of the exact target."
+    },
+    {
+      "id": "cc-map2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Decoded exact polygon, bounds, hashes, point membership, interval properties, and sole target snapshot."
+    },
+    {
+      "id": "cc-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "Decoded endpoint repaint, point owners, and exact target absence at 1500 BCE."
+    },
+    {
+      "id": "cc-map1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Post-end control showing that the broad endpoint repaint persists across another snapshot."
+    },
+    {
+      "id": "cc-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Later control exposing another broad software repaint across western representative points."
+    },
+    {
+      "id": "cc-radiocarbon",
+      "title": "The Catacomb Cultures of the North-West Caspian Steppe: chronology, reservoir effect, and paleodiet",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/catacomb-cultures-of-the-northwest-caspian-steppe-14c-chronology-reservoir-effect-and-paleodiet/41BDB37663683B866ECD2A7A5A6CC14E",
+      "note": "Peer reviewed regional chronology and paired bone dating study; aquatic diets can make human bone dates appear too old."
+    },
+    {
+      "id": "cc-book",
+      "title": "Catacomb culture wagons of the Eurasian steppes",
+      "url": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/88/84/2020718884/2020718884.pdf",
+      "note": "Open scholarly monograph covering regional groups, settlement evidence, burials, wagons, economy, social interpretation, and evidentiary limits."
+    },
+    {
+      "id": "cc-wagons",
+      "title": "Catacomb culture wagons of the Eurasian steppes",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/catacomb-culture-wagons-of-the-eurasian-steppes/5622AADF0C16A1F896CA1A5473221355",
+      "note": "Peer reviewed Antiquity article documenting complete and partial wheeled vehicles in Catacomb burial contexts and their placement."
+    },
+    {
+      "id": "cc-meta",
+      "title": "Ancestry and identity in Bronze Age Catacomb culture burials",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X21001061",
+      "note": "Peer reviewed East Manych chronology, two sampled males, burial hierarchy methods, Yamnaya overlap, and post-Catacomb transition cautions."
+    },
+    {
+      "id": "cc-kalmykia",
+      "title": "Radiocarbon chronology of the Kalmykia Catacomb culture",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/radiocarbon-chronology-of-the-kalmykia-catacomb-culture-of-the-west-eurasian-steppe/3F3913CA8872CCBC5BDF6BB6B2D9EDDD",
+      "note": "Antiquity study on calibration and development of western Eurasian Catacomb traditions."
+    },
+    {
+      "id": "cc-nature-caucasus",
+      "title": "Ancient human genome-wide data from a 3000-year interval in the Caucasus",
+      "url": "https://www.nature.com/articles/s41467-018-08220-8",
+      "note": "Open Nature Communications study distinguishing steppe and mountain ancestry profiles, Catacomb samples, and post-Catacomb horizons."
+    },
+    {
+      "id": "cc-nature-pastoralists",
+      "title": "The rise and transformation of Bronze Age pastoralists in the Caucasus",
+      "url": "https://www.nature.com/articles/s41586-024-08113-5",
+      "note": "Nature study of 131 people and 84 dates showing long genetic stability during peak Early and Middle Bronze Age pastoral expansion, followed by later transformation."
+    },
+    {
+      "id": "cc-ceramics",
+      "title": "Ceramics and seasonality: mobile lifeways and ceramic production of the Catacomb population",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X22003145",
+      "note": "Peer reviewed Lower Don study of summer and early autumn camps, local replacement pottery, and geochemically different ritual vessels."
+    },
+    {
+      "id": "cc-middle-don",
+      "title": "Isotopic perspectives on pastoral practices in the Eastern European forest-steppe",
+      "url": "https://refubium.fu-berlin.de/bitstream/handle/fub188/43164/1-s2.0-S2352409X24000208-main.pdf?isAllowed=y&sequence=2",
+      "note": "Open peer reviewed Ksizovo-1 study of cattle and sheep or goat teeth, regional mobility, forage, and managed birth seasons."
+    },
+    {
+      "id": "cc-grassland",
+      "title": "The seasonal cycle of grassland use in the Caspian Sea steppe",
+      "url": "https://journals.sagepub.com/doi/10.1177/146195710100400313",
+      "note": "European Journal of Archaeology study of seasonal use of river valleys, uplands, open steppe, and sustainable pastoral movement."
+    },
+    {
+      "id": "cc-plant-food",
+      "title": "Plant food subsistence in Bronze Age Caspian and Low Don steppe pastoralists",
+      "url": "https://research.rug.nl/en/publications/plant-food-subsistence-in-the-human-diet-of-the-bronze-age-caspia/",
+      "note": "Peer reviewed pot residue study finding wild plants and barley in funerary contexts while rejecting proof of local farming."
+    },
+    {
+      "id": "cc-diet",
+      "title": "Diet and subsistence in Bronze Age pastoral communities from the southern Russian steppes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556513/",
+      "note": "Open PLOS study of human and animal isotopes, varied diets, graves, ornaments, wagons, healed injuries, and regional subsistence."
+    },
+    {
+      "id": "cc-metal-ornaments",
+      "title": "Copper and bronze ornaments in Early and Middle Bronze Age steppe burials",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/378",
+      "note": "National Academy of Sciences of Ukraine study of forged plates, beads, hoops, garment positions, and regional differences."
+    },
+    {
+      "id": "cc-metal-smelting",
+      "title": "Metal smelting and casting at Catacomb settlements in the forest-steppe Don region",
+      "url": "https://aspvestnik.ru/0869-6063/article/view/697353",
+      "note": "Russian Archaeology study of copper and bronze smelting and casting tools at Ksizovo-1 and comparable settlements."
+    },
+    {
+      "id": "cc-metallurgy",
+      "title": "Metallurgical Production in Northern Eurasia in the Bronze Age",
+      "url": "https://www.archaeopress.com/Archaeopress/download/9781784912758",
+      "note": "Open Archaeopress study of ores, production evidence, alloying, typical knives, and limits created by uneven investigation."
+    },
+    {
+      "id": "cc-flint",
+      "title": "Flint artefacts of northern Pontic Catacomb communities",
+      "url": "https://amu.edu.pl/__data/assets/pdf_file/0015/121533/BPS16.pdf",
+      "note": "Academic open volume on flint tools and manufacturing kits found in Catacomb burial complexes."
+    },
+    {
+      "id": "cc-dniester",
+      "title": "The Catacomb culture in the Middle Dniester area",
+      "url": "https://archeo.amu.edu.pl/__data/assets/pdf_file/0019/121537/BPS20.pdf",
+      "note": "Academic regional study of burial construction, grave markers, local distribution, and Middle Dniester chronology."
+    },
+    {
+      "id": "cc-ingul",
+      "title": "The Ingul-Donets Early Bronze Age cultural landscape",
+      "url": "https://archeo.amu.edu.pl/__data/assets/pdf_file/0017/121535/BPS18.pdf",
+      "note": "Academic synthesis distinguishing western Ingul-Dnieper and eastern Donets traditions, grave forms, settlements, pottery, and research history."
+    },
+    {
+      "id": "cc-seasonal",
+      "title": "Seasonal settlements of the Middle Don Catacomb culture",
+      "url": "https://eurekamag.com/research/106/129/106129775.php",
+      "note": "Published landscape study placing winter shelters on floodlands and summer camps on higher terraces, with cattle prominent."
+    },
+    {
+      "id": "cc-rykan",
+      "title": "Modelling the subsistence economy of the settlement Rykan-3",
+      "url": "https://godisnjak.anubih.ba/index.php/godisnjak/en/article/view/169",
+      "note": "Academy journal study reconstructing a winter cattle-breeding settlement from a single Middle Don Catacomb layer."
+    },
+    {
+      "id": "cc-children",
+      "title": "Anthropological materials from children’s Catacomb burials reviewed",
+      "url": "https://doaj.org/article/4c88455966ab45719a8444bf039ff58b",
+      "note": "Kalmyk Scientific Center study finding that sampled child burials used broadly comparable grave structures and accompaniments to adult burials."
+    },
+    {
+      "id": "cc-women-weapons",
+      "title": "Weapons in women’s burials of the Catacomb community",
+      "url": "https://ekmair.ukma.edu.ua/items/16917427-0b58-4174-bf81-c81b2c143bc9",
+      "note": "National University of Kyiv-Mohyla Academy repository study documenting weapons in women’s graves, especially in the Ingul tradition."
+    },
+    {
+      "id": "cc-trauma",
+      "title": "Case study of skull trauma treatment in an Inhul Catacomb burial",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/678",
+      "note": "Ukrainian archaeology case study of a healed depressed injury and probable cranial intervention on one adult man."
+    },
+    {
+      "id": "cc-cod",
+      "title": "Cemento-osseous dysplasia in a female Bronze Age skeleton",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11861816/",
+      "note": "Open paleopathology case report identifying a rare jaw condition in an East Manych Catacomb woman without claiming ancient diagnosis or treatment."
+    },
+    {
+      "id": "cc-skull",
+      "title": "X-ray screening of artificially deformed Catacomb skulls",
+      "url": "https://hfrir.jvolsu.com/index.php/en/archive-en/171-science-journal-of-volsu-history-area-studies-international-relations-2013-2-24/arshaeology/485-x-ray-screening-of-the-artificially-deformed-skulls-from-the-middle-bronze-age-of-the-low-volga-region-paleopathology-aspect",
+      "note": "Volgograd State University study separating intentional head shaping from observed trauma and ear disease."
+    },
+    {
+      "id": "cc-injuries",
+      "title": "Paleopathology of Yamnaya and Ingul Catacomb men from the Sugokleya barrow",
+      "url": "https://www.ceeol.com/search/article-detail?id=760463",
+      "note": "Osteological study of cranial injury and occupational stress in two specific male burials."
+    },
+    {
+      "id": "cc-lola",
+      "title": "The Lola cultural circle and Caucasian migration around 2200 cal BCE",
+      "url": "https://journals.rcsi.science/0869-6063/article/view/276077",
+      "note": "Institute of Archaeology RAS study of post-Catacomb formations and locally varied links between East Manych and Caucasian evidence."
+    },
+    {
+      "id": "cc-postcatacomb",
+      "title": "Volga-Ural cultural group of the post-Catacomb period",
+      "url": "https://doaj.org/article/feba8e60c0084ee59dc07ab7d5fdc8ad",
+      "note": "Peer reviewed chronology of a post-Catacomb group around 2200 to 2000 cal BCE and its connections to later formations."
+    },
+    {
+      "id": "cc-revova",
+      "title": "Continuity of sacred spaces in the North Pontic Steppe",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/continuity-of-sacred-spaces-in-the-north-pontic-steppe-a-case-study-of-the-revova-kurgan-3-ukraine/A68EBAF111975F27925E42EECBC03C36",
+      "note": "Antiquity case study of a repeatedly used Ukrainian mound with dated Catacomb and earlier phases."
+    },
+    {
+      "id": "cc-sidestone",
+      "title": "Bioarchaeology of the North Caucasus Bronze Age",
+      "url": "https://www.sidestone.com/openaccess/9789088909030.pdf",
+      "note": "Open academic volume stressing burial-heavy evidence, chronological debates, regional fragmentation, and weak settlement-burial linkage."
+    },
+    {
+      "id": "cc-encyclopedia",
+      "title": "Catacomb culture",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CA%5CCatacombculture.htm",
+      "note": "Encyclopedia of Ukraine overview of Gorodtsov’s classification and finds across Ukraine, Crimea, the Don, and Kalmykia."
+    },
+    {
+      "id": "cc-social",
+      "title": "Egalitarian pastoral society versus nomadic warriors?",
+      "url": "https://www.e-anthropology.com/English/Catalog/Archaeology/STM_DWL_OlCJ_vMl5MA25zOw9.aspx",
+      "note": "Scholarly reconstruction comparing competing readings of Yamnaya and Catacomb grave evidence and social structure."
+    },
+    {
+      "id": "cc-censers",
+      "title": "Bronze Age clay censers in the Carpathian Basin and eastern steppe research",
+      "url": "https://real.mtak.hu/27739/1/SM30_Kulcsar.pdf",
+      "note": "Hungarian Academy open study reviewing Catacomb censer forms, ornament, chronology, and interpretive history."
+    },
+    {
+      "id": "cc-migration-marker",
+      "title": "An anthropological marker for migrations in Catacomb culture complexes",
+      "url": "https://ssalibrary.at/items/783748da-c7fc-4cb5-b075-a9e7317f2e32/an-anthropological-marker-for-migrations-in-catacomb-culture-archaeological-complexes-from",
+      "note": "Scholarly Lower Volga study joining skeletal and archaeological evidence while treating biological traits as population-history clues, not ethnic names."
+    }
+  ],
+  "entities": [
+    {
+      "id": "catacomb-culture",
+      "card": "data/cards/catacomb-culture.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "cc-map2000",
+            "cc-map1500",
+            "cc-book"
+          ],
+          "locator": "Decoded exact polygon, bounds, hashes, point membership, interval properties, and sole target snapshot. Decoded endpoint repaint, point owners, and exact target absence at 1500 BCE. Open scholarly monograph covering regional groups, settlement evidence, burials, wagons, economy, social interpretation, and evidentiary limits.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "cc-map2000",
+            "cc-meta"
+          ],
+          "locator": "Decoded exact polygon, bounds, hashes, point membership, interval properties, and sole target snapshot. Peer reviewed East Manych chronology, two sampled males, burial hierarchy methods, Yamnaya overlap, and post-Catacomb transition cautions.",
+          "dateScope": {
+            "from": -2000,
+            "to": -1938
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "cc-kalmykia",
+            "cc-radiocarbon"
+          ],
+          "locator": "Antiquity study on calibration and development of western Eurasian Catacomb traditions. Peer reviewed regional chronology and paired bone dating study; aquatic diets can make human bone dates appear too old.",
+          "dateScope": {
+            "from": -1938,
+            "to": -1875
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "cc-lola"
+          ],
+          "locator": "Institute of Archaeology RAS study of post-Catacomb formations and locally varied links between East Manych and Caucasian evidence.",
+          "dateScope": {
+            "from": -1875,
+            "to": -1813
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "cc-ingul"
+          ],
+          "locator": "Academic synthesis distinguishing western Ingul-Dnieper and eastern Donets traditions, grave forms, settlements, pottery, and research history.",
+          "dateScope": {
+            "from": -1813,
+            "to": -1750
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "cc-nature-pastoralists"
+          ],
+          "locator": "Nature study of 131 people and 84 dates showing long genetic stability during peak Early and Middle Bronze Age pastoral expansion, followed by later transformation.",
+          "dateScope": {
+            "from": -1750,
+            "to": -1688
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "cc-nature-caucasus",
+            "cc-sidestone"
+          ],
+          "locator": "Open Nature Communications study distinguishing steppe and mountain ancestry profiles, Catacomb samples, and post-Catacomb horizons. Open academic volume stressing burial-heavy evidence, chronological debates, regional fragmentation, and weak settlement-burial linkage.",
+          "dateScope": {
+            "from": -1688,
+            "to": -1625
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "cc-map2000",
+            "cc-encyclopedia",
+            "cc-dniester"
+          ],
+          "locator": "Decoded exact polygon, bounds, hashes, point membership, interval properties, and sole target snapshot. Encyclopedia of Ukraine overview of Gorodtsov’s classification and finds across Ukraine, Crimea, the Don, and Kalmykia. Academic regional study of burial construction, grave markers, local distribution, and Middle Dniester chronology.",
+          "dateScope": {
+            "from": -1625,
+            "to": -1563
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "cc-map1500",
+            "cc-map1000",
+            "cc-map700"
+          ],
+          "locator": "Decoded endpoint repaint, point owners, and exact target absence at 1500 BCE. Post-end control showing that the broad endpoint repaint persists across another snapshot. Later control exposing another broad software repaint across western representative points.",
+          "dateScope": {
+            "from": -1563,
+            "to": -1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "cc-index",
+            "cc-coverage",
+            "cc-missing",
+            "cc-overrides"
+          ],
+          "locator": "Exact identity, missing status, map lifetime, and exact-id-only association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "cc-map2000"
+          ],
+          "locator": "Decoded type, ring count, position count, bounds, and interpretive limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "cc-map2000"
+          ],
+          "locator": "Positive and negative representative point memberships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "cc-map3000",
+            "cc-map2000",
+            "cc-meta"
+          ],
+          "locator": "Start seam, overlap, and gentle map-taxonomy humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "cc-import",
+            "cc-index",
+            "cc-map1500"
+          ],
+          "locator": "Imported chronology conflict and safe override semantics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "cc-kalmykia"
+          ],
+          "locator": "Regional calibration and sample-context rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "cc-radiocarbon"
+          ],
+          "locator": "Paired dating, aquatic diet, reservoir effect, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "cc-ingul"
+          ],
+          "locator": "Western and eastern regional variation and umbrella identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "cc-dniester"
+          ],
+          "locator": "Middle Dniester distribution, superposition, and grave-marker inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "cc-censers"
+          ],
+          "locator": "Censer classification, chronology, and limits of typological identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "cc-ceramics"
+          ],
+          "locator": "Named seasonal camps, occupation season, and pottery sourcing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "cc-middle-don"
+          ],
+          "locator": "Named site, animal tooth isotopes, forage, and mobility scale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "cc-grassland"
+          ],
+          "locator": "Seasonal landscape use and local variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "cc-seasonal"
+          ],
+          "locator": "Seasonal settlement locations, flooding, and cattle emphasis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "cc-rykan"
+          ],
+          "locator": "Named winter settlement, single layer, and bounded extrapolation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "cc-diet"
+          ],
+          "locator": "Named sites, isotope evidence, mixed mound histories, and dietary scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "cc-plant-food"
+          ],
+          "locator": "Pot residues, barley evidence, ritual context, and no-farming caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "cc-radiocarbon"
+          ],
+          "locator": "Specific aquatic resources, multiple evidence types, and dating consequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "cc-middle-don"
+          ],
+          "locator": "Managed birth seasons and knowledge required.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "cc-diet",
+            "cc-plant-food"
+          ],
+          "locator": "Mixed subsistence, exchange, mobility framing, and gentle food humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "cc-ceramics"
+          ],
+          "locator": "Ceramic methods, local camp production, curation, and ritual contrast.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "cc-metal-smelting"
+          ],
+          "locator": "Named settlement, production tools, and limits on workshop organization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "cc-metal-ornaments"
+          ],
+          "locator": "Ornament types, garment positions, regional difference, and costume caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "cc-metallurgy"
+          ],
+          "locator": "Metal forms, uneven production evidence, and distribution interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "cc-flint"
+          ],
+          "locator": "Flint manufacture kits and funerary-context caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "cc-ingul"
+          ],
+          "locator": "Grave construction, labor, variation, and namesake distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "cc-revova"
+          ],
+          "locator": "Named mound, dated reuse, memory, and identity limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "cc-meta"
+          ],
+          "locator": "Two-person genetic result and social-kinship limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "cc-wagons"
+          ],
+          "locator": "Wagon placement, transport inference, ownership caution, and gentle analogy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "cc-social"
+          ],
+          "locator": "Competing social models and burial-status limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "cc-children"
+          ],
+          "locator": "Children’s grave treatment, visibility, and selection uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "cc-women-weapons"
+          ],
+          "locator": "Women with weapons and limits on role inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "cc-meta",
+            "cc-revova"
+          ],
+          "locator": "Biological and social kinship evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "cc-ceramics",
+            "cc-seasonal"
+          ],
+          "locator": "Education absence and evidence-based participatory learning inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "cc-seasonal",
+            "cc-rykan"
+          ],
+          "locator": "Social coordination, learning inference, and preservation bias with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "cc-trauma"
+          ],
+          "locator": "Named case, healed injury, treatment interpretation, and generalization limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "cc-cod"
+          ],
+          "locator": "Specific pathology, modern diagnosis, and no ancient-treatment claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "cc-skull"
+          ],
+          "locator": "Imaging findings and differential interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "cc-injuries"
+          ],
+          "locator": "Named barrow, trauma, occupational stress, and causal restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "cc-trauma",
+            "cc-diet"
+          ],
+          "locator": "Explicit medicine evidence gap and bounded care inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "cc-seasonal"
+          ],
+          "locator": "Water access, flood risk, and unknown water practices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "cc-rykan"
+          ],
+          "locator": "Named settlement and explicit sanitation evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "cc-ceramics"
+          ],
+          "locator": "Material waste categories and unknown disposal practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "cc-rykan",
+            "cc-sidestone"
+          ],
+          "locator": "Explicit toilet absence and humorous but bounded conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "cc-sidestone"
+          ],
+          "locator": "Burial bias, ephemeral sanitation evidence, and preservation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "cc-ingul"
+          ],
+          "locator": "Required evidence-bounded written-language absence fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "cc-metal-smelting",
+            "cc-wagons"
+          ],
+          "locator": "Evidence-based synthesis of achievements without invention claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "cc-nature-caucasus",
+            "cc-nature-pastoralists",
+            "cc-migration-marker"
+          ],
+          "locator": "Genetic findings and identity safeguards.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "cc-lola"
+          ],
+          "locator": "Regional post-Catacomb transformation and no shared successor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "cc-map1500",
+            "cc-map1000",
+            "cc-lola"
+          ],
+          "locator": "Endpoint correction, unsafe repaint, and human continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "cc-postcatacomb",
+            "cc-map1500"
+          ],
+          "locator": "Peer reviewed chronology of a post-Catacomb group around 2200 to 2000 cal BCE and its connections to later formations. Decoded endpoint repaint, point owners, and exact target absence at 1500 BCE.",
+          "dateScope": {
+            "year": -1950
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "catacomb-culture",
+        "name": "Catacomb culture",
+        "kind": "culture",
+        "region": "Europe",
+        "from": -2000,
+        "to": -1500,
+        "circa": true,
+        "card": "cards/catacomb-culture.json",
+        "dateBasis": "map_coverage",
+        "summary": "A critical guide to a broad 2000 to 1500 BCE atlas layer, separating regional Catacomb archaeological traditions from one state, people, language, or successor.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc2000.json",
+          "properties": {
+            "civ": "catacomb-culture",
+            "from": -2000,
+            "to": -1500,
+            "precision": 1
+          },
+          "bounds": [
+            24.28982204436838,
+            39.96818023471509,
+            53.18496045191037,
+            49.362095725765144
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
