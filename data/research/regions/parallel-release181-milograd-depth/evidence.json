@@ -1,0 +1,1219 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release181-milograd research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, imported display name, approximate map lifetime, culture kind, and historical basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Wikipedia summary reviewed for chronology, place-name, ethnic attribution, and state-shaped language."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Nine observed feature intervals, nine border files, approximate dates, content state, and pending identity review."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms the exact indexed id lacks a runtime card before this packet."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed exact-id override exists before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms imported-summary status, Wikipedia source lead, and no prior staged draft."
+    },
+    {
+      "id": "atlas-map-bc1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Pre-appearance control for exact-id presence and seventeen representative locations."
+    },
+    {
+      "id": "atlas-map-bc700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "First exact feature, broad western geometry, direct TopoJSON seams, and sampled memberships."
+    },
+    {
+      "id": "atlas-map-bc500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Second exact interval, sharp eastward repaint, type-site inclusion, and neighboring labels."
+    },
+    {
+      "id": "atlas-map-bc400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Exact interval, stable eastern geometry, and one decoded overlap candidate with Scythians."
+    },
+    {
+      "id": "atlas-map-bc323",
+      "title": "Human History Map 323 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc323.json",
+      "note": "Exact target interval across an unrelated global atlas seam."
+    },
+    {
+      "id": "atlas-map-bc300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Exact interval and stable representative point memberships."
+    },
+    {
+      "id": "atlas-map-bc200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Exact interval with the third decoded coordinate regime and Scythian direct arc seam."
+    },
+    {
+      "id": "atlas-map-bc100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Exact interval returning to the principal eastern geometry."
+    },
+    {
+      "id": "atlas-map-bc1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Exact feature immediately before the BCE-to-CE display seam."
+    },
+    {
+      "id": "atlas-map-100",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Last snapshot containing the exact id, with unchanged eastern geometry."
+    },
+    {
+      "id": "atlas-map-200",
+      "title": "Human History Map 200 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Endpoint repaint where the exact id and several neighboring culture labels disappear together."
+    },
+    {
+      "id": "atlas-map-300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Post-endpoint control confirming continued exact-id absence."
+    },
+    {
+      "id": "mg01-esu-overview",
+      "title": "Encyclopedia of Modern Ukraine, Mylohrad-Pidhirtsi culture",
+      "url": "https://esu.com.ua/article-64500",
+      "note": "National Academy of Sciences of Ukraine encyclopedia entry checked for label history, geographic range, chronology variants, settlements, houses, material culture, burials, and later interpretations."
+    },
+    {
+      "id": "mg02-ethnicity-method",
+      "title": "Archaeological Dialogues, Ethnicity in European archaeology",
+      "url": "https://www.cambridge.org/core/journals/archaeological-dialogues/article/ethnicity-in-european-archaeology-revitalizing-a-concept-with-the-study-of-migration/64E6D3CFAE32024C0B343B282C46800C",
+      "note": "Peer-reviewed methodological study checked for why archaeological cultures cannot automatically be equated with bounded ethnic groups."
+    },
+    {
+      "id": "mg03-ucl-culture-concept",
+      "title": "UCL thesis, the archaeological culture as a concept",
+      "url": "https://discovery.ucl.ac.uk/10042028/1/Nenova_10042028_thesis_volume1_redacted.pdf",
+      "note": "University research checked for the distinction between recurring artifact groups, societies, languages, and ethnic identities."
+    },
+    {
+      "id": "mg04-agriculture",
+      "title": "Russian Archaeology, new evidence for Milograd agriculture",
+      "url": "https://archaeolog.ru/media/books_sov_archaeology/RA_2012_3.pdf",
+      "note": "Peer-reviewed article checked for chronology, querns, sickles, 44,517 pottery fragments, grain impressions, crop spectrum, weeds, sampling, and preservation limits."
+    },
+    {
+      "id": "mg05-belarus-outline",
+      "title": "Institute of History, Academy of Sciences of Belarus, archaeology outline",
+      "url": "https://files.knihi.com/Knihi/uploaded05/Ocierki_po_archieolohii_Bielorussii._Cast_I.pdf",
+      "note": "Academic synthesis checked for type-sites, settlement layouts, houses, storage pits, fortifications, burials, pottery, tools, and chronology."
+    },
+    {
+      "id": "mg06-sedov-synthesis",
+      "title": "Institute of Archaeology, Academy of Sciences, Milograd synthesis",
+      "url": "https://archaeolog.ru/media/series/mia/%D0%9C%D0%98%D0%90-163-%D0%A1%D0%B5%D0%B4%D0%BE%D0%B2.pdf",
+      "note": "Academic regional synthesis checked for settlement variation, houses, hearths, farming, animal remains, pottery, bronze work, ornaments, burials, and debated identity."
+    },
+    {
+      "id": "mg07-zagorulskiy",
+      "title": "Archaeology of Belarus, Milograd chapter",
+      "url": "https://www.archaeology.ru/Download/Zagorulskiy/zagorulskiy.pdf",
+      "note": "Academic monograph checked for settlements, small houses, hearths, storage, pottery, iron and bronze working, exchange objects, graves, and transformation."
+    },
+    {
+      "id": "mg08-transition-study",
+      "title": "Soviet Archaeology 1960, Milograd and Zarubintsy layers",
+      "url": "https://archaeolog.ru/media/books_sov_archaeology/1960_book01.pdf",
+      "note": "Institute of Archaeology journal study checked for stratified settlements, shared layouts, mixed deposits, storage-pit zones, and competing transition explanations."
+    },
+    {
+      "id": "mg09-hillfort-review",
+      "title": "Archaeologia review, Milograd hillforts in Belarus",
+      "url": "https://jnas.nbuv.gov.ua/article/UJRN-0000541701",
+      "note": "National Academy of Sciences of Ukraine journal review checked for the scope, evidence base, and classification of Milograd hillfort research."
+    },
+    {
+      "id": "mg10-baltic-hillforts",
+      "title": "Baltic Hillforts, Unknown Heritage",
+      "url": "https://prussia.online/Data/Book/ba/baltic-hillforts/Vitk%C5%ABnas%20M.%2C%20Zabiela%20G.%20Baltic%20hillforts%20%282017%29%2C%20OCR.pdf",
+      "note": "Scholarly hillfort volume checked for Garoshkav topography, defensive works, scale, excavated remains, and comparative limits."
+    },
+    {
+      "id": "mg11-house-study",
+      "title": "Kyiv National University, early Slavic settlement and housing study",
+      "url": "https://archaeology.knu.ua/home/images/pdf_doc/terp_ran_slav.pdf",
+      "note": "University monograph checked for Milograd shallow-sunken houses, dimensions, central posts, open hearths, later architectural comparisons, and reconstruction cautions."
+    },
+    {
+      "id": "mg12-rozvazh",
+      "title": "NAS Ukraine journal, Rozvazh-Koshara settlement",
+      "url": "https://mdapv.inst-ukr.lviv.ua/article/view/357995",
+      "note": "Peer-reviewed excavation report checked for 616 square metres, feature attribution, 65 Milograd sherds, ceramic homogeneity, chronological uncertainty, and cultural interaction."
+    },
+    {
+      "id": "mg13-kariv",
+      "title": "NAS Ukraine journal, Early Iron Age settlement at Kariv",
+      "url": "https://www.inst-ukr.lviv.ua/uk/publications/materials/arch/95-029-materialy-i-doslidzhennya-z-arkheolohiyi-prykarpattya-i-volyni-/?id=1351",
+      "note": "Peer-reviewed report checked for rare Milograd-style sherds west of the Styr and explicit uncertainty between exchange and human movement."
+    },
+    {
+      "id": "mg14-spindle-whorls",
+      "title": "Polish Academy of Sciences, horned spindle whorls",
+      "url": "https://rcin.org.pl/Content/54721",
+      "note": "Peer-reviewed study checked for Milograd parallels, spinning-tool forms, settlement and burial contexts, shared design traditions, and disputed functions."
+    },
+    {
+      "id": "mg15-horse-pendants",
+      "title": "Institute of Archaeology RAS, horse-shaped pendants",
+      "url": "https://ksia.iaran.ru/?lang=en&page_id=792",
+      "note": "Peer-reviewed journal abstract checked for fourth-to-third-century BCE pendants across Milograd and neighboring archaeological cultures and workshop associations."
+    },
+    {
+      "id": "mg16-hillfort-typology",
+      "title": "Institute of Archaeology RAS, hillfort typology study",
+      "url": "https://archaeolog.ru/media/books_ksia/ksia_162.pdf",
+      "note": "Academic article checked for varied hillfort plans, areas, ramparts, ditches, landscape placement, cultural attribution, and empty or thin occupation layers."
+    },
+    {
+      "id": "mg17-gremiachie",
+      "title": "Eminak, Gremiachie cemetery attribution",
+      "url": "https://www.eminak.net.ua/index.php/eminak/article/view/397",
+      "note": "Peer-reviewed article checked for barrows, cremated human bone, handmade pottery, bronze pins, and uncertainty in cultural and chronological attribution."
+    },
+    {
+      "id": "mg18-palitskoje",
+      "title": "Lithuanian Archaeological Society, Palitskoje hillfort",
+      "url": "https://www.lad.lt/data/com_ladlibrary/1548/125-140.pdf",
+      "note": "Excavation report checked for stratigraphy, handmade pottery, grain traces, animal bones, iron slag, mixed cultural forms, and the limits of small samples."
+    },
+    {
+      "id": "mg19-early-iron-book",
+      "title": "Academy of Sciences early Iron Age settlement synthesis",
+      "url": "https://files.znu.edu.ua/files/Bibliobooks/Dotsenko/0017418.pdf",
+      "note": "Academic book checked for Milograd settlement scale, houses, food remains, fishing evidence, iron tools, ornaments, and regional interactions."
+    },
+    {
+      "id": "mg20-western-rus-book",
+      "title": "Western lands before Mongol Rus, archaeology and culture",
+      "url": "https://files.knihi.com/Knihi/uploaded08/Leanid_Alaksiejeu.Zapadnyje_ziemli_domonholskoj_Rusi._Ocierki_istorii_archieolohii_kultury._Kniha_1.pdf",
+      "note": "Academic synthesis checked for settlement placement, house types, querns, bone tools, craft evidence, and the history of social interpretations."
+    },
+    {
+      "id": "mg21-chronology-study",
+      "title": "Russian Archaeological Yearbook, Early Iron Age chronology",
+      "url": "https://www.old.archeo.ru/izdaniya-1/rossiiskii-arheologicheskii-ezhegodnik/vypuski-ezhegodnika/pdf/21RAE2Yegorejchenko.pdf/at_download/file",
+      "note": "Peer-reviewed chronological study checked for the Early Iron Age horizon in the forest zone and variation among Milograd dating schemes."
+    },
+    {
+      "id": "mg22-field-report",
+      "title": "National Mining University archive, Milograd settlement research",
+      "url": "https://libarch.nmu.org.ua/bitstream/handle/GenofondUA/49578/66c4ec7cdf76c23a158e2320cbf5a8f2.pdf?isAllowed=y&sequence=1",
+      "note": "Institutional archive copy checked for single-layer settlement context, fish evidence, burials, pottery, and explicit limits on interpretation."
+    },
+    {
+      "id": "mg23-pottery-method",
+      "title": "Polish Academy of Sciences, physicochemical pottery analysis",
+      "url": "https://rcin.org.pl/Content/61414/WA308_72975_PIII149_Problematyka-ceramik_I.pdf",
+      "note": "Peer-reviewed methods study checked for macroscopic limits, raw-material analysis, forming, surface treatment, firing atmosphere, and cautious technological reconstruction."
+    },
+    {
+      "id": "mg24-animal-method",
+      "title": "Historic England, Animal Bones and Archaeology",
+      "url": "https://historicengland.org.uk/images-books/publications/animal-bones-and-archaeology/",
+      "note": "Official professional guidance checked for recovery bias, identification, sampling, quantification, reporting, and differences between food waste, craft debris, and animal burial."
+    },
+    {
+      "id": "mg25-archaeobotany-method",
+      "title": "Historic England, Archaeobotany",
+      "url": "https://historicengland.org.uk/research/methods/archaeology/archaeobotany/",
+      "note": "Official archaeological science guidance checked for plant preservation, sampling, identification, food, fuel, medicine, craft, and environmental interpretation."
+    },
+    {
+      "id": "mg26-wetland-method",
+      "title": "Historic England, Wetland Heritage",
+      "url": "https://historicengland.org.uk/research/current/discover-and-understand/landscapes/wetland-heritage/",
+      "note": "Official research guidance checked for waterlogged preservation of wood, leather, textiles, plants, settlement evidence, and threats to wetland sites."
+    },
+    {
+      "id": "mg27-feature-method",
+      "title": "National Park Service, Benefits of Archeology",
+      "url": "https://home.nps.gov/fopu/learn/historyculture/aboutarch.htm",
+      "note": "Official archaeology explainer checked for stratigraphy, features, postholes, pits, privies, trash, flotation, mapping, context, and destructive excavation."
+    },
+    {
+      "id": "mg28-neuri-source",
+      "title": "Ohio State University linguistics, Neurians in Herodotus",
+      "url": "https://linguistics.osu.edu/herodotos/ethnonym/european/neurians",
+      "note": "University classical-language resource checked for Herodotus references and the difference between a Greek ethnonym in a text and an archaeological attribution."
+    },
+    {
+      "id": "mg29-human-remains",
+      "title": "Historic England, Human Osteoarchaeology",
+      "url": "https://historicengland.org.uk/research/methods/archaeology/human-osteoarchaeology/",
+      "note": "Official specialist guidance checked for what skeletal evidence can reveal about health, diet, lifestyle, mortality, physique, and respectful treatment."
+    },
+    {
+      "id": "mg30-archeobotany-2010",
+      "title": "Russian Archaeology, Milograd hillfort archaeobotanical collections",
+      "url": "https://archaeolog.ru/media/books_sov_archaeology/RA_2010_3.pdf",
+      "note": "Peer-reviewed article checked for grain-impression collections from three Milograd hillforts, crop identification, ceramic inclusions, chronology, and sample limits."
+    },
+    {
+      "id": "mg31-transition-2024",
+      "title": "Institute of Archaeology RAS, Milograd and Zarubintsy relations",
+      "url": "https://archaeolog.ru/media/books_2024/Sedov_sb_2024.pdf",
+      "note": "Recent academic study checked for round-bottomed bowls, Upper Dnieper stratigraphy, competing continuity and hiatus models, and continuing debate over the Milograd-to-Zarubintsy relationship."
+    },
+    {
+      "id": "mg32-research-history",
+      "title": "Vernadsky National Library, history of Milograd research",
+      "url": "https://www.irbis-nbuv.gov.ua/E_LIB/PDF/ukr0010104.pdf",
+      "note": "National research-library article checked for discovery history, major excavations, corrections to mapped ranges, and twentieth-century Belarusian scholarship."
+    },
+    {
+      "id": "mg33-material-patterns",
+      "title": "American Antiquity, Archaeology as Anthropology",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/archaeology-as-anthropology/784B7F3D256EF36487D0A861E21E6B3E",
+      "note": "Peer-reviewed methodological article checked for why similarities in one material class cannot explain every other cultural or social dimension."
+    }
+  ],
+  "entities": [
+    {
+      "id": "milograd-culture",
+      "card": "data/cards/milograd-culture.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "mg01-esu-overview"
+          ],
+          "locator": "Exact indexed id, imported display name, approximate map lifetime, culture kind, and historical basemap provenance. Imported Wikipedia summary reviewed for chronology, place-name, ethnic attribution, and state-shaped language. Nine observed feature intervals, nine border files, approximate dates, content state, and pending identity review. National Academy of Sciences of Ukraine encyclopedia entry checked for label history, geographic range, chronology variants, settlements, houses, material culture, burials, and later interpretations.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-map-bc1000",
+            "atlas-map-bc700",
+            "atlas-map-bc500",
+            "mg21-chronology-study"
+          ],
+          "locator": "Pre-appearance control for exact-id presence and seventeen representative locations. First exact feature, broad western geometry, direct TopoJSON seams, and sampled memberships. Second exact interval, sharp eastward repaint, type-site inclusion, and neighboring labels. Peer-reviewed chronological study checked for the Early Iron Age horizon in the forest zone and variation among Milograd dating schemes.",
+          "dateScope": {
+            "from": -700,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "atlas-map-bc500",
+            "atlas-map-bc400",
+            "mg09-hillfort-review"
+          ],
+          "locator": "Second exact interval, sharp eastward repaint, type-site inclusion, and neighboring labels. Exact interval, stable eastern geometry, and one decoded overlap candidate with Scythians. National Academy of Sciences of Ukraine journal review checked for the scope, evidence base, and classification of Milograd hillfort research.",
+          "dateScope": {
+            "from": -500,
+            "to": -400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "atlas-map-bc400",
+            "atlas-map-bc323",
+            "mg02-ethnicity-method"
+          ],
+          "locator": "Exact interval, stable eastern geometry, and one decoded overlap candidate with Scythians. Exact target interval across an unrelated global atlas seam. Peer-reviewed methodological study checked for why archaeological cultures cannot automatically be equated with bounded ethnic groups.",
+          "dateScope": {
+            "from": -400,
+            "to": -323
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "atlas-map-bc323",
+            "atlas-map-bc300",
+            "mg12-rozvazh"
+          ],
+          "locator": "Exact target interval across an unrelated global atlas seam. Exact interval and stable representative point memberships. Peer-reviewed excavation report checked for 616 square metres, feature attribution, 65 Milograd sherds, ceramic homogeneity, chronological uncertainty, and cultural interaction.",
+          "dateScope": {
+            "from": -323,
+            "to": -300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "atlas-map-bc300",
+            "atlas-map-bc200",
+            "mg04-agriculture"
+          ],
+          "locator": "Exact interval and stable representative point memberships. Exact interval with the third decoded coordinate regime and Scythian direct arc seam. Peer-reviewed article checked for chronology, querns, sickles, 44,517 pottery fragments, grain impressions, crop spectrum, weeds, sampling, and preservation limits.",
+          "dateScope": {
+            "from": -300,
+            "to": -200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "atlas-map-bc200",
+            "atlas-map-bc100",
+            "mg08-transition-study"
+          ],
+          "locator": "Exact interval with the third decoded coordinate regime and Scythian direct arc seam. Exact interval returning to the principal eastern geometry. Institute of Archaeology journal study checked for stratified settlements, shared layouts, mixed deposits, storage-pit zones, and competing transition explanations.",
+          "dateScope": {
+            "from": -200,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "atlas-map-bc100",
+            "atlas-map-bc1",
+            "mg03-ucl-culture-concept"
+          ],
+          "locator": "Exact interval returning to the principal eastern geometry. Exact feature immediately before the BCE-to-CE display seam. University research checked for the distinction between recurring artifact groups, societies, languages, and ethnic identities.",
+          "dateScope": {
+            "from": -100,
+            "to": -1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-bc1",
+            "atlas-map-100",
+            "atlas-map-200",
+            "atlas-map-300",
+            "mg21-chronology-study"
+          ],
+          "locator": "Exact feature immediately before the BCE-to-CE display seam. Last snapshot containing the exact id, with unchanged eastern geometry. Endpoint repaint where the exact id and several neighboring culture labels disappear together. Post-endpoint control confirming continued exact-id absence. Peer-reviewed chronological study checked for the Early Iron Age horizon in the forest zone and variation among Milograd dating schemes.",
+          "dateScope": {
+            "from": -1,
+            "to": 200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-map-bc700",
+            "atlas-card-index"
+          ],
+          "locator": "Earliest geometry type, position count, bounding box, and political-border caution.",
+          "dateScope": {
+            "year": -700
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-bc700",
+            "atlas-summary"
+          ],
+          "locator": "Earliest representative memberships, type-site mismatch, and child-friendly humor.",
+          "dateScope": {
+            "year": -700
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-bc500",
+            "atlas-map-100"
+          ],
+          "locator": "Later geometry regime and complete sampled inside-outside membership list.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-bc200",
+            "atlas-map-bc100",
+            "atlas-overrides"
+          ],
+          "locator": "Three coordinate regimes, one-coordinate difference, stable membership, and interpretive limit.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-100",
+            "atlas-map-200",
+            "atlas-map-300",
+            "atlas-missing"
+          ],
+          "locator": "Endpoint seam, neighboring-label repaint, controls, and non-catastrophe guardrail.",
+          "dateScope": {
+            "year": 200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "mg32-research-history"
+          ],
+          "locator": "Research history, type-site naming, regional terminology, and self-name absence.",
+          "dateScope": {
+            "year": 1950
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "mg02-ethnicity-method",
+            "mg03-ucl-culture-concept"
+          ],
+          "locator": "Archaeological-culture definition, ethnicity and language caution, and named hypotheses.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "mg31-transition-2024",
+            "mg21-chronology-study"
+          ],
+          "locator": "Dating methods, published chronological variation, and child-readable explanation.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "mg12-rozvazh"
+          ],
+          "locator": "Excavated area, feature count, sherd samples, non-contemporaneity, and method humor.",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "mg27-feature-method",
+            "mg25-archaeobotany-method"
+          ],
+          "locator": "Destructive excavation, context recording, flotation, archives, and gentle humor.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mg10-baltic-hillforts",
+            "mg09-hillfort-review"
+          ],
+          "locator": "Fortified and open settlement variation, regional distinction, and state guardrail.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "mg11-house-study",
+            "mg07-zagorulskiy"
+          ],
+          "locator": "House elevations, plan shapes, posts, hearths, and variation.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "mg11-house-study"
+          ],
+          "locator": "House area, central posts, reconstruction limits, and comparative architecture.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "mg20-western-rus-book",
+            "mg08-transition-study"
+          ],
+          "locator": "Storage pits, Chaplin spatial layout, reuse, and feature-function caution.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "mg10-baltic-hillforts",
+            "mg16-hillfort-typology"
+          ],
+          "locator": "Hillfort settings, defenses, size variation, thin layers, and warfare limits.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "mg04-agriculture"
+          ],
+          "locator": "Exact pottery and impression sample sizes, preservation reason, and child-friendly fact.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "mg30-archeobotany-2010",
+            "mg25-archaeobotany-method"
+          ],
+          "locator": "Crop spectrum, rye interpretation, sample scope, and diet caution.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "mg04-agriculture",
+            "mg19-early-iron-book"
+          ],
+          "locator": "Grinding and harvesting tools, approximate reviewed totals, and recovery bias.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "mg06-sedov-synthesis",
+            "mg24-animal-method"
+          ],
+          "locator": "Domestic and hunted animals, site-specific sample, and zooarchaeological bias.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mg22-field-report",
+            "mg24-animal-method"
+          ],
+          "locator": "Fishing evidence, river setting, quantification limit, screening bias, and humor.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "mg06-sedov-synthesis",
+            "mg33-material-patterns"
+          ],
+          "locator": "Pottery manufacture, vessel forms, decoration, typology, and ethnicity caution.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "mg12-rozvazh"
+          ],
+          "locator": "Ceramic homogeneity, periodization limit, sample value, and gentle humor.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "mg14-spindle-whorls"
+          ],
+          "locator": "Spindle whorls, cross-cultural parallels, contexts, function, and symbolism caution.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "mg19-early-iron-book",
+            "mg26-wetland-method"
+          ],
+          "locator": "Bone tools, probable perishable crafts, wetland preservation, and evidence bias.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "mg23-pottery-method"
+          ],
+          "locator": "Ceramic analytical methods, comparability limits, and restrained technology humor.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "mg18-palitskoje",
+            "mg19-early-iron-book"
+          ],
+          "locator": "Iron tools, slag, local working, mixed contexts, and universal-skill caution.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "mg06-sedov-synthesis",
+            "mg07-zagorulskiy"
+          ],
+          "locator": "Bronze objects, molds, local production, imports, and gentle humor.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "mg15-horse-pendants"
+          ],
+          "locator": "Horse-pendant date, distribution, possible mechanisms, and identity limit.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "mg13-kariv"
+          ],
+          "locator": "Western finds, exchange-versus-mobility uncertainty, and object-movement logic.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "mg10-baltic-hillforts",
+            "mg16-hillfort-typology"
+          ],
+          "locator": "Defensive evidence, weapon finds, alternative functions, and site-specific interpretation.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "mg05-belarus-outline",
+            "mg20-western-rus-book"
+          ],
+          "locator": "Domestic cooperation, kinship limits, house-size inference, and humor.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mg20-western-rus-book",
+            "mg03-ucl-culture-concept"
+          ],
+          "locator": "Children, necessary skill learning, observational inference, and school absence.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "mg14-spindle-whorls",
+            "mg04-agriculture"
+          ],
+          "locator": "Work categories, gender evidence limits, age and seasonal variation, and cooperation.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "mg09-hillfort-review",
+            "mg16-hillfort-typology"
+          ],
+          "locator": "Community coordination, social links, political evidence gap, and king caution.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "mg08-transition-study",
+            "mg13-kariv"
+          ],
+          "locator": "Technological learning, contact, continuity, and formal-education absence.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "mg07-zagorulskiy",
+            "mg25-archaeobotany-method"
+          ],
+          "locator": "Practical health needs, healing evidence absence, and care-versus-preservation distinction.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "mg25-archaeobotany-method"
+          ],
+          "locator": "Archaeobotanical uses, medicinal attribution limits, grain evidence, and humor.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "mg17-gremiachie"
+          ],
+          "locator": "Burial modes, regional variation, attribution uncertainty, and religious caution.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "mg29-human-remains",
+            "mg17-gremiachie"
+          ],
+          "locator": "Osteological potential, cremation limits, ethics, and respectful child-readable wording.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "mg29-human-remains",
+            "mg07-zagorulskiy"
+          ],
+          "locator": "Medical-system uncertainty, possible care categories, and archaeological visibility question.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "mg10-baltic-hillforts",
+            "mg26-wetland-method"
+          ],
+          "locator": "Settlement topography, water uses, flood constraints, knowledge, and infrastructure limits.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "mg11-house-study"
+          ],
+          "locator": "Hearths, smoke and ventilation, evidence asymmetry, and domestic humor.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "mg27-feature-method"
+          ],
+          "locator": "Pit reuse, contextual diagnosis, toilet distinction, and child-friendly humor.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "mg05-belarus-outline",
+            "mg27-feature-method"
+          ],
+          "locator": "Explicit toilet absence, waste needs, privacy, and feature-identification guardrail.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "mg09-hillfort-review",
+            "mg24-animal-method"
+          ],
+          "locator": "Sanitation inference, compact sites, evidence boundary, and gentle bathroom humor.",
+          "dateScope": {
+            "year": -200
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "mg23-pottery-method"
+          ],
+          "locator": "Writing-sample absence, modern label, scratched-sign caution, and language criteria.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "mg28-neuri-source",
+            "mg02-ethnicity-method"
+          ],
+          "locator": "Neuri hypothesis, Greek textual form, authorship, and sample-rejection logic.",
+          "dateScope": {
+            "year": -400
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "mg03-ucl-culture-concept",
+            "mg06-sedov-synthesis"
+          ],
+          "locator": "Competing identity models, material-language limit, and plural social identities.",
+          "dateScope": {
+            "year": -300
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "mg08-transition-study",
+            "mg22-field-report"
+          ],
+          "locator": "Transition evidence, competing models, stratigraphic strength, and continuity ending.",
+          "dateScope": {
+            "year": -100
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "mg19-early-iron-book",
+            "mg26-wetland-method"
+          ],
+          "locator": "Achievement synthesis, skills, archives, site protection, and continuing research.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-100",
+            "atlas-map-200",
+            "mg31-transition-2024"
+          ],
+          "locator": "Last snapshot containing the exact id, with unchanged eastern geometry. Endpoint repaint where the exact id and several neighboring culture labels disappear together. Recent academic study checked for round-bottomed bowls, Upper Dnieper stratigraphy, competing continuity and hiatus models, and continuing debate over the Milograd-to-Zarubintsy relationship.",
+          "dateScope": {
+            "year": 200
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "milograd-culture",
+        "name": "Milograd archaeological culture",
+        "aliases": [
+          "Milograd culture",
+          "Milograd-Pidhirtsi culture",
+          "Mylohrad culture",
+          "Pidhirtsi culture"
+        ],
+        "kind": "culture",
+        "region": "Europe",
+        "from": -700,
+        "to": 200,
+        "circa": true,
+        "card": "cards/milograd-culture.json",
+        "dateBasis": "map_coverage",
+        "summary": "Early Iron Age archaeological classification in parts of present-day Belarus and Ukraine, known through settlements, pottery, tools, farming evidence, and graves; its map dates and polygon are approximate.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc1.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -1,
+            "to": 100,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc300.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -300,
+            "to": -200,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc323.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -323,
+            "to": -300,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc400.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -400,
+            "to": -323,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc500.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -500,
+            "to": -400,
+            "precision": 1
+          },
+          "bounds": [
+            24.780847808478086,
+            50.159783619559974,
+            32.06012060120602,
+            53.29661868198713
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "milograd-culture",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            20.867608676086775,
+            50.27729396786597,
+            29.781297812978124,
+            55.09107082435402
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
