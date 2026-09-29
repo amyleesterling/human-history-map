@@ -1,0 +1,887 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release176-huns research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "hu-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, label, approximate atlas lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "hu-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Observed interval, one border file, missing review, and Europe queue hint."
+    },
+    {
+      "id": "hu-missing",
+      "title": "Human History Map missing card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Missing exact record, imported summary status, and absence of staged drafts."
+    },
+    {
+      "id": "hu-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card is associated with exact id huns and distinguishes the existing hunnic-empire card."
+    },
+    {
+      "id": "hu-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed override for huns and records the separate Attila-era hunnic-empire override."
+    },
+    {
+      "id": "hu-map-600",
+      "title": "Human History Map 600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Pre-start exact-id absence and representative point ownership."
+    },
+    {
+      "id": "hu-map-700",
+      "title": "Human History Map 700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Only exact-id feature, decoded polygon, point membership, neighbors, and atlas interval."
+    },
+    {
+      "id": "hu-map-800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Indexed-end absence and broad Khazar replacement at representative points."
+    },
+    {
+      "id": "hu-map-900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Later exact-id absence and stable representative point ownership."
+    },
+    {
+      "id": "hu-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Later exact-id absence and changed ownership around Derbent, Alania, Georgia, Arran, and Shirvan."
+    },
+    {
+      "id": "hu-rau-huns",
+      "title": "Christianity and the peoples of medieval Dagestan",
+      "url": "https://orient.rau.am/uploads/institute/pdf/files/Shaxban%20Xapizov%20Slavjanskih%20universitet%2BKAZM9SHrRUEiPbBq6a11734623663.pdf",
+      "note": "University scholarly volume discussing Varachan, Bishop Israel, the 681-682 winter mission, Khazar suzerainty, and Hunnic diplomacy."
+    },
+    {
+      "id": "hu-iranica-huns",
+      "title": "Huns, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/huns/",
+      "note": "Critical overview showing that Hun was a broad historical label and that Sabir identification remains a problem, not a certainty."
+    },
+    {
+      "id": "hu-golden-wilson",
+      "title": "Turkic Peoples and Caucasia, Peter B. Golden",
+      "url": "https://www.wilsoncenter.org/sites/default/files/media/documents/publication/op92_turkic_peoples_caucasia_golden_1980.pdf",
+      "note": "Academic study of Turkic peoples in the Caucasus, North Caucasian Huns, titles, Khazar relations, and religious terminology."
+    },
+    {
+      "id": "hu-golden-conversion",
+      "title": "The Conversion of the Khazars to Judaism, Peter B. Golden",
+      "url": "https://brill.com/previewpdf/display/book/edcoll/9789047421450/Bej.9789004160422.i-460_010.xml",
+      "note": "Brill chapter treating the 682 mission, Alp Ilutuer, Khazar vassalage, elite conversion, and lack of evidence for lasting mass conversion."
+    },
+    {
+      "id": "hu-golden-introduction",
+      "title": "An Introduction to the History of the Turkic Peoples",
+      "url": "https://ndl.ethernet.edu.et/bitstream/123456789/55273/1/128.pdf.pdf",
+      "note": "Scholarly synthesis on the Kingdom of the Huns north of Darband, Varachan, Savirs, Kardost, and the 681 mission."
+    },
+    {
+      "id": "hu-movses-intro",
+      "title": "History of the Aghuans: introduction and source criticism",
+      "url": "https://www.attalus.org/armenian/mdint.htm",
+      "note": "Translation introduction explaining the composite Armenian text, clerical viewpoint, manuscripts, language, and limits."
+    },
+    {
+      "id": "hu-movses-36-40",
+      "title": "History of the Aghuans, Book Two, chapters 36-40",
+      "url": "https://www.attalus.org/armenian/md13.htm",
+      "note": "Translated narrative of the 681 raid, peace, winter journey, Varachan reception, funeral rites, family claims, and preaching."
+    },
+    {
+      "id": "hu-movses-41-45",
+      "title": "History of the Aghuans, Book Two, chapters 41-45",
+      "url": "https://www.attalus.org/armenian/md14.htm",
+      "note": "Translated narrative of Alp Ilutuer, marriage alliance, public assembly, craftspeople, sacred trees, religious coercion, letters, and ambassadors."
+    },
+    {
+      "id": "hu-dowsett",
+      "title": "The History of Caucasian Albania, Movses Dasxuranci",
+      "url": "https://arar.sci.am/Content/368755/1.pdf",
+      "note": "Academy-hosted English translation for the core mission narrative and its Classical Armenian textual form."
+    },
+    {
+      "id": "hu-cambridge-review",
+      "title": "Review of Dowsett, The History of the Caucasian Albanians",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7F50C1ADA47A35A98E52E93D50742487/S0035869X00120003a.pdf/div-class-title-span-class-italic-the-history-of-the-caucasian-albanians-span-by-movs-s-dasxuranci-translated-by-c-j-f-dowsett-pp-xx-252-london-oxford-university-press-1961-50-span-class-italic-s-span-london-oriental-series-vol-8-div.pdf",
+      "note": "Royal Asiatic Society review identifying the scholarly translation, scope, and evidentiary setting."
+    },
+    {
+      "id": "hu-salmin-jstage",
+      "title": "Saspirs, Savirs, and Sabirs from the fifth century BCE to eighth century CE",
+      "url": "https://www.jstage.jst.go.jp/article/jsees/37/0/37_17/_pdf",
+      "note": "Peer-reviewed reconstruction proposing Suvar continuity, Varachan chronology, and the 723 and 737 campaigns; used with attribution because identifications are debated."
+    },
+    {
+      "id": "hu-salmin-archaeology",
+      "title": "History of the Savirs/Suvars: Evidence from Archaeology",
+      "url": "https://doaj.org/article/900d760cf3894d09968bf297c2012a40",
+      "note": "Peer-reviewed archaeology abstract on Chir-Yurt burials, diverse population, pottery, and the limits of ethnic inference."
+    },
+    {
+      "id": "hu-caucasus-history",
+      "title": "History of the Caucasus, Volume I",
+      "url": "https://lib.ysu.am/open_books/413858_1.pdf",
+      "note": "University open history covering Caucasian Albania, Arab-Khazar warfare, Darband, sources, and regional political change."
+    },
+    {
+      "id": "hu-albania-sources",
+      "title": "Caucasian Albania in Medieval Armenian Sources",
+      "url": "https://arar.sci.am/Content/365356/Caucasian%20Albania%20%282%29.pdf",
+      "note": "Academy scholarly volume on the composition, dating, and interpretation of Armenian accounts about Albania and northern neighbors."
+    },
+    {
+      "id": "hu-church-albania",
+      "title": "History of the Church of Caucasian Albania according to Movses",
+      "url": "https://tarixinstitutu.az/Web/uploads/books/books/2025/09/2024.ArchimandriteAlexyNikonorov.HistoryoftheChurchofCaucasianAlbaniaaccordingtoMovsesKalankatuatsi.TheInstituteofHistoryandEthnologyANASandtheBakuInternationalMulticulturalismCent3.pdf",
+      "note": "Institutional study summarizing the Kingdom of the Huns, debated Sabir identity, Varachan, mobility, and missions."
+    },
+    {
+      "id": "hu-family-matters",
+      "title": "Family Matters: Strategies of Rulers in the Caucasus",
+      "url": "https://medievalworlds.net/0xc1aa5572_0x003f318a.pdf",
+      "note": "Peer-reviewed source analysis of kinship, marriage, diplomacy, and the Armenian narrative around Varaz Trdat and the Huns."
+    },
+    {
+      "id": "hu-ritual",
+      "title": "The Problem of Ritual in Medieval Sources",
+      "url": "https://www.doria.fi/bitstream/handle/10024/134166/The%20Problem%20of%20Ritual%201993%20OCR.pdf?sequence=2",
+      "note": "Scholarly volume contextualizing Movses on lament, sword fighting, wrestling, riding, dancing, and source bias."
+    },
+    {
+      "id": "hu-ethnocultural",
+      "title": "Ethnocultural Heritage of Caucasian Albania",
+      "url": "https://www.multikulturalizm.gov.az/storage/Kitablar-Edit-2023/ETHNOCULTURAL_HERITAGE_OF_CAUCASIAN_ALBANIA-3_ebe37a.pdf",
+      "note": "Institutional collection discussing frontier food, hospitality, camps, crafts, ritual, and the need to separate reported scenes from universal custom."
+    },
+    {
+      "id": "hu-epohi",
+      "title": "The Country of the Huns and the Caspian Gates",
+      "url": "https://journals.uni-vt.bg/epohi/eng/vol33/iss1/art3",
+      "note": "University journal study of the Country of the Huns, Derbent route, religious terms, and source geography."
+    },
+    {
+      "id": "hu-arab-khazar",
+      "title": "The Arab-Khazar Wars in Medieval Sources",
+      "url": "https://www.ebook.bibl.u-szeged.hu/index.php/btk-magyarnyelviirodalmi-intezet/catalog/download/197/611/1513?inline=1",
+      "note": "University monograph on war chronology, frontier passes, raids, tribute, captives, and the political consequences of the 737 campaign."
+    },
+    {
+      "id": "hu-pechenegs",
+      "title": "The Pechenegs: Nomads in the Political and Cultural Landscape",
+      "url": "https://brill.com/downloadpdf/display/title/58207.pdf",
+      "note": "Brill scholarly synthesis supplying comparative caution on nomadic polities and the 737 Arab-Khazar breakthrough."
+    },
+    {
+      "id": "hu-iranica-darband",
+      "title": "Darband: the ancient city, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/darband-i-ancient-city/",
+      "note": "Archaeological and historical account of the Caspian pass, Sasanian walls, harbor, construction, and frontier movement."
+    },
+    {
+      "id": "hu-iranica-dagh-bary",
+      "title": "Dagh Bary, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/dagh-bary/",
+      "note": "Archaeological account of the mountain-wall system, fortresses, garrisons, land, and later cistern evidence."
+    },
+    {
+      "id": "hu-unesco-derbent",
+      "title": "Citadel, Ancient City and Fortress Buildings of Derbent nomination",
+      "url": "https://whc.unesco.org/uploads/nominations/1070.pdf",
+      "note": "UNESCO dossier on the Derbent corridor, citadel, walls, gates, settlement, and long strategic history."
+    },
+    {
+      "id": "hu-iranica-arran",
+      "title": "Arran, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/arran-a-region/",
+      "note": "Scholarly geography and political history of the southern neighbor that Armenian sources call Aghuania or Caucasian Albania."
+    },
+    {
+      "id": "hu-iranica-languages",
+      "title": "Caucasus: language contact, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/caucasus-ii/",
+      "note": "Scholarly overview of exceptional Caucasian linguistic diversity and long multilingual contact."
+    },
+    {
+      "id": "hu-iranica-alans",
+      "title": "Alans, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/alans-an-ancient-iranian-tribe-of-the-northern-scythian-saka-sarmatian-massagetae-group-known-to-classical-writers-from/",
+      "note": "Scholarly neighbor profile distinguishing Iranian-speaking Alans from the eastern North Caucasian Hunnic polity."
+    },
+    {
+      "id": "hu-religion-study",
+      "title": "Religious beliefs of the Caspian Dagestan population in the fourth-seventh centuries",
+      "url": "https://cheloveknauka.com/relegioznye-predstavleniya-naseleniya-prikaspiyskogo-dagestana-v-iv-vii-vv",
+      "note": "Academic dissertation record analyzing the 682 mission, Varachan, social groups, ritual, illness beliefs, and source constraints."
+    },
+    {
+      "id": "hu-syriac-historians",
+      "title": "Medieval Syriac Historians on the Turks",
+      "url": "https://aramean-dem.org/English/History/Medieval_Syriac_Historians_on_the_Turks.pdf",
+      "note": "Source study of Syriac labels, missionary accounts, and the danger of treating exonyms or stereotypes as transparent identities."
+    },
+    {
+      "id": "hu-kardost",
+      "title": "Note on Byzantine relations with the Huns in the sixth century",
+      "url": "https://biblioteca-digitala.ro/reviste/resee/07-Revue-des-Etudes-Sud-Est-Europeennes-VII-nr-1_1969.pdf",
+      "note": "Scholarly note on Kardost, books reported in a Hunnic language, possible Sabir context, and uncertain script identification."
+    }
+  ],
+  "entities": [
+    {
+      "id": "huns",
+      "card": "data/cards/huns.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "hu-rau-huns",
+            "hu-golden-wilson"
+          ],
+          "locator": "University scholarly volume discussing Varachan, Bishop Israel, the 681-682 winter mission, Khazar suzerainty, and Hunnic diplomacy. Academic study of Turkic peoples in the Caucasus, North Caucasian Huns, titles, Khazar relations, and religious terminology.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "hu-golden-introduction"
+          ],
+          "locator": "Scholarly synthesis on the Kingdom of the Huns north of Darband, Varachan, Savirs, Kardost, and the 681 mission.",
+          "dateScope": {
+            "from": 660,
+            "to": 670
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "hu-church-albania"
+          ],
+          "locator": "Institutional study summarizing the Kingdom of the Huns, debated Sabir identity, Varachan, mobility, and missions.",
+          "dateScope": {
+            "from": 670,
+            "to": 681
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "hu-movses-36-40"
+          ],
+          "locator": "Translated narrative of the 681 raid, peace, winter journey, Varachan reception, funeral rites, family claims, and preaching.",
+          "dateScope": {
+            "from": 681,
+            "to": 682
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "hu-golden-conversion"
+          ],
+          "locator": "Brill chapter treating the 682 mission, Alp Ilutuer, Khazar vassalage, elite conversion, and lack of evidence for lasting mass conversion.",
+          "dateScope": {
+            "from": 682,
+            "to": 690
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "hu-church-albania"
+          ],
+          "locator": "Institutional study summarizing the Kingdom of the Huns, debated Sabir identity, Varachan, mobility, and missions.",
+          "dateScope": {
+            "from": 690,
+            "to": 705
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "hu-arab-khazar"
+          ],
+          "locator": "University monograph on war chronology, frontier passes, raids, tribute, captives, and the political consequences of the 737 campaign.",
+          "dateScope": {
+            "from": 705,
+            "to": 723
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "hu-arab-khazar"
+          ],
+          "locator": "University monograph on war chronology, frontier passes, raids, tribute, captives, and the political consequences of the 737 campaign.",
+          "dateScope": {
+            "from": 723,
+            "to": 730
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "hu-caucasus-history"
+          ],
+          "locator": "University open history covering Caucasian Albania, Arab-Khazar warfare, Darband, sources, and regional political change.",
+          "dateScope": {
+            "from": 730,
+            "to": 737
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "hu-index",
+            "hu-coverage",
+            "hu-missing",
+            "hu-card-index",
+            "hu-overrides"
+          ],
+          "locator": "Exact id, imported label, indexed interval, one border file, missing status, and separate Attila-era card.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "hu-map-600",
+            "hu-map-700",
+            "hu-map-800",
+            "hu-map-900",
+            "hu-map-1000"
+          ],
+          "locator": "Full snapshot audit, sole feature, stored interval, precision, topology, and four absence controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "hu-map-700"
+          ],
+          "locator": "Bounding box, representative inside and outside probes, and reconstruction warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "hu-map-700",
+            "hu-map-800"
+          ],
+          "locator": "Four neighbors, zero overlap, end-seam ownership, later absence, and historical-lifetime decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "hu-iranica-huns",
+            "hu-iranica-languages",
+            "hu-iranica-alans"
+          ],
+          "locator": "Collective label, debated Sabir-Suvar identity, multilingualism, exact-id guardrail, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "hu-movses-41-45"
+          ],
+          "locator": "Court, councils, camps, commands, and limits on bureaucratic reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "hu-dowsett"
+          ],
+          "locator": "Army composition, raid, captives, negotiation, source perspective, and civilian cost.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "hu-iranica-arran"
+          ],
+          "locator": "Albanian setting, double pressure, diplomatic logistics, and non-ruler labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "hu-albania-sources"
+          ],
+          "locator": "Public assembly, represented groups, clerical construction, persuasion, and coercion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "hu-dowsett"
+          ],
+          "locator": "Named envoys, destinations, alliance request, preserved textual form, and quotation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "hu-church-albania"
+          ],
+          "locator": "Urban and mobile evidence, household diversity, and limits of the nomad label.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "hu-iranica-darband",
+            "hu-unesco-derbent"
+          ],
+          "locator": "Derbent geography, inherited works, movement, and no permanent-control claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "hu-ritual"
+          ],
+          "locator": "Horse uses, livestock capture, pastoral wealth, and household-evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "hu-movses-41-45"
+          ],
+          "locator": "Named craft process, materials, specialists, source genre, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "hu-salmin-archaeology"
+          ],
+          "locator": "Burial diversity, pottery contacts, cautious ethnic inference, and gentle archaeology humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "hu-movses-36-40"
+          ],
+          "locator": "Journey provisions, lodging, hospitality, political function, and representativeness limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "hu-ethnocultural"
+          ],
+          "locator": "Reported milk and flatbread, mediated evidence, pastoral setting, and bounded generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "hu-religion-study"
+          ],
+          "locator": "Sacrificial consumption, animal parts, communal context, polemical source, and meal limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "hu-family-matters"
+          ],
+          "locator": "Marriage claims, clerical hostility, prevalence limit, inheritance, and missionary contest.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "hu-family-matters"
+          ],
+          "locator": "Elite marriage, ordinary-family absence, captivity, and evidence-bounded household treatment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "hu-religion-study"
+          ],
+          "locator": "Reported cult objects, translation problem, and rejection of a standardized-creed claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "hu-ritual"
+          ],
+          "locator": "Funeral performances, hostile vocabulary, variation, and social interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "hu-movses-41-45"
+          ],
+          "locator": "Tree destruction, protest, coercion, punishment, narrative genre, and consent limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "hu-golden-conversion"
+          ],
+          "locator": "Elite conversion, church claim, later silence, and limits on mass-conversion inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "hu-epohi"
+          ],
+          "locator": "Public performances, selective observation, incomplete calendar, and gentle evidence humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "hu-cambridge-review"
+          ],
+          "locator": "Missionary teaching, likely mediation, and explicit absence of school-system evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "hu-ethnocultural"
+          ],
+          "locator": "Non-school learning domains, transmission inference, and no education-law claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "hu-kardost",
+            "hu-syriac-historians"
+          ],
+          "locator": "Kardost notice, disputed identification, missing object, and exact-polity attribution limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "hu-movses-intro"
+          ],
+          "locator": "Composite Armenian transmission, lost originals, and script-attribution guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "hu-golden-introduction"
+          ],
+          "locator": "Explicit evidence-bounded absence and exclusion of four unsafe substitute corpora.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "hu-religion-study"
+          ],
+          "locator": "Illness vocabulary, competing explanations, hostile source, and clinical-evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "hu-movses-36-40"
+          ],
+          "locator": "Risk environment and explicit absence of named medical institutions or practitioners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "hu-movses-36-40"
+          ],
+          "locator": "Winter exposure, exhaustion, rest, prayer framing, and material support.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "hu-pechenegs"
+          ],
+          "locator": "Animal-care necessity, missing veterinary documentation, and gentle bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "hu-salmin-archaeology"
+          ],
+          "locator": "Current archaeological scope and explicit exclusion of unsupported health statistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "hu-unesco-derbent"
+          ],
+          "locator": "Regional terrain, water necessities, likely local variation, and no network claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "hu-religion-study"
+          ],
+          "locator": "Ritual and ecological water references, domestic-data absence, and gentle source humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "hu-iranica-dagh-bary"
+          ],
+          "locator": "Later cistern evidence, geographic comparison, chronology limit, and no transfer to Varachan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "hu-albania-sources"
+          ],
+          "locator": "Explicit evidence-bounded absence for toilets, sewers, refuse, wastewater, and administration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "hu-iranica-dagh-bary"
+          ],
+          "locator": "Camp-city waste contrast, inference label, and rejection of unsupported cleanliness judgments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "hu-golden-introduction"
+          ],
+          "locator": "Court, army, capital, diplomacy, regional agency, and measurement limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "hu-ethnocultural"
+          ],
+          "locator": "Urban memory, route position, literary house count, and rejection of census conversion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "hu-movses-intro"
+          ],
+          "locator": "Documentary richness, outsider mediation, missing local archive, and source-voice limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "hu-iranica-darband"
+          ],
+          "locator": "Collective frontier skills, non-elite contributors, and material limits of elite history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "hu-map-700"
+          ],
+          "locator": "Editorial achievement, exact-id correction, full audit, and geometry-evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "hu-arab-khazar"
+          ],
+          "locator": "723 campaign, civilian consequences, place-name uncertainty, and identity restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "hu-pechenegs",
+            "hu-caucasus-history"
+          ],
+          "locator": "737 breakthrough, Varachan tradition, approximate endpoint, and transformation rationale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "hu-caucasus-history"
+          ],
+          "locator": "Post-737 human continuity, altered rule, and distinction between polity and population.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "hu-map-800",
+            "hu-golden-conversion"
+          ],
+          "locator": "Atlas replacement, prior subordination, layered authority, and empty association decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "hu-card-index",
+            "hu-map-700"
+          ],
+          "locator": "Final identity guardrails, interacting neighbors, exact records, and transformation framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "hu-salmin-jstage",
+            "hu-map-800"
+          ],
+          "locator": "Peer-reviewed reconstruction proposing Suvar continuity, Varachan chronology, and the 723 and 737 campaigns; used with attribution because identifications are debated. Indexed-end absence and broad Khazar replacement at representative points.",
+          "dateScope": {
+            "year": 737
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "huns",
+        "name": "North Caucasian Huns (Kingdom of the Huns)",
+        "aliases": [
+          "Country of the Huns",
+          "Kingdom of the Huns at Varachan",
+          "North Caucasian Hunnic polity"
+        ],
+        "kind": "state",
+        "region": "Europe",
+        "from": 660,
+        "to": 737,
+        "circa": true,
+        "card": "cards/huns.json",
+        "dateBasis": "historical",
+        "summary": "North Caucasian polity centered on Varachan, active about 660, tied to Khazar power, and transformed during the Arab-Khazar wars around 737.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "huns",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            45.031050310503105,
+            42.05709948518994,
+            48.25308253082531,
+            44.18887545092933
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
