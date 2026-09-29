@@ -1,0 +1,910 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release176-dardania research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "s-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact dardania id, imported name, approximate lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "s-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported summary attached to the exact Dardania record."
+    },
+    {
+      "id": "s-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing review state, inherited state kind, Europe queue, border count, and observed interval."
+    },
+    {
+      "id": "s-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing id, imported-summary status, and lack of a staged draft."
+    },
+    {
+      "id": "s-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact dardania card association currently exists."
+    },
+    {
+      "id": "s-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id dardania override currently exists."
+    },
+    {
+      "id": "s-map300bc",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Pre-layer control showing that the exact dardania feature is absent."
+    },
+    {
+      "id": "s-map200bc",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Only exact dardania geometry, interval properties, point tests, and encoded topology."
+    },
+    {
+      "id": "s-map100bc",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Endpoint control showing removal of the exact feature at the 100 BCE layer."
+    },
+    {
+      "id": "s-map1bc",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Later control confirming continued absence of the exact dardania feature."
+    },
+    {
+      "id": "s-alaj-thesis",
+      "title": "Premtim Alaj, Iron Age settlements in Kosovo",
+      "url": "https://theses.hal.science/tel-02503916",
+      "note": "Doctoral archaeological synthesis of settlements, houses, objects, food work, crafts, imports, and cemeteries."
+    },
+    {
+      "id": "s-shukriu-kingdom",
+      "title": "Edi Shukriu, The Dardanian Kingdom",
+      "url": "https://doi.org/10.3406/iliri.1999.1706",
+      "note": "Scholarly synthesis of settlement, fortification, burial, exchange, political identity, and chronology."
+    },
+    {
+      "id": "s-palaeo-lang",
+      "title": "Palaeohispanica, Palaeo-European languages in the Balkans",
+      "url": "https://ifc-ojs.es/index.php/palaeohispanica/en/article/download/372/367/2157",
+      "note": "Peer-reviewed treatment of limited Dardanian linguistic evidence and uncertain classification."
+    },
+    {
+      "id": "s-strabo-study",
+      "title": "The Romans and us: Strabo and the construction of ethnicity",
+      "url": "https://research.rug.nl/en/publications/the-romans-and-us-strabos-geography-and-the-construction-of-ethni/",
+      "note": "Peer-reviewed analysis of Strabo as an author constructing ethnic categories rather than neutrally recording them."
+    },
+    {
+      "id": "s-livy31",
+      "title": "Livy, History of Rome, Book 31, chapter 28",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Livy/31*.html",
+      "note": "Primary Roman narrative naming Bato son of Longarus among leaders at the Roman camp in 200 BCE."
+    },
+    {
+      "id": "s-livy40",
+      "title": "Livy, History of Rome, Book 40, chapter 57",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Livy/40*.html",
+      "note": "Primary Roman narrative of Philip V and the Bastarnae plan directed against the Dardanians."
+    },
+    {
+      "id": "s-livy41",
+      "title": "Livy, History of Rome, Book 41",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Livy/41*.html",
+      "note": "Primary Roman narrative of the Bastarnae invasion, Dardanian resistance, winter fighting, and withdrawal."
+    },
+    {
+      "id": "s-livy43",
+      "title": "Livy, History of Rome, Book 43, chapter 18",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Livy/43*.html",
+      "note": "Primary Roman narrative for conflict and diplomacy involving Perseus and the Dardanians during the Third Macedonian War."
+    },
+    {
+      "id": "s-polybius28",
+      "title": "Polybius, Histories, Book 28",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/28*.html",
+      "note": "Primary Greek narrative context for Perseus, Rome, and Balkan diplomacy in the 170s BCE."
+    },
+    {
+      "id": "s-petrovic",
+      "title": "Vladimir Petrovic, Pre-Roman and Roman Dardania",
+      "url": "https://doi.org/10.2298/BALC0637007P",
+      "note": "Peer-reviewed synthesis of geography, communications, mining, Macedonian relations, and later Roman encounters."
+    },
+    {
+      "id": "s-roman-east",
+      "title": "Erich Gruen, Hegemony to Empire: Macedonia Provincia",
+      "url": "https://publishing.cdlib.org/ucpressebooks/view?docId=ft9x0nb6fr&chunk.id=d0e705&toc.depth=1&toc.id=d0e705&brand=ucpress",
+      "note": "University of California Press analysis of the 148 BCE provincial settlement and its historical limits."
+    },
+    {
+      "id": "s-resistance",
+      "title": "Naser Ferri, The Resistance of the Dardanians to Roman Conquests and Romanisation",
+      "url": "https://hrcak.srce.hr/en/clanak/348810",
+      "note": "Scholarly synthesis of changing Dardanian relations with Rome after Macedonian conquest and later campaigns."
+    },
+    {
+      "id": "s-shukriu-history",
+      "title": "Edi Shukriu, History of Ancient Dardania",
+      "url": "https://dspace.aab-edu.net/handle/123456789/6",
+      "note": "Scholarly synthesis of Dardanian political history, economy, agriculture, animal husbandry, crafts, and evidence limits."
+    },
+    {
+      "id": "s-alaj-settlements",
+      "title": "Premtim Alaj and Edi Baraliu, Iron Age settlements in Kosovo",
+      "url": "https://filologjia.uni-pr.edu/desk/inc/media/262C4FB3-A8E8-4B91-BF0C-03FB7874A71B.pdf",
+      "note": "University archaeological study of hill, terrace, and lowland settlements, defenses, and domestic evidence."
+    },
+    {
+      "id": "s-guide",
+      "title": "Archaeological Guide of Kosovo",
+      "url": "https://www.mkrs-ks.org/repository/docs/drafti_i_guides_-anglisht_final.pdf",
+      "note": "Official heritage guide to settlement forms, fortification, cemeteries, and archaeological sites."
+    },
+    {
+      "id": "s-university",
+      "title": "University of Pristina, Dardania in the Iron Age",
+      "url": "https://filozofiku.uni-pr.edu/desk/inc/media/C2E90BE3-5218-4BCA-8EC3-C5DACF6B8412.pdf",
+      "note": "University teaching synthesis of Iron Age Dardania, material culture, settlement, and burial evidence."
+    },
+    {
+      "id": "s-cernica",
+      "title": "Kosovo Ministry of Culture, Cernica archaeological excavation",
+      "url": "https://www.mkrs-ks.org/?page=1%2C6%2C3942",
+      "note": "Official report identifying a major Iron Age and Hellenistic settlement associated with the Dardanian kingdom."
+    },
+    {
+      "id": "s-kulina",
+      "title": "The funerary monument from Kulina",
+      "url": "https://www.persee.fr/doc/imea_1000-1000_2018_act_6_1_1125",
+      "note": "Scholarly study of a distinctive funerary relief with human figures and military imagery."
+    },
+    {
+      "id": "s-romaja",
+      "title": "Review of the Romaja necropolis excavation",
+      "url": "https://www.persee.fr/doc/iliri_1727-2548_1981_num_11_1_1760",
+      "note": "Scholarly review of tumular burial evidence and its chronology at Romaja."
+    },
+    {
+      "id": "s-dollc",
+      "title": "Dollc tumuli and prehistoric cremation burial",
+      "url": "https://www.koha.net/en/kulture/tumat-e-dollcit-deshmi-parahistorike-e-varrimit-me-djegie-te-dardanet",
+      "note": "Report on an Institute of Archaeology monograph, cremation graves, human remains, and chronological limits."
+    },
+    {
+      "id": "s-silver-karanos",
+      "title": "Mining, silver and coinage in ancient Macedonia and Dardania",
+      "url": "https://doi.org/10.5565/rev/karanos.136",
+      "note": "Peer-reviewed study of ore districts, silver movement, and regional metal economies."
+    },
+    {
+      "id": "s-silver-provenance",
+      "title": "Silver provenance and circulation in the central Balkans",
+      "url": "https://doi.org/10.1007/s12520-024-02106-1",
+      "note": "Peer-reviewed archaeometric study of silver, coins, vessels, imports, and exchange in the central Balkans."
+    },
+    {
+      "id": "s-eaa-storage",
+      "title": "European Association of Archaeologists 2024 abstract book",
+      "url": "https://cris.vub.be/ws/portalfiles/portal/114452761/EAA_Abstract_Book_2024_online.pdf",
+      "note": "Research abstract on large storage jars, production, exchange, and routes between Dardania and Adriatic markets."
+    },
+    {
+      "id": "s-bm-runner",
+      "title": "British Museum, bronze figure of a running girl",
+      "url": "https://www.britishmuseum.org/collection/object/G_1876-0510-1",
+      "note": "Museum catalogue record for an imported Archaic Greek bronze reportedly found near Prizren."
+    },
+    {
+      "id": "s-strabo",
+      "title": "Strabo, Geography, Book 7",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/7E*.html",
+      "note": "Ancient outsider description locating the Dardanians and supplying ethnographic claims that require caution."
+    },
+    {
+      "id": "s-pliny",
+      "title": "Pliny the Elder, Natural History, Book 4",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Pliny_the_Elder/4*.html",
+      "note": "Ancient Roman geographic ordering of Balkan peoples, written later than the card interval."
+    },
+    {
+      "id": "s-pervading",
+      "title": "The Pervading Empire, preview chapter on Dardanian ethnography",
+      "url": "https://api.pageplace.de/preview/DT0400.9783515127387_A40121071/preview-9783515127387_A40121071.pdf",
+      "note": "Modern scholarly interpretation of Strabo and Aelian stereotypes about housing, dung, music, and bathing."
+    },
+    {
+      "id": "s-serbian-ency",
+      "title": "Serbian Encyclopedia, Dardanians",
+      "url": "https://srpskaenciklopedija.rs/books/slovo-d/page/dardanci",
+      "note": "Academic encyclopedia entry on names, language evidence, absence of a native script, and Greek or Latin use."
+    },
+    {
+      "id": "s-names",
+      "title": "Names and onomastics in Roman Dardania",
+      "url": "https://doi.org/10.47054/ZIVA2511781n",
+      "note": "Scholarly study of later Roman-period personal names and inscriptions, useful as a chronological comparison."
+    },
+    {
+      "id": "s-dresnik",
+      "title": "Roman inscriptions from Dresnik in Dardania",
+      "url": "https://www.jstor.org/stable/48811145",
+      "note": "Peer-reviewed publication of later Roman epigraphy, explicitly outside the card interval."
+    },
+    {
+      "id": "s-toothwear",
+      "title": "Tooth wear in a Roman-era Dardanian sample",
+      "url": "https://doi.org/10.4236/ojst.2012.21001",
+      "note": "Osteological study of 21 skulls and 498 teeth from the second to fourth centuries CE."
+    },
+    {
+      "id": "s-dea",
+      "title": "Dea Dardanica and identity in Roman Dardania",
+      "url": "https://www.eap-iea.org/index.php/eap/article/view/356",
+      "note": "Scholarly critique of projecting a Roman-period cult backward as unchanged Iron Age ethnic religion."
+    },
+    {
+      "id": "s-heritage",
+      "title": "Archaeology, heritage, and statebuilding in Kosovo",
+      "url": "https://kfos.org/storage/app/uploads/public/612/f20/b53/612f20b53fca9802366750.pdf",
+      "note": "Research report on modern uses of Dardanian archaeology and disputed direct-descent narratives."
+    },
+    {
+      "id": "s-archmag",
+      "title": "Archaeology Magazine, Kosovo archaeology",
+      "url": "https://archive.archaeology.org/0707/etc/kosovo.html",
+      "note": "Archaeological overview of research, sites, preservation, and contested interpretation in central Kosovo."
+    }
+  ],
+  "entities": [
+    {
+      "id": "dardania",
+      "card": "data/cards/dardania.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-alaj-thesis",
+            "s-shukriu-kingdom",
+            "s-palaeo-lang",
+            "s-strabo-study"
+          ],
+          "locator": "Exact dardania id, imported name, approximate lifetime, and historical-basemap provenance. Imported summary attached to the exact Dardania record. Missing review state, inherited state kind, Europe queue, border count, and observed interval. Doctoral archaeological synthesis of settlements, houses, objects, food work, crafts, imports, and cemeteries. Scholarly synthesis of settlement, fortification, burial, exchange, political identity, and chronology. Peer-reviewed treatment of limited Dardanian linguistic evidence and uncertain classification. Peer-reviewed analysis of Strabo as an author constructing ethnic categories rather than neutrally recording them.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "s-livy31"
+          ],
+          "locator": "Primary Roman narrative naming Bato son of Longarus among leaders at the Roman camp in 200 BCE.",
+          "dateScope": {
+            "from": -200,
+            "to": -188
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "s-livy40"
+          ],
+          "locator": "Primary Roman narrative of Philip V and the Bastarnae plan directed against the Dardanians.",
+          "dateScope": {
+            "from": -188,
+            "to": -176
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "s-livy41"
+          ],
+          "locator": "Primary Roman narrative of the Bastarnae invasion, Dardanian resistance, winter fighting, and withdrawal.",
+          "dateScope": {
+            "from": -176,
+            "to": -164
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "s-roman-east"
+          ],
+          "locator": "University of California Press analysis of the 148 BCE provincial settlement and its historical limits.",
+          "dateScope": {
+            "from": -164,
+            "to": -152
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "s-shukriu-history"
+          ],
+          "locator": "Scholarly synthesis of Dardanian political history, economy, agriculture, animal husbandry, crafts, and evidence limits.",
+          "dateScope": {
+            "from": -152,
+            "to": -140
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "s-silver-karanos"
+          ],
+          "locator": "Peer-reviewed study of ore districts, silver movement, and regional metal economies.",
+          "dateScope": {
+            "from": -140,
+            "to": -128
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "s-university"
+          ],
+          "locator": "University teaching synthesis of Iron Age Dardania, material culture, settlement, and burial evidence.",
+          "dateScope": {
+            "from": -128,
+            "to": -114
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "s-resistance"
+          ],
+          "locator": "Scholarly synthesis of changing Dardanian relations with Rome after Macedonian conquest and later campaigns.",
+          "dateScope": {
+            "from": -114,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-missing"
+          ],
+          "locator": "Exact repository identity, imported summary, missing status, inherited kind, region, and current association state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "s-map300bc",
+            "s-map200bc",
+            "s-map100bc",
+            "s-map1bc",
+            "s-card-index",
+            "s-overrides"
+          ],
+          "locator": "Full snapshot occurrence audit, interval properties, surrounding controls, and association absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "s-map200bc"
+          ],
+          "locator": "Geometry type, component count, ring count, position count, bounds, deterministic hashes, and map caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "s-map200bc"
+          ],
+          "locator": "Representative point tests, surprising inclusions and exclusions, and historical-geographic mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "s-map200bc",
+            "s-map100bc"
+          ],
+          "locator": "Direct arc seam, overlap audit, endpoint transition, and evidence-bounded geometry humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "s-pliny"
+          ],
+          "locator": "Ancient geographic placement and explicit distinction from Trojan Dardania.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "s-strabo"
+          ],
+          "locator": "Strabo chronology, ethnographic claims, outsider viewpoint, and rejection as household census.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "s-pervading"
+          ],
+          "locator": "Modern interpretation of ancient stereotypes and gentle evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "s-dea"
+          ],
+          "locator": "Roman cult evidence, chronology, religious change, and limit on projecting backward.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "s-heritage"
+          ],
+          "locator": "Modern heritage use, direct-descent caution, and neutral identity framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "s-livy31"
+          ],
+          "locator": "Named ruler, father-son relationship, Roman alliance, and limits of political reach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "s-livy40"
+          ],
+          "locator": "Macedonian strategic plan, hostile rhetoric, and distinction between intention and outcome.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "s-livy41"
+          ],
+          "locator": "Dardanian debate, mobilization, winter counterattack, and resistance without invented unity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "s-livy43",
+            "s-polybius28"
+          ],
+          "locator": "Perseus conflict, narrative priorities, and daily-life evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "s-resistance"
+          ],
+          "locator": "Macedonian defeat, later Roman chronology, and transformation ending rationale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "s-alaj-settlements"
+          ],
+          "locator": "Settlement types, landscape choices, and limits on political classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "s-guide"
+          ],
+          "locator": "Fortification materials, labor, chronology, and institutional limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "s-alaj-settlements"
+          ],
+          "locator": "House plans, domestic evidence, household work, and interpretive caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "s-cernica"
+          ],
+          "locator": "Cernica settlement importance, occupation layers, persistence, and regional scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "s-guide"
+          ],
+          "locator": "Intervisible settlements, landscape movement, routine activities, and communication limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "s-shukriu-history"
+          ],
+          "locator": "Mixed farming and herding economy, dairy work, and household variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "s-university"
+          ],
+          "locator": "Food-processing evidence, labor sequence, family participation, and gender-role limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "s-eaa-storage"
+          ],
+          "locator": "Storage vessels, routes, household provisioning, and gentle object-biography humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "s-silver-provenance"
+          ],
+          "locator": "Imports, local adaptation, dining interpretation, and cultural-transfer caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "s-shukriu-history"
+          ],
+          "locator": "River corridors, transported goods, route constraints, and household access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "s-silver-karanos"
+          ],
+          "locator": "Ore geography, silver networks, production requirements, and ownership limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "s-silver-provenance"
+          ],
+          "locator": "Silver provenance method, circulation, limits, and gentle object-mobility humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "s-university"
+          ],
+          "locator": "Pottery chaîne opératoire, learned skill, variation, and identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "s-alaj-settlements"
+          ],
+          "locator": "Textile tools, technical learning, labor attribution limits, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "s-bm-runner"
+          ],
+          "locator": "Imported bronze provenance, chronology, girls, and rejection of cultural overreach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "s-livy31"
+          ],
+          "locator": "Elite genealogy and explicit limits on reconstructing ordinary families.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "s-romaja"
+          ],
+          "locator": "Burial diversity, survivors decisions, possible social dimensions, and interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "s-kulina"
+          ],
+          "locator": "Funerary relief figures, possible relationships, and family-portrait caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "s-dollc"
+          ],
+          "locator": "Earlier cremation cemetery, bioarchaeological possibilities, and chronological boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "s-archmag"
+          ],
+          "locator": "Gender and age visibility, grave-goods limits, and documentary bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "s-university"
+          ],
+          "locator": "Practical learning domains and explicit absence of secure formal-school evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "s-serbian-ency"
+          ],
+          "locator": "Limited linguistic corpus, debated classification, and distinction between names and text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "s-serbian-ency"
+          ],
+          "locator": "Native-script evidence, later Greek and Latin, and writing-sample absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "s-names"
+          ],
+          "locator": "Later onomastic corpus, chronological comparison, and rejection as exact writing sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "s-dresnik"
+          ],
+          "locator": "Later epigraphy, secure contexts, and chronological exclusion from sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "s-guide"
+          ],
+          "locator": "Explicit boundary for healers, treatments, health hazards, and what remains unrecorded.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "s-toothwear"
+          ],
+          "locator": "Later dental sample, exact size and date, and rejection of backward projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "s-guide"
+          ],
+          "locator": "Water access, uses, absence of uniform piping, and household labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "s-alaj-settlements"
+          ],
+          "locator": "Waste evidence, site formation, disturbance, and sanitation-institution limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "s-pervading"
+          ],
+          "locator": "Explicit toilet and sewer absence, hygiene inference limit, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "s-shukriu-history"
+          ],
+          "locator": "Integrated social and economic achievement with unnamed labor acknowledged.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "s-silver-karanos"
+          ],
+          "locator": "Mining, manufacture, exchange networks, achievement, and labor limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "s-cernica"
+          ],
+          "locator": "Engineering achievement, maintenance, intervisibility, and political caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "s-archmag"
+          ],
+          "locator": "Modern preservation, curation, public interpretation, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "s-map100bc",
+            "s-map1bc"
+          ],
+          "locator": "Atlas endpoint, later continuity, and empty association decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "s-petrovic"
+          ],
+          "locator": "Peer-reviewed synthesis of geography, communications, mining, Macedonian relations, and later Roman encounters.",
+          "dateScope": {
+            "year": -100
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "dardania",
+        "name": "Dardanian kingdom and communities",
+        "aliases": [
+          "Dardania",
+          "Kingdom of Dardania",
+          "Dardani"
+        ],
+        "kind": "state",
+        "region": "Europe",
+        "from": -200,
+        "to": -100,
+        "circa": true,
+        "card": "cards/dardania.json",
+        "dateBasis": "map_coverage",
+        "summary": "Central Balkan Dardanian kingdom and communities amid Macedonian and Roman rivalry.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "dardania",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            20.882008820088203,
+            41.240056945791764,
+            23.470434704347042,
+            43.50178553201073
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
