@@ -1,0 +1,958 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release165-michif-piyii-metis research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "mx-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported label, 1492 to 1500 interval, circa flag, and other modern Métis labels assigned to the same atlas slice."
+    },
+    {
+      "id": "mx-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing card status, state default, observed interval, border count, and unreviewed identity, chronology, and border fields."
+    },
+    {
+      "id": "mx-missing",
+      "title": "Human History Map missing-card queue",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact card is missing and identifies the imported encyclopedia source lead that is replaced here."
+    },
+    {
+      "id": "mx-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Exposes a later fur-trade and voyageur summary wrongly attached to the 1492 to 1500 layer."
+    },
+    {
+      "id": "mx-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded pre-appearance control for representative owners before the anachronistic feature."
+    },
+    {
+      "id": "mx-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index."
+    },
+    {
+      "id": "mx-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded endpoint control showing removal of the exact feature and return to broad subsistence labels."
+    },
+    {
+      "id": "mx-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded later control showing a new set of historically named layers without validating the 1492 feature."
+    },
+    {
+      "id": "mx-cree-card",
+      "title": "Human History Map Cree card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/cree.json",
+      "note": "Existing overlapping card audited and rejected as a substitute because it has a distinct identity, source scope, interval, and geometry."
+    },
+    {
+      "id": "mx-denendeh-card",
+      "title": "Human History Map Dënéndeh card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/denendeh.json",
+      "note": "Existing overlapping homeland card audited to keep distinct Dene histories separate from this atlas correction."
+    },
+    {
+      "id": "mx-anishinaabe-card",
+      "title": "Human History Map Anishinaabe card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/anishinabewaki.json",
+      "note": "Existing overlapping card audited and rejected as a shared destination for the much larger imported polygon."
+    },
+    {
+      "id": "mx-assiniboine-card",
+      "title": "Human History Map Assiniboine card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/assiniboine.json",
+      "note": "Existing overlapping card audited to prevent its nation-specific history from being generalized across the target."
+    },
+    {
+      "id": "mx-blackfoot-card",
+      "title": "Human History Map Blackfoot card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/blackfoot.json",
+      "note": "Related regional card audited to prevent atlas overlap from becoming an identity or territorial claim."
+    },
+    {
+      "id": "mx-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no exact override exists and records the distinct associations of already researched neighboring cards."
+    },
+    {
+      "id": "mx-mnc-timeline",
+      "title": "Métis National Council chronology",
+      "url": "https://www.metisnation.ca/what-we-do/international-efforts/international-timeline/",
+      "note": "Métis Nation source placing emergence as a distinct Indigenous people and Nation in the late eighteenth century."
+    },
+    {
+      "id": "mx-mnc-language",
+      "title": "Métis National Council language",
+      "url": "https://www.metisnation.ca/what-we-do/culture-heritage-and-language/language/",
+      "note": "Métis Nation source describing Michif as its own language, developed by the early 1800s, with distinct regional varieties."
+    },
+    {
+      "id": "mx-forks-overview",
+      "title": "History of The Forks",
+      "url": "https://www.parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history",
+      "note": "Parks Canada overview of long Indigenous use, gathering, provisioning, exchange, and the later sequence of fur trade and settlement at the river junction."
+    },
+    {
+      "id": "mx-forks-precontact",
+      "title": "Land use in the precontact period at The Forks",
+      "url": "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/vocation-landuse",
+      "note": "Parks Canada account of six millennia of meeting, fishing, seasonal camping, river travel, and far-reaching exchange at the Red and Assiniboine confluence."
+    },
+    {
+      "id": "mx-mnc-culture",
+      "title": "Métis National Council culture and heritage",
+      "url": "https://www.metisnation.ca/what-we-do/culture-heritage-and-language/culture-heritage/",
+      "note": "Métis Nation account of eighteenth-century ethnogenesis through later families and distinct communities, not a 1492 origin."
+    },
+    {
+      "id": "mx-wanuskewin",
+      "title": "Wanuskewin Heritage Park on Canada’s tentative list",
+      "url": "https://parks.canada.ca/culture/spm-whs/indicative-tentative/wanuskewin",
+      "note": "Parks Canada summary of a 6,400-year gathering landscape with habitation sites, bison jumps, tipi rings, a medicine wheel, and ongoing Indigenous meaning."
+    },
+    {
+      "id": "mx-head",
+      "title": "Head-Smashed-In Buffalo Jump",
+      "url": "https://whc.unesco.org/en/list/158/",
+      "note": "UNESCO synthesis of almost six millennia of communal bison hunting, drive lanes, kill deposits, butchering camps, knowledge, and social organization."
+    },
+    {
+      "id": "mx-north-sk",
+      "title": "Prehistory of northern Saskatchewan",
+      "url": "https://teaching.usask.ca/indigenoussk/import/prehistory_northern_saskatchewan.php",
+      "note": "University of Saskatchewan overview of limited boreal archaeology, preservation problems, plant foods, and the danger of overconfident cultural assignments."
+    },
+    {
+      "id": "mx-south-sk",
+      "title": "Prehistory of southern Saskatchewan",
+      "url": "https://teaching.usask.ca/indigenoussk/import/prehistory_southern_saskatchewan.php",
+      "note": "University of Saskatchewan overview of material culture, late precontact bows, pottery, communal bison hunting, and evidence limits."
+    },
+    {
+      "id": "mx-forks-artifacts",
+      "title": "Artifacts of The Forks National Historic Site",
+      "url": "https://parks.canada.ca/lhn-nhs/mb/forks/culture/artifacts",
+      "note": "Parks Canada collection page on Woodland projectile points, animal use, and the limits and dates of recovered objects."
+    },
+    {
+      "id": "mx-alberta-sites",
+      "title": "Archaeological Survey of Alberta: sites and discoveries",
+      "url": "https://open.alberta.ca/dataset/7645d567-c942-4d68-a6f6-3d200341a034/resource/3fd8faf2-27e8-4e3d-8bab-1a4709259687/download/alberta-archaeology-sites.pdf",
+      "note": "Provincial archaeology volume documenting multi-component camps, bison pounds, pottery, workshops, and much later Métis wintering sites as distinct contexts."
+    },
+    {
+      "id": "mx-laidlaw",
+      "title": "Laidlaw Aboriginal antelope trap",
+      "url": "https://hermis.alberta.ca/ARHP/Details.aspx?DeptID=1&ObjectID=4665-0269",
+      "note": "Alberta historic register description of drive lanes, an enclosure, stone circles, and a rare communal pronghorn hunting site."
+    },
+    {
+      "id": "mx-little-manitou",
+      "title": "Late precontact sites at Little Manitou Lake",
+      "url": "https://harvest.usask.ca/items/9347aa97-894d-4f98-98ba-26d83a39ca30",
+      "note": "University of Saskatchewan archaeology on dated hearths, domestic and ceremonial places, changing lake conditions, and local landscape use."
+    },
+    {
+      "id": "mx-tschetter",
+      "title": "The Tschetter late prehistoric bison kill",
+      "url": "https://harvest.usask.ca/items/d6256f0e-e369-46bb-8bd7-c04cae33c6a2",
+      "note": "University of Saskatchewan record of a pound, bone bed, charcoal, and refuse pits used to interpret a specific northern Plains hunt."
+    },
+    {
+      "id": "mx-sandhill",
+      "title": "Precontact use of Saskatchewan sandhill environments",
+      "url": "https://harvest.usask.ca/server/api/core/bitstreams/2743ba34-b9ce-4f12-b66a-d00969e20b02/content",
+      "note": "University of Saskatchewan research on bison use, sheltered camps, firewood, plant-recovery bias, and late precontact settlement choices."
+    },
+    {
+      "id": "mx-stone-circles",
+      "title": "Late precontact stone circle sites",
+      "url": "https://harvest.usask.ca/bitstreams/f4d13489-37d7-4ae3-a933-ca80f2ef9ca7/download",
+      "note": "University of Saskatchewan research on stone circles as common northern Plains habitation traces and the limits of household reconstruction."
+    },
+    {
+      "id": "mx-grasslands",
+      "title": "Indigenous connections at Grasslands National Park",
+      "url": "https://parks.canada.ca/pn-np/sk/grasslands/culture/autochtone-indigenous",
+      "note": "Parks Canada overview of seasonal use by distinct nations, bison relationships, and more than 20,000 tipi rings."
+    },
+    {
+      "id": "mx-dogs",
+      "title": "Dog sledding and pre-horse transport",
+      "url": "https://teaching.usask.ca/indigenoussk/import/dog_sledding.php",
+      "note": "University of Saskatchewan account of dogs carrying packs, pulling plains travois and forest sleds, and horses arriving much later."
+    },
+    {
+      "id": "mx-agriculture",
+      "title": "Indigenous agriculture and plant management on the northern Plains",
+      "url": "https://teaching.usask.ca/indigenoussk/import/indigenous_reserve_agriculture_to_1900.php",
+      "note": "University of Saskatchewan account of precontact cultivation, gathering, medicinal plants, and agricultural exchange without reducing Plains economies to one food."
+    },
+    {
+      "id": "mx-paleo-plants",
+      "title": "Engaged palaeoethnobotany on the northern Plains",
+      "url": "https://esj.usask.ca/article/view/70733",
+      "note": "Peer-reviewed call for medicinal plant archaeology led with Indigenous Knowledge Keepers and Healers, noting how sparse current evidence remains."
+    },
+    {
+      "id": "mx-plant-women",
+      "title": "Traditional cultivation by northwestern Indigenous peoples",
+      "url": "https://artsandscience.usask.ca/news/articles/8319/_To_Get_More_Harvest_",
+      "note": "University of Saskatchewan account emphasizing Indigenous women’s knowledge of plants as foods, materials, medicines, spiritual relations, and actively tended resources."
+    },
+    {
+      "id": "mx-cree-plants",
+      "title": "Ethnobotany of Saskatchewan Woods Cree",
+      "url": "https://harvest.usask.ca/items/4ca7e6fc-f733-497e-a655-b02e1e3414e4",
+      "note": "Later community-informed research on named plants for healing, food, craft, diapers, toys, and other uses, included only as a non-retrojective comparison."
+    },
+    {
+      "id": "mx-health",
+      "title": "Precontact health evidence in southern Manitoba",
+      "url": "https://mspace.lib.umanitoba.ca/server/api/core/bitstreams/e075ddd5-0a58-4035-9484-1bc2ab21f364/content",
+      "note": "University of Manitoba research on skeletal evidence and the strict limits of reconstructing disease and care where written records are absent."
+    },
+    {
+      "id": "mx-caa-ethics",
+      "title": "Ethical conduct pertaining to Indigenous peoples",
+      "url": "https://canadianarchaeology.com/caa/about/ethics/statement-principles-ethical-conduct-pertaining-aboriginal-peoples",
+      "note": "Canadian Archaeological Association principles requiring community roles, consultation, respectful interpretation, and protocols for human remains and associated objects."
+    },
+    {
+      "id": "mx-learning",
+      "title": "First Nations learning from generation to generation",
+      "url": "https://www.fnesc.ca/wp/wp-content/uploads/2015/07/PUB-LFP-IRSR-5-2015-07-WEB.pdf",
+      "note": "First Nations Education Steering Committee teaching resource on family, community, Elders, stories, practice, land, and locally distinct responsibilities."
+    },
+    {
+      "id": "mx-rli-themes",
+      "title": "Métis Foundational Knowledge Themes",
+      "url": "https://www.rupertsland.org/teaching-learning/metis-foundational-knowledge-themes/",
+      "note": "Métis education institute framework centering Métis voices, history, identity, language, culture, homeland, and governance."
+    },
+    {
+      "id": "mx-gdi-family",
+      "title": "Family structures in Métis history",
+      "url": "https://www.metismuseum.ca/media/document.php/01262.VM%20-%20Family%20Structures.pdf",
+      "note": "Gabriel Dumont Institute resource distinguishing early mixed families from the later development of cohesive Métis family and community life."
+    },
+    {
+      "id": "mx-gdi-tools",
+      "title": "Michif language tools",
+      "url": "https://www.metismuseum.ca/michif_tools.php",
+      "note": "Gabriel Dumont Institute language resources explaining oral transmission, spelling variation, dictionaries, recordings, and language expert contributions."
+    },
+    {
+      "id": "mx-gdi-greeting",
+      "title": "Heritage Michif greetings",
+      "url": "https://www.metismuseum.ca/media/document.php/149703.MRG%20-%20Final%20-%20Jan%202021%20for%20VM.pdf",
+      "note": "Gabriel Dumont Institute resource giving the modern teaching form Taanshi for hello and other Heritage Michif phrases."
+    },
+    {
+      "id": "mx-writing-stone",
+      "title": "Writing-on-Stone or Áísínai’pi",
+      "url": "https://www.canada.ca/en/parks-canada/news/2019/07/writing-on-stone--aisinaipi.html",
+      "note": "Parks Canada description of sacred Blackfoot rock art created over millennia and why pictures are not a securely dated 1492 alphabetic transcript."
+    },
+    {
+      "id": "mx-moccasins",
+      "title": "Northern Plains moccasins",
+      "url": "https://www.historymuseum.ca/cmc/exhibitions/aborig/mocasin/mocbd1e.html",
+      "note": "Canadian Museum of History account of early one-piece soft-soled footwear, hide materials, quill decoration, and later horse-era changes."
+    },
+    {
+      "id": "mx-oldman",
+      "title": "Old Man’s Playing Ground",
+      "url": "https://www.historymuseum.ca/boutique/product/old-man/",
+      "note": "Canadian Museum of History summary joining Piikáni oral traditions, historic sources, floodplain study, a campsite, games, and trade."
+    },
+    {
+      "id": "mx-tsekwa",
+      "title": "Tse’K’wa National Historic Site",
+      "url": "https://parks.canada.ca/culture/designation/lieu-site/tsekwa",
+      "note": "Parks Canada and Dane-zaa stewardship account of layered archaeology, enduring oral histories, and the limits of a site far older than the target interval."
+    },
+    {
+      "id": "mx-kananaskis",
+      "title": "Lower Kananaskis River archaeological sites",
+      "url": "https://open.alberta.ca/dataset/4c685e66-a93c-44cf-ad82-e81f3354b8c6/resource/627454bf-7426-4ee5-9c0a-cbb129cd3a69/download/lower-kananaskis-river-barrier-lake-redevelopment-draft-plan.pdf",
+      "note": "Provincial inventory of campsites, fire-broken rock, butchered bone, tools, workshops, and repeated occupations near a river corridor."
+    },
+    {
+      "id": "mx-forks-management",
+      "title": "The Forks management statement",
+      "url": "https://parks.canada.ca/lhn-nhs/mb/forks/info/gestion-management-2018",
+      "note": "Parks Canada recognition of thriving precontact Indigenous cultures and The Forks as the much later birthplace and heart of the Métis Nation Homeland."
+    },
+    {
+      "id": "mx-mnc-about",
+      "title": "About the Métis Nation",
+      "url": "https://www.metisnation.ca/about/about-us/",
+      "note": "Métis National Council explanation of eighteenth-century fur-trade families, distinct communities, nationhood, homeland, governance, and continuing life."
+    }
+  ],
+  "entities": [
+    {
+      "id": "michif-piyii-metis",
+      "card": "data/cards/michif-piyii-metis.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "mx-index",
+            "mx-map1492",
+            "mx-map1500",
+            "mx-mnc-timeline",
+            "mx-mnc-language",
+            "mx-forks-overview"
+          ],
+          "locator": "Exact id, imported label, 1492 to 1500 interval, circa flag, and other modern Métis labels assigned to the same atlas slice. Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index. Decoded endpoint control showing removal of the exact feature and return to broad subsistence labels. Métis Nation source placing emergence as a distinct Indigenous people and Nation in the late eighteenth century. Métis Nation source describing Michif as its own language, developed by the early 1800s, with distinct regional varieties. Parks Canada overview of long Indigenous use, gathering, provisioning, exchange, and the later sequence of fur trade and settlement at the river junction.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "mx-index",
+            "mx-map1400",
+            "mx-map1492",
+            "mx-mnc-culture"
+          ],
+          "locator": "Exact id, imported label, 1492 to 1500 interval, circa flag, and other modern Métis labels assigned to the same atlas slice. Decoded pre-appearance control for representative owners before the anachronistic feature. Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index. Métis Nation account of eighteenth-century ethnogenesis through later families and distinct communities, not a 1492 origin.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "mx-map1492"
+          ],
+          "locator": "Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "mx-wanuskewin"
+          ],
+          "locator": "Parks Canada summary of a 6,400-year gathering landscape with habitation sites, bison jumps, tipi rings, a medicine wheel, and ongoing Indigenous meaning.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "mx-head"
+          ],
+          "locator": "UNESCO synthesis of almost six millennia of communal bison hunting, drive lanes, kill deposits, butchering camps, knowledge, and social organization.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "mx-north-sk"
+          ],
+          "locator": "University of Saskatchewan overview of limited boreal archaeology, preservation problems, plant foods, and the danger of overconfident cultural assignments.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "mx-south-sk"
+          ],
+          "locator": "University of Saskatchewan overview of material culture, late precontact bows, pottery, communal bison hunting, and evidence limits.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "mx-forks-artifacts"
+          ],
+          "locator": "Parks Canada collection page on Woodland projectile points, animal use, and the limits and dates of recovered objects.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "mx-map1492",
+            "mx-map1500",
+            "mx-map1530"
+          ],
+          "locator": "Decoded exact polygon, positions, bounds, point memberships, overlaps, direct arcs, properties, and source feature index. Decoded endpoint control showing removal of the exact feature and return to broad subsistence labels. Decoded later control showing a new set of historically named layers without validating the 1492 feature.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "mx-index",
+            "mx-coverage",
+            "mx-missing",
+            "mx-summaries",
+            "mx-map1492"
+          ],
+          "locator": "Exact target occurrence, geometry type, ring count, position count, and decoded bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "mx-map1492"
+          ],
+          "locator": "Representative point membership audit across the exact decoded polygon.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "mx-map1492"
+          ],
+          "locator": "Representative owner arrays at interior probes and strict interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "mx-map1492",
+            "mx-cree-card",
+            "mx-denendeh-card",
+            "mx-overrides"
+          ],
+          "locator": "Direct shared-arc audit and comparison with separately researched exact cards.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "mx-index",
+            "mx-coverage"
+          ],
+          "locator": "Related exact index and coverage records demonstrating repeated chronological back-projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "mx-wanuskewin"
+          ],
+          "locator": "Site count, landforms, feature classes, time depth, and contemporary significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "mx-head"
+          ],
+          "locator": "Landscape components, archaeological deposits, planning, location, and scope restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "mx-forks-precontact"
+          ],
+          "locator": "Dated hearths and distant artifact origins used with an explicit political limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "mx-tsekwa"
+          ],
+          "locator": "Dane-zaa stewardship, evidence chronology, oral continuity, and nonrepresentative scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "mx-north-sk"
+          ],
+          "locator": "Preservation constraints and the methodological danger of transferring evidence between regions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mx-stone-circles"
+          ],
+          "locator": "Stone circle terminology, probable habitation function, scale, and household limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "mx-grasslands"
+          ],
+          "locator": "Tipi-ring count, seasonal use, distinct peoples, and chronological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "mx-dogs"
+          ],
+          "locator": "Pre-horse pack, travois, sled, and toboggan roles with gentle animal-focused humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "mx-sandhill"
+          ],
+          "locator": "Settlement choice, shelter, fuel, bison context, and local scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "mx-kananaskis"
+          ],
+          "locator": "Repeated occupations and artifact classes used to correct the wandering stereotype.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "mx-head",
+            "mx-laidlaw"
+          ],
+          "locator": "Communal hunt system, labor coordination, butchering, and multiple uses of bison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "mx-forks-precontact"
+          ],
+          "locator": "Named fish and game resources with site-specific limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "mx-south-sk"
+          ],
+          "locator": "Late-period pottery and diverse subsistence with category and authorship limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "mx-agriculture"
+          ],
+          "locator": "Gathering breadth, plant uses, agricultural exchange, and mixed economy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mx-tschetter"
+          ],
+          "locator": "Kill-site features, processing, refuse evidence, and careful material interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "mx-south-sk"
+          ],
+          "locator": "Late-period technology package and limit on ethnic inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "mx-alberta-sites"
+          ],
+          "locator": "Site types, layered occupations, dating need, and gentle puzzle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "mx-moccasins"
+          ],
+          "locator": "Construction, materials, decoration, and chronology of footwear change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "mx-forks-precontact"
+          ],
+          "locator": "Long-distance material connections and careful network interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "mx-writing-stone"
+          ],
+          "locator": "Rock-art scale, Blackfoot significance, long chronology, and writing-sample limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "mx-stone-circles"
+          ],
+          "locator": "Habitation evidence and explicit limit on reconstructing household kinship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "mx-head"
+          ],
+          "locator": "Communal labor and social organization with limits on role assignment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "mx-sandhill",
+            "mx-paleo-plants",
+            "mx-plant-women"
+          ],
+          "locator": "Plant preservation bias, recovery methods, gender caution, and exact-date limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "mx-oldman"
+          ],
+          "locator": "Oral, archaeological, environmental, game, and trade evidence with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "mx-map1492",
+            "mx-anishinaabe-card",
+            "mx-assiniboine-card",
+            "mx-blackfoot-card"
+          ],
+          "locator": "Overlap audit and rejection of a composite ancestral identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "mx-south-sk"
+          ],
+          "locator": "Technological evidence supporting learning needs and explicit absence of school detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mx-learning"
+          ],
+          "locator": "Community teaching framework used as a cautious later comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "mx-forks-artifacts",
+            "mx-alberta-sites"
+          ],
+          "locator": "Material skills and bounded inference about learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "mx-rli-themes"
+          ],
+          "locator": "Métis-led educational framework with strict chronological placement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "mx-stone-circles"
+          ],
+          "locator": "Household archaeology and explicit childhood evidence limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "mx-health",
+            "mx-caa-ethics"
+          ],
+          "locator": "Bioarchaeological scope, diagnostic limits, and ethical framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "mx-paleo-plants"
+          ],
+          "locator": "Evidence gap, community-engaged research need, and non-retrojection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "mx-cree-plants"
+          ],
+          "locator": "Later ethnobotanical breadth used with explicit chronological and cultural limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "mx-health"
+          ],
+          "locator": "Evidence limits used to frame ordinary care without fabricated treatment claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "mx-moccasins",
+            "mx-kananaskis"
+          ],
+          "locator": "Material supports for health and gentle domestic humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "mx-forks-precontact"
+          ],
+          "locator": "River resources and bounded inference about water knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "mx-little-manitou"
+          ],
+          "locator": "Hearth chronology, lake change, placement, and limits on later healing associations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "mx-tschetter",
+            "mx-kananaskis"
+          ],
+          "locator": "Activity areas, waste evidence, and gentle latrine-identification caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "mx-stone-circles",
+            "mx-north-sk"
+          ],
+          "locator": "Explicit absence of secure toilet evidence and bounded variables.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "mx-alberta-sites"
+          ],
+          "locator": "Campsite evidence used with a clear inference boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "mx-dogs",
+            "mx-agriculture"
+          ],
+          "locator": "Technology and subsistence synthesis framed as plural local achievement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "mx-gdi-family"
+          ],
+          "locator": "Métis-led distinction between early families and later collective ethnogenesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "mx-forks-management"
+          ],
+          "locator": "Parks Canada chronology of precontact use and later Métis national significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "mx-gdi-tools",
+            "mx-gdi-greeting"
+          ],
+          "locator": "Modern Michif sample, meaning, oral resources, spelling variation, date, and scope warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "mx-map1500",
+            "mx-mnc-culture"
+          ],
+          "locator": "Atlas endpoint, Indigenous continuity, later Métis ethnogenesis, and identity safeguard.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "mx-map1500",
+            "mx-map1530",
+            "mx-mnc-about"
+          ],
+          "locator": "Decoded endpoint control showing removal of the exact feature and return to broad subsistence labels. Decoded later control showing a new set of historically named layers without validating the 1492 feature. Métis National Council explanation of eighteenth-century fur-trade families, distinct communities, nationhood, homeland, governance, and continuing life.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "michif-piyii-metis",
+        "name": "Michif Piyii (Métis)",
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/michif-piyii-metis.json",
+        "dateBasis": "map_coverage",
+        "summary": "An atlas correction separating diverse Indigenous life in 1492 from the later emergence of the Métis Nation and Michif.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "michif-piyii-metis",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -124.4730447304473,
+            46.27088232797442,
+            -89.1170911709117,
+            63.065184812930426
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

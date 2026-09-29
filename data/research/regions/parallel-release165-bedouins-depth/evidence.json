@@ -1,0 +1,940 @@
+{
+  "version": 1,
+  "region": "Africa",
+  "researcher": "Codex parallel release165-bedouins research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "bd-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, display name, culture kind, circa flag, generated status, and indexed 900 to 1000 lifetime."
+    },
+    {
+      "id": "bd-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Documents the broad modern Wikipedia summary that this researched card rejects and replaces."
+    },
+    {
+      "id": "bd-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing review state, Africa queue, one border file, and one observed interval."
+    },
+    {
+      "id": "bd-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact bedouins card association currently exists in the index."
+    },
+    {
+      "id": "bd-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id override currently exists in the registry."
+    },
+    {
+      "id": "bd-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, imported-summary status, and empty staged-draft list."
+    },
+    {
+      "id": "bd-map800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Pre-start control showing no exact target at the fixed Saharan probes."
+    },
+    {
+      "id": "bd-map900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Only exact target feature, decoded polygon, probe ownership, overlaps, and shared-arc seams."
+    },
+    {
+      "id": "bd-map1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Exact endpoint control showing the target removed from all fixed interior probes."
+    },
+    {
+      "id": "bd-map1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Later blank control showing no immediate successor across the representative probes."
+    },
+    {
+      "id": "bd-map1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Much later Tuareg-labeled repaint across the probes after a two-century atlas gap."
+    },
+    {
+      "id": "bd-map1279",
+      "title": "Human History Map 1279 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1279.json",
+      "note": "Later control showing another taxonomy change rather than a continuous exact-id sequence."
+    },
+    {
+      "id": "bd-leder",
+      "title": "Nomadic and sedentary people, a misleading dichotomy",
+      "url": "https://www.opendata.uni-halle.de/bitstream/1981185920/114642/79/4675442.pdf",
+      "note": "Historical study of Arabic b-d-w vocabulary and the unstable boundary between Bedouin and settled categories."
+    },
+    {
+      "id": "bd-unesco-gha",
+      "title": "UNESCO General History of Africa, volume III",
+      "url": "https://unesdoc.unesco.org/ark:/48223/pf0000184282",
+      "note": "Authoritative regional synthesis for medieval Africa, Saharan connections, states, exchange, and evidentiary limits."
+    },
+    {
+      "id": "bd-annual-pastoral",
+      "title": "Archaeology of pastoral nomadism",
+      "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-anthro-102215-095827",
+      "note": "Scholarly review explaining pastoral diversity, mobility, archaeological visibility, and the limits of fixed labels."
+    },
+    {
+      "id": "bd-iis-fatimid",
+      "title": "Governing diverse communities: a medieval Muslim illustration",
+      "url": "https://www.iis.ac.uk/scholarly-contributions/governing-diverse-communities-a-medieval-muslim-illustration/",
+      "note": "Institutional scholarship on Fatimid origins, the 969 conquest of Egypt, Cairo, and plural governance."
+    },
+    {
+      "id": "bd-qdl-hawqal",
+      "title": "Ibn Hawqal, Kitab Surat al-Ard manuscript",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023513074.0x000001",
+      "note": "Qatar Digital Library record for a tenth-century Arabic geographical work and its manuscript tradition."
+    },
+    {
+      "id": "bd-met-gold",
+      "title": "The trans-Saharan gold trade, seventh to fourteenth century",
+      "url": "https://www.metmuseum.org/essays/the-trans-saharan-gold-trade-7th-14th-century",
+      "note": "Museum synthesis of caravan exchange linking North Africa, the Sahara, and West African goldfields."
+    },
+    {
+      "id": "bd-block-gold",
+      "title": "Caravans of Gold, Fragments in Time",
+      "url": "https://www.blockmuseum.northwestern.edu/exhibitions/2019/caravans-of-gold%2C-fragments-in-time-art%2C-culture%2C-and-exchange-across-medieval-saharan-africa.html",
+      "note": "University museum project centering medieval Saharan networks and fragmentary material evidence."
+    },
+    {
+      "id": "bd-muqaddasi",
+      "title": "Al-Muqaddasi in Medieval Nubia",
+      "url": "https://www.medievalnubia.info/dev/index.php/Al-Muqaddasi",
+      "note": "Research reference dating al-Muqaddasi and summarizing his late tenth-century geographical observations on Nubia."
+    },
+    {
+      "id": "bd-ncmh",
+      "title": "The New Cambridge Medieval History, volume listing",
+      "url": "https://www.cambridge.org/core/books/new-cambridge-medieval-history/DF4FFF75462D9D9DD477C1A23AA7B403",
+      "note": "Scholarly chronology placing the Banu Hilal migration into North Africa after this card window."
+    },
+    {
+      "id": "bd-iup-tribal",
+      "title": "The Tribal Challenge introduction",
+      "url": "https://publish.iupress.indiana.edu/read/the-tribal-challenge-alliances-and-confrontations-in-the-israeli-negev/section/32724c91-2a67-4558-aa9a-64d8dd29732e",
+      "note": "Later Negev study of nested kin groups, alliances, land, water, and political flexibility."
+    },
+    {
+      "id": "bd-openedition",
+      "title": "Nomad lives and mobile pastoralism",
+      "url": "https://books.openedition.org/mnhn/16261",
+      "note": "Later eastern Arabian ethnography showing mixed livelihoods, household production, mobility, and internal variation."
+    },
+    {
+      "id": "bd-loc-saudi",
+      "title": "Saudi Arabia: a country study",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/sa/saudiarabiacount00metz_0/saudiarabiacount00metz_0.pdf",
+      "note": "Library of Congress study used only for later comparisons involving kin branches and mobility ranges."
+    },
+    {
+      "id": "bd-unesco-sadu",
+      "title": "Al Sadu traditional weaving skills",
+      "url": "https://www.unesco.org/archives/multimedia/document-2217",
+      "note": "UNESCO documentation of later women-centered weaving, social gatherings, songs, and girls learning by observation."
+    },
+    {
+      "id": "bd-unesco-bedu",
+      "title": "Cultural space of the Bedu in Petra and Wadi Rum",
+      "url": "https://ich.unesco.org/en/RL/cultural-space-of-the-bedu-in-petra-and-wadi-rum-00122",
+      "note": "UNESCO account of later Bedu ecological knowledge, medicine, camel husbandry, tents, tracking, and oral expression."
+    },
+    {
+      "id": "bd-fao-nutrition",
+      "title": "Bedouin nutrition and lifestyle",
+      "url": "https://www.fao.org/4/y0600m/y0600m06.htm",
+      "note": "FAO case study of later food systems, herd products, crops, household labor, and water transport."
+    },
+    {
+      "id": "bd-fao-pastoral",
+      "title": "Pastoralism in the new millennium",
+      "url": "https://www.fao.org/4/y2647e/y2647e08.htm",
+      "note": "FAO synthesis emphasizing pastoral diversity, social institutions, property, markets, and environmental adaptation."
+    },
+    {
+      "id": "bd-fao-energy",
+      "title": "Energy and water in pastoral systems",
+      "url": "https://www.fao.org/4/x5525e/x5525e09.htm",
+      "note": "FAO discussion of camels as water carriers and later household roles in tending small stock."
+    },
+    {
+      "id": "bd-fao-women",
+      "title": "Women in pastoral production",
+      "url": "https://www.fao.org/4/x0176e/x0176e05.htm",
+      "note": "FAO evidence on later women milking, watering, processing fiber, maintaining tents, and caring for animals."
+    },
+    {
+      "id": "bd-openstax",
+      "title": "Pastoralism",
+      "url": "https://openstax.org/books/introduction-anthropology/pages/7-4-pastoralism",
+      "note": "Educational synthesis of flexible herd strategies, camps, extended families, exchange, and mixed economies."
+    },
+    {
+      "id": "bd-bedul-camp",
+      "title": "Refuse disposal at a Bedul camp",
+      "url": "https://www.sciencedirect.com/science/article/pii/0305440388900076",
+      "note": "Ethnoarchaeological study of refuse movement, hearth contents, occupation duration, and camp interpretation."
+    },
+    {
+      "id": "bd-bournemouth",
+      "title": "Identifying activity areas through ethnographic analysis",
+      "url": "https://www.bournemouth.ac.uk/research/projects/identifying-activity-areas-neolithic-sites-through-ethnographic-analysis-phytoliths-geochemical-residues-inea",
+      "note": "University research using Bedouin camps to study hearths, floors, middens, residues, and activity areas."
+    },
+    {
+      "id": "bd-isac-camp",
+      "title": "Pitching Camp",
+      "url": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ois5.pdf",
+      "note": "Archaeological institute volume on mobile camp material signatures and careful terminology."
+    },
+    {
+      "id": "bd-ounianga",
+      "title": "Lakes of Ounianga",
+      "url": "https://whc.unesco.org/en/list/1400",
+      "note": "UNESCO description of hyperarid groundwater-fed lakes inside the atlas polygon and their exceptional ecology."
+    },
+    {
+      "id": "bd-ennedi",
+      "title": "Ennedi cultural and natural landscape report",
+      "url": "https://whc.unesco.org/document/152760",
+      "note": "UNESCO documentation of long pastoral histories, rock art, refuges, and modern landscape use in eastern Chad."
+    },
+    {
+      "id": "bd-wadi-howar",
+      "title": "Settlement history of Wadi Howar",
+      "url": "https://hbi.uni-koeln.de/en/books/africa-praehistorica/details/djabarona-84-13-untersuchungen-zur-besiedlungsgeschichte-des-wadi-howar",
+      "note": "University archaeology publication on the ancient river corridor and its much earlier settlement sequence."
+    },
+    {
+      "id": "bd-si-caravans",
+      "title": "Understanding Medieval Trans-Saharan Trade",
+      "url": "https://africa.si.edu/wp-content/uploads/Caravans_TeachersGuide.pdf",
+      "note": "Smithsonian teaching guide on camel caravans, Saharan trade centers, objects, oral sources, and written evidence."
+    },
+    {
+      "id": "bd-nlm-razi",
+      "title": "Al-Razi and the Book for Mansur",
+      "url": "https://www.nlm.nih.gov/hmd/arabic/E2_E4.html",
+      "note": "National Library of Medicine catalog and historical note dating a major medical work to about 903."
+    },
+    {
+      "id": "bd-cambridge-medicine",
+      "title": "Medicine in medieval Islam",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-science/medicine-in-medieval-islam/B5CED270387C3D73CAF4439CD8716E31",
+      "note": "Scholarly synthesis of learned medicine, local care, religious practice, and medical pluralism."
+    },
+    {
+      "id": "bd-bm-writing",
+      "title": "Arabic funerary tombstone dated 967",
+      "url": "https://www.britishmuseum.org/collection/object/W_1975-0415-1",
+      "note": "British Museum catalog for an Egyptian Kufic tombstone with Arabic text, translation, date, and genre."
+    },
+    {
+      "id": "bd-alqantara",
+      "title": "Ibn Jinni and Arabic linguistic variation",
+      "url": "https://al-qantara.revistas.csic.es/index.php/al-qantara/article/view/566",
+      "note": "Scholarly article on a tenth-century grammarian, nomadic and sedentary speech, and Arabic variation."
+    },
+    {
+      "id": "bd-brill-dialects",
+      "title": "A Grammar of the Bedouin Dialects",
+      "url": "https://brill.com/display/book/9789004201460/9789004201460_webready_content_text.pdf",
+      "note": "Modern linguistic study showing localized Bedouin Arabic varieties rather than one universal dialect."
+    },
+    {
+      "id": "bd-isac-papyrus",
+      "title": "Tenth-century Arabic papyrus",
+      "url": "https://isac-idb.uchicago.edu/id/064935ec-76d8-4ca8-a9ea-ff7f0ea298ce",
+      "note": "Museum database record for documentary Arabic writing from the wider tenth-century Egyptian world."
+    },
+    {
+      "id": "bd-unesco-medicine",
+      "title": "Examples of regional living heritage",
+      "url": "https://ich.unesco.org/en/examples-of-regional-living-heritage-00379",
+      "note": "UNESCO examples of later regional knowledge transmission, community practice, and healing traditions."
+    }
+  ],
+  "entities": [
+    {
+      "id": "bedouins",
+      "card": "data/cards/bedouins.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "bd-index",
+            "bd-summary",
+            "bd-coverage",
+            "bd-map800",
+            "bd-map900",
+            "bd-map1000",
+            "bd-map1100",
+            "bd-map1200",
+            "bd-leder",
+            "bd-unesco-gha",
+            "bd-annual-pastoral"
+          ],
+          "locator": "Exact id, display name, culture kind, circa flag, generated status, and indexed 900 to 1000 lifetime. Documents the broad modern Wikipedia summary that this researched card rejects and replaces. Missing review state, Africa queue, one border file, and one observed interval. Pre-start control showing no exact target at the fixed Saharan probes. Only exact target feature, decoded polygon, probe ownership, overlaps, and shared-arc seams. Exact endpoint control showing the target removed from all fixed interior probes. Later blank control showing no immediate successor across the representative probes. Much later Tuareg-labeled repaint across the probes after a two-century atlas gap. Historical study of Arabic b-d-w vocabulary and the unstable boundary between Bedouin and settled categories. Authoritative regional synthesis for medieval Africa, Saharan connections, states, exchange, and evidentiary limits. Scholarly review explaining pastoral diversity, mobility, archaeological visibility, and the limits of fixed labels.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "bd-map800",
+            "bd-map900"
+          ],
+          "locator": "Pre-start control showing no exact target at the fixed Saharan probes. Only exact target feature, decoded polygon, probe ownership, overlaps, and shared-arc seams.",
+          "dateScope": {
+            "from": 900,
+            "to": 909
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "bd-iis-fatimid"
+          ],
+          "locator": "Institutional scholarship on Fatimid origins, the 969 conquest of Egypt, Cairo, and plural governance.",
+          "dateScope": {
+            "from": 909,
+            "to": 920
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "bd-met-gold",
+            "bd-si-caravans"
+          ],
+          "locator": "Museum synthesis of caravan exchange linking North Africa, the Sahara, and West African goldfields. Smithsonian teaching guide on camel caravans, Saharan trade centers, objects, oral sources, and written evidence.",
+          "dateScope": {
+            "from": 920,
+            "to": 935
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "bd-qdl-hawqal"
+          ],
+          "locator": "Qatar Digital Library record for a tenth-century Arabic geographical work and its manuscript tradition.",
+          "dateScope": {
+            "from": 935,
+            "to": 950
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "bd-block-gold"
+          ],
+          "locator": "University museum project centering medieval Saharan networks and fragmentary material evidence.",
+          "dateScope": {
+            "from": 950,
+            "to": 969
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "bd-iis-fatimid"
+          ],
+          "locator": "Institutional scholarship on Fatimid origins, the 969 conquest of Egypt, Cairo, and plural governance.",
+          "dateScope": {
+            "from": 969,
+            "to": 980
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "bd-qdl-hawqal",
+            "bd-muqaddasi"
+          ],
+          "locator": "Qatar Digital Library record for a tenth-century Arabic geographical work and its manuscript tradition. Research reference dating al-Muqaddasi and summarizing his late tenth-century geographical observations on Nubia.",
+          "dateScope": {
+            "from": 980,
+            "to": 990
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "bd-map1000",
+            "bd-map1100",
+            "bd-ncmh"
+          ],
+          "locator": "Exact endpoint control showing the target removed from all fixed interior probes. Later blank control showing no immediate successor across the representative probes. Scholarly chronology placing the Banu Hilal migration into North Africa after this card window.",
+          "dateScope": {
+            "from": 990,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "bd-index",
+            "bd-summary",
+            "bd-coverage",
+            "bd-card-index",
+            "bd-overrides",
+            "bd-missing"
+          ],
+          "locator": "Exact indexed identity, missing status, imported-summary problem, and replacement rationale.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "bd-map900"
+          ],
+          "locator": "Decoded geometry, bounding box, and representative interior probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "bd-map900"
+          ],
+          "locator": "Outside controls demonstrating mismatch between exact geometry and imported description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "bd-map900"
+          ],
+          "locator": "Direct shared-arc neighbors and the limits of topology as historical evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "bd-ounianga",
+            "bd-ennedi",
+            "bd-wadi-howar"
+          ],
+          "locator": "Landscape diversity, deeper chronology, and explicit identity limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "bd-alqantara"
+          ],
+          "locator": "Tenth-century discourse and the porous nomad-sedentary distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "bd-openedition"
+          ],
+          "locator": "Later comparative evidence for internal livelihood variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "bd-loc-saudi"
+          ],
+          "locator": "Later comparative evidence for varied herd and settlement strategies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "bd-fao-pastoral",
+            "bd-openstax"
+          ],
+          "locator": "Pastoral diversity and limits on inferring household behavior from a label.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "bd-index",
+            "bd-map900",
+            "bd-map1200",
+            "bd-map1279"
+          ],
+          "locator": "Exact-only association decision across related atlas labels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "bd-qdl-hawqal"
+          ],
+          "locator": "Near-contemporary geographical genre and its scale limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "bd-muqaddasi"
+          ],
+          "locator": "Late tenth-century geographical testimony and observer limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "bd-isac-camp",
+            "bd-bournemouth"
+          ],
+          "locator": "Archaeological signatures of mobile camps and preservation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "bd-bedul-camp"
+          ],
+          "locator": "Proper use and limits of later ethnoarchaeological analogy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "bd-ennedi",
+            "bd-wadi-howar"
+          ],
+          "locator": "Deep regional sequences and warning against identity by material resemblance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "bd-unesco-bedu"
+          ],
+          "locator": "Later localized tent, animal, tracking, and environmental knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "bd-openedition"
+          ],
+          "locator": "Later comparative evidence for multiple places within one household strategy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "bd-isac-camp"
+          ],
+          "locator": "Camp spatial organization and the exact-period evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "bd-openstax",
+            "bd-fao-pastoral"
+          ],
+          "locator": "Flexible mobility, split households, and mixed economic strategies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "bd-fao-women",
+            "bd-unesco-sadu"
+          ],
+          "locator": "Later tent labor and gendered expertise with explicit chronological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "bd-fao-nutrition"
+          ],
+          "locator": "Later comparative food system and variability.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "bd-fao-energy"
+          ],
+          "locator": "Later animal roles, water transport, products, and exact-period limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "bd-fao-women",
+            "bd-fao-energy"
+          ],
+          "locator": "Later household labor evidence and internal variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "bd-met-gold",
+            "bd-block-gold"
+          ],
+          "locator": "Medieval exchange networks, labor, and limits on universal participation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "bd-si-caravans"
+          ],
+          "locator": "Camel transport, network exchange, and infrastructure constraints.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "bd-iup-tribal"
+          ],
+          "locator": "Later nested kin and political groups with scope limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "bd-iup-tribal"
+          ],
+          "locator": "Later alliance flexibility and rejection of a single ruler.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "bd-iup-tribal"
+          ],
+          "locator": "Later land and water relations, reciprocity, and legal variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "bd-loc-saudi"
+          ],
+          "locator": "Later extended-family organization and exact-period uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "bd-fao-pastoral"
+          ],
+          "locator": "Pastoral property complexity and gendered knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "bd-unesco-sadu"
+          ],
+          "locator": "Later girls apprenticeship, work gatherings, song, and explicit scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "bd-unesco-bedu"
+          ],
+          "locator": "Later intergenerational environmental and oral learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "bd-openstax"
+          ],
+          "locator": "Pastoral learning context and refusal of uniform childhood roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "bd-alqantara",
+            "bd-brill-dialects"
+          ],
+          "locator": "Arabic variation in tenth-century scholarship and modern dialect diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "bd-isac-papyrus",
+            "bd-alqantara"
+          ],
+          "locator": "Archive imbalance between nearby written Arabic and undocumented camp speech.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "bd-nlm-razi"
+          ],
+          "locator": "Exact-period learned medicine and access limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "bd-cambridge-medicine"
+          ],
+          "locator": "Medical pluralism and uncertainty about local access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "bd-unesco-bedu",
+            "bd-unesco-medicine"
+          ],
+          "locator": "Later community medical knowledge and protection against back-projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "bd-fao-nutrition",
+            "bd-fao-women"
+          ],
+          "locator": "Later health-related household practices and exact evidence gaps.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "bd-cambridge-medicine"
+          ],
+          "locator": "Explicit exact-period personal-care evidence gap with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "bd-ounianga"
+          ],
+          "locator": "Groundwater-fed lake ecology and warning against uniform water access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "bd-fao-energy",
+            "bd-fao-nutrition"
+          ],
+          "locator": "Later water transport labor and exact-period limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "bd-bedul-camp"
+          ],
+          "locator": "Later camp refuse disposal, cleaning, and interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "bd-bournemouth"
+          ],
+          "locator": "Camp residue methods and limits for personal sanitation reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "bd-bedul-camp",
+            "bd-isac-camp"
+          ],
+          "locator": "Explicit toilet and sanitation evidence limit for the exact target.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "bd-met-gold",
+            "bd-si-caravans"
+          ],
+          "locator": "Mobility, navigation, and caravan organization as achievements.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "bd-bm-writing"
+          ],
+          "locator": "Exact-date Arabic sample, transliteration, translation, genre, and script.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "bd-bm-writing"
+          ],
+          "locator": "Catalog identity and explicit nonrepresentative scope of the writing sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "bd-isac-papyrus"
+          ],
+          "locator": "Nearby documentary comparison and explicit exact-sample absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "bd-map1000",
+            "bd-map1100",
+            "bd-map1200",
+            "bd-map1279"
+          ],
+          "locator": "Endpoint seam, later repaint, non-succession, and human continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "bd-map900",
+            "bd-map1000",
+            "bd-map1100",
+            "bd-map1200",
+            "bd-map1279"
+          ],
+          "locator": "Only exact target feature, decoded polygon, probe ownership, overlaps, and shared-arc seams. Exact endpoint control showing the target removed from all fixed interior probes. Later blank control showing no immediate successor across the representative probes. Much later Tuareg-labeled repaint across the probes after a two-century atlas gap. Later control showing another taxonomy change rather than a continuous exact-id sequence.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "bedouins",
+        "name": "Bedouins",
+        "kind": "culture",
+        "region": "Africa",
+        "from": 900,
+        "to": 1000,
+        "circa": true,
+        "card": "cards/bedouins.json",
+        "dateBasis": "map_coverage",
+        "summary": "A cautious atlas umbrella for diverse Saharan mobile communities.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "bedouins",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            15.532355323553247,
+            10.168938379000025,
+            30.789307893078927,
+            29.32589010224956
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
