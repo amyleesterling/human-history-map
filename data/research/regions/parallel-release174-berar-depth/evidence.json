@@ -1,0 +1,905 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release174-berar research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "be-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, label, approximate atlas lifetime, and historical basemap provenance."
+    },
+    {
+      "id": "be-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Observed interval, inferred state kind, border count, and missing research review."
+    },
+    {
+      "id": "be-missing",
+      "title": "Human History Map missing card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Missing exact record, imported summary status, and absence of staged drafts."
+    },
+    {
+      "id": "be-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card is associated with the exact imported id."
+    },
+    {
+      "id": "be-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed override yet corrects the exact imported id."
+    },
+    {
+      "id": "be-map-1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-start control for exact-id absence and representative point ownership."
+    },
+    {
+      "id": "be-map-1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact-id feature, decoded polygon, point membership, neighboring seams, and start."
+    },
+    {
+      "id": "be-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Immediate endpoint control where the exact id disappears despite historical continuity."
+    },
+    {
+      "id": "be-map-1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Later control documenting generic ownership after exact-id removal."
+    },
+    {
+      "id": "be-map-1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Post-conquest control confirming continued exact-id absence and generic repainting."
+    },
+    {
+      "id": "be-gazetteer-imad",
+      "title": "The Imadshahi of Berar, Maharashtra State Gazetteers",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_II/chapter_6.pdf",
+      "note": "Government historical synthesis of rulers, diplomacy, sieges, Tufal Khan, and annexation."
+    },
+    {
+      "id": "be-gazetteer-dynastic",
+      "title": "Dynastic lists and genealogy of the Deccan, Maharashtra State Gazetteers",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_II/dynastic.pdf",
+      "note": "Government chronology listing four Imad Shahi rulers and the 1574 ending."
+    },
+    {
+      "id": "be-iranica-deccan",
+      "title": "Deccan: Political and literary history, Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/deccan/deccan-i-political-and-literary-history/",
+      "note": "Scholarly regional history identifying Berar among distinct Bahmani successor states."
+    },
+    {
+      "id": "be-cambridge-courts-excerpt",
+      "title": "The Courts of the Deccan Sultanates, historical background excerpt",
+      "url": "https://assets.cambridge.org/97811084/81939/excerpt/9781108481939_excerpt.pdf",
+      "note": "Cambridge chronology and contextual identification of the Imad Shahi state from 1490 to 1574."
+    },
+    {
+      "id": "be-cambridge-art-sample",
+      "title": "Architecture and Art of the Deccan Sultanates, sample chapter",
+      "url": "https://assets.cambridge.org/97805215/63215/sample/9780521563215wsc00.pdf",
+      "note": "Cambridge political and architectural account of Fathullah, Narnala, Gawilgarh, and later rulers."
+    },
+    {
+      "id": "be-cambridge-art-book",
+      "title": "Architecture and Art of the Deccan Sultanates",
+      "url": "https://www.cambridge.org/core/books/architecture-and-art-of-the-deccan-sultanates/5BFA505D4D88494241D664ACF38CDB41",
+      "note": "Authoritative survey of Deccan forts, palaces, mosques, tombs, workshops, and artistic attribution."
+    },
+    {
+      "id": "be-cambridge-local-states",
+      "title": "The Sultanates and the Deccan, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/local-states-in-an-imperial-world/sultanates-and-the-deccan/14F8F61C999C6198D2A498F1A2CE2169",
+      "note": "Scholarly analysis of Deccani identity, locality, migration, and territorial political language."
+    },
+    {
+      "id": "be-akola-history",
+      "title": "Mediaeval history of Akola, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AKOLA/his_mediaeval%20period.html",
+      "note": "Government district history for Fathullah, dynastic conflict, Narnala, and annexation."
+    },
+    {
+      "id": "be-buldhana-history",
+      "title": "Mediaeval history of Buldhana, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/BULDHANA/his_mediaeval%20period.html",
+      "note": "Government district narrative of Darya, Burhan, alliances, ministers, and regional warfare."
+    },
+    {
+      "id": "be-akola-narnala",
+      "title": "Narnala Fort, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AKOLA/places_Narnala.html",
+      "note": "Detailed government inventory of gates, inscriptions, tanks, drains, stables, arsenal, mint, and mosques."
+    },
+    {
+      "id": "be-amravati-archaeology",
+      "title": "Archaeology of Amravati District, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Amravati%20District/archaeology.html",
+      "note": "Government archaeological description of Gawilgarh and repairs associated with Fathullah."
+    },
+    {
+      "id": "be-ellichpur-gazetteer",
+      "title": "Ellichpur town and monuments, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Amravati%20District/appendix_e.html",
+      "note": "Government description of Ellichpur, its trade route, fort, Hauz Katora, and attribution limits."
+    },
+    {
+      "id": "be-asi-monuments",
+      "title": "Centrally protected monuments and sites, Archaeological Survey of India",
+      "url": "https://asi.nic.in/admin/whatsnew/download/585",
+      "note": "Official protected monument inventory listing Narnala structures and Persian inscription sites."
+    },
+    {
+      "id": "be-met-catalog",
+      "title": "Sultans of Deccan India 1500 to 1700, Metropolitan Museum of Art catalogue",
+      "url": "https://cdn.sanity.io/files/cctd4ker/production/ca1f22ebd097d50192976311e6884847d86f61a7.pdf",
+      "note": "Museum-hosted scholarly catalogue on Narnala, Ellichpur, Hauz Katora, architecture, and scarce Berar survivals."
+    },
+    {
+      "id": "be-gipe-akola",
+      "title": "Akola: History and Archaeology, Gokhale Institute repository",
+      "url": "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/19595/GIPE-017867.pdf",
+      "note": "Digitized district archaeology with the Mahakali Gate inscription, translation, makers, and monuments."
+    },
+    {
+      "id": "be-quran-words",
+      "title": "Quranic Arabic Corpus, verse 3:97 word by word",
+      "url": "https://corpus.quran.com/wordbyword.jsp?chapter=3&verse=97",
+      "note": "University of Leeds corpus giving Arabic tokens and transliteration for the quoted gate phrase."
+    },
+    {
+      "id": "be-quran-translation",
+      "title": "Quranic Arabic Corpus, verse 3:97 translations",
+      "url": "https://corpus.quran.com/translation.jsp?chapter=3&verse=97",
+      "note": "University of Leeds corpus giving reviewed English translations of the quoted verse."
+    },
+    {
+      "id": "be-courtly",
+      "title": "Courtly Disposition, The Courts of the Deccan Sultanates, chapter PDF",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/77874AC47F9649BBEF670F4DFECDD7FB/9781108481939c1_31-73.pdf/courtly-disposition.pdf",
+      "note": "Publisher-hosted scholarly chapter on education, diet, medicine, physicians, hospitals, perfume, and bodily knowledge."
+    },
+    {
+      "id": "be-networks",
+      "title": "Networks, Patrons and Friends, The Courts of the Deccan Sultanates",
+      "url": "https://www.cambridge.org/core/books/abs/courts-of-the-deccan-sultanates/networks-patrons-and-friends/6A26E57BA0D2AD38602344A41AA825D1",
+      "note": "Scholarly chapter on family, friendship, migration, patronage, assemblies, and court employment."
+    },
+    {
+      "id": "be-merchants",
+      "title": "Courts, Merchants and Commodities, The Courts of the Deccan Sultanates",
+      "url": "https://www.cambridge.org/core/books/abs/courts-of-the-deccan-sultanates/courts-merchants-and-commodities/3253C309C8CCD79493B9591FD6299090",
+      "note": "Scholarly chapter on Deccan trade, revenue, merchants, commodities, and courtly exchange."
+    },
+    {
+      "id": "be-courts-book",
+      "title": "The Courts of the Deccan Sultanates",
+      "url": "https://www.cambridge.org/core/books/courts-of-the-deccan-sultanates/A03674E679DF37F9147247A4C36190A3",
+      "note": "Authoritative synthesis of diverse courtly society, mobility, skills, language, and ethical practice."
+    },
+    {
+      "id": "be-social-intro",
+      "title": "Introduction to A Social History of the Deccan",
+      "url": "https://www.cambridge.org/core/books/abs/social-history-of-the-deccan-13001761/introduction/13BDC4C72737AD63E94037FB2C425181",
+      "note": "Scholarly regional framework emphasizing mobile centers and uneven survival of social evidence."
+    },
+    {
+      "id": "be-education-history",
+      "title": "Education in Akola: historical background, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AKOLA/edu_historical.html",
+      "note": "Government review explicitly noting absent evidence for local medieval education systems."
+    },
+    {
+      "id": "be-land-revenue",
+      "title": "Land revenue administration in Amravati, Maharashtra State Gazetteers",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Amravati%20District/land_rev_admin.html",
+      "note": "Historical reconstruction of village offices, accounts, artisans, services, and evidence limits."
+    },
+    {
+      "id": "be-geography",
+      "title": "General geography of Akola, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AKOLA/gen_geography.html",
+      "note": "Official account of plains, settlement at water sites, market centers, and regional geography."
+    },
+    {
+      "id": "be-cereals",
+      "title": "Cereals and cultivation in Akola, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AKOLA/agri_cereals.html",
+      "note": "Later agricultural evidence for jowar, wheat, soils, fodder, and crop practices."
+    },
+    {
+      "id": "be-irrigation",
+      "title": "Agriculture and irrigation in Akola, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AKOLA/agri_irrigation.html",
+      "note": "Later official evidence for wells, limited irrigation, tanks, and water constraints."
+    },
+    {
+      "id": "be-oxford-water",
+      "title": "Water in Hyderabad and the Deccan, Oxford Academic",
+      "url": "https://academic.oup.com/book/63254",
+      "note": "Scholarly history treating Deccan water as environmental, technical, social, and political infrastructure."
+    },
+    {
+      "id": "be-oxford-built",
+      "title": "Built Magnificence, Water in Hyderabad and the Deccan",
+      "url": "https://academic.oup.com/book/63254/chapter-abstract/571546425",
+      "note": "Scholarly chapter on Deccan reservoirs, canals, wells, baths, and elite water patronage."
+    },
+    {
+      "id": "be-manuu-coins",
+      "title": "Coinage of Deccan Sultanates: Coin Legends and Epigraphic Evidence",
+      "url": "https://dspace.library.manuu.edu.in/bitstream/handle/1/6075/DS25_ENGLISH.pdf?isAllowed=y&sequence=3",
+      "note": "University research on Deccan coin typology, legends, scripts, and limited Imad Shahi material."
+    },
+    {
+      "id": "be-bharatshri",
+      "title": "Arabic and Persian inscriptions, BharatSHRI",
+      "url": "https://bharatshri.asi.gov.in/arabic",
+      "note": "Archaeological Survey of India epigraphy framework including Imad Shahi records and classification."
+    },
+    {
+      "id": "be-amravati-dowry",
+      "title": "Badnera and the Imad Shahi royal marriage, Maharashtra State Gazetteers",
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Amravati%20District/appendix_b.html",
+      "note": "Government gazetteer record of Daulat Shah Begam, marriage, and towns assigned as dowry."
+    }
+  ],
+  "entities": [
+    {
+      "id": "berar",
+      "card": "data/cards/berar.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "be-index",
+            "be-map-1492",
+            "be-cambridge-courts-excerpt"
+          ],
+          "locator": "Exact imported id, label, approximate atlas lifetime, and historical basemap provenance. Only exact-id feature, decoded polygon, point membership, neighboring seams, and start. Cambridge chronology and contextual identification of the Imad Shahi state from 1490 to 1574.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "be-gazetteer-dynastic"
+          ],
+          "locator": "Government chronology listing four Imad Shahi rulers and the 1574 ending.",
+          "dateScope": {
+            "from": 1490,
+            "to": 1510
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "be-cambridge-art-sample"
+          ],
+          "locator": "Cambridge political and architectural account of Fathullah, Narnala, Gawilgarh, and later rulers.",
+          "dateScope": {
+            "from": 1510,
+            "to": 1529
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "be-amravati-dowry"
+          ],
+          "locator": "Government gazetteer record of Daulat Shah Begam, marriage, and towns assigned as dowry.",
+          "dateScope": {
+            "from": 1529,
+            "to": 1543
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "be-cambridge-art-sample"
+          ],
+          "locator": "Cambridge political and architectural account of Fathullah, Narnala, Gawilgarh, and later rulers.",
+          "dateScope": {
+            "from": 1543,
+            "to": 1561
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "be-buldhana-history"
+          ],
+          "locator": "Government district narrative of Darya, Burhan, alliances, ministers, and regional warfare.",
+          "dateScope": {
+            "from": 1561,
+            "to": 1563
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "be-gazetteer-imad"
+          ],
+          "locator": "Government historical synthesis of rulers, diplomacy, sieges, Tufal Khan, and annexation.",
+          "dateScope": {
+            "from": 1563,
+            "to": 1565
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "be-buldhana-history"
+          ],
+          "locator": "Government district narrative of Darya, Burhan, alliances, ministers, and regional warfare.",
+          "dateScope": {
+            "from": 1565,
+            "to": 1572
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "be-cambridge-local-states"
+          ],
+          "locator": "Scholarly analysis of Deccani identity, locality, migration, and territorial political language.",
+          "dateScope": {
+            "from": 1572,
+            "to": 1574
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "be-index",
+            "be-coverage",
+            "be-missing",
+            "be-card-index",
+            "be-overrides"
+          ],
+          "locator": "Repository exact identity, one observed interval, missing card, and absent reviewed association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "be-map-1400",
+            "be-map-1492",
+            "be-map-1500",
+            "be-map-1530",
+            "be-map-1600"
+          ],
+          "locator": "Full snapshot inventory, exact feature count, source interval, and absence controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "be-map-1492"
+          ],
+          "locator": "Decoded geometry structure, bounding box, capital and fortress membership, and excluded Berar probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "be-map-1492"
+          ],
+          "locator": "False-positive probes, shared arc neighbors, geometry validity, and historical interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "be-map-1500",
+            "be-map-1530",
+            "be-courts-book"
+          ],
+          "locator": "Start lag, premature endpoint, representative ownership changes, and corrected lifetime.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "be-cambridge-art-book"
+          ],
+          "locator": "Founder, former office, independence process, and limits of a single foundation moment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "be-gazetteer-imad"
+          ],
+          "locator": "Alauddin, displaced nobles, Ahmadnagar conflict, external support, and regional political connections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "be-amravati-dowry"
+          ],
+          "locator": "Royal marriage, named woman, dowry towns, interstate connection, and later conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "be-buldhana-history"
+          ],
+          "locator": "Burhan succession, confinement, ministerial control, and distinction between legitimacy and power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "be-gazetteer-imad"
+          ],
+          "locator": "Final siege, fort sequence, captives, treasure, conquest, and annexation status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "be-ellichpur-gazetteer"
+          ],
+          "locator": "Capital, northern trade route, court effect, and limit on reconstructing early town layout.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "be-amravati-archaeology"
+          ],
+          "locator": "Gawilgarh setting, Fathullah repairs, strategic role, and layered monument attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "be-asi-monuments"
+          ],
+          "locator": "Official inventories for fort spaces, labor functions, and chronology caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "be-met-catalog"
+          ],
+          "locator": "Hauz Katora form, date, attribution caution, technical work, and elite evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "be-social-intro"
+          ],
+          "locator": "Explicit household archaeology gap, multiple settlement settings, and restrained gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "be-cereals"
+          ],
+          "locator": "Agrarian setting, later crop evidence, subsistence, and ban on direct chronological projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "be-geography"
+          ],
+          "locator": "Settlement geography, plausible exchange, evidence limits, and gentle warning against invented numbers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "be-merchants",
+            "be-ellichpur-gazetteer"
+          ],
+          "locator": "Regional trade-state relationship, Ellichpur route, opportunities, and transport risks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "be-met-catalog"
+          ],
+          "locator": "Fort workplaces, occupational inferences, layered dating, and labor-centered interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "be-manuu-coins"
+          ],
+          "locator": "Limited coin corpus, evidentiary uses, and explicit household economy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "be-social-intro"
+          ],
+          "locator": "Evidence-bounded household structure, daily tasks, and chronicle selection effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "be-land-revenue"
+          ],
+          "locator": "Village offices, service labor, remuneration, continuity hypothesis, and source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "be-amravati-dowry"
+          ],
+          "locator": "Named royal woman, marriage property, diplomatic function, and limits on intimate biography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "be-networks"
+          ],
+          "locator": "Regional networks, refuge, mobility, dependent travelers, and gendered documentary imbalance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "be-gipe-akola"
+          ],
+          "locator": "Inscription religious content, plural population inference, and limits of ruler-to-subject attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "be-education-history"
+          ],
+          "locator": "Explicit documentary absence for medieval schools, enrollment, teachers, and gender access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "be-courts-book"
+          ],
+          "locator": "Evidence-bounded informal learning, apprenticeship, embodied skill, and unknown age or gender patterns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "be-courtly"
+          ],
+          "locator": "Courtly curriculum, paternal advice genre, specialist literacy, and unequal documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "be-bharatshri",
+            "be-gipe-akola"
+          ],
+          "locator": "Epigraphic languages, specialist production, multilingual setting, and mass literacy limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "be-asi-monuments"
+          ],
+          "locator": "Practical garrison education, functional spaces, teacher evidence gap, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "be-courtly"
+          ],
+          "locator": "Regional medical traditions, knowledge exchange, and explicit Berar practitioner gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "be-courtly"
+          ],
+          "locator": "Diet and climate in learned medicine, household alternatives, and elite source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "be-gazetteer-imad"
+          ],
+          "locator": "Conflict health risks, final siege, care labor, and chronicle selection effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "be-social-intro"
+          ],
+          "locator": "Evidence-bounded household care, resource constraints, and distinction between plausibility and case evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "be-courtly",
+            "be-education-history"
+          ],
+          "locator": "Explicit absence of Berar medical institutions and limit on comparison with neighboring courts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "be-akola-narnala"
+          ],
+          "locator": "Fort tank count, year-round storage, multiple uses, access, quality, and dating caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "be-akola-narnala"
+          ],
+          "locator": "Surface collection, linked overflow, maintenance needs, and gentle engineering humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "be-akola-narnala"
+          ],
+          "locator": "Covered cisterns, competing functional interpretations, garrison setting, and evidentiary limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "be-oxford-built",
+            "be-irrigation"
+          ],
+          "locator": "Elite water landscape, political meaning, unequal household access, and regional scarcity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "be-oxford-water",
+            "be-akola-narnala"
+          ],
+          "locator": "Explicit evidence-bounded absence for toilets, waste, street cleaning, and sewers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "be-cambridge-art-sample",
+            "be-amravati-archaeology"
+          ],
+          "locator": "Fortification program, combined systems, collective labor, inheritance, and later alteration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "be-gipe-akola"
+          ],
+          "locator": "Mahakali Gate date, patron, nominal Bahmani sovereign, and transitional political meaning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "be-gipe-akola",
+            "be-quran-words",
+            "be-quran-translation"
+          ],
+          "locator": "Original, Arabic script, transliteration, translation, verse, object, date, patron, and writer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "be-met-catalog"
+          ],
+          "locator": "Architectural features, artistic accomplishment, missing dedication, and bounded dynastic attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "be-met-catalog",
+            "be-cambridge-art-book"
+          ],
+          "locator": "Material survival bias, comparison with neighbors, perishable media, and gentle preservation observation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "be-amravati-archaeology"
+          ],
+          "locator": "1574 fort captures, named prisoners, institutional ending, and possible administrative reuse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "be-akola-history"
+          ],
+          "locator": "Captivity, family consequences, uncertain cause of death, and human meaning of annexation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "be-cambridge-local-states"
+          ],
+          "locator": "Social continuity, changed authority, varied adaptation, and clear separation from sovereignty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "be-iranica-deccan"
+          ],
+          "locator": "Strict separation from predecessor, conqueror, and later regional governments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "be-map-1492",
+            "be-map-1500",
+            "be-map-1530",
+            "be-map-1600"
+          ],
+          "locator": "Premature endpoint, generic repaint, contemporaneous point errors, and refusal to endorse geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "be-akola-history",
+            "be-map-1500"
+          ],
+          "locator": "Government district history for Fathullah, dynastic conflict, Narnala, and annexation. Immediate endpoint control where the exact id disappears despite historical continuity.",
+          "dateScope": {
+            "year": 1574
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "berar",
+        "name": "Berar Sultanate (Imad Shahi dynasty)",
+        "aliases": [
+          "Imad Shahi dynasty",
+          "Berar Sultanate"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 1490,
+        "to": 1574,
+        "circa": true,
+        "card": "cards/berar.json",
+        "dateBasis": "historical",
+        "summary": "Northern Deccan sultanate ruled by the Imad Shahi dynasty from about 1490 until Ahmadnagar annexed it in 1574.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "berar",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            76.0921609216092,
+            20.437960346258265,
+            83.61983619836201,
+            24.296447194752858
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

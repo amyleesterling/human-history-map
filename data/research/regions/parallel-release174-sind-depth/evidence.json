@@ -1,0 +1,914 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release174-sind research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact generated id, imported name, approximate 1492 to 1500 interval, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Generic modern Sindh summary that does not identify the fifteenth-century state represented by this exact record."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed border interval and pending identity, chronology, border, and content review."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no runtime card is associated with exact id sind before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no reviewed override exists for exact id sind before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, imported-summary status, and empty staged-drafts list."
+    },
+    {
+      "id": "atlas-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-appearance control for exact id sind and representative points."
+    },
+    {
+      "id": "atlas-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact target feature, decoded geometry, shared arcs, ownership, and representative-point tests."
+    },
+    {
+      "id": "atlas-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Immediate disappearance control even though the historical Samma polity continued."
+    },
+    {
+      "id": "atlas-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Post-Samma control for the region after the exact target disappears."
+    },
+    {
+      "id": "atlas-map1783",
+      "title": "Human History Map 1783 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Later separate exact id sind-1783, demonstrating that repeated regional names are distinct records."
+    },
+    {
+      "id": "atlas-map1800",
+      "title": "Human History Map 1800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Later separate exact id sindh-1800 and another distinct map interval."
+    },
+    {
+      "id": "lakho-samma",
+      "title": "Ghulam Muhammad Lakho, The Samma Kingdom of Sindh: Historical Studies",
+      "url": "https://library-sindhi-sp-2020.s3.us-east-2.amazonaws.com/files/The_Samma_Kingdom_of_Sindh-Ghulam_M_Lakho-2006-Complete.pdf",
+      "note": "Institute of Sindhology collection on origins, chronology, rulers, coinage, learning, literature, irrigation, monuments, and the dynasty ending."
+    },
+    {
+      "id": "cambridge-coins",
+      "title": "The Coinage and Genealogy of the Later Jams of Sind",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/coinage-and-genealogy-of-the-later-jams-of-sind/FA6BA6C628F7F1AF0ECE14354AD4889D",
+      "note": "Peer-reviewed numismatic study of Jam Nizam al-Din, Jam Firuz, Jam Salah al-Din, titles, genealogy, chronology disputes, coins, and the dated tomb inscription."
+    },
+    {
+      "id": "unesco-makli",
+      "title": "UNESCO, Historical Monuments at Makli, Thatta",
+      "url": "https://whc.unesco.org/en/list/143/",
+      "note": "World Heritage synthesis on Thatta, Makli, Jam Nizamuddin, half a million graves, social groups, materials, and fused architectural influences."
+    },
+    {
+      "id": "unesco-mission",
+      "title": "UNESCO and ICOMOS 2012 reactive monitoring mission to Makli",
+      "url": "https://whc.unesco.org/document/117524",
+      "note": "Detailed World Heritage account of Makli monuments, Jam Nizamuddin, materials, river shift, climate, condition, and archaeological limits."
+    },
+    {
+      "id": "doam-nizam",
+      "title": "Pakistan Department of Archaeology and Museums, Tomb of Jam Nizamuddin",
+      "url": "https://doam.gov.pk/public/sites/5575",
+      "note": "Official inventory describing the Samma tomb, unfinished dome, carved bands, inscriptions, balconies, floral forms, and Gujarat-linked craftsmanship."
+    },
+    {
+      "id": "doam-tamachi",
+      "title": "Pakistan Department of Archaeology and Museums, Jam Tamachi Ji Mari",
+      "url": "https://doam.gov.pk/public/sites/5514",
+      "note": "Official inventory separating the Nuri and Jam Tamachi story, competing grave traditions, fisher-community memory, and uncertain physical evidence."
+    },
+    {
+      "id": "eft-mosque",
+      "title": "Endowment Fund Trust, Jamia Masjid at Makli",
+      "url": "https://heritage.eftsindh.com/site/1100/thatta/jamia-masjid-makli",
+      "note": "Sindh heritage record of the large Samma brick mosque, Jam Tamachi, Shaikh Hammad Jamali, and the adjacent khanqah."
+    },
+    {
+      "id": "eft-samui",
+      "title": "Endowment Fund Trust, Samui, Thatta",
+      "url": "https://heritage.eftsindh.com/site/1241/thatta/thatta-samui",
+      "note": "Sindh heritage record of the earlier Samma center, river-course change, perennial water, settlement shift, and cultivated land."
+    },
+    {
+      "id": "eft-nuri",
+      "title": "Endowment Fund Trust, Nuri and Jam Tamachi at Makli",
+      "url": "https://heritage.eftsindh.com/districts/thatta/nuri-jam-tamachi.php",
+      "note": "Heritage description of the polygonal dressed-stone pavilion associated with Jam Tamachi, Nuri, and a child."
+    },
+    {
+      "id": "uvic-makli",
+      "title": "Munazzah Akhtar, Interrogating the Dead: Makli Hill monuments",
+      "url": "https://dspace.library.uvic.ca/server/api/core/bitstreams/e8003641-20d4-4933-89f4-09765ef9c189/content",
+      "note": "University of Victoria doctoral study of Samma monuments, patronage, inscriptions, architectural evidence, contested attributions, and later chronicles."
+    },
+    {
+      "id": "nihcr-makli",
+      "title": "International Conference on Asian History, Culture and Environment, Makli paper",
+      "url": "https://nihcr.edu.pk/Downloads/Dr_Sajid/Books_Sajid/IAHA-24%20Conference%20Papers%2C%20Vol.2-Complete.pdf",
+      "note": "National Institute volume on Samma Thatta, visual links, stone sources, monuments, Jam Firuz, and the phased Arghun takeover."
+    },
+    {
+      "id": "siddiqui-education",
+      "title": "Habibullah Siddiqui, Education in Sindh: Past and Present",
+      "url": "https://library-sindhi-sp-2020.s3.us-east-2.amazonaws.com/files/Education_in_Sindh_Past_And_Present-Habibullah_Siddiqui-2006-complete.pdf",
+      "note": "Institute of Sindhology history of Samma madrasas, curriculum, scholars, stipends, regional learning centers, logic, philosophy, law, and medicine."
+    },
+    {
+      "id": "pakpers-agriculture",
+      "title": "Pakistan Perspectives, resistance to Arghun rule in Sindh",
+      "url": "https://journal.psc.edu.pk/index.php/pp/article/download/367/368",
+      "note": "Scholarly article describing Samma agriculture, commerce, Darya Khan, Saavi canal excavation, Manchar-area dam work, and resistance after invasion."
+    },
+    {
+      "id": "panhwar-irrigation",
+      "title": "M. H. Panhwar, Six Thousand Years of History of Irrigation in Sindh",
+      "url": "https://panhwar.com/SIX%20THOUSAND%20YEARS%20OF%20HISTORY%20OF%20IRRIGATION%20IN%20SINDH.pdf",
+      "note": "Historical engineering study of Samma-era river channels, wells, water lifts, irrigation, crops, and later ecological change."
+    },
+    {
+      "id": "cambridge-merchants-sample",
+      "title": "The Global World of Indian Merchants, Cambridge sample",
+      "url": "https://assets.cambridge.org/97805216/22851/sample/9780521622851ws.pdf",
+      "note": "Cambridge evidence for fifteenth-century Bhatia merchants from Thatta resident at Muscat and intensive maritime connections."
+    },
+    {
+      "id": "cambridge-merchants",
+      "title": "South Asian merchant networks",
+      "url": "https://www.cambridge.org/core/books/abs/global-world-of-indian-merchants-17501947/south-asian-merchant-networks/EED5D8F14A5B67DF20A39F8894BBD749",
+      "note": "Cambridge synthesis locating Sindhi participation in overseas merchant diasporas from the fifteenth century and explaining network ties."
+    },
+    {
+      "id": "ucla-hanafis",
+      "title": "Sohaib Baig, Indian Hanafis in an Ocean of Hadith",
+      "url": "https://escholarship.org/uc/item/3ng9r277",
+      "note": "UCLA dissertation on Sindhi legal scholarship, manuscripts, scholarly travel, Arabic and Persian learning, and Indian Ocean exchange from the sixteenth century."
+    },
+    {
+      "id": "iranica-abhari",
+      "title": "Encyclopaedia Iranica, Abhari, Makhdum",
+      "url": "https://www.iranicaonline.org/articles/abhari-makdum-16th-century-traditionist/",
+      "note": "Scholarly reference on a Herati traditionist migrating to Sindh about 1512, Gahan as a learning center, Darya Khan, writings, sons, and pupils."
+    },
+    {
+      "id": "sindhculture-poetry",
+      "title": "Sindh Culture Department e-library, Persian themes in Sindhi poetry",
+      "url": "https://el.sindhculture.gov.pk/read/10",
+      "note": "Provincial cultural research on Samma-period Persian poets, vernacular forms, court links, and the evidentiary limits of surviving literature."
+    },
+    {
+      "id": "pu-folklore",
+      "title": "University of the Punjab, Feminist Voice in Eighteenth-Century Sindh",
+      "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/8_v32_1_2019.pdf",
+      "note": "Peer-reviewed analysis of Shah Abdul Latif traditions, Nuri as fisherwoman and queen, social stratification, family loyalty, and later poetic memory."
+    },
+    {
+      "id": "unesco-centralasia",
+      "title": "UNESCO, History of Civilizations of Central Asia, volume 5",
+      "url": "https://uzbekliterature.uz/sites/default/files/history-of-civilizations-of-central-asia-vol-5.pdf",
+      "note": "UNESCO history situating Babur, Kandahar, Shah Beg Arghun, Sibi, and the wider Central Asian pressures behind conquest of Sindh."
+    },
+    {
+      "id": "lari-history",
+      "title": "Suhail Zaheer Lari, A History of Sindh",
+      "url": "https://sanipanhwar.com/uploads/books/2024-08-28_14-53-18_5d0acac0fd8f88010f870894920d1b24.pdf",
+      "note": "Oxford University Press history of Samma succession, Tughluq intervention, Thatta, Jam Nizamuddin, Jam Firuz, and Arghun conquest."
+    },
+    {
+      "id": "cambridge-masumi",
+      "title": "Indo-Persian historian and Sindho-Persian intermediary: Tarikh-i Masumi",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/indopersian-historian-and-sindhopersian-intermediary-the-tarikhi-masumi-of-mir-muhammad-masum-bhakkari-d-1606/477145A08391AF0226B6473CD944FDCF",
+      "note": "Peer-reviewed study of the first Mughal-era Persian history of Sindh and the interests shaping later accounts of the Sammas."
+    },
+    {
+      "id": "cambridge-medicine",
+      "title": "Courtly Disposition, medicine at Deccan sultanate courts",
+      "url": "https://www.cambridge.org/core/books/courts-of-the-deccan-sultanates/courtly-disposition/77874AC47F9649BBEF670F4DFECDD7FB",
+      "note": "Cambridge contextual study of Islamicate and Indic medical traditions at neighboring fifteenth- and sixteenth-century South Asian courts."
+    },
+    {
+      "id": "iucn-keenjhar",
+      "title": "IUCN, World Wetlands Day at Keenjhar Lake",
+      "url": "https://iucn.org/content/world-wetlands-day-celebrated-keenjhar-lake-largest-fresh-water-source-cities-karachi-and-thatta",
+      "note": "Modern ecological and livelihood evidence for Keenjhar fishing communities, used only to explain continuing landscape importance, not medieval statistics."
+    },
+    {
+      "id": "unesco-2015",
+      "title": "UNESCO and ICOMOS 2015 reactive monitoring mission to Makli",
+      "url": "https://whc.unesco.org/document/142400",
+      "note": "World Heritage review of the original nomination, city and necropolis boundaries, archaeology, monument groups, documentation gaps, and conservation."
+    },
+    {
+      "id": "eft-shahmurad",
+      "title": "Endowment Fund Trust, Syed Shah Murad Shirazi, Thatta",
+      "url": "https://heritage.eftsindh.com/pending.php?id=1246%2Fthatta%2Fthatta-syed-shah-murad-shirazi",
+      "note": "Sindh heritage record of a later-Samma madrasa tradition, mosque, neighborhood, scholar family, and uncertain dates."
+    },
+    {
+      "id": "chronology-india",
+      "title": "C. Mabel Duff, The Chronology of India to the Sixteenth Century",
+      "url": "https://sanipanhwar.com/uploads/books/2025-07-10_16-11-40_c2385751b19cb46bc95bfb8a2808d1d5.pdf",
+      "note": "Reference chronology for Shah Begs 1520 victory, division of Sindh, Jam Firuz, Shah Hasan, and early Arghun succession."
+    },
+    {
+      "id": "anu-mughal-sindh",
+      "title": "Australian National University, Mughal History in Sindh",
+      "url": "https://core.ac.uk/download/pdf/156623123.pdf",
+      "note": "Doctoral historical study evaluating Persian chronicle dates and supporting a circa 1524 endpoint for the final Arghun takeover."
+    },
+    {
+      "id": "panhwar-drainage",
+      "title": "M. H. Panhwar, History of Irrigation, Drainage and Flood Management in Sindh",
+      "url": "https://panhwar.com/HISTORY%20OF%20IRRIGATION%20DRAINAGE%20AND%20FLOOD%20MANAGEMENT%20IN%20SINDH.pdf",
+      "note": "Historical engineering synthesis on the Samma period, irrigation stability, floodplain cultivation, maintenance, and later changes."
+    },
+    {
+      "id": "packhum-history",
+      "title": "The History of India as Told by Its Own Historians, Sindh extracts",
+      "url": "https://persian.packhum.org/text/080201011/6",
+      "note": "Translated Persian chronicle extracts and editorial comparison for Tughluq campaigns, Samma submission, and dynasty chronology."
+    }
+  ],
+  "entities": [
+    {
+      "id": "sind",
+      "card": "data/cards/sind.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map1492",
+            "lakho-samma"
+          ],
+          "locator": "Exact generated id, imported name, approximate 1492 to 1500 interval, and historical-basemap provenance. Only exact target feature, decoded geometry, shared arcs, ownership, and representative-point tests. Institute of Sindhology collection on origins, chronology, rulers, coinage, learning, literature, irrigation, monuments, and the dynasty ending.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "lari-history"
+          ],
+          "locator": "Oxford University Press history of Samma succession, Tughluq intervention, Thatta, Jam Nizamuddin, Jam Firuz, and Arghun conquest.",
+          "dateScope": {
+            "from": 1351,
+            "to": 1365
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "packhum-history"
+          ],
+          "locator": "Translated Persian chronicle extracts and editorial comparison for Tughluq campaigns, Samma submission, and dynasty chronology.",
+          "dateScope": {
+            "from": 1365,
+            "to": 1392
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "lari-history"
+          ],
+          "locator": "Oxford University Press history of Samma succession, Tughluq intervention, Thatta, Jam Nizamuddin, Jam Firuz, and Arghun conquest.",
+          "dateScope": {
+            "from": 1392,
+            "to": 1428
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "cambridge-coins"
+          ],
+          "locator": "Peer-reviewed numismatic study of Jam Nizam al-Din, Jam Firuz, Jam Salah al-Din, titles, genealogy, chronology disputes, coins, and the dated tomb inscription.",
+          "dateScope": {
+            "from": 1428,
+            "to": 1453
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "uvic-makli"
+          ],
+          "locator": "University of Victoria doctoral study of Samma monuments, patronage, inscriptions, architectural evidence, contested attributions, and later chronicles.",
+          "dateScope": {
+            "from": 1453,
+            "to": 1461
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "unesco-makli"
+          ],
+          "locator": "World Heritage synthesis on Thatta, Makli, Jam Nizamuddin, half a million graves, social groups, materials, and fused architectural influences.",
+          "dateScope": {
+            "from": 1461,
+            "to": 1490
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nihcr-makli"
+          ],
+          "locator": "National Institute volume on Samma Thatta, visual links, stone sources, monuments, Jam Firuz, and the phased Arghun takeover.",
+          "dateScope": {
+            "from": 1490,
+            "to": 1508
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "unesco-centralasia",
+            "nihcr-makli"
+          ],
+          "locator": "UNESCO history situating Babur, Kandahar, Shah Beg Arghun, Sibi, and the wider Central Asian pressures behind conquest of Sindh. National Institute volume on Samma Thatta, visual links, stone sources, monuments, Jam Firuz, and the phased Arghun takeover.",
+          "dateScope": {
+            "from": 1508,
+            "to": 1524
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-missing"
+          ],
+          "locator": "Exact live identity, imported-summary mismatch, coverage class, and missing content state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map1492"
+          ],
+          "locator": "Complete-snapshot audit and exact decoded geometry statistics for the sole target feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map1492"
+          ],
+          "locator": "Representative point-in-polygon results for all nineteen audited probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map1492"
+          ],
+          "locator": "Direct shared-arc neighbors plus negative area-overlap and point-owner tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map1400",
+            "atlas-map1492",
+            "atlas-map1500",
+            "atlas-map1783",
+            "atlas-map1800"
+          ],
+          "locator": "Cross-snapshot seams and exact-id separation from later similarly named records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pakpers-agriculture"
+          ],
+          "locator": "Darya Khan roles in administration, irrigation, military defense, and regional power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "eft-mosque"
+          ],
+          "locator": "Heritage record for mosque, khanqah, ruler patronage, and Samma religious landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "doam-nizam",
+            "pakpers-agriculture"
+          ],
+          "locator": "Material and historical evidence for reign achievements with chronicle-praise limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "doam-nizam"
+          ],
+          "locator": "Gujarat-linked workmanship with explicit limits on artisan biography and mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "unesco-centralasia"
+          ],
+          "locator": "UNESCO regional context for Kandahar, Sibi, Arghuns, Babur, and wider displacement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pakpers-agriculture"
+          ],
+          "locator": "Period-specific evidence for occupations, Saavi canal, Manchar dam, and agricultural labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "panhwar-irrigation"
+          ],
+          "locator": "Engineering history of channels, wells, lifts, field levels, and everyday agricultural importance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "panhwar-irrigation"
+          ],
+          "locator": "Crop geography with explicit limit against turning field lists into universal menus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pu-folklore"
+          ],
+          "locator": "Peer-reviewed folklore analysis used as social memory rather than literal court record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "iucn-keenjhar"
+          ],
+          "locator": "Modern landscape continuity and an explicit ban on retrojecting ecological statistics.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "cambridge-merchants-sample"
+          ],
+          "locator": "Cambridge evidence for Thatta Bhatias, Muscat residence, maritime links, and diaspora households.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "cambridge-merchants"
+          ],
+          "locator": "Cambridge synthesis of diaspora, religion, home ties, trust, and merchant-network functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "cambridge-merchants-sample",
+            "pakpers-agriculture"
+          ],
+          "locator": "Maritime and inland commercial connections plus constraints on movement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "panhwar-irrigation",
+            "uvic-makli"
+          ],
+          "locator": "Material supply and occupational inference bounded by uneven source survival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "cambridge-merchants-sample"
+          ],
+          "locator": "Fifteenth-century evidence separated from better-documented later commercial history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "lari-history"
+          ],
+          "locator": "Genealogical evidence and explicit limit against treating royal kinship as universal household history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pu-folklore"
+          ],
+          "locator": "Later poetic treatment of Nuri, class, community loyalty, and biographical uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "doam-tamachi"
+          ],
+          "locator": "Official inventory of burial traditions, later monument claims, and material uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "eft-nuri"
+          ],
+          "locator": "Heritage attribution to ruler, queen, and child with bounded household interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "uvic-makli",
+            "pu-folklore"
+          ],
+          "locator": "Gendered and age-based survival limits across monuments, chronicles, and later poetry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "siddiqui-education"
+          ],
+          "locator": "Regional centers, patronage, stipends, and explicit caution about the later madrasa count.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "siddiqui-education"
+          ],
+          "locator": "Curriculum subjects and limits on enrollment, age, completion, and standardization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "eft-mosque"
+          ],
+          "locator": "Built setting for mosque-khanqah learning and appropriately bounded educational reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "eft-shahmurad"
+          ],
+          "locator": "Local madrasa tradition, scholar biography, neighborhood location, and uncertainties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "iranica-abhari"
+          ],
+          "locator": "Iranica evidence for migration, Gahan learning center, writings, family teaching, and pupils.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "sindhculture-poetry",
+            "ucla-hanafis"
+          ],
+          "locator": "Languages, genres, scholarly circulation, and multilingual limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "sindhculture-poetry"
+          ],
+          "locator": "Provincial cultural research on named Persian poets and survival limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "cambridge-coins"
+          ],
+          "locator": "Exact Arabic-script sample, direction, transliteration, translation, inscription, and genre.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "cambridge-coins"
+          ],
+          "locator": "Numismatic evidence, political titles, circulation, and bounded literacy inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "cambridge-masumi"
+          ],
+          "locator": "Date and historiographical role of Tarikh-i Masumi plus source-comparison method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "unesco-makli"
+          ],
+          "locator": "UNESCO scale, chronology, buried social groups, and explicit multi-dynasty limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "doam-nizam"
+          ],
+          "locator": "Official inventory of plan, unfinished dome, decorative bands, inscriptions, and balconies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "unesco-makli"
+          ],
+          "locator": "World Heritage evidence for fused influences, local style, materials, and collaborative labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "unesco-mission"
+          ],
+          "locator": "World Heritage condition factors, authenticity, stabilization, repair, and interpretive caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "uvic-makli"
+          ],
+          "locator": "Doctoral monument study on attribution, inscription, style, chronicles, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "siddiqui-education"
+          ],
+          "locator": "Period-specific medical curriculum and explicit institutional and access limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "cambridge-medicine"
+          ],
+          "locator": "Contextual medical exchange with a strict non-retrojection rule for patient care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "panhwar-irrigation",
+            "eft-samui"
+          ],
+          "locator": "Water infrastructure, environmental change, labor, and maintenance needs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "unesco-2015"
+          ],
+          "locator": "Archaeological scope and the bounded absence of excavated ordinary domestic plans.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "unesco-2015",
+            "unesco-mission"
+          ],
+          "locator": "Explicit evidence-bounded absence for toilets, sewage, waste collection, and sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "panhwar-drainage",
+            "unesco-makli"
+          ],
+          "locator": "Synthesis of documented achievements with labor and social-distribution correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nihcr-makli",
+            "unesco-centralasia"
+          ],
+          "locator": "Final succession conflict, Darya Khan, Arghun displacement, and multi-causal ending.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "chronology-india"
+          ],
+          "locator": "Battle, Darya Khan death, submission, territorial division, and phased conquest.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "anu-mughal-sindh"
+          ],
+          "locator": "Final expulsion, approximate endpoint, failed recovery context, and social continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "atlas-map1500",
+            "atlas-map1530",
+            "atlas-map1783",
+            "atlas-map1800"
+          ],
+          "locator": "Premature atlas disappearance, later distinct records, and exact-scope ending guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "chronology-india",
+            "anu-mughal-sindh",
+            "atlas-map1500"
+          ],
+          "locator": "Reference chronology for Shah Begs 1520 victory, division of Sindh, Jam Firuz, Shah Hasan, and early Arghun succession. Doctoral historical study evaluating Persian chronicle dates and supporting a circa 1524 endpoint for the final Arghun takeover. Immediate disappearance control even though the historical Samma polity continued.",
+          "dateScope": {
+            "year": 1524
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "sind",
+        "name": "Samma Sultanate of Sindh",
+        "aliases": [
+          "Sind",
+          "Sindh under the Samma Jams",
+          "Samma Dynasty",
+          "Samma Kingdom of Sindh"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 1351,
+        "to": 1524,
+        "circa": true,
+        "card": "cards/sind.json",
+        "dateBasis": "historical",
+        "summary": "The Samma Jams ruled from Thatta, supporting Indus agriculture, Indian Ocean trade, learning, and Makli craft before a phased Arghun conquest.",
+        "summarySource": null,
+        "fell": 1524,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "sind",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            59.98199981999821,
+            23.48908197815635,
+            72.81612816128163,
+            31.384394909633443
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
