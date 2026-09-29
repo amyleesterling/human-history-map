@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release172-muscat-and-oman research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact generated id, imported label, approximate 1938 to 1945 map interval, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported generic summary awaiting researched replacement for this exact id."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval and pending identity, chronology, border, and content review."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no runtime card is associated with this exact id before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no reviewed override exists for the exact target before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, imported summary status, and empty staged-drafts list."
+    },
+    {
+      "id": "atlas-map1930",
+      "title": "Human History Map 1930 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1930.json",
+      "note": "Pre-appearance control for the exact id and point-owner comparison."
+    },
+    {
+      "id": "atlas-map1938",
+      "title": "Human History Map 1938 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1938.json",
+      "note": "Only exact target feature, decoded geometry, representative points, owner overlays, and topology tests."
+    },
+    {
+      "id": "atlas-map1945",
+      "title": "Human History Map 1945 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1945.json",
+      "note": "Editorial handoff control from the exact id to oman-1945."
+    },
+    {
+      "id": "atlas-map1960",
+      "title": "Human History Map 1960 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1960.json",
+      "note": "Later Oman continuity control before the 1970 political transition."
+    },
+    {
+      "id": "atlas-map1994",
+      "title": "Human History Map 1994 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1994.json",
+      "note": "Post-1970 continuity control under the shorter state name."
+    },
+    {
+      "id": "atlas-oman-cards",
+      "title": "Human History Map researched Oman card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/oman.json",
+      "note": "Existing Oman research establishes adjacent narrative coverage without substituting for this exact id."
+    },
+    {
+      "id": "loc-overview",
+      "title": "Persian Gulf States: Country Studies, Oman chapters",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/pe/persiangulfstate00metz_0/persiangulfstate00metz_0.pdf",
+      "note": "Library of Congress historical synthesis on the coastal sultanate, interior imamate, British influence, oil, conflict, and the 1970 transition."
+    },
+    {
+      "id": "qdl-british-power",
+      "title": "British Power and the Al Bu Said Sultanate",
+      "url": "https://qdl.qa/en/british-power-al-bu-said-sultanate-and-musandam-peninsula-1800-1932",
+      "note": "Qatar Digital Library essay on treaties, debt, political dependence, Musandam, and Al Bu Said authority."
+    },
+    {
+      "id": "qdl-uprising",
+      "title": "The 1913 rising in Muscat and Oman",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023576860.0x0000b6",
+      "note": "Digitized India Office file documenting the interior Imamate uprising and British-backed defence of the coastal sultanate."
+    },
+    {
+      "id": "nm-maritime",
+      "title": "Oman National Museum, Maritime Heritage",
+      "url": "https://www.nm.gov.om/en/collection/gift/maritime-heritage",
+      "note": "National Museum objects and reconstructions on vessels, fishing, navigation, overseas missions, and maritime work."
+    },
+    {
+      "id": "unesco-aflaj",
+      "title": "UNESCO, Aflaj Irrigation Systems of Oman",
+      "url": "https://whc.unesco.org/en/list/1207",
+      "note": "World Heritage evidence on gravity-fed water, timed shares, agriculture, settlement, and collective maintenance."
+    },
+    {
+      "id": "unesco-bahla",
+      "title": "UNESCO, Bahla Fort",
+      "url": "https://whc.unesco.org/en/list/433/",
+      "note": "World Heritage evidence on Bahla oasis, fort, houses, mosques, market, baths, sablas, and falaj."
+    },
+    {
+      "id": "omaninfo-education",
+      "title": "Oman Across Ages Museum, education in Oman",
+      "url": "https://www.omaninfo.om/mainsections/92/show/182",
+      "note": "Government museum account of kuttab, mosque learning circles, subjects, and major learning centres."
+    },
+    {
+      "id": "omaninfo-sulaif",
+      "title": "Oman Ministry of Information, Harat al-Sulaif",
+      "url": "https://www.omaninfo.om/mainsections/103/show/56",
+      "note": "Heritage account of seasonal residence, homes, family rooms, date harvests, wells, market work, and community life."
+    },
+    {
+      "id": "nm-architecture",
+      "title": "Oman National Museum, Architectural Heritage",
+      "url": "https://www.nm.gov.om/en/collection/gift/architectural-heritage",
+      "note": "Museum evidence on houses, family records, lock houses, imported wood, storage, seasonal movement, and craft."
+    },
+    {
+      "id": "biomedicine",
+      "title": "The history of biomedicine in Oman",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3121022/",
+      "note": "Peer-reviewed history of epidemics, physicians, hospitals, missions, sanitation, water, and the uneven spread of biomedical care."
+    },
+    {
+      "id": "ethnomedicine",
+      "title": "Traditional Omani medicine and medicinal plants",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4927734/",
+      "note": "Peer-reviewed ethnomedical study of healers, household transmission, preparations, plants, and evidence limits."
+    },
+    {
+      "id": "qdl-seeb",
+      "title": "Treaty of Seeb file, 1920",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100070535087.0x00003b",
+      "note": "Digitized political file containing the 1920 agreement and correspondence on relations between Muscat and the interior."
+    },
+    {
+      "id": "un-1970",
+      "title": "United Nations, Security Council report for 1970 to 1971",
+      "url": "https://digitallibrary.un.org/record/722919/files/A_8423_Rev-1%5EVol-III%5E-EN.pdf",
+      "note": "Contemporary UN report on the July 1970 change of ruler and shortening of the state name."
+    },
+    {
+      "id": "qdl-britain-oman",
+      "title": "The close relationship between Britain and Oman since 1750",
+      "url": "https://qdl.qa/en/close-relationship-britain-and-oman-1750",
+      "note": "Qatar Digital Library synthesis on finance, administration, military support, oil, the interior war, Dhofar, and 1970."
+    },
+    {
+      "id": "qdl-gwadar",
+      "title": "Gwadar: an Omani enclave in Pakistan",
+      "url": "https://qdl.qa/en/gwadar-omani-enclave-pakistan",
+      "note": "Qatar Digital Library history of Gwadar under Omani rule and its 1958 transfer to Pakistan."
+    },
+    {
+      "id": "pdo-oil",
+      "title": "Petroleum Development Oman, Our Journey",
+      "url": "https://www.pdo.co.om/en/Pages/WhoWeAre/OurJourney.aspx",
+      "note": "Company chronology of the concession, early dry wells, discoveries, pipeline, and first oil export."
+    },
+    {
+      "id": "stanford-bahla",
+      "title": "In the Time of Oil: Piety, Memory, and Social Life in an Omani Town",
+      "url": "https://www.sup.org/books/title?id=11290",
+      "note": "Stanford University Press study of Bahla memory and social life across the late pre-oil and oil eras, with explicit retrospective limits."
+    },
+    {
+      "id": "cambridge-nation",
+      "title": "A History of Modern Oman, Sultanate as Nation, 1932 to 1959",
+      "url": "https://www.cambridge.org/core/books/abs/history-of-modern-oman/sultanate-as-nation-19321959/9C17A20B10BB74D2AFD6B9D268CADD33",
+      "note": "Cambridge chapter on Said bin Taymur, state formation, oil exploration, territorial claims, and the interior."
+    },
+    {
+      "id": "national-archives",
+      "title": "UK National Archives, British Army operations after 1945",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-army-operations-after-1945/",
+      "note": "Official research guide identifying British operations in Oman and archival evidence for the Jebel Akhdar campaign."
+    },
+    {
+      "id": "numismatic-1960",
+      "title": "National Museum of Oman, 1960 Saidi Rial",
+      "url": "https://numismatic.museum.om/1566/",
+      "note": "Institutional coin record securing the Arabic legend, ruler, title, denomination, and 1380 AH or 1960 CE date."
+    },
+    {
+      "id": "qdl-health1939",
+      "title": "Muscat Administration Report for 1939, health section",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100046765260.0x000083",
+      "note": "Contemporary colonial report on epidemics, lack of public-health controls, hospital access, and drug funding."
+    },
+    {
+      "id": "qdl-sanitation1940",
+      "title": "Muscat Administration Report for 1940, sanitation section",
+      "url": "https://qdl.qa/en/archive/81055/vdc_100046765260.0x00003f",
+      "note": "Contemporary report on planned municipal sanitation, anti-malaria work, and hospital improvements."
+    },
+    {
+      "id": "qdl-elite-schooling",
+      "title": "Education of Said bin Taymur",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100000000831.0x00028f",
+      "note": "India Office file documenting one royal child's tutoring and schooling in India and Baghdad."
+    },
+    {
+      "id": "qdl-war-aviation",
+      "title": "Air facilities in Muscat and Oman during the Second World War",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100149465569.0x00004e",
+      "note": "Digitized wartime file on sovereignty, payments, reconnaissance, anti-submarine activity, and Masirah staging."
+    },
+    {
+      "id": "qdl-history-summary",
+      "title": "Historical summary of Muscat and Oman, 1928 to 1953",
+      "url": "https://www.qdl.qa/archive/81055/vdc_100023415995.0x0000c4",
+      "note": "India Office summary covering finance, wartime shortages, communications, and postwar administration."
+    },
+    {
+      "id": "qdl-trade1938",
+      "title": "Muscat Trade Report for 1938",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100107848353.0x000096",
+      "note": "Contemporary trade and administration report on dates, commerce, dispensary care, and enslaved people seeking refuge."
+    },
+    {
+      "id": "qdl-sanitation1933",
+      "title": "Gazetteer entry on Muscat and Matrah in 1933",
+      "url": "https://www.qdl.qa/en/archive/81055/vdc_100023545441.0x00002e",
+      "note": "Contemporary account of population, water tanks, hospital capacity, and poor urban sanitation."
+    },
+    {
+      "id": "un-imamate",
+      "title": "United Nations General Assembly record on Oman, 1960",
+      "url": "https://digitallibrary.un.org/record/3843954/files/GA_4220-EN.pdf",
+      "note": "Contemporary international record of competing claims about the Sultanate, interior Imamate, British recognition, and exile politics."
+    },
+    {
+      "id": "unesco-frankincense",
+      "title": "UNESCO, Land of Frankincense",
+      "url": "https://whc.unesco.org/en/list/1010",
+      "note": "World Heritage evidence on Dhofar frankincense trees, caravan oasis, ports, archaeology, and long-distance trade."
+    }
+  ],
+  "entities": [
+    {
+      "id": "muscat-and-oman",
+      "card": "data/cards/muscat-and-oman.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map1938",
+            "loc-overview"
+          ],
+          "locator": "Exact generated id, imported label, approximate 1938 to 1945 map interval, and historical-basemap provenance. Only exact target feature, decoded geometry, representative points, owner overlays, and topology tests. Library of Congress historical synthesis on the coastal sultanate, interior imamate, British influence, oil, conflict, and the 1970 transition.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "qdl-uprising"
+          ],
+          "locator": "Digitized India Office file documenting the interior Imamate uprising and British-backed defence of the coastal sultanate.",
+          "dateScope": {
+            "from": 1913,
+            "to": 1920
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "qdl-seeb"
+          ],
+          "locator": "Digitized political file containing the 1920 agreement and correspondence on relations between Muscat and the interior.",
+          "dateScope": {
+            "from": 1920,
+            "to": 1932
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "cambridge-nation"
+          ],
+          "locator": "Cambridge chapter on Said bin Taymur, state formation, oil exploration, territorial claims, and the interior.",
+          "dateScope": {
+            "from": 1932,
+            "to": 1938
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "qdl-war-aviation",
+            "qdl-history-summary"
+          ],
+          "locator": "Digitized wartime file on sovereignty, payments, reconnaissance, anti-submarine activity, and Masirah staging. India Office summary covering finance, wartime shortages, communications, and postwar administration.",
+          "dateScope": {
+            "from": 1938,
+            "to": 1945
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "un-imamate"
+          ],
+          "locator": "Contemporary international record of competing claims about the Sultanate, interior Imamate, British recognition, and exile politics.",
+          "dateScope": {
+            "from": 1945,
+            "to": 1955
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "qdl-britain-oman",
+            "qdl-gwadar"
+          ],
+          "locator": "Qatar Digital Library synthesis on finance, administration, military support, oil, the interior war, Dhofar, and 1970. Qatar Digital Library history of Gwadar under Omani rule and its 1958 transfer to Pakistan.",
+          "dateScope": {
+            "from": 1955,
+            "to": 1959
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pdo-oil",
+            "stanford-bahla"
+          ],
+          "locator": "Company chronology of the concession, early dry wells, discoveries, pipeline, and first oil export. Stanford University Press study of Bahla memory and social life across the late pre-oil and oil eras, with explicit retrospective limits.",
+          "dateScope": {
+            "from": 1959,
+            "to": 1965
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "un-1970"
+          ],
+          "locator": "Contemporary UN report on the July 1970 change of ruler and shortening of the state name.",
+          "dateScope": {
+            "from": 1965,
+            "to": 1970
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-missing"
+          ],
+          "locator": "Exact repository identity, current content state, and historically bounded editorial scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map1938"
+          ],
+          "locator": "Complete snapshot audit, target count, interval, geometry type, components, rings, and positions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map1938"
+          ],
+          "locator": "Representative point-in-polygon tests for the sole exact target feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map1938"
+          ],
+          "locator": "Representative owner overlaps and direct shared-arc topology in the 1938 snapshot.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map1930",
+            "atlas-map1938",
+            "atlas-map1945",
+            "atlas-map1960",
+            "atlas-map1994",
+            "atlas-oman-cards"
+          ],
+          "locator": "Cross-snapshot seams and related-card continuity before and after the exact atlas interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "qdl-uprising"
+          ],
+          "locator": "India Office file on election, territorial contest, fighting, and British military support.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "qdl-seeb"
+          ],
+          "locator": "Treaty text and correspondence defining peace, movement, trade, and divided authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "qdl-british-power"
+          ],
+          "locator": "Qatar Digital Library synthesis of debt, advisers, treaty constraints, and political dependence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "cambridge-nation"
+          ],
+          "locator": "Cambridge chapter on succession, state formation, territorial claims, and oil exploration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "un-imamate"
+          ],
+          "locator": "United Nations record of rival sovereignty claims, recognition, exile, and British involvement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "qdl-british-power"
+          ],
+          "locator": "Documented legal independence compared with British treaty, financial, and military power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "qdl-british-power"
+          ],
+          "locator": "QDL account of advisers, fiscal reform, subsidies, and strategic interests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "qdl-war-aviation"
+          ],
+          "locator": "Wartime correspondence on legal status, annual payment, and Masirah operations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "qdl-history-summary"
+          ],
+          "locator": "India Office historical summary on wartime food scarcity, prices, trade, and administration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "qdl-trade1938"
+          ],
+          "locator": "Contemporary report on asylum seekers, with explicit limits on scale and outcome.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "qdl-trade1938"
+          ],
+          "locator": "Trade report evidence on date varieties, prices, export markets, and commercial importance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "unesco-aflaj"
+          ],
+          "locator": "UNESCO evidence on gravity flow, timed shares, collective maintenance, agriculture, and domestic use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "unesco-frankincense"
+          ],
+          "locator": "UNESCO archaeological landscape linking trees, oasis, ports, caravans, and long trade history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nm-maritime"
+          ],
+          "locator": "National Museum vessel evidence, construction methods, fishing, navigation, and ocean connections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pdo-oil"
+          ],
+          "locator": "Company chronology for concession, dry exploration, discoveries, pipeline, and first shipment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "omaninfo-sulaif"
+          ],
+          "locator": "Heritage account of seasonal residence, palm harvests, homes, rooms, and evidentiary scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nm-architecture"
+          ],
+          "locator": "Museum house records, family inscriptions, seasonal storage, jar size, and construction sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "unesco-bahla"
+          ],
+          "locator": "UNESCO description of layered oasis settlement, public buildings, water, and long continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "omaninfo-sulaif"
+          ],
+          "locator": "Documented market trades, livestock auctions, household production, and community setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "stanford-bahla"
+          ],
+          "locator": "University press ethnography used explicitly as retrospective memory, not direct period observation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "omaninfo-education"
+          ],
+          "locator": "Museum account of elementary kuttab, advanced circles, subjects, centres, and access limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "qdl-elite-schooling"
+          ],
+          "locator": "India Office file on tutoring plans, Mayo College, Baghdad study, and royal status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "stanford-bahla"
+          ],
+          "locator": "Scholarly account of late pre-oil schooling scarcity, restrictions, and remembered social change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "numismatic-1960"
+          ],
+          "locator": "National Museum coin legend, ruler attribution, state title, script, and date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "numismatic-1960"
+          ],
+          "locator": "Numismatic evidence used with explicit literacy, speech, and language limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ethnomedicine"
+          ],
+          "locator": "Peer-reviewed field evidence with chronology, variation, safety, and efficacy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "biomedicine"
+          ],
+          "locator": "Peer-reviewed chronology of practitioners, mission medicine, facilities, geography, and access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "qdl-health1939"
+          ],
+          "locator": "Contemporary epidemic list, free outpatient trial, public subscription, and drug funding.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "qdl-health1939"
+          ],
+          "locator": "Explicit lack of isolation system plus evidence boundary for household and reproductive care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "biomedicine"
+          ],
+          "locator": "Peer-reviewed connection among epidemics, water, sanitation, mobility, and public institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "unesco-aflaj"
+          ],
+          "locator": "World Heritage evidence on domestic water, shares, community rules, maintenance, and scarcity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "unesco-bahla"
+          ],
+          "locator": "UNESCO inventory of baths and settlement infrastructure with representativeness limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "qdl-sanitation1933"
+          ],
+          "locator": "Contemporary population, water-storage, sanitation, and hospital-capacity evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "qdl-sanitation1940"
+          ],
+          "locator": "Contemporary municipal sanitation, anti-malaria, funding, and hospital-improvement plan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "qdl-sanitation1940",
+            "qdl-sanitation1933"
+          ],
+          "locator": "Synthesis of documented sanitation infrastructure and explicit limit on household toilet evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "qdl-seeb"
+          ],
+          "locator": "Treaty provisions and political settlement interpreted as negotiated conflict management.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nm-maritime"
+          ],
+          "locator": "National Museum vessel types, materials, construction, maritime work, and navigation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "unesco-bahla"
+          ],
+          "locator": "World Heritage evidence for integrated architecture, settlement functions, and maintenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "unesco-aflaj"
+          ],
+          "locator": "Engineering, governance, timed distribution, collective labour, and long continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pdo-oil"
+          ],
+          "locator": "Exploration chronology, discoveries, pipeline, export, and timing of public benefit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "qdl-britain-oman"
+          ],
+          "locator": "QDL account of British-organized forces, Nizwa, the Imamate, and competing interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "national-archives"
+          ],
+          "locator": "UK official research guide to British Army operations and surviving campaign records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "qdl-gwadar"
+          ],
+          "locator": "QDL history of the enclave, atlas omission context, 1958 sale, and continuing connections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "qdl-britain-oman"
+          ],
+          "locator": "Dhofar chronology, British relationship, petroleum timing, and distributional political context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "un-1970"
+          ],
+          "locator": "Contemporary United Nations account of ruler change, official name, and political continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "un-1970",
+            "atlas-map1945",
+            "atlas-oman-cards"
+          ],
+          "locator": "Contemporary UN report on the July 1970 change of ruler and shortening of the state name. Editorial handoff control from the exact id to oman-1945. Existing Oman research establishes adjacent narrative coverage without substituting for this exact id.",
+          "dateScope": {
+            "year": 1970
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "muscat-and-oman",
+        "name": "Sultanate of Muscat and Oman",
+        "aliases": [
+          "Muscat and Oman",
+          "Muscat & Oman",
+          "Sultanate of Muscat and Oman, 1913-1970",
+          "Later Al Bu Said Sultanate"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 1913,
+        "to": 1970,
+        "circa": false,
+        "card": "cards/muscat-and-oman.json",
+        "dateBasis": "historical",
+        "summary": "A divided coastal sultanate and interior imamate were forcibly reunified before oil, rebellion, and a 1970 change of ruler and name.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1938.json",
+          "properties": {
+            "civ": "muscat-and-oman",
+            "from": 1938,
+            "to": 1945,
+            "precision": 3
+          },
+          "bounds": [
+            51.80631806318064,
+            16.654086758288265,
+            59.837998379983816,
+            26.23674290737562
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
