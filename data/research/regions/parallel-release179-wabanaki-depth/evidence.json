@@ -1,0 +1,960 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release179-wabanaki research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "wa-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, label, approximate lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "wa-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Shows that the inherited summary describes a modern Maine child-welfare commission and is identity drift."
+    },
+    {
+      "id": "wa-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, inherited state kind, and missing-card status."
+    },
+    {
+      "id": "wa-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact Wabanaki record had no staged research draft."
+    },
+    {
+      "id": "wa-cards",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Separates this exact missing card from existing researched cards."
+    },
+    {
+      "id": "wa-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Preserves separate identities for neighboring and similarly named atlas records."
+    },
+    {
+      "id": "wa-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-start snapshot in which the exact Wabanaki id is absent."
+    },
+    {
+      "id": "wa-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact feature: a two-component MultiPolygon dated 1492 to 1500."
+    },
+    {
+      "id": "wa-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Endpoint snapshot in which the exact id is absent."
+    },
+    {
+      "id": "wa-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Post-end control confirming that the exact id remains absent."
+    },
+    {
+      "id": "wa-meeting",
+      "title": "Abbe Museum: A Meeting of Nations exhibit catalogue",
+      "url": "https://www.abbemuseum.org/s/St-Sauveur-A-Meeting-of-Nations-Exhibit-Catalog.pdf",
+      "note": "Museum synthesis of Wabanaki nations, seasonal lifeways, kin groups, trade, consensus, early voyages, and the later formal Confederacy."
+    },
+    {
+      "id": "wa-wolastoqey-history",
+      "title": "Wolastoqey Nation in New Brunswick: Our History",
+      "url": "https://wnnb.wolastoqey.ca/about-us/our-history/",
+      "note": "Nation-authored account of Wolastoqey history, Wabanaki relationships, technologies, and seventeenth-century Confederacy formalization."
+    },
+    {
+      "id": "wa-micmac-nation",
+      "title": "Mi'kmaq Nation in Maine: Introduction",
+      "url": "https://micmac-nsn.gov/",
+      "note": "Nation introduction to Mi'kmaq homelands, related distinct nations, and the Dawnland name."
+    },
+    {
+      "id": "wa-passamaquoddy",
+      "title": "Passamaquoddy Tribe at Indian Township: Cultural Resources",
+      "url": "https://www.passamaquoddy.com/?page_id=784",
+      "note": "Tribal cultural-resources mission centering Passamaquoddy continuity and membership in the later Confederacy."
+    },
+    {
+      "id": "wa-penobscot-women",
+      "title": "Penobscot Nation: Women in Penobscot History",
+      "url": "https://www.penobscotnation.org/departments/cultural-historic-preservation/historic-preservation/women-in-penobscot-history/",
+      "note": "Nation account of women, mothers, grandmothers, teaching, oral tradition, and counsel."
+    },
+    {
+      "id": "wa-penobscot-curriculum",
+      "title": "Penobscot Nation curriculum portal",
+      "url": "https://www.penobscotnation.org/departments/cultural-historic-preservation/download-penobscot-nation-curriculum/",
+      "note": "Tribal curriculum resources on family ties, homeland, oral tradition, arts, and community relationships."
+    },
+    {
+      "id": "wa-penobscot-language",
+      "title": "Penobscot Nation language resources",
+      "url": "https://www.penobscotnation.org/departments/cultural-historic-preservation/language-resources/",
+      "note": "Living Penobscot language and modern orthography resources, used as continuity rather than an old text sample."
+    },
+    {
+      "id": "wa-maine-framework",
+      "title": "Maine Department of Education: Wabanaki Studies Framework",
+      "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Wabanaki%20Studies%20-%20Framework%20-%209.9.2024.pdf",
+      "note": "Current teaching framework for nation names, responsible terminology, and the 1497 to 1680s early-contact horizon."
+    },
+    {
+      "id": "wa-nps-life",
+      "title": "National Park Service: Wabanaki Life Thousands of Years Ago",
+      "url": "https://www.nps.gov/articles/000/wabanaki-life.htm",
+      "note": "Archaeological account of seasonal canoe travel, camps, wigwams, middens, ceramics, tools, and foods at Mount Desert Island."
+    },
+    {
+      "id": "wa-asticou1",
+      "title": "National Park Service: Asticou's Island Domain, volume 1",
+      "url": "https://npshistory.com/publications/acad/eoa-v1.pdf",
+      "note": "Regional study of Wabanaki coast history, oral tradition, seafaring, leadership, and carefully separated European voyages."
+    },
+    {
+      "id": "wa-asticou2",
+      "title": "National Park Service: Asticou's Island Domain, volume 2",
+      "url": "https://npshistory.com/publications/acad/eoa-v2.pdf",
+      "note": "Regional inventory of material culture, plant and animal foods, medicines, sites, and later ethnographic evidence."
+    },
+    {
+      "id": "wa-maine-archaeology",
+      "title": "Maine Historic Preservation Commission: Maine Prehistoric Archaeological Sites",
+      "url": "https://efotg.sc.egov.usda.gov/references/Public/ME/MainePrehistoricArchaeologicalSites.pdf",
+      "note": "Ceramic Period chronology, water-oriented sites, pottery, settlement, household production, exchange, and evidence limits."
+    },
+    {
+      "id": "wa-ajemseg",
+      "title": "Government of New Brunswick: Wolastoqiyik Ajemseg, volume 2",
+      "url": "https://www.gnb.ca/content/dam/GNB3/t/ch-cp/archeo/docs/wolastoqiyik-vol-2-2004.pdf",
+      "note": "Archaeological report on long occupation, Ceramic sequences, and material contexts at Ajemseg in Wolastoqey country."
+    },
+    {
+      "id": "wa-forillon",
+      "title": "Parks Canada: The Mi'gmaq and their ancestors, Forillon's first inhabitants",
+      "url": "https://parks.canada.ca/pn-np/qc/forillon/culture/premiers-first",
+      "note": "Evidence for Indigenous presence from about 1000 to 1534, fish cooking, domestic activity, lithic work, and portage."
+    },
+    {
+      "id": "wa-complexity",
+      "title": "Hrynick and Betts: Late Maritime Woodland hunter-fisher-gatherer complexity",
+      "url": "https://www.sciencedirect.com/science/article/pii/S027841652300051X",
+      "note": "Peer-reviewed synthesis of settlement, storage, aggregation, territoriality, architecture, exchange, and social complexity."
+    },
+    {
+      "id": "wa-architecture",
+      "title": "Hrynick and Betts: Architecture and gendered space at Port Joli Harbour",
+      "url": "https://eaglehill.us/JONAonline/articles/JONA-Sp-10/11-Hrynick.shtml",
+      "note": "Study of dwelling floors, family occupation, gendered space, wigwams, sweathouses, and interpretive method."
+    },
+    {
+      "id": "wa-sweathouse",
+      "title": "Hrynick and Betts: A Maritime Woodland period sweathouse",
+      "url": "https://doi.org/10.1016/j.jaa.2014.05.001",
+      "note": "Peer-reviewed identification of a possible earlier sweathouse and careful review of therapeutic and ritual interpretations."
+    },
+    {
+      "id": "wa-devils-head",
+      "title": "Hrynick and colleagues: Change and continuity at the Devil's Head Site",
+      "url": "https://www.jstor.org/stable/44808375",
+      "note": "Comparison of Late Maritime Woodland and protohistoric components on the St. Croix River."
+    },
+    {
+      "id": "wa-carson",
+      "title": "David Sanger: The Carson Site and the Late Ceramic Period in Passamaquoddy Bay",
+      "url": "https://books.google.com/books/about/The_Carson_Site_and_the_Late_Ceramic_Per.html?id=hmslAQAAMAAJ",
+      "note": "Study of a Passamaquoddy Bay shell midden, housepit, pottery, food, seasonality, and settlement."
+    },
+    {
+      "id": "wa-fishery",
+      "title": "W. Jesse Webb: A late Maritime Woodland Peskotomuhkati fishery",
+      "url": "https://unbscholar.lib.unb.ca/items/d5489818-734e-41c3-9057-e0be5a0c2ec1",
+      "note": "Detailed analysis of fish remains, especially tomcod, and seasonality at one ancestral Peskotomuhkati site."
+    },
+    {
+      "id": "wa-lifeways",
+      "title": "Penobscot Nation and EPA: Wabanaki Traditional Cultural Lifeways Exposure Scenario",
+      "url": "https://www.penobscotnation.org/wp-content/uploads/2022/04/DITCA.pdf",
+      "note": "Tribally reviewed modern model of traditional food, work, medicine, water, processing, and seasonal activity categories."
+    },
+    {
+      "id": "wa-pei-connections",
+      "title": "Prince Edward Island: Aboriginal Cultural Connections",
+      "url": "https://www.princeedwardisland.ca/sites/default/files/publications/aboriginal_cultural_connections.pdf",
+      "note": "Government synthesis of Mi'kmaq seasonal life, family, councils, children, education, food, and medicinal knowledge."
+    },
+    {
+      "id": "wa-ns-info",
+      "title": "Nova Scotia Museum: Aboriginal History in Nova Scotia, Mi'kmaq",
+      "url": "https://novascotia.ca/abor/docs/demographics/Nova-Scotia-Museum-Info-Sheet.pdf",
+      "note": "Museum account of wikuom construction, smoke openings, hide clothing, tanning, bone awls, and sinew."
+    },
+    {
+      "id": "wa-pei-first",
+      "title": "Prince Edward Island: First residents and the Arrival of the Europeans",
+      "url": "https://www.princeedwardisland.ca/en/information/executive-council-office/first-residents-and-the-arrival-of-the-europeans",
+      "note": "Account of Mi'kmaq continuity in Epekwitk and seven political districts under the Grand Council."
+    },
+    {
+      "id": "wa-passamaquoddy-kit",
+      "title": "Abbe Museum: Passamaquoddy Kit teacher guide",
+      "url": "https://www.abbemuseum.org/s/PassamaquoddyKitMaterials.pdf",
+      "note": "Museum reconstruction of family, nearby kin, learning by observation and work, spatial etiquette, games, and teasing."
+    },
+    {
+      "id": "wa-canoe",
+      "title": "Parks Canada: Traditional Mi'kmaw birchbark canoes",
+      "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/culture/autochtone-indigenous/canot-canoe",
+      "note": "Living knowledge of ocean and inland canoe designs, materials, construction, sealing, and paddles."
+    },
+    {
+      "id": "wa-kouchibouguac",
+      "title": "Parks Canada: The Mi'gmaq and Kouchibouguac",
+      "url": "https://www.parks.canada.ca/pn-np/nb/kouchibouguac/culture/migmaq",
+      "note": "Mi'gma'ki archaeology and local seasonal use of marine and inland resources."
+    },
+    {
+      "id": "wa-virtual-tour",
+      "title": "Hudson Museum: Wabanaki virtual-tour transcript",
+      "url": "https://umaine.edu/hudsonmuseum/teacher-resources/wabanaki-study-unit/the-wabanaki-virtual-tour-video-transcript/",
+      "note": "Museum explanations of bark shelters, containers, canoes, wigwam framing, lashings, smoke openings, and baskets."
+    },
+    {
+      "id": "wa-barry-dana",
+      "title": "Hudson Museum: Barry Dana on birchbark traditions",
+      "url": "https://umaine.edu/hudsonmuseum/teacher-resources/wabanaki-study-unit/birchbark-traditions-with-barry-dana-penobscot/",
+      "note": "Contemporary Penobscot practitioner on bark, roots, cedar, containers, canoes, and hands-on teaching."
+    },
+    {
+      "id": "wa-vocabulary",
+      "title": "Hudson Museum: Wabanaki vocabulary",
+      "url": "https://umaine.edu/hudsonmuseum/teacher-resources/wabanaki-study-unit/wabanaki-vocabulary/",
+      "note": "English museum glossary describing useful properties of birchbark and pine pitch."
+    },
+    {
+      "id": "wa-language-portal",
+      "title": "Peskotomuhkati-Wolastoqey Language Portal",
+      "url": "https://pmportal.org/",
+      "note": "Living collaborative dictionary and video archive documenting a distinct language and its speakers."
+    },
+    {
+      "id": "wa-collections",
+      "title": "Abbe Museum collections",
+      "url": "https://www.abbemuseum.org/collections",
+      "note": "Museum stewardship of more than twelve millennia of Wabanaki archaeological and material heritage."
+    },
+    {
+      "id": "wa-storm",
+      "title": "Matthew R. Bahar: A New Dawn on an Old Sea, 1500 to 1600",
+      "url": "https://academic.oup.com/book/35275/chapter-abstract/299863878",
+      "note": "History framing sixteenth-century voyagers as newcomers to an established Wabanaki maritime world."
+    },
+    {
+      "id": "wa-northern-landfall",
+      "title": "Newfoundland and Labrador Heritage: Evidence for a Northern Landfall",
+      "url": "https://www.heritage.nl.ca/articles/exploration/northern-landfall.php",
+      "note": "Review of the lost Cabot log, secondhand reports, and uncertainty over the 1497 landfall."
+    },
+    {
+      "id": "wa-allen",
+      "title": "John L. Allen: From Cabot to Cartier",
+      "url": "https://doi.org/10.1111/j.1467-8306.1992.tb01972.x",
+      "note": "Scholarly geographic history of exploration around Labrador and Newfoundland beginning in 1497."
+    },
+    {
+      "id": "wa-petroglyphs",
+      "title": "Parks Canada: Kejimkujik petroglyphs",
+      "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/culture/autochtone-indigenous/petroglyphes-petroglyphs",
+      "note": "Mi'kmaw cultural landscape with more than five hundred sacred, vulnerable, and broadly dated petroglyphs."
+    },
+    {
+      "id": "wa-writing",
+      "title": "Pierre Deleage: Mi'kmaw logographic writing, 1677 to 1912",
+      "url": "https://journals.lib.unb.ca/index.php/Acadiensis/article/view/20288",
+      "note": "Study dating the documented French-missionary Mi'kmaw logographic system to 1677 and later."
+    },
+    {
+      "id": "wa-portrait",
+      "title": "Nova Scotia Museum: Mi'kmaq Portraits, pre-contact imagery",
+      "url": "https://novascotia.ca/museum/mikmaq/?id=2&page=&period=1500&region=&section=image",
+      "note": "Museum catalogue context for a pre-contact petroglyph motif, treated as visual art rather than deciphered text."
+    },
+    {
+      "id": "wa-tales",
+      "title": "Smithsonian Institution: Still They Remember Me, Penobscot Transformer Tales",
+      "url": "https://www.si.edu/es/object/still-they-remember-me-penobscot-transformer-tales-volume-1%3Asiris_sil_1156559",
+      "note": "Catalogue description of instructive and entertaining Penobscot oral narratives recorded much later."
+    },
+    {
+      "id": "wa-games",
+      "title": "Nulhegan Abenaki Band: Traditions, Toys and Games",
+      "url": "https://abenakitribe.org/culture/culture-preservation-2/traditions-toys-and-games/",
+      "note": "Abenaki account of snow snakes, birchbark toys, dice, materials, play, and skill."
+    }
+  ],
+  "entities": [
+    {
+      "id": "wabanaki-dawnland-confederacy",
+      "card": "data/cards/wabanaki-dawnland-confederacy.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "wa-index",
+            "wa-summaries",
+            "wa-map1492",
+            "wa-meeting"
+          ],
+          "locator": "Exact imported id, label, approximate lifetime, and historical-basemap provenance. Shows that the inherited summary describes a modern Maine child-welfare commission and is identity drift. Only exact feature: a two-component MultiPolygon dated 1492 to 1500. Museum synthesis of Wabanaki nations, seasonal lifeways, kin groups, trade, consensus, early voyages, and the later formal Confederacy.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "wa-map1400",
+            "wa-map1492",
+            "wa-maine-archaeology"
+          ],
+          "locator": "Pre-start snapshot in which the exact Wabanaki id is absent. Only exact feature: a two-component MultiPolygon dated 1492 to 1500. Ceramic Period chronology, water-oriented sites, pottery, settlement, household production, exchange, and evidence limits.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "wa-maine-framework"
+          ],
+          "locator": "Current teaching framework for nation names, responsible terminology, and the 1497 to 1680s early-contact horizon.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "wa-maine-archaeology",
+            "wa-ajemseg"
+          ],
+          "locator": "Ceramic Period chronology, water-oriented sites, pottery, settlement, household production, exchange, and evidence limits. Archaeological report on long occupation, Ceramic sequences, and material contexts at Ajemseg in Wolastoqey country.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "wa-complexity"
+          ],
+          "locator": "Peer-reviewed synthesis of settlement, storage, aggregation, territoriality, architecture, exchange, and social complexity.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "wa-forillon",
+            "wa-nps-life"
+          ],
+          "locator": "Evidence for Indigenous presence from about 1000 to 1534, fish cooking, domestic activity, lithic work, and portage. Archaeological account of seasonal canoe travel, camps, wigwams, middens, ceramics, tools, and foods at Mount Desert Island.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "wa-asticou1",
+            "wa-northern-landfall",
+            "wa-allen"
+          ],
+          "locator": "Regional study of Wabanaki coast history, oral tradition, seafaring, leadership, and carefully separated European voyages. Review of the lost Cabot log, secondhand reports, and uncertainty over the 1497 landfall. Scholarly geographic history of exploration around Labrador and Newfoundland beginning in 1497.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "wa-penobscot-curriculum"
+          ],
+          "locator": "Tribal curriculum resources on family ties, homeland, oral tradition, arts, and community relationships.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "wa-map1500",
+            "wa-map1530",
+            "wa-storm"
+          ],
+          "locator": "Endpoint snapshot in which the exact id is absent. Post-end control confirming that the exact id remains absent. History framing sixteenth-century voyagers as newcomers to an established Wabanaki maritime world.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "wa-index",
+            "wa-coverage",
+            "wa-missing"
+          ],
+          "locator": "Exact index, coverage, and missing-card records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "wa-micmac-nation"
+          ],
+          "locator": "Mi'kmaq Nation introduction to the Dawnland name and related nations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "wa-map1492",
+            "wa-cards",
+            "wa-overrides"
+          ],
+          "locator": "Exact-feature overlap audit and repository identity controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "wa-map1492"
+          ],
+          "locator": "Decoded exact-feature geometry audit of imported border artwork.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "wa-summaries"
+          ],
+          "locator": "Imported-summary identity and chronology comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "wa-maine-archaeology"
+          ],
+          "locator": "Ceramic Period site distribution and archaeological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "wa-forillon"
+          ],
+          "locator": "Forillon occupation range, activities, pottery, and portage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "wa-ajemseg"
+          ],
+          "locator": "Ajemseg archaeological sequence and regional scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "wa-canoe"
+          ],
+          "locator": "Living Mi'kmaw canoe forms and construction knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "wa-kouchibouguac"
+          ],
+          "locator": "Kouchibouguac archaeology and locally bounded seasonal resources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "wa-fishery"
+          ],
+          "locator": "Fish-remain counts and seasonal interpretation at one Peskotomuhkati site.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "wa-nps-life"
+          ],
+          "locator": "Mount Desert food, pottery, tools, and preservation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "wa-carson"
+          ],
+          "locator": "Carson Site assemblage, settlement, and terminology limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "wa-pei-connections"
+          ],
+          "locator": "Mi'kmaq seasonal subsistence and plant-knowledge synthesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "wa-barry-dana",
+            "wa-vocabulary"
+          ],
+          "locator": "Living bark technology, storage, sealing, and teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "wa-virtual-tour"
+          ],
+          "locator": "Museum explanation of bark shelter construction and smoke opening.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "wa-ns-info"
+          ],
+          "locator": "Mi'kmaq homes, clothing, tanning, awls, and evidence dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "wa-architecture"
+          ],
+          "locator": "Port Joli dwelling and spatial interpretation with chronological caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "wa-complexity"
+          ],
+          "locator": "Peer-reviewed synthesis of complexity and sampling limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "wa-asticou2"
+          ],
+          "locator": "Regional material-culture inventory and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "wa-passamaquoddy-kit"
+          ],
+          "locator": "Extended kin and household learning, used with temporal caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "wa-penobscot-women"
+          ],
+          "locator": "Penobscot Nation account of women, teaching, and counsel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "wa-penobscot-curriculum"
+          ],
+          "locator": "Nation-designed family and homeland curriculum, used as continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "wa-pei-connections",
+            "wa-pei-first"
+          ],
+          "locator": "Mi'kmaq social and political organization, explicitly bounded by nation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "wa-asticou1"
+          ],
+          "locator": "Near-period leadership analogy and archaeological aggregation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "wa-passamaquoddy-kit"
+          ],
+          "locator": "Passamaquoddy family-as-school reconstruction and evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "wa-tales"
+          ],
+          "locator": "Smithsonian catalogue description and later-recording boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "wa-games"
+          ],
+          "locator": "Abenaki toys and games with post-contact-material caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "wa-penobscot-language"
+          ],
+          "locator": "Living Penobscot language resources and modern orthography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "wa-passamaquoddy-kit",
+            "wa-tales",
+            "wa-games"
+          ],
+          "locator": "Evidence-bounded teasing, entertainment, and play.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "wa-asticou2",
+            "wa-pei-connections"
+          ],
+          "locator": "Later medicinal records and pre-contact knowledge, carefully separated.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "wa-sweathouse"
+          ],
+          "locator": "Possible sweathouse interpretation and explicit dating caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "wa-lifeways"
+          ],
+          "locator": "Tribally reviewed categories of food, seasonality, work, and health.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "wa-vocabulary",
+            "wa-ns-info"
+          ],
+          "locator": "Material properties and daily technologies, not speculative clinical claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "wa-fishery",
+            "wa-carson"
+          ],
+          "locator": "Local subsistence evidence and bounded health inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "wa-lifeways"
+          ],
+          "locator": "Traditional water-use categories with modern-model caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "wa-maine-archaeology"
+          ],
+          "locator": "Water-oriented settlement and absence of uniform infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "wa-ns-info",
+            "wa-virtual-tour"
+          ],
+          "locator": "Wikuom smoke opening and chronology limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "wa-nps-life",
+            "wa-carson"
+          ],
+          "locator": "Archaeological refuse evidence and its limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "wa-nps-life",
+            "wa-lifeways"
+          ],
+          "locator": "Explicit evidence-bounded absence for toilets and fecal waste.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "wa-complexity"
+          ],
+          "locator": "Exchange, aggregation, territoriality, and political complexity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "wa-wolastoqey-history"
+          ],
+          "locator": "Nation-authored chronology for older networks and later formal Confederacy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "wa-pei-first"
+          ],
+          "locator": "Mi'kmaq districts and Grand Council, bounded by nation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "wa-devils-head"
+          ],
+          "locator": "St. Croix site transition and chronological restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "wa-asticou1"
+          ],
+          "locator": "Political synthesis with explicit war-evidence absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "wa-petroglyphs"
+          ],
+          "locator": "Mi'kmaw petroglyph corpus, broad dating, and cultural care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "wa-portrait"
+          ],
+          "locator": "Pre-contact visual motif and distinction from deciphered text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "wa-writing",
+            "wa-language-portal"
+          ],
+          "locator": "Explicit writing absence and later or modern documentation boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "wa-collections"
+          ],
+          "locator": "Museum collection range, materials, and dating caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "wa-passamaquoddy",
+            "wa-language-portal"
+          ],
+          "locator": "Tribal continuity and living language stewardship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "wa-map1492",
+            "wa-map1500",
+            "wa-map1530",
+            "wa-devils-head",
+            "wa-storm",
+            "wa-wolastoqey-history"
+          ],
+          "locator": "Only exact feature: a two-component MultiPolygon dated 1492 to 1500. Endpoint snapshot in which the exact id is absent. Post-end control confirming that the exact id remains absent. Comparison of Late Maritime Woodland and protohistoric components on the St. Croix River. History framing sixteenth-century voyagers as newcomers to an established Wabanaki maritime world. Nation-authored account of Wolastoqey history, Wabanaki relationships, technologies, and seventeenth-century Confederacy formalization.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "wabanaki-dawnland-confederacy",
+        "name": "Wabanaki (Dawnland peoples)",
+        "aliases": [
+          "Wabanaki (Dawnland Confederacy)",
+          "People of the Dawnland"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/wabanaki-dawnland-confederacy.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Dawnland regional umbrella for related, distinct Wabanaki peoples; older networks preceded the formal seventeenth-century Confederacy.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "wabanaki-dawnland-confederacy",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -73.4281342813428,
+            42.455252194744375,
+            -59.80559805598055,
+            49.23214310528556
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
