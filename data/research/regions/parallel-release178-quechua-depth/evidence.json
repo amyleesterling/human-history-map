@@ -1,0 +1,923 @@
+{
+  "version": 1,
+  "region": "South America",
+  "researcher": "Codex parallel release178-quechua research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "q-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, display name, approximate dates, and historical-basemaps provenance."
+    },
+    {
+      "id": "q-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Current inferred state kind, one observed interval, border count, queue, and missing review."
+    },
+    {
+      "id": "q-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Missing exact card record, imported-summary status, and absence of staged drafts."
+    },
+    {
+      "id": "q-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card is associated with the exact id."
+    },
+    {
+      "id": "q-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no researched override exists for the exact id and preserves separate Inca identity."
+    },
+    {
+      "id": "q-map-1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Immediate earlier control snapshot with no exact quechua feature."
+    },
+    {
+      "id": "q-map-1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact feature, decoded polygon, shared arcs, overlaps, properties, and point memberships."
+    },
+    {
+      "id": "q-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Immediate endpoint control where the exact feature is absent."
+    },
+    {
+      "id": "q-map-1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Later control confirming continued exact-id absence despite Quechua continuity."
+    },
+    {
+      "id": "q-bdpi-people",
+      "title": "Quechuas",
+      "url": "https://bdpi.cultura.gob.pe/pueblos/quechuas",
+      "note": "Peru Ministry of Culture account of diverse Quechua peoples, histories, livelihoods, language varieties, and living communities."
+    },
+    {
+      "id": "q-oxford-spread",
+      "title": "The Expansion and Distribution of Quechua",
+      "url": "https://doi.org/10.5871/bacad/9780197265031.003.0010",
+      "note": "Academic linguistic synthesis showing that Quechuan expansion predates and cannot be reduced to Inca imperial expansion."
+    },
+    {
+      "id": "q-bdpi-language",
+      "title": "Quechua",
+      "url": "https://bdpi.cultura.gob.pe/lenguas/quechua",
+      "note": "Peru Ministry of Culture language-family, vitality, varieties, and twentieth-century official alphabet information."
+    },
+    {
+      "id": "q-pucp-language",
+      "title": "Quechua language prehistory and Inca expansion",
+      "url": "https://revistas.pucp.edu.pe/index.php/boletindearqueologia/article/download/1181/1142/4564",
+      "note": "PUCP archaeological-linguistic study separating older Quechuan dispersals from later Inca promotion."
+    },
+    {
+      "id": "q-cambridge-contact",
+      "title": "Quechua expansion during the Inca and colonial periods",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-handbook-of-language-contact/quechua-expansion-during-the-inca-and-colonial-periods/996B6E404CEAC14EE68BFE9B30E19B54",
+      "note": "Cambridge account of imperial and colonial Quechua expansion, contact, and koineization."
+    },
+    {
+      "id": "q-oxford-handbook",
+      "title": "The Oxford Handbook of the Incas",
+      "url": "https://academic.oup.com/edited-volume/34666",
+      "note": "Academic synthesis of the multiethnic Inca Empire, imperial institutions, provincial agency, colonial change, and continuity."
+    },
+    {
+      "id": "q-nmai-timeline",
+      "title": "Inka Road History Timeline",
+      "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
+      "note": "Smithsonian National Museum of the American Indian chronology of expansion, invasion, disease, civil war, and transformation."
+    },
+    {
+      "id": "q-met-chronology",
+      "title": "Central and Southern Andes, 1400 to 1600",
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/08/sanc.html",
+      "note": "Metropolitan Museum chronology of rulers, expansion, provincial centers, invasion, and Vilcabamba."
+    },
+    {
+      "id": "q-oxford-conquest",
+      "title": "Inca Apocalypse",
+      "url": "https://academic.oup.com/book/36754",
+      "note": "Oxford study emphasizing decades of conquest and colonial transformation rather than an instant Andean ending at Cajamarca."
+    },
+    {
+      "id": "q-loc-titu",
+      "title": "History of how the Spaniards arrived in Peru",
+      "url": "https://www.loc.gov/item/hlas-bi2007001643/",
+      "note": "Library of Congress description of Titu Cusi Yupanqui’s 1570 Indigenous account and its Quechua-Spanish mediation."
+    },
+    {
+      "id": "q-unesco-road",
+      "title": "Qhapaq Ñan, Andean Road System",
+      "url": "https://whc.unesco.org/en/list/1459",
+      "note": "UNESCO account of the road network, shared infrastructure, storage, drainage, communication, and living guardianship."
+    },
+    {
+      "id": "q-nmai-poster",
+      "title": "The Inka Empire and Q’eswachaka",
+      "url": "https://americanindian.si.edu/nk360/inka/pdf/Inka-poster.pdf",
+      "note": "Smithsonian child-readable overview of Tawantinsuyu, reciprocity, roads, and continuing bridge renewal."
+    },
+    {
+      "id": "q-nmai-terraces",
+      "title": "Extending the Agricultural Area",
+      "url": "https://americanindian.si.edu/nk360/inka-water/agricultural/agricultural",
+      "note": "Smithsonian community interview on older terraces, Inca innovation, soils, irrigation, drainage, and continuity."
+    },
+    {
+      "id": "q-nmai-water",
+      "title": "Explore Water Management",
+      "url": "https://americanindian.si.edu/nk360/inka-water/explore-water-management/explore",
+      "note": "Smithsonian explanation of canals, springs, fountains, terraces, and water engineering at Inca sites."
+    },
+    {
+      "id": "q-nmai-water-today",
+      "title": "Inka Water Management Today",
+      "url": "https://americanindian.si.edu/nk360/inka-water/water-management-today/today",
+      "note": "Smithsonian interviews with local water experts about shared maintenance, irrigation, drinking water, and modern constraints."
+    },
+    {
+      "id": "q-nmai-food",
+      "title": "Food Diversification",
+      "url": "https://americanindian.si.edu/nk360/inka-water/food-diversification/food",
+      "note": "Smithsonian account of Andean ecological zones, potatoes, quinoa, maize, chuño, camelids, guinea pigs, and living farming."
+    },
+    {
+      "id": "q-nmai-living",
+      "title": "Ways of Living",
+      "url": "https://americanindian.si.edu/nk360/inka-water/ways-of-living/living",
+      "note": "Smithsonian account of khipu, state storage, Guaman Poma images, farming seasons, and evidence limits."
+    },
+    {
+      "id": "q-bm-khipu",
+      "title": "Khipu",
+      "url": "https://www.britishmuseum.org/collection/object/E_Am1907-0319-286",
+      "note": "British Museum record for a dated Inca cotton khipu with cords, knots, and recorded archaeological context."
+    },
+    {
+      "id": "q-harvard-khipu",
+      "title": "Quipu 41-52-30/2863",
+      "url": "https://collections.peabody.harvard.edu/objects/details/80232",
+      "note": "Harvard Peabody Museum object record documenting one khipu’s materials, colors, knots, and provenance."
+    },
+    {
+      "id": "q-met-tunic",
+      "title": "Inca tunic",
+      "url": "https://www.metmuseum.org/art/collection/search/313152",
+      "note": "Met object record for a 1450 to 1550 highland camelid-fiber garment showing technical and regional connections."
+    },
+    {
+      "id": "q-met-tunics",
+      "title": "The Andean Tunic, 400 BCE to 1800 CE",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2011/the-andean-tunic-400-bce1800-ce",
+      "note": "Met exhibition on gendered garments, materials, regional styles, storage, wear, and colonial continuities."
+    },
+    {
+      "id": "q-met-textiles",
+      "title": "Andean Textiles",
+      "url": "https://www.metmuseum.org/it/essays/andean-textiles",
+      "note": "Met essay on weaving traditions, specialist female and male weavers, materials, color, and imperial workshops."
+    },
+    {
+      "id": "q-oxford-gender",
+      "title": "Gender and Status in Inca Textile and Ceramic Craft Production",
+      "url": "https://academic.oup.com/edited-volume/34666/chapter-abstract/295367024",
+      "note": "Peer-reviewed chapter on gender, status, specialist craftspeople, widespread production, labor service, and state gifts."
+    },
+    {
+      "id": "q-wiley-households",
+      "title": "Hearths, Grinding Stones, and Households",
+      "url": "https://anthrosource.onlinelibrary.wiley.com/doi/10.1111/j.1551-8248.2008.00003.x",
+      "note": "Archaeological study of households, kin support, women’s and men’s labor, children’s tasks, and limits of ayllu models."
+    },
+    {
+      "id": "q-cambridge-ayllu",
+      "title": "Landscapes of Pre-Hispanic Andean Kinship",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/landscapes-of-prehispanic-andean-kinship-ancestors-ayllus-and-relationality/BFAFA21FDA8791213581C941E43EE120",
+      "note": "Academic review of ayllu as flexible kin, place, labor, ancestor, and land relations with debated antiquity."
+    },
+    {
+      "id": "q-oxford-trepanation",
+      "title": "Cranial trepanation in pre-Columbian Peruvian cultures",
+      "url": "https://academic.oup.com/brain/article/145/10/3335/6650781",
+      "note": "Medical-history review of trepanation across several Peruvian cultures and its continuation during Inca rule."
+    },
+    {
+      "id": "q-pmc-coca",
+      "title": "Travel medicine, coca and cocaine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880514/",
+      "note": "Peer-reviewed review of coca’s long Andean history, uses, and uncertain relationship to medical procedures."
+    },
+    {
+      "id": "q-jstage-machu",
+      "title": "Sanitary and Ritual Meaning on Water Supply and Drainage System in Machu Picchu",
+      "url": "https://www.jstage.jst.go.jp/article/journalhs1990/21/0/21_0_365/_article",
+      "note": "Engineering study of water supply and drainage at one elite Inca site, with sanitary and ritual interpretation."
+    },
+    {
+      "id": "q-jstage-pisac",
+      "title": "Water supply and drainage system in Pisac",
+      "url": "https://www.jstage.jst.go.jp/article/proes1992/38/0/38_0_265/_article/-char/en",
+      "note": "Field study of waterworks and health-risk management at one Inca site."
+    },
+    {
+      "id": "q-kb-poma",
+      "title": "The Guaman Poma Website",
+      "url": "https://poma.kb.dk/",
+      "note": "Royal Danish Library facsimile, transcription, and scholarly apparatus for Guaman Poma’s 1615 or 1616 autograph manuscript."
+    },
+    {
+      "id": "q-ut-huarochiri",
+      "title": "The Huarochiri Manuscript",
+      "url": "https://utpress.utexas.edu/9780292730533/",
+      "note": "University of Texas Press account of a circa 1600 regional Quechua manuscript, its local tellers, text, and translation."
+    },
+    {
+      "id": "q-si-huarochiri",
+      "title": "The Huarochirí Manuscript",
+      "url": "https://www.si.edu/object/siris_sil_411549",
+      "note": "Smithsonian Libraries record identifying the colonial-era Quechua narrative and its later transcription and translation."
+    },
+    {
+      "id": "q-nmai-resistance",
+      "title": "Resistance and Adaptation",
+      "url": "https://americanindian.si.edu/inkaroad/invasion/resistance-adaptation.html",
+      "note": "Smithsonian account of Indigenous resistance, textile continuity, adaptation, and colonial survival."
+    },
+    {
+      "id": "q-minsa-health",
+      "title": "Rijchariy intercultural health platform",
+      "url": "https://www.gob.pe/institucion/minsa/noticias/1341948-rijchariy-la-nueva-plataforma-del-ins-que-conecta-saberes-ancestrales-y-ciencia-para-transformar-la-salud-intercultural-en-el-peru",
+      "note": "Peru Ministry of Health evidence for current Indigenous participation in intercultural health and knowledge governance."
+    },
+    {
+      "id": "q-unesco-oral",
+      "title": "Oral traditions and expressions",
+      "url": "https://ich.unesco.org/en/oral-traditions-and-expressions-00053",
+      "note": "UNESCO guidance on oral knowledge, variation, transmission, community performers, and living safeguarding."
+    }
+  ],
+  "entities": [
+    {
+      "id": "quechua",
+      "card": "data/cards/quechua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "q-bdpi-people",
+            "q-oxford-spread"
+          ],
+          "locator": "Peru Ministry of Culture account of diverse Quechua peoples, histories, livelihoods, language varieties, and living communities. Academic linguistic synthesis showing that Quechuan expansion predates and cannot be reduced to Inca imperial expansion.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "q-pucp-language"
+          ],
+          "locator": "PUCP archaeological-linguistic study separating older Quechuan dispersals from later Inca promotion.",
+          "dateScope": {
+            "from": 1400,
+            "to": 1438
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "q-nmai-timeline"
+          ],
+          "locator": "Smithsonian National Museum of the American Indian chronology of expansion, invasion, disease, civil war, and transformation.",
+          "dateScope": {
+            "from": 1438,
+            "to": 1471
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "q-met-chronology",
+            "q-map-1400",
+            "q-map-1492"
+          ],
+          "locator": "Metropolitan Museum chronology of rulers, expansion, provincial centers, invasion, and Vilcabamba. Immediate earlier control snapshot with no exact quechua feature. Only exact feature, decoded polygon, shared arcs, overlaps, properties, and point memberships.",
+          "dateScope": {
+            "from": 1471,
+            "to": 1492
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "q-map-1492",
+            "q-index",
+            "q-coverage"
+          ],
+          "locator": "Only exact feature, decoded polygon, shared arcs, overlaps, properties, and point memberships. Exact indexed id, display name, approximate dates, and historical-basemaps provenance. Current inferred state kind, one observed interval, border count, queue, and missing review.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "q-map-1500",
+            "q-nmai-timeline"
+          ],
+          "locator": "Immediate endpoint control where the exact feature is absent. Smithsonian National Museum of the American Indian chronology of expansion, invasion, disease, civil war, and transformation.",
+          "dateScope": {
+            "from": 1500,
+            "to": 1532
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "q-oxford-conquest",
+            "q-loc-titu"
+          ],
+          "locator": "Oxford study emphasizing decades of conquest and colonial transformation rather than an instant Andean ending at Cajamarca. Library of Congress description of Titu Cusi Yupanqui’s 1570 Indigenous account and its Quechua-Spanish mediation.",
+          "dateScope": {
+            "from": 1532,
+            "to": 1572
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "q-cambridge-contact",
+            "q-ut-huarochiri",
+            "q-kb-poma"
+          ],
+          "locator": "Cambridge account of imperial and colonial Quechua expansion, contact, and koineization. University of Texas Press account of a circa 1600 regional Quechua manuscript, its local tellers, text, and translation. Royal Danish Library facsimile, transcription, and scholarly apparatus for Guaman Poma’s 1615 or 1616 autograph manuscript.",
+          "dateScope": {
+            "from": 1572,
+            "to": 1780
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "q-bdpi-language",
+            "q-minsa-health"
+          ],
+          "locator": "Peru Ministry of Culture language-family, vitality, varieties, and twentieth-century official alphabet information. Peru Ministry of Health evidence for current Indigenous participation in intercultural health and knowledge governance.",
+          "dateScope": {
+            "from": 1780,
+            "to": 2026
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "q-index",
+            "q-coverage",
+            "q-missing",
+            "q-card-index",
+            "q-overrides"
+          ],
+          "locator": "Exact repository identity, missing-content state, and bounded override correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "q-map-1492"
+          ],
+          "locator": "Complete snapshot audit with exact feature count, topology, positions, and bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "q-map-1492"
+          ],
+          "locator": "Representative point-in-polygon results and the resulting coverage limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "q-map-1492"
+          ],
+          "locator": "Computed positive-area overlaps and their consequence for feature classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "q-map-1400",
+            "q-map-1492",
+            "q-map-1500",
+            "q-map-1600"
+          ],
+          "locator": "Start and endpoint seams interpreted as software chronology with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "q-bdpi-language"
+          ],
+          "locator": "Official language-family and variety information applied without identity flattening.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "q-pucp-language"
+          ],
+          "locator": "Older language spread and the limits of imperial-origin explanations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "q-oxford-handbook"
+          ],
+          "locator": "Multiethnic imperial structure and varied provincial agency.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "q-cambridge-contact"
+          ],
+          "locator": "Colonial expansion and koineization used to prevent backward projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "q-index",
+            "q-overrides"
+          ],
+          "locator": "Exact record separation and forbidden automatic associations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "q-nmai-timeline",
+            "q-oxford-handbook"
+          ],
+          "locator": "Bounded imperial expansion chronology and archaeological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "q-met-chronology"
+          ],
+          "locator": "Expansion and the limits of equating material style with language identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "q-unesco-road"
+          ],
+          "locator": "Road functions, community labor, and gentle analogy against cultural homogenization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "q-oxford-conquest"
+          ],
+          "locator": "Conquest as a prolonged, Indigenous-involved transformation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "q-loc-titu"
+          ],
+          "locator": "Primary-account provenance and boundaries around representativeness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "q-nmai-terraces"
+          ],
+          "locator": "Terrace antiquity, layered construction, drainage, productivity, and regional variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "q-nmai-food"
+          ],
+          "locator": "Vertical ecology, crop and animal diversity, and menu limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "q-nmai-water"
+          ],
+          "locator": "Documented hydraulic components with a bounded humorous caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "q-nmai-water-today"
+          ],
+          "locator": "Living Indigenous expertise used with an explicit temporal boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "q-unesco-road"
+          ],
+          "locator": "Road engineering across terrain and living community guardianship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "q-oxford-gender"
+          ],
+          "locator": "Household labor and imperial demands without a universal daily schedule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "q-nmai-food"
+          ],
+          "locator": "Chuño production, storage value, and gentle evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "q-nmai-living",
+            "q-kb-poma"
+          ],
+          "locator": "Storage functions and careful dating of a colonial visual source.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "q-nmai-food"
+          ],
+          "locator": "Camelid uses, herding work, exchange, and a bounded identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "q-nmai-living"
+          ],
+          "locator": "Food preparation, social sharing, and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "q-cambridge-ayllu"
+          ],
+          "locator": "Current academic review of ayllu meaning, resilience, and debate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "q-wiley-households"
+          ],
+          "locator": "Household cooperation, broader kin labor, and limits of domestic archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "q-wiley-households",
+            "q-oxford-gender"
+          ],
+          "locator": "Gendered labor evidence and variation beyond rigid role charts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "q-wiley-households"
+          ],
+          "locator": "Children’s participation reconstructed from bounded colonial and household evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "q-oxford-gender"
+          ],
+          "locator": "Specialized gendered production separated from universal childhood education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "q-wiley-households",
+            "q-unesco-oral"
+          ],
+          "locator": "Situated household learning and oral transmission without invented curricula.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "q-oxford-handbook"
+          ],
+          "locator": "Selective imperial specialists distinguished from universal public schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "q-bm-khipu",
+            "q-nmai-living"
+          ],
+          "locator": "Record technology and the boundary against claiming a deciphered sentence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "q-harvard-khipu"
+          ],
+          "locator": "Object-specific material evidence and limits on recovering original meaning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "q-unesco-oral"
+          ],
+          "locator": "Oral knowledge processes and community-centered continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "q-oxford-trepanation"
+          ],
+          "locator": "Medical archaeology, survival evidence, cultural breadth, and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "q-pmc-coca"
+          ],
+          "locator": "Coca history and strict boundaries around preparation and medical inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "q-nmai-food",
+            "q-oxford-handbook"
+          ],
+          "locator": "Food security practices placed within broader and unequal health conditions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "q-oxford-trepanation",
+            "q-pmc-coca"
+          ],
+          "locator": "Explicit evidence boundary around healers, remedies, and population-wide diagnosis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "q-minsa-health"
+          ],
+          "locator": "Modern Indigenous health participation used as living continuity with temporal limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "q-jstage-machu"
+          ],
+          "locator": "Site-specific water and drainage evidence with explicit limits on generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "q-jstage-pisac"
+          ],
+          "locator": "Site-specific waterworks and bounded interpretation of health-risk management.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "q-nmai-terraces"
+          ],
+          "locator": "Agricultural drainage distinguished from sewage with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "q-jstage-machu",
+            "q-jstage-pisac"
+          ],
+          "locator": "Explicit evidence-bounded absence of universal toilets, latrines, and sewers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "q-nmai-terraces",
+            "q-met-tunics"
+          ],
+          "locator": "Bounded waste, reuse, repair, and manure evidence without invented systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "q-met-tunic"
+          ],
+          "locator": "Dated object materials, construction, exchange, and identity precision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "q-met-tunics",
+            "q-met-textiles"
+          ],
+          "locator": "Garment meanings, older traditions, regional production, wear, and repair.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "q-nmai-poster",
+            "q-unesco-road"
+          ],
+          "locator": "Synthesis of documented achievements with careful distribution of credit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "q-ut-huarochiri",
+            "q-si-huarochiri",
+            "q-kb-poma",
+            "q-bm-khipu"
+          ],
+          "locator": "Explicit absent interval sample with later colonial evidence clearly distinguished.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "q-nmai-resistance",
+            "q-bdpi-language"
+          ],
+          "locator": "Colonial transformation and modern living continuity without a false fall date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "q-nmai-resistance"
+          ],
+          "locator": "Smithsonian account of Indigenous resistance, textile continuity, adaptation, and colonial survival.",
+          "dateScope": null,
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "quechua",
+        "name": "Quechua",
+        "aliases": [
+          "Quechua peoples",
+          "Quechuan peoples"
+        ],
+        "kind": "culture",
+        "region": "South America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/quechua.json",
+        "dateBasis": "map_coverage",
+        "summary": "Diverse Andean peoples linked by Quechuan languages, shown in one approximate 1492 to 1500 atlas slice and continuing today.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "quechua",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -79.74979749797498,
+            -27.88920725059775,
+            -63.92043920439204,
+            -5.696341116995619
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
