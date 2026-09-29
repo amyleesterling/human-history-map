@@ -1,0 +1,940 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release171-yemen-1715 research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "hz-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact generated id, imported name, approximate atlas dates, and historical-basemap provenance."
+    },
+    {
+      "id": "hz-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Current ancient-Yemen summary incorrectly attached to this early modern exact id."
+    },
+    {
+      "id": "hz-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Four observed intervals and pending identity, chronology, border, and card review."
+    },
+    {
+      "id": "hz-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no runtime card is associated with this exact id."
+    },
+    {
+      "id": "hz-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no reviewed override exists for this exact target."
+    },
+    {
+      "id": "hz-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, imported lead, and empty staged-drafts list."
+    },
+    {
+      "id": "hz-map1650",
+      "title": "Human History Map 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Pre-appearance control for the exact atlas id and audited Yemeni point ownership."
+    },
+    {
+      "id": "hz-map1715",
+      "title": "Human History Map 1715 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1715.json",
+      "note": "First exact target feature, decoded geometry, representative points, and topology tests."
+    },
+    {
+      "id": "hz-map1783",
+      "title": "Human History Map 1783 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1783.json",
+      "note": "Second target interval and the slightly changed decoded coordinate regime."
+    },
+    {
+      "id": "hz-map1800",
+      "title": "Human History Map 1800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1800.json",
+      "note": "Third target interval with unchanged post-1783 decoded geometry."
+    },
+    {
+      "id": "hz-map1815",
+      "title": "Human History Map 1815 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Final target feature, whose declared interval continues to the 1878 snapshot."
+    },
+    {
+      "id": "hz-map1878",
+      "title": "Human History Map 1878 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1878.json",
+      "note": "Disappearance control after the atlas interval and after the historical state ended."
+    },
+    {
+      "id": "hz-dresch-history",
+      "title": "A History of Modern Yemen",
+      "url": "https://assets.cambridge.org/97805217/90925/sample/9780521790925ws.pdf",
+      "note": "Cambridge historical synthesis on Qasimid rule, regional diversity, collapse, famine, disease, and Ottoman return."
+    },
+    {
+      "id": "hz-dresch-tribes",
+      "title": "Tribes, Government, and History in Yemen",
+      "url": "https://academic.oup.com/book/47974",
+      "note": "Oxford monograph integrating local histories, documents, fieldwork, tribal organization, livelihood, learning, and government."
+    },
+    {
+      "id": "hz-dresch-qasimi",
+      "title": "History from the Qasimis to the Hamid al-Din",
+      "url": "https://academic.oup.com/book/47974/chapter-abstract/420462009",
+      "note": "Oxford chapter tracing seventeenth-century expansion, nineteenth-century disasters, state collapse, and later Ottoman occupation."
+    },
+    {
+      "id": "hz-haykel",
+      "title": "Revival and Reform in Islam: The Legacy of Muhammad al-Shawkani",
+      "url": "https://assets.cambridge.org/97805215/28900/toc/9780521528900_toc.pdf",
+      "note": "Cambridge study of Qasimid political change, scholarship, Sunni traditionism, and Muhammad al-Shawkani."
+    },
+    {
+      "id": "hz-zaydi-crossroads",
+      "title": "Zaydism at the Crossroads",
+      "url": "https://www.cambridge.org/core/books/abs/shii-islam/zaydism-at-the-crossroads/5C56345CCC8B985C2C9D9A45C56E7C5D",
+      "note": "Cambridge chapter dating Qasimid collapse to 1853, subsequent disorder, Ottoman rule, and later Zaydi continuity."
+    },
+    {
+      "id": "hz-nationalities",
+      "title": "From Paris to Taif: Sovereignty, Borders, and Minorities in Arabia",
+      "url": "https://www.cambridge.org/core/journals/nationalities-papers/article/from-paris-to-taif-sovereignty-borders-and-the-question-of-minorities-in-the-arabian-peninsula/5C5BA7D9286B7F0CEB317E8739E88838",
+      "note": "Peer-reviewed chronology of Qasimid Yemen, coffee revenue, nineteenth-century intervention, Aden, and Ottoman occupation."
+    },
+    {
+      "id": "hz-ottoman-indian",
+      "title": "The Ottoman Empire and the Indian Ocean",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter/546308196",
+      "note": "Oxford account of revolts beginning in 1597, Ottoman abandonment, Indian Ocean strategy, and nineteenth-century return."
+    },
+    {
+      "id": "hz-manuscript-heritage",
+      "title": "Yemen's Manuscript Culture",
+      "url": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/22/01/37/97/2022013797/2022013797.pdf",
+      "note": "Library of Congress hosted scholarly chapter on Qasimid expansion, Ottoman withdrawal, coffee prosperity, and manuscript renewal."
+    },
+    {
+      "id": "hz-coffee",
+      "title": "Coffee in the Red Sea Area from the Sixteenth to the Nineteenth Century",
+      "url": "https://www.cambridge.org/core/books/abs/global-coffee-economy-in-africa-asia-and-latin-america-15001989/coffee-in-the-red-sea-area-from-the-sixteenth-to-the-nineteenth-century/8EDB621854C8AF5514BF39D6325171CE",
+      "note": "Cambridge economic history of terrace cultivation, marketing networks, ports, consumption, and global competition."
+    },
+    {
+      "id": "hz-mocha-houses",
+      "title": "The Merchant Houses of Mocha",
+      "url": "https://uwapress.uw.edu/book/9780295989112/the-merchant-houses-of-mocha/",
+      "note": "University of Washington Press study of merchants, architecture, social hierarchy, households, and Indian Ocean connections."
+    },
+    {
+      "id": "hz-material-trade",
+      "title": "Shipped but Not Sold",
+      "url": "https://uhpress.hawaii.edu/title/shipped-but-not-sold-material-culture-and-the-social-protocols-of-trade-during-yemens-age-of-coffee/",
+      "note": "University of Hawaii Press study of everyday cargo, gifts, ceremonies, coffee service, textiles, medicines, and trade tools."
+    },
+    {
+      "id": "hz-law-treaty",
+      "title": "Lost in Translation: the Anglo-Yemeni Treaty of 1821",
+      "url": "https://www.cambridge.org/core/journals/law-and-history-review/article/lost-in-translation-extraterritoriality-subjecthood-and-subjectivity-in-the-angloyemeni-treaty-of-1821/74D6E4C686D80B853DCF6A2105FA8E83",
+      "note": "Peer-reviewed study of Qasimid diplomacy, Mocha communities, translation, subjecthood, and al-Shawkani as chief judge."
+    },
+    {
+      "id": "hz-waqf",
+      "title": "Waqf in Zaydi Yemen",
+      "url": "https://brill.com/display/book/9789004377844/9789004377844_webready_content_text.pdf",
+      "note": "Brill monograph on Qasimid Zaydism, charitable endowments, courts, Lower Yemen, and learned institutions."
+    },
+    {
+      "id": "hz-barber",
+      "title": "Dissembling Descent, or How the Barber Lost His Turban",
+      "url": "https://brill.com/view/journals/ils/9/2/article-p194_4.pdf",
+      "note": "Peer-reviewed case study of identity, evidence, hierarchy, and justice in eighteenth-century Zaydi Yemen."
+    },
+    {
+      "id": "hz-mawza",
+      "title": "The Mawza Exile at the Juncture of Zaydi and Ottoman Messianism",
+      "url": "https://www.cambridge.org/core/journals/ajs-review/article/abs/mawza-exile-at-the-juncture-of-zaydi-and-ottoman-messianism/D99B0EF9A9E231CA51E714E64BD75B93",
+      "note": "Peer-reviewed history of Yemeni Jewish life, restrictions, persecution, and the Qasimid-era Mawza exile."
+    },
+    {
+      "id": "hz-orphans",
+      "title": "The Forced Conversion of Jewish Orphans in Yemen",
+      "url": "https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/abs/forced-conversion-of-jewish-orphans-in-yemen/50F37831C90849F0B060604F918720EC",
+      "note": "Peer-reviewed analysis of an eighteenth-century Zaydi legal interpretation and its effects on orphaned Jewish children."
+    },
+    {
+      "id": "hz-ymdi",
+      "title": "Yemeni Manuscript Digitization Initiative",
+      "url": "https://ymdi.uoregon.edu/",
+      "note": "University-led preservation program documenting Yemen's extensive private Arabic manuscript libraries and partner institutions."
+    },
+    {
+      "id": "hz-shawkani-title",
+      "title": "Nayl al-awtar min ahadith Sayyid al-Akhyar",
+      "url": "https://search.worldcat.org/title/503267175",
+      "note": "Library catalog record securing the Arabic title, author, transliteration, and language of al-Shawkani's work."
+    },
+    {
+      "id": "hz-princeton-medicine",
+      "title": "Kitab Unmudhaj fi al-tibb",
+      "url": "https://digital-collections.princeton.edu/i/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D9%81%D9%8A-%D8%A7%D9%84%D8%B7%D8%A8/item/4f0c2916-403a-4d77-aeb0-3f9cf552834e/viewer/9",
+      "note": "Princeton catalog for a seventeenth-century Arabic medical manuscript from the al-Madani library collection."
+    },
+    {
+      "id": "hz-loc-medicine",
+      "title": "al-Insan fi al-tibb",
+      "url": "https://www.loc.gov/item/2008427051/",
+      "note": "Library of Congress catalog for a late eighteenth-century Arabic treatise on health, nutrition, medication, and disease."
+    },
+    {
+      "id": "hz-unesco-sanaa",
+      "title": "Old City of Sanaa",
+      "url": "https://whc.unesco.org/en/list/385",
+      "note": "UNESCO account of tower houses, materials, gardens, mosques, hammams, and the historic urban fabric."
+    },
+    {
+      "id": "hz-archnet-belayli",
+      "title": "Bayt al-Belayli",
+      "url": "https://www.archnet.org/sites/3808",
+      "note": "Archnet record for a seventeenth-century Sanaa tower house and its family, storage, reception, and social spaces."
+    },
+    {
+      "id": "hz-unesco-zabid",
+      "title": "Historic Town of Zabid",
+      "url": "https://whc.unesco.org/en/list/611/",
+      "note": "UNESCO account of canals, mosques, madrasas, courtyard houses, privacy, markets, and international learning."
+    },
+    {
+      "id": "hz-zabid-mission",
+      "title": "UNESCO Expert Mission to Zabid",
+      "url": "https://whc.unesco.org/document/138921",
+      "note": "UNESCO technical study describing traditional materials, courtyards, wells, latrines, washing places, kitchens, and ventilation."
+    },
+    {
+      "id": "hz-fao-farming",
+      "title": "Farming Systems and Poverty: Highland Mixed Farming",
+      "url": "https://www.fao.org/4/y1860e/y1860e05.htm",
+      "note": "FAO synthesis of Yemeni terraces, cereals, legumes, coffee, qat, fruit, livestock, water rights, and household farming."
+    },
+    {
+      "id": "hz-met-necklace",
+      "title": "Necklace, Yemen, nineteenth century",
+      "url": "https://www.metmuseum.org/art/collection/search/444673",
+      "note": "Metropolitan Museum object record linking Jewish silversmiths, coffee currency, Indian forms, and bridal trousseaux."
+    },
+    {
+      "id": "hz-princeton-legal",
+      "title": "Yemeni legal document dated 1764",
+      "url": "https://geniza.princeton.edu/documents/19061/",
+      "note": "Princeton Geniza catalog for a Yemen legal document in Arabic and Judaeo-Arabic with six witness clauses."
+    },
+    {
+      "id": "hz-oxford-chronology",
+      "title": "A Short Chronology of Yemen",
+      "url": "https://academic.oup.com/book/4355/chapter-abstract/146289603",
+      "note": "Oxford chronology dating British capture of Aden and the Ottoman conquest of Sanaa in 1872."
+    },
+    {
+      "id": "hz-cambridge-commerce",
+      "title": "Between Commerce and Sanctity in the Early Modern Red Sea",
+      "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/between-commerce-and-sanctity-ottoman-policies-and-international-boundaries-in-the-early-modern-red-sea/940FD84400E0A8584345C5108C10956A",
+      "note": "Peer-reviewed account of Ottoman withdrawal, coffee expansion, Mocha, European companies, and Red Sea commerce."
+    }
+  ],
+  "entities": [
+    {
+      "id": "yemen-1715",
+      "card": "data/cards/yemen-1715.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "hz-index",
+            "hz-map1715",
+            "hz-map1815",
+            "hz-dresch-history"
+          ],
+          "locator": "Exact generated id, imported name, approximate atlas dates, and historical-basemap provenance. First exact target feature, decoded geometry, representative points, and topology tests. Final target feature, whose declared interval continues to the 1878 snapshot. Cambridge historical synthesis on Qasimid rule, regional diversity, collapse, famine, disease, and Ottoman return.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "hz-ottoman-indian"
+          ],
+          "locator": "Oxford account of revolts beginning in 1597, Ottoman abandonment, Indian Ocean strategy, and nineteenth-century return.",
+          "dateScope": {
+            "from": 1598,
+            "to": 1620
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "hz-manuscript-heritage"
+          ],
+          "locator": "Library of Congress hosted scholarly chapter on Qasimid expansion, Ottoman withdrawal, coffee prosperity, and manuscript renewal.",
+          "dateScope": {
+            "from": 1620,
+            "to": 1636
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "hz-manuscript-heritage"
+          ],
+          "locator": "Library of Congress hosted scholarly chapter on Qasimid expansion, Ottoman withdrawal, coffee prosperity, and manuscript renewal.",
+          "dateScope": {
+            "from": 1636,
+            "to": 1676
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "hz-mawza"
+          ],
+          "locator": "Peer-reviewed history of Yemeni Jewish life, restrictions, persecution, and the Qasimid-era Mawza exile.",
+          "dateScope": {
+            "from": 1676,
+            "to": 1726
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "hz-coffee",
+            "hz-nationalities"
+          ],
+          "locator": "Cambridge economic history of terrace cultivation, marketing networks, ports, consumption, and global competition. Peer-reviewed chronology of Qasimid Yemen, coffee revenue, nineteenth-century intervention, Aden, and Ottoman occupation.",
+          "dateScope": {
+            "from": 1726,
+            "to": 1795
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "hz-haykel"
+          ],
+          "locator": "Cambridge study of Qasimid political change, scholarship, Sunni traditionism, and Muhammad al-Shawkani.",
+          "dateScope": {
+            "from": 1795,
+            "to": 1821
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "hz-law-treaty"
+          ],
+          "locator": "Peer-reviewed study of Qasimid diplomacy, Mocha communities, translation, subjecthood, and al-Shawkani as chief judge.",
+          "dateScope": {
+            "from": 1821,
+            "to": 1839
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "hz-zaydi-crossroads"
+          ],
+          "locator": "Cambridge chapter dating Qasimid collapse to 1853, subsequent disorder, Ottoman rule, and later Zaydi continuity.",
+          "dateScope": {
+            "from": 1839,
+            "to": 1853
+          },
+          "uncertainty": "Institutional phase; not verification of the imported polygon."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "hz-index",
+            "hz-summary",
+            "hz-coverage",
+            "hz-card-index",
+            "hz-overrides",
+            "hz-missing"
+          ],
+          "locator": "Exact repository identity, imported-summary mismatch, coverage, and missing-card state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "hz-map1715",
+            "hz-map1783",
+            "hz-map1800",
+            "hz-map1815"
+          ],
+          "locator": "Complete snapshot audit, feature count, intervals, shape statistics, and geometry regimes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "hz-map1715",
+            "hz-map1815"
+          ],
+          "locator": "Representative-point membership across all four identical-coverage target features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "hz-map1715",
+            "hz-map1783",
+            "hz-map1800",
+            "hz-map1815"
+          ],
+          "locator": "Direct shared-arc and polygon area-overlap tests for every target occurrence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "hz-map1650",
+            "hz-map1715",
+            "hz-map1815",
+            "hz-map1878"
+          ],
+          "locator": "Cross-snapshot appearance and disappearance controls compared with sourced chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "hz-ottoman-indian"
+          ],
+          "locator": "Oxford account of renewed revolt, Ottoman fragility, and regional strategic setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "hz-manuscript-heritage"
+          ],
+          "locator": "Scholarly chronology of Ottoman withdrawal and Qasimid state consolidation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "hz-dresch-tribes"
+          ],
+          "locator": "Oxford analysis of imamate qualifications, tribes, scholarship, and political action.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "hz-waqf"
+          ],
+          "locator": "Brill synthesis of Qasimid Zaydism, Lower Yemen, subjects, and judicial offices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "hz-law-treaty"
+          ],
+          "locator": "Treaty comparison, translation, extraterritoriality, subjecthood, and political interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "hz-waqf"
+          ],
+          "locator": "Brill evidence on charitable and family endowments in Zaydi Yemen.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "hz-barber"
+          ],
+          "locator": "Manuscript-based legal case on social identity, status signals, witnesses, and proof.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "hz-mawza"
+          ],
+          "locator": "Peer-reviewed history of Jewish continuity, restrictions, exile, mortality, and return.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "hz-orphans"
+          ],
+          "locator": "Study of the orphan decree, its doctrinal basis, implementation, and family consequences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "hz-mocha-houses"
+          ],
+          "locator": "Port-city study of residents, commercial roles, social hierarchy, and architectural setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "hz-fao-farming"
+          ],
+          "locator": "FAO description of Yemeni household terrace systems, crops, livestock, and water limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "hz-coffee"
+          ],
+          "locator": "Cambridge history of cultivation, processing regions, marketing networks, ports, and global demand.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "hz-cambridge-commerce"
+          ],
+          "locator": "Peer-reviewed evidence on Mocha, coffee, merchants, imports, and Red Sea routes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "hz-material-trade"
+          ],
+          "locator": "University press study of cargo, diplomatic gifts, ceremonies, service wares, and negotiation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "hz-mocha-houses"
+          ],
+          "locator": "Architectural and archival reconstruction of Mocha houses and their mixed domestic-commercial uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "hz-archnet-belayli"
+          ],
+          "locator": "Archnet floor-by-floor account of Bayt al-Belayli and its household functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "hz-unesco-zabid"
+          ],
+          "locator": "UNESCO account of Tihama courtyard houses, privacy, materials, decoration, and inequality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "hz-zabid-mission"
+          ],
+          "locator": "UNESCO technical description of courtyards, kitchens, wells, washing, latrines, ventilation, and sleeping.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "hz-material-trade"
+          ],
+          "locator": "Documented trade goods and their socially restricted use in Mocha households.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "hz-met-necklace"
+          ],
+          "locator": "Museum object record on Yemeni silverwork, Jewish makers, foreign forms, currency, and trousseaux.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "hz-unesco-zabid"
+          ],
+          "locator": "UNESCO account of Zabid as a long-lived international center of Islamic learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "hz-waqf"
+          ],
+          "locator": "Brill evidence on endowed property, learned institutions, and long-term administration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "hz-ymdi"
+          ],
+          "locator": "University-led manuscript preservation mission, collections, partnerships, and material scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "hz-haykel"
+          ],
+          "locator": "Cambridge intellectual history of al-Shawkani, reform, state office, and religious controversy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "hz-shawkani-title"
+          ],
+          "locator": "Library catalog title, author attribution, language, transliteration, and translation boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "hz-princeton-medicine"
+          ],
+          "locator": "Princeton catalog description, date, collection context, structure, and evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "hz-loc-medicine"
+          ],
+          "locator": "Library of Congress manuscript contents, date, medical framework, and provenance limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "hz-cambridge-commerce"
+          ],
+          "locator": "Indian Ocean cargo evidence interpreted without turning traded substances into verified cures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "hz-dresch-qasimi"
+          ],
+          "locator": "Oxford history of nineteenth-century famine, disease, conflict, and government collapse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "hz-princeton-medicine"
+          ],
+          "locator": "Explicit evidence boundary between manuscript medicine and undocumented household or reproductive care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "hz-fao-farming"
+          ],
+          "locator": "FAO synthesis of terrace hydrology, supplementary irrigation, water rights, labor, and risk.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "hz-unesco-zabid"
+          ],
+          "locator": "UNESCO description of Zabid canals, floodplain setting, wells, and urban plan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "hz-zabid-mission"
+          ],
+          "locator": "Technical survey of traditional house service spaces with chronology and generalization limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "hz-unesco-sanaa"
+          ],
+          "locator": "UNESCO inventory and urban context for Sanaa hammams, gardens, markets, and houses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "hz-zabid-mission"
+          ],
+          "locator": "Evidence-bounded sanitation conclusion based on documented latrines and absent statewide systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "hz-material-trade"
+          ],
+          "locator": "University press synthesis of traded objects, gifts, ceremony, identity, and commercial protocol.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "hz-met-necklace"
+          ],
+          "locator": "Museum evidence for maker communities, materials, design exchange, and chronology limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "hz-unesco-sanaa"
+          ],
+          "locator": "UNESCO evidence on materials, decoration, urban density, tower houses, and craft continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "hz-ymdi"
+          ],
+          "locator": "Manuscript initiative and scholarly heritage chapter contextualizing books as material achievements.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "hz-princeton-legal"
+          ],
+          "locator": "Dated manuscript record, languages, location, legal genre, and witness clauses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "hz-nationalities"
+          ],
+          "locator": "Peer-reviewed account of coffee revenue, foreign competition, and political-economic decline.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "hz-dresch-qasimi"
+          ],
+          "locator": "Oxford interpretation of rival imams, tribal alliances, fiscal weakness, and fragmentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "hz-oxford-chronology"
+          ],
+          "locator": "Oxford dates for Aden and Sanaa compared with the independently sourced collapse date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "hz-zaydi-crossroads"
+          ],
+          "locator": "Cambridge endpoint, twenty-year disorder period, later imamate, and religious continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "hz-dresch-tribes"
+          ],
+          "locator": "Oxford evidence for local political plurality, tribal society, livelihoods, and long continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "hz-zaydi-crossroads"
+          ],
+          "locator": "Cambridge chapter dating Qasimid collapse to 1853, subsequent disorder, Ottoman rule, and later Zaydi continuity.",
+          "dateScope": {
+            "year": 1853
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "yemen-1715",
+        "name": "Qasimid Imamate of Yemen",
+        "aliases": [
+          "Yemen",
+          "Qasimid Yemen",
+          "Qasimi State",
+          "Imamate of Yemen"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 1598,
+        "to": 1853,
+        "circa": false,
+        "card": "cards/yemen-1715.json",
+        "dateBasis": "historical",
+        "summary": "The Qasimid imams expelled Ottoman forces, ruled much of western Yemen through a coffee-rich but negotiated state, and collapsed amid fragmentation in 1853.",
+        "summarySource": null,
+        "fell": 1853,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1715.json",
+          "properties": {
+            "civ": "yemen-1715",
+            "from": 1715,
+            "to": 1783,
+            "precision": 3
+          },
+          "bounds": [
+            42.7630276302763,
+            12.61409665080538,
+            46.8778687786878,
+            16.645887012570853
+          ]
+        },
+        {
+          "file": "world-1783.json",
+          "properties": {
+            "civ": "yemen-1715",
+            "from": 1783,
+            "to": 1800,
+            "precision": 3
+          },
+          "bounds": [
+            42.7630276302763,
+            12.613583779163108,
+            46.8778687786878,
+            16.645540185145933
+          ]
+        },
+        {
+          "file": "world-1800.json",
+          "properties": {
+            "civ": "yemen-1715",
+            "from": 1800,
+            "to": 1815,
+            "precision": 3
+          },
+          "bounds": [
+            42.7630276302763,
+            12.613583779163108,
+            46.8778687786878,
+            16.645540185145933
+          ]
+        },
+        {
+          "file": "world-1815.json",
+          "properties": {
+            "civ": "yemen-1715",
+            "from": 1815,
+            "to": 1878,
+            "precision": 3
+          },
+          "bounds": [
+            42.7630276302763,
+            12.613583779163108,
+            46.8778687786878,
+            16.645540185145933
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
