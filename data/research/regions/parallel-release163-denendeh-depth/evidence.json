@@ -1,0 +1,958 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release163-denendeh research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "de-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, display name, interval, generated origin, and related contemporary atlas records."
+    },
+    {
+      "id": "de-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing status, state default, observed interval, border count, and review fields."
+    },
+    {
+      "id": "de-missing",
+      "title": "Human History Map missing-card queue",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms that this exact card is missing, unassigned, and has no staged draft."
+    },
+    {
+      "id": "de-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Confirms no imported summary for this id and exposes related imported descriptions for auditing."
+    },
+    {
+      "id": "de-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded pre-appearance control for owners, probes, overlaps, and the first atlas seam."
+    },
+    {
+      "id": "de-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded target geometry, components, rings, points, overlaps, shared arcs, and exact interval."
+    },
+    {
+      "id": "de-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded endpoint repaint and owner changes at all representative probes."
+    },
+    {
+      "id": "de-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded post-end control showing another major change in atlas ownership."
+    },
+    {
+      "id": "de-athabaskan-card",
+      "title": "Human History Map Athabaskan card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/athabaskan.json",
+      "note": "Existing broad language-family card audited and rejected as an exact-card substitute."
+    },
+    {
+      "id": "de-tatsaotine-card",
+      "title": "Human History Map Tatsaotine card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/t-atsaot-ine.json",
+      "note": "Existing community-specific card audited and retained as a separate historical treatment."
+    },
+    {
+      "id": "de-acho-card",
+      "title": "Human History Map Acho Dene Koe card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/acho-dene-koe.json",
+      "note": "Existing community-specific card whose chronology and evidence cannot represent this broad polygon."
+    },
+    {
+      "id": "de-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Documents existing associations and confirms that the exact target has no researched override."
+    },
+    {
+      "id": "de-dene-home",
+      "title": "Dene Nation home",
+      "url": "https://denenation.com/",
+      "note": "Community authority identifying Denendeh as the Land of the People and representing living Dene communities."
+    },
+    {
+      "id": "de-dene-nation",
+      "title": "Dene Nation: Our Nation",
+      "url": "https://denenation.com/our-nation/",
+      "note": "Community account of Denendeh, five distinct regional groups, languages, territories, oral history, and stewardship."
+    },
+    {
+      "id": "de-dene-land-water",
+      "title": "Dene Nation Lands, Water and Environment",
+      "url": "https://denenation.com/departments/land-water/",
+      "note": "Community authority on water, land, wildlife, consent, knowledge protocols, and relationships across Denendeh."
+    },
+    {
+      "id": "de-dene-reform",
+      "title": "Dene Nation Constitution Reform Commission",
+      "url": "https://denenation.com/introducing-the-constitution-reform-commission/",
+      "note": "Community account of distinct governing structures, story-based law, values, consultation, and collective decision making."
+    },
+    {
+      "id": "de-dene-constitution",
+      "title": "Dene Nation Constitution",
+      "url": "https://denenation.com/wp-content/uploads/2021/06/DN.Const_.april_.14.2021.clean_.pdf",
+      "note": "Dene Nation constitutional statement recognizing distinct territories, governments, oral treaties, and responsibilities."
+    },
+    {
+      "id": "de-dene-protocol",
+      "title": "Dene Knowledge Protocol Guide",
+      "url": "https://denenation.com/wp-content/uploads/2025/11/Final-WBI5112025-Dene-Knowledge-Protocol-Guide.pdf",
+      "note": "Community protocol on knowledge diversity, consent, ownership, context, and respectful use rather than extraction."
+    },
+    {
+      "id": "de-ddc",
+      "title": "Denendeh Development Corporation: About Us",
+      "url": "https://denendeh.ca/about-us/",
+      "note": "Dene-owned institution explaining the modern political and geographic use of Denendeh across five regions."
+    },
+    {
+      "id": "de-ece-kede",
+      "title": "Government of Northwest Territories: Dene Kede",
+      "url": "https://www.ece.gov.nt.ca/en/services/jk-12-school-curriculum/dene-kede-and-inuuqatigiit",
+      "note": "Elder-informed curriculum framing lifelong learning through land, people, self, spirituality, language, and capable citizenship."
+    },
+    {
+      "id": "de-ece-kede-pdf",
+      "title": "Dene Kede K to 6 curriculum",
+      "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/dene_kede_k_-_6_curriculum.pdf",
+      "note": "Detailed community-developed curriculum connecting children, observation, guided practice, stories, land skills, and relationships."
+    },
+    {
+      "id": "de-ece-kede-teacher",
+      "title": "Dene Kede teacher resource manual",
+      "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/dene_kede_k-6_teacher_resource_manual.pdf",
+      "note": "Teacher resource describing traditional Dene education through family, Elders, experience, practice, and community participation."
+    },
+    {
+      "id": "de-ece-languages",
+      "title": "Our Languages curriculum",
+      "url": "https://www.ece.gov.nt.ca/sites/ece/files/resources/our_languages_curriculum.pdf",
+      "note": "Territorial curriculum distinguishing Dene languages, communities, dialects, oral proficiency, and language learning."
+    },
+    {
+      "id": "de-ece-community-lang",
+      "title": "Official Indigenous languages and dialects spoken by community",
+      "url": "https://www.ece.gov.nt.ca/en/services/indigenous-language-resources/official-indigenous-languages-and-dialects-spoken-community",
+      "note": "Government community-by-community reference showing that several distinct Dene languages and dialects are spoken."
+    },
+    {
+      "id": "de-ece-alphabets",
+      "title": "Indigenous Languages Alphabets",
+      "url": "https://www.ece.gov.nt.ca/en/services/indigenous-language-resources/indigenous-languages-alphabets",
+      "note": "Modern official alphabets for several distinct NWT Dene languages, including tone, nasality, and specialized letters."
+    },
+    {
+      "id": "de-sshrc-words",
+      "title": "SSHRC: Word associations",
+      "url": "https://sshrc-crsh.canada.ca/society-societe/stories-histoires/story-histoire-eng.aspx?story_id=27",
+      "note": "Research partnership describing primarily oral Dene language documentation and later community work on standardized writing."
+    },
+    {
+      "id": "de-gwichin-education",
+      "title": "Gwichin Tribal Council education",
+      "url": "https://gwichin.ca/education",
+      "note": "Community education page on Elder teaching, experiential programs, language camps, science camps, and youth learning."
+    },
+    {
+      "id": "de-gwichin-tk",
+      "title": "Gwichin traditional knowledge",
+      "url": "https://gwichin.ca/traditional-knowledge",
+      "note": "Community research program on oral knowledge, plants, fish, animals, climate, place, and collaborative verification."
+    },
+    {
+      "id": "de-gwichin-ethno-page",
+      "title": "Gwichin Ethnobotany",
+      "url": "https://gwichin.ca/publications/gwichin-ethnobotany",
+      "note": "Community publication page documenting foods, medicines, shelters, tools, named plants, Elders, and educational use."
+    },
+    {
+      "id": "de-gwichin-ethno-pdf",
+      "title": "Gwichin Ethnobotany book",
+      "url": "https://www.gwichin.ca/sites/default/files/gsci_andre_fehr_2002_gwichin_ethnobotany.pdf",
+      "note": "Community book recording regionally specific plant knowledge, medicine preparation, tent materials, fuel, and named resources."
+    },
+    {
+      "id": "de-gwichin-spruce",
+      "title": "Gwichin Social and Cultural Institute: Spruce",
+      "url": "https://gwichin.ca/node/336",
+      "note": "Community plant record for spruce bough floors, fuel, shelter, insulation, smokehouses, caches, and medicinal steam."
+    },
+    {
+      "id": "de-gwichin-clothing",
+      "title": "Gwichin traditional caribou skin clothing project",
+      "url": "https://gwichin.ca/publications/gwichin-traditional-caribou-skin-clothing-project-poster",
+      "note": "Community-led reconstruction documenting caribou hide, sinew, quillwork, ochre, sewing labor, and regional artistic decisions."
+    },
+    {
+      "id": "de-gwichin-material",
+      "title": "Gwichin material culture posters",
+      "url": "https://gwichin.ca/publications/dog-pack-fish-trap-willow-bark-net-and-caribou-snare-posters",
+      "note": "Community materials on dog packs, fish traps, willow-bark nets, caribou snares, and object-based knowledge."
+    },
+    {
+      "id": "de-gwichin-crossroads",
+      "title": "Gwichin Traditional Knowledge at a Crossroads",
+      "url": "https://gwichin.ca/sites/default/files/gsci_kritsch_and_andre_1997_gwichin_traditional_knowledge_at_a_crossroads.pdf",
+      "note": "Community research on Elders, children, family histories, land learning, knowledge transmission, and colonial disruption."
+    },
+    {
+      "id": "de-gwichin-mainclaim",
+      "title": "Gwichin heritage provisions",
+      "url": "https://gwichin.ca/legislation-and-policy/main-claim",
+      "note": "Community heritage framework recognizing archaeology, oral history, place names, objects, records, and Gwichin authority."
+    },
+    {
+      "id": "de-srrb-ancient",
+      "title": "Sahtu Renewable Resources Board: An Ancient Heritage",
+      "url": "https://www.srrb.nt.ca/99-sahtu-atlas/the-sahtu/166-an-ancient-heritage",
+      "note": "Regional Indigenous institution on seasonal rounds, fishing, caribou, food preservation, gatherings, dialects, and distinct practices."
+    },
+    {
+      "id": "de-srrb-knowledge",
+      "title": "Sahtu Renewable Resources Board: Dene Knowledge",
+      "url": "https://www.srrb.nt.ca/99-sahtu-atlas/the-sahtu/177-dene-knowledge",
+      "note": "Regional account of adaptive oral knowledge, specialized vocabulary, lived experience, and learning across generations."
+    },
+    {
+      "id": "de-srrb-caribou",
+      "title": "Sahtu Renewable Resources Board: Caribou in the Sahtu",
+      "url": "https://srrb.nt.ca/101-sahtu-atlas/wildlife/190-caribou-in-the-sahtu",
+      "note": "Regional account of caribou movements, subsistence, hides, observation, and differences among caribou populations."
+    },
+    {
+      "id": "de-dehcho-values",
+      "title": "Dehcho First Nations principles and values",
+      "url": "https://dehcho.org/dene-government/about-us/dene-principles-values/",
+      "note": "Community principles connecting land, animals, seasons, Elders, collective responsibilities, sharing, and future generations."
+    },
+    {
+      "id": "de-dehcho-way",
+      "title": "Dehcho First Nations: Nahe Nahodhe",
+      "url": "https://dehcho.org/education-training/language-culture/nahe-nahodhe-way-life/",
+      "note": "Community learning project joining Elders and youth around hides, spruce, camps, plants, laws, and practical skills."
+    },
+    {
+      "id": "de-nahanni",
+      "title": "Parks Canada: Nahanni culture and history",
+      "url": "https://parks.canada.ca/pn-np/nt/nahanni/culture",
+      "note": "Federal park account combining Dene oral history and archaeology, mobility, extended-family groups, gatherings, trade, and fishing."
+    },
+    {
+      "id": "de-gordon",
+      "title": "Bryan Gordon: People of Sunlight, People of Starlight",
+      "url": "https://www.jstor.org/stable/j.ctv17560",
+      "note": "University Press archaeology of 13,000 artifacts from 1,002 northern hunting camps and seasonal caribou technologies."
+    },
+    {
+      "id": "de-archaeology-report",
+      "title": "NWT Mackenzie Valley archaeological impact assessment",
+      "url": "https://www.inf.gov.nt.ca/sites/inf/files/resources/mvh_archaeological_impact_assessment_-_sahtu_borrow_sources.pdf",
+      "note": "Territorial archaeology report on late-precontact sites, projectile points, scrapers, hide abraders, and bone and antler technology."
+    },
+    {
+      "id": "de-copper",
+      "title": "Native copper provenance in the Arctic and Subarctic",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X17307253",
+      "note": "Peer-reviewed archaeological study distinguishing copper sources, regional exchange, technologies, and specific Dene associations."
+    },
+    {
+      "id": "de-caribou-fences",
+      "title": "Parks Canada: Vuntut caribou fences",
+      "url": "https://parks.canada.ca/pn-np/yt/vuntut/culture/cloture-fence?wbdisable=true",
+      "note": "Federal and community-linked record of northern caribou fences, hunting knowledge, archaeology, and Gwichin stewardship."
+    },
+    {
+      "id": "de-ice-patches",
+      "title": "Government of Yukon: A Race Against the Clock",
+      "url": "https://yukon.ca/sites/default/files/2025-09/tc-heritage-conversations-volume-2.pdf",
+      "note": "Territorial account of ice-patch hunting, preserved wood, sinew, feathers, ancient tools, First Nations partners, youth, and Elders."
+    },
+    {
+      "id": "de-trochek",
+      "title": "Parks Canada: Trochek National Historic Site",
+      "url": "https://parks.canada.ca/culture/designation/lieu-site/trochek",
+      "note": "Hän place with late-precontact archaeology, fish camps, plant harvesting, skin work, storage, stories, and place names."
+    },
+    {
+      "id": "de-tsekwa",
+      "title": "Parks Canada: Tsekwa National Historic Site",
+      "url": "https://parks.canada.ca/culture/designation/lieu-site/tsekwa",
+      "note": "Dane-zaa stewarded archaeology linking deep occupation, hunting evidence, oral histories, stories, songs, and identity."
+    },
+    {
+      "id": "de-pwnhc-kits",
+      "title": "Prince of Wales Northern Heritage Centre education kits",
+      "url": "https://www.pwnhc.ca/en/edukits-schools",
+      "note": "Territorial museum resources on Dene fishing, stone tools, archaeology, birch-bark canoes, stories, and land camps."
+    },
+    {
+      "id": "de-pwnhc-sahtu",
+      "title": "Prince of Wales Northern Heritage Centre: Sharing Our Stories, Sahtu",
+      "url": "https://www.pwnhc.ca/sites/pwnhc/files/2024-02/Sharing_Our_Stories-Sahtu.pdf",
+      "note": "Community voices and museum objects documenting hides, babiche, tools, travel, dyeing, family use, and object histories."
+    },
+    {
+      "id": "de-saoyu",
+      "title": "Government of Northwest Territories: Saoyu and Ehdacho",
+      "url": "https://www.gov.nt.ca/ecc/en/services/learn-about-nwts-conservation-network/saoyu-ehdacho",
+      "note": "Sahtugotine teaching, healing, spiritual places, oral traditions, ancestral responsibility, and cooperative stewardship."
+    },
+    {
+      "id": "de-thaidene",
+      "title": "Parks Canada: Thaidene Nene relationship plan",
+      "url": "https://parks.canada.ca/pn-np/nt/thaidene-nene/info/plan-des-relations-relationship-plan",
+      "note": "Current multi-nation stewardship plan showing overlapping relationships, distinct partners, water, land, hides, and family needs."
+    }
+  ],
+  "entities": [
+    {
+      "id": "denendeh",
+      "card": "data/cards/denendeh.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "de-index",
+            "de-map1492",
+            "de-map1500",
+            "de-dene-nation"
+          ],
+          "locator": "Exact id, display name, interval, generated origin, and related contemporary atlas records. Decoded target geometry, components, rings, points, overlaps, shared arcs, and exact interval. Decoded endpoint repaint and owner changes at all representative probes. Community account of Denendeh, five distinct regional groups, languages, territories, oral history, and stewardship.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "de-map1400",
+            "de-map1492"
+          ],
+          "locator": "Decoded pre-appearance control for owners, probes, overlaps, and the first atlas seam. Decoded target geometry, components, rings, points, overlaps, shared arcs, and exact interval.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "de-ddc"
+          ],
+          "locator": "Dene-owned institution explaining the modern political and geographic use of Denendeh across five regions.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "de-gordon"
+          ],
+          "locator": "University Press archaeology of 13,000 artifacts from 1,002 northern hunting camps and seasonal caribou technologies.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "de-srrb-ancient"
+          ],
+          "locator": "Regional Indigenous institution on seasonal rounds, fishing, caribou, food preservation, gatherings, dialects, and distinct practices.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "de-archaeology-report"
+          ],
+          "locator": "Territorial archaeology report on late-precontact sites, projectile points, scrapers, hide abraders, and bone and antler technology.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "de-copper"
+          ],
+          "locator": "Peer-reviewed archaeological study distinguishing copper sources, regional exchange, technologies, and specific Dene associations.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "de-srrb-knowledge"
+          ],
+          "locator": "Regional account of adaptive oral knowledge, specialized vocabulary, lived experience, and learning across generations.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "de-map1492",
+            "de-map1500",
+            "de-map1530"
+          ],
+          "locator": "Decoded target geometry, components, rings, points, overlaps, shared arcs, and exact interval. Decoded endpoint repaint and owner changes at all representative probes. Decoded post-end control showing another major change in atlas ownership.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "de-map1492"
+          ],
+          "locator": "Exact decoded geometry type, counts, bounding box, and representative membership probes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "de-map1492"
+          ],
+          "locator": "Probe ownership arrays and direct shared-arc audit, interpreted strictly as software geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "de-ddc",
+            "de-map1492"
+          ],
+          "locator": "Modern institutional scope compared with the exact decoded imported geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "de-coverage",
+            "de-missing",
+            "de-summaries",
+            "de-athabaskan-card",
+            "de-tatsaotine-card",
+            "de-acho-card",
+            "de-overrides"
+          ],
+          "locator": "Exact missing status plus existing card associations, intervals, evidence scopes, and non-shareability.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "de-map1500",
+            "de-map1530"
+          ],
+          "locator": "Endpoint and post-end ownership changes across every representative probe.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "de-dene-reform"
+          ],
+          "locator": "Community-led account of distinct governance, story-based law, and collective reform.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "de-ece-languages"
+          ],
+          "locator": "Official curriculum distinctions among Dene languages and limits of umbrella language inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "de-ece-community-lang"
+          ],
+          "locator": "Official present-day community language distribution used only to establish diversity and scope limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "de-dene-constitution"
+          ],
+          "locator": "Dene constitutional distinctions, shared responsibilities, oral treaties, and chronological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "de-thaidene"
+          ],
+          "locator": "Modern multi-nation overlapping stewardship as a bounded comparison, not a back-projected institution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "de-dene-protocol"
+          ],
+          "locator": "Community knowledge governance, consent, ownership, contextualization, and limits on reuse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "de-gordon"
+          ],
+          "locator": "Academic archaeological dataset, analytical value, and explicit identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "de-archaeology-report"
+          ],
+          "locator": "Official archaeological associations and cautious evidentiary language, with gentle explanatory humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "de-ice-patches"
+          ],
+          "locator": "Long-dated organic technologies, partnership, hunting context, and settlement restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "de-tsekwa"
+          ],
+          "locator": "Dane-zaa site stewardship, deep chronology, multiple evidence forms, and date limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "de-dene-land-water"
+          ],
+          "locator": "Community account of water relationships, health, connectivity, and stewardship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "de-nahanni"
+          ],
+          "locator": "Precontact regional mobility, subsistence, family groups, and periodic gatherings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "de-caribou-fences"
+          ],
+          "locator": "Caribou-fence distribution, coordinated engineering, landscape knowledge, and hunting purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "de-trochek"
+          ],
+          "locator": "Specific late-precontact Hän seasonal camp activities, evidence forms, and locality.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "de-srrb-ancient"
+          ],
+          "locator": "Regional Sahtu seasonal gathering and dispersal, variability, and safe humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "de-srrb-caribou"
+          ],
+          "locator": "Sahtu caribou diversity, seasonal movement, uses, and anti-flattening scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "de-trochek"
+          ],
+          "locator": "Hän fish harvest, drying, winter storage, mobility, and archaeological preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "de-srrb-ancient"
+          ],
+          "locator": "Regionally documented foods, preservation, labor, seasonal grouping, and sharing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "de-gwichin-material"
+          ],
+          "locator": "Community object documentation and the practical systems surrounding food technologies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "de-gwichin-ethno-page"
+          ],
+          "locator": "Community ethnobotanical scope, dialects, categories, Elder sources, and chronological restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "de-gwichin-ethno-pdf"
+          ],
+          "locator": "Later Gwichin tent materials, labor, transport, decoration, and exact-period caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "de-gwichin-spruce"
+          ],
+          "locator": "Specific Gwichin spruce-floor construction, maintenance, insulation, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "de-archaeology-report"
+          ],
+          "locator": "Late-precontact artifact classes, likely tasks, and rejection of simplistic progress ranking.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "de-pwnhc-sahtu"
+          ],
+          "locator": "Community voices on hide cordage, uses, dyeing, object dates, and temporal limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "de-pwnhc-kits"
+          ],
+          "locator": "Official museum teaching resources, integrated knowledge, and modern-program limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "de-nahanni"
+          ],
+          "locator": "Regional family organization, trade, celebration, ceremony, and scope boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "de-dehcho-values"
+          ],
+          "locator": "Community principles relating Elders, land, sharing, seasons, law, and responsibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "de-dene-constitution"
+          ],
+          "locator": "Constitutional evidence for nested belonging, distinct territories, and shared responsibilities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "de-saoyu"
+          ],
+          "locator": "Sahtugotine account of teaching places, oral tradition, healing, ancestry, and responsibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "de-gwichin-mainclaim"
+          ],
+          "locator": "Community heritage framework, multiple evidence forms, authority, and research practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "de-ece-kede"
+          ],
+          "locator": "Curriculum concepts, child development goals, language, experience, and chronological limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "de-ece-kede-pdf"
+          ],
+          "locator": "Detailed curriculum methods used cautiously to illuminate relational and experiential learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "de-ece-kede-teacher"
+          ],
+          "locator": "Traditional education framework, teachers, methods, responsibility, and evidentiary limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "de-gwichin-education",
+            "de-gwichin-crossroads"
+          ],
+          "locator": "Community education and transmission programs, colonial context, and learning modalities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "de-ece-alphabets",
+            "de-sshrc-words"
+          ],
+          "locator": "Explicit absence of exact-period writing, modern orthography chronology, and oral evidence respect.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "de-gwichin-ethno-page"
+          ],
+          "locator": "Community medicinal plant evidence with knowledge-holder, regional, and chronological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "de-gwichin-ethno-pdf"
+          ],
+          "locator": "Specific later medicinal practices, source genre, medical caution, and date restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "de-gwichin-spruce"
+          ],
+          "locator": "Community spruce uses related to camp cleanliness, warmth, fire, storage, and sustainable judgment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "de-dene-land-water",
+            "de-gordon"
+          ],
+          "locator": "Water relationships, camp variability, preservation limits, and cautious sanitation inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "de-archaeology-report",
+            "de-map1492"
+          ],
+          "locator": "Explicit toilet evidence gap, safe bounded inference, and gentle map humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "de-gwichin-clothing"
+          ],
+          "locator": "Community-led reconstruction materials, women’s labor, date, technique, art, and scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "de-gwichin-material",
+            "de-pwnhc-sahtu"
+          ],
+          "locator": "Community object evidence for engineering, environment, maintenance, and practical achievement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "de-dehcho-way"
+          ],
+          "locator": "Community intergenerational program, practical topics, living continuity, and time distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "de-gwichin-tk"
+          ],
+          "locator": "Community research methods, subject range, verification, and adaptive knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "de-map1500",
+            "de-dene-reform"
+          ],
+          "locator": "Atlas endpoint contrasted with community continuity, diversity, change, and renewal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "de-map1500",
+            "de-map1530",
+            "de-dene-home"
+          ],
+          "locator": "Decoded endpoint repaint and owner changes at all representative probes. Decoded post-end control showing another major change in atlas ownership. Community authority identifying Denendeh as the Land of the People and representing living Dene communities.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "denendeh",
+        "name": "Dënéndeh",
+        "kind": "region",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/denendeh.json",
+        "dateBasis": "map_coverage",
+        "summary": "A guide to distinct Dene histories, daily life, and enduring homelands beneath the atlas’s oversized 1492 to 1500 Dënéndeh umbrella.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "denendeh",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -158.89658896588966,
+            50.610470367180625,
+            -94.37674376743767,
+            68.96420429789151
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

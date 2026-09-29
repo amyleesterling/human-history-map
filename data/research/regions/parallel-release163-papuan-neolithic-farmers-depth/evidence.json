@@ -1,0 +1,916 @@
+{
+  "version": 1,
+  "region": "Oceania",
+  "researcher": "Codex parallel release163-papuan-neolithic-farmers research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "pn-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, circa lifetime, culture kind, and historical basemap provenance."
+    },
+    {
+      "id": "pn-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Five observed intervals and five border files, with this exact card still missing."
+    },
+    {
+      "id": "pn-map2000",
+      "title": "Human History Map 2000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc2000.json",
+      "note": "Pre-start control in which the exact target id is absent."
+    },
+    {
+      "id": "pn-map1500",
+      "title": "Human History Map 1500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1500.json",
+      "note": "First target geometry, properties, probes, components, owners, and bounds."
+    },
+    {
+      "id": "pn-map1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Second target feature, identical to the first decoded geometry."
+    },
+    {
+      "id": "pn-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Third target feature, identical to the first decoded geometry."
+    },
+    {
+      "id": "pn-map500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Fourth target feature, with the Sulawesi component removed."
+    },
+    {
+      "id": "pn-map400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Fifth target feature, identical to the later decoded geometry."
+    },
+    {
+      "id": "pn-map323",
+      "title": "Human History Map 323 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc323.json",
+      "note": "Exact endpoint control where the target id disappears."
+    },
+    {
+      "id": "pn-map300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Post-endpoint control where the exact target remains absent."
+    },
+    {
+      "id": "pn-map200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Later control containing a separate papuan id, not automatic continuity."
+    },
+    {
+      "id": "pn-rethink",
+      "title": "O'Connor: Rethinking the Neolithic in Island Southeast Asia",
+      "url": "https://openresearch-repository.anu.edu.au/items/a09beba2-2155-46e7-a590-02de4e47fef3",
+      "note": "Archaeological critique of treating pottery, crops, animals, and language movement as one universal package."
+    },
+    {
+      "id": "pn-kuk-book",
+      "title": "Denham and colleagues: Ten Thousand Years of Cultivation at Kuk Swamp",
+      "url": "https://press.anu.edu.au/publications/series/terra-australis/ten-thousand-years-cultivation-kuk-swamp-highlands-papua-new",
+      "note": "ANU Press monograph presenting Kuk excavations, chronology, environmental evidence, cultivation, and interpretive limits."
+    },
+    {
+      "id": "pn-haberle",
+      "title": "Haberle: Prehistoric human impact on rainforest biodiversity in highland New Guinea",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2311426/",
+      "note": "Peer reviewed pollen and charcoal record of long, locally variable forest disturbance and cultivation."
+    },
+    {
+      "id": "pn-kuk-intro",
+      "title": "Denham and colleagues: Ten Thousand Years of Cultivation at Kuk Swamp, overview",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2540/html/ch01.xhtml",
+      "note": "ANU Press overview of Kuk phases, dates, field systems, preservation, and interpretation."
+    },
+    {
+      "id": "pn-kuk-phase3",
+      "title": "Golson: Kuk Phase 3 palaeochannels and field evidence",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2540/html/ch13.xhtml",
+      "note": "ANU Press chapter on Phase 3 straight channels, drainage, chronology, and local interpretation."
+    },
+    {
+      "id": "pn-kuk-plants",
+      "title": "Fullagar and colleagues: Kuk archaeobotanical evidence",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2540/html/ch10.xhtml",
+      "note": "ANU Press chapter on starch, phytolith, plant remains, sampling, and preservation at Kuk."
+    },
+    {
+      "id": "pn-pottery-dates",
+      "title": "O'Connor and colleagues: First pottery in Island Southeast Asia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8171956/",
+      "note": "Peer reviewed Bayesian estimates for pottery at Sulawesi, Flores, and Pulau Ay, with explicit uncertainty."
+    },
+    {
+      "id": "pn-spice",
+      "title": "Bellwood: The Spice Islands in Prehistory",
+      "url": "https://press.anu.edu.au/publications/series/terra-australis/spice-islands-prehistory",
+      "note": "ANU Press synthesis of excavations across the northern Moluccas and their varied archaeological sequences."
+    },
+    {
+      "id": "pn-uattamdi",
+      "title": "Bellwood: Uattamdi excavation and chronology",
+      "url": "https://press-files.anu.edu.au/downloads/press/n5444/pdf/ch05.pdf",
+      "note": "ANU Press site chapter on occupation, stratigraphy, pottery, tools, and dating at Uattamdi."
+    },
+    {
+      "id": "pn-spice-pottery",
+      "title": "Bellwood and colleagues: Northern Moluccan pottery",
+      "url": "https://press-files.anu.edu.au/downloads/press/n5444/pdf/ch07.pdf",
+      "note": "ANU Press pottery analysis covering fabrics, surfaces, forms, decoration, and local sequences."
+    },
+    {
+      "id": "pn-spice-fauna",
+      "title": "Flannery and White: Animal bone and shell from the northern Moluccas",
+      "url": "https://press-files.anu.edu.au/downloads/press/n5444/pdf/ch10.pdf",
+      "note": "ANU Press faunal analysis of fish, shell, phalanger, pig, dog, preservation, and site differences."
+    },
+    {
+      "id": "pn-spice-health",
+      "title": "Pietrusewsky: Human remains and health in the northern Moluccas",
+      "url": "https://press-files.anu.edu.au/downloads/press/n5444/pdf/ch12.pdf",
+      "note": "Bioarchaeological chapter whose usable samples and phases require strict chronological limits."
+    },
+    {
+      "id": "pn-asitau",
+      "title": "O'Connor and colleagues: Asitau Kuru, Timor-Leste",
+      "url": "https://openresearch-repository.anu.edu.au/handle/1885/221594",
+      "note": "Peer reviewed long cave sequence including a locally defined Neolithic occupation from about 3800 years ago."
+    },
+    {
+      "id": "pn-timor-plants",
+      "title": "Oliveira and colleagues: Timor-Leste archaeobotany",
+      "url": "https://openresearch-repository.anu.edu.au/items/1a3477b0-f5f3-4d76-8373-44ed89a6ff5f",
+      "note": "Peer reviewed macrobotanical evidence showing no rice or millet with initial pottery and introduced animals."
+    },
+    {
+      "id": "pn-tanamu",
+      "title": "David and colleagues: Tanamu 1 at Caution Bay",
+      "url": "https://researchonline.jcu.edu.au/74835/",
+      "note": "Peer reviewed five-thousand-year sequence distinguishing pre-Lapita, Lapita, and post-Lapita local histories."
+    },
+    {
+      "id": "pn-caution-lapita",
+      "title": "McNiven and colleagues: Lapita at Caution Bay",
+      "url": "https://researchonline.jcu.edu.au/17433/",
+      "note": "Peer reviewed evidence for Lapita pottery, settlement, subsistence, burial, and calibrated chronology near Port Moresby."
+    },
+    {
+      "id": "pn-nearshore",
+      "title": "Faulkner and colleagues: Near-shore marine resource use at Caution Bay",
+      "url": "https://researchonline.jcu.edu.au/64993/",
+      "note": "Peer reviewed shell assemblages and changing coastal settlement and subsistence before and during Lapita."
+    },
+    {
+      "id": "pn-moiapu",
+      "title": "David and colleagues: Moiapu 3 at the end of Lapita",
+      "url": "https://researchonline.jcu.edu.au/61195/",
+      "note": "Peer reviewed terminal Lapita settlement, ceramics, food remains, pigs, dogs, and local chronological uncertainty."
+    },
+    {
+      "id": "pn-dog",
+      "title": "Greig and colleagues: Ancient dog DNA from Caution Bay",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6002536/",
+      "note": "Peer reviewed dating and genetic study of a terminal Lapita dog from Edubu and later comparative remains."
+    },
+    {
+      "id": "pn-pain-haka",
+      "title": "Galipaud and colleagues: Pain Haka burial ground on Flores",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/pain-haka-burial-ground-on-flores-indonesian-evidence-for-a-shared-neolithic-belief-system-in-southeast-asia/314A2E3F53E1D81908983446B369855A",
+      "note": "Peer reviewed cemetery report with adults, children, jar burial, grave goods, dating, and community-directed reburial."
+    },
+    {
+      "id": "pn-toalean",
+      "title": "Brumm and colleagues: Genome of a mid-Holocene forager from Wallacea",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8153489/",
+      "note": "Peer reviewed Sulawesi context distinguishing Toalean assemblages from later pottery and ground axes."
+    },
+    {
+      "id": "pn-shell-work",
+      "title": "Szabo and colleagues: Preceramic shell working at Caution Bay",
+      "url": "https://research.monash.edu/en/publications/preceramic-shell-working-caution-bay-and-the-circum-new-guinea-ar",
+      "note": "Peer reviewed securely dated shell working and exchange evidence before Lapita ceramics."
+    },
+    {
+      "id": "pn-plant-review",
+      "title": "Denham and colleagues: Plant domestication in New Guinea",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7102979/",
+      "note": "Peer reviewed review of vegetative propagation, microfossils, domestication evidence, and interpretive limits."
+    },
+    {
+      "id": "pn-writing",
+      "title": "Writing New Guinea Languages: Alphabets and Orthographies",
+      "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/253050/1/PL-C40.311.pdf",
+      "note": "Linguistic history placing the first developed Motu orthography and school publication in 1877, far later than this card."
+    }
+  ],
+  "entities": [
+    {
+      "id": "papuan-neolithic-farmers",
+      "card": "data/cards/papuan-neolithic-farmers.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pn-index",
+            "pn-coverage",
+            "pn-rethink"
+          ],
+          "locator": "Exact id, imported name, circa lifetime, culture kind, and historical basemap provenance. Five observed intervals and five border files, with this exact card still missing. Archaeological critique of treating pottery, crops, animals, and language movement as one universal package.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pn-map2000",
+            "pn-map1500"
+          ],
+          "locator": "Pre-start control in which the exact target id is absent. First target geometry, properties, probes, components, owners, and bounds.",
+          "dateScope": {
+            "from": -1500,
+            "to": -1350
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pn-spice"
+          ],
+          "locator": "ANU Press synthesis of excavations across the northern Moluccas and their varied archaeological sequences.",
+          "dateScope": {
+            "from": -1350,
+            "to": -1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pn-pottery-dates"
+          ],
+          "locator": "Peer reviewed Bayesian estimates for pottery at Sulawesi, Flores, and Pulau Ay, with explicit uncertainty.",
+          "dateScope": {
+            "from": -1200,
+            "to": -1050
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pn-caution-lapita"
+          ],
+          "locator": "Peer reviewed evidence for Lapita pottery, settlement, subsistence, burial, and calibrated chronology near Port Moresby.",
+          "dateScope": {
+            "from": -1050,
+            "to": -900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pn-nearshore"
+          ],
+          "locator": "Peer reviewed shell assemblages and changing coastal settlement and subsistence before and during Lapita.",
+          "dateScope": {
+            "from": -900,
+            "to": -750
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pn-kuk-phase3"
+          ],
+          "locator": "ANU Press chapter on Phase 3 straight channels, drainage, chronology, and local interpretation.",
+          "dateScope": {
+            "from": -750,
+            "to": -600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pn-pain-haka"
+          ],
+          "locator": "Peer reviewed cemetery report with adults, children, jar burial, grave goods, dating, and community-directed reburial.",
+          "dateScope": {
+            "from": -600,
+            "to": -450
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pn-map400",
+            "pn-map323",
+            "pn-map300",
+            "pn-map200"
+          ],
+          "locator": "Fifth target feature, identical to the later decoded geometry. Exact endpoint control where the target id disappears. Post-endpoint control where the exact target remains absent. Later control containing a separate papuan id, not automatic continuity.",
+          "dateScope": {
+            "from": -450,
+            "to": -323
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pn-index",
+            "pn-coverage"
+          ],
+          "locator": "Exact matching index and coverage entries, including name, dates, kind, intervals, and missing status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pn-map1500",
+            "pn-map1000",
+            "pn-map700"
+          ],
+          "locator": "Decoded geometry type, identical coordinate hashes, component count, positions, and bounds across three snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pn-map1500"
+          ],
+          "locator": "Point-in-polygon results for named probes, supplemented by interior controls for all ten components.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pn-map700",
+            "pn-map500",
+            "pn-map400"
+          ],
+          "locator": "Component subtraction, position counts, component bounds, and exact decoded geometry hashes across the seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pn-map500",
+            "pn-map700"
+          ],
+          "locator": "Direct shared-arc scan and cross-owner point assignment at the removed Sulawesi component.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pn-kuk-book"
+          ],
+          "locator": "Monograph scope, multidisciplinary evidence, phase sequence, and explicitly local interpretive framework.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pn-haberle"
+          ],
+          "locator": "Long highland pollen and charcoal sequences, local variation, and limits of environmental interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pn-kuk-book"
+          ],
+          "locator": "Monograph phase structure, archaeological coverage, feature change, and explicitly local scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pn-tanamu"
+          ],
+          "locator": "Tanamu sequence, phase divisions, site location, and regional interpretive scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pn-toalean"
+          ],
+          "locator": "Toalean context, later ceramic and ground-stone evidence, and competing archaeological interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pn-kuk-plants"
+          ],
+          "locator": "Kuk archaeobotanical methods, identified plant traces, sampling, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pn-plant-review"
+          ],
+          "locator": "Vegetative propagation, principal crop evidence, archaeological visibility, and long-term change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pn-timor-plants"
+          ],
+          "locator": "Macrobotanical assemblage and authors' conclusion about absent cereals during initial Neolithic-associated change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pn-spice-fauna"
+          ],
+          "locator": "Taxonomic identifications, stratigraphic occurrence, preservation, and site-to-site variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pn-nearshore"
+          ],
+          "locator": "Shell assemblage chronology, habitat use, collection changes, and archaeological inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pn-kuk-phase3"
+          ],
+          "locator": "Excavated straight channels, drainage interpretation, chronology, and limits on field reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pn-uattamdi"
+          ],
+          "locator": "Uattamdi stone, shell, and pottery assemblages in stratified occupation contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pn-uattamdi"
+          ],
+          "locator": "Uattamdi stratigraphic sequence, artifact classes, and radiocarbon chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pn-spice-pottery"
+          ],
+          "locator": "Ceramic fabrics, surface treatment, form, decoration, sequence, and interpretive cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pn-shell-work"
+          ],
+          "locator": "Securely dated preceramic shell artifacts, manufacturing evidence, and regional comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pn-pottery-dates"
+          ],
+          "locator": "Modeled initial pottery ranges and authors' regional comparison of dispersal tempo.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pn-asitau"
+          ],
+          "locator": "Long site sequence, approximate onset of Neolithic-associated deposits, and local cave context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pn-caution-lapita"
+          ],
+          "locator": "Lapita chronology, earlier settlement, artifact associations, and regional connections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pn-moiapu"
+          ],
+          "locator": "Terminal Lapita chronology, settlement materials, ceramic change, and limited animal evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pn-spice",
+            "pn-shell-work"
+          ],
+          "locator": "Regional excavation synthesis and securely dated exchange materials, contrasted with atlas geography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pn-tanamu"
+          ],
+          "locator": "Settlement sequence and associated domestic, subsistence, and mortuary evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pn-pain-haka"
+          ],
+          "locator": "Mortuary variation, grave treatments, associated vessels, and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pn-kuk-intro"
+          ],
+          "locator": "Kuk phase sequence, constructed features, repeated cultivation, and missing social identifiers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pn-uattamdi"
+          ],
+          "locator": "Site setting, stratified occupation debris, artifact associations, and architectural limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pn-map1500"
+          ],
+          "locator": "Atlas geometry spanning widely separated ecological and island settings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pn-pain-haka"
+          ],
+          "locator": "Age assignments, infant jar burials, cemetery context, and differential treatment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pn-shell-work"
+          ],
+          "locator": "Skill-intensive production traces, with inference limited to transmission rather than a specified teaching system.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pn-spice-pottery"
+          ],
+          "locator": "Repeated manufacturing and decorative choices across the ceramic sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pn-plant-review"
+          ],
+          "locator": "Vegetative propagation practices, archaeological visibility, and limits on social attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pn-dog"
+          ],
+          "locator": "Direct date, terminal Lapita context, ancient DNA result, and limits of behavioral inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pn-pain-haka"
+          ],
+          "locator": "Human remains, age groups, burial practices, and scope of the published cemetery evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pn-spice-health"
+          ],
+          "locator": "Sample phases, dates, bioarchaeological measures, and mismatch with the target interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pn-kuk-plants"
+          ],
+          "locator": "Plant residues, microscopic identifications, sampling conditions, and functional uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pn-nearshore"
+          ],
+          "locator": "Dietary remains, chronological phases, and preservation and sampling limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pn-kuk-intro"
+          ],
+          "locator": "Wetland context and feature evidence contrasted with absent direct medical documentation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pn-kuk-phase3"
+          ],
+          "locator": "Channel form, hydrological purpose, agricultural context, and no sanitation identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pn-kuk-intro"
+          ],
+          "locator": "Stratigraphy, feature preservation, site phases, and reconstruction limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pn-spice-fauna"
+          ],
+          "locator": "Faunal and shell deposition, preservation, recovery, and variable archaeological contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pn-tanamu"
+          ],
+          "locator": "Reviewed domestic sequence and lack of an identified sanitation installation in the cited site report.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pn-nearshore",
+            "pn-kuk-intro"
+          ],
+          "locator": "Separate coastal refuse and highland drainage records, compared without equating their functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pn-pottery-dates",
+            "pn-spice-pottery"
+          ],
+          "locator": "Published material records and absence of a securely deciphered exact-period local text.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pn-writing"
+          ],
+          "locator": "Historical date and educational context for the later Motu orthography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pn-writing"
+          ],
+          "locator": "Linguistic discussion of New Guinea language diversity and later orthographic histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pn-map323",
+            "pn-map300",
+            "pn-map200"
+          ],
+          "locator": "Endpoint and later-snapshot audit, checked against the absence of a matching archaeological collapse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pn-plant-review",
+            "pn-caution-lapita"
+          ],
+          "locator": "Long-term plant-management knowledge and coastal craft, settlement, and connection evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pn-map400",
+            "pn-map323",
+            "pn-map300",
+            "pn-map200"
+          ],
+          "locator": "Fifth target feature, identical to the later decoded geometry. Exact endpoint control where the target id disappears. Post-endpoint control where the exact target remains absent. Later control containing a separate papuan id, not automatic continuity.",
+          "dateScope": {
+            "year": -323
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "papuan-neolithic-farmers",
+        "name": "Papuan Neolithic Farmers",
+        "aliases": [],
+        "kind": "culture",
+        "region": "Oceania",
+        "from": -1500,
+        "to": -323,
+        "circa": true,
+        "card": "cards/papuan-neolithic-farmers.json",
+        "dateBasis": "map_coverage",
+        "summary": "A broad archaeological atlas umbrella for diverse New Guinea and eastern Indonesian communities, not one polity or people.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc1000.json",
+          "properties": {
+            "civ": "papuan-neolithic-farmers",
+            "from": -1000,
+            "to": -700,
+            "precision": 1
+          },
+          "bounds": [
+            118.68418684186844,
+            -10.7382262966659,
+            152.26892268922688,
+            1.8975923329437379
+          ]
+        },
+        {
+          "file": "world-bc1500.json",
+          "properties": {
+            "civ": "papuan-neolithic-farmers",
+            "from": -1500,
+            "to": -1000,
+            "precision": 1
+          },
+          "bounds": [
+            118.68418684186844,
+            -10.7382262966659,
+            152.26892268922688,
+            1.8975923329437379
+          ]
+        },
+        {
+          "file": "world-bc400.json",
+          "properties": {
+            "civ": "papuan-neolithic-farmers",
+            "from": -400,
+            "to": -323,
+            "precision": 1
+          },
+          "bounds": [
+            118.90018900189006,
+            -10.7382262966659,
+            152.26892268922688,
+            1.8975923329437379
+          ]
+        },
+        {
+          "file": "world-bc500.json",
+          "properties": {
+            "civ": "papuan-neolithic-farmers",
+            "from": -500,
+            "to": -400,
+            "precision": 1
+          },
+          "bounds": [
+            118.90018900189006,
+            -10.7382262966659,
+            152.26892268922688,
+            1.8975923329437379
+          ]
+        },
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "papuan-neolithic-farmers",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            118.68418684186844,
+            -10.7382262966659,
+            152.26892268922688,
+            1.8975923329437379
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
