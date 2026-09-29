@@ -1,0 +1,929 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release172-yue research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "yu-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, label, approximate atlas lifetime, and historical-basemaps provenance."
+    },
+    {
+      "id": "yu-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Observed intervals, inferred state kind, border-file count, and missing research review."
+    },
+    {
+      "id": "yu-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Missing exact record, imported summary, source history, and absence of staged drafts."
+    },
+    {
+      "id": "yu-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card is associated with the exact imported id."
+    },
+    {
+      "id": "yu-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed override yet corrects the exact imported id."
+    },
+    {
+      "id": "yu-map-400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Pre-start control for tested Lower Yangzi and Fujian point ownership."
+    },
+    {
+      "id": "yu-map-323",
+      "title": "Human History Map 323 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc323.json",
+      "note": "First exact-id feature, decoded Fujian polygon, seams, membership tests, and interval."
+    },
+    {
+      "id": "yu-map-300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Second exact-id feature with identical geometry and the endpoint interval."
+    },
+    {
+      "id": "yu-map-200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Endpoint control where Min Yue replaces the exact id at tested Fujian points."
+    },
+    {
+      "id": "yu-map-100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Later control where Han owns the tested Lower Yangzi and Fujian points."
+    },
+    {
+      "id": "yu-brindley-book",
+      "title": "Ancient China and the Yue: Ancient China and the Yue",
+      "url": "https://www.cambridge.org/core/books/abs/ancient-china-and-the-yue/ancient-china-and-the-yue/050DB1ABC083561493B4723E5E365357",
+      "note": "Scholarly synthesis of Yue identities, southern-frontier interaction, archaeology, texts, and later representations."
+    },
+    {
+      "id": "yu-institutions",
+      "title": "A History of the Vietnamese",
+      "url": "https://www.cambridge.org/core/books/history-of-the-vietnamese/2269255F3CF32ECD6827399643AB68D3/listing",
+      "note": "Scholarly history distinguishing the Zhejiang Yue state from varied later Yue and Viet names."
+    },
+    {
+      "id": "yu-jizhong",
+      "title": "The Yue site at Jizhong: Warring States and early Imperial agriculture and diet in the Lower Yangzi",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/yue-site-at-jizhong-warring-states-and-early-imperial-agriculture-and-diet-in-the-lower-yangzi/3F420F1734AEEB47F016CCB557C84445",
+      "note": "Peer-reviewed excavation report on Yue urban remains, rice, gourds, fruits, chronology, and analytical limits."
+    },
+    {
+      "id": "yu-pines",
+      "title": "Didactic Narrative and the Art of Self-strengthening: Reading the Bamboo Manuscript Yue Gong Qi Shi",
+      "url": "https://www.cambridge.org/core/journals/early-china/article/didactic-narrative-and-the-art-of-selfstrengthening-reading-the-bamboo-manuscript-yue-gong-qi-shi/CB30CF52ABEDE745AD453DC6A954143B",
+      "note": "Peer-reviewed source criticism of Goujian narratives, war chronology, population policies, and manuscript limits."
+    },
+    {
+      "id": "yu-xinian",
+      "title": "Xinian: An Ancient Historical Text from the Qinghua University Collection of Bamboo Books",
+      "url": "https://www.cambridge.org/core/journals/early-china/article/xinian-an-ancient-historical-text-from-the-qinghua-university-collection-of-bamboo-books/426F77FC5F669A0CB240EB650AD1A3FE",
+      "note": "Peer-reviewed study of a bamboo historical text and Yue activity in Shandong."
+    },
+    {
+      "id": "yu-warring-history",
+      "title": "Warring States Political History",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-ancient-china/warring-states-political-history/1BCAF34A599BA322F3812203EB74F7D8",
+      "note": "Authoritative survey of territorial monarchies, officials, household registration, armies, and interstate change."
+    },
+    {
+      "id": "yu-stage",
+      "title": "Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/books/abs/daily-life-in-ancient-china/daily-life-in-ancient-china/08C6C6BFB3A8BCDF921696B97843A7D6",
+      "note": "Scholarly context for Lower Yangzi geography, rice, fish, regional difference, writing, and source criticism."
+    },
+    {
+      "id": "yu-country",
+      "title": "Country Life, Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/books/abs/daily-life-in-ancient-china/country-life/8731DDCCEAE5AEDAB00AA2CCDC3A26F2",
+      "note": "Scholarly chapter on farming households and the interpretation of rural life in early China."
+    },
+    {
+      "id": "yu-cities",
+      "title": "Cities and Urban Life, Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/books/abs/daily-life-in-ancient-china/cities-and-urban-life/AA045288DE75CC7DCA9F7188DD5D72ED",
+      "note": "Scholarly chapter on early Chinese cities, walls, administration, residents, and urban evidence."
+    },
+    {
+      "id": "yu-production",
+      "title": "Production, Consumption, and Ideological Constraints, Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/books/abs/daily-life-in-ancient-china/production-consumption-and-ideological-constraints/6F5D2E791BA0D529AB723B88A322921B",
+      "note": "Scholarly chapter on labor, production, consumption, and the limits of material inference."
+    },
+    {
+      "id": "yu-practical",
+      "title": "Practical Technology, Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/product/identifier/9781139108621%23CN-BP-7/type/BOOK_PART",
+      "note": "Scholarly chapter providing comparative context for learned techniques and material technologies."
+    },
+    {
+      "id": "yu-social",
+      "title": "Social Structure and Law, Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/product/identifier/9781139108621%23CN-BP-3/type/BOOK_PART",
+      "note": "Scholarly chapter on household position, hierarchy, law, and limits of broad social reconstruction."
+    },
+    {
+      "id": "yu-burial",
+      "title": "Death, Burial, and the Hope for a Happy Afterlife, Daily Life in Ancient China",
+      "url": "https://www.cambridge.org/core/product/identifier/9781139108621%23CN-BP-10/type/BOOK_PART",
+      "note": "Scholarly chapter on tomb evidence, funerary hierarchy, belief, and interpretive caution."
+    },
+    {
+      "id": "yu-hubei-sword",
+      "title": "Sword of Goujian, King of Yue",
+      "url": "https://www.hbww.org.cn/treasureofmuseum/p/11497.html",
+      "note": "Hubei Provincial Museum object record with find context, bird-script inscription, reading, and attribution."
+    },
+    {
+      "id": "yu-npm-sword",
+      "title": "Sword of King Zhou Gou of Yue",
+      "url": "https://digitalarchive.npm.gov.tw/Collection/Detail/351?dep=U",
+      "note": "National Palace Museum record for another inscribed early Warring States Yue royal sword."
+    },
+    {
+      "id": "yu-nmc-ge",
+      "title": "Bronze Ge with Brocade Design",
+      "url": "https://en.chnmuseum.cn/collections_577/collection_highlights_608/artifacts_handed___down_from_ancient_times_612/202008/t20200831_247547.html",
+      "note": "National Museum of China record on Wu-Yue decoration, technology, circulation, and conquest dates."
+    },
+    {
+      "id": "yu-nmc-sword",
+      "title": "Gold and Silver-inlaid Sword With Bird Seal Script",
+      "url": "https://www2.chnmuseum.cn/collections_577/collection_highlights_608/artifacts_handed___down_from_ancient_times_612/202008/t20200827_247523.html",
+      "note": "National Museum of China record for an elite Yue royal sword and bird-seal inscription."
+    },
+    {
+      "id": "yu-met-sword",
+      "title": "Sword, Eastern Zhou dynasty",
+      "url": "https://www.metmuseum.org/art/collection/search/44717",
+      "note": "Metropolitan Museum object record for comparative Eastern Zhou bronze sword craftsmanship."
+    },
+    {
+      "id": "yu-bm-mirror",
+      "title": "A history of storytelling through pictures",
+      "url": "https://www.britishmuseum.org/blog/history-storytelling-through-pictures",
+      "note": "British Museum discussion of a later mirror retelling the Goujian and Wu-Yue story."
+    },
+    {
+      "id": "yu-zhejiang",
+      "title": "Yue State cultural relics",
+      "url": "https://www.zjmuseum.com.cn/topic/ywsd/collection2-1-2.html",
+      "note": "Zhejiang Provincial Museum presentation of Yue material culture and archaeological collections."
+    },
+    {
+      "id": "yu-yinshan-science",
+      "title": "Dendrochronological study of the Yinshan Yue royal tomb",
+      "url": "https://link.springer.com/article/10.1007/s11430-024-1572-5",
+      "note": "Peer-reviewed tree-ring study of timbers from the excavated Yue royal mausoleum at Yinshan."
+    },
+    {
+      "id": "yu-yinshan-pku",
+      "title": "The Yinshan Yue royal tomb in Shaoxing",
+      "url": "https://ir.pku.edu.cn/handle/20.500.11897/6828",
+      "note": "Peking University repository record for archaeological research on the Yinshan royal tomb."
+    },
+    {
+      "id": "yu-metals",
+      "title": "Scientific analysis of Yue-style bronze vessels from Hunan",
+      "url": "https://www.nature.com/articles/s40494-023-00973-w",
+      "note": "Peer-reviewed composition and lead-isotope study of Yue-style bronzes and regional material exchange."
+    },
+    {
+      "id": "yu-materials",
+      "title": "Tin-rich surfaces of ancient bronze swords from Wangshan",
+      "url": "https://www.mdpi.com/1996-1944/15/7/2491",
+      "note": "Peer-reviewed materials study of a Wangshan sword fragment, not the inscribed Goujian sword itself."
+    },
+    {
+      "id": "yu-experimental",
+      "title": "Experimental study of patterned bronze swords from ancient China",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1296207425000536",
+      "note": "Peer-reviewed experimental analysis of patterned sword manufacture and visual surface effects."
+    },
+    {
+      "id": "yu-turquoise",
+      "title": "Geographic origin tracing of turquoise from a Yue State noble tomb",
+      "url": "https://jogg.cug.edu.cn/article/doi/10.15964/j.cnki.027jgg.2024.05.009",
+      "note": "Peer-reviewed mineral study of ornaments from a high-status Yue tomb at Longshan, Anji."
+    },
+    {
+      "id": "yu-medicine",
+      "title": "Medicine and Healing in Ancient East Asia: A View from Excavated Texts",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/63BDA5E61EEE44FE0AC23712789C9321/9781108972208AR.pdf/medicine-and-healing-in-ancient-east-asia.pdf",
+      "note": "Scholarly synthesis of excavated medical texts, their dates, genres, healing approaches, and limitations."
+    },
+    {
+      "id": "yu-ihp-sanitation",
+      "title": "Bathing and Toilet Culture in Ancient China",
+      "url": "https://www1.ihp.sinica.edu.tw/Publications/Bulletin/983/Article/152",
+      "note": "Academia Sinica research on ancient bathing, toilets, and the geographic limits of relevant evidence."
+    },
+    {
+      "id": "yu-water",
+      "title": "Water supply and sanitation at an ancient Warring States city",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11612983/",
+      "note": "Indexed study of water and sanitation evidence from a different Warring States urban context."
+    },
+    {
+      "id": "yu-ethics",
+      "title": "Methods and Ethics of Researching Unprovenienced Artifacts from East Asia",
+      "url": "https://www.cambridge.org/core/elements/methods-and-ethics-of-researching-unprovenienced-artifacts-from-east-asia/6CCC45E929648E200C33978A482C8615",
+      "note": "Scholarly guidance on provenance, authenticity, context loss, and responsible artifact research."
+    },
+    {
+      "id": "yu-shiji",
+      "title": "Records of the Grand Historian: House of King Goujian of Yue",
+      "url": "https://ctext.org/shiji/yue-wang-gou-jian-shi-jia",
+      "note": "Digitized primary transmitted text for later narratives about Yue rulers, policies, war, and defeat."
+    },
+    {
+      "id": "yu-guoyu",
+      "title": "Discourses of the States",
+      "url": "https://ctext.org/guo-yu",
+      "note": "Digitized primary transmitted text containing influential later accounts of Wu and Yue."
+    },
+    {
+      "id": "yu-brindley-arch",
+      "title": "The Archaeological Record, Ancient China and the Yue",
+      "url": "https://www.cambridge.org/core/books/abs/ancient-china-and-the-yue/archaeological-record/978594D15D16275841E1FD282D8CF66C",
+      "note": "Scholarly archaeological review separating material patterns from broad Yue textual labels."
+    },
+    {
+      "id": "yu-brindley-review",
+      "title": "Review of Ancient China and the Yue",
+      "url": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/ancient-china-and-the-yue-perceptions-and-identities-on-the-southern-frontier-c400-bce50-ce-by-erica-fox-brindley-cambridge-cambridge-university-press-2015-302-pp-10300-6700-cloth-8200-5371-ebook/F6665BAE2F681FA02DD06692F7BFB8F7",
+      "note": "Scholarly review assessing the book and its treatment of identity, texts, and southern-frontier history."
+    },
+    {
+      "id": "yu-southern-state",
+      "title": "Sinicization and Barbarization: Ancient State Formation at the Southern Edge of Sinitic Civilization",
+      "url": "https://www.cambridge.org/core/books/abs/imperial-china-and-its-southern-neighbours/sinicization-and-barbarization-ancient-state-formation-at-the-southern-edge-of-sinitic-civilization/9A14A67DE4ADF82471DCA89724BC5A02",
+      "note": "Scholarly chapter on southern state formation and the limits of simple assimilation narratives."
+    }
+  ],
+  "entities": [
+    {
+      "id": "yue",
+      "card": "data/cards/yue.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "yu-brindley-book",
+            "yu-institutions",
+            "yu-index",
+            "yu-map-323",
+            "yu-map-300",
+            "yu-map-200"
+          ],
+          "locator": "Scholarly synthesis of Yue identities, southern-frontier interaction, archaeology, texts, and later representations. Scholarly history distinguishing the Zhejiang Yue state from varied later Yue and Viet names. Exact imported id, label, approximate atlas lifetime, and historical-basemaps provenance. First exact-id feature, decoded Fujian polygon, seams, membership tests, and interval. Second exact-id feature with identical geometry and the endpoint interval. Endpoint control where Min Yue replaces the exact id at tested Fujian points.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "yu-brindley-arch"
+          ],
+          "locator": "Scholarly archaeological review separating material patterns from broad Yue textual labels.",
+          "dateScope": {
+            "from": -600,
+            "to": -560
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "yu-southern-state"
+          ],
+          "locator": "Scholarly chapter on southern state formation and the limits of simple assimilation narratives.",
+          "dateScope": {
+            "from": -560,
+            "to": -510
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "yu-pines"
+          ],
+          "locator": "Peer-reviewed source criticism of Goujian narratives, war chronology, population policies, and manuscript limits.",
+          "dateScope": {
+            "from": -510,
+            "to": -494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "yu-shiji"
+          ],
+          "locator": "Digitized primary transmitted text for later narratives about Yue rulers, policies, war, and defeat.",
+          "dateScope": {
+            "from": -494,
+            "to": -482
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "yu-guoyu"
+          ],
+          "locator": "Digitized primary transmitted text containing influential later accounts of Wu and Yue.",
+          "dateScope": {
+            "from": -482,
+            "to": -473
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "yu-warring-history"
+          ],
+          "locator": "Authoritative survey of territorial monarchies, officials, household registration, armies, and interstate change.",
+          "dateScope": {
+            "from": -473,
+            "to": -430
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "yu-xinian"
+          ],
+          "locator": "Peer-reviewed study of a bamboo historical text and Yue activity in Shandong.",
+          "dateScope": {
+            "from": -430,
+            "to": -400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "yu-nmc-ge"
+          ],
+          "locator": "National Museum of China record on Wu-Yue decoration, technology, circulation, and conquest dates.",
+          "dateScope": {
+            "from": -400,
+            "to": -333
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "yu-index",
+            "yu-coverage",
+            "yu-missing",
+            "yu-card-index",
+            "yu-overrides"
+          ],
+          "locator": "Exact identity, imported dates, content gaps, and proposed historical correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "yu-map-323",
+            "yu-map-300"
+          ],
+          "locator": "Complete snapshot audit and exact target topology across both appearances.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "yu-map-323"
+          ],
+          "locator": "Bounding box and representative point-in-polygon tests for core and peripheral places.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "yu-map-323",
+            "yu-map-300"
+          ],
+          "locator": "Direct arc seam and overlap audit interpreted against chronology and geography.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "yu-map-400",
+            "yu-map-200",
+            "yu-map-100"
+          ],
+          "locator": "Pre-start, endpoint, and later point ownership demonstrating layer misassociation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "yu-brindley-review"
+          ],
+          "locator": "Scholarly identity analysis distinguishing the historical state from broad later labels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "yu-stage"
+          ],
+          "locator": "Source criticism for transmitted Eastern Zhou narratives with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "yu-pines"
+          ],
+          "locator": "Peer-reviewed reading of the manuscript chronology, rhetoric, and didactic purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "yu-xinian"
+          ],
+          "locator": "Excavated-text evidence for northern activity and a bounded capital inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "yu-bm-mirror"
+          ],
+          "locator": "Later visual reception distinguished from contemporary historical evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "yu-jizhong"
+          ],
+          "locator": "Excavated urban features, location, date range, and post-conquest stratigraphic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "yu-jizhong"
+          ],
+          "locator": "Rice sample size, interpretation, and explicit analytical limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "yu-jizhong"
+          ],
+          "locator": "Gourd quantity and plausible uses without assigning undocumented individual functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "yu-country"
+          ],
+          "locator": "Regional rural and river context without claiming a uniform Yue farming system.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "yu-cities"
+          ],
+          "locator": "Comparative urban context bounded by the actual Yue excavation sample.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "yu-production"
+          ],
+          "locator": "Material-production context applied to the excavated plant assemblage with menu limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "yu-zhejiang"
+          ],
+          "locator": "Provincial museum context for watercraft and bounded inference with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "yu-met-sword"
+          ],
+          "locator": "Museum object used to explain bronze craft while separating elite and ordinary equipment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "yu-materials"
+          ],
+          "locator": "Specific analytical sample and explicit refusal to transfer results to another sword.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "yu-turquoise"
+          ],
+          "locator": "Scientific provenance study and social limits of noble burial evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "yu-warring-history"
+          ],
+          "locator": "Comparative state institutions and explicit absence of a Yue household register.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "yu-burial"
+          ],
+          "locator": "Funerary hierarchy and limits on reconstructing family life from elite tombs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "yu-shiji"
+          ],
+          "locator": "Transmitted population-policy claims with demographic and household caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "yu-guoyu"
+          ],
+          "locator": "Primary transmitted text used with elite-selection and compilation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "yu-brindley-arch"
+          ],
+          "locator": "Archaeological identity cautions applied to households and cross-border material networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "yu-social"
+          ],
+          "locator": "Evidence-bounded reconstruction of childhood learning and absence of standard schools.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "yu-experimental"
+          ],
+          "locator": "Experimental archaeology supporting complex learned sequences without inventing institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "yu-practical"
+          ],
+          "locator": "Comparative practical learning and bounded inference about elite political education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "yu-nmc-sword"
+          ],
+          "locator": "Official museum evidence for elite inscription, visual style, and limited literacy inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "yu-stage"
+          ],
+          "locator": "Scholarly distinction among regional scripts, spoken language, literacy, and identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "yu-jizhong"
+          ],
+          "locator": "Archaeobotanical find and explicit limit on medicinal interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "yu-medicine"
+          ],
+          "locator": "Comparative medical-text evidence and explicit Yue institutional absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "yu-met-sword"
+          ],
+          "locator": "Material evidence for warfare risk with bounded healing claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "yu-yinshan-science"
+          ],
+          "locator": "Dendrochronological royal-tomb evidence and population-representation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "yu-ethics"
+          ],
+          "locator": "Research ethics, provenance, context loss, and gentle caution about spectacular objects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "yu-stage"
+          ],
+          "locator": "Environmental water context and explicit domestic-supply evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "yu-practical"
+          ],
+          "locator": "Water transport and a clear distinction from domestic sanitation claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "yu-ihp-sanitation"
+          ],
+          "locator": "Explicit evidence-bounded absence of Yue toilets, latrines, sewers, and bathing rooms.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "yu-water"
+          ],
+          "locator": "Comparative sanitation evidence used as a control rather than transferred attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "yu-cities"
+          ],
+          "locator": "Urban deposition and explicit limit on reconstructing waste routines with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "yu-southern-state"
+          ],
+          "locator": "Synthesis of state formation and collective labor behind political power.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "yu-hubei-sword"
+          ],
+          "locator": "Full original, script, transliteration, translation, attribution, maker limit, and approximate date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "yu-hubei-sword"
+          ],
+          "locator": "Official museum description of the royal sword and explicit elite-object limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "yu-npm-sword"
+          ],
+          "locator": "Second royal inscription used to establish a broader Yue prestige practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "yu-metals"
+          ],
+          "locator": "Scientific composition and isotope evidence for regional material exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "yu-shiji"
+          ],
+          "locator": "Transmitted dynastic chronology aligned with the corrected historical ending.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "yu-yinshan-pku"
+          ],
+          "locator": "Post-conquest human continuity distinguished from institutional survival with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "yu-brindley-review"
+          ],
+          "locator": "Scholarly Yue identity framework applied to named successor polities and atlas repaint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "yu-nmc-sword"
+          ],
+          "locator": "Official museum context for object mobility and cautious provenance interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "yu-brindley-review"
+          ],
+          "locator": "Reception history separated from political continuity and broad identity claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "yu-nmc-ge",
+            "yu-map-323",
+            "yu-map-300",
+            "yu-map-200"
+          ],
+          "locator": "National Museum of China record on Wu-Yue decoration, technology, circulation, and conquest dates. First exact-id feature, decoded Fujian polygon, seams, membership tests, and interval. Second exact-id feature with identical geometry and the endpoint interval. Endpoint control where Min Yue replaces the exact id at tested Fujian points.",
+          "dateScope": {
+            "year": -333
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "yue",
+        "name": "Yue state (Yuyue)",
+        "aliases": [
+          "Yuyue",
+          "State of Yue"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": -600,
+        "to": -333,
+        "circa": true,
+        "card": "cards/yue.json",
+        "dateBasis": "historical",
+        "summary": "Lower Yangzi state centered near Kuaiji, powerful under Goujian and conquered by Chu around 333 BCE.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc300.json",
+          "properties": {
+            "civ": "yue",
+            "from": -300,
+            "to": -200,
+            "precision": 1
+          },
+          "bounds": [
+            116.45216452164522,
+            23.24991385748649,
+            119.60219602196025,
+            26.692275825509256
+          ]
+        },
+        {
+          "file": "world-bc323.json",
+          "properties": {
+            "civ": "yue",
+            "from": -323,
+            "to": -300,
+            "precision": 1
+          },
+          "bounds": [
+            116.45216452164522,
+            23.24991385748649,
+            119.60219602196025,
+            26.692275825509256
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
