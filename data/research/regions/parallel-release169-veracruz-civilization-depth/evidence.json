@@ -1,0 +1,988 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release169-veracruz-civilization research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "vc-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, aliases, approximate dates, and historical basemap provenance."
+    },
+    {
+      "id": "vc-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Documents the incorrect Wikipedia-derived Huastec summary replaced by this packet."
+    },
+    {
+      "id": "vc-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Three observed intervals, missing review state, kind, and North America queue."
+    },
+    {
+      "id": "vc-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card is associated with the exact record."
+    },
+    {
+      "id": "vc-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no reviewed exact-id override exists before integration."
+    },
+    {
+      "id": "vc-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record and empty staged draft list."
+    },
+    {
+      "id": "vc-manifest",
+      "title": "Human History Map data manifest",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/manifest.json",
+      "note": "Repository notice that historical borders are approximate and coverage dates are not lifespans."
+    },
+    {
+      "id": "vc-map300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Earlier historical control before the exact atlas feature appears."
+    },
+    {
+      "id": "vc-map400",
+      "title": "Human History Map 400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Immediate pre-start control with no exact target feature."
+    },
+    {
+      "id": "vc-map500",
+      "title": "Human History Map 500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "First exact target feature, decoded geometry, point ownership, and direct arcs."
+    },
+    {
+      "id": "vc-map600",
+      "title": "Human History Map 600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Second exact target feature with unchanged decoded geometry."
+    },
+    {
+      "id": "vc-map700",
+      "title": "Human History Map 700 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Third and final exact target feature with unchanged decoded geometry."
+    },
+    {
+      "id": "vc-map800",
+      "title": "Human History Map 800 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Endpoint seam where a generic city-states layer replaces the exact feature."
+    },
+    {
+      "id": "vc-map900",
+      "title": "Human History Map 900 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Later control where the exact id remains absent."
+    },
+    {
+      "id": "vc-map1000",
+      "title": "Human History Map 1000 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Longer later control that cannot establish an exact successor."
+    },
+    {
+      "id": "vc-smarthistory",
+      "title": "Smarthistory, Classic Veracruz",
+      "url": "https://smarthistory.org/period-culture-style/mesoamerican/classic-veracruz/",
+      "note": "Museum-reviewed overview identifying an archaeological culture and style centered on the Gulf Coast."
+    },
+    {
+      "id": "vc-ica",
+      "title": "Classic Veracruz Rising symposium abstract",
+      "url": "https://ica2012.univie.ac.at/fileadmin/user_upload/DOEVL_events/ICA/Resumenes_Abstracts_54_ICA_Viena_2012.pdf",
+      "note": "Scholarly synthesis of regional diversity, changing complexity, urbanism, ballgame ritual, and occasional glyphs."
+    },
+    {
+      "id": "vc-inah-early-tajin",
+      "title": "El Tajín en los inicios del periodo Clásico",
+      "url": "https://revistas.inah.gob.mx/index.php/arqueologia/article/view/22394",
+      "note": "INAH journal study of early El Tajín political organization and selective cultural appropriation."
+    },
+    {
+      "id": "vc-bm-gallery",
+      "title": "British Museum Mexico gallery, Classic Veracruz",
+      "url": "https://www.britishmuseum.org/collection/galleries/mexico",
+      "note": "Museum chronology separating Classic Veracruz from later Huastec history and describing regional influence."
+    },
+    {
+      "id": "vc-daneels-sustain",
+      "title": "Archaeological data as evidence of sustainable development",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/11287462.2015.1037080",
+      "note": "Peer-reviewed account of small states, settlement hierarchy, population peak, agriculture, tools, and exchange."
+    },
+    {
+      "id": "vc-famsi-lajoya",
+      "title": "Excavaciones en arquitectura monumental de tierra, La Joya",
+      "url": "https://www.famsi.org/reports/07021/07021Daneels01.pdf",
+      "note": "Excavation report on La Joya, earthen palace construction, chronology, regional survey, and preservation."
+    },
+    {
+      "id": "vc-stoner-ag",
+      "title": "Risk, agricultural intensification, political administration, and collapse",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305440317300316",
+      "note": "Peer-reviewed remote-sensing study of 15,000 hectares of intensified fields and collective labor."
+    },
+    {
+      "id": "vc-hydraulic",
+      "title": "Between land and water: Hydraulic engineering in the Tlalixcoyan basin",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416520302373",
+      "note": "Peer-reviewed research on Classic Veracruz water control, agricultural management, and settlement systems."
+    },
+    {
+      "id": "vc-cotton",
+      "title": "Long-term economic change in the Mesoamerican cotton textile industry",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416519302351",
+      "note": "Peer-reviewed evidence for widespread household cotton production and regional specialization."
+    },
+    {
+      "id": "vc-residential-mounds",
+      "title": "Formation Processes of Large Earthen Residential Mounds in La Mixtequilla",
+      "url": "https://www.cambridge.org/core/journals/latin-american-antiquity/article/abs/formation-processes-of-large-earthen-residential-mounds-in-la-mixtequilla-veracruz-mexico/BE7A7E22155B523761AEA82D4EDA851B",
+      "note": "Peer-reviewed household archaeology with cautions about mound formation, household size, status, and demography."
+    },
+    {
+      "id": "vc-plazas",
+      "title": "The Size of Plazas in Mesoamerican Cities and Towns",
+      "url": "https://www.cambridge.org/core/journals/latin-american-antiquity/article/size-of-plazas-in-mesoamerican-cities-and-towns-a-quantitative-analysis/6246D2C5EF99A6FF01B34727D5CECEDD",
+      "note": "Peer-reviewed comparison using Classic Mixtequilla centers, settlement survey, and public plaza areas."
+    },
+    {
+      "id": "vc-collapse",
+      "title": "Collapse and diverse responses in the Gulf lowlands",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S027841651730140X",
+      "note": "Peer-reviewed synthesis of uneven depopulation, collapse, migration, and reorganization around 800 to 1000 CE."
+    },
+    {
+      "id": "vc-ballgame-change",
+      "title": "The Ballgame, Termination Ritual, and Transformation of Classic Period Authority",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00934690.2019.1610309",
+      "note": "Peer-reviewed Matacanela study connecting ballgame deposits with changing authority and regional transformations."
+    },
+    {
+      "id": "vc-met-bowl",
+      "title": "Río Blanco lidded bowl with ballgame scenes",
+      "url": "https://www.metmuseum.org/art/collection/search/319009",
+      "note": "Museum record on narrative relief, mold production, ballplayers, court imagery, and ritual context."
+    },
+    {
+      "id": "vc-met-turkey",
+      "title": "Classic Veracruz turkey vessel",
+      "url": "https://www.metmuseum.org/art/collection/search/317619",
+      "note": "Museum record on diverse polities, bridge-spouted vessel design, luxury drinks, burial, and ceremonial turkeys."
+    },
+    {
+      "id": "vc-met-swing",
+      "title": "Remojadas seated female figure on a swing",
+      "url": "https://www.metmuseum.org/art/collection/search/312770",
+      "note": "Museum record on kinetic and sonic design, proposed child imagery, and missing archaeological context."
+    },
+    {
+      "id": "vc-met-smiling",
+      "title": "Classic Veracruz smiling figure",
+      "url": "https://www.metmuseum.org/art/collection/search/313386",
+      "note": "Museum record on ceramic performance, rattle, clothing, body paint, expression, and interpretive uncertainty."
+    },
+    {
+      "id": "vc-met-figures",
+      "title": "Veracruz ceramic figures with hematite teeth",
+      "url": "https://www.metmuseum.org/art/collection/search/320205",
+      "note": "Museum record on cultural diversity, interchange, costume, rank, and rare hematite dental adornment."
+    },
+    {
+      "id": "vc-met-hacha",
+      "title": "Classic Veracruz jaguar-helmet hacha",
+      "url": "https://www.metmuseum.org/art/collection/search/312593",
+      "note": "Museum record on ballgame gear, warrior imagery, elite costume, and ritual impersonation."
+    },
+    {
+      "id": "vc-met-bound",
+      "title": "Classic Veracruz bound-hands hacha",
+      "url": "https://www.metmuseum.org/art/collection/search/313235",
+      "note": "Museum record on captive imagery, ballgame association, stone material, and chronological attribution."
+    },
+    {
+      "id": "vc-met-palma",
+      "title": "Classic Veracruz palma with figure",
+      "url": "https://www.metmuseum.org/art/collection/search/310472",
+      "note": "Museum record on Veracruz palma innovation, protective regalia, relief carving, death, and renewal imagery."
+    },
+    {
+      "id": "vc-met-tuxtlas",
+      "title": "Los Tuxtlas polychrome tripod bowl",
+      "url": "https://www.metmuseum.org/art/collection/search/317936",
+      "note": "Museum record on regional production, vessel distribution, feasting, power, animals, and multivalent imagery."
+    },
+    {
+      "id": "vc-met-article",
+      "title": "Stone Sculpture and Ritual Impersonation in Classic Veracruz",
+      "url": "https://www.metmuseum.org/met-publications/earley-metropolitan-museum-journal-v-54-2019",
+      "note": "Peer-reviewed museum article on seventh- to tenth-century sculpture, ritual performance, and captive imagery."
+    },
+    {
+      "id": "vc-cleveland-stela",
+      "title": "Cleveland Museum of Art Veracruz stela fragment",
+      "url": "https://www.clevelandart.org/art/1959.334",
+      "note": "Museum record on a possible glyph, warrior, captive, dental modification, and uncertain Veracruz attribution."
+    },
+    {
+      "id": "vc-unam-dental",
+      "title": "Patrones de macrodesgaste dental y diferenciación social",
+      "url": "https://repositorio.unam.mx/contenidos/ficha/patrones-de-macrodesgaste-dental-y-diferenciacion-social-en-restos-oseos-del-clasico-en-el-centro-de-veracruz-4164734",
+      "note": "UNAM study of dental wear, diet, oral pathology, subsistence conditions, and social status."
+    },
+    {
+      "id": "vc-unam-tomb",
+      "title": "Linajes y señores en El Tajín del periodo Epiclásico",
+      "url": "https://revistas.unam.mx/index.php/antropologia/article/view/83631",
+      "note": "UNAM study of El Tajín society and the first identified monumental tomb of a late ruler."
+    },
+    {
+      "id": "vc-unam-funerary",
+      "title": "Entierros prehispánicos en el sur de Veracruz",
+      "url": "https://revistas-filologicas.unam.mx/estudios-mesoamericanos/index.php/em/article/view/64",
+      "note": "UNAM review of southern Veracruz burials from the Formative through Postclassic periods."
+    },
+    {
+      "id": "vc-famsi-future",
+      "title": "The Archaeology of Mexico’s South Gulf Coast: Future Directions",
+      "url": "https://www.famsi.org/reports/96000/",
+      "note": "Scholarly conference report on sparse earlier research, newer regional projects, looting, and research priorities."
+    },
+    {
+      "id": "vc-lajoya-soils",
+      "title": "Paleosols in construction fills at La Joya",
+      "url": "https://doi.org/10.18268/bsgm2022v74n3a100422",
+      "note": "Peer-reviewed micromorphology of earthen architecture, local soils, and floodplain construction at La Joya."
+    },
+    {
+      "id": "vc-inah-newsite",
+      "title": "INAH discovery at San Lucas de Coatepec",
+      "url": "https://www.gob.mx/cultura/prensa/en-veracruz-el-inah-descubre-estructura-y-escultura-prehispanicas-con-caracteristicas-unicas",
+      "note": "Official report on Early Classic civic-ceremonial architecture and an unusual sculpture in central Veracruz."
+    },
+    {
+      "id": "vc-unesco-tajin",
+      "title": "UNESCO, El Tajin, Pre-Hispanic City",
+      "url": "https://whc.unesco.org/en/list/631/",
+      "note": "World Heritage record on El Tajín architecture, reliefs, regional influence, and later florescence."
+    },
+    {
+      "id": "vc-inah-tajin",
+      "title": "INAH, Zona Arqueológica El Tajín",
+      "url": "https://inah.gob.mx/zonas/153-zona-arqueologica-el-tajin-y-museo-de-sitio?amp=1",
+      "note": "Official chronology, urban spaces, architecture, cultural diversity, and seventeen ballcourts."
+    },
+    {
+      "id": "vc-max-history",
+      "title": "Museo de Antropología de Xalapa collection history",
+      "url": "https://sapp.uv.mx/catalogomax/es-MX/Home/HistoriaColeccion",
+      "note": "University museum account of excavated Veracruz collections from El Tajín, Remojadas, Nopiloa, and Las Higueras."
+    },
+    {
+      "id": "vc-bm-yoke",
+      "title": "British Museum Classic Veracruz ballgame belt mould",
+      "url": "https://www.britishmuseum.org/collection/object/E_Am-St-398",
+      "note": "Museum object record revising an old yoke interpretation toward a mould for protective leather belts."
+    }
+  ],
+  "entities": [
+    {
+      "id": "veracruz-civilization",
+      "card": "data/cards/veracruz-civilization.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "vc-smarthistory",
+            "vc-summary",
+            "vc-map500",
+            "vc-map600",
+            "vc-map700"
+          ],
+          "locator": "Museum-reviewed overview identifying an archaeological culture and style centered on the Gulf Coast. Documents the incorrect Wikipedia-derived Huastec summary replaced by this packet. First exact target feature, decoded geometry, point ownership, and direct arcs. Second exact target feature with unchanged decoded geometry. Third and final exact target feature with unchanged decoded geometry.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "vc-ica",
+            "vc-inah-early-tajin"
+          ],
+          "locator": "Scholarly synthesis of regional diversity, changing complexity, urbanism, ballgame ritual, and occasional glyphs. INAH journal study of early El Tajín political organization and selective cultural appropriation.",
+          "dateScope": {
+            "from": 300,
+            "to": 400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "vc-famsi-lajoya",
+            "vc-lajoya-soils"
+          ],
+          "locator": "Excavation report on La Joya, earthen palace construction, chronology, regional survey, and preservation. Peer-reviewed micromorphology of earthen architecture, local soils, and floodplain construction at La Joya.",
+          "dateScope": {
+            "from": 400,
+            "to": 500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "vc-daneels-sustain"
+          ],
+          "locator": "Peer-reviewed account of small states, settlement hierarchy, population peak, agriculture, tools, and exchange.",
+          "dateScope": {
+            "from": 500,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "vc-met-article",
+            "vc-met-figures"
+          ],
+          "locator": "Peer-reviewed museum article on seventh- to tenth-century sculpture, ritual performance, and captive imagery. Museum record on cultural diversity, interchange, costume, rank, and rare hematite dental adornment.",
+          "dateScope": {
+            "from": 600,
+            "to": 675
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "vc-stoner-ag",
+            "vc-hydraulic"
+          ],
+          "locator": "Peer-reviewed remote-sensing study of 15,000 hectares of intensified fields and collective labor. Peer-reviewed research on Classic Veracruz water control, agricultural management, and settlement systems.",
+          "dateScope": {
+            "from": 675,
+            "to": 725
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "vc-cotton"
+          ],
+          "locator": "Peer-reviewed evidence for widespread household cotton production and regional specialization.",
+          "dateScope": {
+            "from": 725,
+            "to": 775
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "vc-collapse",
+            "vc-ballgame-change"
+          ],
+          "locator": "Peer-reviewed synthesis of uneven depopulation, collapse, migration, and reorganization around 800 to 1000 CE. Peer-reviewed Matacanela study connecting ballgame deposits with changing authority and regional transformations.",
+          "dateScope": {
+            "from": 775,
+            "to": 850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "vc-inah-tajin",
+            "vc-unesco-tajin"
+          ],
+          "locator": "Official chronology, urban spaces, architecture, cultural diversity, and seventeen ballcourts. World Heritage record on El Tajín architecture, reliefs, regional influence, and later florescence.",
+          "dateScope": {
+            "from": 850,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "vc-index",
+            "vc-coverage",
+            "vc-card-index",
+            "vc-overrides",
+            "vc-missing"
+          ],
+          "locator": "Exact index, coverage, card, override, and missing-record fields before integration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "vc-summary",
+            "vc-bm-gallery"
+          ],
+          "locator": "Imported summary compared with museum separation of Classic Veracruz and Huaxtec histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "vc-map500",
+            "vc-map600",
+            "vc-map700"
+          ],
+          "locator": "Complete snapshot scan, exact feature counts, dimensions, interval properties, and geometry hashes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "vc-map500"
+          ],
+          "locator": "Decoded bounding box and representative point-in-polygon tests for named archaeological centers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "vc-manifest",
+            "vc-map300",
+            "vc-map400",
+            "vc-map500",
+            "vc-map700",
+            "vc-map800",
+            "vc-map900",
+            "vc-map1000"
+          ],
+          "locator": "Before-and-after ownership controls and repository warning about map-coverage chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "vc-ica"
+          ],
+          "locator": "Symposium scope, chronology, archaeological traits, and explicitly regional political questions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "vc-inah-early-tajin"
+          ],
+          "locator": "INAH article abstract on political organization, appropriation, and distinct local identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "vc-daneels-sustain"
+          ],
+          "locator": "Peer-reviewed settlement hierarchy and small-state interpretation in the lower Cotaxtla basin.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "vc-map500",
+            "vc-map600",
+            "vc-map700"
+          ],
+          "locator": "Direct encoded arc audit and absence of decoded area-overlap candidates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "vc-bm-gallery"
+          ],
+          "locator": "Museum-reviewed chronological range compared with exact atlas intervals and regional variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "vc-famsi-lajoya"
+          ],
+          "locator": "Excavated architecture, location, chronology, and cautious political interpretation of La Joya.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "vc-lajoya-soils"
+          ],
+          "locator": "Peer-reviewed sediment analysis, local environment, and construction-fill evidence at La Joya.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "vc-stoner-ag"
+          ],
+          "locator": "Published extent, field forms, political-node analysis, and collective labor interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "vc-hydraulic"
+          ],
+          "locator": "Peer-reviewed study of canal networks, agricultural management, and settlement context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "vc-residential-mounds"
+          ],
+          "locator": "Formation processes and explicit demographic limits in a Classic-period residential mound.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "vc-daneels-sustain"
+          ],
+          "locator": "Population peak, ecological coverage, food requirements, tools, and exchange network evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "vc-cotton"
+          ],
+          "locator": "Peer-reviewed household distribution, chronology, specialization, and trade implications of cotton production.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "vc-met-turkey"
+          ],
+          "locator": "Museum interpretation of vessel mechanics, luxury drink, burial contexts, and turkey significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "vc-met-tuxtlas"
+          ],
+          "locator": "Museum synthesis of production, distribution, archaeological associations, and multivalent imagery.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "vc-max-history"
+          ],
+          "locator": "University museum history linking major Central Veracruz collections to named field projects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "vc-residential-mounds"
+          ],
+          "locator": "Household analytical value and stated limits of mound size for demographic inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "vc-plazas"
+          ],
+          "locator": "Surveyed plaza areas, settlement context, and limits of inferring crowds and participation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "vc-unam-dental"
+          ],
+          "locator": "Sample size, sites, analytical aims, and cautious population-level interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "vc-unam-funerary"
+          ],
+          "locator": "Regional burial review and limits of moving from funerary context to everyday kinship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "vc-unam-tomb"
+          ],
+          "locator": "El Tajín ruler tomb, lineage interpretation, uniqueness, and social-scope boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "vc-met-swing"
+          ],
+          "locator": "Museum child interpretation paired with explicit absence of excavated parallels and context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "vc-met-bowl"
+          ],
+          "locator": "Documented manufacture sequence used only to bound an apprenticeship inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "vc-cotton"
+          ],
+          "locator": "Household craft distribution and explicit limits on reconstructing teaching relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "vc-famsi-future"
+          ],
+          "locator": "Conference review of uneven research history, newer projects, and archaeological preservation priorities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "vc-bm-yoke"
+          ],
+          "locator": "Museum reinterpretation of object function and cautious link to skill transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "vc-unam-dental"
+          ],
+          "locator": "Bioarchaeological indicators separated from unsupported medical-system claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "vc-unam-funerary"
+          ],
+          "locator": "Funerary evidence limits for moving from skeletal condition to treatment behavior.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "vc-cleveland-stela"
+          ],
+          "locator": "Museum description of pointed teeth, imagery, date, and uncertain geographic attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "vc-met-figures"
+          ],
+          "locator": "Museum analysis of hematite on ceramic teeth and bounded medical interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "vc-met-turkey",
+            "vc-famsi-future"
+          ],
+          "locator": "Review boundary using vessel function and documented gaps in regional archaeological research.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "vc-hydraulic"
+          ],
+          "locator": "Published hydraulic function and explicit boundary against unsupported domestic-service claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "vc-stoner-ag"
+          ],
+          "locator": "Agricultural infrastructure, labor organization, and limits on domestic sanitation inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "vc-lajoya-soils"
+          ],
+          "locator": "Environmental and construction evidence kept distinct from undocumented domestic water systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "vc-residential-mounds"
+          ],
+          "locator": "Mound formation evidence and archaeological criteria needed for a latrine interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "vc-famsi-future"
+          ],
+          "locator": "Explicit evidence-bounded absence based on reviewed settlement and research surveys.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "vc-met-bowl"
+          ],
+          "locator": "Museum iconographic analysis, player attributes, layered composition, and narrative limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "vc-met-bound",
+            "vc-met-article"
+          ],
+          "locator": "Peer-reviewed and museum interpretation of captive attributes and ritual use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "vc-met-palma"
+          ],
+          "locator": "Museum description of palma function, regional innovation, relief imagery, and interpretive restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "vc-met-smiling"
+          ],
+          "locator": "Museum record of performance attributes, costume, paint, expression, and identification uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "vc-cleveland-stela",
+            "vc-ica"
+          ],
+          "locator": "Evidence-bounded absence after reviewing reported glyphs and uncertain museum attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "vc-met-article",
+            "vc-met-hacha"
+          ],
+          "locator": "Museum scholarship on stone and ceramic technical repertoires and ritual impersonation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "vc-unesco-tajin"
+          ],
+          "locator": "World Heritage description of architecture, influence, significance, and preserved city.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "vc-inah-newsite"
+          ],
+          "locator": "Official 2026 salvage report, dating, architecture, sculpture, and ongoing research significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "vc-collapse"
+          ],
+          "locator": "Peer-reviewed synthesis of uneven collapse, depopulation, migration, and reorganization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "vc-map700",
+            "vc-map800",
+            "vc-map900",
+            "vc-ballgame-change"
+          ],
+          "locator": "Exact endpoint seam compared with scholarly evidence for changing authority and regional continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "vc-collapse",
+            "vc-inah-tajin",
+            "vc-map700",
+            "vc-map800"
+          ],
+          "locator": "Peer-reviewed synthesis of uneven depopulation, collapse, migration, and reorganization around 800 to 1000 CE. Official chronology, urban spaces, architecture, cultural diversity, and seventeen ballcourts. Third and final exact target feature with unchanged decoded geometry. Endpoint seam where a generic city-states layer replaces the exact feature.",
+          "dateScope": {
+            "year": 900
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "veracruz-civilization",
+        "name": "Classic Veracruz traditions",
+        "aliases": [
+          "Veracruz civilization",
+          "Veracruz"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 300,
+        "to": 900,
+        "circa": true,
+        "card": "cards/veracruz-civilization.json",
+        "dateBasis": "historical",
+        "summary": "Diverse Gulf lowland traditions and small polities documented through settlements, farming, exchange, ballgames, and art from about 300 to 900 CE.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-500.json",
+          "properties": {
+            "civ": "veracruz-civilization",
+            "from": 500,
+            "to": 600,
+            "precision": 1
+          },
+          "bounds": [
+            -98.58518585185851,
+            16.98315610606194,
+            -92.93672936729367,
+            21.255002885656438
+          ]
+        },
+        {
+          "file": "world-600.json",
+          "properties": {
+            "civ": "veracruz-civilization",
+            "from": 600,
+            "to": 700,
+            "precision": 1
+          },
+          "bounds": [
+            -98.58518585185851,
+            16.98315610606194,
+            -92.93672936729367,
+            21.255002885656438
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "veracruz-civilization",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            -98.58518585185851,
+            16.98315610606194,
+            -92.93672936729367,
+            21.255002885656438
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
