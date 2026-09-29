@@ -1,0 +1,926 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release174-maan research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "s-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, state kind, approximate atlas dates, and historical basemap provenance."
+    },
+    {
+      "id": "s-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Documents the unrelated Babbu Maan biography that this ancient South Arabian card replaces."
+    },
+    {
+      "id": "s-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing review state, Asia queue, two border files, and observed atlas intervals."
+    },
+    {
+      "id": "s-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing id, imported-summary status, source lead, and empty staged drafts."
+    },
+    {
+      "id": "s-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact Maan card association currently exists."
+    },
+    {
+      "id": "s-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id Maan override currently exists."
+    },
+    {
+      "id": "s-map300bc",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Pre-layer control and neighboring Arabian features before the exact Maan geometry appears."
+    },
+    {
+      "id": "s-map200bc",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "First exact Maan geometry, representative ownership, shared arcs, and interval properties."
+    },
+    {
+      "id": "s-map100bc",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Second identical exact Maan geometry, representative ownership, shared arcs, and interval properties."
+    },
+    {
+      "id": "s-map1bc",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Endpoint control showing removal of the exact Maan feature at the atlas year labeled 1 BCE."
+    },
+    {
+      "id": "s-map100ce",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Later control confirming that the exact Maan feature remains absent after the atlas endpoint."
+    },
+    {
+      "id": "s-unesco-main",
+      "title": "UNESCO, Cities and Landmarks of Ma-in Old Kingdom",
+      "url": "https://whc.unesco.org/en/tentativelists/6844",
+      "note": "Official heritage synthesis of Qarnawu, Yathill, irrigated Jawf settlements, trade, temples, and inscriptions."
+    },
+    {
+      "id": "s-cnr-origins",
+      "title": "CNR, From city-state to kingdom: Ma-in in the eighth to sixth centuries BCE",
+      "url": "https://iris.cnr.it/handle/20.500.14243/345775",
+      "note": "Peer-reviewed chronology emphasizing debated origins, endogenous formation, Yathill confederation, and Sabaean rivalry."
+    },
+    {
+      "id": "s-archaeopress",
+      "title": "Archaeopress, Baraqish/Yathill excavations 1986-2007",
+      "url": "https://www.archaeopress.com/Archaeopress/Products/9781789694703",
+      "note": "Open archaeological report covering stratigraphy, temples, domestic debris, economy, pottery, inscriptions, and environment."
+    },
+    {
+      "id": "s-wiley-after",
+      "title": "The Minaeans after Ma-in?",
+      "url": "https://doi.org/10.1111/aae.12176",
+      "note": "Peer-reviewed reassessment of the kingdom collapse, later Minaic writing, and continuity after political change."
+    },
+    {
+      "id": "s-unesco-baraqish",
+      "title": "UNESCO, Baraqish City Archaeological Site",
+      "url": "https://whc.unesco.org/en/tentativelists/6873",
+      "note": "Official description of Yathill, its fortifications, trade and religious roles, Roman occupation, and later decline."
+    },
+    {
+      "id": "s-unesco-routes",
+      "title": "UNESCO, Old Incense Trade Routes in Yemen",
+      "url": "https://whc.unesco.org/en/tentativelists/6862",
+      "note": "Official route synthesis linking South Arabian capitals, caravan stations, temples, water works, and inscriptions."
+    },
+    {
+      "id": "s-unesco-dossier",
+      "title": "UNESCO Ma-in comparative and heritage dossier",
+      "url": "https://whc.unesco.org/document/191751",
+      "note": "Detailed official documentation of Qarnawu planning, Baraqish canals, irrigated fields, dam, temples, and settlement landscape."
+    },
+    {
+      "id": "s-chronology",
+      "title": "Chronology of the Kingdom of Ma-in",
+      "url": "https://www.researchgate.net/publication/345349672_La_chronologie_du_royaume_de_Main_VIIIe-Ier_siecles_av_J-C",
+      "note": "Scholarly reconstruction of thirty-nine rulers and the debated eighth-to-first-century BCE royal sequence."
+    },
+    {
+      "id": "s-delos",
+      "title": "Minaeans in the Mediterranean: two inscriptions from Delos",
+      "url": "https://doi.org/10.1111/aae.12229",
+      "note": "Open peer-reviewed edition, palaeographic dating, transliteration, translation, and attribution of the Delos altars."
+    },
+    {
+      "id": "s-central-corpus",
+      "title": "CNR Corpus of Central Minaic Inscriptions",
+      "url": "https://iris.cnr.it/handle/20.500.14243/374420",
+      "note": "Scholarly corpus description for roughly 1,300 Minaic inscriptions from the South Arabian heartland."
+    },
+    {
+      "id": "s-marginal-corpus",
+      "title": "CNR Corpus of Marginal Minaic Inscriptions",
+      "url": "https://iris.cnr.it/handle/20.500.14243/374446",
+      "note": "Scholarly corpus of Minaic inscriptions beyond the homeland, documenting trade stations and diaspora settings."
+    },
+    {
+      "id": "s-dasi",
+      "title": "CNR DASI digitization of pre-Islamic Arabian inscriptions",
+      "url": "https://archaeologicalcomputing.cnr.it/itineraries/projects/dasi-and-the-digitization-of-pre-islamic-arabian-inscriptions/",
+      "note": "Institutional account of the digital epigraphic corpus, metadata, languages, objects, texts, and research method."
+    },
+    {
+      "id": "s-open-epihub",
+      "title": "Open EpiHub, DASI resource",
+      "url": "https://open-epihub.cnr.it/resources/2",
+      "note": "CNR resource description covering editions, translations, bibliographies, word lists, object data, and geographic context."
+    },
+    {
+      "id": "s-dadan",
+      "title": "Dadanitic local calendar and Minaic contacts",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/dadanitic-bry-as-referring-to-a-local-calendar/2FCEA493904920CB4DE5E23D3F50A701",
+      "note": "Peer-reviewed evidence for Minaic dating practice, mixed marriage, children, and interaction at Dadan."
+    },
+    {
+      "id": "s-family",
+      "title": "Family Organization in Pre-Islamic South Arabian Society",
+      "url": "https://iris.uniroma1.it/retrieve/d2cbd358-8ad0-431e-a953-c91fb2a81779/Agostini_family-organization_2024.pdf",
+      "note": "University research on couples, descent, marriage, women, and family terms in South Arabian inscriptions."
+    },
+    {
+      "id": "s-hima",
+      "title": "Minaeans at Hima: epigraphic corpus and implications",
+      "url": "https://doi.org/10.1111/aae.12261",
+      "note": "Peer-reviewed study of more than 150 caravan-route inscriptions, merchants, families, mobility, and cultural interaction."
+    },
+    {
+      "id": "s-brill-wood",
+      "title": "Semitic Documents on Wooden Sticks",
+      "url": "https://doi.org/10.1163/9789004443877_003",
+      "note": "Peer-reviewed chapter on cursive documents, school exercises, archives, correspondence, contracts, and scribal education."
+    },
+    {
+      "id": "s-asor-wood",
+      "title": "Carved, Signed, Crossed Out: South Arabian wooden documents",
+      "url": "https://anetoday.org/stein-arabia-documents/",
+      "note": "Scholarly account of Minaic and Sabaic letters, accounts, contracts, ritual texts, cancellation, and teaching samples."
+    },
+    {
+      "id": "s-bsl-wood",
+      "title": "Bavarian State Library Ancient South Arabian inscriptions on wood",
+      "url": "https://digitale-sammlungen.de/en/ancient-south-arabian-inscriptions-on-wood",
+      "note": "Institutional collection of letters, legal and business documents, school exercises, and ritual texts on wooden sticks."
+    },
+    {
+      "id": "s-jstor-economy",
+      "title": "Baraqish Area C: Economy, Trade, and the Environment",
+      "url": "https://www.jstor.org/stable/j.ctv1mjqpth.29",
+      "note": "Open archaeological chapter on plants, animals, seasonal floods, oasis ecology, trade evidence, and environmental change."
+    },
+    {
+      "id": "s-jstor-objects",
+      "title": "Baraqish Area C: The Objects",
+      "url": "https://www.jstor.org/stable/j.ctv1mjqpth.31",
+      "note": "Open archaeological catalogue treating humble artifacts as evidence for behavior, work, and cultural life."
+    },
+    {
+      "id": "s-jstor-pottery",
+      "title": "Baraqish Area C: The Minaean Pottery",
+      "url": "https://www.jstor.org/stable/j.ctv1mjqpth.32",
+      "note": "Open specialist study of the excavated Minaean ceramic sequence, forms, contexts, and classification limits."
+    },
+    {
+      "id": "s-jstor-inscriptions",
+      "title": "Baraqish inscriptions and the Kingdom of Ma-in",
+      "url": "https://www.jstor.org/stable/j.ctv1mjqpth.37",
+      "note": "Open specialist chapter connecting Yathill inscriptions with political, urban, and regional history."
+    },
+    {
+      "id": "s-jstor-setting",
+      "title": "Baraqish Area C: Setting, Stratigraphy, and Geoarchaeology",
+      "url": "https://www.jstor.org/stable/j.ctv1mjqpth.27",
+      "note": "Open excavation chapter on layered deposits, mudbrick structures, hearths, refuse, organics, and site formation."
+    },
+    {
+      "id": "s-necropolis",
+      "title": "Sapienza, the Minaean necropolis at Baraqish",
+      "url": "https://iris.uniroma1.it/handle/11573/437457",
+      "note": "University excavation report on pit graves, stelae, funerary customs, seasonal visitors, and evidence limits."
+    },
+    {
+      "id": "s-monumenta",
+      "title": "Italian Archaeological Mission at Baraqish",
+      "url": "https://www.monumentaorientalia.org/yemen_baraqish-en/",
+      "note": "Mission history and excavation evidence for Yathill, Minaean temples, necropolis, chronology, and conservation."
+    },
+    {
+      "id": "s-athtar",
+      "title": "Excavation of the Athtar dhu-Qabd temple at Baraqish",
+      "url": "https://iris.uniroma1.it/handle/11573/787369",
+      "note": "University excavation record for the massive hypostyle temple and its stratigraphic historical reconstruction."
+    },
+    {
+      "id": "s-whitelevy",
+      "title": "Harvard White-Levy project at Baraqish/Yathill",
+      "url": "https://whitelevy.fas.harvard.edu/italian-archaeological-mission-yemen-excavations-bar%C4%81qishyathill-temple-%CA%BFathtar-dhu-qab%E1%B8%8D",
+      "note": "Institutional project description of the second major city, temple publication, archives, and archaeological preservation."
+    },
+    {
+      "id": "s-persee",
+      "title": "The South Arabian Kingdom of Ma-in: new Baraqish evidence",
+      "url": "https://www.persee.fr/doc/crai_0065-0536_2009_num_153_1_92443",
+      "note": "Academy publication reassessing Ma-in through Italian excavations and epigraphic and settlement evidence."
+    },
+    {
+      "id": "s-unicode",
+      "title": "Unicode Old South Arabian character names",
+      "url": "https://www.unicode.org/charts/nameslist/n_10A60.html",
+      "note": "Official character inventory used to normalize the published Delos transliteration into readable Unicode Musnad."
+    },
+    {
+      "id": "s-anet",
+      "title": "Ancient Near Eastern Texts: South Arabian inscriptions",
+      "url": "https://e-edu.nbu.bg/pluginfile.php/753301/mod_resource/content/1/AncientNearEasternTexts_Pritchard1969.pdf",
+      "note": "University-hosted scholarly translations of Minaean building, family, land, taxation, and dedicatory inscriptions."
+    },
+    {
+      "id": "s-mnamon",
+      "title": "Scuola Normale Superiore, Ancient South Arabian writing",
+      "url": "https://doi.org/10.25429/sns.it/lettere/mnamon046",
+      "note": "Academic reference on monumental and minuscule scripts, literacy levels, writing surfaces, and scribal institutions."
+    }
+  ],
+  "entities": [
+    {
+      "id": "maan",
+      "card": "data/cards/maan.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-unesco-main",
+            "s-cnr-origins",
+            "s-archaeopress"
+          ],
+          "locator": "Exact id, imported name, state kind, approximate atlas dates, and historical basemap provenance. Documents the unrelated Babbu Maan biography that this ancient South Arabian card replaces. Missing review state, Asia queue, two border files, and observed atlas intervals. Official heritage synthesis of Qarnawu, Yathill, irrigated Jawf settlements, trade, temples, and inscriptions. Peer-reviewed chronology emphasizing debated origins, endogenous formation, Yathill confederation, and Sabaean rivalry. Open archaeological report covering stratigraphy, temples, domestic debris, economy, pottery, inscriptions, and environment.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "s-delos"
+          ],
+          "locator": "Open peer-reviewed edition, palaeographic dating, transliteration, translation, and attribution of the Delos altars.",
+          "dateScope": {
+            "from": -200,
+            "to": -175
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "s-hima"
+          ],
+          "locator": "Peer-reviewed study of more than 150 caravan-route inscriptions, merchants, families, mobility, and cultural interaction.",
+          "dateScope": {
+            "from": -175,
+            "to": -150
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "s-unesco-baraqish"
+          ],
+          "locator": "Official description of Yathill, its fortifications, trade and religious roles, Roman occupation, and later decline.",
+          "dateScope": {
+            "from": -150,
+            "to": -125
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "s-dadan"
+          ],
+          "locator": "Peer-reviewed evidence for Minaic dating practice, mixed marriage, children, and interaction at Dadan.",
+          "dateScope": {
+            "from": -125,
+            "to": -100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "s-chronology"
+          ],
+          "locator": "Scholarly reconstruction of thirty-nine rulers and the debated eighth-to-first-century BCE royal sequence.",
+          "dateScope": {
+            "from": -100,
+            "to": -75
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "s-jstor-inscriptions"
+          ],
+          "locator": "Open specialist chapter connecting Yathill inscriptions with political, urban, and regional history.",
+          "dateScope": {
+            "from": -75,
+            "to": -50
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "s-unesco-baraqish"
+          ],
+          "locator": "Official description of Yathill, its fortifications, trade and religious roles, Roman occupation, and later decline.",
+          "dateScope": {
+            "from": -50,
+            "to": -25
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "s-chronology"
+          ],
+          "locator": "Scholarly reconstruction of thirty-nine rulers and the debated eighth-to-first-century BCE royal sequence.",
+          "dateScope": {
+            "from": -25,
+            "to": -1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-missing"
+          ],
+          "locator": "Exact id, imported identity error, corrected historical scope, and compatibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "s-coverage",
+            "s-card-index",
+            "s-overrides",
+            "s-map300bc",
+            "s-map200bc"
+          ],
+          "locator": "Full snapshot audit, exact feature count, live missing state, and association absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "s-map200bc",
+            "s-map100bc"
+          ],
+          "locator": "Decoded geometry type, counts, bounds, repeated shape, and century-boundary caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "s-map200bc",
+            "s-map100bc"
+          ],
+          "locator": "Representative point memberships, excluded heartland, and rejected territorial interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "s-map200bc",
+            "s-map100bc"
+          ],
+          "locator": "Direct shared arcs, overlap checks, and limits on historical inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "s-chronology"
+          ],
+          "locator": "Royal sequence, co-rule, chronological method, and remaining uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "s-persee"
+          ],
+          "locator": "Political formation, Yathill relationship, Sabaean competition, and long history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "s-anet"
+          ],
+          "locator": "Named family, king, council, building works, farming, and institutional limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "s-central-corpus",
+            "s-dasi"
+          ],
+          "locator": "Corpus scale, record types, linked metadata, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "s-open-epihub",
+            "s-dasi"
+          ],
+          "locator": "Epigraphic method, database fields, archive incompleteness, and lost records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "s-unesco-routes"
+          ],
+          "locator": "Route sequence, caravan labor, logistical needs, and goods beyond incense.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "s-marginal-corpus"
+          ],
+          "locator": "Diaspora corpus, distant findspots, and rejection of inscription-equals-rule inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "s-hima"
+          ],
+          "locator": "Hima corpus, mobility, families, evidentiary limits, and gentle itinerary humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "s-dadan"
+          ],
+          "locator": "Dadan interaction, mixed family, writing practices, and nonreplacement model.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "s-delos"
+          ],
+          "locator": "Named dedicators, clan, altar, palaeographic date, Greek additions, and context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "s-unesco-dossier"
+          ],
+          "locator": "Capital plan, streets, gates, irrigated surroundings, labor, and map exclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "s-unesco-baraqish"
+          ],
+          "locator": "Yathill dimensions, towers, gate, and distinction from population or lived area.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "s-unesco-dossier"
+          ],
+          "locator": "Canal extent, dam, seasonal flood control, maintenance, and access caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "s-athtar",
+            "s-whitelevy"
+          ],
+          "locator": "Temple identity, architecture, finds, institutional investment, and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "s-jstor-economy"
+          ],
+          "locator": "Extramural stratigraphy, domestic evidence, oasis life, and environmental change.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "s-jstor-economy"
+          ],
+          "locator": "Seasonal floods, farming base, coordinated labor, and trade-centered interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "s-jstor-economy"
+          ],
+          "locator": "Plant and animal evidence, economic uses, preservation filters, and menu caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "s-jstor-pottery"
+          ],
+          "locator": "Ceramic classification, vessel uses, dating value, and identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "s-jstor-objects"
+          ],
+          "locator": "Humble artifacts, craft materials, repair, production waste, and survival bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "s-unesco-routes"
+          ],
+          "locator": "Infrastructure, support labor, negotiated services, and gentle caravan-parade correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "s-anet"
+          ],
+          "locator": "Named kin, clan, status roles, and household-generalization limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "s-family"
+          ],
+          "locator": "Foreign marriages, mobile households, legal recognition, and experience limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "s-dadan"
+          ],
+          "locator": "Mixed-union children, public law, damaged text, and limits on family reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "s-family"
+          ],
+          "locator": "Women in family and dedication records, mixed couple, agency, and representativeness caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "s-necropolis"
+          ],
+          "locator": "Extramural graves, mobile visitors, town-caravan relationship, and status caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "s-brill-wood"
+          ],
+          "locator": "Writing exercises, scribal curriculum, absent universal school, and access gaps.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "s-jstor-objects"
+          ],
+          "locator": "Practical learning, household participation, skilled sequences, and teacher uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "s-mnamon"
+          ],
+          "locator": "Literacy levels, graffiti, specialist writing, institutions, and nonuniversal access.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "s-asor-wood"
+          ],
+          "locator": "Wooden-document genres, Minaic presence, archive location, and attribution boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "s-asor-wood",
+            "s-bsl-wood"
+          ],
+          "locator": "Exercises within archives, collection genres, writing support, and gentle kindling humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "s-central-corpus"
+          ],
+          "locator": "Evidence-bounded absence of medical institutions and recognition of ordinary care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "s-unesco-dossier"
+          ],
+          "locator": "Water infrastructure, indirect health effects, hazards, access, and evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "s-jstor-economy"
+          ],
+          "locator": "Diet evidence, diagnostic limits, human-remains requirement, and interval caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "s-necropolis"
+          ],
+          "locator": "Burial evidence, publication focus, and rejected population health rates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "s-open-epihub"
+          ],
+          "locator": "Ritual petitions, edition evidence, clinic caution, and categories of care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "s-unesco-dossier"
+          ],
+          "locator": "Irrigation-versus-sewer distinction and explicit toilet and sanitation evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "s-jstor-setting"
+          ],
+          "locator": "Refuse deposits, movement, site formation, and limits on cleanliness inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "s-mnamon"
+          ],
+          "locator": "Language, monumental and cursive scripts, writing purpose, vowels, and literacy limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "s-delos",
+            "s-unicode"
+          ],
+          "locator": "Secure sample content, script, date, attribution, and normalized Unicode basis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "s-monumenta",
+            "s-athtar"
+          ],
+          "locator": "Named temples, ritual evidence, regional variation, and theology caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "s-unesco-routes"
+          ],
+          "locator": "Integrated achievements, geographic reach, and rejection of territorial overclaim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "s-monumenta"
+          ],
+          "locator": "Excavated remains, modern damage, documentation, and shared preservation work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "s-central-corpus",
+            "s-dasi"
+          ],
+          "locator": "Epigraphic achievement, breadth of subjects, corpus scale, and survival limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "s-wiley-after"
+          ],
+          "locator": "Possible post-kingdom text and separate political, linguistic, and social timelines.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "s-map1bc",
+            "s-map100ce"
+          ],
+          "locator": "Atlas disappearance, overlapping neighbors, unsafe successor link, and transformation status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "s-wiley-after"
+          ],
+          "locator": "Peer-reviewed reassessment of the kingdom collapse, later Minaic writing, and continuity after political change.",
+          "dateScope": {
+            "year": -1
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "maan",
+        "name": "Ma-in (Minaean kingdom and communities)",
+        "aliases": [
+          "Maan",
+          "Ma-in",
+          "Maʿīn",
+          "Main",
+          "Minaean kingdom"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": -200,
+        "to": -1,
+        "circa": true,
+        "card": "cards/maan.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Minaean kingdom and far-reaching merchant communities rooted in the irrigated Jawf cities of Qarnawu and Yathill.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "maan",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            37.20097200972012,
+            17.515408860153812,
+            43.79623796237962,
+            26.247118976632407
+          ]
+        },
+        {
+          "file": "world-bc200.json",
+          "properties": {
+            "civ": "maan",
+            "from": -200,
+            "to": -100,
+            "precision": 1
+          },
+          "bounds": [
+            37.20097200972012,
+            17.515408860153812,
+            43.79623796237962,
+            26.247118976632407
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
