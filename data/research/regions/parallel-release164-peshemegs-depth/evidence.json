@@ -1,0 +1,807 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release164-peshemegs research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "ps-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, misspelled display label, approximate lifetime, and historical basemap provenance."
+    },
+    {
+      "id": "ps-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, state queue classification, and exact missing-card status."
+    },
+    {
+      "id": "ps-map900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Comparison snapshot containing the separate pechenegs id and its much smaller Dnipro-area feature."
+    },
+    {
+      "id": "ps-map1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Only exact peshemegs snapshot, containing two features with distinct geometries and one shared Bulgar arc."
+    },
+    {
+      "id": "ps-map1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Exact endpoint control where the peshemegs id is absent."
+    },
+    {
+      "id": "ps-paron-ch1",
+      "title": "Paron: Black Sea-Caspian Steppe, Natural Conditions",
+      "url": "https://www.jstor.org/stable/10.1163/j.ctv1v7zbmn.7",
+      "note": "Open scholarly chapter on steppe climate, water, pasture, seasonal constraints, and mobility."
+    },
+    {
+      "id": "ps-paron-ch4",
+      "title": "Paron: Structures and Forms of Existence",
+      "url": "https://www.jstor.org/stable/10.1163/j.ctv1v7zbmn.10",
+      "note": "Open scholarly chapter reconstructing political organization, camps, pastoral life, craft, belief, and evidence limits."
+    },
+    {
+      "id": "ps-paron-ch5",
+      "title": "Paron: The Apex of Pecheneg Political Importance",
+      "url": "https://www.jstor.org/stable/10.1163/j.ctv1v7zbmn.11",
+      "note": "Open scholarly chapter on Pecheneg power, diplomacy, Rus, Byzantium, and the Black Sea steppe."
+    },
+    {
+      "id": "ps-paron-ch6",
+      "title": "Paron: Decline of Pecheneg Power on the Black Sea Steppe",
+      "url": "https://www.jstor.org/stable/10.1163/j.ctv1v7zbmn.12",
+      "note": "Open scholarly chapter on Rus conflict, Oghuz pressure, Kegen, Tyrach, and movement across the Danube."
+    },
+    {
+      "id": "ps-paron-ch7",
+      "title": "Paron: Pechenegs in Neighbouring States",
+      "url": "https://www.jstor.org/stable/10.1163/j.ctv1v7zbmn.13",
+      "note": "Open scholarly chapter on settlement, service, adaptation, and continued communities in Byzantium, Hungary, and Rus."
+    },
+    {
+      "id": "ps-paron-conclusion",
+      "title": "Paron: Conclusion",
+      "url": "https://www.jstor.org/stable/10.1163/j.ctv1v7zbmn.14",
+      "note": "Open scholarly conclusion stressing confederated power, mobility, interaction, and comparison without an empire model."
+    },
+    {
+      "id": "ps-rus-chronicle",
+      "title": "The Russian Primary Chronicle, Laurentian text translation",
+      "url": "https://warwick.ac.uk/fac/arts/history/students/modules/hi3t4/topics/sourcesi/mythsandfolktales/the_russian_primary_chronicle.pdf",
+      "note": "University-hosted translation recording Pecheneg involvement around Rus and the 1036 battle near Kyiv."
+    },
+    {
+      "id": "ps-alexiad",
+      "title": "Anna Komnene: The Alexiad, Book VIII",
+      "url": "https://sourcebooks.web.fordham.edu/basis/AnnaComnena-Alexiad08.asp",
+      "note": "Primary Byzantine narrative of the 1091 campaign and victory at Levounion."
+    },
+    {
+      "id": "ps-alexiad7",
+      "title": "Anna Komnene: The Alexiad, Book VII",
+      "url": "https://sourcebooks.web.fordham.edu/basis/AnnaComnena-Alexiad07.asp",
+      "note": "Primary Byzantine narrative of the 1087 to 1090 war, wagons, families, herds, archery, and foraging."
+    },
+    {
+      "id": "ps-attaleiates",
+      "title": "Michael Attaleiates: Historia, Greek and Latin edition",
+      "url": "https://openlibrary.org/works/OL11753502W/Michaelis_Attaliotae_historia",
+      "note": "Edition of an eleventh-century Byzantine narrative using a contemporary Greek outsider name for Pechenegs."
+    },
+    {
+      "id": "ps-gerard",
+      "title": "Kovacs: Gerard of Csanad and the Pechenegs",
+      "url": "https://dgve.igh.ru/issues/45/articles/896?locale=en",
+      "note": "Russian Academy journal study of Gerard's 1030s sermon, Latin naming, mission, and Christian frontier context."
+    },
+    {
+      "id": "ps-stephenson",
+      "title": "Stephenson: Byzantine Policy towards Paristrion in the Mid-Eleventh Century",
+      "url": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/abs/byzantine-policy-towards-paristrion-in-the-mideleventh-century-another-interpretation/2E0EDA09368E0C1151EC4F28A29DF088",
+      "note": "Study combining archaeology, coins, and texts to reassess markets, administration, and conflict in Paristrion."
+    },
+    {
+      "id": "ps-krumova",
+      "title": "Krumova: Pecheneg Chieftains in Byzantine Administration",
+      "url": "https://real-j.mtak.hu/21464/1/Annual_of_Medieval_Studies_at_CEU_Vol_11_2005.pdf",
+      "note": "Study of named leaders, seals, titles, service, settlement, and identity changes inside Byzantium."
+    },
+    {
+      "id": "ps-curta",
+      "title": "Curta: The Image and Archaeology of the Pechenegs",
+      "url": "https://biblioteca-digitala.ro/reviste/Banatica/23-Banatica-muzeul-banatului-montan-2013-6.pdf",
+      "note": "Critical study of burials, ornaments, pottery, written images, and the dangers of ethnic attribution."
+    },
+    {
+      "id": "ps-pottery",
+      "title": "Ivanov and Ivanov: Pecheneg Pottery from Bulgaria",
+      "url": "https://piforum.uni-plovdiv.bg/wp-content/uploads/2025/07/Rumen-i-Rosen-Ivanovi-br.-2_2024.pdf",
+      "note": "Study of eleventh-century cooking and table wares associated cautiously with Pecheneg settlement in Bulgaria."
+    },
+    {
+      "id": "ps-naim",
+      "title": "Stoyanov: Late Nomadic Equestrian Burials in Bulgaria",
+      "url": "https://publications.naim.bg/index.php/CBA/article/view/366",
+      "note": "Institutional archaeological review of horse deposits, grave contexts, chronology, and attribution limits."
+    },
+    {
+      "id": "ps-danube-graves",
+      "title": "Holeschak: Equestrian graves north of the lower Danube",
+      "url": "https://cercetari-arheologice.ro/wp-content/uploads/2022/07/ca29_1_18_Holescak.pdf",
+      "note": "Peer reviewed comparison of horse remains and grave rites across broad late nomadic horizons."
+    },
+    {
+      "id": "ps-ppke",
+      "title": "Bollok: Archaeological Traces of Pechenegs and Oghuz in Hungary",
+      "url": "https://publikacio.ppke.hu/id/eprint/11/1/PPKE_BTK442825.pdf",
+      "note": "University study of characteristic equipment, ornaments, burials, and uncertainty in identifying communities."
+    },
+    {
+      "id": "ps-latin",
+      "title": "Szabo: Pechenegs in the Earliest Latin Sources",
+      "url": "https://ojs.bibl.u-szeged.hu/index.php/chronica/article/view/47843",
+      "note": "University journal study of Latin outsider terminology and accounts, including their genre and perspective."
+    },
+    {
+      "id": "ps-bruno",
+      "title": "Bruno of Querfurt and his Pecheneg mission",
+      "url": "https://doaj.org/article/eab0a0318e594df99fd0ccac1fb0a80e",
+      "note": "Indexed scholarly study of Bruno's mission around 1004 and the political setting of conversion efforts."
+    },
+    {
+      "id": "ps-melnyk",
+      "title": "Melnyk: Byzantium and the Pechenegs in Modern Historiography",
+      "url": "https://brill.com/display/book/9789004505223/9789004505223_webready_content_text.pdf",
+      "note": "Open scholarly review of source bias, archaeological methods, and changing interpretations of Byzantine relations."
+    }
+  ],
+  "entities": [
+    {
+      "id": "peshemegs",
+      "card": "data/cards/peshemegs.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "ps-index",
+            "ps-map1000",
+            "ps-paron-conclusion"
+          ],
+          "locator": "Exact imported id, misspelled display label, approximate lifetime, and historical basemap provenance. Only exact peshemegs snapshot, containing two features with distinct geometries and one shared Bulgar arc. Open scholarly conclusion stressing confederated power, mobility, interaction, and comparison without an empire model.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "ps-bruno"
+          ],
+          "locator": "Indexed scholarly study of Bruno's mission around 1004 and the political setting of conversion efforts.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1015
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ps-paron-ch5"
+          ],
+          "locator": "Open scholarly chapter on Pecheneg power, diplomacy, Rus, Byzantium, and the Black Sea steppe.",
+          "dateScope": {
+            "from": 1015,
+            "to": 1030
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ps-rus-chronicle"
+          ],
+          "locator": "University-hosted translation recording Pecheneg involvement around Rus and the 1036 battle near Kyiv.",
+          "dateScope": {
+            "from": 1030,
+            "to": 1040
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ps-paron-ch6"
+          ],
+          "locator": "Open scholarly chapter on Rus conflict, Oghuz pressure, Kegen, Tyrach, and movement across the Danube.",
+          "dateScope": {
+            "from": 1040,
+            "to": 1050
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ps-krumova"
+          ],
+          "locator": "Study of named leaders, seals, titles, service, settlement, and identity changes inside Byzantium.",
+          "dateScope": {
+            "from": 1050,
+            "to": 1065
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ps-stephenson"
+          ],
+          "locator": "Study combining archaeology, coins, and texts to reassess markets, administration, and conflict in Paristrion.",
+          "dateScope": {
+            "from": 1065,
+            "to": 1080
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ps-alexiad"
+          ],
+          "locator": "Primary Byzantine narrative of the 1091 campaign and victory at Levounion.",
+          "dateScope": {
+            "from": 1080,
+            "to": 1091
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "ps-paron-ch7"
+          ],
+          "locator": "Open scholarly chapter on settlement, service, adaptation, and continued communities in Byzantium, Hungary, and Rus.",
+          "dateScope": {
+            "from": 1091,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "ps-index",
+            "ps-coverage",
+            "ps-paron-ch5"
+          ],
+          "locator": "Exact index spelling and lifetime compared with specialist title and usage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "ps-map1000"
+          ],
+          "locator": "Decoded exact-id feature count, types, ring counts, positions, and bounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "ps-map1000"
+          ],
+          "locator": "Point-in-polygon probes and cross-owner test within the large polygon hole.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "ps-map1000",
+            "ps-coverage"
+          ],
+          "locator": "Component probes and distinction between source file count and feature count.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "ps-map900",
+            "ps-map1000",
+            "ps-map1100"
+          ],
+          "locator": "Cross-snapshot feature counts, decoded bounds, target ids, and direct shared-arc scan.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ps-paron-ch4"
+          ],
+          "locator": "Chapter sections on political organization, leadership, and confederate structure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ps-bruno"
+          ],
+          "locator": "Mission chronology, negotiated access, religious aims, and limits of reported conversion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ps-rus-chronicle"
+          ],
+          "locator": "Chronicle entries on princely conflicts and 1036, read with source perspective.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ps-krumova"
+          ],
+          "locator": "Named chieftains, seals, court titles, commands, and administrative placement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ps-stephenson"
+          ],
+          "locator": "Numismatic, archaeological, administrative, and narrative evidence for mid-century Paristrion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ps-paron-ch1"
+          ],
+          "locator": "Natural conditions, seasonal pasture cycles, water access, and mobility constraints.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ps-alexiad7"
+          ],
+          "locator": "Book VII account of numerous grazing horses, cattle, and their herdsmen.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ps-paron-ch1"
+          ],
+          "locator": "Steppe hydrology, climate, river corridors, and seasonal hazards.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ps-alexiad7"
+          ],
+          "locator": "Book VII descriptions of covered wagons, movement, and defensive rows.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ps-map1000"
+          ],
+          "locator": "Decoded bounds, disconnected components, and exact-id duplication.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ps-paron-ch4"
+          ],
+          "locator": "Subsistence reconstruction, seasonal dairy constraints, herding, and exchange.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ps-pottery"
+          ],
+          "locator": "Ceramic categories, relative frequencies, regional distribution, and proposed dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ps-pottery"
+          ],
+          "locator": "Find contexts, vessel function, local chronology, and authors' attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ps-ppke"
+          ],
+          "locator": "Artifact types, grave associations, distribution, and attribution cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ps-ppke"
+          ],
+          "locator": "Gayevka assemblage description and methodological discussion of identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ps-alexiad7"
+          ],
+          "locator": "Book VII description of covered wagons accompanied by wives and children.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ps-melnyk"
+          ],
+          "locator": "Historiographical discussion of Alexiad episodes, gendered imagery, and source bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ps-curta"
+          ],
+          "locator": "Lower Danube burial evidence, child and adult graves, and critique of ethnic labels.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ps-paron-ch5"
+          ],
+          "locator": "Confederate membership, social incorporation, identity, and evidentiary cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ps-krumova"
+          ],
+          "locator": "Elite documentary record compared with broader settlement and service contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ps-paron-ch4"
+          ],
+          "locator": "Domestic and pastoral practices contrasted with the absence of formal-school evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ps-naim"
+          ],
+          "locator": "Burial context, age evidence, and methodological limits of grave interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ps-ppke"
+          ],
+          "locator": "Skilled equipment and craft evidence used only to support knowledge transmission.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ps-melnyk"
+          ],
+          "locator": "Source-critical treatment of Anna Komnene's wartime family descriptions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ps-gerard"
+          ],
+          "locator": "Gerard's sermon, missionary setting, and limits on conversion claims.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ps-gerard"
+          ],
+          "locator": "Latin mission evidence, Christianization context, and interpretive limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ps-paron-ch4"
+          ],
+          "locator": "Survey of daily-life evidence and absence of a Pecheneg-authored medical record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ps-naim"
+          ],
+          "locator": "Equestrian burial contexts, skeletal evidence limits, dating, and disputed attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ps-paron-ch1"
+          ],
+          "locator": "Seasonal environment, herd condition, food availability, and regional variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ps-melnyk"
+          ],
+          "locator": "Modern assessment of Byzantine narrative conventions and historiographical exaggeration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ps-paron-ch1"
+          ],
+          "locator": "Steppe water distribution and mobility constraints, with missing household detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ps-alexiad7"
+          ],
+          "locator": "Wagon camp and foraging descriptions, plus explicit limits of the military narrative.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ps-naim"
+          ],
+          "locator": "Reviewed grave and settlement archaeology and absence of an identified sanitation installation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ps-stephenson"
+          ],
+          "locator": "Archaeological and administrative diversity of Paristrion settlements and towns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ps-pottery"
+          ],
+          "locator": "Ceramic contexts and preservation bias compared with perishable refuse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ps-danube-graves"
+          ],
+          "locator": "Horse-deposit categories, dating ranges, documentation quality, and attribution limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ps-naim"
+          ],
+          "locator": "Veliki Preslav case, missing context, limited inventory, and cautious assessment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ps-ppke"
+          ],
+          "locator": "Diagnostic artifact discussion and warnings against one-object ethnic attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ps-krumova"
+          ],
+          "locator": "Published seals, titles, named officials, and limits of elite evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ps-melnyk"
+          ],
+          "locator": "Historiographical review of evidence traditions, biases, and interdisciplinary correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ps-attaleiates"
+          ],
+          "locator": "Eleventh-century Greek text and modern edition of the outsider ethnonym.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ps-latin"
+          ],
+          "locator": "Earliest Latin forms, textual transmission, genres, and outsider perspective.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ps-attaleiates"
+          ],
+          "locator": "Documentary survival boundary and contemporary Byzantine language context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ps-paron-ch7"
+          ],
+          "locator": "Post-1091 settlement, service, dispersal, and changing labels in neighboring states.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ps-paron-ch6"
+          ],
+          "locator": "Chapter conclusion on political decline, incorporation, and continuing historical significance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "ps-map1100",
+            "ps-paron-ch7"
+          ],
+          "locator": "Exact endpoint control where the peshemegs id is absent. Open scholarly chapter on settlement, service, adaptation, and continued communities in Byzantium, Hungary, and Rus.",
+          "dateScope": {
+            "year": 1100
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "peshemegs",
+        "name": "Pechenegs",
+        "aliases": [
+          "Peshemegs",
+          "Patzinaks"
+        ],
+        "kind": "culture",
+        "region": "Europe",
+        "from": 1000,
+        "to": 1100,
+        "circa": true,
+        "card": "cards/peshemegs.json",
+        "dateBasis": "map_coverage",
+        "summary": "A Pecheneg confederation card correcting the atlas typo while preserving its map window.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "peshemegs",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            59.0459904599046,
+            44.79713904887225,
+            61.50121501215014,
+            46.52056474592463
+          ]
+        },
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "peshemegs",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            28.93168931689317,
+            41.13815239197669,
+            61.95841958419584,
+            52.497787738678255
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

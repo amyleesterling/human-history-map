@@ -1,0 +1,923 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release164-ochethi-sakowi research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "os-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, inherited display name, circa flag, and indexed 1492 to 1500 lifetime."
+    },
+    {
+      "id": "os-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Confirms the exact id has no imported summary."
+    },
+    {
+      "id": "os-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing content status, inherited state kind, North America queue, and one observed interval."
+    },
+    {
+      "id": "os-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact card association currently exists in the index."
+    },
+    {
+      "id": "os-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id override currently exists in the registry."
+    },
+    {
+      "id": "os-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record and its empty list of staged drafts."
+    },
+    {
+      "id": "os-map1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-start control with broad hunter-gatherer labels at the fixed probes."
+    },
+    {
+      "id": "os-map1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact target feature, decoded geometry, overlaps, probes, and shared-arc seams."
+    },
+    {
+      "id": "os-map1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Exact endpoint control and repaint by broad regional labels."
+    },
+    {
+      "id": "os-map1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Later named-record control for Santee, Teton, Yankton, Yankontai, and neighbors."
+    },
+    {
+      "id": "os-map1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Later named-record continuity control across the same representative geographic probes."
+    },
+    {
+      "id": "os-map1650",
+      "title": "Human History Map 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Second later control demonstrating separate lifetimes and geometries."
+    },
+    {
+      "id": "os-nmai-overview",
+      "title": "Northern Plains History and Cultures: Belonging",
+      "url": "https://americanindian.si.edu/nk360/plains-belonging",
+      "note": "Smithsonian Native Knowledge 360 lesson centering Native homelands, kinship, nationhood, governance, and community voices."
+    },
+    {
+      "id": "os-oseu",
+      "title": "Oceti Sakowin Essential Understandings and Standards",
+      "url": "https://doe.sd.gov/ContentStandards/documents/Adopted-OSEU-0425.pdf",
+      "note": "Elder-informed South Dakota standards on Seven Council Fires identity, language divisions, kinship, oral tradition, and chronology cautions."
+    },
+    {
+      "id": "os-mnhs-sevenfires",
+      "title": "Explore the Seven Council Fires",
+      "url": "https://www.mnhs.org/sevencouncilfires",
+      "note": "Museum collection overview explaining Dakota, Lakota, and Nakota naming, changing catalog terms, and distinct contemporary nations."
+    },
+    {
+      "id": "os-mn-osa-prehistory",
+      "title": "Prehistoric Period",
+      "url": "https://mn.gov/admin/archaeologist/educators/mn-archaeology/prehistoric-period/",
+      "note": "Minnesota State Archaeologist synthesis of Oneota, Plains Village, Sandy Lake, Psinomani, subsistence, ceramics, and affiliation limits."
+    },
+    {
+      "id": "os-jewel",
+      "title": "Jewel Cave Pre-Contact History",
+      "url": "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo160379/pdf/GOVPUB-I29-PURL-gpo160379.pdf",
+      "note": "NPS history describing sparse seasonal evidence and uncertainty about ethnic or linguistic affiliation in the Black Hills."
+    },
+    {
+      "id": "os-mn-osa-sites",
+      "title": "Visiting Sites and Museums",
+      "url": "https://mn.gov/admin/archaeologist/educators/visiting-sites-and-museums/",
+      "note": "State archaeology summaries for Mille Lacs Kathio, Wilford house, wild rice evidence, and ancient pipestone use."
+    },
+    {
+      "id": "os-nps-kathio",
+      "title": "Archaeological District in Minnesota Links Past and Present",
+      "url": "https://www.nps.gov/articles/archaeological-district-in-minnesota-links-past-and-present.htm",
+      "note": "National Park Service account of ancient villages, fish, game, wild rice, waterways, and documented Dakota presence at Mille Lacs in 1679."
+    },
+    {
+      "id": "os-sandlake",
+      "title": "Sand Lake Archaeological District",
+      "url": "https://www.uwlax.edu/mvac/past-cultures/specific-sites/sand-lake-archaeological-district/",
+      "note": "University archaeology account of an approximately 1500 Oneota site, storage and refuse pits, hearths, foods, tools, and pottery."
+    },
+    {
+      "id": "os-village-life",
+      "title": "Village Life",
+      "url": "https://www.uwlax.edu/mvac/process-of-archaeology/interpretation/village-life/",
+      "note": "University archaeology interpretation of houses, hearths, storage pits, thatch, seasonal groups, and extended-family possibilities."
+    },
+    {
+      "id": "os-oneota",
+      "title": "Oneota",
+      "url": "https://www.uwlax.edu/mvac/pre-european-people/mississippian--oneota-traditions/oneota/",
+      "note": "University overview of Oneota chronology, farming, wild foods, trade, storage pits, and refuse."
+    },
+    {
+      "id": "os-oneota-farmers",
+      "title": "Oneota Farmers",
+      "url": "https://www.uwlax.edu/mvac/pre-european-people/mississippian--oneota-traditions/oneota-farmers/",
+      "note": "Mississippi Valley Archaeology Center synthesis of Oneota crops, fields, fishing, hunting, gathering, and bison-scapula hoes."
+    },
+    {
+      "id": "os-huff",
+      "title": "Huff Archeological Studies",
+      "url": "https://www.history.nd.gov/textbook/unit1_natworld/unit1_3_huffarch.html",
+      "note": "North Dakota history source on a 1443 to 1465 Plains village, houses, plaza, storage, refuse, bison, and trade."
+    },
+    {
+      "id": "os-nmai-homelands",
+      "title": "Oceti Sakowin Homelands",
+      "url": "https://americanindian.si.edu/nk360/plains-belonging-homelands/oceti-sakowin",
+      "note": "Native-centered stories and place teachings, including corn, medicinal plants, women, children, sacred places, and local scope."
+    },
+    {
+      "id": "os-nmai-kinship",
+      "title": "Oceti Sakowin Kinship",
+      "url": "https://americanindian.si.edu/nk360/plains-belonging-kinship/oceti-sakowin",
+      "note": "Native-centered kinship resource on tiyospaye, extended care, cradleboards, family work, camp circles, and later documented tipis."
+    },
+    {
+      "id": "os-nmai-nation",
+      "title": "Oceti Sakowin Nation",
+      "url": "https://americanindian.si.edu/nk360/plains-belonging-nation/oceti-sakowin",
+      "note": "Native Knowledge 360 account of Seven Council Fires groups, present nations, self-government, responsibilities, and storytelling."
+    },
+    {
+      "id": "os-land-lifeways",
+      "title": "Land and Lifeways",
+      "url": "https://www.mnhs.org/usdakotawar/stories/history/dakota-homeland/land-lifeways",
+      "note": "Minnesota Historical Society account of Eastern Dakota seasonal movement, hunting, fishing, crops, rice, maple sugar, hides, and communal support."
+    },
+    {
+      "id": "os-river-stories",
+      "title": "Mni Sota Wakpa Stories and Reflections",
+      "url": "https://www.mnhs.org/usdakotawar/river-stories",
+      "note": "Dakota voices on fish preservation, wild rice, maple sugar, community sharing, waterways, and land relationships."
+    },
+    {
+      "id": "os-smsc",
+      "title": "Shakopee Mdewakanton Sioux Community history",
+      "url": "https://mn.gov/indian-affairs/tribal-nations-in-minnesota/mdewakanton-shakopee-mdewakanton-sioux-community.jsp",
+      "note": "Community account of deep Minnesota homelands, river and lake subsistence, villages, persistence, and present language teaching."
+    },
+    {
+      "id": "os-whitecap",
+      "title": "Whitecap Dakota Nation history",
+      "url": "https://www.whitecapdakota.com/our-community/history/",
+      "note": "Dakota Nation account naming Oceti Sakowin as an alliance of Dakota, Lakota, and Nakota groups and stressing living continuity."
+    },
+    {
+      "id": "os-dakota-wicohan",
+      "title": "Dakota Wicohan",
+      "url": "https://dakotawicohan.org/",
+      "note": "Dakota-led language and lifeways organization emphasizing elder voices, arts, language, and intergenerational transmission."
+    },
+    {
+      "id": "os-dakota-values",
+      "title": "Dakota Values",
+      "url": "https://dakotawicohan.org/wp-content/uploads/2017/03/L4-Values-1.pdf",
+      "note": "Dakota Wicohan curriculum on kinship, language, relatives, introductions, values, and community relationships."
+    },
+    {
+      "id": "os-ndstudies",
+      "title": "Culture: Mni Wakan Oyate",
+      "url": "https://www.ndstudies.gov/curriculum/high-school/mni-wakan-oyate/culture-mni-wakan-oyate",
+      "note": "State and tribal teaching resource on kinship, elders, children, learning, roles, songs, ceremony, and later documented social life."
+    },
+    {
+      "id": "os-prairie-turnip",
+      "title": "Plants Along the Santa Fe Trail",
+      "url": "https://www.nps.gov/articles/000/plants-along-the-santa-fe-trail.htm",
+      "note": "National Park Service account of prairie turnip as a documented staple among several Plains peoples including Lakota."
+    },
+    {
+      "id": "os-plants",
+      "title": "Native Plant Garden",
+      "url": "https://www.nps.gov/libi/learn/nature/native-plant-garden.htm",
+      "note": "Tribally consulted NPS resource on later documented Lakota and Dakota food, medicine, cleansing, and plant knowledge."
+    },
+    {
+      "id": "os-fire",
+      "title": "Indigenous Fire Practices Shape Our Land",
+      "url": "https://home.nps.gov/subjects/fire/indigenous-fire-practices-shape-our-land.htm",
+      "note": "NPS account of later documented Lakota burning for camp safety, grazing, and medicinal plants."
+    },
+    {
+      "id": "os-licorice",
+      "title": "American Licorice",
+      "url": "https://research.fs.usda.gov/feis/species-reviews/glylep",
+      "note": "US Forest Service review of later recorded Lakota uses for fever, earache, toothache, and sore throat."
+    },
+    {
+      "id": "os-pipestone-history",
+      "title": "Quarry History",
+      "url": "https://www.nps.gov/articles/quarry-history.htm",
+      "note": "NPS account of 3,000 years of quarrying, many nations, pipe uses, and later Dakota presence."
+    },
+    {
+      "id": "os-pipestone-craft",
+      "title": "Quarrying: The Unbroken Legacy",
+      "url": "https://www.nps.gov/articles/quarrying-the-unbroken-legacy.htm",
+      "note": "NPS account of demanding quarry work, craft, exchange, many participating peoples, and living continuation."
+    },
+    {
+      "id": "os-pipestone-nations",
+      "title": "Affiliated Tribal Nations",
+      "url": "https://home.nps.gov/pipe/learn/historyculture/affiliated-tribal-nations.htm",
+      "note": "NPS consultation page recognizing twenty-three affiliated tribal nations and the quarry as a sacred gathering place."
+    },
+    {
+      "id": "os-winter-count",
+      "title": "Battiste Good Lakota Winter Counts",
+      "url": "https://www.doi.gov/node/29208",
+      "note": "US Interior resource identifying winter counts as pictorial historical records and dating the surviving object and shown glyphs much later."
+    },
+    {
+      "id": "os-writing",
+      "title": "Reverend Stephen and Mary Riggs",
+      "url": "https://www.mnhs.org/usdakotawar/stories/history/reverend-stephen-and-mary-riggs",
+      "note": "Minnesota Historical Society account dating the first alphabet and grammar work to the 1830s with Dakota collaborators."
+    },
+    {
+      "id": "os-newspaper",
+      "title": "The Word Carrier of Santee Normal Training School",
+      "url": "https://www.mnhs.org/newspapers/hub/the-word-carrier-of-santee-normal-training-school",
+      "note": "Minnesota Historical Society account of the Dakota-language newspaper from 1871 and its translation and colonial education context."
+    },
+    {
+      "id": "os-living-traditions",
+      "title": "Living Traditions: Dakota, Nakota, Lakota Life",
+      "url": "https://history.sd.gov/museum/docs/LivingTraditions.pdf",
+      "note": "South Dakota museum education booklet on Seven Council Fires naming, languages, regional change, homes, food, and arts."
+    }
+  ],
+  "entities": [
+    {
+      "id": "ochethi-sakowi",
+      "card": "data/cards/ochethi-sakowi.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "os-index",
+            "os-summary",
+            "os-coverage",
+            "os-map1400",
+            "os-map1492",
+            "os-map1500",
+            "os-nmai-overview",
+            "os-oseu",
+            "os-mnhs-sevenfires",
+            "os-mn-osa-prehistory",
+            "os-jewel"
+          ],
+          "locator": "Exact id, inherited display name, circa flag, and indexed 1492 to 1500 lifetime. Confirms the exact id has no imported summary. Missing content status, inherited state kind, North America queue, and one observed interval. Pre-start control with broad hunter-gatherer labels at the fixed probes. Only exact target feature, decoded geometry, overlaps, probes, and shared-arc seams. Exact endpoint control and repaint by broad regional labels. Smithsonian Native Knowledge 360 lesson centering Native homelands, kinship, nationhood, governance, and community voices. Elder-informed South Dakota standards on Seven Council Fires identity, language divisions, kinship, oral tradition, and chronology cautions. Museum collection overview explaining Dakota, Lakota, and Nakota naming, changing catalog terms, and distinct contemporary nations. Minnesota State Archaeologist synthesis of Oneota, Plains Village, Sandy Lake, Psinomani, subsistence, ceramics, and affiliation limits. NPS history describing sparse seasonal evidence and uncertainty about ethnic or linguistic affiliation in the Black Hills.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "os-map1400",
+            "os-map1492"
+          ],
+          "locator": "Pre-start control with broad hunter-gatherer labels at the fixed probes. Only exact target feature, decoded geometry, overlaps, probes, and shared-arc seams.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "os-nps-kathio"
+          ],
+          "locator": "National Park Service account of ancient villages, fish, game, wild rice, waterways, and documented Dakota presence at Mille Lacs in 1679.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "os-mn-osa-sites"
+          ],
+          "locator": "State archaeology summaries for Mille Lacs Kathio, Wilford house, wild rice evidence, and ancient pipestone use.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "os-sandlake"
+          ],
+          "locator": "University archaeology account of an approximately 1500 Oneota site, storage and refuse pits, hearths, foods, tools, and pottery.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "os-village-life"
+          ],
+          "locator": "University archaeology interpretation of houses, hearths, storage pits, thatch, seasonal groups, and extended-family possibilities.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "os-oneota",
+            "os-oneota-farmers"
+          ],
+          "locator": "University overview of Oneota chronology, farming, wild foods, trade, storage pits, and refuse. Mississippi Valley Archaeology Center synthesis of Oneota crops, fields, fishing, hunting, gathering, and bison-scapula hoes.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "os-huff"
+          ],
+          "locator": "North Dakota history source on a 1443 to 1465 Plains village, houses, plaza, storage, refuse, bison, and trade.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "os-map1492",
+            "os-map1500",
+            "os-map1530"
+          ],
+          "locator": "Only exact target feature, decoded geometry, overlaps, probes, and shared-arc seams. Exact endpoint control and repaint by broad regional labels. Later named-record control for Santee, Teton, Yankton, Yankontai, and neighbors.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "os-index",
+            "os-summary",
+            "os-coverage",
+            "os-card-index",
+            "os-overrides",
+            "os-missing"
+          ],
+          "locator": "Exact indexed identity, missing-content state, and inherited classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "os-map1492"
+          ],
+          "locator": "Decoded occurrence count, topology, point count, and bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "os-map1492"
+          ],
+          "locator": "Representative probe coverage and geographic overbreadth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "os-map1492"
+          ],
+          "locator": "Owner overlap counts at fixed probes and interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "os-map1492"
+          ],
+          "locator": "Direct shared-arc neighbors and topology limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "os-nmai-nation"
+          ],
+          "locator": "Native Knowledge 360 naming, constituent groups, and government diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "os-whitecap"
+          ],
+          "locator": "Dakota Nation description of Seven Council Fires as an alliance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "os-living-traditions"
+          ],
+          "locator": "Institutional naming chart and orthographic variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "os-nmai-nation"
+          ],
+          "locator": "Native-centered self-government and collective responsibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "os-map1492",
+            "os-map1530",
+            "os-map1600"
+          ],
+          "locator": "Distinct related atlas records and separate-card association rule.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "os-nps-kathio"
+          ],
+          "locator": "Mille Lacs resources, later documented Dakota presence, and affiliation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "os-mn-osa-sites"
+          ],
+          "locator": "Wilford house comparison, wild-rice evidence, and scale limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "os-oneota"
+          ],
+          "locator": "Oneota chronology, material traits, economy, and ethnicity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "os-sandlake"
+          ],
+          "locator": "Close-dated village evidence and geographic scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "os-oneota-farmers"
+          ],
+          "locator": "Regional Oneota technology and interpretive boundaries.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "os-land-lifeways"
+          ],
+          "locator": "Later documented seasonal round and explicit chronological scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "os-nmai-kinship"
+          ],
+          "locator": "Later tipi, family work, and camp-circle evidence with scope warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "os-village-life"
+          ],
+          "locator": "Longhouse evidence, possible extended households, and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "os-huff"
+          ],
+          "locator": "Close-period Plains Village comparison and non-association.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "os-river-stories"
+          ],
+          "locator": "Dakota testimony on waterways, travel, and shared subsistence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "os-land-lifeways"
+          ],
+          "locator": "Seasonal foods and variation across households and places.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "os-river-stories"
+          ],
+          "locator": "Dakota testimony on preservation, sharing, and community work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "os-prairie-turnip"
+          ],
+          "locator": "Documented prairie-turnip food uses and chronological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "os-plants"
+          ],
+          "locator": "Later documented food, material, and multilingual plant knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "os-oneota-farmers"
+          ],
+          "locator": "Oneota tools, mixed economy, and labor-role limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "os-nmai-kinship"
+          ],
+          "locator": "Native-centered account of tiyospaye and distributed family care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "os-nmai-nation"
+          ],
+          "locator": "Native account of individual responsibility within band and nation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "os-dakota-values"
+          ],
+          "locator": "Dakota-led curriculum on language, introductions, kinship, and values.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "os-whitecap"
+          ],
+          "locator": "Dakota Nation framing and basis for kind correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "os-living-traditions"
+          ],
+          "locator": "Institutional evidence for relatedness plus internal variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "os-dakota-wicohan"
+          ],
+          "locator": "Dakota-led intergenerational language and lifeways work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "os-nmai-nation"
+          ],
+          "locator": "Native Knowledge 360 account of intergenerational storytelling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "os-ndstudies"
+          ],
+          "locator": "Later documented relatives, elders, and teaching roles with scope caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "os-nmai-kinship"
+          ],
+          "locator": "Later cradleboard object, functions, and explicit date limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "os-smsc"
+          ],
+          "locator": "Community account of language learning, persistence, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "os-plants"
+          ],
+          "locator": "Later tribally consulted plant-care records and dating limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "os-licorice"
+          ],
+          "locator": "Later recorded Lakota remedy uses and safety and chronology limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "os-nmai-homelands"
+          ],
+          "locator": "Lakota oral teaching about medicinal knowledge and respectful scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "os-fire"
+          ],
+          "locator": "Later documented cultural burning and regional limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "os-mn-osa-sites"
+          ],
+          "locator": "Exact-period medical evidence gap and preservation interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "os-river-stories",
+            "os-nps-kathio"
+          ],
+          "locator": "Waterway uses and limits on reconstructing household water treatment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "os-sandlake"
+          ],
+          "locator": "Hearth contents, flotation, and feature-function caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "os-sandlake"
+          ],
+          "locator": "Storage-pit reuse, refuse evidence, and function testing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "os-village-life"
+          ],
+          "locator": "Household features and explicit sanitation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "os-huff",
+            "os-oneota"
+          ],
+          "locator": "Explicit toilet absence and bounded comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "os-pipestone-history",
+            "os-pipestone-nations"
+          ],
+          "locator": "Long quarry history, multi-nation affiliation, and ownership caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "os-pipestone-craft"
+          ],
+          "locator": "Quarry labor, craft process, exchange, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "os-winter-count"
+          ],
+          "locator": "Winter-count genre, object date, and exact-window limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "os-writing"
+          ],
+          "locator": "Exact-period written-language absence and later orthography chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "os-newspaper",
+            "os-map1500"
+          ],
+          "locator": "Later Dakota print chronology and exact atlas ending.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "os-map1492",
+            "os-map1500",
+            "os-map1530",
+            "os-map1600",
+            "os-map1650"
+          ],
+          "locator": "Only exact target feature, decoded geometry, overlaps, probes, and shared-arc seams. Exact endpoint control and repaint by broad regional labels. Later named-record control for Santee, Teton, Yankton, Yankontai, and neighbors. Later named-record continuity control across the same representative geographic probes. Second later control demonstrating separate lifetimes and geometries.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "ochethi-sakowi",
+        "name": "Očhéthi Šakówiŋ",
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/ochethi-sakowi.json",
+        "dateBasis": "map_coverage",
+        "summary": "A cautious teaching umbrella for the Seven Council Fires.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "ochethi-sakowi",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -113.75573755737557,
+            33.86178954686106,
+            -84.42624426244262,
+            53.99200344902145
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

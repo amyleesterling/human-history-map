@@ -1,0 +1,959 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release164-permians research, integrated by Codex",
+  "checkedAt": "2026-09-28",
+  "sources": [
+    {
+      "id": "pe-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, label, interval, circa flag, generated origin, and related contemporary atlas records."
+    },
+    {
+      "id": "pe-coverage",
+      "title": "Human History Map research coverage ledger",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact missing status, state default, observed interval, border count, and content review fields."
+    },
+    {
+      "id": "pe-missing",
+      "title": "Human History Map missing-card queue",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact card is missing and records the imported encyclopedia lead that must be replaced."
+    },
+    {
+      "id": "pe-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Exposes the imported summary that collapses modern Komi, Udmurt, and Besermyan identities under one label."
+    },
+    {
+      "id": "pe-map700",
+      "title": "Human History Map 700 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded pre-appearance control for owners, probes, and the first atlas seam."
+    },
+    {
+      "id": "pe-map800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded target geometry, ring, positions, bounding box, probes, shared arcs, and exact interval."
+    },
+    {
+      "id": "pe-map900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Decoded endpoint repaint at all representative probes and neighboring ownership changes."
+    },
+    {
+      "id": "pe-map1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Decoded post-end control showing the target remains absent while several southern owners change."
+    },
+    {
+      "id": "pe-finno-card",
+      "title": "Human History Map Finno-Ugric taiga hunter-gatherers card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/finno-ugric-taiga-hunter-gatherers.json",
+      "note": "Existing broad card audited and rejected as a substitute for this exact one-century feature."
+    },
+    {
+      "id": "pe-volga-card",
+      "title": "Human History Map Volga Bulgars card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/volga-bulgars.json",
+      "note": "Neighboring card audited to prevent attaching southern political history to the target polygon."
+    },
+    {
+      "id": "pe-bashkir-card",
+      "title": "Human History Map Bashkirs card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/bashkirs.json",
+      "note": "Neighboring exact card audited to keep its history separate from the Permians umbrella."
+    },
+    {
+      "id": "pe-sami-card",
+      "title": "Human History Map Sami card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/sami.json",
+      "note": "Related northern language and culture card audited and rejected as an association target."
+    },
+    {
+      "id": "pe-slavonic-card",
+      "title": "Human History Map Slavonic tribes card",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/slavonic-tribes.json",
+      "note": "Western neighboring card audited to avoid converting a shared TopoJSON arc into historical rule."
+    },
+    {
+      "id": "pe-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no researched override exists for the exact target and documents related card associations."
+    },
+    {
+      "id": "pe-project",
+      "title": "Main results: Medieval Perm Cis-Urals",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2016n4p6",
+      "note": "Perm Federal Research Centre synthesis of archaeological, anthropological, environmental, dietary, linguistic, and GIS evidence."
+    },
+    {
+      "id": "pe-minlang-kp",
+      "title": "Komi-Permyak language",
+      "url": "https://minlang.iling-ran.ru/en/node/141",
+      "note": "Russian Academy of Sciences language profile distinguishing Komi-Permyak, dialects, contacts, and much later writing histories."
+    },
+    {
+      "id": "pe-northern",
+      "title": "Migration Period and early medieval northern archaeology",
+      "url": "https://archaeolog.ru/media/books_2015/sever_doklady_2015.pdf",
+      "note": "Institute of Archaeology volume on Lomovatovo, Nevolino, Polom, migration, settlement, equipment, and disputed ethnic interpretations."
+    },
+    {
+      "id": "pe-source-context",
+      "title": "Early Iron Age and medieval sites in the southern Cis-Urals",
+      "url": "https://cyberleninka.ru/article/n/pamyatniki-epohi-rannego-zheleznogo-veka-srednevekovya-yuzhnogo-preduralya-istochnikovedcheskiy-kontekst-les-i-lesostep.pdf",
+      "note": "Peer-reviewed source critique warning that unevenly studied sites cannot sustain sweeping cultural maps or meta-histories."
+    },
+    {
+      "id": "pe-ethnomarkers",
+      "title": "Ethnos and archaeological ethnic markers",
+      "url": "https://cyberleninka.ru/article/n/etnos-i-arheologicheskie-etnomarkery-polemicheskie-zametki",
+      "note": "Peer-reviewed discussion of competing Lomovatovo ethnic assignments and the limits of deriving language from artifacts."
+    },
+    {
+      "id": "pe-polom",
+      "title": "Polom archaeological culture",
+      "url": "https://old.bigenc.ru/archeology/text/3155676",
+      "note": "Great Russian Encyclopedia chronology and geography for the fifth-to-ninth-century Polom culture in the Cheptsa basin."
+    },
+    {
+      "id": "pe-nevolino-review",
+      "title": "Review of The Nevolino cemetery of the seventh to ninth centuries",
+      "url": "https://doaj.org/article/423d912c9a724ffc82d3e8b842c32ba9",
+      "note": "DOAJ record summarizing cemetery chronology, grave goods, rites, contacts, and social-organization research."
+    },
+    {
+      "id": "pe-nevolino-social",
+      "title": "Social structure of the early medieval Upper Kama population",
+      "url": "https://doi.org/10.1016/j.aeae.2010.05.006",
+      "note": "Peer-reviewed statistical study of social differentiation in fourth-to-ninth-century Nevolino burial evidence."
+    },
+    {
+      "id": "pe-house",
+      "title": "Peculiarities of medieval housebuilding in Perm Krai",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2016n3p10",
+      "note": "Excavated Lomovatovo and Rodanovo dwellings, frames, roofs, hearths, floors, wall beds, storage pits, and earth insulation."
+    },
+    {
+      "id": "pe-fishing",
+      "title": "Fishing in Prikamye in ancient times and the Middle Ages",
+      "url": "https://journal.permsc.ru/index.php/pscj/ru/article/download/PSCJ2016n3p7/1129",
+      "note": "Perm research synthesis of fish remains, hooks, nets, traps, seasonal stability, protein, and settled life."
+    },
+    {
+      "id": "pe-adaptation",
+      "title": "Adaptation of the medieval Perm Cis-Urals population",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2016n3p8",
+      "note": "Bioarchaeological, isotopic, dental, and skeletal evidence for diet and adaptation in the taiga forest zone."
+    },
+    {
+      "id": "pe-pollen",
+      "title": "Palynology of Rozhdestvenskoye settlement",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2016n3p3",
+      "note": "Pollen evidence for forest change, croplands, ruderal plants, and human activity at a medieval Perm settlement."
+    },
+    {
+      "id": "pe-economy",
+      "title": "Household economy at Rozhdestvenskoye settlement",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2018n4p14",
+      "note": "Perm research on mixed economy, dense building, food and fodder storage, and questions about winter animal housing."
+    },
+    {
+      "id": "pe-natural-science",
+      "title": "Natural-science research in Perm Krai archaeology",
+      "url": "https://permsc.ru/ru/main/about/instituty-tsentra/igi/otdel-istorii-arkheologii-i-etnografii/vazhnejshie-rezultaty-issledovanij/815-masterskaya-mednika-2.html",
+      "note": "Perm Federal Research Centre summary of crops, hemp, wild plants, wood, food stores, animals, fishing, and evidentiary gaps."
+    },
+    {
+      "id": "pe-natural-setting",
+      "title": "Natural surroundings of medieval societies in the Upper Kama valley",
+      "url": "https://journal.permsc.ru/index.php/pscj/article/download/PSCJ2016n3p2/1124",
+      "note": "Paleogeographic research locating medieval sites along Upper Kama banks and reconstructing changing floodplain settings."
+    },
+    {
+      "id": "pe-cheptsa",
+      "title": "Fortified settlements of the Cheptsa basin",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2016n3p9",
+      "note": "Udmurt Institute and RAS research on ninth-century Idnakar and the staged growth and defenses of Cheptsa settlements."
+    },
+    {
+      "id": "pe-uchkakar",
+      "title": "Geophysical studies at Uchkakar",
+      "url": "https://archaeology.nsc.ru/en/publications/jr-aeae-en/18-46-1/annot-09/",
+      "note": "RAS geophysical evidence for dwellings, utility structures, household and production pits, and fortification lines."
+    },
+    {
+      "id": "pe-needlecases",
+      "title": "Rare bottle-shaped ornaments from Bayanovo",
+      "url": "https://cyberleninka.ru/article/n/redkie-flakonovidnye-pronizki-iz-materialov-bayanovskogo-mogilnika-lomovatovskoy-arheologicheskoy-kultury",
+      "note": "Peer-reviewed study of ninth-century local and imported ornaments, female belt or braid sets, and possible needlecase amulets."
+    },
+    {
+      "id": "pe-hermitage",
+      "title": "Iron Age artefacts from north-east Russia",
+      "url": "https://www.hermitagemuseum.org/uploads/files/publications/d41d8cd98f00b204e9800998ecf8427e1731921615.pdf",
+      "note": "State Hermitage catalogue on Kama metalwork, costume, ritual objects, animal imagery, and the long artistic tradition."
+    },
+    {
+      "id": "pe-bartym",
+      "title": "Origins of distant imports in the Pre-Urals",
+      "url": "https://izvestia.komisc.ru/Archive/i10.pdf",
+      "note": "Komi Science Centre study of seventh-to-early-ninth-century Byzantine, Sasanian, Khorezmian, and Central Asian imports."
+    },
+    {
+      "id": "pe-jewelry",
+      "title": "Key features of medieval Pre-Ural jewelry",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2021n2p8",
+      "note": "Perm research on ninth-to-thirteenth-century local jewelry centers, costume ornaments, materials, and manufacturing techniques."
+    },
+    {
+      "id": "pe-metallurgy",
+      "title": "Metallurgical workshop at Rozhdestvenskoye",
+      "url": "https://journal.permsc.ru/index.php/pscj/en/article/view/PSCJ2015n4p3",
+      "note": "Excavated craft workshop evidence for casting, forging, bone carving, tanning, woodworking, hearths, and crucibles."
+    },
+    {
+      "id": "pe-amulets",
+      "title": "Everyday medieval objects and amulets in Perm Krai",
+      "url": "https://journal.permsc.ru/index.php/pscj/ru/article/view/PSCJ2009n2p7",
+      "note": "Perm archaeological interpretation of household and production objects carrying ritual and protective meanings."
+    },
+    {
+      "id": "pe-silver",
+      "title": "Serebro zakamskoe in Perm Cis-Ural history",
+      "url": "https://journal.permsc.ru/index.php/pscj/ru/article/download/PSCJ2013n2p5/994",
+      "note": "Research synthesis connecting fifth-to-thirteenth-century eastern silver, coins, adornment, fur exchange, and sanctuary deposits."
+    },
+    {
+      "id": "pe-unicode",
+      "title": "Unicode Core Specification: Old Permic",
+      "url": "https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-8/",
+      "note": "Unicode authority dating Old Permic to the fourteenth century and explaining its Komi uses and later manuscript record."
+    },
+    {
+      "id": "pe-unicode-chart",
+      "title": "Unicode Old Permic character chart",
+      "url": "https://www.unicode.org/charts/PDF/U10350.pdf",
+      "note": "Normative Unicode chart for Old Permic character names, including An, Bur, and Gai."
+    },
+    {
+      "id": "pe-udmurt",
+      "title": "Udmurt language",
+      "url": "https://minlang.iling-ran.ru/lang/udmurtskiy-yazyk",
+      "note": "Russian Academy of Sciences profile distinguishing Udmurt dialects, including Besermyan, within the Permic language group."
+    },
+    {
+      "id": "pe-komiyazva",
+      "title": "Komi-Yazva language",
+      "url": "https://minlang.iling-ran.ru/lang/komi-yazvinskiy-yazyk",
+      "note": "Russian Academy of Sciences profile explaining the disputed language-versus-dialect status of Komi-Yazva."
+    },
+    {
+      "id": "pe-medicine-later",
+      "title": "Komi medical practices in southern Tyumen",
+      "url": "https://izvestia.komisc.ru/Archive/i28.pdf",
+      "note": "Komi Science Centre ethnographic study of much later massage, injury care, midwifery, herbs, fungi, and knowledge change."
+    },
+    {
+      "id": "pe-veryu",
+      "title": "Veryu early medieval settlement in the Vychegda basin",
+      "url": "https://izvestia.komisc.ru/Archive/i13.pdf",
+      "note": "Komi Science Centre pottery study of a sixth-to-seventh-century Vanvizdino settlement, useful as an earlier regional comparison."
+    },
+    {
+      "id": "pe-korolev",
+      "title": "Scientific heritage on medieval Komi archaeology",
+      "url": "https://komisc.editorum.ru/en/nauka/article/110998/view",
+      "note": "Komi Science Centre review of Vanvizdino, Vym, Middle Vychegda settlement history, environmental factors, and contested continuity."
+    },
+    {
+      "id": "pe-bayanovo-belt",
+      "title": "Byzantine-circle belt from Bayanovo",
+      "url": "https://archaeology.nsc.ru/izdatelstvo/jr-aeae-ru/59-3/annot-09/",
+      "note": "RAS study of a mid-eighth-century prestigious belt retained until a tenth-century Bayanovo elite burial."
+    },
+    {
+      "id": "pe-genetics-caution",
+      "title": "Early medieval Ural genetic data and archaeological evidence",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7645724/",
+      "note": "Peer-reviewed study distinguishing sampled sites and discussing ninth-century mobility without equating material culture with one people."
+    }
+  ],
+  "entities": [
+    {
+      "id": "permians",
+      "card": "data/cards/permians.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "pe-index",
+            "pe-map800",
+            "pe-map900",
+            "pe-project",
+            "pe-minlang-kp"
+          ],
+          "locator": "Exact id, label, interval, circa flag, generated origin, and related contemporary atlas records. Decoded target geometry, ring, positions, bounding box, probes, shared arcs, and exact interval. Decoded endpoint repaint at all representative probes and neighboring ownership changes. Perm Federal Research Centre synthesis of archaeological, anthropological, environmental, dietary, linguistic, and GIS evidence. Russian Academy of Sciences language profile distinguishing Komi-Permyak, dialects, contacts, and much later writing histories.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "pe-map700",
+            "pe-map800"
+          ],
+          "locator": "Decoded pre-appearance control for owners, probes, and the first atlas seam. Decoded target geometry, ring, positions, bounding box, probes, shared arcs, and exact interval.",
+          "dateScope": {
+            "from": 800,
+            "to": 810
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "pe-polom"
+          ],
+          "locator": "Great Russian Encyclopedia chronology and geography for the fifth-to-ninth-century Polom culture in the Cheptsa basin.",
+          "dateScope": {
+            "from": 810,
+            "to": 820
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "pe-nevolino-review"
+          ],
+          "locator": "DOAJ record summarizing cemetery chronology, grave goods, rites, contacts, and social-organization research.",
+          "dateScope": {
+            "from": 820,
+            "to": 830
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "pe-ethnomarkers"
+          ],
+          "locator": "Peer-reviewed discussion of competing Lomovatovo ethnic assignments and the limits of deriving language from artifacts.",
+          "dateScope": {
+            "from": 830,
+            "to": 840
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "pe-source-context"
+          ],
+          "locator": "Peer-reviewed source critique warning that unevenly studied sites cannot sustain sweeping cultural maps or meta-histories.",
+          "dateScope": {
+            "from": 840,
+            "to": 850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "pe-bartym"
+          ],
+          "locator": "Komi Science Centre study of seventh-to-early-ninth-century Byzantine, Sasanian, Khorezmian, and Central Asian imports.",
+          "dateScope": {
+            "from": 850,
+            "to": 860
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "pe-cheptsa"
+          ],
+          "locator": "Udmurt Institute and RAS research on ninth-century Idnakar and the staged growth and defenses of Cheptsa settlements.",
+          "dateScope": {
+            "from": 860,
+            "to": 870
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "pe-fishing"
+          ],
+          "locator": "Perm research synthesis of fish remains, hooks, nets, traps, seasonal stability, protein, and settled life.",
+          "dateScope": {
+            "from": 870,
+            "to": 880
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/8/summary",
+          "sourceIds": [
+            "pe-jewelry"
+          ],
+          "locator": "Perm research on ninth-to-thirteenth-century local jewelry centers, costume ornaments, materials, and manufacturing techniques.",
+          "dateScope": {
+            "from": 880,
+            "to": 890
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/9/summary",
+          "sourceIds": [
+            "pe-map800",
+            "pe-map900",
+            "pe-map1000"
+          ],
+          "locator": "Decoded target geometry, ring, positions, bounding box, probes, shared arcs, and exact interval. Decoded endpoint repaint at all representative probes and neighboring ownership changes. Decoded post-end control showing the target remains absent while several southern owners change.",
+          "dateScope": {
+            "from": 890,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "pe-map800"
+          ],
+          "locator": "Exact decoded type, component, ring, point, bounding-box, and snapshot audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "pe-map800"
+          ],
+          "locator": "Representative membership probes across the exact decoded polygon.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "pe-map800"
+          ],
+          "locator": "Direct shared-arc audit and strict limitation to digital topology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "pe-map700",
+            "pe-map800",
+            "pe-map900"
+          ],
+          "locator": "All interior probe owner changes at the first and endpoint seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "pe-coverage",
+            "pe-missing",
+            "pe-summaries",
+            "pe-finno-card",
+            "pe-volga-card",
+            "pe-bashkir-card",
+            "pe-sami-card",
+            "pe-slavonic-card",
+            "pe-overrides"
+          ],
+          "locator": "Missing status, imported summary, related cards, associations, and rejection of technically unsafe sharing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "pe-northern",
+            "pe-genetics-caution"
+          ],
+          "locator": "Named archaeological groupings, sampled sites, mobility, and contested interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "pe-polom"
+          ],
+          "locator": "Encyclopedia chronology, phase geography, and exact ninth-century relevance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "pe-nevolino-review"
+          ],
+          "locator": "Revised cemetery chronology, material scope, social analysis, and cautious endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "pe-veryu"
+          ],
+          "locator": "Earlier Vanvizdino settlement evidence, dating method, locality, and limited use.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "pe-udmurt",
+            "pe-komiyazva"
+          ],
+          "locator": "RAS descriptions of modern Permic diversity used solely as an anti-flattening comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "pe-house"
+          ],
+          "locator": "Excavated dwelling sample, construction, axial hearths, and storage features.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "pe-house"
+          ],
+          "locator": "Floor, wall-bed, under-bed storage evidence, plus restrained household humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "pe-house"
+          ],
+          "locator": "Lomovatovo perimeter trenches, inferred insulation, and preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "pe-natural-setting"
+          ],
+          "locator": "Site distribution and paleochannel evidence along a changing Upper Kama floodplain.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "pe-cheptsa"
+          ],
+          "locator": "Ninth-century foundation range, growth, fortification, and bounded-site interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "pe-natural-science"
+          ],
+          "locator": "Paleobotanical crop list, cultivation evidence, site chronology, and scope limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "pe-natural-science"
+          ],
+          "locator": "Wild plant macroremains, collection practices, preservation bias, and diet.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "pe-fishing"
+          ],
+          "locator": "Fishing technology, dietary role, seasonal stability, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "pe-adaptation"
+          ],
+          "locator": "Methods and broad forest-zone adaptation, with limits on individual interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "pe-pollen"
+          ],
+          "locator": "Settlement pollen sequence, forest transformation, cultivation, and chronological caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "pe-needlecases"
+          ],
+          "locator": "Object date, local production, imported example, placement, and possible function.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "pe-hermitage"
+          ],
+          "locator": "Museum catalogue object classes, artistic chronology, imagery, and interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "pe-bartym"
+          ],
+          "locator": "Dated imports, proposed route, regional movement, and household-level restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "pe-metallurgy"
+          ],
+          "locator": "Workshop industries, features, craft organization, and chronological qualification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "pe-silver"
+          ],
+          "locator": "Long-duration silver exchange, fur links, deposition contexts, and interpretive alternatives.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "pe-uchkakar"
+          ],
+          "locator": "Settlement structures and explicit limit on deriving kinship from a building.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "pe-nevolino-social"
+          ],
+          "locator": "Formal burial analysis, social differentiation, and grave-goods interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "pe-needlecases"
+          ],
+          "locator": "Gendered burial placement used cautiously to discuss women and missing activities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "pe-amulets"
+          ],
+          "locator": "Archaeological interpretation of practical objects, protective meanings, and variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "pe-bayanovo-belt"
+          ],
+          "locator": "Manufacture and burial dates, elite context, long object life, and narrative limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "pe-metallurgy"
+          ],
+          "locator": "Material complexity supporting learning needs, with explicit absence of direct school evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "pe-nevolino-social"
+          ],
+          "locator": "Burial-based social analysis and limits on reconstructing childhood behavior.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "pe-metallurgy"
+          ],
+          "locator": "Multiple crafts and the archaeological gap between production evidence and teaching roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "pe-unicode"
+          ],
+          "locator": "Unicode chronology and explicit separation of spoken knowledge from unattested writing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "pe-unicode",
+            "pe-unicode-chart"
+          ],
+          "locator": "Normative character names, script date, language scope, and nonrepresentative warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "pe-adaptation"
+          ],
+          "locator": "Bioarchaeological methods and the difference between health evidence and treatment history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "pe-cheptsa"
+          ],
+          "locator": "Settlement features related cautiously to warmth, food security, daily risk, and health uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "pe-fishing",
+            "pe-adaptation"
+          ],
+          "locator": "Diverse food and isotope evidence, seasonal resilience, and missing household health practices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "pe-medicine-later"
+          ],
+          "locator": "Later regional medical ethnography used explicitly as a non-retrojective comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "pe-adaptation"
+          ],
+          "locator": "Bioarchaeological scope and explicit absence of secure treatment detail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "pe-natural-setting"
+          ],
+          "locator": "Riverbank site pattern, paleochannel change, and bounded water-access interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "pe-uchkakar"
+          ],
+          "locator": "Settlement spatial evidence and clear distinction between evidence and plausible chores.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "pe-uchkakar"
+          ],
+          "locator": "Published feature classes, absence of latrine identification, and archaeological method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "pe-uchkakar",
+            "pe-source-context"
+          ],
+          "locator": "Explicit toilet evidence gap, site diversity, and rejection of a stereotype.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "pe-economy"
+          ],
+          "locator": "Settlement economy and storage questions related cautiously to cleanliness and food protection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "pe-house"
+          ],
+          "locator": "Excavated construction system synthesized as engineering without elite bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "pe-jewelry",
+            "pe-bartym"
+          ],
+          "locator": "Local technical signatures, distant exchange, costume use, and coexistence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "pe-natural-science"
+          ],
+          "locator": "Mixed economy, multiple resources, exchange, and resilience without overclaiming outcomes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "pe-map900",
+            "pe-map1000",
+            "pe-korolev"
+          ],
+          "locator": "Endpoint repaint contrasted with regionally varied archaeological continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "pe-udmurt",
+            "pe-komiyazva"
+          ],
+          "locator": "Living linguistic diversity and careful continuity without assigning ancestry to geometry.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "pe-map900",
+            "pe-map1000",
+            "pe-korolev",
+            "pe-northern"
+          ],
+          "locator": "Decoded endpoint repaint at all representative probes and neighboring ownership changes. Decoded post-end control showing the target remains absent while several southern owners change. Komi Science Centre review of Vanvizdino, Vym, Middle Vychegda settlement history, environmental factors, and contested continuity. Institute of Archaeology volume on Lomovatovo, Nevolino, Polom, migration, settlement, equipment, and disputed ethnic interpretations.",
+          "dateScope": {
+            "year": 900
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "permians",
+        "name": "Permians",
+        "kind": "culture",
+        "region": "Europe",
+        "from": 800,
+        "to": 900,
+        "circa": true,
+        "card": "cards/permians.json",
+        "dateBasis": "map_coverage",
+        "summary": "A careful guide to varied ninth-century Kama, Cheptsa, and Vychegda communities beneath an oversized atlas umbrella.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "permians",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            36.56736567365675,
+            56.43207126972834,
+            60.31320313203133,
+            68.81627950649455
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
