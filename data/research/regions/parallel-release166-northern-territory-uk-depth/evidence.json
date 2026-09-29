@@ -1,0 +1,952 @@
+{
+  "version": 1,
+  "region": "Oceania",
+  "researcher": "Codex parallel release166-northern-territory-uk research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "nt-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, name, circa span, and historical basemap provenance."
+    },
+    {
+      "id": "nt-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Two observed intervals, two border files, state classification, and missing card status."
+    },
+    {
+      "id": "nt-map1815",
+      "title": "Human History Map 1815 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1815.json",
+      "note": "Earlier control showing several Indigenous atlas ids at representative probes."
+    },
+    {
+      "id": "nt-map1878",
+      "title": "Human History Map 1878 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1878.json",
+      "note": "First exact target feature, decoded polygon, shared arcs, owners, and point probes."
+    },
+    {
+      "id": "nt-map1880",
+      "title": "Human History Map 1880 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1880.json",
+      "note": "Second exact feature and internal seam through the indexed interval."
+    },
+    {
+      "id": "nt-map1900",
+      "title": "Human History Map 1900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1900.json",
+      "note": "Endpoint control where the target vanishes into a continent-wide imperial label."
+    },
+    {
+      "id": "nt-map1914",
+      "title": "Human History Map 1914 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1914.json",
+      "note": "Later control where the representative mainland probes are assigned to Australia."
+    },
+    {
+      "id": "nt-aiatsis-map",
+      "title": "Map of Indigenous Australia",
+      "url": "https://aiatsis.gov.au/explore/map-indigenous-australia",
+      "note": "AIATSIS explains the diversity of distinct groups and warns that mapped group boundaries are general, blurred, and contested."
+    },
+    {
+      "id": "nt-aiatsis-first",
+      "title": "First Peoples of Australia",
+      "url": "https://aiatsis.gov.au/explore/first-peoples-australia",
+      "note": "AIATSIS guidance on diverse nations, local names, Country, and identities that do not follow state or territory lines."
+    },
+    {
+      "id": "nt-letters",
+      "title": "Letters Patent annexing the Northern Territory to South Australia, 1863",
+      "url": "https://www.foundingdocs.gov.au/item-did-49.html",
+      "note": "Museum of Australian Democracy account of the British legal instrument, colonial bounds, representation, and revocable annexation."
+    },
+    {
+      "id": "nt-act1863",
+      "title": "Northern Territory Act of 1863 transcript",
+      "url": "https://www.foundingdocs.gov.au/resources/transcripts/nt2_doc_1863a.pdf",
+      "note": "Primary statute reciting the 26 south, 129 east, and 138 east limits and islands included in the annexation."
+    },
+    {
+      "id": "nt-lant-survey",
+      "title": "Surveying Darwin 1869",
+      "url": "https://lant.nt.gov.au/explore-nt-history/surveying-darwin-1869",
+      "note": "Library and Archives NT account of Larrakia land, survey, wells, food, illness, exchange, resistance, names, and absent reserves."
+    },
+    {
+      "id": "nt-larrakia",
+      "title": "The Larrakia People",
+      "url": "https://larrakia.com/about/the-larrakia-people/",
+      "note": "Larrakia Nation account of sea country, trade, intermarriage, early settlement, displacement, cultural participation, and continuity."
+    },
+    {
+      "id": "nt-nlc-history",
+      "title": "Northern Land Council: Our History",
+      "url": "https://www.nlc.org.au/about-us",
+      "note": "Land council account of long Aboriginal presence, resistance, pastoral dispossession, and continuing land ownership."
+    },
+    {
+      "id": "nt-nlc-work",
+      "title": "Aboriginal Land Management and Pastoral Work",
+      "url": "https://www.nlc.org.au/our-work",
+      "note": "Land council evidence on homelands, knowledge transmission, and Aboriginal labour that built the pastoral industry."
+    },
+    {
+      "id": "nt-jawoyn-country",
+      "title": "Jawoyn Country",
+      "url": "https://www.jawoyn.org.au/country/",
+      "note": "Jawoyn account of country, ceremonies, fire management, plants, animals, communities, and colonisation impacts."
+    },
+    {
+      "id": "nt-jawoyn-language",
+      "title": "Jawoyn Language",
+      "url": "https://www.jawoyn.org.au/culture/language/",
+      "note": "Jawoyn account of clans, language, multilingual repertoires, disruption, and present identity."
+    },
+    {
+      "id": "nt-tiwi-seasons",
+      "title": "Tiwi Calendars",
+      "url": "https://www.tiwilandcouncil.com/post/tiwi-calendars",
+      "note": "Tiwi Land Council account of intergenerational ecological knowledge, foods, medicines, seasons, and teaching children."
+    },
+    {
+      "id": "nt-tiwi-kin",
+      "title": "Tiwi Islands Indigenous Protected Area Plan 2023 to 2033",
+      "url": "https://tiwilandcouncil.com/documents/Uploads/Tiwi%20Islands-IPA-Plan-of-Management_2023-33_April%202025.pdf",
+      "note": "Tiwi-authored plan describing matrilineal skin groups, kin obligations, totems, and learning from birth."
+    },
+    {
+      "id": "nt-tiwi-food",
+      "title": "Tiwi Food: Animals",
+      "url": "https://www.tiwilandcouncil.com/index.cfm?fuseaction=printTemplate&p=283",
+      "note": "Tiwi Land Council seasonal food table with Indigenous names, preparation details, and ecological timing."
+    },
+    {
+      "id": "nt-anindilyakwa",
+      "title": "Traditional Culture",
+      "url": "https://anindilyakwa.com.au/preserving-culture/anthropology/traditional-culture/",
+      "note": "Anindilyakwa Land Council account of songlines, marriage, kinship, ceremonial law, family, and invited migration."
+    },
+    {
+      "id": "nt-clc-alra",
+      "title": "The Aboriginal Land Rights Act: History",
+      "url": "https://www.clc.org.au/the-alra/",
+      "note": "Central Land Council account of pastoral invasion, waterhole damage, resistance, killings, and the 1889 Government Resident assessment."
+    },
+    {
+      "id": "nt-clc-native",
+      "title": "Native title: Mparntwe timeline",
+      "url": "https://www.clc.org.au/native-title/",
+      "note": "Central Land Council chronology of telegraph work, pastoral leases, water conflict, Stuart survey, deaths, and later continuity."
+    },
+    {
+      "id": "nt-clc-health",
+      "title": "Ltyentye Apurte Healthy Country Plan",
+      "url": "https://www.clc.org.au/wp-content/uploads/CLC-Ltyentye-Apurte-Healthy-Country-Plan-2023.pdf",
+      "note": "Eastern Arrernte voices on family food, medicine, seasons, teaching children, and the unity of healthy people and Country."
+    },
+    {
+      "id": "nt-hermann-stories",
+      "title": "Hermannsburg Historic Precinct Stories",
+      "url": "https://www.hermannsburg.com.au/stories",
+      "note": "Western Arrarnta-owned precinct overview of mission life, language, creativity, refuge, hardship, and deeper Arrarnta history."
+    },
+    {
+      "id": "nt-hermann-start",
+      "title": "Establishing the Mission",
+      "url": "https://www.hermannsburg.com.au/stories/establishing-the-mission",
+      "note": "Local heritage account of the 1878 well and garden, drought, mission publications, pastoral encirclement, violence, and refuge."
+    },
+    {
+      "id": "nt-hermann-heritage",
+      "title": "Hermannsburg Historic Precinct heritage assessment",
+      "url": "https://www.dcceew.gov.au/sites/default/files/documents/hermannsburg.pdf",
+      "note": "Australian heritage assessment covering schools, rations, language publications, mission health, violence, buildings, and population."
+    },
+    {
+      "id": "nt-lutheran",
+      "title": "First Nations and Mission Records: Ntaria",
+      "url": "https://lutheranarchives.lca.org.au/first-nation-and-mission-records/",
+      "note": "Archive guide locating mission records and detailing the 1880 school, 1894 Strehlow arrival, and 1896 schoolhouse."
+    },
+    {
+      "id": "nt-wordlists",
+      "title": "Indigenous Word Lists",
+      "url": "https://lant.nt.gov.au/explore-nt-history/indigenous-word-lists",
+      "note": "Library and Archives NT critically contextualizes Arrernte and Darwin-area word collecting, named and unnamed contributors, and later language mapping."
+    },
+    {
+      "id": "nt-kempe",
+      "title": "Kempe grammar and vocabulary, read December 1890",
+      "url": "https://lant.nt.gov.au/system/files/uploads/stories/resources/2020-09/D8.1LANT-TransactionsoftheRoyalSocietyofSA.pdf",
+      "note": "Exact-period primary publication in missionary orthography, including a localized Arrernte sentence and acknowledgments of speaker assistance."
+    },
+    {
+      "id": "nt-writing-study",
+      "title": "Historical Arrernte writing and missionary translation",
+      "url": "https://api.research-repository.uwa.edu.au/ws/portalfiles/portal/59706459/TH19_249_THESIS_DOCTOR_OF_PHILOSOPHY_MOORE_David_Campbell_2019_.pdf",
+      "note": "Linguistic study checks Kempe transcription, gloss, and the semantic problems created by the missionary theological translation."
+    },
+    {
+      "id": "nt-makassar",
+      "title": "Trade with the Makasar",
+      "url": "https://www.nma.gov.au/defining-moments/resources/trade-with-the-makasar",
+      "note": "National Museum account of annual trepang voyages, Yolngu exchange, work, foods, tools, loanwords, ritual influence, and trade decline."
+    },
+    {
+      "id": "nt-yolngu-encounters",
+      "title": "North-east Arnhem Land: Yolngu country",
+      "url": "https://www.nma.gov.au/learn/encounters-education/community-stories/north-east-arnhem-land",
+      "note": "National Museum page led by Yolngu testimony about Makasar trade, travel, material exchange, and a boyhood voyage in the 1890s."
+    },
+    {
+      "id": "nt-customary-fishing",
+      "title": "Livelihood values of Indigenous customary fishing",
+      "url": "https://aiatsis.gov.au/sites/default/files/research_pub/livelihood_values_of_indigenous_customary_fishing_2.pdf",
+      "note": "AIATSIS research on sea-country owners, seasonal access payments, Yolngu work, trade, fresh water, and food exchange."
+    },
+    {
+      "id": "nt-chinese-lant",
+      "title": "Chinese Portraits",
+      "url": "https://lant.nt.gov.au/explore-nt-history/chinese-portraits",
+      "note": "Library and Archives NT exhibition on miners, railway labour, commerce, gardens, community, and the 1888 Chinese population."
+    },
+    {
+      "id": "nt-chinese-nma",
+      "title": "Developing the regions",
+      "url": "https://www.nma.gov.au/explore/features/harvest-of-endurance/scroll/developing-the-regions",
+      "note": "National Museum account of Chinese miners, railway builders, gardeners, tradespeople, and the 1889 Darwin to Pine Creek line."
+    },
+    {
+      "id": "nt-rail",
+      "title": "North Australia Railway remnants, Pine Creek",
+      "url": "https://www.ntlis.nt.gov.au/heritageregister/f?p=103%3A302%3A%3A%3ANO%3A%3AP302_SITE_ID%3A67998",
+      "note": "NT Heritage Register evidence for the 1886 to 1889 railway, workforce numbers, engineering, water infrastructure, and surviving fabric."
+    },
+    {
+      "id": "nt-flannigan",
+      "title": "A Little Bit of Justice: Charlie Flannigan drawings",
+      "url": "https://lant.nt.gov.au/explore-nt-history/little-bit-justice-drawings-charlie-flannigan",
+      "note": "Library and Archives NT account of an Aboriginal stockman artist, his 82 drawings, colonial justice, and 1892 Palmerston streetscape."
+    },
+    {
+      "id": "nt-willshire",
+      "title": "William Henry Willshire",
+      "url": "https://adb.anu.edu.au/biography/willshire-william-henry-9128",
+      "note": "Australian Dictionary of Biography documents police violence, Aboriginal oral memory, the 1891 murder trial, and biased publications."
+    },
+    {
+      "id": "nt-report1888",
+      "title": "Government Resident report for 1888",
+      "url": "https://aiatsis.gov.au/sites/default/files/catalogue_resources/58816.pdf",
+      "note": "Primary colonial report on government, policing, the Protector, gaol, hospital, work, and proposed bathhouse and latrines."
+    },
+    {
+      "id": "nt-health-history",
+      "title": "Health services in the Northern Territory, 1824 to 1970",
+      "url": "https://openresearch-repository.anu.edu.au/items/e6056278-7efe-4335-bb5f-96f290fbd596/full",
+      "note": "ANU monograph record for a comprehensive history of health status, medical services, missions, and discriminatory attitudes."
+    },
+    {
+      "id": "nt-digging",
+      "title": "Digging, Squatting, and Pioneering Life in the Northern Territory",
+      "url": "https://aiatsis.gov.au/sites/default/files/catalogue_resources/m0016029.pdf",
+      "note": "Contemporary settler account of 1880s mining, pastoralism, shipping, food, Malay trade, missions, and colonial attitudes, used critically."
+    },
+    {
+      "id": "nt-naa",
+      "title": "Government records about the Northern Territory",
+      "url": "https://www.naa.gov.au/sites/default/files/2020-02/research-guide-government-records-nt.pdf",
+      "note": "National Archives history of South Australian administration from 1863 to 1911 and the later Commonwealth transfer."
+    },
+    {
+      "id": "nt-acceptance",
+      "title": "Northern Territory Acceptance Act 1910",
+      "url": "https://www.foundingdocs.gov.au/item-did-52.html",
+      "note": "Museum of Australian Democracy account of the 1910 law and transfer on 1 January 1911."
+    }
+  ],
+  "entities": [
+    {
+      "id": "northern-territory-uk",
+      "card": "data/cards/northern-territory-uk.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "nt-index",
+            "nt-coverage",
+            "nt-map1815",
+            "nt-map1878",
+            "nt-map1880",
+            "nt-map1900",
+            "nt-aiatsis-map"
+          ],
+          "locator": "Exact imported id, name, circa span, and historical basemap provenance. Two observed intervals, two border files, state classification, and missing card status. Earlier control showing several Indigenous atlas ids at representative probes. First exact target feature, decoded polygon, shared arcs, owners, and point probes. Second exact feature and internal seam through the indexed interval. Endpoint control where the target vanishes into a continent-wide imperial label. AIATSIS explains the diversity of distinct groups and warns that mapped group boundaries are general, blurred, and contested.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "nt-map1878",
+            "nt-letters",
+            "nt-hermann-start"
+          ],
+          "locator": "First exact target feature, decoded polygon, shared arcs, owners, and point probes. Museum of Australian Democracy account of the British legal instrument, colonial bounds, representation, and revocable annexation. Local heritage account of the 1878 well and garden, drought, mission publications, pastoral encirclement, violence, and refuge.",
+          "dateScope": {
+            "from": 1878,
+            "to": 1880
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "nt-map1880",
+            "nt-lutheran",
+            "nt-hermann-start"
+          ],
+          "locator": "Second exact feature and internal seam through the indexed interval. Archive guide locating mission records and detailing the 1880 school, 1894 Strehlow arrival, and 1896 schoolhouse. Local heritage account of the 1878 well and garden, drought, mission publications, pastoral encirclement, violence, and refuge.",
+          "dateScope": {
+            "from": 1880,
+            "to": 1883
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "nt-rail",
+            "nt-clc-alra",
+            "nt-customary-fishing"
+          ],
+          "locator": "NT Heritage Register evidence for the 1886 to 1889 railway, workforce numbers, engineering, water infrastructure, and surviving fabric. Central Land Council account of pastoral invasion, waterhole damage, resistance, killings, and the 1889 Government Resident assessment. AIATSIS research on sea-country owners, seasonal access payments, Yolngu work, trade, fresh water, and food exchange.",
+          "dateScope": {
+            "from": 1883,
+            "to": 1886
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "nt-rail",
+            "nt-chinese-nma",
+            "nt-nlc-history"
+          ],
+          "locator": "NT Heritage Register evidence for the 1886 to 1889 railway, workforce numbers, engineering, water infrastructure, and surviving fabric. National Museum account of Chinese miners, railway builders, gardeners, tradespeople, and the 1889 Darwin to Pine Creek line. Land council account of long Aboriginal presence, resistance, pastoral dispossession, and continuing land ownership.",
+          "dateScope": {
+            "from": 1886,
+            "to": 1889
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "nt-kempe",
+            "nt-writing-study",
+            "nt-willshire"
+          ],
+          "locator": "Exact-period primary publication in missionary orthography, including a localized Arrernte sentence and acknowledgments of speaker assistance. Linguistic study checks Kempe transcription, gloss, and the semantic problems created by the missionary theological translation. Australian Dictionary of Biography documents police violence, Aboriginal oral memory, the 1891 murder trial, and biased publications.",
+          "dateScope": {
+            "from": 1889,
+            "to": 1892
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "nt-flannigan",
+            "nt-wordlists"
+          ],
+          "locator": "Library and Archives NT account of an Aboriginal stockman artist, his 82 drawings, colonial justice, and 1892 Palmerston streetscape. Library and Archives NT critically contextualizes Arrernte and Darwin-area word collecting, named and unnamed contributors, and later language mapping.",
+          "dateScope": {
+            "from": 1892,
+            "to": 1895
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "nt-hermann-heritage",
+            "nt-jawoyn-language",
+            "nt-tiwi-kin"
+          ],
+          "locator": "Australian heritage assessment covering schools, rations, language publications, mission health, violence, buildings, and population. Jawoyn account of clans, language, multilingual repertoires, disruption, and present identity. Tiwi-authored plan describing matrilineal skin groups, kin obligations, totems, and learning from birth.",
+          "dateScope": {
+            "from": 1895,
+            "to": 1898
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "nt-wordlists",
+            "nt-map1900",
+            "nt-naa"
+          ],
+          "locator": "Library and Archives NT critically contextualizes Arrernte and Darwin-area word collecting, named and unnamed contributors, and later language mapping. Endpoint control where the target vanishes into a continent-wide imperial label. National Archives history of South Australian administration from 1863 to 1911 and the later Commonwealth transfer.",
+          "dateScope": {
+            "from": 1898,
+            "to": 1900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "nt-index",
+            "nt-coverage"
+          ],
+          "locator": "Exact index and coverage fields for id, name, dates, provenance, intervals, and missing-card state.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "nt-map1878",
+            "nt-map1880"
+          ],
+          "locator": "Decoded geometry type, position count, bounds, coordinate hashes, and identical probe results across target snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "nt-act1863",
+            "nt-map1878"
+          ],
+          "locator": "Primary statutory bounds compared with decoded target bbox, single component, and representative exclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "nt-map1878",
+            "nt-map1880"
+          ],
+          "locator": "Shared-arc audit against every feature in each exact target snapshot.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "nt-map1815",
+            "nt-map1878",
+            "nt-map1900"
+          ],
+          "locator": "Cross-snapshot owner comparison at representative points before, during, and after the exact interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "nt-aiatsis-first"
+          ],
+          "locator": "AIATSIS identity guidance on plurality, Country, preferred local names, and colonial boundary mismatch.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "nt-larrakia"
+          ],
+          "locator": "Larrakia Nation statements on country, sea connection, trade, ceremonies, intermarriage, and settler arrival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "nt-jawoyn-country"
+          ],
+          "locator": "Jawoyn country extent, cultural places, ecological variety, and community fire knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "nt-anindilyakwa"
+          ],
+          "locator": "Land council account of songlines, named world, kinship law, invitation, intermarriage, and family-based collective life.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "nt-nlc-history"
+          ],
+          "locator": "Land council history of late nineteenth-century incursions, dispossession, resistance, and continuing Aboriginal connection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "nt-tiwi-seasons"
+          ],
+          "locator": "Tiwi elder statements, seasonal indicators, foods, medicines, teaching, and modern documentation date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "nt-tiwi-food"
+          ],
+          "locator": "Tiwi Land Council animal names, seasons, cooking methods, and community ownership warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "nt-jawoyn-country"
+          ],
+          "locator": "Jawoyn account of deliberate early dry-season fire and colonisation disruption.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "nt-yolngu-encounters"
+          ],
+          "locator": "Yolngu testimony and museum synthesis on annual voyages, goods, work, travel, and chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "nt-chinese-lant"
+          ],
+          "locator": "Library and Archives NT population figure and occupations in the nineteenth-century Chinese community.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "nt-larrakia"
+          ],
+          "locator": "Larrakia Nation history of relationships, food sharing, urban participation, displacement, and continuing responsibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "nt-jawoyn-language"
+          ],
+          "locator": "Jawoyn clan history, multilingual repertoires, related languages, disruption, and current identity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "nt-tiwi-kin"
+          ],
+          "locator": "Tiwi-authored plan on matrilineal skin groups, marriage, obligations, support, totems, and early teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "nt-anindilyakwa"
+          ],
+          "locator": "Anindilyakwa account of family, intermarriage, common kinship, ceremony, and invited migration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "nt-flannigan"
+          ],
+          "locator": "Library and Archives NT reconstruction of 1892 Palmerston and the Flannigan visual record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "nt-tiwi-seasons",
+            "nt-tiwi-kin"
+          ],
+          "locator": "Tiwi statements about intergenerational environmental and kinship teaching, bounded to Tiwi Country.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "nt-lutheran",
+            "nt-hermann-heritage"
+          ],
+          "locator": "Archive and heritage evidence for opening date, attendance incentives, and mission schooling context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "nt-wordlists",
+            "nt-kempe"
+          ],
+          "locator": "Library account and primary publication size, genres, contributors, aims, and authorship imbalance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "nt-hermann-heritage",
+            "nt-lutheran"
+          ],
+          "locator": "1896 building and enrollment evidence contrasted with the geographic limits of the institutional record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "nt-clc-health"
+          ],
+          "locator": "Eastern Arrernte community statements on family teaching, foods, medicines, seasons, language, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "nt-clc-health"
+          ],
+          "locator": "Community-authored healthy Country plan statements on medicine, food, health, family, and teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "nt-hermann-stories",
+            "nt-hermann-heritage"
+          ],
+          "locator": "Local heritage evidence for drought, disease, food, water, refuge, settlement, and mission pressures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "nt-lant-survey"
+          ],
+          "locator": "Library and Archives NT evidence for settler ailments, diet, quinine, lime juice, and environmental conditions in 1869.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "nt-report1888"
+          ],
+          "locator": "Primary report sections on hospital and proposed gaol health and sanitation facilities, read critically.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "nt-health-history"
+          ],
+          "locator": "Monograph scope and archival limits for nineteenth-century Territory health history.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "nt-clc-alra"
+          ],
+          "locator": "Land council account of pastoral incursions, damaged waterholes, bush foods, and resistance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "nt-hermann-start"
+          ],
+          "locator": "Mission history for the 1878 well, irrigation, crops, 1880 drought, and persistent water insecurity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "nt-tiwi-seasons"
+          ],
+          "locator": "Tiwi seasonal indicators for surface water, rain, movement, foods, and intergenerational knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "nt-report1888",
+            "nt-digging"
+          ],
+          "locator": "Primary colonial evidence and contemporary town context for waste facilities, with explicit limits on generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "nt-aiatsis-first",
+            "nt-clc-native"
+          ],
+          "locator": "AIATSIS diversity guidance and local Country history used to reject unsupported territory-wide sanitation generalization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "nt-customary-fishing",
+            "nt-makassar"
+          ],
+          "locator": "AIATSIS and National Museum evidence for access, payment, labour, goods, destinations, and sea-country authority.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "nt-rail",
+            "nt-chinese-nma"
+          ],
+          "locator": "Heritage and museum evidence for route, workforce, construction, completion, and economic effects.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "nt-nlc-work"
+          ],
+          "locator": "Northern Land Council evidence for specific pastoral jobs, payment conditions, and indispensability of Aboriginal knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "nt-flannigan"
+          ],
+          "locator": "Archive count, themes, authorship, legal context, and execution date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "nt-digging"
+          ],
+          "locator": "Primary source scope, date, topics, and critical reading limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "nt-act1863",
+            "nt-lant-survey"
+          ],
+          "locator": "Statutory land category and local archive evidence for survey, existing use, exchange, conflict, and resistance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "nt-clc-alra"
+          ],
+          "locator": "Indigenous land council framing and exact 1889 official assessment of invasion and resistance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "nt-willshire"
+          ],
+          "locator": "Biography evidence for policing, deaths, trial, evidentiary inequality, writings, and oral memory.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "nt-clc-native"
+          ],
+          "locator": "Central Land Council timeline for telegraph employment, camp continuity, leases, water conflict, and deaths.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "nt-larrakia"
+          ],
+          "locator": "Larrakia Nation account of aid, participation, marginalization, displacement, and continuing responsibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "nt-kempe",
+            "nt-writing-study"
+          ],
+          "locator": "Exact primary sentence, contemporary reading date, later linguistic gloss, locality, contributor context, and semantic warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "nt-wordlists"
+          ],
+          "locator": "Archive account of Parkhouse collection, acknowledged assistance, unnamed corrector, language names, and source limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "nt-jawoyn-country",
+            "nt-nlc-work"
+          ],
+          "locator": "Indigenous accounts of land care and labour synthesized without converting regional practices into one polity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "nt-map1900",
+            "nt-map1914",
+            "nt-naa",
+            "nt-acceptance"
+          ],
+          "locator": "Endpoint absence, replacement owners, later control, and authoritative 1911 transfer chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "nt-larrakia",
+            "nt-nlc-history"
+          ],
+          "locator": "Indigenous organizational statements on continuing connection and authoritative distinction from the atlas interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "nt-map1880",
+            "nt-map1900",
+            "nt-naa",
+            "nt-acceptance"
+          ],
+          "locator": "Second exact feature and internal seam through the indexed interval. Endpoint control where the target vanishes into a continent-wide imperial label. National Archives history of South Australian administration from 1863 to 1911 and the later Commonwealth transfer. Museum of Australian Democracy account of the 1910 law and transfer on 1 January 1911.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "northern-territory-uk",
+        "name": "Northern Territory under South Australian administration",
+        "aliases": [
+          "Northern Territory (UK)"
+        ],
+        "kind": "state",
+        "region": "Oceania",
+        "from": 1878,
+        "to": 1900,
+        "circa": true,
+        "card": "cards/northern-territory-uk.json",
+        "dateBasis": "map_coverage",
+        "summary": "A colonial administrative claim layered over many continuing Aboriginal Countries from 1878 to 1900.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1878.json",
+          "properties": {
+            "civ": "northern-territory-uk",
+            "from": 1878,
+            "to": 1880,
+            "precision": 3
+          },
+          "bounds": [
+            128.82548825488254,
+            -24.93574334273642,
+            138.07398073980738,
+            -11.299467126016658
+          ]
+        },
+        {
+          "file": "world-1880.json",
+          "properties": {
+            "civ": "northern-territory-uk",
+            "from": 1880,
+            "to": 1900,
+            "precision": 3
+          },
+          "bounds": [
+            128.82548825488254,
+            -24.935743382933236,
+            138.07398073980738,
+            -11.299467161162227
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
