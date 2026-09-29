@@ -1,0 +1,945 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release173-gaya research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "s-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, state kind, approximate atlas dates, and historical basemap provenance."
+    },
+    {
+      "id": "s-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Documents the erroneous Bodh Gaya summary that this researched Korean Gaya card replaces."
+    },
+    {
+      "id": "s-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing review state, Asia queue, four border files, and observed atlas intervals."
+    },
+    {
+      "id": "s-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms exact missing id, imported-summary status, source lead, and empty staged drafts."
+    },
+    {
+      "id": "s-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact Gaya card association currently exists."
+    },
+    {
+      "id": "s-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id Gaya override currently exists."
+    },
+    {
+      "id": "s-map100",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "First exact Gaya geometry, four components, representative ownership, and topology seams."
+    },
+    {
+      "id": "s-map200",
+      "title": "Human History Map 200 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Second exact Gaya geometry, representative ownership, and topology seams."
+    },
+    {
+      "id": "s-map300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Third exact Gaya geometry, representative ownership, and topology seams."
+    },
+    {
+      "id": "s-map400",
+      "title": "Human History Map 400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Fourth exact Gaya geometry, representative ownership, and topology seams."
+    },
+    {
+      "id": "s-map500",
+      "title": "Human History Map 500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Endpoint control showing removal of the exact Gaya feature at 500."
+    },
+    {
+      "id": "s-map600",
+      "title": "Human History Map 600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Later control confirming that the exact Gaya feature remains absent."
+    },
+    {
+      "id": "s-unesco-list",
+      "title": "UNESCO World Heritage Centre, Gaya Tumuli",
+      "url": "https://whc.unesco.org/en/list/1666",
+      "note": "Official synthesis of chronology, seven cemeteries, autonomous polities, shared burial customs, and regional pottery."
+    },
+    {
+      "id": "s-unesco-nomination",
+      "title": "Gaya Tumuli nomination dossier",
+      "url": "https://whc.unesco.org/document/186535",
+      "note": "Detailed official nomination evidence on sites, mound construction, grave goods, chronology, conservation, and social context."
+    },
+    {
+      "id": "s-icomos",
+      "title": "ICOMOS evaluation of Gaya Tumuli",
+      "url": "https://whc.unesco.org/document/205730",
+      "note": "Independent heritage evaluation of the seven cemeteries, political equality, burial variation, integrity, and written-evidence limits."
+    },
+    {
+      "id": "s-unesco-supplement",
+      "title": "Gaya Tumuli supplementary information",
+      "url": "https://whc.unesco.org/document/191180",
+      "note": "Official comparative and chronological material on mound cemeteries and Gaya continuity into the sixth century."
+    },
+    {
+      "id": "s-nmk-gallery",
+      "title": "National Museum of Korea, Gaya Gallery",
+      "url": "https://www.museum.go.kr/ENG/contents/E0201030700.do?schM=list&showHallId=760&showroomCode=DM0007",
+      "note": "National museum overview of iron, trade, Geumgwan, Daegaya, burials, pottery, arms, and ornament."
+    },
+    {
+      "id": "s-gimhae-dawn",
+      "title": "Gimhae National Museum, Dawn of Gaya",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020102.html",
+      "note": "Official museum synthesis of attached-rim pottery, iron, exchange, social change, and early political formation."
+    },
+    {
+      "id": "s-gimhae-development",
+      "title": "Gimhae National Museum, Development of Gaya",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020103.html",
+      "note": "Official museum evidence on hard pottery, high-temperature firing, funerals, power, horse gear, ingots, and regional centers."
+    },
+    {
+      "id": "s-gimhae-expansion",
+      "title": "Gimhae National Museum, Expansion of Gaya",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020104.html",
+      "note": "Official chronology of Geumgwan, the 400 campaign, later Ara and Daegaya power, and sixth-century annexations."
+    },
+    {
+      "id": "s-gimhae-style",
+      "title": "Gimhae National Museum, Style of Gaya",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020105.html",
+      "note": "Official museum evidence on crowns, earrings, glass, crystal, amber, agate, status, and specialist production."
+    },
+    {
+      "id": "s-gimhae-lives",
+      "title": "Gimhae National Museum, Lives of the Gaya People",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020106.html",
+      "note": "Official museum evidence on houses, farming, cooking, fishing, weaving, ritual, settlements, harbors, and shell middens."
+    },
+    {
+      "id": "s-gimhae-pottery",
+      "title": "Gimhae National Museum, Gaya Pottery",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020107.html",
+      "note": "Official museum evidence on kilns, vessels, food remains, regional styles, inscriptions, and playful rattle cups."
+    },
+    {
+      "id": "s-gimhae-iron",
+      "title": "Gimhae National Museum, Gaya Iron",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020108.html",
+      "note": "Official museum evidence on iron production, armor, weapons, horse equipment, farming implements, and technology."
+    },
+    {
+      "id": "s-gimhae-maritime",
+      "title": "Gimhae National Museum, Gaya Maritime Exchange",
+      "url": "https://gimhae.museum.go.kr/en/html/sub02/020109.html",
+      "note": "Official museum evidence on sea routes, iron exchange, imported objects, and excavated ship fragments."
+    },
+    {
+      "id": "s-heritage-route",
+      "title": "Korean Heritage Service, Gaya Culture Route",
+      "url": "https://www.kh.or.kr/visit/en/road/1/view.do?key=2408010001",
+      "note": "Official heritage guide to Gaya cemetery landscapes, regional centers, excavated objects, and interpretation."
+    },
+    {
+      "id": "s-nrich-heritage",
+      "title": "National Research Institute of Cultural Heritage, Gaya sites",
+      "url": "https://www.nrich.go.kr/english/page.do?menuIdx=1086",
+      "note": "Government research overview of Gaya fortresses, gates, drainage, tombs, and archaeological conservation."
+    },
+    {
+      "id": "s-nrich-history",
+      "title": "Gaya National Research Institute, reconstruction of Gaya human remains",
+      "url": "https://nrich.go.kr/gaya/page.do?menuIdx=1282",
+      "note": "Government research summary of later Gaya skeletal, dietary, activity, and biological-relationship evidence."
+    },
+    {
+      "id": "s-nrich-bonghwang",
+      "title": "NRICH investigation of Bonghwang-dong royal palace area",
+      "url": "https://www.nrich.go.kr/ichc/ichcPhotoNewsUsrView.do?bbs_sn=24&menuIdx=2805",
+      "note": "Government excavation report on first-to-fourth-century ditches, settlement boundaries, organic layers, wood, and lacquer."
+    },
+    {
+      "id": "s-isotopes",
+      "title": "Diet in the Gaya cemetery at Yean-ri",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.21202",
+      "note": "Peer-reviewed isotope study of 109 individuals, mixed terrestrial and aquatic foods, burial variation, and weaning."
+    },
+    {
+      "id": "s-odontology",
+      "title": "Forensic dental study of a Gaya-period individual",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5734854/",
+      "note": "Open peer-reviewed dental and skeletal study of a later Gaya-period young woman and diagnostic limits."
+    },
+    {
+      "id": "s-paleoparasitology",
+      "title": "Paleoparasitology of historical toilets and mummies in South Korea",
+      "url": "https://www.cambridge.org/core/journals/parasitology/article/paleoparasitology-of-historical-toilets-and-mummies-in-south-korea-trends-and-perspectives/92926B590A5DF11B0338FC01C509FB0C",
+      "note": "Peer-reviewed review distinguishing toilets, drains, moats, fecal contamination, and evidence gaps in early Korea."
+    },
+    {
+      "id": "s-historydb",
+      "title": "Korean History Database, Gaya inscription bibliography",
+      "url": "https://db.history.go.kr/id/hb_184_01_001300",
+      "note": "Official scholarly bibliography identifying Gaya inscription finds, proposed readings, chronologies, and contested interpretations."
+    },
+    {
+      "id": "s-kyushu",
+      "title": "Kyushu National Museum, Gaya exhibition object list",
+      "url": "https://www.kyuhaku.jp/exhibition/img/s_67/exhibition_s67-en.pdf",
+      "note": "Official museum catalogue dating the Yangdong-ri cauldron and classifying its mid-third-century context as Byeonhan."
+    },
+    {
+      "id": "s-maritime-jkaa",
+      "title": "Gaya and East Asian maritime networks",
+      "url": "https://www.ijkaa.org/assets/pdf/21/jkaa-15-53.pdf",
+      "note": "National Museum scholarly journal article on material exchange and maritime connections around Gaya."
+    },
+    {
+      "id": "s-kci-early",
+      "title": "Formation and development of early Gaya polities",
+      "url": "https://doi.org/10.37331/JKAH.2017.03.85.65",
+      "note": "Peer-reviewed Korean archaeology article on early Gaya chronology and continuing scholarly debate."
+    },
+    {
+      "id": "s-horse-isotope",
+      "title": "Horse mobility at fourth-century Daeseong-dong",
+      "url": "https://ancient-asia-journal.com/upload/1/volume/Vol.%2016%20%282025%29/PDF/4_Jong%20Ha%20Hong_F.pdf",
+      "note": "Peer-reviewed isotope study of horse teeth from elite fourth-century burials and animal movement."
+    },
+    {
+      "id": "s-koreanet-malisan",
+      "title": "Korea.net, Malisan Tombs and Ara Gaya",
+      "url": "https://www.korea.net/NewsFocus/Culture/view?articleId=126654",
+      "note": "Official cultural account of Ara Gaya pottery, iron, tombs, and the political setting after 400."
+    },
+    {
+      "id": "s-koreanet-okjeon",
+      "title": "Korea.net, Dara and Okjeon archaeology in Hapcheon",
+      "url": "https://www.korea.net/NewsFocus/People/view?articleId=126591",
+      "note": "Official account of Dara, Okjeon excavation, elite objects, iron, and long-distance exchange."
+    },
+    {
+      "id": "s-nmk-special",
+      "title": "National Museum of Korea, Gaya special exhibition",
+      "url": "https://www.museum.go.kr/ENG/contents/E0202010000.do?exhiSpThemId=479175&listType=gallery&menuId=current&schM=view",
+      "note": "National museum exhibition synthesis of Gaya identity, archaeology, iron, regional polities, and exchange."
+    },
+    {
+      "id": "s-kci-medicine",
+      "title": "Possible medicinal use of a late fifth-century Gaya heating vessel",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003122768",
+      "note": "Peer-reviewed study cautiously proposing alcohol, medicinal, or mineral uses for one metal heating vessel."
+    },
+    {
+      "id": "s-nmk-overview",
+      "title": "National Museum journal overview of Gaya material culture",
+      "url": "https://www.ijkaa.org/v.15/0/13/17",
+      "note": "Scholarly museum overview of Gaya archaeology, regional material styles, interaction, and historical interpretation."
+    }
+  ],
+  "entities": [
+    {
+      "id": "gaya",
+      "card": "data/cards/gaya.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-nmk-special"
+          ],
+          "locator": "Exact id, imported name, state kind, approximate atlas dates, and historical basemap provenance. Documents the erroneous Bodh Gaya summary that this researched Korean Gaya card replaces. Missing review state, Asia queue, four border files, and observed atlas intervals. National museum exhibition synthesis of Gaya identity, archaeology, iron, regional polities, and exchange.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "s-gimhae-dawn"
+          ],
+          "locator": "Official museum synthesis of attached-rim pottery, iron, exchange, social change, and early political formation.",
+          "dateScope": {
+            "from": 100,
+            "to": 150
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "s-kci-early"
+          ],
+          "locator": "Peer-reviewed Korean archaeology article on early Gaya chronology and continuing scholarly debate.",
+          "dateScope": {
+            "from": 150,
+            "to": 200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "s-kyushu"
+          ],
+          "locator": "Official museum catalogue dating the Yangdong-ri cauldron and classifying its mid-third-century context as Byeonhan.",
+          "dateScope": {
+            "from": 200,
+            "to": 250
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "s-gimhae-development"
+          ],
+          "locator": "Official museum evidence on hard pottery, high-temperature firing, funerals, power, horse gear, ingots, and regional centers.",
+          "dateScope": {
+            "from": 250,
+            "to": 300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "s-gimhae-maritime"
+          ],
+          "locator": "Official museum evidence on sea routes, iron exchange, imported objects, and excavated ship fragments.",
+          "dateScope": {
+            "from": 300,
+            "to": 350
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "s-unesco-list"
+          ],
+          "locator": "Official synthesis of chronology, seven cemeteries, autonomous polities, shared burial customs, and regional pottery.",
+          "dateScope": {
+            "from": 350,
+            "to": 400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "s-gimhae-expansion"
+          ],
+          "locator": "Official chronology of Geumgwan, the 400 campaign, later Ara and Daegaya power, and sixth-century annexations.",
+          "dateScope": {
+            "from": 400,
+            "to": 450
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "s-unesco-supplement"
+          ],
+          "locator": "Official comparative and chronological material on mound cemeteries and Gaya continuity into the sixth century.",
+          "dateScope": {
+            "from": 450,
+            "to": 500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-missing"
+          ],
+          "locator": "Exact id, imported identity error, corrected Korean scope, and atlas compatibility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "s-coverage",
+            "s-card-index",
+            "s-overrides",
+            "s-map100"
+          ],
+          "locator": "Full snapshot audit, feature counts, live missing state, and association absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "s-map100",
+            "s-map200",
+            "s-map300",
+            "s-map400"
+          ],
+          "locator": "Geometry regimes, components, positions, and nonhistorical century transitions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "s-map100",
+            "s-map200"
+          ],
+          "locator": "Bounding box, representative membership, major omissions, and footprint limitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "s-map300",
+            "s-map400",
+            "s-map500",
+            "s-map600"
+          ],
+          "locator": "Direct arc seams, endpoint disappearance, later control, and rejected border inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "s-unesco-list"
+          ],
+          "locator": "Autonomous political centers, shared material traditions, and confederacy-label caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "s-icomos"
+          ],
+          "locator": "Elite funerary display, political interpretation, and missing administrative archive.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "s-gimhae-expansion"
+          ],
+          "locator": "Geumgwan prominence, post-400 change, and distinct sixth-century incorporation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "s-koreanet-malisan"
+          ],
+          "locator": "Ara Gaya evidence, changing regional power, and subordination caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "s-nmk-gallery"
+          ],
+          "locator": "Daegaya expansion, exact later conquest, and atlas endpoint distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "s-maritime-jkaa"
+          ],
+          "locator": "Maritime corridors, moving objects and people, and exchange-mechanism uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "s-gimhae-maritime"
+          ],
+          "locator": "Ship remains, estimated vessel size, transport labor, and route uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "s-horse-isotope"
+          ],
+          "locator": "Horse isotope research, elite contexts, and limits on military reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "s-gimhae-iron"
+          ],
+          "locator": "Martial equipment, mortuary context, and army-roster caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "s-koreanet-okjeon"
+          ],
+          "locator": "Dara network evidence, smaller-polity agency, and narrative bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "s-gimhae-lives"
+          ],
+          "locator": "House types, settlement facilities, and household-composition limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "s-nrich-bonghwang"
+          ],
+          "locator": "Ditch functions, organic preservation, wooden artifacts, and gentle interpretive humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "s-nrich-heritage"
+          ],
+          "locator": "Fortress construction, drainage, coordinated labor, and phase attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "s-nrich-heritage"
+          ],
+          "locator": "Farming water, excavated drainage, collective maintenance, and bureaucratic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "s-unesco-nomination"
+          ],
+          "locator": "Changing settlement landscapes, maintenance, and plan-versus-lived-place distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "s-gimhae-pottery"
+          ],
+          "locator": "Food remains, cooking methods, dietary variety, and household variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "s-gimhae-lives"
+          ],
+          "locator": "Layered shell midden, food refuse, artifact discard, and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "s-gimhae-pottery"
+          ],
+          "locator": "Firing technologies, production logistics, regional style, and gentle identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "s-gimhae-iron"
+          ],
+          "locator": "Iron products, grouped ingots, production evidence, and specialist labor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "s-gimhae-lives"
+          ],
+          "locator": "Textile evidence, preservation bias, work settings, and gender caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "s-nmk-overview"
+          ],
+          "locator": "Household cooperation, possible membership, and family-structure evidence limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "s-gimhae-style"
+          ],
+          "locator": "Women, ornament contexts, intersecting identities, and fixed-code caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "s-icomos"
+          ],
+          "locator": "Mortuary hierarchy, survivor choices, and limits on reading lived status.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "s-nrich-history"
+          ],
+          "locator": "Later individual study, multiple evidence types, and strict chronological boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "s-unesco-nomination"
+          ],
+          "locator": "Funerary labor, alliances, special deposits, and anti-generalization guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "s-gimhae-lives"
+          ],
+          "locator": "Everyday learning and explicit absence of documented formal schooling.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "s-gimhae-development"
+          ],
+          "locator": "Pottery skill acquisition, apprenticeship inference, and unknown teacher relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "s-gimhae-iron"
+          ],
+          "locator": "Ironworking learning sequence and distinction between model and documented school.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "s-unesco-nomination"
+          ],
+          "locator": "Child burial evidence, toy caution, and limits on reconstructing experience.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "s-gimhae-pottery"
+          ],
+          "locator": "Sound-producing cups, uncertain purpose, and gentle classroom-bell humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "s-isotopes"
+          ],
+          "locator": "Yean-ri sample, diet findings, overlap, and chronological generalization limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "s-odontology"
+          ],
+          "locator": "Bioarchaeological health markers, later comparator, and diagnostic restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "s-nrich-history"
+          ],
+          "locator": "Care inference, household support, and absent medical-institution evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "s-kci-medicine"
+          ],
+          "locator": "Possible medicinal vessel, secure technology, and interpretation boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "s-nrich-heritage"
+          ],
+          "locator": "Environmental health, ordinary nursing, uneven evidence, and integrated method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "s-paleoparasitology"
+          ],
+          "locator": "Drain and toilet distinction, explicit Gaya evidence gap, and sanitation caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "s-nrich-bonghwang"
+          ],
+          "locator": "Waste movement, organic preservation, cleaning, and plan interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "s-historydb"
+          ],
+          "locator": "Spoken language, later textual mediation, and absent indigenous archive.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "s-historydb"
+          ],
+          "locator": "Inscription disputes and complete evidence-bounded writing-sample absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "s-heritage-route"
+          ],
+          "locator": "Cemetery landscapes, ritual interpretation, and distinction between action and doctrine.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "s-nmk-overview"
+          ],
+          "locator": "Integrated achievements across autonomous centers without centralized-state invention.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "s-gimhae-style"
+          ],
+          "locator": "Ornament technology, imported materials, elite preservation, and ownership limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "s-unesco-list"
+          ],
+          "locator": "World Heritage rationale, conservation, and serial-property representativeness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "s-gimhae-expansion"
+          ],
+          "locator": "Sixth-century incorporations, varied trajectories, and social continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "s-map500",
+            "s-map600",
+            "s-unesco-supplement"
+          ],
+          "locator": "Atlas endpoint, later history, empty association, and transformation ending.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "s-nmk-gallery",
+            "s-map500"
+          ],
+          "locator": "National museum overview of iron, trade, Geumgwan, Daegaya, burials, pottery, arms, and ornament. Endpoint control showing removal of the exact Gaya feature at 500.",
+          "dateScope": {
+            "year": 500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "gaya",
+        "name": "Gaya polities of southern Korea",
+        "aliases": [
+          "Gaya",
+          "Kaya",
+          "Gaya Confederacy",
+          "Kaya Confederacy"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 100,
+        "to": 500,
+        "circa": true,
+        "card": "cards/gaya.json",
+        "dateBasis": "map_coverage",
+        "summary": "Autonomous southern Korean polities linked by iron, pottery, exchange, and shared yet regionally varied burial traditions.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "gaya",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            127.81747817478174,
+            34.69542178249067,
+            128.75348753487538,
+            35.332742612714966
+          ]
+        },
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "gaya",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            127.8066780667807,
+            34.79910738393714,
+            128.41868418684186,
+            35.332742612714966
+          ]
+        },
+        {
+          "file": "world-300.json",
+          "properties": {
+            "civ": "gaya",
+            "from": 300,
+            "to": 400,
+            "precision": 1
+          },
+          "bounds": [
+            127.81747817478174,
+            34.833669251085965,
+            128.50148501485018,
+            35.332742612714966
+          ]
+        },
+        {
+          "file": "world-400.json",
+          "properties": {
+            "civ": "gaya",
+            "from": 400,
+            "to": 500,
+            "precision": 1
+          },
+          "bounds": [
+            127.8066780667807,
+            34.79910738393714,
+            128.41868418684186,
+            35.332742612714966
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
