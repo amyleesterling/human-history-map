@@ -1,0 +1,905 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release171-swedes research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "s-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported Swedes label, approximate 400 to 800 dates, and historical-basemap provenance."
+    },
+    {
+      "id": "s-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Documents the imported Wikipedia-derived summary that the researched card replaces."
+    },
+    {
+      "id": "s-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Missing review state, Europe queue, four border files, and consecutive observed intervals from 400 to 800."
+    },
+    {
+      "id": "s-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing id, imported-summary status, source lead, and empty staged drafts."
+    },
+    {
+      "id": "s-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no exact swedes card association currently exists."
+    },
+    {
+      "id": "s-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no researched exact-id identity or chronology override currently exists."
+    },
+    {
+      "id": "s-map300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Pre-layer control for representative-point ownership before the exact record begins."
+    },
+    {
+      "id": "s-map400",
+      "title": "Human History Map 400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "First exact target geometry, imported interval, decoded shape, and representative-point membership."
+    },
+    {
+      "id": "s-map500",
+      "title": "Human History Map 500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Second exact interval, identical decoded target geometry, and changed surrounding ownership."
+    },
+    {
+      "id": "s-map600",
+      "title": "Human History Map 600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Third exact interval, identical decoded target geometry, and Gotland control ownership."
+    },
+    {
+      "id": "s-map700",
+      "title": "Human History Map 700 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Fourth exact interval, radically enlarged geometry, direct topology seams, and Sámi-area overlap."
+    },
+    {
+      "id": "s-map800",
+      "title": "Human History Map 800 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Endpoint control replacing the exact target with separate later atlas layers."
+    },
+    {
+      "id": "s-map900",
+      "title": "Human History Map 900 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Later control showing continued editorial relabeling rather than a documented exact successor."
+    },
+    {
+      "id": "s-jordanes",
+      "title": "Fordham Medieval Sourcebook: Jordanes, Getica",
+      "url": "https://sourcebooks.fordham.edu/source/jordanes-historygoths.asp",
+      "note": "English edition of the sixth-century outsider account, including Scandza peoples; used with source-purpose and identification cautions."
+    },
+    {
+      "id": "s-gamla-center",
+      "title": "Ljungkvist and Frolund, Gamla Uppsala: the emergence of a centre and magnate complex",
+      "url": "https://journals.uu.se/jaah/article/view/148",
+      "note": "Peer-reviewed synthesis of the sixth- to eighth-century estate, mounds, halls, workshops, roads, fences, economy, and eighth- or ninth-century transformation."
+    },
+    {
+      "id": "s-gamla-project",
+      "title": "Uppsala University: Gamla Uppsala research project",
+      "url": "https://www.uu.se/download/18.5215a14818bcc2b16186ab/1699953376573/Gamla%20Uppsala.pdf",
+      "note": "University project account of the 550 to 650 monumental complex, hall, craft building, hearths, enclosures, roads, farmsteads, and interpretive limits."
+    },
+    {
+      "id": "s-valsgarde",
+      "title": "Uppsala University Gustavianum: Valsgarde burial ground",
+      "url": "https://www.uu.se/en/gustavianum/about-the-museum/our-collections/the-historical-collections/nordic-archeology/valsgarde",
+      "note": "Museum and university account of fifteen unlooted boat graves, excavation history, Vendel-period naming, helmets, glass, and changing interpretation."
+    },
+    {
+      "id": "s-boat-culture",
+      "title": "Uppsala University: Boat grave culture research",
+      "url": "https://www.uu.se/en/research/the-viking-phenomenon/research-clusters/boat-grave-culture",
+      "note": "Research project on prominent people of both sexes, cremations, animal offerings, eastern contacts, and the incomplete publication record."
+    },
+    {
+      "id": "s-raa-valsgarde",
+      "title": "Swedish National Heritage Board: modern analysis of Valsgarde boat graves",
+      "url": "https://www.raa.se/nyheter/2025/12/moderna-metoder-ger-ny-kunskap-om-unika-vendeltida-batgravar/",
+      "note": "Heritage laboratory account of imaging and chemical analysis, grave chronology, object conservation, and continuing reassessment."
+    },
+    {
+      "id": "s-dogs",
+      "title": "Nichols, Three Dogs from the Late Iron Age Boat Grave Cemetery at Gamla Uppsala",
+      "url": "https://www.cambridge.org/core/journals/european-journal-of-archaeology/article/three-dogs-from-the-late-iron-age-boat-grave-cemetery-at-gamla-uppsala-prastgarden-sweden/43262B2B298E584D8B2CDF0D1844E610",
+      "note": "Peer-reviewed regional framing of historical Sviars or Svear, Gamla Uppsala, elite burials, animal husbandry, osteological methods, and chronology."
+    },
+    {
+      "id": "s-helgo-dust",
+      "title": "Arrhenius, Helgo in the shadow of the dust veil 536-37",
+      "url": "https://journals.uu.se/jaah/article/view/122",
+      "note": "Peer-reviewed analysis of casting debris, workshop change, permanent settlement, indoor ritual, cemeteries, bread, and the proposed 536 connection."
+    },
+    {
+      "id": "s-helgo-metals",
+      "title": "Oxford Research Archive: local supply and long-distance imports at Helgo",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3Aff7d9af2-4ad4-4609-b639-729060adce9e",
+      "note": "Peer-reviewed provenance study of lead, copper, brass, ingots, rods, casting waste, and fifth- to early sixth-century supply networks."
+    },
+    {
+      "id": "s-drawplate",
+      "title": "Warmlander and colleagues, a sixth- to eighth-century silver wire drawplate at Old Uppsala",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X23003681",
+      "note": "Open peer-reviewed identification and material analysis of a silver-wire tool from the fine-metal workshop beside the hall."
+    },
+    {
+      "id": "s-agriculture",
+      "title": "Frolund, Settlements and Agriculture in Old Uppsala, 200 BCE to 600 CE",
+      "url": "https://pub.epsilon.slu.se/15911/1/frolund_p_190214.pdf",
+      "note": "University dissertation on settlement, livestock farming, agrarian production, consumption, self-sufficiency, surplus, and central-place development."
+    },
+    {
+      "id": "s-vendel-plants",
+      "title": "Stockholm University: archaeobotanical investigations at Vendel and Valsgarde",
+      "url": "https://www.su.se/institutionen-for-arkeologi-och-antikens-kultur/forskning/publikationer/laborativ-arkeologi-10-11-volume-10-11-1998-1.676871",
+      "note": "University publication record for plant remains, lipid biomarkers, settlement archaeology, grave food, and interpretation of burial deposits."
+    },
+    {
+      "id": "s-manuring",
+      "title": "Styring and colleagues, manuring practices in first-millennium southern Sweden",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6472791/",
+      "note": "Open peer-reviewed isotope study of four hundred charred cereal grains, including Migration- and Vendel-period samples, and crop-management variability."
+    },
+    {
+      "id": "s-birka-restore",
+      "title": "Schonbeck, Sweden first restoration of an ancient monument at Birka",
+      "url": "https://www.intarch.ac.uk/journal/issue62/4/full-text.html",
+      "note": "Peer-reviewed site history and chronology, Black Earth settlement, c. 750 foundation, population estimate, graves, excavation history, and preservation."
+    },
+    {
+      "id": "s-birka-waste",
+      "title": "Risberg and colleagues, offshore sediment sequence from Birka",
+      "url": "https://journals.sagepub.com/doi/10.1191/0959683602hl558rp",
+      "note": "Peer-reviewed environmental sequence identifying refuse, latrine cleanings, ditch and storage cleaning, dung, shoreline deposition, and activity phases."
+    },
+    {
+      "id": "s-birka-moat",
+      "title": "Stockholm University: Birka lost moat found by archaeologists",
+      "url": "https://www.su.se/english/news/articles/2021-05-06-birkas-lost-moat-found-by-archaeologists",
+      "note": "University report on geophysical and archaeological work, town boundary interpretation, moat, excavation coverage, and evidentiary limits."
+    },
+    {
+      "id": "s-viking-genomes",
+      "title": "Margaryan and colleagues, Population genomics of the Viking world",
+      "url": "https://www.nature.com/articles/s41586-020-2688-8",
+      "note": "Peer-reviewed ancient-genome study of mobility, ancestry variation, Salme kinship, and the mismatch between genetics and simple cultural labels."
+    },
+    {
+      "id": "s-salme-origin",
+      "title": "Price and colleagues, human remains and place of origin for the Salme boat burials",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278416519301278",
+      "note": "Peer-reviewed isotope and archaeological analysis of the c. 750 dead, probable Malaren-region origins, childhood enamel signals, and geographic uncertainty."
+    },
+    {
+      "id": "s-salme-antiquity",
+      "title": "Price and colleagues, isotopic provenancing of the Salme ship burials",
+      "url": "https://doi.org/10.15184/aqy.2016.106",
+      "note": "Peer-reviewed study of carefully recorded bodies, weapon trauma, seaways, Svear and Gotar framing, and origin inference."
+    },
+    {
+      "id": "s-children",
+      "title": "Hall, Playing Vikings: childhood enculturation in Viking Age Scandinavia",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/706608",
+      "note": "Peer-reviewed study of childhood, toys, games, physical activity, martial equipment in some graves, social learning, and interpretive limits."
+    },
+    {
+      "id": "s-dental",
+      "title": "Liebe-Harkort, dental pathology at Alvastra, Sweden",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/oa.1194",
+      "note": "Peer-reviewed study of caries in an agricultural Early Iron Age Swedish burial population and the limits of dental health inference."
+    },
+    {
+      "id": "s-sandby",
+      "title": "Alfsdotter and Kjellstrom, the Sandby Borg massacre",
+      "url": "https://www.cambridge.org/core/journals/european-journal-of-archaeology/article/sandby-borg-massacre-interpersonal-violence-and-the-demography-of-the-dead/B37C5F2BE1A29D0A77594FE828CD67CB",
+      "note": "Peer-reviewed osteological and contextual study of twenty-six unburied people killed at an island ringfort around 400 to 550, used as a bounded comparison."
+    },
+    {
+      "id": "s-mojbro",
+      "title": "Swedish National Heritage Board and Uppsala University: runic inscription U 877, Mojbro",
+      "url": "https://runor.raa.se/inscription?id=b6a77f06-d4ff-4aed-b007-a70850b33d45",
+      "note": "Authoritative database record for provenance, date 375/400 to 560/570, Proto-Norse text, English translation, unknown carver, and museum attribution."
+    }
+  ],
+  "entities": [
+    {
+      "id": "swedes",
+      "card": "data/cards/swedes.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "s-index",
+            "s-summary",
+            "s-coverage",
+            "s-dogs"
+          ],
+          "locator": "Exact id, imported Swedes label, approximate 400 to 800 dates, and historical-basemap provenance. Documents the imported Wikipedia-derived summary that the researched card replaces. Missing review state, Europe queue, four border files, and consecutive observed intervals from 400 to 800. Peer-reviewed regional framing of historical Sviars or Svear, Gamla Uppsala, elite burials, animal husbandry, osteological methods, and chronology.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "s-mojbro"
+          ],
+          "locator": "Authoritative database record for provenance, date 375/400 to 560/570, Proto-Norse text, English translation, unknown carver, and museum attribution.",
+          "dateScope": {
+            "from": 400,
+            "to": 450
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "s-helgo-metals"
+          ],
+          "locator": "Peer-reviewed provenance study of lead, copper, brass, ingots, rods, casting waste, and fifth- to early sixth-century supply networks.",
+          "dateScope": {
+            "from": 450,
+            "to": 500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "s-jordanes"
+          ],
+          "locator": "English edition of the sixth-century outsider account, including Scandza peoples; used with source-purpose and identification cautions.",
+          "dateScope": {
+            "from": 500,
+            "to": 550
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "s-gamla-project"
+          ],
+          "locator": "University project account of the 550 to 650 monumental complex, hall, craft building, hearths, enclosures, roads, farmsteads, and interpretive limits.",
+          "dateScope": {
+            "from": 550,
+            "to": 600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "s-valsgarde"
+          ],
+          "locator": "Museum and university account of fifteen unlooted boat graves, excavation history, Vendel-period naming, helmets, glass, and changing interpretation.",
+          "dateScope": {
+            "from": 600,
+            "to": 650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "s-boat-culture"
+          ],
+          "locator": "Research project on prominent people of both sexes, cremations, animal offerings, eastern contacts, and the incomplete publication record.",
+          "dateScope": {
+            "from": 650,
+            "to": 700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "s-salme-origin",
+            "s-viking-genomes"
+          ],
+          "locator": "Peer-reviewed isotope and archaeological analysis of the c. 750 dead, probable Malaren-region origins, childhood enamel signals, and geographic uncertainty. Peer-reviewed ancient-genome study of mobility, ancestry variation, Salme kinship, and the mismatch between genetics and simple cultural labels.",
+          "dateScope": {
+            "from": 700,
+            "to": 750
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "s-birka-restore"
+          ],
+          "locator": "Peer-reviewed site history and chronology, Black Earth settlement, c. 750 foundation, population estimate, graves, excavation history, and preservation.",
+          "dateScope": {
+            "from": 750,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "s-index",
+            "s-coverage",
+            "s-card-index",
+            "s-overrides"
+          ],
+          "locator": "Exact live identity, missing association, proposed cultural scope, and retained dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "s-coverage",
+            "s-missing",
+            "s-map300",
+            "s-map400",
+            "s-map500",
+            "s-map600",
+            "s-map700"
+          ],
+          "locator": "Complete snapshot inventory, occurrence count, and pre-layer control.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "s-map400",
+            "s-map500",
+            "s-map600"
+          ],
+          "locator": "First geometry regime, dimensions, centroid, and interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "s-map700"
+          ],
+          "locator": "Second geometry regime, tested sites, and gentle atlas caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "s-map700",
+            "s-map800",
+            "s-map900"
+          ],
+          "locator": "Direct seams, overlap, endpoint repaint, and association boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "s-jordanes"
+          ],
+          "locator": "Jordanes date, literary purpose, names, and limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "s-salme-antiquity"
+          ],
+          "locator": "Regional Svear framing and material-identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "s-salme-origin"
+          ],
+          "locator": "Salme provenancing evidence and uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "s-viking-genomes"
+          ],
+          "locator": "Population structure, kinship, mobility, and identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "s-sandby"
+          ],
+          "locator": "Bounded comparative evidence and geographic scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "s-gamla-project"
+          ],
+          "locator": "Central complex elements, labor, and institutional caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "s-gamla-center"
+          ],
+          "locator": "Integrated methods, estate landscape, and open interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "s-helgo-dust"
+          ],
+          "locator": "Helgo settlement and ritual change with causal caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "s-agriculture"
+          ],
+          "locator": "Farm network, agrarian production, and status inference limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "s-birka-restore"
+          ],
+          "locator": "Birka foundation, features, excavation share, and population caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "s-agriculture"
+          ],
+          "locator": "Agrarian work cycle, supply, and rejected fixed labor assignment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "s-vendel-plants"
+          ],
+          "locator": "Plant evidence, contexts, and dietary inference limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "s-manuring"
+          ],
+          "locator": "Cereal isotope method, manuring, variation, and geographic limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "s-boat-culture"
+          ],
+          "locator": "Animal offerings, household relevance, and burial-to-diet caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "s-helgo-dust"
+          ],
+          "locator": "Bread evidence, craft, ritual, and consumption limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "s-viking-genomes"
+          ],
+          "locator": "Salme biological kinship and household inference limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "s-salme-antiquity"
+          ],
+          "locator": "Burial arrangement, group composition, and kinship caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "s-children"
+          ],
+          "locator": "Child socialization, grave goods, and agency limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "s-valsgarde"
+          ],
+          "locator": "Elite selection, varied burial, and family evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "s-gamla-center"
+          ],
+          "locator": "Hall social space, hierarchy, and person-level limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "s-children"
+          ],
+          "locator": "Learning domains and explicit formal-school evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "s-drawplate"
+          ],
+          "locator": "Silver wire technology and evidence-bounded craft teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "s-helgo-metals"
+          ],
+          "locator": "Metalworking knowledge, supply, and missing spoken instruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "s-mojbro"
+          ],
+          "locator": "Local runic knowledge and rejected institutional-literacy claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "s-children"
+          ],
+          "locator": "Games, social learning, ambiguity, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "s-dental"
+          ],
+          "locator": "Dental pathology method and geographic comparison limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "s-sandby"
+          ],
+          "locator": "Trauma evidence, event context, and geographic limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "s-salme-origin"
+          ],
+          "locator": "Combat trauma, enamel biography, and care evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "s-raa-valsgarde"
+          ],
+          "locator": "Preservation contrast, analytical methods, and medical inference limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "s-dental"
+          ],
+          "locator": "Explicit medicine evidence gap and bounded care inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "s-birka-waste"
+          ],
+          "locator": "Lake setting, offshore activity layer, and waste pathways.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "s-birka-waste"
+          ],
+          "locator": "Latrine cleaning, refuse composition, seasonality, and sewer limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "s-birka-moat"
+          ],
+          "locator": "Moat, excavation coverage, and functional caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "s-agriculture"
+          ],
+          "locator": "Agrarian water and waste inference with evidence boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "s-birka-waste"
+          ],
+          "locator": "Explicit toilet and infrastructure limit with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "s-drawplate"
+          ],
+          "locator": "Drawplate context, residue, function, and patronage limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "s-helgo-metals"
+          ],
+          "locator": "Metal provenance, production stages, and mobility caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "s-helgo-dust"
+          ],
+          "locator": "Workshop scale, change, continuity, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "s-mojbro"
+          ],
+          "locator": "Sample provenance, date, script, normalized rune display, and exact database transliteration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "s-mojbro"
+          ],
+          "locator": "Sample normalization, translation, uncertainty, author, database, and object attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "s-valsgarde"
+          ],
+          "locator": "Boat-grave finds, documentation, and elite selection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "s-boat-culture"
+          ],
+          "locator": "Long cemetery duration, gender, contacts, and political limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "s-manuring"
+          ],
+          "locator": "Agricultural skill, wider support, and management variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "s-birka-restore"
+          ],
+          "locator": "Birka foundation, concentrated activity, and anachronism caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "s-birka-moat"
+          ],
+          "locator": "New boundary evidence, achievements, and rejected unified-state claim.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "s-raa-valsgarde",
+            "s-map700",
+            "s-map800",
+            "s-map900"
+          ],
+          "locator": "Heritage laboratory account of imaging and chemical analysis, grave chronology, object conservation, and continuing reassessment. Fourth exact interval, radically enlarged geometry, direct topology seams, and Sámi-area overlap. Endpoint control replacing the exact target with separate later atlas layers. Later control showing continued editorial relabeling rather than a documented exact successor.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "swedes",
+        "name": "Svear and east-central Swedish communities",
+        "kind": "culture",
+        "region": "Europe",
+        "from": 400,
+        "to": 800,
+        "circa": true,
+        "card": "cards/swedes.json",
+        "dateBasis": "historical",
+        "summary": "Svear and neighboring east-central Swedish communities known through sparse outsider names, farms, centers, craft, burials, runes, and Baltic travel.",
+        "summarySource": null,
+        "fell": null,
+        "successors": [],
+        "predecessors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-400.json",
+          "properties": {
+            "civ": "swedes",
+            "from": 400,
+            "to": 500,
+            "precision": 1
+          },
+          "bounds": [
+            15.294752947529474,
+            58.63988334319515,
+            19.042390423904237,
+            60.311295238512216
+          ]
+        },
+        {
+          "file": "world-500.json",
+          "properties": {
+            "civ": "swedes",
+            "from": 500,
+            "to": 600,
+            "precision": 1
+          },
+          "bounds": [
+            15.294752947529474,
+            58.63988334319515,
+            19.042390423904237,
+            60.311295238512216
+          ]
+        },
+        {
+          "file": "world-600.json",
+          "properties": {
+            "civ": "swedes",
+            "from": 600,
+            "to": 700,
+            "precision": 1
+          },
+          "bounds": [
+            15.294752947529474,
+            58.63988334319515,
+            19.042390423904237,
+            60.311295238512216
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "swedes",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            4.980649806498064,
+            55.97032472462007,
+            19.042390423904237,
+            64.0992758780232
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
