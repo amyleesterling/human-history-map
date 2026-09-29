@@ -1,0 +1,999 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release170-laurel-complex research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "la-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported display name, approximate dates, and historical-basemaps provenance."
+    },
+    {
+      "id": "la-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Seven observed intervals, inferred state kind, missing review state, and North America queue."
+    },
+    {
+      "id": "la-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, imported-summary status, queue ownership, and empty staged drafts."
+    },
+    {
+      "id": "la-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no runtime card is associated with the exact id."
+    },
+    {
+      "id": "la-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no reviewed exact-id override exists."
+    },
+    {
+      "id": "la-map-bc200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Pre-start control showing broad eastern and plains atlas umbrellas before the exact target appears."
+    },
+    {
+      "id": "la-map-bc100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "First target snapshot, decoded geometry, tested point ownership, direct seams, and overlap candidates."
+    },
+    {
+      "id": "la-map-bc1",
+      "title": "Human History Map 1 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1.json",
+      "note": "Second target snapshot and one-coordinate geometry regime change."
+    },
+    {
+      "id": "la-map-100",
+      "title": "Human History Map 100 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-100.json",
+      "note": "Third target snapshot and another one-coordinate geometry regime."
+    },
+    {
+      "id": "la-map-200",
+      "title": "Human History Map 200 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-200.json",
+      "note": "Target snapshot returning to the 100 BCE geometry."
+    },
+    {
+      "id": "la-map-300",
+      "title": "Human History Map 300 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-300.json",
+      "note": "Target snapshot repeating the same decoded geometry and tested ownership."
+    },
+    {
+      "id": "la-map-400",
+      "title": "Human History Map 400 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-400.json",
+      "note": "Target snapshot repeating the same decoded geometry before a later overlay change."
+    },
+    {
+      "id": "la-map-500",
+      "title": "Human History Map 500 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Final target snapshot, shortened first component, neighboring seams, and overlapping umbrella labels."
+    },
+    {
+      "id": "la-map-600",
+      "title": "Human History Map 600 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Endpoint control repainting former target points with broad eastern and plains atlas umbrellas."
+    },
+    {
+      "id": "la-map-700",
+      "title": "Human History Map 700 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Later control confirming persistence of the endpoint repaint rather than an exact Laurel record."
+    },
+    {
+      "id": "la-revaluation",
+      "title": "Laurel: a Re-evaluation of the Spatial, Social and Temporal Paradigms",
+      "url": "https://canadianarchaeology.com/publications/canadian-journal-archaeologyjournal-canadien-darcheologie/15/193-234",
+      "note": "Peer-reviewed synthesis of radiocarbon dates, ceramic seriation, regional composites, expansion, contraction, houses, and community patterning."
+    },
+    {
+      "id": "la-seymourville",
+      "title": "Seymourville Lagoon Upgrade heritage assessment",
+      "url": "https://www.gov.mb.ca/sd/eal/registries/2649.2seymourville/eap.pdf",
+      "note": "Manitoba government registry report placing Laurel broadly around 200 BCE to 1000 CE."
+    },
+    {
+      "id": "la-mn-woodland",
+      "title": "The Woodland Tradition in Minnesota",
+      "url": "https://mn.gov/admin/assets/The%20Woodland%20Tradition%20in%20Minnesota%20MPDF_tcm36-445065.pdf",
+      "note": "State archaeological synthesis of Laurel phases, wild rice, mounds, artifacts, skeletal evidence, and research limitations."
+    },
+    {
+      "id": "la-wanipigow",
+      "title": "Wanipigow Lake Archaeological Site",
+      "url": "https://www.gov.mb.ca/chc/hrb/prov/p006.html",
+      "note": "Manitoba provincial heritage record for early pottery, fish, small mammals, waterfowl, wild rice, and goosefoot."
+    },
+    {
+      "id": "la-keeyask",
+      "title": "Keeyask Transmission Project Heritage Technical Report",
+      "url": "https://www.gov.mb.ca/sd/eal/registries/5614keeyask_transmission/technical_reports/heritage_resource_tech_report.pdf",
+      "note": "Government technical account of Laurel chronology, coil and paddle-and-anvil pottery, decoration, tools, and preservation bias."
+    },
+    {
+      "id": "la-east-winnipeg",
+      "title": "Lake Winnipeg East System Heritage Resources Technical Report",
+      "url": "https://www.gov.mb.ca/sd/eal/registries/5624lake_winnipeg/37_heritage_resource_technical_report.pdf",
+      "note": "Government comparison of Laurel ceramics with neighboring wares and gradual, regionally uneven Terminal Woodland change."
+    },
+    {
+      "id": "la-iaac",
+      "title": "Cultural Heritage Resources Technical Supporting Document",
+      "url": "https://iaac-aeic.gc.ca/050/documents/p63174/123078E.pdf",
+      "note": "Federal assessment evidence for Heron Bay bone tools, copper distribution, trade materials, and organic preservation limits."
+    },
+    {
+      "id": "la-manitou",
+      "title": "History and Culture at Kay-Nah-Chi-Wah-Nung",
+      "url": "https://manitoumounds.com/history-culture/",
+      "note": "Rainy River First Nations site interpretation of recurring use, Laurel mounds, gatherings, fishing, and sacred landscape."
+    },
+    {
+      "id": "la-parks-designation",
+      "title": "State of Protected Heritage Areas: Manitou Mounds",
+      "url": "https://publications.gc.ca/collections/Collection/R61-15-1999E.pdf",
+      "note": "Federal heritage report describing Rainy River shoreline, habitation areas, burial mounds, partnership, and site protection."
+    },
+    {
+      "id": "la-grand-mound",
+      "title": "Grand Mound Historic Site",
+      "url": "https://www.mnhs.org/about/grandmound",
+      "note": "Minnesota Historical Society account of spring fishing, seasonal villages, sacred mounds, consultation, closure, and descendant uncertainty."
+    },
+    {
+      "id": "la-armstrong",
+      "title": "The Armstrong Mound on Rainy River, Ontario",
+      "url": "https://parkscanadahistory.com/series/chs/3/chs3-3i.htm",
+      "note": "Parks Canada archaeological report on basket-loaded earth, collective and child burials, village debris, pottery, and dating limits."
+    },
+    {
+      "id": "la-smith-bones",
+      "title": "Punctured Human Bones of the Laurel Culture from Smith Mound Four",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/punctured-human-bones-of-the-laurel-culture-from-smith-mound-four-minnesota/B66E6D96F75D02C10A2489A057EE33DF",
+      "note": "Peer-reviewed analysis of an approximately 565 CE mound, modified remains, inherited affiliation hypothesis, and alternative interpretations."
+    },
+    {
+      "id": "la-kenora-house",
+      "title": "An Analysis of Laurel House Structures in Northwestern Ontario",
+      "url": "https://mspace.lib.umanitoba.ca/bitstream/1993/9498/1/Speidel_An_Analysis.pdf",
+      "note": "University thesis on Laurel chronology, seasonal mobility, house evidence, family inferences, and the rarity of excavated structures."
+    },
+    {
+      "id": "la-job",
+      "title": "Job (FeJp-3): Tracing Laurel Lifeways in Northern Ontario",
+      "url": "https://sustarc.mcmaster.ca/explore/site-summaries/job-fejp-3/",
+      "note": "McMaster archaeological repository record for a 600 to 1200 CE campsite, lithics, mobility, and northern land use."
+    },
+    {
+      "id": "la-microfossil",
+      "title": "The Potential of Microfossil Use in Paleodiet and Paleoenvironmental Analysis",
+      "url": "https://knowledgecommons.lakeheadu.ca/items/d2e7faf4-4005-46a1-9634-f06d808879e6",
+      "note": "University thesis using pottery residues and phytoliths to test wild rice and maize consumption with explicit sample-bias limits."
+    },
+    {
+      "id": "la-food-residue",
+      "title": "Food Residue Analysis in the Upper Midwest",
+      "url": "https://knowledgecommons.lakeheadu.ca/bitstream/handle/2453/582/BurchillA2014m-1a.pdf?isAllowed=y&sequence=1",
+      "note": "University thesis defining dated residue samples and evidence limits for Laurel and Brainerd food processing."
+    },
+    {
+      "id": "la-northern-manitoba",
+      "title": "Laurel in Northern Manitoba: A Ceramic Synthesis",
+      "url": "https://canadianarchaeology.com/fr/node/10215",
+      "note": "Canadian Archaeological Association synthesis of regional pottery, decorative variation, and unusually late thermoluminescence dates."
+    },
+    {
+      "id": "la-river-house",
+      "title": "The River House Complex: Middle Woodland on the Northwestern Periphery",
+      "url": "https://canadianarchaeology.com/fr/node/9726",
+      "note": "Peer-reviewed regional taxonomy separating related Saskatchewan assemblages from Laurel and dating open-water occupations."
+    },
+    {
+      "id": "la-ehraf-summary",
+      "title": "Initial Shield Woodland tradition summary",
+      "url": "https://ehrafarchaeology.yale.edu/traditions/nc54/summary",
+      "note": "Yale archaeological synthesis of settlement, subsistence, regional interaction, mounds, skeletal scarcity, and identity uncertainty."
+    },
+    {
+      "id": "la-pukaskwa",
+      "title": "Cultural Resources Survey of Pukaskwa National Park",
+      "url": "https://www.parkscanadahistory.com/series/mrs/439.pdf",
+      "note": "Parks Canada archaeological synthesis of Laurel mounds, bone tools, copper, exchange goods, and organic preservation limits."
+    },
+    {
+      "id": "la-ehraf-minnesota",
+      "title": "The Laurel Culture in Minnesota",
+      "url": "https://ehrafarchaeology.yale.edu/document?id=nc54-006",
+      "note": "Yale-indexed monograph warning that Laurel and Blackduck mound assemblages can be mixed and affiliations unclear."
+    },
+    {
+      "id": "la-campus-lake",
+      "title": "Campus Lake Conservation Reserve Management Statement",
+      "url": "https://www.ontario.ca/page/campus-lake-conservation-reserve-management-statement",
+      "note": "Ontario government account of pottery as an archaeological discriminator, water routes, trade, and sparse interior use."
+    },
+    {
+      "id": "la-apostles",
+      "title": "People and Places: A Human History of the Apostle Islands",
+      "url": "https://www.nps.gov/apis/learn/historyculture/upload/People-and-Places-A-Human-History-of-the-Apostle-Islands-508-_reduced.pdf",
+      "note": "National Park Service synthesis of regional absences, preservation, and later Blackduck overlap around Lake Superior."
+    },
+    {
+      "id": "la-minnesota-survey",
+      "title": "Statewide Survey of Historical and Archaeological Sites",
+      "url": "https://www.legacy.mn.gov/projects/statewide-survey-historical-and-archaeological-sites-0",
+      "note": "Minnesota public archaeology project describing regional Woodland ceramics, mound burial, wild rice, survey, and preservation."
+    },
+    {
+      "id": "la-ontario-indigenous",
+      "title": "Indigenous Archaeology in Ontario",
+      "url": "https://www.ontario.ca/page/indigenous-archaeology",
+      "note": "Ontario guidance on Indigenous sites, everyday artifacts, funerary materials, dignity, and community engagement."
+    },
+    {
+      "id": "la-zooarchaeology",
+      "title": "Zooarchaeology in the South Central Canadian Shield",
+      "url": "https://mspace.lib.umanitoba.ca/server/api/core/bitstreams/e4d3df57-91c3-474c-b780-008dd385cf1d/content",
+      "note": "University study of faunal evidence, preservation, fishing, hunting, seasonality, and mixed archaeological deposits."
+    },
+    {
+      "id": "la-miniature-pottery",
+      "title": "Residue Analysis of Pre-contact Small and Miniature Pottery",
+      "url": "https://knowledgecommons.lakeheadu.ca/items/0bb5ffd9-9b87-4e45-9a9c-e59ca6f367b6",
+      "note": "University research testing practice-pot, toy, cup, bowl, mortuary, and child-associated interpretations through residue analysis."
+    },
+    {
+      "id": "la-water-heritage",
+      "title": "Lake Manitoba and Lake St. Martin Outlet Heritage Resources Report",
+      "url": "https://www.gov.mb.ca/mti/wms/lmblsmoutlets/resources/pdf/heritage_resouce.pdf",
+      "note": "Government report on Initial Woodland chronology, Laurel in boreal settings, wild rice, trade, and Blackduck overlap."
+    }
+  ],
+  "entities": [
+    {
+      "id": "laurel-complex",
+      "card": "data/cards/laurel-complex.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "la-index",
+            "la-coverage",
+            "la-revaluation"
+          ],
+          "locator": "Exact id, imported display name, approximate dates, and historical-basemaps provenance. Seven observed intervals, inferred state kind, missing review state, and North America queue. Peer-reviewed synthesis of radiocarbon dates, ceramic seriation, regional composites, expansion, contraction, houses, and community patterning.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "la-seymourville"
+          ],
+          "locator": "Manitoba government registry report placing Laurel broadly around 200 BCE to 1000 CE.",
+          "dateScope": {
+            "from": -300,
+            "to": -150
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "la-mn-woodland"
+          ],
+          "locator": "State archaeological synthesis of Laurel phases, wild rice, mounds, artifacts, skeletal evidence, and research limitations.",
+          "dateScope": {
+            "from": -150,
+            "to": -1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "la-microfossil"
+          ],
+          "locator": "University thesis using pottery residues and phytoliths to test wild rice and maize consumption with explicit sample-bias limits.",
+          "dateScope": {
+            "from": -1,
+            "to": 150
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "la-northern-manitoba"
+          ],
+          "locator": "Canadian Archaeological Association synthesis of regional pottery, decorative variation, and unusually late thermoluminescence dates.",
+          "dateScope": {
+            "from": 150,
+            "to": 300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "la-kenora-house"
+          ],
+          "locator": "University thesis on Laurel chronology, seasonal mobility, house evidence, family inferences, and the rarity of excavated structures.",
+          "dateScope": {
+            "from": 300,
+            "to": 450
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "la-smith-bones"
+          ],
+          "locator": "Peer-reviewed analysis of an approximately 565 CE mound, modified remains, inherited affiliation hypothesis, and alternative interpretations.",
+          "dateScope": {
+            "from": 450,
+            "to": 650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "la-grand-mound"
+          ],
+          "locator": "Minnesota Historical Society account of spring fishing, seasonal villages, sacred mounds, consultation, closure, and descendant uncertainty.",
+          "dateScope": {
+            "from": 650,
+            "to": 850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "la-river-house"
+          ],
+          "locator": "Peer-reviewed regional taxonomy separating related Saskatchewan assemblages from Laurel and dating open-water occupations.",
+          "dateScope": {
+            "from": 850,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "la-index",
+            "la-coverage",
+            "la-missing",
+            "la-card-index",
+            "la-overrides"
+          ],
+          "locator": "Exact repository identity, missing state, inferred kind, and proposed correction boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "la-map-bc100",
+            "la-map-bc1",
+            "la-map-100",
+            "la-map-200",
+            "la-map-300",
+            "la-map-400",
+            "la-map-500"
+          ],
+          "locator": "Complete snapshot scan, geometry regimes, counts, and invariant bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "la-map-bc100",
+            "la-map-500",
+            "la-manitou"
+          ],
+          "locator": "Decoded point membership compared with the named archaeological landscape.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "la-map-bc200",
+            "la-map-bc100",
+            "la-map-600"
+          ],
+          "locator": "Point-owner comparisons across exact start and endpoint seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "la-map-bc100",
+            "la-map-500",
+            "la-map-700"
+          ],
+          "locator": "Direct shared-arc and overlap-candidate audit at representative target snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "la-ehraf-summary"
+          ],
+          "locator": "Archaeological classification, interaction patterns, and identity limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "la-minnesota-survey"
+          ],
+          "locator": "State survey framework and gentle warning against ethnic reification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "la-northern-manitoba"
+          ],
+          "locator": "Ceramic regionalism, outlying dates, and chronological method.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "la-job"
+          ],
+          "locator": "Repository site record, local date range, and limits on regional projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "la-river-house"
+          ],
+          "locator": "Peer-reviewed regional separation, dates, seasonality, and humorous taxonomy caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "la-kenora-house"
+          ],
+          "locator": "Excavated structure pattern and explicit household-kinship limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "la-manitou"
+          ],
+          "locator": "First Nations interpretation of gathering, fishing, landscape, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "la-parks-designation"
+          ],
+          "locator": "Federal report on shoreline settlement density, mounds, partnership, and protection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "la-grand-mound"
+          ],
+          "locator": "Seasonal village and fishery evidence with mobility interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "la-job"
+          ],
+          "locator": "Curated lithic collection and evidence needed for seasonal mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "la-wanipigow"
+          ],
+          "locator": "Provincial heritage site foods and single-site scope limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "la-mn-woodland"
+          ],
+          "locator": "Direct grains, recovery limits, and avoidance of universal rice dependence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "la-food-residue"
+          ],
+          "locator": "Residue sampling method, context requirements, and meal-scale inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "la-zooarchaeology"
+          ],
+          "locator": "Faunal identification, taphonomy, context, and seasonal inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "la-grand-mound"
+          ],
+          "locator": "Sturgeon setting, aggregation possibilities, and evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "la-keeyask"
+          ],
+          "locator": "Government technical description of vessel construction and decoration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "la-east-winnipeg"
+          ],
+          "locator": "Government ceramic comparison and regionally uneven transition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "la-iaac"
+          ],
+          "locator": "Federal technical synthesis of preserved organic tools and nonlocal materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "la-pukaskwa"
+          ],
+          "locator": "Nonceramic artifact classes and preservation bias in daily technology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "la-microfossil"
+          ],
+          "locator": "Plant microfossils, trade versus cultivation, processing bias, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "la-kenora-house"
+          ],
+          "locator": "Household activity evidence and limits on universal family reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "la-armstrong"
+          ],
+          "locator": "Excavated child and collective burials with explicit unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "la-armstrong"
+          ],
+          "locator": "Construction sequence, labor coordination, and political-inference boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "la-smith-bones"
+          ],
+          "locator": "Peer-reviewed affiliation hypothesis and limits on kinship reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "la-ehraf-summary"
+          ],
+          "locator": "Mound distribution, skeletal scarcity, and evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "la-miniature-pottery"
+          ],
+          "locator": "Competing miniature-vessel interpretations and multi-proxy testing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "la-keeyask"
+          ],
+          "locator": "Technical sequence supporting bounded apprenticeship inference and school absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "la-iaac"
+          ],
+          "locator": "Complex organic toolkit and cautious inference of practical teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "la-pukaskwa"
+          ],
+          "locator": "Material-specific skills, production evidence, and gentle education humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "la-ontario-indigenous"
+          ],
+          "locator": "Provincial guidance on dignity, engagement, and responsible public education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "la-mn-woodland"
+          ],
+          "locator": "Documented skeletal indicators and sample-level health limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "la-smith-bones"
+          ],
+          "locator": "Bone-modification analysis distinguishing mortuary action from trauma.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "la-ehraf-summary"
+          ],
+          "locator": "Skeletal scarcity and explicit boundary around medical reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "la-zooarchaeology"
+          ],
+          "locator": "Contextual artifact interpretation and refusal to assign unsupported medical functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "la-ontario-indigenous"
+          ],
+          "locator": "Ethical treatment of ancestors and community engagement in research.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "la-water-heritage"
+          ],
+          "locator": "Regional waterway setting and explicit limits on domestic water practices.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "la-manitou"
+          ],
+          "locator": "Gathering scale, river landscape, practical needs, and gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "la-armstrong"
+          ],
+          "locator": "Secondary deposition of village refuse within mound construction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "la-campus-lake"
+          ],
+          "locator": "Explicit evidence-bounded absence for toilets, drains, and waste systems.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "la-campus-lake"
+          ],
+          "locator": "Government landscape account applied cautiously to refuse and sanitation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "la-manitou",
+            "la-armstrong"
+          ],
+          "locator": "Documented monument labor, gathering, exchange, and political limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "la-iaac"
+          ],
+          "locator": "Cross-craft achievement synthesis and preservation bias.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "la-ehraf-minnesota",
+            "la-keeyask"
+          ],
+          "locator": "Explicit evidence-bounded absence with all requested writing fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "la-ehraf-minnesota",
+            "la-apostles"
+          ],
+          "locator": "Mixed assemblages, regional gaps, and careful ending interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "la-grand-mound"
+          ],
+          "locator": "Contemporary preservation, consultation, access, and Indigenous continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "la-water-heritage",
+            "la-map-600",
+            "la-map-700"
+          ],
+          "locator": "Government report on Initial Woodland chronology, Laurel in boreal settings, wild rice, trade, and Blackduck overlap. Endpoint control repainting former target points with broad eastern and plains atlas umbrellas. Later control confirming persistence of the endpoint repaint rather than an exact Laurel record.",
+          "dateScope": {
+            "year": 1100
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "laurel-complex",
+        "name": "Laurel archaeological tradition",
+        "aliases": [
+          "Laurel complex",
+          "Laurel tradition"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": -300,
+        "to": 1100,
+        "circa": true,
+        "card": "cards/laurel-complex.json",
+        "dateBasis": "historical",
+        "summary": "Northern Great Lakes and boreal archaeological tradition, about 300 BCE to 1100 CE.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-100.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": 100,
+            "to": 200,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        },
+        {
+          "file": "world-200.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": 200,
+            "to": 300,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        },
+        {
+          "file": "world-300.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": 300,
+            "to": 400,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        },
+        {
+          "file": "world-400.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": 400,
+            "to": 500,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        },
+        {
+          "file": "world-500.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": 500,
+            "to": 600,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        },
+        {
+          "file": "world-bc1.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": -1,
+            "to": 100,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        },
+        {
+          "file": "world-bc100.json",
+          "properties": {
+            "civ": "laurel-complex",
+            "from": -100,
+            "to": -1,
+            "precision": 1
+          },
+          "bounds": [
+            -101.55881558815588,
+            44.53034669835971,
+            -83.0870308703087,
+            55.064803805320906
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

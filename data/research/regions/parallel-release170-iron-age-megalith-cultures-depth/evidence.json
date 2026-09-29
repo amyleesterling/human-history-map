@@ -1,0 +1,931 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release170-iron-age-megalith-cultures research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "im-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, culture kind, approximate dates, and historical-basemaps provenance."
+    },
+    {
+      "id": "im-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, missing review state, border-file count, and Asia queue."
+    },
+    {
+      "id": "im-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms the exact missing record, queue ownership, and empty staged drafts."
+    },
+    {
+      "id": "im-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that no runtime card is associated with the exact id."
+    },
+    {
+      "id": "im-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that no reviewed exact-id override exists."
+    },
+    {
+      "id": "im-map700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Pre-start control in which tested peninsular and Vidarbha sites are painted Dravidians."
+    },
+    {
+      "id": "im-map500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Only exact target feature, decoded geometry, site tests, and direct arc seam."
+    },
+    {
+      "id": "im-map400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Endpoint control repainting peninsular probes while separating Magadha and Simhala."
+    },
+    {
+      "id": "im-map323",
+      "title": "Human History Map 323 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc323.json",
+      "note": "Later control showing a three-way editorial split across tested mainland sites."
+    },
+    {
+      "id": "im-map300",
+      "title": "Human History Map 300 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc300.json",
+      "note": "Later control separating generic southern labels, Magadha, and Maurya."
+    },
+    {
+      "id": "im-map200",
+      "title": "Human History Map 200 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc200.json",
+      "note": "Later control repainting southern Tamil probes as Iron Age chieftainships."
+    },
+    {
+      "id": "im-map100",
+      "title": "Human History Map 100 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc100.json",
+      "note": "Later control showing further editorial replacement without cultural extinction."
+    },
+    {
+      "id": "im-general",
+      "title": "Iron Age and Megaliths, Encyclopedia of Archaeology",
+      "url": "https://www.sciencedirect.com/topics/social-sciences/megalith",
+      "note": "Current archaeological synthesis describing a mosaic of local traditions, chronology, farming, metallurgy, monuments, and continuity."
+    },
+    {
+      "id": "im-remarks",
+      "title": "The Megalithic Iron Age Culture in South India: Some General Remarks",
+      "url": "https://repozytorium.ur.edu.pl/items/eac152ad-fd57-462f-b85f-fc3e6696c334",
+      "note": "Scholarly regional review of chronology, material culture, mortuary forms, settlements, and interpretive limits."
+    },
+    {
+      "id": "im-chronology",
+      "title": "The Iron Age in India",
+      "url": "https://ignca.gov.in/Asi_data/73624.pdf",
+      "note": "Institutional archaeological synthesis of iron, black-and-red ware, megalithic funerary practice, production, and disputed dating."
+    },
+    {
+      "id": "im-society",
+      "title": "Copper and Iron Age: Features and Distribution",
+      "url": "https://ebooks.inflibnet.ac.in/antp03/chapter/copper-and-iron-age-features-and-distribution/",
+      "note": "Government academic module on southern and Vidarbha sites, iron tools, pottery, graves, and regional distributions."
+    },
+    {
+      "id": "im-transition",
+      "title": "Iron Age to Early Historic Transition in South India",
+      "url": "https://ebooks.inflibnet.ac.in/icp02/chapter/iron-age-early-historic-transition-in-south-india/",
+      "note": "Government academic account of uneven technological, agricultural, settlement, trade, and political transitions."
+    },
+    {
+      "id": "im-regional",
+      "title": "Megaliths of South India: Regional Variants",
+      "url": "https://ebooks.inflibnet.ac.in/icp02/chapter/megaliths-of-south-india-regional-variants/",
+      "note": "Government academic typology stressing geological and regional variation in monument forms."
+    },
+    {
+      "id": "im-types",
+      "title": "Pre-historic Cultures in India",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/pre-historic-cultures-in-india/",
+      "note": "Government academic outline defining cists, dolmens, stone circles, hood stones, menhirs, and related categories."
+    },
+    {
+      "id": "im-hirebenakal",
+      "title": "Hire Benkal, Megalithic Site",
+      "url": "https://whc.unesco.org/en/tentativelists/6529",
+      "note": "Official Indian tentative-list dossier for the protected cemetery, its varied monuments, water basin, quarrying, and landscape."
+    },
+    {
+      "id": "im-kodumanal",
+      "title": "Kodumanal excavation",
+      "url": "https://www.tnarch.gov.in/kodumanal",
+      "note": "Tamil Nadu archaeology account of habitation, cairn-circle excavation, ceramics, beads, weapons, and grave goods."
+    },
+    {
+      "id": "im-adichanallur",
+      "title": "Archaeological excavation at Adichanallur",
+      "url": "https://www.tnarch.gov.in/archaeological-excavation-adichanallur-thoothukudi-district",
+      "note": "Tamil Nadu archaeology record for current official work at the Iron Age urn-burial complex."
+    },
+    {
+      "id": "im-excavations",
+      "title": "Archaeological excavations conducted by the Department of Archaeology",
+      "url": "https://www.tnarch.gov.in/archaeology-excavation",
+      "note": "Official excavation register distinguishing Iron Age, megalithic, Neolithic, and Early Historic projects."
+    },
+    {
+      "id": "im-heritage",
+      "title": "The Cultural Heritage of Tamil Nadu",
+      "url": "https://www.tnarch.gov.in/Library%20BOOk%20PDF/The%20Cultural%20Heritage%20of%20Tamilnadu.pdf",
+      "note": "State archaeology guide to Sanur, urns, sarcophagi, iron objects, pottery, fauna, and varied southern sites."
+    },
+    {
+      "id": "im-status",
+      "title": "Ongoing Archaeological Excavations in Tamil Nadu: Status Report",
+      "url": "https://www.tnarch.gov.in/Library%20BOOk%20PDF/latest/Ongoing%20Archaeological%20Excavations%20in%20Tamil%20Nadu%20-%20Status%20Report%20%28July%202020%29.pdf",
+      "note": "Official field report on Kodumanal furnaces, ceramics, river setting, craft production, and transition questions."
+    },
+    {
+      "id": "im-asi-adichanallur",
+      "title": "Excavations at Adichchanallur",
+      "url": "https://asi.nic.in/admin/publications/ePublicationReportsDetails/download/1",
+      "note": "Archaeological Survey of India excavation report for urn burials, human remains, grave furnishings, and site sequence."
+    },
+    {
+      "id": "im-porunthal",
+      "title": "Phytolith records from megalithic burials at Porunthal",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X16308458",
+      "note": "Peer-reviewed study of rice, millet, sedges, palms, grazing, processing, and differentiated grave deposits around 540 to 410 BCE."
+    },
+    {
+      "id": "im-rice",
+      "title": "Dry, rainfed or irrigated? Rice agriculture in Iron Age-Early Historic South India",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10069759/",
+      "note": "Peer-reviewed archaeobotanical reassessment separating rice evidence from unsupported universal irrigation assumptions."
+    },
+    {
+      "id": "im-water",
+      "title": "Archaeologies of flow: Water and landscapes of Southern India",
+      "url": "https://www.tandfonline.com/doi/abs/10.1179/2042458215Y.0000000033",
+      "note": "Peer-reviewed landscape study of hilltop settlement continuity, harvesting, small reservoirs, and ritual water associations."
+    },
+    {
+      "id": "im-tank",
+      "title": "Tank Irrigation System of the Megalithic Builders in South India: A Reassessment",
+      "url": "https://ignca.gov.in/Asi_data/87942.pdf",
+      "note": "Institutional reassessment distinguishing observed bunds and settlement associations from broad irrigation claims."
+    },
+    {
+      "id": "im-vidarbha-iron",
+      "title": "Iron technology of ancient megalithic communities in Vidarbha",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305440313002173",
+      "note": "Peer-reviewed metallographic study of production, burial and habitation objects, regional chronology, and technological variability."
+    },
+    {
+      "id": "im-kaveri-iron",
+      "title": "Microstructural and elemental analysis of iron artefacts from Kaveri valley sites",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12895",
+      "note": "Peer-reviewed materials analysis of iron and steel objects from Kodumanal and related Kaveri contexts."
+    },
+    {
+      "id": "im-kodumanal-craft",
+      "title": "Craft production and technology at Kodumanal",
+      "url": "https://www.researchgate.net/publication/303209235_Craft_production_and_technology_during_the_iron_age_to_early_historic_transition_at_kodumanal_tamil_nadu",
+      "note": "Author-accessible scholarly study of bead, shell, ceramic, metal, and textile production organization."
+    },
+    {
+      "id": "im-beads",
+      "title": "Stone bead and ornament production in Early Historic South India",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352226716300174",
+      "note": "Peer-reviewed comparison of Kodumanal and other southern production communities, techniques, and communities of practice."
+    },
+    {
+      "id": "im-landscapes",
+      "title": "Regional perspectives on Megalithic landscapes",
+      "url": "https://www.antiquity.ac.uk/projgall/brubaker317",
+      "note": "Academic project report on cemetery distribution, monument diversity, scale, social differentiation, and landscape method."
+    },
+    {
+      "id": "im-maski-politics",
+      "title": "The politics and historicity of megalithic places in early South India",
+      "url": "https://doi.org/10.1177/14696053221138580",
+      "note": "Peer-reviewed Maski landscape study of long monument histories, collective action, food production, manure, and remembrance."
+    },
+    {
+      "id": "im-maski-social",
+      "title": "Social distinctions during the south Indian Neolithic",
+      "url": "https://doi.org/10.15184/aqy.2023.81",
+      "note": "Radiocarbon-based study showing gradual change in coffins, sarcophagi, feasting, stone elements, and social affiliation."
+    },
+    {
+      "id": "im-maski-radiocarbon",
+      "title": "Prehistoric Mortuary Practices and the First Radiocarbon Dates from Maski",
+      "url": "https://doi.org/10.2458/azu_rc.57.18341",
+      "note": "Peer-reviewed chronological study emphasizing local occupational history and the limits of undated culture labels."
+    },
+    {
+      "id": "im-vidarbha-landscape",
+      "title": "Grounding texts and theories of societal change",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/grounding-texts-and-theories-of-societal-change/AE0B62DF8479F955D9D758FF8CB3547C",
+      "note": "Peer-reviewed survey dating Vidarbha settlements, megaliths, fortified sites, and ceramic assemblages by phase."
+    },
+    {
+      "id": "im-health",
+      "title": "Possible paleopathological evidence of treponematosis from Agripalle",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8859953/",
+      "note": "Peer-reviewed diagnosis from one Iron Age megalithic skull and a clear warning against population-wide inference."
+    },
+    {
+      "id": "im-dental",
+      "title": "Dental microwear from Adichchanallur and Keeladi",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/oa.70030",
+      "note": "Peer-reviewed dental study using adult remains to investigate diet and food processing across two southern sites."
+    },
+    {
+      "id": "im-burials",
+      "title": "Megalithic burials of South India: Definitions and observations",
+      "url": "https://scholar.uoc.ac.in/bitstreams/a8cfd14f-1188-4cbc-9f52-1d16dc757001/download",
+      "note": "University repository study of mortuary definitions, graveyard separation, human remains, and regional burial variability."
+    },
+    {
+      "id": "im-graffiti",
+      "title": "Megalithic Markings in Context: Kudatini burial pots",
+      "url": "https://doi.org/10.1080/02666030.2003.9628618",
+      "note": "Contextual study of post-firing marks on pots in a child burial, ritual repetition, and limits on treating signs as text."
+    },
+    {
+      "id": "im-writing",
+      "title": "The Beginnings of Civilization in South India",
+      "url": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/beginnings-of-civilization-in-south-india/A156D334D91FCFF89FA56E48B7A6446B",
+      "note": "Scholarly discussion of early Tamil-Brahmi evidence and its later, uneven archaeological contexts."
+    },
+    {
+      "id": "im-alignment",
+      "title": "Astronomical significance of Nilurallu stone alignment",
+      "url": "https://arxiv.org/abs/1112.5814",
+      "note": "Academic archaeoastronomical study testing orientations at one Andhra Pradesh alignment without generalizing to all monuments."
+    },
+    {
+      "id": "im-agriculture",
+      "title": "History of South Indian Agriculture and Agroecosystems",
+      "url": "https://paleoecology.uchicago.edu/storage/Krishna%20Morrison%20-%202009%20-%20History%20of%20South%20Indian%20Agriculture%20and%20Agroecosystems.pdf",
+      "note": "University synthesis of crops, ecology, farming histories, and limits of uniform regional narratives."
+    },
+    {
+      "id": "im-smarthistory",
+      "title": "Deccan Megaliths",
+      "url": "https://smarthistory.org/deccan-megaliths/",
+      "note": "Peer-reviewed educational synthesis of monument forms, chronology, ceramics, standing stones, and interpretive caution."
+    }
+  ],
+  "entities": [
+    {
+      "id": "iron-age-megalith-cultures",
+      "card": "data/cards/iron-age-megalith-cultures.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "im-index",
+            "im-coverage",
+            "im-general"
+          ],
+          "locator": "Exact id, imported name, culture kind, approximate dates, and historical-basemaps provenance. One observed interval, missing review state, border-file count, and Asia queue. Current archaeological synthesis describing a mosaic of local traditions, chronology, farming, metallurgy, monuments, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "im-maski-social",
+            "im-maski-radiocarbon"
+          ],
+          "locator": "Radiocarbon-based study showing gradual change in coffins, sarcophagi, feasting, stone elements, and social affiliation. Peer-reviewed chronological study emphasizing local occupational history and the limits of undated culture labels.",
+          "dateScope": {
+            "from": -1400,
+            "to": -1200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "im-chronology"
+          ],
+          "locator": "Institutional archaeological synthesis of iron, black-and-red ware, megalithic funerary practice, production, and disputed dating.",
+          "dateScope": {
+            "from": -1200,
+            "to": -1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "im-society"
+          ],
+          "locator": "Government academic module on southern and Vidarbha sites, iron tools, pottery, graves, and regional distributions.",
+          "dateScope": {
+            "from": -1000,
+            "to": -800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "im-regional"
+          ],
+          "locator": "Government academic typology stressing geological and regional variation in monument forms.",
+          "dateScope": {
+            "from": -800,
+            "to": -600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "im-porunthal"
+          ],
+          "locator": "Peer-reviewed study of rice, millet, sedges, palms, grazing, processing, and differentiated grave deposits around 540 to 410 BCE.",
+          "dateScope": {
+            "from": -600,
+            "to": -400
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "im-writing"
+          ],
+          "locator": "Scholarly discussion of early Tamil-Brahmi evidence and its later, uneven archaeological contexts.",
+          "dateScope": {
+            "from": -400,
+            "to": -200
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "im-kodumanal-craft"
+          ],
+          "locator": "Author-accessible scholarly study of bead, shell, ceramic, metal, and textile production organization.",
+          "dateScope": {
+            "from": -200,
+            "to": -1
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "im-remarks"
+          ],
+          "locator": "Scholarly regional review of chronology, material culture, mortuary forms, settlements, and interpretive limits.",
+          "dateScope": {
+            "from": -1,
+            "to": 300
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "im-index",
+            "im-coverage",
+            "im-missing",
+            "im-card-index",
+            "im-overrides"
+          ],
+          "locator": "Exact repository identity, dates, missing state, and proposed correction boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "im-coverage",
+            "im-map500"
+          ],
+          "locator": "Complete snapshot scan, exact feature count, geometry type, positions, bounds, and interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "im-map500",
+            "im-vidarbha-iron"
+          ],
+          "locator": "Decoded point membership compared with documented Vidarbha archaeological distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "im-map700",
+            "im-map500",
+            "im-map400"
+          ],
+          "locator": "Point-owner and direct-arc comparisons across the start and endpoint seams.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "im-map323",
+            "im-map300",
+            "im-map200",
+            "im-map100"
+          ],
+          "locator": "Later ownership controls and evidence-bounded rejection of automatic associations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "im-types"
+          ],
+          "locator": "Institutional monument definitions and the distinction between analytical label and self-identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "im-chronology"
+          ],
+          "locator": "Chronological traits, disputed aspects, and contextual dating requirements.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "im-regional"
+          ],
+          "locator": "Regional typology, geology, and caution against direct ethnic classification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "im-hirebenakal"
+          ],
+          "locator": "Official protected-site description, water basin, quarrying, and bounded social inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "im-vidarbha-landscape"
+          ],
+          "locator": "Phase-dated Vidarbha survey and mismatch with atlas boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "im-remarks"
+          ],
+          "locator": "House evidence, perishable construction, and cemetery-to-settlement preservation imbalance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "im-kodumanal",
+            "im-status"
+          ],
+          "locator": "Official habitation, industrial, and grave-context distinctions at Kodumanal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "im-water"
+          ],
+          "locator": "Documented settlement settings and ecological variation across southern survey zones.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "im-landscapes"
+          ],
+          "locator": "Cemetery placement, monument visibility, social landscape interpretation, and bounded gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "im-maski-politics"
+          ],
+          "locator": "Maski landscape history, collective practices, and limits on centralized political inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "im-agriculture"
+          ],
+          "locator": "Regional crop synthesis and limits on reconstructing cuisine from plant remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "im-agriculture"
+          ],
+          "locator": "Named Hallur crops and taphonomic limits on dietary reconstruction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "im-heritage"
+          ],
+          "locator": "State archaeology fauna summary and restrained inference about animal uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "im-porunthal"
+          ],
+          "locator": "Phytolith assemblages, differential grave deposits, and food-versus-ritual distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "im-rice"
+          ],
+          "locator": "Archaeobotanical irrigation reassessment and gentle evidence-bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "im-vidarbha-iron"
+          ],
+          "locator": "Metallographic evidence, object classes, and production-chain requirements.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "im-kaveri-iron"
+          ],
+          "locator": "Peer-reviewed metallography and limits on uniform production organization.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "im-remarks"
+          ],
+          "locator": "Ceramic technology, functions, regional variation, and identity caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "im-kodumanal-craft"
+          ],
+          "locator": "Craft chaîne opératoire, organization, and bounded learning inference at Kodumanal.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "im-beads"
+          ],
+          "locator": "Comparative bead-production techniques, social learning, and trade limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "im-society"
+          ],
+          "locator": "Household activity evidence and limits on reconstructing kinship institutions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "im-graffiti"
+          ],
+          "locator": "Excavated child burial, grave contents, age estimate, and explicit unknowns.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "im-maski-social"
+          ],
+          "locator": "Radiocarbon-dated mortuary diversification and cautious social interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "im-kodumanal-craft",
+            "im-maski-politics"
+          ],
+          "locator": "Skill complexity, collective action, and explicit absence of institutional schooling evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "im-beads"
+          ],
+          "locator": "Communities of practice and bounded reconstruction of informal teaching.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "im-burials"
+          ],
+          "locator": "Mortuary skeletal preservation and bioarchaeological limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "im-health"
+          ],
+          "locator": "Single-case paleopathological diagnosis and bounded population inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "im-dental"
+          ],
+          "locator": "Site-specific dental sample, dietary method, and comparison limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "im-excavations"
+          ],
+          "locator": "Official excavation register and explicit evidence boundary for medical institutions and texts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "im-health"
+          ],
+          "locator": "Paleopathological observation, survival inference, and treatment uncertainty.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "im-water"
+          ],
+          "locator": "Peer-reviewed hilltop settlement, harvesting, reservoir, and ritual water evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "im-hirebenakal"
+          ],
+          "locator": "Official site dossier on basin, quarrying, and cautious functional interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "im-tank"
+          ],
+          "locator": "Institutional reassessment of tank associations, bunds, chronology, and attribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "im-excavations"
+          ],
+          "locator": "Settlement feature survey and explicit evidence-bounded toilet and sewer absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "im-maski-politics"
+          ],
+          "locator": "Refuse scatters, manuring interpretation, and sanitation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "im-burials"
+          ],
+          "locator": "Regional burial modes, body treatments, and typological overlap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "im-adichanallur",
+            "im-asi-adichanallur"
+          ],
+          "locator": "Official excavation evidence, ongoing research, and grave-goods interpretation limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "im-kodumanal"
+          ],
+          "locator": "Official grave plan and object list with bounded status inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "im-landscapes"
+          ],
+          "locator": "Cemetery distribution, selected burial, and demographic caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "im-alignment"
+          ],
+          "locator": "Site-specific archaeoastronomical test and limits on universal interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "im-smarthistory"
+          ],
+          "locator": "Cross-domain synthesis grounded in an archaeological educational review.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "im-graffiti"
+          ],
+          "locator": "Contextual pot-mark analysis and explicit distinction between signs and deciphered writing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "im-writing"
+          ],
+          "locator": "Explicit evidence-bounded absence and later inscriptional comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "im-excavations"
+          ],
+          "locator": "Official phase classifications and bounded methodological humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "im-transition"
+          ],
+          "locator": "Early Historic transition, continuing practices, and association boundary.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "im-transition",
+            "im-map400",
+            "im-map323",
+            "im-map300",
+            "im-map200",
+            "im-map100"
+          ],
+          "locator": "Government academic account of uneven technological, agricultural, settlement, trade, and political transitions. Endpoint control repainting peninsular probes while separating Magadha and Simhala. Later control showing a three-way editorial split across tested mainland sites. Later control separating generic southern labels, Magadha, and Maurya. Later control repainting southern Tamil probes as Iron Age chieftainships. Later control showing further editorial replacement without cultural extinction.",
+          "dateScope": {
+            "year": 300
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "iron-age-megalith-cultures",
+        "name": "Iron Age megalithic traditions of peninsular India",
+        "aliases": [
+          "Iron Age megalith cultures"
+        ],
+        "kind": "culture",
+        "region": "Asia",
+        "from": -1400,
+        "to": 300,
+        "circa": true,
+        "card": "cards/iron-age-megalith-cultures.json",
+        "dateBasis": "historical",
+        "summary": "A regional archaeological guide to diverse Iron Age megalithic traditions across peninsular India, about 1400 BCE to 300 CE.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc500.json",
+          "properties": {
+            "civ": "iron-age-megalith-cultures",
+            "from": -500,
+            "to": -400,
+            "precision": 1
+          },
+          "bounds": [
+            72.75852758527586,
+            8.02748509045896,
+            84.66024660246603,
+            21.154082233581875
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
