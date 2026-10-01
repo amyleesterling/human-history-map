@@ -1,0 +1,987 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release182-mordvinians research, integrated by Codex",
+  "checkedAt": "2026-09-29",
+  "sources": [
+    {
+      "id": "mv-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, display name, approximate 800 to 900 lifetime, and historical-basemap provenance; the record has no imported kind."
+    },
+    {
+      "id": "mv-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "The inherited Wikipedia sentence is about a twentieth-century official umbrella and does not describe a medieval state or exact-period inhabitants."
+    },
+    {
+      "id": "mv-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, incorrect state typing, and missing identity, chronology, and border review."
+    },
+    {
+      "id": "mv-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms imported-summary status, Wikipedia lead, and no staged exact-id draft."
+    },
+    {
+      "id": "mv-cards",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms no runtime card for the exact id before integration."
+    },
+    {
+      "id": "mv-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no researched override and permits a culture-type correction without merging neighboring records."
+    },
+    {
+      "id": "mv-map700",
+      "title": "Human History Map 700 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Pre-appearance control for exact-id and representative-point ownership."
+    },
+    {
+      "id": "mv-map800",
+      "title": "Human History Map 800 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "The sole exact feature, its 800 to 900 properties, decoded geometry, neighboring shared arcs, and point membership."
+    },
+    {
+      "id": "mv-map900",
+      "title": "Human History Map 900 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Endpoint snapshot where the exact id has disappeared and neighboring artwork changes."
+    },
+    {
+      "id": "mv-map1000",
+      "title": "Human History Map 1000 CE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Post-endpoint control confirming continued absence of the exact id."
+    },
+    {
+      "id": "mv-people-book",
+      "title": "The Mordvinian People: History, Language and Culture",
+      "url": "https://omp.zrc-sazu.si/zalozba/catalog/download/1869/7760/1483",
+      "note": "Academic edited volume used only for broad historical, cultural, and writing-history framing; its unified terminology and retrospective reconstructions require caution."
+    },
+    {
+      "id": "mv-ethnonym",
+      "title": "Revisiting the Etymology of the Ethnonym Mordva",
+      "url": "https://doaj.org/article/bb609828825b4824b1925509f0424887",
+      "note": "Peer-reviewed ethnonym study identifying Mordva as a Russian exoethnonym without roots in the Mordvinic languages and attested in medieval sources."
+    },
+    {
+      "id": "mv-middle-tsna",
+      "title": "The burial rite of Mordva on the Middle Tsna River, eighth to eleventh centuries",
+      "url": "https://archaeolog.ru/media/books_sov_archaeology/1993_book03.pdf",
+      "note": "Institute of Archaeology publication on mixed inhumation and cremation, varied graves and orientations, clothing traces, ornaments, tools, weapons, harness, paired burials, and interpretation."
+    },
+    {
+      "id": "mv-languages-history",
+      "title": "Historical phonology of the Mordvin languages",
+      "url": "https://journal.fi/fuf/article/download/85674/44638/129479",
+      "note": "Academic historical-linguistic reconstruction treating Erzya and Moksha as two languages and dating Proto-Mordvin divergence approximately rather than as a political event."
+    },
+    {
+      "id": "mv-oxford-guide",
+      "title": "Mordvin (Erzya and Moksha), Oxford Guide to the Uralic Languages",
+      "url": "https://www.utupub.fi/bitstream/handle/10024/191945/2022_Chapter23MordvinErzya_TheOxfordGuideToTheUr.pdf",
+      "note": "Peer-reviewed 2022 grammar: two languages, separate standards, dialects, corpus provenance, Cyrillic examples, glosses, and translations. Supplies the explicitly modern Moksha sample."
+    },
+    {
+      "id": "mv-erzya-profile",
+      "title": "The Erzya Language: Where is it spoken?",
+      "url": "https://journals.openedition.org/efo/pdf/1829",
+      "note": "Academic sociolinguistic profile: Mordvin is an exonymic umbrella; Erzya speakers identify their language by its own name; schooling and media evidence is modern."
+    },
+    {
+      "id": "mv-nominations",
+      "title": "Names for the Mordvin idioms: historical and sociolinguistic approaches",
+      "url": "https://una-editions.fr/resumes-abstracts-%D0%B0%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D0%B8-nominations-des-idiomes-mordves-approche-historique-et-sociolinguistique/",
+      "note": "Academic synopsis stating that Mordvin is not a self-name and that Erzya and Moksha communities use their own names, with historical naming context."
+    },
+    {
+      "id": "mv-linguistic-distance",
+      "title": "On linguistic distance between Erzya and Moksha",
+      "url": "https://tuhat.helsinki.fi/ws/portalfiles/portal/69939861/On_Linguistic_Distance_between_Erzya_and_Moksha.pdf",
+      "note": "University of Helsinki study measuring differences between the two related languages and warning against treating them as one uniform variety."
+    },
+    {
+      "id": "mv-moksha-chapter",
+      "title": "Moksha Mordvin",
+      "url": "https://researchportal.helsinki.fi/en/publications/moksha-mordvin/",
+      "note": "Peer-reviewed University of Helsinki chapter record for Moksha demographics, variation, grammar, authentic corpus examples, and an annotated text."
+    },
+    {
+      "id": "mv-dialect-study",
+      "title": "Towards a systematic characterization of dialect variation in the Erzya-speaking world",
+      "url": "https://researchportal.helsinki.fi/en/publications/towards-a-systematic-characterization-of-dialect-variation-in-the/",
+      "note": "University of Helsinki research on Erzya dialect variation and differences from neighboring Moksha, supporting internal diversity."
+    },
+    {
+      "id": "mv-mormula",
+      "title": "Mormula: Grammatically Annotated Mordvin Texts",
+      "url": "https://www.utu.fi/en/university/faculty-of-humanities/school-of-languages-and-translation-studies/research/utu-digilang/mormula-grammatically-annotated-mordvin-texts",
+      "note": "University of Turku corpus documenting separately identified Erzya and Moksha folklore, literary texts, dates, translations, and annotation."
+    },
+    {
+      "id": "mv-diachronic",
+      "title": "Diachronic Corpus of Literary Mordvin",
+      "url": "https://www.utu.fi/en/university/faculty-of-humanities/school-of-languages-and-translation-studies/research/utu-digilang/diachronic-corpus-of-literary-mordvin",
+      "note": "University of Turku corpus describing dated literary Erzya and Moksha sources and the much later record of written standards."
+    },
+    {
+      "id": "mv-moksher",
+      "title": "MokshEr Corpus",
+      "url": "https://www.utu.fi/en/university/faculty-of-humanities/school-of-languages-and-translation-studies/research/utu-digilang/moksher-corpus",
+      "note": "University of Turku corpus of modern journalistic and literary Erzya and Moksha, useful for modern continuity rather than medieval reconstruction."
+    },
+    {
+      "id": "mv-ancient-culture",
+      "title": "Culture and Language of Ancient Mordvinians",
+      "url": "https://vestnik.mrsu.ru/index.php/en/articles-en/72-15-3/517-10-15507-vmu-025-201503-08",
+      "note": "University article on first- through seventh-century material and linguistic reconstructions; used as earlier comparison, not direct ninth-century proof."
+    },
+    {
+      "id": "mv-shoksha",
+      "title": "Shoksha cemetery publication",
+      "url": "https://archaeolog.ru/press/pubs/shokshinskiy-mogilnik",
+      "note": "Institute of Archaeology publication record for 900 graves at a fifth- to eleventh-century cemetery and competing cultural attributions by phase."
+    },
+    {
+      "id": "mv-shoksha-volume",
+      "title": "Shoksha cemetery, volume 2",
+      "url": "https://archaeolog.ru/media/books_2023/shokshin_2023_2.pdf",
+      "note": "Institute of Archaeology cemetery publication used for long chronology and continuing archaeological evidence across the atlas endpoint."
+    },
+    {
+      "id": "mv-paired-burials",
+      "title": "Paired burials of the Middle Tsna Mordva",
+      "url": "https://archaeolog.ru/media/books_ksia/ksia_175.pdf",
+      "note": "Institute of Archaeology article on paired eighth- to eleventh-century burials, used narrowly for relationship possibilities and interpretive limits."
+    },
+    {
+      "id": "mv-tsna-rite",
+      "title": "Burial rite at the Kryukovo-Kuzhnovsky cemetery",
+      "url": "https://archaeolog.ru/media/books_ksia/ksia_128.pdf",
+      "note": "Institute of Archaeology article on Middle Tsna mortuary context and landscape, used separately from the broader 1993 synthesis."
+    },
+    {
+      "id": "mv-jewellery-types",
+      "title": "Early and medieval Mordvin ornament types",
+      "url": "https://archaeolog.ru/media/books_sov_archaeology/1972_book03.pdf",
+      "note": "Institute of Archaeology typological study of ornaments across long chronologies, supporting craft evidence without converting an object type into identity."
+    },
+    {
+      "id": "mv-armiyevo",
+      "title": "Armiyevo cemetery study",
+      "url": "https://archaeolog.ru/media/books_2021/zelencova_sb_2021.pdf",
+      "note": "Institute of Archaeology study of 319 graves and eighth- to ninth-century interaction among local Finnic and Turkic-associated material networks."
+    },
+    {
+      "id": "mv-fu-antiquities",
+      "title": "Finno-Ugric antiquities",
+      "url": "https://archaeolog.ru/press/pubs/finno-ugorskie-drevnosti",
+      "note": "Institute of Archaeology publication statement warning that modern ethnicity differs from ancient archaeological categories and direct equations remain disputed."
+    },
+    {
+      "id": "mv-belt-status",
+      "title": "Belt sets in early medieval Volga-region burial contexts",
+      "url": "https://archaeolog.ru/media/ksia/ksia-229.pdf",
+      "note": "Institute of Archaeology study cautioning that belt fittings could be utilitarian, group-linked, or status-related and do not independently prove rank."
+    },
+    {
+      "id": "mv-bulgar-belts",
+      "title": "Medieval Rus, Volga Bulgaria, and eastern contacts conference report",
+      "url": "https://archaeolog.ru/press/events/n58",
+      "note": "Institute of Archaeology report noting that studied Bulgar belt sets entered ancient-Mordvin burial contexts in the tenth and eleventh centuries, after the atlas window."
+    },
+    {
+      "id": "mv-rpc-harvard",
+      "title": "The Russian Primary Chronicle: Laurentian Text",
+      "url": "https://ukrainica.huri.harvard.edu/materials/the-russian-primary-chronicle-laurentian-text",
+      "note": "Harvard edition record for a twelfth-century compilation surviving in later manuscripts; its Mordva passage is later textual evidence, not an 800 CE census."
+    },
+    {
+      "id": "mv-rpc-warwick",
+      "title": "The Russian Primary Chronicle, English translation",
+      "url": "https://warwick.ac.uk/fac/arts/history/students/modules/hi3t4/topics/sourcesi/mythsandfolktales/the_russian_primary_chronicle.pdf",
+      "note": "University-hosted Cross and Sherbowitz-Wetzor translation listing Mordva among peoples with their own language; composed later than the atlas interval."
+    },
+    {
+      "id": "mv-archaeology-absence",
+      "title": "Early Volga archaeological burial visibility and absence",
+      "url": "https://archaeolog.ru/media/books_ksia/ksia_005.pdf",
+      "note": "Institute of Archaeology discussion of uneven settlement and cemetery visibility and the danger of treating missing burials as an empty landscape."
+    },
+    {
+      "id": "mv-muroma-comparison",
+      "title": "Four centuries of the chronicle Muroma",
+      "url": "https://archaeolog.ru/press/articles/chetyre-veka-letopisnoy-muromy",
+      "note": "Institute of Archaeology account of neighboring eighth- to eleventh-century Muroma cemeteries; used only as named comparative evidence, never as Mordvin identity."
+    },
+    {
+      "id": "mv-terukhan-museum",
+      "title": "Mordva-Teryukhane: evidence of the past",
+      "url": "https://museum.unn.ru/novosti/vystavka-mordva-teryuhane-svidetelstva-proshlogo/",
+      "note": "Lobachevsky University Museum synthesis of later medieval settlement finds, farming, fishing, beekeeping, crafts, pottery, textiles, and changing identity."
+    },
+    {
+      "id": "mv-terukhan-catalogue",
+      "title": "Mordva-Teryukhane exhibition catalogue",
+      "url": "https://museum.msite.unn.ru/wp-content/uploads/sites/40/2020/06/mordva-teryuhane.pdf",
+      "note": "Lobachevsky University Museum catalogue for later medieval occupations, craft tools, furnishings, costume, and the collection context."
+    },
+    {
+      "id": "mv-ethnomuseum-volga",
+      "title": "Peoples of the Volga and Urals",
+      "url": "https://ethnomuseum.ru/en/expositions/exhibitions/volga-and-ural/",
+      "note": "Russian Ethnographic Museum exhibit stressing a multiethnic region and materially documented later household crafts and rites."
+    },
+    {
+      "id": "mv-mordovia-museum",
+      "title": "Mordovian Museum ethnography collection",
+      "url": "https://ar.culture.ru/en/exhibition/zal-entografii",
+      "note": "Official museum collection on the distinct peoples of Mordovia and cultural relations among Mordovian, Russian, and Tatar communities."
+    },
+    {
+      "id": "mv-family-study",
+      "title": "Home and family in traditional Mordvin culture",
+      "url": "https://jg.isi.mrsu.ru/%D0%B3.-%D0%B0.-%D0%BA%D0%BE%D1%80%D0%BD%D0%B8%D1%88%D0%B8%D0%BD%D0%B0-%D0%B4%D0%BE%D0%BC-%D0%B8-%D1%81%D0%B5%D0%BC%D1%8C%D1%8F-%D0%B2-%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B5-%D0%BC%D0%BE%D1%80%D0%B4%D0%B2%D1%8B.html",
+      "note": "Peer-reviewed 2024 retrospective study of much later homes, family labor, inherited household marks, and changing domestic organization; not projected into 800 CE."
+    },
+    {
+      "id": "mv-medicine-book",
+      "title": "Folk medicine of the Mordva: an ethnographic study",
+      "url": "https://niign.ru/izdatelskaya-deyatelnost/nauchnyie-izdaniya/mordva-rossii/narodnaya-mediczina-mordvyi-%E2%80%93-prostaya-i-zagadochnaya%E2%80%A6",
+      "note": "Government humanities institute description of a 2011 study based mainly on 1991 to 2010 fieldwork, including plant, animal, mineral, surgical, and verbal practices."
+    },
+    {
+      "id": "mv-medicine-fieldwork",
+      "title": "Research of traditional Mordovian medicine based on field trips",
+      "url": "https://csfu.mrsu.ru/en/archives/1887",
+      "note": "Peer-reviewed ethnographic fieldwork article; its documented healing knowledge is modern evidence and cannot specify ninth-century remedies."
+    },
+    {
+      "id": "mv-family-modern",
+      "title": "The Mordovian family in the twentieth and twenty-first centuries",
+      "url": "https://journals.rcsi.science/2658-5685/article/view/419512",
+      "note": "Recent historical-ethnological study of family, modernization, identity, gender, language, and generational transmission in the modern period."
+    },
+    {
+      "id": "mv-costume-object",
+      "title": "Erzya bride costume, early twentieth century",
+      "url": "https://collection.ethnomuseum.ru/entity/OBJECT/752620",
+      "note": "Russian Ethnographic Museum object record with exact date, place, materials, inherited use, and life-cycle context; explicitly modern comparison."
+    },
+    {
+      "id": "mv-moksha-object",
+      "title": "Moksha headwear, nineteenth century",
+      "url": "https://collection.ethnomuseum.ru/entity/OBJECT/259699",
+      "note": "Russian Ethnographic Museum object record with nineteenth-century date and materials; demonstrates distinct documented Moksha collection identity."
+    },
+    {
+      "id": "mv-house-museum",
+      "title": "Museum of Mordovian Culture and Everyday Life",
+      "url": "https://www.culture.ru/institutes/26353/muzei-mordovskoi-kultury-i-byta",
+      "note": "Official museum description of an early twentieth-century village interior, vessels, casks, clothing, farming tools, spinning, bast work, bathhouse, and granary."
+    },
+    {
+      "id": "mv-rgo-smirnov",
+      "title": "Mordva: historical and ethnographic essay",
+      "url": "https://elib.rgo.ru/handle/123456789/231647",
+      "note": "Russian Geographical Society library record for a 1895 ethnographic work, useful as a dated historical source rather than timeless tradition."
+    },
+    {
+      "id": "mv-diaspora",
+      "title": "Mordva material in Estonian collections and Erzya and Moksha diasporas",
+      "url": "https://doaj.org/article/5b47424f2c1d4a758a968dc2f4929f47",
+      "note": "Peer-reviewed museum and diaspora study demonstrating later mobility, collecting histories, and continuing distinct Erzya and Moksha identities."
+    },
+    {
+      "id": "mv-literary-history",
+      "title": "Uralic Studies dissertation on Erzya and Moksha standards",
+      "url": "https://doktori.bibl.u-szeged.hu/id/eprint/4097/1/Boglarka%20Janurik%20dissertation.pdf",
+      "note": "University dissertation describing the creation of separate standard Erzya and Moksha varieties in the twentieth century and their sociolinguistic setting."
+    },
+    {
+      "id": "mv-federal-archive",
+      "title": "Russian Federal Archives: Mordovian autonomy anniversary",
+      "url": "https://archives.gov.ru/press/310511.shtml",
+      "note": "Federal archival chronology distinguishing the 1928 Mordovian National Okrug from the older collective ethnonym."
+    },
+    {
+      "id": "mv-erzya-1928",
+      "title": "Erzyan songs, 1928 edition",
+      "url": "https://rusneb.ru/catalog/001055_000090_339/",
+      "note": "Russian National Electronic Library catalogue record for an Erzya publication dated 1928, tangible later written continuity rather than a medieval sample."
+    }
+  ],
+  "entities": [
+    {
+      "id": "mordvinians",
+      "card": "data/cards/mordvinians.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "mv-index",
+            "mv-summary",
+            "mv-coverage",
+            "mv-map800",
+            "mv-map900",
+            "mv-people-book",
+            "mv-ethnonym",
+            "mv-languages-history"
+          ],
+          "locator": "Exact imported id, display name, approximate 800 to 900 lifetime, and historical-basemap provenance; the record has no imported kind. The inherited Wikipedia sentence is about a twentieth-century official umbrella and does not describe a medieval state or exact-period inhabitants. One observed interval, one border file, incorrect state typing, and missing identity, chronology, and border review. The sole exact feature, its 800 to 900 properties, decoded geometry, neighboring shared arcs, and point membership. Endpoint snapshot where the exact id has disappeared and neighboring artwork changes. Academic edited volume used only for broad historical, cultural, and writing-history framing; its unified terminology and retrospective reconstructions require caution. Peer-reviewed ethnonym study identifying Mordva as a Russian exoethnonym without roots in the Mordvinic languages and attested in medieval sources. Academic historical-linguistic reconstruction treating Erzya and Moksha as two languages and dating Proto-Mordvin divergence approximately rather than as a political event.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "mv-map700",
+            "mv-map800",
+            "mv-shoksha"
+          ],
+          "locator": "Pre-appearance control for exact-id and representative-point ownership. The sole exact feature, its 800 to 900 properties, decoded geometry, neighboring shared arcs, and point membership. Institute of Archaeology publication record for 900 graves at a fifth- to eleventh-century cemetery and competing cultural attributions by phase.",
+          "dateScope": {
+            "from": 800,
+            "to": 812
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "mv-middle-tsna"
+          ],
+          "locator": "Institute of Archaeology publication on mixed inhumation and cremation, varied graves and orientations, clothing traces, ornaments, tools, weapons, harness, paired burials, and interpretation.",
+          "dateScope": {
+            "from": 812,
+            "to": 825
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "mv-armiyevo",
+            "mv-bulgar-belts"
+          ],
+          "locator": "Institute of Archaeology study of 319 graves and eighth- to ninth-century interaction among local Finnic and Turkic-associated material networks. Institute of Archaeology report noting that studied Bulgar belt sets entered ancient-Mordvin burial contexts in the tenth and eleventh centuries, after the atlas window.",
+          "dateScope": {
+            "from": 825,
+            "to": 837
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "mv-oxford-guide",
+            "mv-linguistic-distance"
+          ],
+          "locator": "Peer-reviewed 2022 grammar: two languages, separate standards, dialects, corpus provenance, Cyrillic examples, glosses, and translations. Supplies the explicitly modern Moksha sample. University of Helsinki study measuring differences between the two related languages and warning against treating them as one uniform variety.",
+          "dateScope": {
+            "from": 837,
+            "to": 850
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "mv-ancient-culture",
+            "mv-terukhan-museum"
+          ],
+          "locator": "University article on first- through seventh-century material and linguistic reconstructions; used as earlier comparison, not direct ninth-century proof. Lobachevsky University Museum synthesis of later medieval settlement finds, farming, fishing, beekeeping, crafts, pottery, textiles, and changing identity.",
+          "dateScope": {
+            "from": 850,
+            "to": 862
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "mv-map800",
+            "mv-muroma-comparison"
+          ],
+          "locator": "The sole exact feature, its 800 to 900 properties, decoded geometry, neighboring shared arcs, and point membership. Institute of Archaeology account of neighboring eighth- to eleventh-century Muroma cemeteries; used only as named comparative evidence, never as Mordvin identity.",
+          "dateScope": {
+            "from": 862,
+            "to": 875
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "mv-jewellery-types",
+            "mv-belt-status"
+          ],
+          "locator": "Institute of Archaeology typological study of ornaments across long chronologies, supporting craft evidence without converting an object type into identity. Institute of Archaeology study cautioning that belt fittings could be utilitarian, group-linked, or status-related and do not independently prove rank.",
+          "dateScope": {
+            "from": 875,
+            "to": 887
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "mv-map800",
+            "mv-map900",
+            "mv-map1000",
+            "mv-rpc-harvard"
+          ],
+          "locator": "The sole exact feature, its 800 to 900 properties, decoded geometry, neighboring shared arcs, and point membership. Endpoint snapshot where the exact id has disappeared and neighboring artwork changes. Post-endpoint control confirming continued absence of the exact id. Harvard edition record for a twelfth-century compilation surviving in later manuscripts; its Mordva passage is later textual evidence, not an 800 CE census.",
+          "dateScope": {
+            "from": 887,
+            "to": 900
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "mv-index",
+            "mv-coverage",
+            "mv-missing",
+            "mv-cards",
+            "mv-overrides"
+          ],
+          "locator": "Exact live metadata, missing-card state, and type correction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "mv-nominations"
+          ],
+          "locator": "Exonym and self-identification guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "mv-map800"
+          ],
+          "locator": "Decoded geometry and representative-point audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "mv-summary",
+            "mv-federal-archive"
+          ],
+          "locator": "Imported-summary correction and twentieth-century framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "mv-fu-antiquities"
+          ],
+          "locator": "State-claim rejection and bounded map humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "mv-middle-tsna"
+          ],
+          "locator": "Exact-region mortuary diversity and broad dating.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "mv-shoksha",
+            "mv-armiyevo"
+          ],
+          "locator": "Competing Shoksha and Armiyevo classifications.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "mv-tsna-rite",
+            "mv-jewellery-types"
+          ],
+          "locator": "Mortuary furnishings and deposition caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "mv-belt-status"
+          ],
+          "locator": "Status inference and object-count limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "mv-archaeology-absence"
+          ],
+          "locator": "Archaeological visibility and absence-of-evidence caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "mv-ancient-culture",
+            "mv-terukhan-museum"
+          ],
+          "locator": "Domestic-evidence gap and bounded comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "mv-ethnomuseum-volga"
+          ],
+          "locator": "Landscape livelihood diversity and retrospective limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "mv-terukhan-catalogue"
+          ],
+          "locator": "Craft evidence, object function, and gentle caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "mv-middle-tsna"
+          ],
+          "locator": "Horse-harness evidence and anti-elite overreach.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "mv-house-museum"
+          ],
+          "locator": "Precisely dated later household material and non-projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "mv-paired-burials"
+          ],
+          "locator": "Kinship possibility and burial-layout limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "mv-family-study"
+          ],
+          "locator": "Later domestic organization with chronological firewall.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "mv-costume-object",
+            "mv-moksha-object"
+          ],
+          "locator": "Distinct documented later costume and anti-projection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "mv-mordovia-museum",
+            "mv-ethnomuseum-volga"
+          ],
+          "locator": "Multiethnic region and interaction without collapse.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "mv-family-modern"
+          ],
+          "locator": "Modern family transformation and continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "mv-terukhan-catalogue"
+          ],
+          "locator": "Skill transmission and exact educational absence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "mv-dialect-study",
+            "mv-moksha-chapter"
+          ],
+          "locator": "Internal variation and language-mapping caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "mv-mormula"
+          ],
+          "locator": "Corpus provenance and later oral-literary evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "mv-erzya-profile"
+          ],
+          "locator": "Modern schooling and earlier learning distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "mv-erzya-1928"
+          ],
+          "locator": "Dated Erzya publication and oral-written distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "mv-shoksha"
+          ],
+          "locator": "Exact-period health evidence limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "mv-medicine-book"
+          ],
+          "locator": "Later healing corpus and chronological limit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "mv-medicine-fieldwork"
+          ],
+          "locator": "Ethnographic method and retrospective caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "mv-archaeology-absence"
+          ],
+          "locator": "Health determinants and refusal of invented medicine.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "mv-jewellery-types"
+          ],
+          "locator": "Medical-function caution with bounded humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "mv-tsna-rite"
+          ],
+          "locator": "River setting and water-routine limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "mv-house-museum"
+          ],
+          "locator": "Later washing/storage material and organic preservation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "mv-archaeology-absence"
+          ],
+          "locator": "Waste handling inference and settlement-record gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "mv-tsna-rite"
+          ],
+          "locator": "Explicit sanitation and toilet absence with gentle humor.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "mv-terukhan-catalogue"
+          ],
+          "locator": "Fire-dependent work and household-environment caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "mv-jewellery-types"
+          ],
+          "locator": "Dress craft and interpretive restraint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "mv-belt-status"
+          ],
+          "locator": "Belt function, mobility, and status limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "mv-bulgar-belts"
+          ],
+          "locator": "Later Bulgar-contact evidence and chronology guardrail.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "mv-terukhan-catalogue"
+          ],
+          "locator": "Later medieval craft range and bounded continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "mv-diaspora"
+          ],
+          "locator": "Community-scale achievements and continuing identities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "mv-rpc-harvard",
+            "mv-rpc-warwick"
+          ],
+          "locator": "Exact-period writing absence and later chronicle limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "mv-oxford-guide"
+          ],
+          "locator": "Fully attributed modern Moksha script, transcription, translation, source date, publication, and locator.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "mv-moksha-chapter",
+            "mv-linguistic-distance"
+          ],
+          "locator": "Language-sample scope and anti-collapse warning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "mv-diachronic",
+            "mv-literary-history"
+          ],
+          "locator": "Later standardization and written-record chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "mv-moksher"
+          ],
+          "locator": "Modern written continuity and medieval evidence gap.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "mv-rpc-warwick"
+          ],
+          "locator": "Later chronicle evidence and source perspective.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "mv-bulgar-belts",
+            "mv-muroma-comparison"
+          ],
+          "locator": "Later contacts and anti-retrojection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "mv-rgo-smirnov",
+            "mv-family-modern"
+          ],
+          "locator": "Placement of imported terminology in modern context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "mv-diaspora"
+          ],
+          "locator": "Diaspora continuity and museum-label caution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "mv-map900",
+            "mv-map1000",
+            "mv-mormula"
+          ],
+          "locator": "Transformation ending and living continuity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "mv-map900",
+            "mv-map1000",
+            "mv-shoksha-volume",
+            "mv-literary-history",
+            "mv-federal-archive"
+          ],
+          "locator": "Endpoint snapshot where the exact id has disappeared and neighboring artwork changes. Post-endpoint control confirming continued absence of the exact id. Institute of Archaeology cemetery publication used for long chronology and continuing archaeological evidence across the atlas endpoint. University dissertation describing the creation of separate standard Erzya and Moksha varieties in the twentieth century and their sociolinguistic setting. Federal archival chronology distinguishing the 1928 Mordovian National Okrug from the older collective ethnonym.",
+          "dateScope": {
+            "year": 900
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "mordvinians",
+        "name": "Erzya and Moksha communities (atlas: Mordvinians)",
+        "aliases": [
+          "Mordvinians",
+          "Mordvins",
+          "Mordva",
+          "Erzya and Moksha"
+        ],
+        "kind": "culture",
+        "region": "Europe",
+        "from": 800,
+        "to": 900,
+        "circa": true,
+        "card": "cards/mordvinians.json",
+        "dateBasis": "map_coverage",
+        "summary": "An imported 800 to 900 culture layer whose modern external umbrella must not erase distinct Erzya and Moksha identities or become a fictional medieval state.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-800.json",
+          "properties": {
+            "civ": "mordvinians",
+            "from": 800,
+            "to": 900,
+            "precision": 1
+          },
+          "bounds": [
+            45.643056430564314,
+            50.914614798090255,
+            56.60516605166052,
+            55.306736875362674
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
