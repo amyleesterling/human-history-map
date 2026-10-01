@@ -1,0 +1,971 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release183-komi research, integrated by Codex",
+  "checkedAt": "2026-10-01",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, imported name, approximate map interval, and historical-basemaps provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported summary reviewed for living identity, plurality, geography, and source limitations."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, approximate dates, incorrect state kind, and missing review."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Pre-appearance control for exact-id absence and representative point ownership."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Only exact-id feature, decoded geometry, seams, overlaps, memberships, and interval properties."
+    },
+    {
+      "id": "atlas-map-1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Endpoint control where the exact id disappears and ownership layers change."
+    },
+    {
+      "id": "ko01-official-history",
+      "title": "Komi Republic tourism portal, History",
+      "url": "https://tourism.rkomi.ru/en/about/history",
+      "note": "Official regional history checked for the distinction between Komi-Zyrians and Komi-Permyaks and the medieval names Perm Vychegodskaya and Perm Velikaya."
+    },
+    {
+      "id": "ko02-zyrian-language",
+      "title": "Russian Academy of Sciences, Komi-Zyrian language",
+      "url": "https://minlang.iling-ran.ru/lang/komi-zyryanskiy-yazyk",
+      "note": "Academy language profile checked for the living Komi-Zyrian language, status, dialects, writing history, and present transmission."
+    },
+    {
+      "id": "ko03-permyak-language",
+      "title": "Russian Academy of Sciences, Komi-Permyak language",
+      "url": "https://minlang.iling-ran.ru/lang/komi-permyackiy-yazyk",
+      "note": "Academy language profile checked for distinct Komi-Permyak identity, dialect groups, distribution, writing, speaker estimate, and transmission risk."
+    },
+    {
+      "id": "ko04-iwgia-status",
+      "title": "IWGIA, The Indigenous World 2026: Russia",
+      "url": "https://www.iwgia.org/en/news/iw-2026-russia?lang=en",
+      "note": "Indigenous-rights source checked for Izhma Komi self-identification and the difference between Indigenous identity and Russia’s narrow legal category."
+    },
+    {
+      "id": "ko05-fenno-ugria",
+      "title": "Fenno-Ugria, Komis",
+      "url": "https://fennougria.ee/en/peoples/komis/",
+      "note": "Specialist cultural organization profile checked for umbrella naming, Komi-Zyrian and Komi-Permyak distinctions, settlement regions, and living communities."
+    },
+    {
+      "id": "ko06-matsuk",
+      "title": "Institute of Language, Literature and History, Komi Region in the Sixteenth Century",
+      "url": "https://illhkomisc.ru/wp-content/uploads/2021/10/matsuk_m.pdf",
+      "note": "Scholarly documentary monograph checked for charters, land transactions, petitions, taxation, farming, settlement, administration, transport obligations, and dated archival limits."
+    },
+    {
+      "id": "ko07-corpus-intro",
+      "title": "Vostochnaya Literatura, Materials on Vym and Vychegda Lands, introduction",
+      "url": "https://www.vostlit.info/Texts/Dokumenty/Russ/XVI/1580-1600/Mat_Vym_Vycegod/pred.htm",
+      "note": "Published primary-source corpus introduction checked for document dates, provenance, administrative setting, geography, and household counts."
+    },
+    {
+      "id": "ko08-corpus-one",
+      "title": "Vostochnaya Literatura, Materials on Vym and Vychegda Lands, part 1",
+      "url": "https://www.vostlit.info/Texts/Dokumenty/Russ/XVI/1580-1600/Mat_Vym_Vycegod/text1.htm",
+      "note": "Published transcriptions checked for the 1582 petition and 1585 to 1586 Uzhga, Yarensk, Vym, and Udora household, land, fishery, and levy records."
+    },
+    {
+      "id": "ko09-corpus-two",
+      "title": "Vostochnaya Literatura, Materials on Vym and Vychegda Lands, part 2",
+      "url": "https://www.vostlit.info/Texts/Dokumenty/Russ/XVI/1580-1600/Mat_Vym_Vycegod/text2.htm",
+      "note": "Published transcriptions checked for Glotova and Sysola settlements, households, widows, fields, hay, traps, fishing waters, churches, books, and levies."
+    },
+    {
+      "id": "ko10-settlement-study",
+      "title": "History, Archaeology and Ethnography of the Komi Republic, sixteenth-century settlement study",
+      "url": "https://illhkomisc.ru/wp-content/uploads/2019/01/id_2018__2.pdf",
+      "note": "Peer-reviewed regional study checked for new settlements in the 1585 to 1586 cadastres, named founders, family succession, migration, dating, and uncertainty."
+    },
+    {
+      "id": "ko11-old-permic-proposal",
+      "title": "Unicode and ISO working-group proposal for Old Permic",
+      "url": "https://www.unicode.org/wg2/docs/n4263.pdf",
+      "note": "Technical proposal checked for the exact Old Permic forms, scholarly expansion, transliteration, translation, and 1510 inscription date used in the card."
+    },
+    {
+      "id": "ko12-unicode-history",
+      "title": "Unicode Standard, Old Permic",
+      "url": "https://unicode.org/versions/Unicode18.0.0/core-spec/chapter-8/",
+      "note": "Current Unicode chapter checked for the script’s fourteenth-century creation, left-to-right direction, Komi language use, surviving materials, and later decline."
+    },
+    {
+      "id": "ko13-museum-ethnography",
+      "title": "National Museum of the Komi Republic, Ethnographic collection",
+      "url": "https://museumkomi.ru/?page_id=1223",
+      "note": "Museum catalogue checked for dated nineteenth- and twentieth-century Komi-Zyrian dwellings, transport, containers, textiles, clothing, toys, tools, and regional group distinctions."
+    },
+    {
+      "id": "ko15-hunting-stories",
+      "title": "Acta Borealia, Komi hunting stories",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/08003831.2015.1014265",
+      "note": "Peer-reviewed ethnography checked for hunting narratives, practical and moral knowledge, local variation, performance, humor, and twentieth-century research context."
+    },
+    {
+      "id": "ko16-indigenous-knowledge",
+      "title": "Journal of Ethnology and Folkloristics, Indigenous knowledge in the Komi Republic",
+      "url": "https://ojs.utlib.ee/index.php/JEF/article/view/22762",
+      "note": "Peer-reviewed study checked for living hunting knowledge, hybrid knowledge practices, collaboration, institutions, and contemporary environmental context."
+    },
+    {
+      "id": "ko17-wild-plants",
+      "title": "Gramota, Wild plants in Komi-Zyrian food culture",
+      "url": "https://www.gramota.net/en/article/hss20121559/fulltext",
+      "note": "Ethnographic study checked for later recorded uses of herbs, berries, mushrooms, gathering, preservation, food, and the limits of retrospective dating."
+    },
+    {
+      "id": "ko18-childhood-study",
+      "title": "DisserCat, Traditional child-rearing in Komi culture",
+      "url": "https://www.t.dissercat.com/content/traditsionnoe-vospitanie-detei-v-komi-kulture-vtoroi-poloviny-xix-pervoi-treti-xx-vv",
+      "note": "Dissertation record checked for its explicit late nineteenth- to early twentieth-century scope, family socialization, work learning, folklore, and evidence limits."
+    },
+    {
+      "id": "ko19-kindergarten",
+      "title": "Institute of Language, Literature and History, For Children about the Komi Republic",
+      "url": "https://komisc.editorum.ru/en/nauka/publications/article/6a9c164b32807fdbab87375e/for-children-about-the-komi-republic-work-on-the-creation-of-educational-and-methodical-manuals-for-kindergarten-teachers/view",
+      "note": "Regional research-institute article checked for modern Komi educational materials, authentic photographs, folklore, language, teachers, families, and cultural identity."
+    },
+    {
+      "id": "ko20-medicine-folklore",
+      "title": "Medical Anthropology and Bioethics, Komi medical folklore",
+      "url": "https://journals.iea.ras.ru/medanthro/article/view/494",
+      "note": "Peer-reviewed study checked for twentieth- and twenty-first-century Komi folklore archives, local healing narratives, recorded practice, and chronological limits."
+    },
+    {
+      "id": "ko21-permyak-hygiene",
+      "title": "PubMed, Folk hygiene of the Komi-Permyaks",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1831574/",
+      "note": "Indexed 1991 study checked for explicitly Komi-Permyak folk hygiene evidence and its late, group-specific scope."
+    },
+    {
+      "id": "ko22-sanitary-history",
+      "title": "History of Medicine, Sanitary culture in the Komi region",
+      "url": "https://journals.rcsi.science/1994-5655/article/view/255747",
+      "note": "Scholarly medical-history article checked for late nineteenth- and early twentieth-century sanitation, public health, institutions, and the danger of projecting evidence backward."
+    },
+    {
+      "id": "ko23-medieval-review",
+      "title": "Institute of Language, Literature and History, medieval Komi archaeology review",
+      "url": "https://komisc.editorum.ru/en/nauka/publications/article/6a9c161032807fdbab870de8/scientific-heritage-of-k-s-korolev-in-the-study-of-the-medieval-history-of-the-komi-people/view",
+      "note": "Regional academy review checked for Vym culture sites, local variants, settlement archaeology, environment, research history, and interpretive caution."
+    },
+    {
+      "id": "ko24-unpo",
+      "title": "UNPO, Komi",
+      "url": "https://unpo.org/member/komi/",
+      "note": "Living-community profile checked for Komi language, cultural institutions, political representation, extractive pressure, and continuing advocacy."
+    },
+    {
+      "id": "ko25-iwgia-oil",
+      "title": "IWGIA, Komi in Usinsk protest oil pollution",
+      "url": "https://iwgia.org/en/russia/2064-russia-komi-in-usinsk-",
+      "note": "Indigenous-rights report checked for living local action, environmental damage, subsistence concerns, collective organization, and continuity."
+    },
+    {
+      "id": "ko26-matsuk-taxes",
+      "title": "Google Books, Peasants of the Komi Region in the Late Sixteenth and Seventeenth Centuries",
+      "url": "https://books.google.com/books/about/%D0%9A%D1%80%D0%B5%D1%81%D1%82%D1%8C%D1%8F%D0%BD%D0%B5_%D0%9A%D0%BE%D0%BC%D0%B8_%D0%BA%D1%80%D0%B0%D1%8F_%D0%B2.html?id=qYuGAAAAIAAJ",
+      "note": "Bibliographic and searchable scholarly monograph record checked for late sixteenth-century taxation, obligations, transport service, local assessments, and administrative negotiation."
+    },
+    {
+      "id": "ko27-housing-study",
+      "title": "Institute of Language, Literature and History, Peasant Housing in the Komi ASSR",
+      "url": "https://illhkomisc.ru/wp-content/uploads/2016/06/1971-zherebcov-l.n.-krestjanskoe-zhilishche-v-komi-assr-15-mb.pdf",
+      "note": "Academy monograph checked for later Komi-Zyrian house forms, furnishings, settlement evidence, documentary chronology, and the limits of retrospective reconstruction."
+    },
+    {
+      "id": "ko28-dress-monograph",
+      "title": "Ethnokomi, Traditional Dress of the Komi People",
+      "url": "https://ethnokomi.ru/folk/files/%282000%29_Sharapov_Traditional_dress_of_the_komi_people.pdf",
+      "note": "Scholarly ethnographic monograph checked for regional Komi-Zyrian groups, textiles, clothing materials, leather and fur work, ornament, and collection dates."
+    },
+    {
+      "id": "ko29-lashuk",
+      "title": "L. P. Lashuk, Formation of the Komi People",
+      "url": "https://vidzanin.komikyv.com/pdf_hist/1972_Lashuk_Formirovanie_narodnosti_komi.pdf",
+      "note": "Historical and ethnographic monograph checked for Vym and Sysola settlement patterns, the 1585 to 1586 cadastre, local distinctions, contacts, and dated interpretation."
+    },
+    {
+      "id": "ko30-sysola-map",
+      "title": "Cultural Map of the Komi Republic, Sysola district",
+      "url": "https://cultmap.ru/news_section/goroda-i-rayony/municipalnye-rayony/syisolskiy/",
+      "note": "Regional cultural-institution page checked for the 1585 to 1586 Sysola survey, named church settlements, and their continuing place histories."
+    },
+    {
+      "id": "ko31-archaeology-paper",
+      "title": "Proceedings of the Komi Science Centre, regional archaeological research",
+      "url": "https://izvestia.komisc.ru/images/Archive/2021/50/12.Nauchnoye_Nasledie.pdf",
+      "note": "Academy journal article checked for settlements, eroding sites, earlier occupation traces, archaeological uncertainty, and comparison with the 1585 to 1586 cadastre."
+    },
+    {
+      "id": "ko32-arctic-history",
+      "title": "Komi Science Centre, Arctic Zone of the European Northeast in the Sixteenth and Seventeenth Centuries",
+      "url": "https://komisc.editorum.ru/ru/nauka/monography/3421/view",
+      "note": "Academy monograph page checked for Ust-Tsilma, Izhma, Pechora-region history, documentary publication, and administrative development during the map interval."
+    }
+  ],
+  "entities": [
+    {
+      "id": "komi",
+      "card": "data/cards/komi.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-map-1530",
+            "ko01-official-history",
+            "ko02-zyrian-language",
+            "ko03-permyak-language",
+            "ko04-iwgia-status"
+          ],
+          "locator": "Exact indexed id, imported name, approximate map interval, and historical-basemaps provenance. Imported summary reviewed for living identity, plurality, geography, and source limitations. One observed interval, one border file, approximate dates, incorrect state kind, and missing review. Only exact-id feature, decoded geometry, seams, overlaps, memberships, and interval properties. Official regional history checked for the distinction between Komi-Zyrians and Komi-Permyaks and the medieval names Perm Vychegodskaya and Perm Velikaya. Academy language profile checked for the living Komi-Zyrian language, status, dialects, writing history, and present transmission. Academy language profile checked for distinct Komi-Permyak identity, dialect groups, distribution, writing, speaker estimate, and transmission risk. Indigenous-rights source checked for Izhma Komi self-identification and the difference between Indigenous identity and Russia’s narrow legal category.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "ko06-matsuk"
+          ],
+          "locator": "Pre-appearance control for exact-id absence and representative point ownership. Only exact-id feature, decoded geometry, seams, overlaps, memberships, and interval properties. Scholarly documentary monograph checked for charters, land transactions, petitions, taxation, farming, settlement, administration, transport obligations, and dated archival limits.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1537
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "ko32-arctic-history"
+          ],
+          "locator": "Academy monograph page checked for Ust-Tsilma, Izhma, Pechora-region history, documentary publication, and administrative development during the map interval.",
+          "dateScope": {
+            "from": 1537,
+            "to": 1545
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "ko06-matsuk"
+          ],
+          "locator": "Scholarly documentary monograph checked for charters, land transactions, petitions, taxation, farming, settlement, administration, transport obligations, and dated archival limits.",
+          "dateScope": {
+            "from": 1545,
+            "to": 1556
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "ko10-settlement-study"
+          ],
+          "locator": "Peer-reviewed regional study checked for new settlements in the 1585 to 1586 cadastres, named founders, family succession, migration, dating, and uncertainty.",
+          "dateScope": {
+            "from": 1556,
+            "to": 1564
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "ko10-settlement-study"
+          ],
+          "locator": "Peer-reviewed regional study checked for new settlements in the 1585 to 1586 cadastres, named founders, family succession, migration, dating, and uncertainty.",
+          "dateScope": {
+            "from": 1564,
+            "to": 1573
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "ko07-corpus-intro",
+            "ko08-corpus-one"
+          ],
+          "locator": "Published primary-source corpus introduction checked for document dates, provenance, administrative setting, geography, and household counts. Published transcriptions checked for the 1582 petition and 1585 to 1586 Uzhga, Yarensk, Vym, and Udora household, land, fishery, and levy records.",
+          "dateScope": {
+            "from": 1573,
+            "to": 1585
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "ko29-lashuk"
+          ],
+          "locator": "Historical and ethnographic monograph checked for Vym and Sysola settlement patterns, the 1585 to 1586 cadastre, local distinctions, contacts, and dated interpretation.",
+          "dateScope": {
+            "from": 1585,
+            "to": 1593
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1530",
+            "atlas-map-1600",
+            "ko06-matsuk"
+          ],
+          "locator": "Only exact-id feature, decoded geometry, seams, overlaps, memberships, and interval properties. Endpoint control where the exact id disappears and ownership layers change. Scholarly documentary monograph checked for charters, land transactions, petitions, taxation, farming, settlement, administration, transport obligations, and dated archival limits.",
+          "dateScope": {
+            "from": 1593,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-map-1530"
+          ],
+          "locator": "Exact decoded type, topology, position count, bounding box, and eastward displacement.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1530",
+            "atlas-summary"
+          ],
+          "locator": "All tested Komi, Komi-Permyak, and regional control memberships.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1530"
+          ],
+          "locator": "Eastern control memberships and the identity inference guardrail.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1530"
+          ],
+          "locator": "Exact shared-arc neighbors and nonhistorical seam interpretation.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "atlas-map-1600"
+          ],
+          "locator": "All-snapshot exact-id counts and adjacent seam changes.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "ko05-fenno-ugria"
+          ],
+          "locator": "Umbrella use, named peoples, standardized languages, and specificity rule.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "ko05-fenno-ugria"
+          ],
+          "locator": "Komi-Zyrian regional distribution and administrative-border guardrail.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "ko05-fenno-ugria"
+          ],
+          "locator": "Komi-Permyak distinction, upper Kama scope, and evidence labeling.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "ko05-fenno-ugria"
+          ],
+          "locator": "Naming history, self-identification, official categories, and temporal caution.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "ko23-medieval-review"
+          ],
+          "locator": "Vym culture evidence and archaeological-ethnic identity caution.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "ko08-corpus-one"
+          ],
+          "locator": "1582 petition, regional petitioners, representatives, and polity limit.",
+          "dateScope": {
+            "year": 1582
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "ko32-arctic-history"
+          ],
+          "locator": "Ust-Tsilma charter, privileges, obligations, and source perspective.",
+          "dateScope": {
+            "year": 1545
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "ko08-corpus-one",
+            "ko09-corpus-two"
+          ],
+          "locator": "Cadastre church and settlement entries with fiscal-source caution.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "ko07-corpus-intro"
+          ],
+          "locator": "Corpus geography, state setting, scribal-document provenance, and local agency.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "ko26-matsuk-taxes"
+          ],
+          "locator": "1597 local government, Siberian stores, boats, and anti-merger guardrail.",
+          "dateScope": {
+            "year": 1597
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "ko08-corpus-one"
+          ],
+          "locator": "Fields, hay, mixed economy, assessment purpose, and yield caution.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "ko09-corpus-two"
+          ],
+          "locator": "Traps, bird nets, fishing, levies, mixed livelihoods, and omissions.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "ko09-corpus-two"
+          ],
+          "locator": "Collective Sysola fishing waters and limits of generalization.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "ko23-medieval-review"
+          ],
+          "locator": "Archaeological subsistence evidence, preservation bias, and gentle humor.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "ko17-wild-plants"
+          ],
+          "locator": "Later wild-plant ethnography, seasonal knowledge, and dating limit.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "ko27-housing-study"
+          ],
+          "locator": "Later dwellings, furniture, cradles, storage, regions, and chronology.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "ko13-museum-ethnography"
+          ],
+          "locator": "Later transport and work equipment, environmental adaptation, and variation.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "ko28-dress-monograph"
+          ],
+          "locator": "Clothing materials, craft choices, regional styles, and dating restraint.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "ko29-lashuk"
+          ],
+          "locator": "Medieval contacts, exchange evidence, identity limits, and route framing.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "ko26-matsuk-taxes"
+          ],
+          "locator": "Boats, river transport, service obligations, mobility, and archival bias.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "ko10-settlement-study"
+          ],
+          "locator": "Named household relations, multigenerational residence, succession, and source gaps.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "ko06-matsuk"
+          ],
+          "locator": "Named women, hay meadow, children and sellers, and generalization limit.",
+          "dateScope": {
+            "year": 1559
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "ko09-corpus-two"
+          ],
+          "locator": "Widow-headed households, relatives, tax categories, and invisible labor.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "ko10-settlement-study"
+          ],
+          "locator": "Founders, descendants, widows, settlement dating, and uncertainty.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "ko13-museum-ethnography"
+          ],
+          "locator": "Later domestic objects, labor and care, collecting bias, and temporal scope.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "ko18-childhood-study"
+          ],
+          "locator": "Study period, family socialization, work learning, folklore, and guardrail.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "ko13-museum-ethnography",
+            "ko18-childhood-study"
+          ],
+          "locator": "Children’s objects, learning through play, variation, and gentle humor.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "ko19-kindergarten"
+          ],
+          "locator": "Modern preschool materials, content, family use, and adaptive continuity.",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "ko11-old-permic-proposal"
+          ],
+          "locator": "Exact 1510 form, expansion, transliteration, translation, and scope.",
+          "dateScope": {
+            "year": 1510
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "ko12-unicode-history"
+          ],
+          "locator": "Script origin, direction, uses, survival, transition, and literacy caution.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "ko20-medicine-folklore"
+          ],
+          "locator": "Folklore archive dates, healing narratives, adaptation, and nonprojection.",
+          "dateScope": {
+            "year": 2000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "ko20-medicine-folklore"
+          ],
+          "locator": "Recorded healing categories, memory, evidentiary distinction, and gentle humor.",
+          "dateScope": {
+            "year": 2000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "ko21-permyak-hygiene"
+          ],
+          "locator": "Komi-Permyak hygiene study, publication date, identity, and chronology.",
+          "dateScope": {
+            "year": 1991
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "ko22-sanitary-history"
+          ],
+          "locator": "Sanitary-history period, institutions, transformation, and earlier gap.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "ko07-corpus-intro"
+          ],
+          "locator": "Cadastre purpose, omitted health topics, archival silence, and humor.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "ko30-sysola-map"
+          ],
+          "locator": "Surveyed river settlements, fishery context, living places, and water-handling gap.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "ko31-archaeology-paper"
+          ],
+          "locator": "Exact excavated deposits, use and discard, and sanitation limit.",
+          "dateScope": {
+            "year": 1958
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "ko13-museum-ethnography"
+          ],
+          "locator": "Later domestic equipment, household tasks, date limits, and gentle humor.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "ko22-sanitary-history"
+          ],
+          "locator": "Later sanitation evidence, changing standards, and explicit toilet absence.",
+          "dateScope": {
+            "year": 1900
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "ko32-arctic-history"
+          ],
+          "locator": "Explicit negative evidence review for toilets and bounded humor.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "ko11-old-permic-proposal",
+            "ko12-unicode-history"
+          ],
+          "locator": "Old Permic achievement, evidence types, sample verification, and restraint.",
+          "dateScope": {
+            "year": 1510
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "ko29-lashuk"
+          ],
+          "locator": "Coordinated livelihoods, petitions, organization, and anti-king correction.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "ko31-archaeology-paper"
+          ],
+          "locator": "Sysola fortified sites, cadastre comparison, erosion, and interpretive method.",
+          "dateScope": {
+            "year": 1585
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "ko15-hunting-stories"
+          ],
+          "locator": "Hunting narrative functions, performance, modern date, and knowledge transmission.",
+          "dateScope": {
+            "year": 2015
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "ko16-indigenous-knowledge"
+          ],
+          "locator": "Living knowledge, collaboration, environmental change, and dynamic continuity.",
+          "dateScope": {
+            "year": 2022
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1530",
+            "atlas-map-1600",
+            "ko24-unpo",
+            "ko25-iwgia-oil"
+          ],
+          "locator": "Only exact-id feature, decoded geometry, seams, overlaps, memberships, and interval properties. Endpoint control where the exact id disappears and ownership layers change. Living-community profile checked for Komi language, cultural institutions, political representation, extractive pressure, and continuing advocacy. Indigenous-rights report checked for living local action, environmental damage, subsistence concerns, collective organization, and continuity.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "komi",
+        "name": "Komi peoples and regional histories",
+        "aliases": [
+          "Komi",
+          "Komi peoples"
+        ],
+        "kind": "culture",
+        "region": "Europe",
+        "from": 1530,
+        "to": 1600,
+        "circa": true,
+        "card": "cards/komi.json",
+        "dateBasis": "map_coverage",
+        "summary": "Living Komi peoples and languages, shown by one misplaced 1530 to 1600 atlas polygon; map coverage, not a centralized state’s lifetime or a modern administrative border.",
+        "summarySource": null,
+        "predecessors": [],
+        "successors": [],
+        "fell": null
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "komi",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            64.03924039240394,
+            60.061931793440095,
+            73.53973539735398,
+            66.64497287217597
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
