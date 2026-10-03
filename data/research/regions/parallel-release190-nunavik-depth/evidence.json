@@ -1,0 +1,908 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release190-nunavik research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported Nunavik id, display name, approximate 1492 to 1500 lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported modern administrative summary audited for anachronism and unsuitable fifteenth-century boundary claims."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, state classification, and exact missing-card status."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms the exact id has no live detailed card before packet integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms the exact id has no researched identity override before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms Nunavik is queued as an unresearched North American card."
+    },
+    {
+      "id": "atlas-map-1400",
+      "title": "Human History Map 1400 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 1400 snapshot control."
+    },
+    {
+      "id": "atlas-map-1492",
+      "title": "Human History Map 1492 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 1492 snapshot control."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 1500 snapshot control."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 1530 snapshot control."
+    },
+    {
+      "id": "n01-parnasimautik",
+      "title": "Makivvik and Nunavik partners, Parnasimautik Consultation Report",
+      "url": "https://www.krg.ca/iu/assets/parnasimautik/parnasimautik-consultation-report-2014-en.pdf",
+      "note": "Community consultation report page 3 describes Nunavik geography, Inuit homeland, archaeology, seasonal life, foods, early European contact, and later colonial change."
+    },
+    {
+      "id": "n02-avataq-region",
+      "title": "Avataq Cultural Institute, The Region of Nunavik",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/node_1723/node_1760",
+      "note": "Nunavik Inuit cultural institution explains the living place-name, regional scale, long occupation, Inuit arrival, later change, and Taamusi Qumaq place-name testimony."
+    },
+    {
+      "id": "n03-makivvik-region",
+      "title": "Makivvik Land Administration System, Region",
+      "url": "https://las.makivvik.ca/region/",
+      "note": "Nunavik Inuit organization distinguishes modern mainland and marine regions, 14 coastal villages, Chisasibi, shared-use areas, and current legal geography."
+    },
+    {
+      "id": "n04-parks-culture",
+      "title": "Nunavik Parks, Our Culture",
+      "url": "https://www.nunavikparks.ca/iu/our-culture",
+      "note": "Nunavik institution summarizes archaeology, seasonal family groups, foods, material technologies, katajjaniq, carving, and historically dated later changes."
+    },
+    {
+      "id": "n05-lexicon",
+      "title": "Avataq Cultural Institute, Nunavik Land Lexicon",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/The-land/Lexicon",
+      "note": "Community lexicon defines clothing, baby-carrying amautik, tools, dwelling types, transport, lamp, and natsiq as ringed seal."
+    },
+    {
+      "id": "n06-tools",
+      "title": "Avataq Cultural Institute, Our Tools",
+      "url": "https://www.avataq.qc.ca/en/Les-Nunavimmiuts/Le-territoire/Nos-outils",
+      "note": "Community tool guide describes qajaq, umiaq, kakivak, unaaq, qulliq, ulu, skin work, materials, and task specialization."
+    },
+    {
+      "id": "n07-precious",
+      "title": "Taamusi Qumaq, All That Is Precious to Us",
+      "url": "https://www.avataq.qc.ca/en/layout/set/print/Nunavimmiuts/The-land/All-that-is-precious-to-us",
+      "note": "A dated 1992 Nunavik elder account of rivers, fish, drinking water, snow, seasonal shelters, dogs, travel, materials, descendants, and continuity."
+    },
+    {
+      "id": "n08-busy",
+      "title": "Avataq Puurtaq Project, Inuit Have Always Been Busy",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/Puurtaq-Project/Inuit-have-always-been-busy",
+      "note": "Community memory project describes hunting, sewing, children helping parents and grandparents, snow clearing, hide work, driftwood, lamps, and autumn cold."
+    },
+    {
+      "id": "n09-qajaqs",
+      "title": "Avataq Puurtaq Project, Making Qajaqs",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/Puurtaq-Project/Making-qajaqs",
+      "note": "Community memory project describes driftwood selection, named frame pieces, sealskin preparation, specialized sewing, shared labor, celebration, portage, and family travel."
+    },
+    {
+      "id": "n10-igloo",
+      "title": "Avataq Puurtaq Project, Life in an Igloo",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/Puurtaq-Project/Life-in-an-igloo",
+      "note": "Community memory project records family-sized snow houses, cleaning, light, bedding, urine, water and waste chores, elders, lamps, cold, and lice."
+    },
+    {
+      "id": "n11-medicine",
+      "title": "Avataq Cultural Institute, Traditional Medicine",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/Traditional-Medicine",
+      "note": "Report based on 1983 elder group interviews in all 14 communities, emphasizing shared but variable knowledge, specialists, experimentation, and historical change."
+    },
+    {
+      "id": "n12-birth",
+      "title": "Avataq Cultural Institute, Pregnancy and Birth",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/Traditional-Medicine/Illnesses/Pregnancy-and-Birth",
+      "note": "Community traditional-medicine archive records midwifery knowledge and birth care from later elder interviews; used descriptively, never as medical advice."
+    },
+    {
+      "id": "n13-stories",
+      "title": "Avataq Cultural Institute, The Passing On of Traditional Stories and Tales in Nunavik",
+      "url": "https://www.avataq.qc.ca/en/content/download/1706/28353/file/1_language_summary.pdf",
+      "note": "Two-page historical summary covers oral teaching, audience correction, regional dialects, late introduction of writing, syllabics, and Mitiarjuk Nappaaluk."
+    },
+    {
+      "id": "n14-orthography",
+      "title": "Kativik Ilisarniliriniq Nunavik-IcE, Standard Orthography",
+      "url": "https://nunavik-ice.com/en/c/inuktitut-en/standard-orthography/",
+      "note": "Official Nunavik education resource gives paired alphabetic and syllabic forms, exact examples, consonant rules, nineteenth-century history, and the 1976 standard."
+    },
+    {
+      "id": "n15-language-dept",
+      "title": "Avataq Cultural Institute, Inuktitut Language Department",
+      "url": "https://www.avataq.qc.ca/en/Institute/Departments/Inuktitut-Language/About",
+      "note": "Nunavik Inuit institution documents the 1984 elders language commission, Taamusi Qumaq dictionary, terminology work, publications, and living language stewardship."
+    },
+    {
+      "id": "n16-genealogy",
+      "title": "Avataq Cultural Institute, Genealogy Methodology",
+      "url": "https://www.avataq.qc.ca/en/node_67/node_115/node_121/node_328/node_351",
+      "note": "Community genealogy guide explains Inukjuak interviews, family verification, customary adoption, kin terms, and sauniq namesake relationships."
+    },
+    {
+      "id": "n17-arch-history",
+      "title": "Avataq Cultural Institute, Archaeology Department History",
+      "url": "https://www.avataq.qc.ca/en/node_67/node_115/node_119/node_128/node_136",
+      "note": "Community institutional history describes Daniel Weetaluktuk, the 1983 elders resolution, department mandate, youth fieldwork, collaboration, and recorded sites."
+    },
+    {
+      "id": "n18-nunaingok",
+      "title": "Avataq Cultural Institute, Nunaingok (Ikirasaq) Site",
+      "url": "https://www.avataq.qc.ca/en/Institute/Departments/Archaeology/Projects-and-Activities/Research-projects/Site-JcDe-1-Nunaingok-Ikirasaq",
+      "note": "Community archaeology page documents mixed-period structures, qarmait, sleeping platform and entrance, long chronology, thousands of artifacts, and Inuit student training."
+    },
+    {
+      "id": "n19-paaliup",
+      "title": "Barbel et al., Paaliup Qarmangit 1 Site Geoarchaeology",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/gea.21753",
+      "note": "Peer-reviewed abstract identifies a single-family winter Thule-Inuit house, calibrated occupation ranges bracketing 1492, resource choices, and post-depositional mixing."
+    },
+    {
+      "id": "n20-quaqtaq",
+      "title": "Bhiry, Marguerie, and Lofthouse, Paleoenvironmental Reconstruction at Quaqtaq",
+      "url": "https://www.tandfonline.com/doi/full/10.1657/AAAR0015-045",
+      "note": "Peer-reviewed study separates Dorset and Thule Inuit occupations, reconstructs fall and winter marine-mammal use, environmental phases, and revised dating."
+    },
+    {
+      "id": "n21-place-names",
+      "title": "Avataq Cultural Institute, Place Names",
+      "url": "https://www.avataq.qc.ca/en/Institute/Departments/Research-Library-and-Archives/Place-names",
+      "note": "Community project records an elders mandate to collect, confirm, map, publish, and encourage everyday use of Inuit place names."
+    },
+    {
+      "id": "n22-water",
+      "title": "Martin et al., Drinking Water and Potential Threats to Human Health in Nunavik",
+      "url": "https://journalhosting.ucalgary.ca/index.php/arctic/article/view/63306",
+      "note": "Peer-reviewed 2003 to 2004 study distinguishes source water from household containers and recommends monitoring and improved modern water and wastewater systems."
+    },
+    {
+      "id": "n23-parks-faq",
+      "title": "Nunavik Parks, Frequently Asked Questions",
+      "url": "https://www.nunavikparks.ca/en/faq",
+      "note": "Current official visitor guidance covers hydration, treating water, cat-hole dimensions and distances, packing out paper, washing, waste, and artifact protection."
+    },
+    {
+      "id": "n24-archive",
+      "title": "Avataq Cultural Institute, Archival Centre",
+      "url": "https://www.avataq.qc.ca/en/Institute/Departments/Research-Library-and-Archives/The-documentation-center/Archival-Centre",
+      "note": "Community archive inventories oral histories, photographs, drawings, medicine interviews, Puurtaq memories, and twentieth-century change with collection dates."
+    },
+    {
+      "id": "n25-avataq-home",
+      "title": "Avataq Cultural Institute, Home",
+      "url": "https://www.avataq.qc.ca/en/Home",
+      "note": "Nunavik Inuit cultural institution presents living language, culture, heritage work, elders, youth, collections, and continuing community stewardship."
+    },
+    {
+      "id": "n26-mala",
+      "title": "Kativik School Board, Through Mala’s Eyes",
+      "url": "https://www.avataq.qc.ca/iu/content/download/1804/29159/file/mala_EN.pdf",
+      "note": "Nunavik education resource dates contact and settlement changes, describes current sharing and schooling, and identifies Inuktitut as the dominant regional language."
+    },
+    {
+      "id": "n27-airports",
+      "title": "Avataq Cultural Institute, Airport Archaeological Pre-assessment",
+      "url": "https://www.avataq.qc.ca/en/content/view/full/342",
+      "note": "Community-led 1985 to 1987 inventories around nine communities identified more than 250 sites, excavated four, and protected threatened cultural remains."
+    },
+    {
+      "id": "n28-collections",
+      "title": "Avataq Cultural Institute, Collections",
+      "url": "https://www.avataq.qc.ca/en/Collections",
+      "note": "Community institution describes archaeology, documentary, art, and ethnography collections and their evidence for long regional presence, daily life, ingenuity, and expression."
+    },
+    {
+      "id": "n29-kangirsuk",
+      "title": "Taamusi Qumaq, Kangirsuk",
+      "url": "https://www.avataq.qc.ca/en/Nunavimmiuts/The-land/14-villages-and-1-community/Kangirsuk",
+      "note": "Dated 1992 community portrait explains Arctic char variation, ice fishing with kakivak, tides, hospitality, travel, and living Inuktitut."
+    },
+    {
+      "id": "n30-archaeology",
+      "title": "Avataq Cultural Institute, Archaeology Department",
+      "url": "https://www.avataq.qc.ca/en/Institute/Departments/Archaeology",
+      "note": "Elders-mandated department identifies, studies, protects, and preserves Nunavik archaeological heritage while involving communities, elders, and youth."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nunavik",
+      "card": "data/cards/nunavik.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "n01-parnasimautik",
+            "atlas-map-1492",
+            "atlas-map-1500"
+          ],
+          "locator": "Community consultation report page 3 describes Nunavik geography, Inuit homeland, archaeology, seasonal life, foods, early European contact, and later colonial change. Decoded geometry, representative-point ownership, overlap, shared-arc, and 1492 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 1500 snapshot control.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492"
+          ],
+          "locator": "Exact imported Nunavik id, display name, approximate 1492 to 1500 lifetime, and historical-basemap provenance. Decoded geometry, representative-point ownership, overlap, shared-arc, and 1492 snapshot control.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "n19-paaliup"
+          ],
+          "locator": "Peer-reviewed abstract identifies a single-family winter Thule-Inuit house, calibrated occupation ranges bracketing 1492, resource choices, and post-depositional mixing.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "n07-precious"
+          ],
+          "locator": "A dated 1992 Nunavik elder account of rivers, fish, drinking water, snow, seasonal shelters, dogs, travel, materials, descendants, and continuity.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "n06-tools"
+          ],
+          "locator": "Community tool guide describes qajaq, umiaq, kakivak, unaaq, qulliq, ulu, skin work, materials, and task specialization.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "n21-place-names"
+          ],
+          "locator": "Community project records an elders mandate to collect, confirm, map, publish, and encourage everyday use of Inuit place names.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "n12-birth"
+          ],
+          "locator": "Community traditional-medicine archive records midwifery knowledge and birth care from later elder interviews; used descriptively, never as medical advice.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "n13-stories"
+          ],
+          "locator": "Two-page historical summary covers oral teaching, audience correction, regional dialects, late introduction of writing, syllabics, and Mitiarjuk Nappaaluk.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "n15-language-dept"
+          ],
+          "locator": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 1500 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 1530 snapshot control. Nunavik Inuit institution documents the 1984 elders language commission, Taamusi Qumaq dictionary, terminology work, publications, and living language stewardship.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage"
+          ],
+          "locator": "Repository data/hb/civilizations-hb.json, exact id nunavik and fields name, from, to, circa, generated. | Repository data/hb/summaries-hb.json, exact key nunavik and imported modern summary. | Repository data/research/coverage.json, exact record, kind, observedIntervals, borderFiles, and content fields.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "n03-makivvik-region"
+          ],
+          "locator": "Makivvik Region, Nunavik Marine Region and Nunavik Region sections, boundaries, shared-use zones, mainland scale, communities, and Chisasibi distinction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Repository world-1492.json, exact feature, decoded ring, bbox, overlaps, shared arcs, and point tests.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "n03-makivvik-region"
+          ],
+          "locator": "Repository world-1492.json, exact feature, decoded ring, bbox, overlaps, shared arcs, and point tests. | Makivvik Region, Nunavik Marine Region and Nunavik Region sections, boundaries, shared-use zones, mainland scale, communities, and Chisasibi distinction.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Repository world-1400.json, exact-id absence and representative-point ownership controls. | Repository world-1492.json, exact feature, decoded ring, bbox, overlaps, shared arcs, and point tests. | Repository world-1500.json, exact-id absence and representative-point repaint controls. | Repository world-1530.json, exact-id absence and post-endpoint repaint controls.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "n19-paaliup"
+          ],
+          "locator": "Geoarchaeology 34, abstract for DOI 10.1002/gea.21753, dwelling, calibrated ranges, resources, processes, and mixing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "n20-quaqtaq"
+          ],
+          "locator": "Arctic Antarctic and Alpine Research 48, abstract and discussion of JfEl-10 phases, revised dates, seasonal use, marine mammals, and site formation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "n18-nunaingok"
+          ],
+          "locator": "Avataq Nunaingok site, lines 53 to 67, structures, chronology, sleeping platform, artifacts, excavation, and student training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "n27-airports"
+          ],
+          "locator": "Avataq Airport Archaeological Pre-assessment, 1985 to 1987 section, nine communities, survey radius, 250 sites, four excavations, and safeguarding.",
+          "dateScope": {
+            "year": 1986
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "n17-arch-history",
+            "n30-archaeology"
+          ],
+          "locator": "Avataq Archaeology History, department creation, elders resolution, youth fieldwork, projects, recorded sites, and collaboration sections. | Avataq Archaeology Department, elders mandate and objectives for identifying, studying, protecting, preserving, and sharing archaeological heritage.",
+          "dateScope": {
+            "year": 1985
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "n04-parks-culture"
+          ],
+          "locator": "Nunavik Parks Our Culture, 4500 Years, Inuit Way of Life, Throat Singing, and Carving sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "n07-precious"
+          ],
+          "locator": "Taamusi Qumaq 1992 All That Is Precious to Us, paragraphs on rivers, fish, water, snow, shelters, dogs, and descendants.",
+          "dateScope": {
+            "year": 1992
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "n04-parks-culture"
+          ],
+          "locator": "Nunavik Parks Our Culture, 4500 Years, Inuit Way of Life, Throat Singing, and Carving sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "n04-parks-culture"
+          ],
+          "locator": "Nunavik Parks Our Culture, 4500 Years, Inuit Way of Life, Throat Singing, and Carving sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "n29-kangirsuk"
+          ],
+          "locator": "Taamusi Qumaq 1992 Kangirsuk portrait, Arctic char diet differences, ice fishing, kakivak, travel, hospitality, and language.",
+          "dateScope": {
+            "year": 1992
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "n05-lexicon"
+          ],
+          "locator": "Avataq Lexicon entries amautik, annuraat, kakivak, illuq, natsiq, qamutiik, qarmaq, qulliq, tupiq, ulu, and umiaq.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "n06-tools"
+          ],
+          "locator": "Avataq Our Tools, entries and descriptions for qajaq, umiaq, kakivak, unaaq, qulliq, ulu, materials, and work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "n09-qajaqs"
+          ],
+          "locator": "Avataq Puurtaq Making Qajaqs, lines 30 to 35, driftwood, parts, skins, sewing, roles, celebration, family travel, and dogs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "n09-qajaqs"
+          ],
+          "locator": "Avataq Puurtaq Making Qajaqs, lines 30 to 35, driftwood, parts, skins, sewing, roles, celebration, family travel, and dogs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "n05-lexicon"
+          ],
+          "locator": "Avataq Lexicon entries amautik, annuraat, kakivak, illuq, natsiq, qamutiik, qarmaq, qulliq, tupiq, ulu, and umiaq.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "n08-busy"
+          ],
+          "locator": "Avataq Puurtaq Inuit Have Always Been Busy, lines 30 to 32, household roles, children, grandparents, driftwood, sewing, qulliq, and autumn cold.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "n08-busy"
+          ],
+          "locator": "Avataq Puurtaq Inuit Have Always Been Busy, lines 30 to 32, household roles, children, grandparents, driftwood, sewing, qulliq, and autumn cold.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "n16-genealogy"
+          ],
+          "locator": "Avataq Genealogy Methodology, interview and verification sections plus Adoptions and sauniq namesakes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "n16-genealogy"
+          ],
+          "locator": "Avataq Genealogy Methodology, interview and verification sections plus Adoptions and sauniq namesakes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "n04-parks-culture"
+          ],
+          "locator": "Nunavik Parks Our Culture, 4500 Years, Inuit Way of Life, Throat Singing, and Carving sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "n13-stories"
+          ],
+          "locator": "Avataq language-history PDF page 1 lines 4 to 39 and page 2 lines 44 to 57, oral transmission, writing history, dialects, and literature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "n13-stories"
+          ],
+          "locator": "Avataq language-history PDF page 1 lines 4 to 39 and page 2 lines 44 to 57, oral transmission, writing history, dialects, and literature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "n21-place-names"
+          ],
+          "locator": "Avataq Place Names, elders 1983 resolution, project objectives, local confirmation, official recognition, maps, and gazetteer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "n18-nunaingok",
+            "n17-arch-history"
+          ],
+          "locator": "Avataq Nunaingok site, lines 53 to 67, structures, chronology, sleeping platform, artifacts, excavation, and student training. | Avataq Archaeology History, department creation, elders resolution, youth fieldwork, projects, recorded sites, and collaboration sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "n26-mala"
+          ],
+          "locator": "Through Mala’s Eyes PDF, page 13, contact chronology, settlement, sharing, schools, Inuktitut, Inuit educators, and classroom materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "n13-stories"
+          ],
+          "locator": "Avataq language-history PDF page 1 lines 4 to 39 and page 2 lines 44 to 57, oral transmission, writing history, dialects, and literature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "n14-orthography",
+            "n05-lexicon"
+          ],
+          "locator": "Nunavik-IcE Standard Orthography, lines 40 to 60 and 63 to 76, two systems, exact examples, consonants, history, and 1976 standard. | Avataq Lexicon entries amautik, annuraat, kakivak, illuq, natsiq, qamutiik, qarmaq, qulliq, tupiq, ulu, and umiaq.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "n14-orthography"
+          ],
+          "locator": "Nunavik-IcE Standard Orthography, lines 40 to 60 and 63 to 76, two systems, exact examples, consonants, history, and 1976 standard.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "n14-orthography"
+          ],
+          "locator": "Nunavik-IcE Standard Orthography, lines 40 to 60 and 63 to 76, two systems, exact examples, consonants, history, and 1976 standard.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "n15-language-dept"
+          ],
+          "locator": "Avataq Inuktitut Language Department About, sections on the 1984 commission, Qumaq dictionary, terminology workshops, publications, and mandate.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "n11-medicine"
+          ],
+          "locator": "Avataq Traditional Medicine, lines 47 to 58, 1983 interviews, community variation, shared knowledge, specialists, experimentation, and cautions.",
+          "dateScope": {
+            "year": 1983
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "n11-medicine"
+          ],
+          "locator": "Avataq Traditional Medicine, lines 47 to 58, 1983 interviews, community variation, shared knowledge, specialists, experimentation, and cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "n11-medicine"
+          ],
+          "locator": "Avataq Traditional Medicine, lines 47 to 58, 1983 interviews, community variation, shared knowledge, specialists, experimentation, and cautions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "n12-birth"
+          ],
+          "locator": "Avataq Pregnancy and Birth, sections on midwives, labor, postpartum and newborn care, read as recorded history rather than advice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "n05-lexicon"
+          ],
+          "locator": "Avataq Lexicon entries amautik, annuraat, kakivak, illuq, natsiq, qamutiik, qarmaq, qulliq, tupiq, ulu, and umiaq.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "n07-precious",
+            "n22-water"
+          ],
+          "locator": "Taamusi Qumaq 1992 All That Is Precious to Us, paragraphs on rivers, fish, water, snow, shelters, dogs, and descendants. | Arctic 60(2), article abstract and journal pages 195 to 202, collection sites, containers, contamination, monitoring, wastewater, and health strategy.",
+          "dateScope": {
+            "year": 1992
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "n10-igloo"
+          ],
+          "locator": "Avataq Puurtaq Life in an Igloo, lines 30 to 37, family size, cleaning, snow, urine, waste bucket, water, grandparents, qulliq, and lice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "n10-igloo"
+          ],
+          "locator": "Avataq Puurtaq Life in an Igloo, lines 30 to 37, family size, cleaning, snow, urine, waste bucket, water, grandparents, qulliq, and lice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "n19-paaliup",
+            "n18-nunaingok"
+          ],
+          "locator": "Geoarchaeology 34, abstract for DOI 10.1002/gea.21753, dwelling, calibrated ranges, resources, processes, and mixing. | Avataq Nunaingok site, lines 53 to 67, structures, chronology, sleeping platform, artifacts, excavation, and student training.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "n23-parks-faq"
+          ],
+          "locator": "Nunavik Parks FAQ, Leave No Trace and hydration sections, water treatment, 15 to 20 centimetre cat holes, 70 metre separation, washing, and pack-out.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "n06-tools"
+          ],
+          "locator": "Avataq Our Tools, entries and descriptions for qajaq, umiaq, kakivak, unaaq, qulliq, ulu, materials, and work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "n09-qajaqs"
+          ],
+          "locator": "Avataq Puurtaq Making Qajaqs, lines 30 to 35, driftwood, parts, skins, sewing, roles, celebration, family travel, and dogs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "n21-place-names"
+          ],
+          "locator": "Avataq Place Names, elders 1983 resolution, project objectives, local confirmation, official recognition, maps, and gazetteer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "n22-water"
+          ],
+          "locator": "Arctic 60(2), article abstract and journal pages 195 to 202, collection sites, containers, contamination, monitoring, wastewater, and health strategy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "n24-archive",
+            "n28-collections"
+          ],
+          "locator": "Avataq Archival Centre, collection overview and dated list of oral history, medicine, Puurtaq, photographs, films, drawings, and documentary holdings. | Avataq Collections, archaeology, archives, art and ethnography sections, long presence, daily life, ingenuity, and expression.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "n02-avataq-region",
+            "n25-avataq-home"
+          ],
+          "locator": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 1500 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 1530 snapshot control. Nunavik Inuit cultural institution explains the living place-name, regional scale, long occupation, Inuit arrival, later change, and Taamusi Qumaq place-name testimony. Nunavik Inuit cultural institution presents living language, culture, heritage work, elders, youth, collections, and continuing community stewardship.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nunavik",
+        "name": "Nunavik Inuit homelands (atlas layer)",
+        "aliases": [
+          "Nunavik",
+          "Nunavik Inuit homelands"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/nunavik.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1492 to 1500 atlas layer for Inuit history in Nunavik, distinct from modern legal boundaries.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nunavik",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -78.9289892898929,
+            54.31688500022038,
+            -63.23643236432363,
+            62.51772483729307
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
