@@ -1,0 +1,847 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release189-lambakannas research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact lambakannas record, imported display name, approximate 900 to 1000 lifetime, and historical-basemaps provenance."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact target coverage record: state classification, approximate dates, one observed interval and border file, and missing content review."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Exact target record confirming missing summary, no source lead, and no staged draft before this packet."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Exact-id absence check confirming no lambakannas runtime card before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Exact-id absence check confirming no lambakannas researched override before integration."
+    },
+    {
+      "id": "atlas-map-800",
+      "title": "Human History Map 800 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded predecessor snapshot and representative-point ownership tests for sinhalese-kingdoms."
+    },
+    {
+      "id": "atlas-map-900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Only exact target feature, decoded geometry, bounds, point memberships, and precision metadata."
+    },
+    {
+      "id": "atlas-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Endpoint repaint control showing the exact id absent and chola-empire at tested island locations."
+    },
+    {
+      "id": "atlas-map-1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Post-endpoint control showing the continued chola-empire repaint at tested island locations."
+    },
+    {
+      "id": "l01-kassapa-text",
+      "title": "Wickremasinghe, Anuradhapura Slab Inscription of Kassapa V, Epigraphia Zeylanica 1",
+      "url": "https://zenodo.org/records/3541012",
+      "note": "Direct transcript and translation. Printed pages 41 to 57; translation lines 6 to 56 covers monasteries, medical halls, tanks, study, protections, youths, care, and accounts."
+    },
+    {
+      "id": "l02-kassapa-siddham",
+      "title": "Siddham, Anuradhapura Slab Inscription of Kassapa V",
+      "url": "https://siddham.network/inscription/in03027/",
+      "note": "Curated inscription record and object linkage. Checked with object OB03022 and the direct Epigraphia Zeylanica transcript."
+    },
+    {
+      "id": "l03-mihintale-text",
+      "title": "Wickremasinghe, Two Tablets of Mahinda IV at Mihintale, Epigraphia Zeylanica 1",
+      "url": "https://zenodo.org/records/3541024",
+      "note": "Direct transcript and translation. Printed pages 98 to 113; Slab A lines 9 to 58 and Slab B lines 1 to 58 cover study, illness, accounts, work, pay, crafts, medicine, cleaning, and water."
+    },
+    {
+      "id": "l04-mihintale-siddham",
+      "title": "Siddham, Mihintale Inscription of Mahinda IV",
+      "url": "https://siddham.network/inscription/in03030/",
+      "note": "Curated record and full line-group translation: two 58-line Sinhala prose slabs installed by Mahinda IV, with sixteenth regnal-year preamble and monastery regulations."
+    },
+    {
+      "id": "l05-mahinda-anuradhapura-text",
+      "title": "Wickremasinghe, Anuradhapura Slab Inscription of Mahinda IV, Epigraphia Zeylanica 1",
+      "url": "https://zenodo.org/records/3541029",
+      "note": "Direct transcript and translation. Printed pages 113 to 120; transcript line 44 and translation lines 41 to 45 preserve daḷdā-ge and Tooth-relic-house."
+    },
+    {
+      "id": "l06-mahinda-anuradhapura-siddham",
+      "title": "Siddham, Anuradhapura Slab Inscription of Mahinda IV",
+      "url": "https://siddham.network/inscription/in03031/",
+      "note": "Curated record and translation, lines 1 to 49: same style and language as Mihintale, made months later, with land rules and Tooth-relic-house identification."
+    },
+    {
+      "id": "l07-badulla-text",
+      "title": "Paranavitana, Badulla Pillar Inscription, Epigraphia Zeylanica 3",
+      "url": "https://zenodo.org/records/3673666",
+      "note": "Direct revised transcript and translation. Printed pages 71 to 100; translation sides A to D covers petition, joint sessions, family restraint, goods, tolls, transit, and redress."
+    },
+    {
+      "id": "l08-badulla-siddham",
+      "title": "Siddham, Badulla Pillar Inscription",
+      "url": "https://siddham.network/inscription/in03108/",
+      "note": "Curated record: 203 lines, nearly 2,000 akṣaras, second regnal year of Siri Saṅg-bo Udā, mid-tenth-century palaeography, and Udaya identification caveat."
+    },
+    {
+      "id": "l09-kukurumahan-hospital",
+      "title": "Siddham, Kukurumahan-Damana Pillar Inscription",
+      "url": "https://siddham.network/inscription/in03069/",
+      "note": "Curated record: 73 lines in tenth-century Sinhala alphabet, eleventh regnal year of Siri Saṅg-bo, immunities for a village belonging to an Anuradhapura hospital, and ruler-attribution argument."
+    },
+    {
+      "id": "l10-polonnaruva-hospital",
+      "title": "Siddham, Poḷonnaruva Council Chamber Pillar Inscription",
+      "url": "https://siddham.network/inscription/in03158/",
+      "note": "Curated record: fourth regnal year of Abhaya Salamevan, uncertain Kassapa V or Dappula V attribution, and annual dried-ginger payment to a hospital."
+    },
+    {
+      "id": "l11-velmilla",
+      "title": "Siddham, Velmilla Slab Inscription of Sena III",
+      "url": "https://siddham.network/inscription/in03145/",
+      "note": "Curated record, paragraphs 1 to 5: damaged slab, eighth regnal year, elimination-based Sena III attribution, named heir, and pamuṇu immunities."
+    },
+    {
+      "id": "l12-kataragama",
+      "title": "Siddham, Kataragama Pillar Inscription of Dappula V",
+      "url": "https://siddham.network/inscription/in03131/",
+      "note": "Curated record, paragraphs 1 to 5: sixth regnal year, alternative circa 946 or 924 dating, Rohaṇa grant, prince Lämäni Mihind, and possible future Mahinda IV identification."
+    },
+    {
+      "id": "l13-codrington",
+      "title": "H. W. Codrington, List of the Sovereigns of Lanka",
+      "url": "https://books.lakdiva.org.lk/codrington/sovereigns.html",
+      "note": "Older chronological reconstruction, table lines Udaya I through Mahinda V. Used only with explicit warning that its dates and numbering conflict with inscriptional identifications."
+    },
+    {
+      "id": "l14-seshat-identity",
+      "title": "Seshat, Anurādhapura IV polity profile",
+      "url": "https://seshat-db.com/core/polity/629",
+      "note": "Scholarly databank profile, general description citing K. M. de Silva pages 18 to 19: Second Lambakanna dynasty, late Anuradhapura polity, and South Indian pressures."
+    },
+    {
+      "id": "l15-tang-pottery",
+      "title": "Priyantha Jayasingha, Tang dynasty pottery in Sri Lanka",
+      "url": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/tang-dynasty-pottery-in-sri-lanka/8448728090656549A97CEB197BCF46F2",
+      "note": "Antiquity Project Gallery 80.309, printed pages 1 to 4, especially Pottery in Sri Lanka: Tang and Five Dynasties ceramics at Mantai and inland monasteries, with shipboard-storage interpretation kept tentative."
+    },
+    {
+      "id": "l24-food-inscriptions",
+      "title": "L. Thilini Tharushi De Silva, An Investigative Study of Food Culture in Ancient Ceylon through Inscriptions",
+      "url": "https://ours.ou.ac.lk/wp-content/uploads/2019/12/Abastracts-Open-University-Research-Sessions-October-2019-81.pdf",
+      "note": "Open University Research Sessions 2019 abstract, printed page 81: named inscriptions and foods across the first through thirteenth centuries, mostly monastic offerings; the broad chronology is explicit."
+    },
+    {
+      "id": "l25-chola-thesis",
+      "title": "W. M. K. Wijetunga, The rise and decline of Chola power in Ceylon",
+      "url": "https://soas-repository.worktribe.com/output/402821/the-rise-and-decline-of-chola-power-in-ceylon",
+      "note": "SOAS PhD thesis repository abstract and chapter map: pre-tenth-century relations, Rajaraja occupation, Rajendra consolidation, resistance, administration, economy, society, and religion. Used for staged-transition structure, not its typographical regnal dates."
+    },
+    {
+      "id": "l16-sanitation",
+      "title": "W. I. Siriweera, Sanitation and Health Care in Ancient Sri Lanka",
+      "url": "https://ir.lib.pdn.ac.lk/server/api/core/bitstreams/422c7023-c08b-46fa-a084-fd20c69bf293/content",
+      "note": "University of Peradeniya repository article. Printed pages 1 to 5 cover sanitation and late Anuradhapura hospitals; page 9 covers Mihintale physicians, leech practice, staff, and remuneration."
+    },
+    {
+      "id": "l26-medical-economy",
+      "title": "Zhongwu Ma and N. S. Gunawardana, The Interplay of Monastic Economy and Medical Practices in the Kingdom of Anuradhapura",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00182370.2024.2485391",
+      "note": "Peer-reviewed Historian 86.4, pages 258 to 276; abstract and epigraphic discussion connect grants, hospital construction, education, healthcare, and monastic economic institutions through the early eleventh century."
+    },
+    {
+      "id": "l17-water",
+      "title": "Abeywardana, Bebermeier and Schütt, Ancient Water Management and Governance in the Dry Zone of Sri Lanka",
+      "url": "https://www.mdpi.com/2073-4441/10/12/1746",
+      "note": "Peer-reviewed open article, sections 3.1 to 3.3 and Tables 2 to 4: tanks, water shares, ownership, settlement, and historically layered governance."
+    },
+    {
+      "id": "l18-coins",
+      "title": "Central Bank of Sri Lanka, Currency Museum Guide",
+      "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_images/publications/museum_guide_e.pdf",
+      "note": "Official museum guide, printed page 19: eighth- to eleventh-century gold kahavanu, standing and seated figures, and alternative readings of the Nāgarī legend."
+    },
+    {
+      "id": "l19-chola-transition",
+      "title": "George W. Spencer, The Politics of Plunder: The Cholas in Eleventh-Century Ceylon",
+      "url": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/politics-of-plunder-the-cholas-in-eleventhcentury-ceylon/926938631DA4BF69B0DED43421E08658",
+      "note": "Peer-reviewed article, notes 15 and 21 to 31: earliest 993 conquest-list evidence, later chronicle authorship, 1017 problem, Chola foothold, and Polonnaruwa evidence."
+    },
+    {
+      "id": "l20-unesco-anuradhapura",
+      "title": "UNESCO World Heritage Centre, Sacred City of Anuradhapura",
+      "url": "https://whc.unesco.org/en/list/200",
+      "note": "Authoritative heritage description: 1,300-year political and religious capital, invasion in 993, abandonment narrative, and surviving palaces, monasteries, and monuments."
+    },
+    {
+      "id": "l21-kingship-thesis",
+      "title": "Sujantha Gunasena, Kingship in Ceylon from the fourth to the tenth century A.D.",
+      "url": "https://soas-repository.worktribe.com/output/413521/kingship-in-ceylon-from-the-fourth-to-the-tenth-century-ad",
+      "note": "SOAS PhD thesis repository abstract and chapter map: political background, sources, royal titles and names, royal family and offices, consecration, the nature of rule, and relations between kingship and the Sangha."
+    },
+    {
+      "id": "l22-meditation-monasteries",
+      "title": "UNESCO World Heritage Centre, Buddhist Meditation Monasteries of Ancient Sri Lanka",
+      "url": "https://whc.unesco.org/en/tentativelists/6774",
+      "note": "Sri Lankan tentative-list dossier: Ritigala, Manakanda, Arankele, and Maligatenna as fifth- to tenth-century archaeological monastic sites, with preservation context."
+    },
+    {
+      "id": "l23-information-preservation",
+      "title": "Trivalent, Information Preservation and Dissemination in Ancient Sri Lanka",
+      "url": "https://journals.kln.ac.lk/trivalent/media/attachments/2023/02/20/trivalent-vol-ii-issue-ii-1-1.pdf",
+      "note": "University of Kelaniya journal article, printed pages 34 to 36: Badulla petition, lost earlier rule, public inscription, offices, and documentary preservation."
+    }
+  ],
+  "entities": [
+    {
+      "id": "lambakannas",
+      "card": "data/cards/lambakannas.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "l14-seshat-identity",
+            "l21-kingship-thesis"
+          ],
+          "locator": "Exact lambakannas record, imported display name, approximate 900 to 1000 lifetime, and historical-basemaps provenance. Scholarly databank profile, general description citing K. M. de Silva pages 18 to 19: Second Lambakanna dynasty, late Anuradhapura polity, and South Indian pressures. SOAS PhD thesis repository abstract and chapter map: political background, sources, royal titles and names, royal family and offices, consecration, the nature of rule, and relations between kingship and the Sangha.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "l13-codrington"
+          ],
+          "locator": "Older chronological reconstruction, table lines Udaya I through Mahinda V. Used only with explicit warning that its dates and numbering conflict with inscriptional identifications.",
+          "dateScope": {
+            "from": 900,
+            "to": 912
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "l09-kukurumahan-hospital"
+          ],
+          "locator": "Curated record: 73 lines in tenth-century Sinhala alphabet, eleventh regnal year of Siri Saṅg-bo, immunities for a village belonging to an Anuradhapura hospital, and ruler-attribution argument.",
+          "dateScope": {
+            "from": 912,
+            "to": 929
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "l02-kassapa-siddham"
+          ],
+          "locator": "Curated inscription record and object linkage. Checked with object OB03022 and the direct Epigraphia Zeylanica transcript.",
+          "dateScope": {
+            "from": 929,
+            "to": 940
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "l12-kataragama"
+          ],
+          "locator": "Curated record, paragraphs 1 to 5: sixth regnal year, alternative circa 946 or 924 dating, Rohaṇa grant, prince Lämäni Mihind, and possible future Mahinda IV identification.",
+          "dateScope": {
+            "from": 940,
+            "to": 952
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "l11-velmilla"
+          ],
+          "locator": "Curated record, paragraphs 1 to 5: damaged slab, eighth regnal year, elimination-based Sena III attribution, named heir, and pamuṇu immunities.",
+          "dateScope": {
+            "from": 952,
+            "to": 964
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "l13-codrington"
+          ],
+          "locator": "Older chronological reconstruction, table lines Udaya I through Mahinda V. Used only with explicit warning that its dates and numbering conflict with inscriptional identifications.",
+          "dateScope": {
+            "from": 964,
+            "to": 975
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "l04-mihintale-siddham"
+          ],
+          "locator": "Curated record and full line-group translation: two 58-line Sinhala prose slabs installed by Mahinda IV, with sixteenth regnal-year preamble and monastery regulations.",
+          "dateScope": {
+            "from": 975,
+            "to": 991
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "l20-unesco-anuradhapura",
+            "l25-chola-thesis"
+          ],
+          "locator": "Authoritative heritage description: 1,300-year political and religious capital, invasion in 993, abandonment narrative, and surviving palaces, monasteries, and monuments. SOAS PhD thesis repository abstract and chapter map: pre-tenth-century relations, Rajaraja occupation, Rajendra consolidation, resistance, administration, economy, society, and religion. Used for staged-transition structure, not its typographical regnal dates.",
+          "dateScope": {
+            "from": 991,
+            "to": 1000
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-coverage",
+            "atlas-missing",
+            "atlas-card-index",
+            "atlas-overrides"
+          ],
+          "locator": "Repository data/research/coverage.json exact lambakannas record; data/research/missing-cards.json exact record; data/cards/index.json and data/researched-overrides.json exact-id absence checks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-900"
+          ],
+          "locator": "Repository data/hb/borders/world-900.json exact lambakannas feature; decoded geometry hash, bbox, component statistics, and representative point-in-polygon tests.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-800",
+            "atlas-map-900"
+          ],
+          "locator": "Repository data/hb/borders/world-800.json and world-900.json decoded representative-point owners at Anuradhapura, Mihintale, Mantai, Polonnaruwa, Badulla, Kataragama, and Tissamaharama.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1000"
+          ],
+          "locator": "Repository data/hb/borders/world-1000.json exact-id absence and decoded representative ownership for the ten former target points and Madurai.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1100",
+            "atlas-index"
+          ],
+          "locator": "Repository data/hb/borders/world-1100.json representative owners; data/hb/civilizations-hb.json exact lambakannas lifetime and separate indexed ids checked in the geometry identity audit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "l13-codrington"
+          ],
+          "locator": "Codrington, List of the Sovereigns of Lanka, table lines 111 to 123, including question-marked alternatives and Mahinda V deportation note.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "l02-kassapa-siddham"
+          ],
+          "locator": "Siddham IN03027 and linked object OB03022, metadata, findspot, authority, and edition reference Epigraphia Zeylanica 1, pages 41 to 57.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "l08-badulla-siddham"
+          ],
+          "locator": "Siddham IN03108 opening description, 203-line count, regnal formula, Paranavitana attribution, circa 942 calculation, and mid-tenth-century palaeographic date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "l11-velmilla"
+          ],
+          "locator": "Siddham IN03145 paragraphs 1 to 5, especially damaged object description and the Sena III elimination argument based on reign length and heir Udaya.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "l04-mihintale-siddham"
+          ],
+          "locator": "Siddham IN03030 description and translation lines 1 to 9, identifying Mahinda IV, the sixteenth regnal year, assembly, and scope of regulations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "l23-information-preservation"
+          ],
+          "locator": "Trivalent volume II issue II, printed pages 34 to 36, Badulla case study on the petition, unwritten earlier statute, royal decree, and public inscription.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "l07-badulla-text"
+          ],
+          "locator": "Badulla Pillar translation, side A lines 15 to 39 and side B opening, joint session of officials, merchant community, and village elders.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "l08-badulla-siddham"
+          ],
+          "locator": "Siddham IN03108, descriptive paragraphs 4 to 5: mid-tenth-century date, village-administration charter, mercantile corporations, fines, arrest, and assistance to royal officers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "l07-badulla-text"
+          ],
+          "locator": "Badulla Pillar revised translation, Epigraphia Zeylanica 3, sides B and C, demanded liquor, meat, curd, ghee, toddy, illicit trade, and pack-bull protection.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "l07-badulla-text"
+          ],
+          "locator": "Badulla Pillar revised translation, Epigraphia Zeylanica 3, sides C and D, toll, concealed sales, transit exemption, complaint inquiry, and named erecting officers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "l01-kassapa-text"
+          ],
+          "locator": "Kassapa V transcript and translation, lines 6 to 12, Epigraphia Zeylanica 1, printed pages 48 to 50, monasteries, medical halls, and two tanks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "l01-kassapa-text"
+          ],
+          "locator": "Kassapa V translation, lines 15 to 20, Epigraphia Zeylanica 1, protections for laborers, carts, oxen, buffaloes, and trees.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "l05-mahinda-anuradhapura-text"
+          ],
+          "locator": "Mahinda IV Anuradhapura translation, lines 8 to 20, local text lines 58 to 60, forest clearance, tanks, ponds, sales, shares, and editorial lacunae.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "l05-mahinda-anuradhapura-text"
+          ],
+          "locator": "Mahinda IV Anuradhapura translation, lines 25 to 35, local text lines 62 to 63, fruits, wells, tenants, five residents, and injustice prohibition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "l17-water"
+          ],
+          "locator": "Abeywardana, Bebermeier and Schütt, sections 3.1 to 3.3 and Tables 2 to 4 on tank systems, governance, ownership, settlement, and chronological variation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "l15-tang-pottery"
+          ],
+          "locator": "Jayasingha, Antiquity Project Gallery 80.309, printed pages 1 to 4, especially “Pottery in Sri Lanka”: Mantai and monastic finds, storage-jar distribution, shipboard-use inference, and gift-use caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "l24-food-inscriptions"
+          ],
+          "locator": "De Silva, Open University Research Sessions 2019 proceedings, printed page 81, named inscriptions, food list, monastic offerings and sick care, and explicit first- to thirteenth-century scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "l08-badulla-siddham"
+          ],
+          "locator": "Siddham IN03108, descriptive paragraphs 1 to 5: Sorabara irrigation setting, Hopiṭigamy village administration, mercantile charter, and evidence for peasants and traders.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "l03-mihintale-text"
+          ],
+          "locator": "Mihintale translation, Slab B lines 7 to 54, local text lines 169 to 177, named occupations and allocations of land, rice, cloth, and gold.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "l18-coins"
+          ],
+          "locator": "Central Bank of Sri Lanka Currency Museum Guide, printed page 19, medieval gold kahavanu date range, standing and seated figures, and alternative legend readings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "l02-kassapa-siddham"
+          ],
+          "locator": "Siddham IN03027 linked Epigraphia Zeylanica 1 edition, translation lines 6 to 12, rebuilding monasteries and causing five hundred monks to reside.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "l01-kassapa-text"
+          ],
+          "locator": "Kassapa V transcript and translation, lines 6 to 12, phrase on Abhidhamma on gold plates and preaching in his own language.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "l03-mihintale-text"
+          ],
+          "locator": "Mihintale translation, Slab A lines 9 to 15, local text lines 128 to 130, dawn, teeth cleaning, robes, paritta, gruel, boiled rice, and illness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "l06-mahinda-anuradhapura-siddham"
+          ],
+          "locator": "Siddham IN03031 description and translation lines 41 to 45, Tooth-relic-house mention, Mahinda IV date, and archaeological identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "l22-meditation-monasteries"
+          ],
+          "locator": "UNESCO tentative-list dossier 6774, description of the four serial sites, fifth- to tenth-century range, monastic plans, and archaeological preservation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "l04-mihintale-siddham"
+          ],
+          "locator": "Siddham IN03030 translation lines 1 to 5, Dev Gon, royal descent, titles, and assembly convened by Mahinda IV.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "l03-mihintale-text"
+          ],
+          "locator": "Mihintale translation, Slab A lines 20 to 25 and 41 to 45, local text lines 137 to 149, householders, security, rents, serfs, and employees.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "l07-badulla-text"
+          ],
+          "locator": "Badulla Pillar translation, side B lines 1 to 25, restraint of the master but not wife or children and prohibition on removing residents.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "l01-kassapa-text"
+          ],
+          "locator": "Kassapa V translation, lines 45 to 56, Epigraphia Zeylanica 1, tender-aged youths, maintenance rules, and support for destitute and decrepit people.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "l23-information-preservation"
+          ],
+          "locator": "Trivalent volume II issue II, printed page 35, Mihintale tablets, paid monastery clerk, registrar of caskets, keeper of caskets, and information-preservation duties.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "l03-mihintale-text"
+          ],
+          "locator": "Mihintale translation, Slab A lines 9 to 15, local text lines 129 to 130, allocations for readers of Vinaya, Sutta, and Abhidhamma.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "l04-mihintale-siddham"
+          ],
+          "locator": "Siddham IN03030 translation, Slab B lines 35 to 41, preacher, teacher, other devotees, florists, painter, and allocated village support.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "l23-information-preservation"
+          ],
+          "locator": "Trivalent volume II issue II, printed pages 34 to 36, missing earlier inscription, petition, renewed decree, named information offices, and public placement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "l05-mahinda-anuradhapura-text"
+          ],
+          "locator": "Mahinda IV Anuradhapura transcript line 44 and translation lines 41 to 45, local text lines 48 and 65, daḷdā-ge and Tooth-relic-house.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "l06-mahinda-anuradhapura-siddham"
+          ],
+          "locator": "Siddham IN03031 description, Mahinda IV date, relation to IN03030, 49-line count, language statement, and Tooth-relic-house identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "l26-medical-economy"
+          ],
+          "locator": "Ma and Gunawardana, The Historian 86.4, pages 258 to 276, abstract and epigraphic discussion of monastic grants, hospital construction, healthcare, and institutional economy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "l09-kukurumahan-hospital"
+          ],
+          "locator": "Siddham IN03069 complete descriptive record, 73 lines, tenth-century Sinhala alphabet, hospital location, founder, endowed village, regnal year, and attribution argument.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "l10-polonnaruva-hospital"
+          ],
+          "locator": "Siddham IN03158 descriptive record, fourth regnal year, Kassapa V or Dappula V ambiguity, pamaṇu tenure, one pǟḷa of dried ginger, and hospital founder.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "l26-medical-economy"
+          ],
+          "locator": "Ma and Gunawardana, The Historian 86.4, pages 258 to 276, Mihintale epigraphs, hospital support, medical roles, and monastic economic context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "l16-sanitation"
+          ],
+          "locator": "Siriweera, printed pages 1 to 4, source-bias discussion and Abhayagiri sanitation, urinals, latrines, drains, baths, and dating limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "l25-chola-thesis"
+          ],
+          "locator": "Wijetunga, SOAS thesis repository abstract and chapter map, chapters II through VI: earlier relations, Rajaraja occupation, Rajendra consolidation, resistance, and Rajarattha administration and economy.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "l19-chola-transition"
+          ],
+          "locator": "Spencer, The Politics of Plunder, notes 15 and 21, Cambridge page lines 530 to 553, earliest conquest-list date and late chronicle compiler.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "l25-chola-thesis"
+          ],
+          "locator": "Wijetunga, SOAS thesis repository abstract and chapter map, chapters IV through VII: occupation, consolidation, resistance, administration, economy, society, and religion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "atlas-map-1000",
+            "atlas-map-1100"
+          ],
+          "locator": "Repository world-1000.json and world-1100.json, exact lambakannas absence, chola-empire owners at all ten former inside test points, and unchanged next seam.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "l25-chola-thesis"
+          ],
+          "locator": "Wijetunga, SOAS thesis repository abstract and chapter map, chapters IV to VII, occupation, consolidation, resistance, administration, economy, society, and religion beyond the card endpoint.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "l19-chola-transition"
+          ],
+          "locator": "Peer-reviewed article, notes 15 and 21 to 31: earliest 993 conquest-list evidence, later chronicle authorship, 1017 problem, Chola foothold, and Polonnaruwa evidence.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "lambakannas",
+        "name": "Lambakannas: late Anuradhapura kingdom",
+        "aliases": [
+          "Late Anuradhapura kingdom, 900-1000",
+          "Second Lambakanna dynasty in tenth-century Sri Lanka"
+        ],
+        "kind": "state",
+        "region": "Asia",
+        "from": 900,
+        "to": 1000,
+        "circa": true,
+        "card": "cards/lambakannas.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate tenth-century atlas layer for the late Anuradhapura kingdom under rulers conventionally grouped as the Second Lambakanna dynasty.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-900.json",
+          "properties": {
+            "civ": "lambakannas",
+            "from": 900,
+            "to": 1000,
+            "precision": 1
+          },
+          "bounds": [
+            79.67419674196742,
+            5.931653466554344,
+            81.8666186661867,
+            9.686454713602458
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
