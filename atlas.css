@@ -203,15 +203,25 @@ body.card { --ink-faint: #505666; }
 .key-culture { background: rgb(var(--wash) / .2); border: 1px solid var(--line); }
 .key-approximate { border: 1px solid var(--line); }
 @media (max-width: 560px) {
-  /* on a phone the title sets in two lines, as a cartouche does, and the
-     chips tighten so nothing scrolls sideways; min-content undoes site.css's
-     min-width: 0, which let the frame shrink past HISTORY and spill it, and
-     max-content keeps the frame round the letters when it has a row alone */
-  .bar .brand { flex: 1 1 min-content; min-width: min-content; max-width: max-content; white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 10px; }
-  /* with the title held at its narrowest the tools no longer fit beside it
-     on most phones, so they drop to a row of their own at the right rather
-     than pushing the page sideways */
-  .bar { flex-wrap: wrap; row-gap: 8px; }
-  .bar-tools { gap: 6px; margin-left: auto; }
-  .bar .chip { padding: 6px 10px; font-size: 1rem; letter-spacing: .02em; }
+  /* on a phone the title sets in two or three lines, as a cartouche does,
+     beside the tools on one row; Amy asked that the bar never take a second
+     row, and that the title sit clear inside its frame, the buttons giving
+     up the room. min-content undoes site.css's min-width: 0, which let the
+     frame shrink past HISTORY and spill it; max-content keeps the frame
+     round the letters when there is room; 12px of padding leaves the
+     letters about 9px clear of the inner rule (the 3px inset line), enough
+     for Safari, which sets the type a touch wider than Chromium. The card
+     page's header wraps in site.css, so the .card rules are undone here. */
+  .bar, .card .bar { flex-wrap: nowrap; gap: 8px; padding-left: 12px; padding-right: 12px; }
+  .bar .brand, .card .bar .brand { flex: 1 1 min-content; min-width: min-content; max-width: max-content; white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 12px; }
+  .bar-tools, .card .bar-tools { gap: 4px; margin-left: auto; flex-wrap: nowrap; }
+  .bar .iconbtn { box-sizing: border-box; width: 38px; height: 38px; }
+  .bar .iconbtn svg { width: 18px; height: 18px; }
+  .bar .chip { min-height: 38px; padding: 4px 8px; font-size: 13px; letter-spacing: .02em; }
+}
+@media (max-width: 359px) {
+  /* the narrowest phones keep the one row by trimming type and margins */
+  .bar, .card .bar { gap: 6px; padding-left: 10px; padding-right: 10px; }
+  .bar .iconbtn { width: 36px; height: 36px; }
+  .bar .chip { min-height: 36px; padding: 4px 6px; font-size: 12px; letter-spacing: 0; }
 }
