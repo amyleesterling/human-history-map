@@ -203,15 +203,22 @@ body.card { --ink-faint: #505666; }
 .key-culture { background: rgb(var(--wash) / .2); border: 1px solid var(--line); }
 .key-approximate { border: 1px solid var(--line); }
 @media (max-width: 560px) {
-  /* on a phone the title sets in two lines, as a cartouche does, and the
-     chips tighten so nothing scrolls sideways; min-content undoes site.css's
-     min-width: 0, which let the frame shrink past HISTORY and spill it, and
-     max-content keeps the frame round the letters when it has a row alone */
-  .bar .brand { flex: 1 1 min-content; min-width: min-content; max-width: max-content; white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 10px; }
-  /* with the title held at its narrowest the tools no longer fit beside it
-     on most phones, so they drop to a row of their own at the right rather
-     than pushing the page sideways */
-  .bar { flex-wrap: wrap; row-gap: 8px; }
-  .bar-tools { gap: 6px; margin-left: auto; }
-  .bar .chip { padding: 6px 10px; font-size: 1rem; letter-spacing: .02em; }
+  /* on a phone the title sets in two or three lines, as a cartouche does,
+     beside the tools on one row; Amy asked that the bar never take a second
+     row. min-content undoes site.css's min-width: 0, which let the frame
+     shrink past HISTORY and spill it; max-content keeps the frame round the
+     letters when there is room. The card page's header wraps in site.css,
+     so the .card rules are undone here too. */
+  .bar, .card .bar { flex-wrap: nowrap; gap: 8px; padding-left: 12px; padding-right: 12px; }
+  .bar .brand, .card .bar .brand { flex: 1 1 min-content; min-width: min-content; max-width: max-content; white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 8px; }
+  .bar-tools, .card .bar-tools { gap: 4px; margin-left: auto; flex-wrap: nowrap; }
+  .bar .chip { padding: 6px 8px; font-size: 14px; letter-spacing: .02em; }
+}
+@media (max-width: 359px) {
+  /* the narrowest phones keep the one row by trimming type and margins,
+     never the 44px tap targets */
+  .bar, .card .bar { gap: 6px; padding-left: 10px; padding-right: 10px; }
+  .bar .brand, .card .bar .brand { padding: 4px 6px; letter-spacing: .02em; }
+  .bar .chip { padding: 6px 6px; font-size: 12.5px; letter-spacing: 0; }
+}
 }
