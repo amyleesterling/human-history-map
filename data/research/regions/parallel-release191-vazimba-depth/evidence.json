@@ -1,0 +1,896 @@
+{
+  "version": 1,
+  "region": "Africa",
+  "researcher": "Codex parallel release191-vazimba research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported Vazimba id, display name, approximate 600 to 800 lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported popular-belief summary audited for unsupported pygmy speculation, over-simple first-inhabitant claims, and inappropriate literalization."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Two observed intervals, two border files, imported state classification, and exact missing-card status."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms the exact id has no live detailed card before packet integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms the exact id has no researched identity override before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms Vazimba is queued as an unresearched African card."
+    },
+    {
+      "id": "atlas-map-500",
+      "title": "Human History Map 500 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-500.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 500 snapshot control."
+    },
+    {
+      "id": "atlas-map-600",
+      "title": "Human History Map 600 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-600.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 600 snapshot control."
+    },
+    {
+      "id": "atlas-map-700",
+      "title": "Human History Map 700 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-700.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 700 snapshot control."
+    },
+    {
+      "id": "atlas-map-800",
+      "title": "Human History Map 800 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-800.json",
+      "note": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 800 snapshot control."
+    },
+    {
+      "id": "v01-mafmad",
+      "title": "Mission Archéologique France-Madagascar, Les Vazimba et le peuplement malgache",
+      "url": "https://archeologie.culture.gouv.fr/fr/vazimba-peuplement-malgache",
+      "note": "French Ministry of Culture project page. Explorer, funerary archaeology, innovative tools, and occupation metadata distinguish open questions from thirteenth-to-nineteenth-century evidence."
+    },
+    {
+      "id": "v02-rajoelinoro",
+      "title": "Robertine Rajoelinoro, Les traces matérielles de la présence vazimba d’Analamanga au XVIe siècle",
+      "url": "https://integral.domuni.eu/rdi/article/download/40/73?inline=1",
+      "note": "Introduction paragraphs 1 to 3 and section I explain source scarcity, category disagreements, temporal dilation, multiple Vazimba meanings, and the chiefly fourteenth-to-sixteenth-century evidence base."
+    },
+    {
+      "id": "v03-heiske",
+      "title": "Heiske et al., Genetic evidence and historical theories of the Asian and African origins of the present Malagasy population",
+      "url": "https://academic.oup.com/hmg/article/30/R1/R72/6106232",
+      "note": "Abstract, Historical Elements, group-assignment caution, admixture sections, and conclusion concern modern population history and genetics, not target-period healing or care."
+    },
+    {
+      "id": "v04-serva",
+      "title": "Serva and Pasquini, Dialects of Madagascar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7531839/",
+      "note": "Abstract and sections 3.2 to 3.3 present a model-based 623 to 681 CE linguistic estimate and caution that Vazimba has mythic, political, and non-ethnic meanings."
+    },
+    {
+      "id": "v06-vohemar",
+      "title": "Wright et al., The Evolution of Settlement Systems in the Region of Vohémar, Northeast Madagascar",
+      "url": "https://doi.org/10.3998/mpub.12209371",
+      "note": "Chapter 7 pages 25 to 39, especially 31 to 32 and 38 to 39, documents the eighth-to-tenth-century Ampasimahavelona phase, artifacts, food remains, and tentative settlement layout."
+    },
+    {
+      "id": "v07-crops",
+      "title": "Crowther et al., Ancient crops provide first archaeological signature of the westward Austronesian expansion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4914162/",
+      "note": "Table 1, Table S1, Results, and SI Text distinguish eighth-century Ampasimahavelona with zero crops from Mahilaka deposits dated about 1050 to 1350 and irrigation by roughly 1100."
+    },
+    {
+      "id": "v09-pastoralism",
+      "title": "Hixon et al., Late Holocene spread of pastoralism coincides with endemic megafaunal extinction on Madagascar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8292765/",
+      "note": "Results section 3a and Discussion date directly tested introduced sheep and zebu no earlier than roughly 890 to 990 CE, after the atlas interval."
+    },
+    {
+      "id": "v10-domenichini",
+      "title": "Jean-Pierre Domenichini, Vazimba et esprits helo : la profondeur chronologique",
+      "url": "https://journals.openedition.org/oceanindien/1512",
+      "note": "Sections 1 to 7 and conclusion document later and living uses of Vazimba for powerful ancestral beings and grandees without turning them into target-period biology."
+    },
+    {
+      "id": "v11-inalco",
+      "title": "Institut national des langues et civilisations orientales, Malagasy",
+      "url": "https://www.inalco.fr/en/languages/malagasy",
+      "note": "Discovering the language identifies Malagasy as Austronesian, notes African and Asian lexical histories, regional varieties, Sorabe, and the nineteenth-century Latin writing tradition."
+    },
+    {
+      "id": "v12-constitution-mg",
+      "title": "Republic of Madagascar, 1992 Constitution in Malagasy",
+      "url": "https://cnlegis.gov.mg/uploads/CONSTITUTION-1992-MG.pdf",
+      "note": "Official Gazette page 2184 supplies the exact modern Malagasy sentence “Ny teny malagasy no tenim-pirenena.”"
+    },
+    {
+      "id": "v13-constitution-fr",
+      "title": "Republic of Madagascar, 1992 Constitution in French",
+      "url": "https://cnlegis.gov.mg/uploads/CONSTITUTION-1992-FR.pdf",
+      "note": "Official French counterpart supplies “Le malgache est la langue nationale,” securing the English translation of the modern sample."
+    },
+    {
+      "id": "v14-adelaar",
+      "title": "Alexander Adelaar, Asian Roots of the Malagasy: A Linguistic Perspective",
+      "url": "https://brill.com/view/journals/bki/151/3/article-p325_1.pdf",
+      "note": "Pages 325 to 356 compare Malagasy with Southeast Barito, Malay, Javanese, and Bantu forms and reconstruct layered language contact rather than a single isolated origin."
+    },
+    {
+      "id": "v15-radimilahy",
+      "title": "Chantal Radimilahy, Madagascar: From Initial Settlement to the Growth of Kingdoms",
+      "url": "https://academic.oup.com/edited-volume/28041/chapter-abstract/211958833",
+      "note": "Abstract and chapter pages 942 to 954 frame first settlement, late-first-millennium trade, later urbanization, and later state formation as different analytical stages."
+    },
+    {
+      "id": "v16-landscape",
+      "title": "Pierron et al., Genomic landscape of human diversity across Madagascar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5559028/",
+      "note": "Abstract, introduction, results, and discussion show heterogeneous African and Asian ancestry, reject a simple Vazimba genetic label, and call for ancient DNA."
+    },
+    {
+      "id": "v17-mikea",
+      "title": "Pierron et al., Genome-wide evidence of Austronesian-Bantu admixture and cultural reversion in a hunter-gatherer group of Madagascar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3903192/",
+      "note": "Abstract and admixture results show Mikea genomes resemble other sampled Malagasy populations, blocking their use as unchanged biological Vazimba proxies."
+    },
+    {
+      "id": "v18-borneo",
+      "title": "Kusuma et al., Malagasy Genetic Ancestry Comes from an Historical Malay Trading Post in Southeast Borneo",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4989113/",
+      "note": "Abstract and discussion identify complex Banjar-related Asian ancestry and warn that admixture dates mark contact processes rather than first arrival."
+    },
+    {
+      "id": "v19-rainforest",
+      "title": "Virah-Sawmy et al., Montane rainforest dynamics under changes in climate and human impact during the past millennia in northern Madagascar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11335403/",
+      "note": "Abstract, methods, and discussion reconstruct drought, fire, vegetation, and human impact, with strong local signals mainly after the atlas interval; the study is not a sanitation record."
+    },
+    {
+      "id": "v20-nosybe",
+      "title": "Andriatsitohaina et al., Rain Forest Fragmentation and Environmental Dynamics on Nosy Be Island at 1300 cal BP",
+      "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.783770/full",
+      "note": "Results and discussion infer intensified human impact around 1300 calibrated BP while acknowledging that associated archaeological remains at Nosy Be lack direct dates."
+    },
+    {
+      "id": "v21-writing",
+      "title": "Alexander Adelaar, Seventeenth century texts as a key to Malagasy linguistic and ethnic history",
+      "url": "https://starfos.tacr.cz/en/vysledky-vyzkumu/RIV%2F61989592%3A15210%2F23%3A73619502",
+      "note": "Research registry abstract dates Houtman’s 1603 wordbook and the earliest Sorabe texts to the seventeenth century; it supplies no written school record from 600 to 800."
+    },
+    {
+      "id": "v22-selection",
+      "title": "Pierron et al., Strong selection during the last millennium for African ancestry in the admixed population of Madagascar",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5834599/",
+      "note": "Abstract and introduction analyze modern genomes and disease-related Duffy blood-group variation during the last millennium, not target-period medicine or named communities."
+    },
+    {
+      "id": "v23-press",
+      "title": "University of Michigan Press, The Evolution of Settlement Systems in the Region of Vohémar",
+      "url": "https://press.umich.edu/Books/T/The-Evolution-of-Settlement-Systems-in-the-Region-of-Vohemar-Northeast-Madagascar2",
+      "note": "Publisher description identifies the four-season survey, seventh- and eighth-century estuarine villages, a rock shelter with microlithic tools, and the later port sequence."
+    },
+    {
+      "id": "v24-bmsap",
+      "title": "Razafindrazaka et al., MadInter funerary-archaeology project abstract",
+      "url": "https://journals.openedition.org/bmsap/15554?file=1",
+      "note": "BMSAP 37 supplement abstract pages S10 to S50 describes collective burials, biological profiles, kinship, and sixteenth-to-nineteenth-century contexts, outside this card’s interval."
+    },
+    {
+      "id": "v25-sealinks",
+      "title": "European Commission CORDIS, Final Report Summary for the Sealinks Project",
+      "url": "https://cordis.europa.eu/project/id/206148/reporting",
+      "note": "Official project report describes 27 excavated sites, multidisciplinary methods, early Indian Ocean contacts, migration, trade, and archaeobotanical findings."
+    },
+    {
+      "id": "v27-culture-history",
+      "title": "Robert Dewar and Henry Wright, The Culture History of Madagascar",
+      "url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/45256/10963_2004_Article_BF00997802.pdf",
+      "note": "Journal of World Prehistory 7, pages 427 to 430 and later phase summaries catalog dated settlements, stone artifacts, ceramics, subsistence, and exchange without assigning target-period gender or age roles."
+    },
+    {
+      "id": "v28-sealinks-abstracts",
+      "title": "Sealinks Project, Book of Abstracts",
+      "url": "https://www.sealinksproject.com/wp-content/uploads/2014/05/Book-of-Abstracts-Final-A5-final.pdf",
+      "note": "Pages 7 to 8 describe Vohémar survey, pottery and shell scatters, eighth-century villages, Ambohiposa tools, missing bones, and later Lakaton’i Anja work."
+    },
+    {
+      "id": "v30-chronology",
+      "title": "Dewar and Wright, A chronology for late prehistoric Madagascar",
+      "url": "https://experts.arizona.edu/en/publications/a-chronology-for-late-prehistoric-madagascar/",
+      "note": "University research record summarizes a database of 278 age determinations and the need to evaluate archaeological chronology systematically."
+    },
+    {
+      "id": "v31-cambridge-crops",
+      "title": "University of Cambridge repository, Ancient crops provide first archaeological signature of the westward Austronesian expansion",
+      "url": "https://www.repository.cam.ac.uk/items/1d5ca8f8-a7f3-43b4-aae1-191350788450",
+      "note": "Institutional repository record identifies the published peer-reviewed archaeobotanical study, its authors, and its Madagascar settlement and crop-movement scope."
+    }
+  ],
+  "entities": [
+    {
+      "id": "vazimba",
+      "card": "data/cards/vazimba.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-map-600",
+            "atlas-map-700",
+            "v01-mafmad",
+            "v25-sealinks"
+          ],
+          "locator": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 600 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 700 snapshot control. French Ministry of Culture project page. Explorer, funerary archaeology, innovative tools, and occupation metadata distinguish open questions from thirteenth-to-nineteenth-century evidence. Official project report describes 27 excavated sites, multidisciplinary methods, early Indian Ocean contacts, migration, trade, and archaeobotanical findings.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-500",
+            "atlas-map-600"
+          ],
+          "locator": "Exact imported Vazimba id, display name, approximate 600 to 800 lifetime, and historical-basemap provenance. Decoded geometry, representative-point ownership, overlap, shared-arc, and 500 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 600 snapshot control.",
+          "dateScope": {
+            "from": 600,
+            "to": 625
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "v04-serva"
+          ],
+          "locator": "Abstract and sections 3.2 to 3.3 present a model-based 623 to 681 CE linguistic estimate and caution that Vazimba has mythic, political, and non-ethnic meanings.",
+          "dateScope": {
+            "from": 625,
+            "to": 650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "v14-adelaar"
+          ],
+          "locator": "Pages 325 to 356 compare Malagasy with Southeast Barito, Malay, Javanese, and Bantu forms and reconstruct layered language contact rather than a single isolated origin.",
+          "dateScope": {
+            "from": 650,
+            "to": 675
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "v28-sealinks-abstracts"
+          ],
+          "locator": "Pages 7 to 8 describe Vohémar survey, pottery and shell scatters, eighth-century villages, Ambohiposa tools, missing bones, and later Lakaton’i Anja work.",
+          "dateScope": {
+            "from": 675,
+            "to": 700
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "atlas-map-600",
+            "atlas-map-700"
+          ],
+          "locator": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 600 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 700 snapshot control.",
+          "dateScope": {
+            "from": 700,
+            "to": 725
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "v23-press"
+          ],
+          "locator": "Publisher description identifies the four-season survey, seventh- and eighth-century estuarine villages, a rock shelter with microlithic tools, and the later port sequence.",
+          "dateScope": {
+            "from": 725,
+            "to": 750
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "v07-crops"
+          ],
+          "locator": "Table 1, Table S1, Results, and SI Text distinguish eighth-century Ampasimahavelona with zero crops from Mahilaka deposits dated about 1050 to 1350 and irrigation by roughly 1100.",
+          "dateScope": {
+            "from": 750,
+            "to": 775
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-700",
+            "atlas-map-800",
+            "v15-radimilahy"
+          ],
+          "locator": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 700 snapshot control. Decoded geometry, representative-point ownership, overlap, shared-arc, and 800 snapshot control. Abstract and chapter pages 942 to 954 frame first settlement, late-first-millennium trade, later urbanization, and later state formation as different analytical stages.",
+          "dateScope": {
+            "from": 775,
+            "to": 800
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-coverage"
+          ],
+          "locator": "Repository data/hb/civilizations-hb.json, exact id vazimba and fields name, from, to, circa, and generated. | Repository data/research/coverage.json, exact record, kind, observedIntervals, borderFiles, and content fields.",
+          "dateScope": {
+            "year": 600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-summary",
+            "v02-rajoelinoro"
+          ],
+          "locator": "Repository data/hb/summaries-hb.json, exact key vazimba and imported summary text. | Introduction paragraphs 1 to 3 and section I explain source scarcity, category disagreements, temporal dilation, multiple Vazimba meanings, and the chiefly fourteenth-to-sixteenth-century evidence base.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-600",
+            "atlas-map-700"
+          ],
+          "locator": "Repository world-600.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests. | Repository world-700.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests.",
+          "dateScope": {
+            "year": 600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-700"
+          ],
+          "locator": "Repository world-700.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests.",
+          "dateScope": {
+            "year": 700
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-500",
+            "atlas-map-600",
+            "atlas-map-700",
+            "atlas-map-800"
+          ],
+          "locator": "Repository world-500.json, exact-id absence and representative-point ownership controls. | Repository world-600.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests. | Repository world-700.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests. | Repository world-800.json, exact-id absence and representative-point repaint controls.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "v30-chronology"
+          ],
+          "locator": "University research record summarizes a database of 278 age determinations and the need to evaluate archaeological chronology systematically.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "v23-press"
+          ],
+          "locator": "Publisher description identifies the four-season survey, seventh- and eighth-century estuarine villages, a rock shelter with microlithic tools, and the later port sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "v28-sealinks-abstracts"
+          ],
+          "locator": "Pages 7 to 8 describe Vohémar survey, pottery and shell scatters, eighth-century villages, Ambohiposa tools, missing bones, and later Lakaton’i Anja work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "v28-sealinks-abstracts"
+          ],
+          "locator": "Pages 7 to 8 describe Vohémar survey, pottery and shell scatters, eighth-century villages, Ambohiposa tools, missing bones, and later Lakaton’i Anja work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "v15-radimilahy"
+          ],
+          "locator": "Abstract and chapter pages 942 to 954 frame first settlement, late-first-millennium trade, later urbanization, and later state formation as different analytical stages.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "v06-vohemar"
+          ],
+          "locator": "Chapter 7 pages 25 to 39, especially 31 to 32 and 38 to 39, documents the eighth-to-tenth-century Ampasimahavelona phase, artifacts, food remains, and tentative settlement layout.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "v07-crops"
+          ],
+          "locator": "Table 1, Table S1, Results, and SI Text distinguish eighth-century Ampasimahavelona with zero crops from Mahilaka deposits dated about 1050 to 1350 and irrigation by roughly 1100.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "v09-pastoralism"
+          ],
+          "locator": "Results section 3a and Discussion date directly tested introduced sheep and zebu no earlier than roughly 890 to 990 CE, after the atlas interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "v09-pastoralism"
+          ],
+          "locator": "Results section 3a and Discussion date directly tested introduced sheep and zebu no earlier than roughly 890 to 990 CE, after the atlas interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "v18-borneo"
+          ],
+          "locator": "Abstract and discussion identify complex Banjar-related Asian ancestry and warn that admixture dates mark contact processes rather than first arrival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "v06-vohemar"
+          ],
+          "locator": "Chapter 7 pages 25 to 39, especially 31 to 32 and 38 to 39, documents the eighth-to-tenth-century Ampasimahavelona phase, artifacts, food remains, and tentative settlement layout.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "v31-cambridge-crops"
+          ],
+          "locator": "Institutional repository record identifies the published peer-reviewed archaeobotanical study, its authors, and its Madagascar settlement and crop-movement scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "v27-culture-history"
+          ],
+          "locator": "Journal of World Prehistory 7, pages 427 to 430 and later phase summaries catalog dated settlements, stone artifacts, ceramics, subsistence, and exchange without assigning target-period gender or age roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "v14-adelaar"
+          ],
+          "locator": "Pages 325 to 356 compare Malagasy with Southeast Barito, Malay, Javanese, and Bantu forms and reconstruct layered language contact rather than a single isolated origin.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "v18-borneo"
+          ],
+          "locator": "Abstract and discussion identify complex Banjar-related Asian ancestry and warn that admixture dates mark contact processes rather than first arrival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "v06-vohemar"
+          ],
+          "locator": "Chapter 7 pages 25 to 39, especially 31 to 32 and 38 to 39, documents the eighth-to-tenth-century Ampasimahavelona phase, artifacts, food remains, and tentative settlement layout.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "atlas-map-700",
+            "v23-press"
+          ],
+          "locator": "Repository world-700.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests. | Publisher description identifies the four-season survey, seventh- and eighth-century estuarine villages, a rock shelter with microlithic tools, and the later port sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "v20-nosybe"
+          ],
+          "locator": "Results and discussion infer intensified human impact around 1300 calibrated BP while acknowledging that associated archaeological remains at Nosy Be lack direct dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "v19-rainforest"
+          ],
+          "locator": "Abstract, methods, and discussion reconstruct drought, fire, vegetation, and human impact, with strong local signals mainly after the atlas interval; the study is not a sanitation record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "v27-culture-history"
+          ],
+          "locator": "Journal of World Prehistory 7, pages 427 to 430 and later phase summaries catalog dated settlements, stone artifacts, ceramics, subsistence, and exchange without assigning target-period gender or age roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "v02-rajoelinoro"
+          ],
+          "locator": "Introduction paragraphs 1 to 3 and section I explain source scarcity, category disagreements, temporal dilation, multiple Vazimba meanings, and the chiefly fourteenth-to-sixteenth-century evidence base.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "v24-bmsap"
+          ],
+          "locator": "BMSAP 37 supplement abstract pages S10 to S50 describes collective burials, biological profiles, kinship, and sixteenth-to-nineteenth-century contexts, outside this card’s interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "v16-landscape"
+          ],
+          "locator": "Abstract, introduction, results, and discussion show heterogeneous African and Asian ancestry, reject a simple Vazimba genetic label, and call for ancient DNA.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "v17-mikea"
+          ],
+          "locator": "Abstract and admixture results show Mikea genomes resemble other sampled Malagasy populations, blocking their use as unchanged biological Vazimba proxies.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "v27-culture-history"
+          ],
+          "locator": "Journal of World Prehistory 7, pages 427 to 430 and later phase summaries catalog dated settlements, stone artifacts, ceramics, subsistence, and exchange without assigning target-period gender or age roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "v21-writing"
+          ],
+          "locator": "Research registry abstract dates Houtman’s 1603 wordbook and the earliest Sorabe texts to the seventeenth century; it supplies no written school record from 600 to 800.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "v11-inalco"
+          ],
+          "locator": "Discovering the language identifies Malagasy as Austronesian, notes African and Asian lexical histories, regional varieties, Sorabe, and the nineteenth-century Latin writing tradition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "v04-serva"
+          ],
+          "locator": "Abstract and sections 3.2 to 3.3 present a model-based 623 to 681 CE linguistic estimate and caution that Vazimba has mythic, political, and non-ethnic meanings.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "v21-writing"
+          ],
+          "locator": "Research registry abstract dates Houtman’s 1603 wordbook and the earliest Sorabe texts to the seventeenth century; it supplies no written school record from 600 to 800.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "v12-constitution-mg",
+            "v13-constitution-fr"
+          ],
+          "locator": "Official Gazette page 2184 supplies the exact modern Malagasy sentence “Ny teny malagasy no tenim-pirenena.” | Official French counterpart supplies “Le malgache est la langue nationale,” securing the English translation of the modern sample.",
+          "dateScope": {
+            "year": 1992
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "v03-heiske"
+          ],
+          "locator": "Abstract, Historical Elements, group-assignment caution, admixture sections, and conclusion concern modern population history and genetics, not target-period healing or care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "v24-bmsap"
+          ],
+          "locator": "BMSAP 37 supplement abstract pages S10 to S50 describes collective burials, biological profiles, kinship, and sixteenth-to-nineteenth-century contexts, outside this card’s interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "v22-selection"
+          ],
+          "locator": "Abstract and introduction analyze modern genomes and disease-related Duffy blood-group variation during the last millennium, not target-period medicine or named communities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "v03-heiske"
+          ],
+          "locator": "Abstract, Historical Elements, group-assignment caution, admixture sections, and conclusion concern modern population history and genetics, not target-period healing or care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "v24-bmsap"
+          ],
+          "locator": "BMSAP 37 supplement abstract pages S10 to S50 describes collective burials, biological profiles, kinship, and sixteenth-to-nineteenth-century contexts, outside this card’s interval.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "v06-vohemar"
+          ],
+          "locator": "Chapter 7 pages 25 to 39, especially 31 to 32 and 38 to 39, documents the eighth-to-tenth-century Ampasimahavelona phase, artifacts, food remains, and tentative settlement layout.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "v28-sealinks-abstracts"
+          ],
+          "locator": "Pages 7 to 8 describe Vohémar survey, pottery and shell scatters, eighth-century villages, Ambohiposa tools, missing bones, and later Lakaton’i Anja work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "v15-radimilahy"
+          ],
+          "locator": "Abstract and chapter pages 942 to 954 frame first settlement, late-first-millennium trade, later urbanization, and later state formation as different analytical stages.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "v07-crops"
+          ],
+          "locator": "Table 1, Table S1, Results, and SI Text distinguish eighth-century Ampasimahavelona with zero crops from Mahilaka deposits dated about 1050 to 1350 and irrigation by roughly 1100.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "v19-rainforest"
+          ],
+          "locator": "Abstract, methods, and discussion reconstruct drought, fire, vegetation, and human impact, with strong local signals mainly after the atlas interval; the study is not a sanitation record.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "v23-press"
+          ],
+          "locator": "Publisher description identifies the four-season survey, seventh- and eighth-century estuarine villages, a rock shelter with microlithic tools, and the later port sequence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "v27-culture-history"
+          ],
+          "locator": "Journal of World Prehistory 7, pages 427 to 430 and later phase summaries catalog dated settlements, stone artifacts, ceramics, subsistence, and exchange without assigning target-period gender or age roles.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "v07-crops"
+          ],
+          "locator": "Table 1, Table S1, Results, and SI Text distinguish eighth-century Ampasimahavelona with zero crops from Mahilaka deposits dated about 1050 to 1350 and irrigation by roughly 1100.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "v18-borneo"
+          ],
+          "locator": "Abstract and discussion identify complex Banjar-related Asian ancestry and warn that admixture dates mark contact processes rather than first arrival.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "atlas-map-700",
+            "atlas-map-800",
+            "v02-rajoelinoro"
+          ],
+          "locator": "Repository world-700.json, exact feature, decoded ring, bbox, seams, overlaps, and point tests. | Repository world-800.json, exact-id absence and representative-point repaint controls. | Introduction paragraphs 1 to 3 and section I explain source scarcity, category disagreements, temporal dilation, multiple Vazimba meanings, and the chiefly fourteenth-to-sixteenth-century evidence base.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-800",
+            "v10-domenichini"
+          ],
+          "locator": "Decoded geometry, representative-point ownership, overlap, shared-arc, and 800 snapshot control. Sections 1 to 7 and conclusion document later and living uses of Vazimba for powerful ancestral beings and grandees without turning them into target-period biology.",
+          "dateScope": {
+            "year": 800
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "vazimba",
+        "name": "Vazimba traditions and early Malagasy settlement (atlas layer)",
+        "aliases": [
+          "Vazimba",
+          "Early Malagasy settlement"
+        ],
+        "kind": "culture",
+        "region": "Africa",
+        "from": 600,
+        "to": 800,
+        "circa": true,
+        "card": "cards/vazimba.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 600 to 800 atlas layer paired with early Madagascar settlement evidence; Vazimba remains a contested later ancestral and historical category.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-600.json",
+          "properties": {
+            "civ": "vazimba",
+            "from": 600,
+            "to": 700,
+            "precision": 1
+          },
+          "bounds": [
+            43.29223292232922,
+            -25.66065805684165,
+            50.503105031050325,
+            -12.265860824643866
+          ]
+        },
+        {
+          "file": "world-700.json",
+          "properties": {
+            "civ": "vazimba",
+            "from": 700,
+            "to": 800,
+            "precision": 1
+          },
+          "bounds": [
+            43.29223292232922,
+            -25.66065805684165,
+            50.503105031050325,
+            -12.265860824643866
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
