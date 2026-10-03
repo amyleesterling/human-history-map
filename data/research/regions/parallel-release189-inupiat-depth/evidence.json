@@ -1,0 +1,919 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release189-inupiat research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, approximate 1492 to 1500 interval, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported territorial summary audited as a rough modern description rather than an exact reading of the polygon."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed feature interval, one border file, approximate dates, state kind, and missing review status."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Exact-id absence from the tracked card index before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Exact-id absence from the tracked researched overrides before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Imported-summary status and absence of staged exact-id drafts."
+    },
+    {
+      "id": "atlas-map-1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Pre-appearance point ownership and exact-id absence control."
+    },
+    {
+      "id": "atlas-map-1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Immediate post-interval control showing exact-id absence and changed atlas ownership."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Later control showing the separate exact id inupiaq rather than a restored inupiat feature."
+    },
+    {
+      "id": "i01-wales",
+      "title": "National Park Service, Wales Sites National Historic Landmark",
+      "url": "https://www.nps.gov/subjects/nhlalaska/upload/Wales-Sites-National-Historic_508.pdf",
+      "note": "NPS one-page landmark brief checked for the two archaeological sites, occupation since at least 500 CE, Birnirk artifacts, Kiŋigin and Kingikmiut names, and the approximately 68-mile umiak crossing."
+    },
+    {
+      "id": "i02-walakpa",
+      "title": "Smithsonian Institution, Walakpa Site, Alaska: Its Place in the Birnirk and Thule Cultures",
+      "url": "https://repository.si.edu/items/8d9f5226-76fc-4bff-b9d0-0f90a703fadc/full",
+      "note": "Smithsonian monograph checked at printed pages 1 to 8 and 96 to 104 for terminology, chronology, Walakpa, Point Hope, and Kotzebue comparisons."
+    },
+    {
+      "id": "i03-ridges",
+      "title": "National Park Service, Capturing History in the Beach Ridges of Cape Krusenstern",
+      "url": "https://home.nps.gov/articles/cakrbeachridges.htm",
+      "note": "NPS interpretation checked for Western Thule and Kotzebue archaeological periods, semi-subterranean houses, building materials, and changing house form."
+    },
+    {
+      "id": "i04-coast",
+      "title": "National Park Service, How the Arctic coast and culture intertwined",
+      "url": "https://www.nps.gov/articles/000/cakrcoastsettlement.htm",
+      "note": "NPS research summary checked for preservation limits, settlement density, environmental change, and an increase until about five hundred years ago."
+    },
+    {
+      "id": "i05-plants",
+      "title": "Journal of Archaeological Science: Reports, archaeobotany of an early Thule Iñupiaq dwelling",
+      "url": "https://doi.org/10.1016/j.jasrep.2024.104459",
+      "note": "Peer-reviewed study checked in sections 3 to 5 for a late thirteenth- to mid-fourteenth-century Cape Espenberg house, plant contexts, midden, roof, and formation-process cautions."
+    },
+    {
+      "id": "i06-early-people",
+      "title": "National Park Service, Alaska Natives and Early People",
+      "url": "https://www.nps.gov/bela/learn/historyculture/alaska-natives-and-early-people.htm",
+      "note": "NPS regional history checked for seasonal mobility, resource availability, and the documented danger of outsiders mistaking a seasonal shortage for chronic starvation."
+    },
+    {
+      "id": "i07-aewc-villages",
+      "title": "Alaska Eskimo Whaling Commission, Our Villages",
+      "url": "https://www.aewc-alaska.org/our-villlages",
+      "note": "Community organization page checked for eleven whaling communities, Iñupiat and Siberian Yupik distinction, marine and terrestrial foods, sharing, and village variation."
+    },
+    {
+      "id": "i08-aewc-home",
+      "title": "Alaska Eskimo Whaling Commission, Our Story and Mission",
+      "url": "https://www.aewc-alaska.org/",
+      "note": "Community organization page checked for Iñupiat and Siberian Yupik membership, long whaling continuity, adaptation, co-management, and present cultural responsibility."
+    },
+    {
+      "id": "i09-nalukataq",
+      "title": "Alaska Eskimo Whaling Commission, Nalukataq",
+      "url": "https://www.aewc-alaska.org/nalukataq",
+      "note": "Community organization page checked for whole-community participation, meat and maktak sharing, future generations, and contemporary feast timing."
+    },
+    {
+      "id": "i10-whaling-eis",
+      "title": "Alaska Department of Fish and Game, Bowhead Subsistence Hunt Environmental Impact Statement",
+      "url": "https://www.adfg.alaska.gov/static/species/specialstatus/pdfs/bowhead_2008_eis.pdf",
+      "note": "Government report checked at PDF pages 25 to 31, section 1.1.4, for community-wide effort, captains, crews, knowledge, food, and formalized sharing."
+    },
+    {
+      "id": "i11-icas-communities",
+      "title": "Iñupiat Community of the Arctic Slope, Communities",
+      "url": "https://icas-nsn.gov/communities/",
+      "note": "Tribal government page checked for the eight distinct North Slope communities, their varied landscapes and practices, and the modern organization’s geographic scope."
+    },
+    {
+      "id": "i12-icas-values",
+      "title": "Iñupiat Community of the Arctic Slope, Comprehensive Economic Development Strategy 2025-2030",
+      "url": "https://icas-nsn.gov/wp-content/uploads/2025/04/ICAS-CEDS-2025-2030-v1.0-compressed.pdf",
+      "note": "Tribal government plan checked at PDF pages 6 to 8 for family and kinship, elders, children, language, sharing, cooperation, humor, health, and cultural values."
+    },
+    {
+      "id": "i13-icas-education",
+      "title": "Iñupiat Community of the Arctic Slope, Education",
+      "url": "https://icas-nsn.gov/education/",
+      "note": "Tribal education page checked for present language- and culture-rooted education, Qargi Academy, apprenticeships, community partnerships, and services across ages."
+    },
+    {
+      "id": "i14-language",
+      "title": "North Slope Borough Iñupiat Heritage Center, Language",
+      "url": "https://www.north-slope.org/departments/inupiat-history-language-culture/inupiat-heritage-center/educational-programs/language/",
+      "note": "Community institution page checked for its exact modern Iñupiatun greeting and English translation, language programs, and learning resources."
+    },
+    {
+      "id": "i15-lexicon",
+      "title": "University of Alaska Fairbanks, Edna MacLean North Slope Iñupiaq lexicon",
+      "url": "https://www.uaf.edu/danl/project-updates/edna-maclean/",
+      "note": "University project page checked for four dialect types in two groups, named community contributors, elder verification, and dictionary scale."
+    },
+    {
+      "id": "i16-currents",
+      "title": "Kawerak, Indigenous Knowledge and Use of Bering Strait Region Ocean Currents",
+      "url": "https://kawerak.org/wp-content/uploads/2018/04/OceanCurrents-book-for-web.pdf",
+      "note": "Community-reviewed book checked at PDF pages 5 to 12 and 27 to 29 for currents, ice, animals, safety, place-specific expertise, youth learning, and review by tribes and local experts."
+    },
+    {
+      "id": "i17-landuse",
+      "title": "North Slope Borough, Iñupiat History, Language and Culture budget narrative",
+      "url": "https://www.north-slope.org/wp-content/uploads/2022/03/IHLC_Section_G_FY21-22.pdf",
+      "note": "Borough document checked at PDF pages G-2 to G-5 for Traditional Land Use Inventory work, oral histories, artifacts, education, elders, youth, and Nunamiut museum responsibilities."
+    },
+    {
+      "id": "i18-mask",
+      "title": "Smithsonian Ocean, Iñupiat Ceremonial Mask",
+      "url": "https://ocean.si.edu/human-connections/history-cultures/inupiat-ceremonial-mask",
+      "note": "Smithsonian object page checked for spruce, caribou teeth, thanksgiving ceremony, and breastplate images of whaling crews in umiaks."
+    },
+    {
+      "id": "i19-dolls",
+      "title": "Smithsonian Center for Folklife and Cultural Heritage, Native Dolls educational guide",
+      "url": "https://learninglab.si.edu/cabinet/file/8d55fada-8235-4da4-81b9-f3950569241f/native_dolls.pdf",
+      "note": "Smithsonian guide checked at PDF pages 11 to 13 for an Iñupiat doll maker, girls practicing parka sewing, layered caribou clothing, large hoods, and gut waterproofing."
+    },
+    {
+      "id": "i20-water",
+      "title": "Alaska Native Tribal Health Consortium, Water and Sanitation",
+      "url": "https://anthc.org/environmental-health-engineering/water-sanitation/",
+      "note": "Tribal health page checked in the Kivalina PASS and Water and Wellness sections for present water sources, sinks, toilets, waste separation, honey buckets, hygiene, and explicit modern infrastructure."
+    },
+    {
+      "id": "i21-murdoch",
+      "title": "Smithsonian Institution, Ethnological Results of the Point Barrow Expedition",
+      "url": "https://repository.si.edu/items/0e013d3d-2ead-4547-8ba7-ea5ccf7af816",
+      "note": "Public-domain 1893 colonial ethnography checked at printed pages 70 to 75, 418 to 423, and 427 to 428 for houses, adoption, household authority, hygiene, waste, and healing, with its observer and date limits retained."
+    },
+    {
+      "id": "i22-ublasaun",
+      "title": "National Park Service, The Hope and Promise of Ublasaun: A Herder’s Story",
+      "url": "https://www.nps.gov/articles/000/the-hope-and-promise-of-ublasaun-a-herder-s-story.htm",
+      "note": "NPS community history checked for Shishmaref women healers and midwives, named kin, adoption, settlement layout, seasonal dispersal, houses, and twentieth-century change."
+    },
+    {
+      "id": "i23-education",
+      "title": "ERIC, Paul Ongtooguk, Aspects of Traditional Inupiat Education",
+      "url": "https://files.eric.ed.gov/fulltext/ED453007.pdf",
+      "note": "ERIC full text checked at article pages 8 to 12 for observation, stories, apprenticeship, chores, environmental judgment, responsibility, and community as a place of learning."
+    },
+    {
+      "id": "i24-dictionary",
+      "title": "Alaska State Library, Iñupiat Eskimo Dictionary catalog record",
+      "url": "https://vilda.alaska.edu/digital/collection/cdmg21/id/14250",
+      "note": "State library record checked for authorship, 1970 publication, University of Alaska rural-school preparation, Inupiaq language, and the distinction between a modern dictionary and a 1492 text."
+    },
+    {
+      "id": "i25-museum",
+      "title": "Alaska State Museums, Sheldon Jackson Museum permanent exhibits",
+      "url": "https://museums.alaska.gov/sheldon_jackson/sjgalleries.html",
+      "note": "State museum page checked for separate Iñupiat and Yupik collection framing and uses of skin, gut, driftwood, ivory, bone, kayaks, clothing, baskets, and masks."
+    },
+    {
+      "id": "i26-arctic-subsistence",
+      "title": "National Park Service, Subsistence in the Arctic",
+      "url": "https://www.nps.gov/subjects/arctic/subsistence.htm",
+      "note": "NPS page checked for present Point Hope whaling, community observations, intergenerational knowledge, sea ice, permafrost, and the need to label modern evidence as continuity."
+    },
+    {
+      "id": "i27-aps",
+      "title": "National Park Service, Alaska Park Science volume 16",
+      "url": "https://www.nps.gov/articles/upload/APS_16_1_Arctic_508.pdf",
+      "note": "NPS journal checked in the Cape Krusenstern articles, especially PDF pages 19 to 31, for survey methods, features, beach-ridge chronology, preservation, and interpretation limits."
+    },
+    {
+      "id": "i28-crossroads",
+      "title": "Smithsonian Institution, Crossroads of Continents: Cultures of Siberia and Alaska exhibition",
+      "url": "https://www.si.edu/exhibitions/crossroads-continents-cultures-siberia-and-alaska%3Aevent-exhib-2255",
+      "note": "Smithsonian exhibition record checked for its 1988 to 1989 dates, joint preparation, broad Alaska and Siberia scope, and listed kayaks, harpoons, ivory carvings, beadwork, drums, clothing, journals, photographs, and film."
+    },
+    {
+      "id": "i29-burials",
+      "title": "University of Alaska Fairbanks, About time: burial chronology at Ipiutak, Point Hope",
+      "url": "https://scholarworks.alaska.edu/uaf_grad_anth/42/",
+      "note": "University thesis record checked for four burial types, remapping, taphonomy, accelerator dates, long site use, and limits on gender or status inference."
+    },
+    {
+      "id": "i30-services",
+      "title": "Iñupiat Community of the Arctic Slope, Community Services",
+      "url": "https://icas-nsn.gov/community-services-2/",
+      "note": "Tribal government page checked for present elder respite and chore services, child and family support, scholarships, burial aid, and organizational scope."
+    },
+    {
+      "id": "i31-bering",
+      "title": "National Park Service, The Bering Land Bridge Theory",
+      "url": "https://www.nps.gov/bela/learn/historyculture/the-bering-land-bridge-theory.htm",
+      "note": "NPS history checked for long cross-strait travel and trade known locally before eighteenth-century European mapping, plus the distinction between ancient migrations and later communities."
+    },
+    {
+      "id": "i32-settlement",
+      "title": "National Park Service, Cape Krusenstern Coastal Settlement Patterns resource brief",
+      "url": "https://www.nps.gov/rlc/oceanalaska/upload/cakr_amss-2015_508-web-compliant.pdf",
+      "note": "NPS one-page research brief checked for systematic survey, nearly continuous occupation over two millennia, environmental variability, and cautious resilience questions."
+    }
+  ],
+  "entities": [
+    {
+      "id": "inupiat",
+      "card": "data/cards/inupiat.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "i02-walakpa"
+          ],
+          "locator": "Exact id, imported name, approximate 1492 to 1500 interval, and historical-basemap provenance. Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests. Immediate post-interval control showing exact-id absence and changed atlas ownership. Later control showing the separate exact id inupiaq rather than a restored inupiat feature. Smithsonian monograph checked at printed pages 1 to 8 and 96 to 104 for terminology, chronology, Walakpa, Point Hope, and Kotzebue comparisons.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492"
+          ],
+          "locator": "Exact id, imported name, approximate 1492 to 1500 interval, and historical-basemap provenance. Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "i03-ridges"
+          ],
+          "locator": "NPS interpretation checked for Western Thule and Kotzebue archaeological periods, semi-subterranean houses, building materials, and changing house form.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "i01-wales"
+          ],
+          "locator": "NPS one-page landmark brief checked for the two archaeological sites, occupation since at least 500 CE, Birnirk artifacts, Kiŋigin and Kingikmiut names, and the approximately 68-mile umiak crossing.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "i04-coast"
+          ],
+          "locator": "NPS research summary checked for preservation limits, settlement density, environmental change, and an increase until about five hundred years ago.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "i05-plants"
+          ],
+          "locator": "Peer-reviewed study checked in sections 3 to 5 for a late thirteenth- to mid-fourteenth-century Cape Espenberg house, plant contexts, midden, roof, and formation-process cautions.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "i31-bering"
+          ],
+          "locator": "NPS history checked for long cross-strait travel and trade known locally before eighteenth-century European mapping, plus the distinction between ancient migrations and later communities.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "i16-currents"
+          ],
+          "locator": "Community-reviewed book checked at PDF pages 5 to 12 and 27 to 29 for currents, ice, animals, safety, place-specific expertise, youth learning, and review by tribes and local experts.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests. Immediate post-interval control showing exact-id absence and changed atlas ownership. Later control showing the separate exact id inupiaq rather than a restored inupiat feature.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-missing"
+          ],
+          "locator": "Repository data/hb/civilizations-hb.json, exact id inupiat, fields name, from, to, circa, and generated. | Repository data/hb/summaries-hb.json, exact key inupiat and imported territorial summary. | Repository data/research/coverage.json, exact inupiat record, kind, borderFiles, observedIntervals, datesApproximate, content, and review fields. | Repository data/cards/index.json, exact-id absence test for inupiat. | Repository data/researched-overrides.json, exact-id absence test for inupiat. | Repository data/research/missing-cards.json, exact inupiat record, summaryStatus, sourceLead, and stagedDrafts fields.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Repository data/hb/borders/world-1492.json, feature 613 for exact inupiat, decoded polygon, bbox, positions, shared arcs, overlap candidates, and representative-point tests.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Repository data/hb/borders/world-1492.json, feature 613 for exact inupiat, decoded polygon, bbox, positions, shared arcs, overlap candidates, and representative-point tests.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Repository data/hb/borders/world-1492.json, feature 613 for exact inupiat, decoded polygon, bbox, positions, shared arcs, overlap candidates, and representative-point tests.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Repository data/hb/borders/world-1400.json, exact-id absence and representative-point ownership controls. | Repository data/hb/borders/world-1492.json, feature 613 for exact inupiat, decoded polygon, bbox, positions, shared arcs, overlap candidates, and representative-point tests. | Repository data/hb/borders/world-1500.json, exact-id absence and representative-point ownership controls. | Repository data/hb/borders/world-1530.json, separate exact inupiaq feature and representative-point ownership controls.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "i03-ridges"
+          ],
+          "locator": "NPS Capturing History page, Lifeways and Building a House sections, Western Thule and Kotzebue date bands and house construction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "i01-wales"
+          ],
+          "locator": "NPS Wales Sites National Historic Landmark PDF, page 1, complete text: two sites, at least 500 CE, Birnirk artifacts, Kiŋigin and Kingikmiut names, 68-mile umiak reach, and cross-strait movement.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "i04-coast"
+          ],
+          "locator": "NPS article abstract and settlement-results paragraphs, especially environmental preservation limits and increase until about 500 years ago.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "i32-settlement"
+          ],
+          "locator": "NPS Coastal Settlement Patterns brief, full one-page Methods and Results and conclusion paragraphs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "i29-burials"
+          ],
+          "locator": "UAF thesis record, abstract, date, document type, four burial types, taphonomy, accelerator dates, and long-use conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "i06-early-people"
+          ],
+          "locator": "NPS Alaska Natives and Early People page, seasonal lifeways and Sheldon Jackson shortage-misreading paragraphs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "i07-aewc-villages"
+          ],
+          "locator": "AEWC Our Villages opening and named-village sections, eleven communities, identity labels, foods, whaling, and sharing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "i11-icas-communities"
+          ],
+          "locator": "ICAS Communities page, Our Land and Eight Vibrant Communities sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "i16-currents"
+          ],
+          "locator": "Kawerak Ocean Currents book, PDF pages 5 to 12 and 27 to 29, introduction, review process, place scope, youth transmission, currents, and experienced-boat guidance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "i32-settlement"
+          ],
+          "locator": "NPS Coastal Settlement Patterns brief, full one-page Methods and Results and conclusion paragraphs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "i10-whaling-eis"
+          ],
+          "locator": "ADFG Bowhead EIS, PDF pages 25 to 31, section 1.1.4 Eskimo Tradition of Subsistence Hunt of Bowhead Whales.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "i07-aewc-villages"
+          ],
+          "locator": "AEWC Our Villages opening and named-village sections, eleven communities, identity labels, foods, whaling, and sharing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "i09-nalukataq"
+          ],
+          "locator": "AEWC Nalukataq page, opening community participation, sharing, future generations, and saved portions paragraph.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "i26-arctic-subsistence"
+          ],
+          "locator": "NPS Subsistence in the Arctic page, Point Hope whaling image caption, 2023 community observation, and intergenerational-knowledge framing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "i08-aewc-home"
+          ],
+          "locator": "AEWC home page, Our Mission, Our Story, and Our Work sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "i03-ridges"
+          ],
+          "locator": "NPS Capturing History page, Lifeways and Building a House sections, Western Thule and Kotzebue date bands and house construction.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "i05-plants"
+          ],
+          "locator": "Journal of Archaeological Science: Reports article sections 3.1, 4, and 5, Feature 21 context, seed distributions, midden, roof, cleaning, and formation processes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "i19-dolls"
+          ],
+          "locator": "Smithsonian Native Dolls guide, PDF pages 11 to 13, doll-maker interview and History of Inupiat People clothing section.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "i25-museum"
+          ],
+          "locator": "Sheldon Jackson Museum Permanent Exhibits page, Inupiat and Yupik collection section.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "i18-mask"
+          ],
+          "locator": "Smithsonian Ocean object page, Inupiat Ceremonial Mask caption and description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "i21-murdoch"
+          ],
+          "locator": "Murdoch, Ethnological Results, printed pages 70 to 75, 418 to 423, and 427 to 428, with introduction pages 19 to 21 for observer and collection context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "i21-murdoch"
+          ],
+          "locator": "Murdoch, Ethnological Results, printed pages 70 to 75, 418 to 423, and 427 to 428, with introduction pages 19 to 21 for observer and collection context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "i22-ublasaun"
+          ],
+          "locator": "NPS Ublasaun article, Emily and Shishmaref birth paragraph, named-household settlement description, seasonal dispersal, qargi size note, and transitional houses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "i12-icas-values"
+          ],
+          "locator": "ICAS CEDS 2025-2030, PDF pages 6 to 8, goals and complete Iñupiat Values table.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "i29-burials"
+          ],
+          "locator": "UAF thesis record, abstract, date, document type, four burial types, taphonomy, accelerator dates, and long-use conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "i23-education"
+          ],
+          "locator": "ERIC ED453007, Aspects of Traditional Inupiat Education, article pages 8 to 12 and document abstract.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "i16-currents"
+          ],
+          "locator": "Kawerak Ocean Currents book, PDF pages 5 to 12 and 27 to 29, introduction, review process, place scope, youth transmission, currents, and experienced-boat guidance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "i13-icas-education"
+          ],
+          "locator": "ICAS Education page, mission and initiative list, especially Iñupiat-Focused Learning, Qargi Academy, apprenticeships, partnerships, and adult education.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "i15-lexicon"
+          ],
+          "locator": "UAF Edna MacLean lexicon page, paragraphs on four dialect types, two groups, contributors, elder verification, and dictionary completion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "i14-language",
+            "i24-dictionary"
+          ],
+          "locator": "North Slope Borough IHC Language page, lines containing the exact Iñupiatun sample, paired English translation, and language-program list. | Alaska Digital Archives item 14250, title, creators, 1970 date, description, language, corporate name, and physical description fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "i21-murdoch"
+          ],
+          "locator": "Murdoch, Ethnological Results, printed pages 70 to 75, 418 to 423, and 427 to 428, with introduction pages 19 to 21 for observer and collection context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "i22-ublasaun"
+          ],
+          "locator": "NPS Ublasaun article, Emily and Shishmaref birth paragraph, named-household settlement description, seasonal dispersal, qargi size note, and transitional houses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "i30-services"
+          ],
+          "locator": "ICAS Community Services page, Homemakers, ICWA, Scholarships, Burial Assistance, and Emergency Assistance sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "i12-icas-values"
+          ],
+          "locator": "ICAS CEDS 2025-2030, PDF pages 6 to 8, goals and complete Iñupiat Values table.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "i27-aps",
+            "i29-burials"
+          ],
+          "locator": "Alaska Park Science volume 16 PDF pages 19 to 31, Cape Krusenstern field methods, feature types, chronology, and conclusions. | UAF thesis record, abstract, date, document type, four burial types, taphonomy, accelerator dates, and long-use conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "i21-murdoch"
+          ],
+          "locator": "Murdoch, Ethnological Results, printed pages 70 to 75, 418 to 423, and 427 to 428, with introduction pages 19 to 21 for observer and collection context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "i20-water"
+          ],
+          "locator": "ANTHC Water and Sanitation page, Portable Alternative Sanitation System and Water and Wellness sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "i20-water"
+          ],
+          "locator": "ANTHC Water and Sanitation page, Portable Alternative Sanitation System and Water and Wellness sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "i27-aps",
+            "i05-plants"
+          ],
+          "locator": "Alaska Park Science volume 16 PDF pages 19 to 31, Cape Krusenstern field methods, feature types, chronology, and conclusions. | Journal of Archaeological Science: Reports article sections 3.1, 4, and 5, Feature 21 context, seed distributions, midden, roof, cleaning, and formation processes.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "i27-aps"
+          ],
+          "locator": "Alaska Park Science volume 16 PDF pages 19 to 31, Cape Krusenstern field methods, feature types, chronology, and conclusions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "i01-wales",
+            "i31-bering"
+          ],
+          "locator": "NPS Wales Sites National Historic Landmark PDF, page 1, complete text: two sites, at least 500 CE, Birnirk artifacts, Kiŋigin and Kingikmiut names, 68-mile umiak reach, and cross-strait movement. | NPS Bering Land Bridge Theory page, Bering and Cook Expeditions section and statement that local peoples traded and traveled across the strait for thousands of years.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "i32-settlement",
+            "i04-coast"
+          ],
+          "locator": "NPS Coastal Settlement Patterns brief, full one-page Methods and Results and conclusion paragraphs. | NPS article abstract and settlement-results paragraphs, especially environmental preservation limits and increase until about 500 years ago.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "i18-mask",
+            "i28-crossroads"
+          ],
+          "locator": "Smithsonian Ocean object page, Inupiat Ceremonial Mask caption and description. | Smithsonian Crossroads of Continents exhibition record, title block, 1988 to 1989 dates, preparation and scope paragraph, and artifact list.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "i17-landuse"
+          ],
+          "locator": "North Slope Borough IHLC budget narrative, PDF pages G-2 to G-5, Traditional Land Use Inventory, Iñupiat Heritage Center, oral history, elders, youth, and Simon Paneak Museum sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "i13-icas-education"
+          ],
+          "locator": "Repository data/hb/borders/world-1500.json, exact-id absence and representative-point ownership controls. | Repository data/hb/borders/world-1530.json, separate exact inupiaq feature and representative-point ownership controls. | ICAS Education page, mission and initiative list, especially Iñupiat-Focused Learning, Qargi Academy, apprenticeships, partnerships, and adult education.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "i08-aewc-home",
+            "i14-language"
+          ],
+          "locator": "Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests. Immediate post-interval control showing exact-id absence and changed atlas ownership. Later control showing the separate exact id inupiaq rather than a restored inupiat feature. Community organization page checked for Iñupiat and Siberian Yupik membership, long whaling continuity, adaptation, co-management, and present cultural responsibility. Community institution page checked for its exact modern Iñupiatun greeting and English translation, language programs, and learning resources.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "inupiat",
+        "name": "Iñupiat communities, 1492 atlas snapshot",
+        "aliases": [
+          "Inupiat",
+          "Iñupiat, 1492 atlas layer"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/inupiat.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1492 to 1500 atlas snapshot of diverse Iñupiat communities in northern and northwestern Alaska.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "inupiat",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -168.1810818108181,
+            63.84490053580787,
+            -133.72153721537217,
+            71.3545030299041
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
