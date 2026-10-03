@@ -1,0 +1,892 @@
+{
+  "version": 1,
+  "region": "Europe",
+  "researcher": "Codex parallel release192-proto-scythian-culture research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact proto-scythian-culture record: imported label, culture kind, approximate 700 to 500 BCE display lifetime, and historical-basemaps provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Exact-id absence check: no imported summary explains the label, identity, dates, or polygon."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact target record: one observed interval, one border file, approximate dates, culture kind, and missing content fields."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Exact target record confirming missing summary, no source lead, no packet, and no staged draft before this work."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Exact-id absence check confirming no proto-scythian-culture runtime card before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Exact-id absence check confirming no proto-scythian-culture researched override before integration."
+    },
+    {
+      "id": "atlas-map-1000",
+      "title": "Human History Map 1000 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc1000.json",
+      "note": "Immediate pre-appearance control: exact-id absence, Cimerians ownership at representative points, and neighboring classifications."
+    },
+    {
+      "id": "atlas-map-700",
+      "title": "Human History Map 700 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc700.json",
+      "note": "Only exact target feature: polygon geometry, properties, representative-place memberships, overlaps, and direct shared-arc seams."
+    },
+    {
+      "id": "atlas-map-500",
+      "title": "Human History Map 500 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc500.json",
+      "note": "Immediate endpoint control: exact-id absence and changed or absent classifications at representative places."
+    },
+    {
+      "id": "atlas-map-400",
+      "title": "Human History Map 400 BCE borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-bc400.json",
+      "note": "Later control confirming that the exact target id does not return after the 500 BCE atlas seam."
+    },
+    {
+      "id": "p01-cah",
+      "title": "33a - The Scythians",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-ancient-history/scythians/7F869EADCC95C0929204BE63AA2AF1B2",
+      "note": "T. Sulimirski and T. Taylor, chapter Summary and metadata, pages 547 to 590: archaeological traces before names, sixth-century core-periphery complexity, nomadism as one element, trade, fortified centers, and power by 500 BCE."
+    },
+    {
+      "id": "p02-radiocarbon",
+      "title": "A Chronology of the Scythian Antiquities of Eurasia Based on New Archaeological and 14C Data",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/chronology-of-the-scythian-antiquities-of-eurasia-based-on-new-archaeological-and-14c-data/C06C629B79B898E5B7111669456EC520",
+      "note": "Radiocarbon 43(2B), pages 1085 to 1107, especially pages 1085 to 1087: beginnings vary regionally; the authors distinguish a combined pre-Scythian and initial epoch, an early epoch, and a classical epoch."
+    },
+    {
+      "id": "p03-pre-scythian",
+      "title": "New Burials of the Pre-Scythian Time From the North-Eastern Azov Area",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/252",
+      "note": "Article abstract, paragraphs 1 to 5: excavated early Iron Age burials precede Scythian-time sites; Chernogorivka, Novocherkassk, and Cimmerian attributions are author interpretations."
+    },
+    {
+      "id": "p04-settlement",
+      "title": "Settlement System of the Dnieper Left-Bank Forest-Steppe of the Second Half of 8th - Middle of 6th Centuries BCE",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/273",
+      "note": "Article abstract and citation, pages 91 to 100: agricultural settlements, ashhill clusters, shared necropoleis, nomadic groups, routes, wintering, interaction, and interpretive limits."
+    },
+    {
+      "id": "p05-lifeways",
+      "title": "Re-evaluating Scythian Lifeways: Isotopic Analysis of Diet and Mobility in Iron Age Ukraine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7946291/",
+      "note": "Peer-reviewed article, abstract, Materials and Methods, Results, and Conclusions: human isotope samples, local mobility, varied diets, urban locales, and rejection of a homogeneous nomadic model."
+    },
+    {
+      "id": "p06-social",
+      "title": "Social Stratification of the Population of the Forest-Steppe Area of the Dnieperland During the Early Scythian Period",
+      "url": "https://rcin.org.pl/Content/63476/WA308_83114_PIII368_Social-stratifi-cati_I.pdf",
+      "note": "Marcin Burghardt, Sprawozdania Archeologiczne 69 (2017), pages 133 to 183; pages 133 to 140 methods and sample, 159 to 173 interpretation and limits."
+    },
+    {
+      "id": "p07-woman-bilsk",
+      "title": "Mound 1/2021 of the Skorobir Necropolis in the District of Bilsk Gorodyshche",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/560",
+      "note": "Article abstract: first-quarter sixth-century BCE female burial, wooden grave architecture, pottery, glass and rock-crystal beads, gold plaques, local elite interpretation, and ancient looting."
+    },
+    {
+      "id": "p08-malynivtsi",
+      "title": "Barrow of the Scythian Period near Malynivtsi Village in Podillya",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/559",
+      "note": "Article abstract: late seventh to first-half sixth-century BCE inhumation and cremation, scattered human remains, jewelry, seventeen vessels, nearby settlement, and ordinary-community interpretation."
+    },
+    {
+      "id": "p09-female-warriors",
+      "title": "Scythian female warriors in the south of Eastern Europe",
+      "url": "https://pressto.amu.edu.pl/index.php/fpp/article/view/13588",
+      "note": "Elena Fialko, Folia Praehistorica Posnaniensia 22, pages 29 to 47; abstract and printed pages 42 to 43: total date range, earliest graves in the second half of the seventh to beginning of the sixth century BCE, and main concentration in the fourth century BCE."
+    },
+    {
+      "id": "p10-warrior-grave",
+      "title": "On the Eve of the “Scythian Invasion” to Central Europe: a New Warrior Grave in Bilsk",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/379",
+      "note": "Article abstract: Barrow 1/2020 dated 580/570 to 560/550 BCE, handmade pottery, two iron bits, spearhead, quiver and arrowheads; campaign link is an interpretation."
+    },
+    {
+      "id": "p11-quivers",
+      "title": "Early Scythian Quiver Sets of the First Half of the 6th Century BC in the South of Eastern Europe",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/437",
+      "note": "Article abstract: quiver sets dated with Greek transport and painted amphorae; listed burial complexes span Kuban to Dnieper forest-steppe and illustrate wide connections."
+    },
+    {
+      "id": "p12-cauldron",
+      "title": "Copper Wrought Cauldron of the Early Scythian Period from the Vicinity of Bilsk Fortified Hillfort",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/365",
+      "note": "Article abstract, paragraphs 1 to 8: first-half sixth-century BCE find, morphology and X-ray fluorescence analysis, central Caucasian production connection, Urartian handle influence, and cautious mobility hypothesis."
+    },
+    {
+      "id": "p13-weaving",
+      "title": "Scherban A. Spinning and Weaving among the Population of the Left-Bank Forest-Steppe of the Ukraine of the Seventh - Early Third Centuries BC (on the Basis of Ceramic Materials)",
+      "url": "https://uacademic.info/en/document/0405U001903",
+      "note": "National Academy thesis record, abstract and bibliographic fields: ceramic evidence, spindle whorls, vertical and horizontal looms, domestic manufacture, and broad seventh to early-third-century scope."
+    },
+    {
+      "id": "p14-urbanisation",
+      "title": "Processes of Early Iron Age Urbanisation of Eastern European Forest-Steppe: The State of the Art",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/412",
+      "note": "Article abstract and PDF pages 5 to 24, especially pages 12 to 19: fortifications, production, trade, ritual, settlement clusters, metalworking techniques, labor, and uncertainty."
+    },
+    {
+      "id": "p15-fortification",
+      "title": "On the Issue of the Architecture of Defensive Structures of the Eastern Fortification of Bilsk Hillfort",
+      "url": "https://adiu.com.ua/index.php/journal/article/view/459",
+      "note": "Article abstract: open settlements from late eighth century, light boundaries by third quarter sixth century, later ramparts and moat, distinct traditions, and changing defenses."
+    },
+    {
+      "id": "p16-cocklebur",
+      "title": "Cocklebur in the Archaeological Chronicle of Ukraine",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/311",
+      "note": "Article abstract, Scythian-period paragraph: three finds including Bilsk, two clay impressions, isolated evidence, and later medicinal use that cannot be back-projected."
+    },
+    {
+      "id": "p17-oral-health",
+      "title": "Diet and Oral Health of Scythian Populations in Ukraine (700-200 BCE): Evidence for Grain Consumption and Food Processing",
+      "url": "https://doi.org/10.1002/oa.70137",
+      "note": "International Journal of Osteoarchaeology 2026 article, abstract and Results: 36 individuals from Bilsk, Medvin, and Mamai-Gora; caries, calculus, abscesses, tooth loss, wear, and sample limits."
+    },
+    {
+      "id": "p18-dairy",
+      "title": "Paleo-proteomic analysis of Iron Age dental calculus provides direct evidence of Scythian reliance on ruminant dairy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12822928/",
+      "note": "Pecnik et al., PLOS One 2026, abstract, Methods, Results, and figure captions: milk proteins in calculus from two Ukrainian Iron Age populations; direct dietary evidence with site and sample limits."
+    },
+    {
+      "id": "p19-population",
+      "title": "The Population of the Forest-Steppe Zone of Ukraine During the Scythian Time",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/221",
+      "note": "Article abstract, paragraphs 1 to 8: craniological series, non-homogeneous forest-steppe population, difference from steppe samples, and bias because cremations leave no comparable remains."
+    },
+    {
+      "id": "p20-genetic",
+      "title": "Genetic history of Scythia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12285711/",
+      "note": "Andreeva et al., Science Advances 2025, Results and Discussion: temporally and geographically distinct communities were genetically heterogeneous; shared cultural elements do not establish one ethnicity. The linked article records a 27 March 2026 erratum and states that its conclusions are unaffected."
+    },
+    {
+      "id": "p21-oracc",
+      "title": "Royal marriage alliances and noble hostages",
+      "url": "https://oracc.museum.upenn.edu/saao/aebp/Essentials/Diplomats/Royalmarriage/index.html",
+      "note": "Karen Radner, Assyrian Empire Builders, University College London and ORACC, section Assyrian princesses marrying abroad: Esarhaddon, Bartatua, contemplated treaty and marriage, and exact reference SAA 4 20."
+    },
+    {
+      "id": "p22-bm-intro",
+      "title": "Introducing the Scythians",
+      "url": "https://www.britishmuseum.org/blog/introducing-scythians",
+      "note": "British Museum overview sections on evidence, mobility, wagons, horses, craft, and archaeology; examples span wide regions and dates, so comparisons remain labeled."
+    },
+    {
+      "id": "p23-bm-burial",
+      "title": "Scythians, ice mummies and burial mounds",
+      "url": "https://www.britishmuseum.org/blog/scythians-ice-mummies-and-burial-mounds",
+      "note": "St John Simpson, British Museum, sections on burial mounds and society: cemeteries, mound scale, preservation, grave goods, family grouping, and limits of mortuary evidence."
+    },
+    {
+      "id": "p24-cesspit",
+      "title": "Defining an indicator package to allow identification of ‘cesspits’ in the archaeological record",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305440312002531",
+      "note": "David N. Smith, Journal of Archaeological Science 40 (2013), printed pages 526 to 527 and Table 1: 49 features at 11 British sites, dating from the late eleventh to late sixteenth century CE with most from the twelfth to fifteenth centuries; a comparative identification method, not evidence from the atlas region."
+    },
+    {
+      "id": "p25-met",
+      "title": "Harness or bridle fitting",
+      "url": "https://www.metmuseum.org/art/collection/search/325094",
+      "note": "Metropolitan Museum of Art object 61.60.1, Artwork Details: circa seventh to sixth century BCE, Eurasian steppes, bronze, dimensions, and catalog attribution “Scythian (?)” retaining uncertainty."
+    },
+    {
+      "id": "p26-animal-style",
+      "title": "Expanding the Corpus of the Earliest Scythian Animal-Style Artefacts",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/expanding-the-corpus-of-the-earliest-scythian-animalstyle-artefacts/2FC8C939618BAF7C64332E03BE1746A7",
+      "note": "Antiquity article, opening and Tunnug 1 context: 833 to 800 BCE dating, early animal-style corpus, human and horse sacrifice, and distant Inner Asian scope."
+    },
+    {
+      "id": "p27-greek-relations",
+      "title": "On Relations Between Scythians and Greeks in North Coast of Black Sea",
+      "url": "https://arheologia.com.ua/index.php/arheologia/article/view/110",
+      "note": "Maryna V. Skrzhynska, article keywords and abstract: wider Archaic and Classical named-Scythian evidence, Greek-speaking and writing interpreters, wine, tableware, expensive arms, Greek goldsmiths, and poor mutual understanding; some described activity is explicitly fifth-century BCE."
+    },
+    {
+      "id": "p28-bilsk-glass",
+      "title": "Glass Beads from Burial and Household Contexts of the Bilsk Hillfort in the Dnipro Forest-Steppe (Late 7th to 4th Century BC)",
+      "url": "https://www.mdpi.com/2076-0752/15/8/182",
+      "note": "Stanislav Zadnikov, Arts 15(8), 2026, abstract and Introduction, plus section 3.1 and Figure 3: dated settlement and burial contexts, dugouts, household pits, ash hills, Greek ceramics, and exchange limits."
+    },
+    {
+      "id": "p29-language",
+      "title": "Scythian Language",
+      "url": "https://www.iranicaonline.org/articles/scythian-language/",
+      "note": "Rüdiger Schmitt, Encyclopaedia Iranica, opening paragraphs 1 to 3: no authentic continuous Scythian texts; evidence is indirect and fragmentary, chiefly names recorded by Assyrian, Persian, and Greek neighbors; dialect diversity remains unresolved."
+    }
+  ],
+  "entities": [
+    {
+      "id": "proto-scythian-culture",
+      "card": "data/cards/proto-scythian-culture.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-missing",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-map-1000",
+            "atlas-map-700",
+            "atlas-map-500",
+            "p19-population"
+          ],
+          "locator": "Exact proto-scythian-culture record: imported label, culture kind, approximate 700 to 500 BCE display lifetime, and historical-basemaps provenance. Exact-id absence check: no imported summary explains the label, identity, dates, or polygon. Exact target record: one observed interval, one border file, approximate dates, culture kind, and missing content fields. Exact target record confirming missing summary, no source lead, no packet, and no staged draft before this work. Exact-id absence check confirming no proto-scythian-culture runtime card before integration. Exact-id absence check confirming no proto-scythian-culture researched override before integration. Immediate pre-appearance control: exact-id absence, Cimerians ownership at representative points, and neighboring classifications. Only exact target feature: polygon geometry, properties, representative-place memberships, overlaps, and direct shared-arc seams. Immediate endpoint control: exact-id absence and changed or absent classifications at representative places. Article abstract, paragraphs 1 to 8: craniological series, non-homogeneous forest-steppe population, difference from steppe samples, and bias because cremations leave no comparable remains.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1000",
+            "atlas-map-700",
+            "p26-animal-style"
+          ],
+          "locator": "Exact proto-scythian-culture record: imported label, culture kind, approximate 700 to 500 BCE display lifetime, and historical-basemaps provenance. Immediate pre-appearance control: exact-id absence, Cimerians ownership at representative points, and neighboring classifications. Only exact target feature: polygon geometry, properties, representative-place memberships, overlaps, and direct shared-arc seams. Antiquity article, opening and Tunnug 1 context: 833 to 800 BCE dating, early animal-style corpus, human and horse sacrifice, and distant Inner Asian scope.",
+          "dateScope": {
+            "from": -700,
+            "to": -675
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "p21-oracc"
+          ],
+          "locator": "Karen Radner, Assyrian Empire Builders, University College London and ORACC, section Assyrian princesses marrying abroad: Esarhaddon, Bartatua, contemplated treaty and marriage, and exact reference SAA 4 20.",
+          "dateScope": {
+            "from": -675,
+            "to": -650
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "p14-urbanisation",
+            "p20-genetic"
+          ],
+          "locator": "Article abstract and PDF pages 5 to 24, especially pages 12 to 19: fortifications, production, trade, ritual, settlement clusters, metalworking techniques, labor, and uncertainty. Andreeva et al., Science Advances 2025, Results and Discussion: temporally and geographically distinct communities were genetically heterogeneous; shared cultural elements do not establish one ethnicity. The linked article records a 27 March 2026 erratum and states that its conclusions are unaffected.",
+          "dateScope": {
+            "from": -650,
+            "to": -625
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "p08-malynivtsi",
+            "p25-met"
+          ],
+          "locator": "Article abstract: late seventh to first-half sixth-century BCE inhumation and cremation, scattered human remains, jewelry, seventeen vessels, nearby settlement, and ordinary-community interpretation. Metropolitan Museum of Art object 61.60.1, Artwork Details: circa seventh to sixth century BCE, Eurasian steppes, bronze, dimensions, and catalog attribution “Scythian (?)” retaining uncertainty.",
+          "dateScope": {
+            "from": -625,
+            "to": -600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "p07-woman-bilsk"
+          ],
+          "locator": "Article abstract: first-quarter sixth-century BCE female burial, wooden grave architecture, pottery, glass and rock-crystal beads, gold plaques, local elite interpretation, and ancient looting.",
+          "dateScope": {
+            "from": -600,
+            "to": -575
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "p10-warrior-grave"
+          ],
+          "locator": "Article abstract: Barrow 1/2020 dated 580/570 to 560/550 BCE, handmade pottery, two iron bits, spearhead, quiver and arrowheads; campaign link is an interpretation.",
+          "dateScope": {
+            "from": -575,
+            "to": -550
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "p05-lifeways"
+          ],
+          "locator": "Peer-reviewed article, abstract, Materials and Methods, Results, and Conclusions: human isotope samples, local mobility, varied diets, urban locales, and rejection of a homogeneous nomadic model.",
+          "dateScope": {
+            "from": -550,
+            "to": -525
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "p01-cah",
+            "atlas-map-500",
+            "atlas-map-400"
+          ],
+          "locator": "T. Sulimirski and T. Taylor, chapter Summary and metadata, pages 547 to 590: archaeological traces before names, sixth-century core-periphery complexity, nomadism as one element, trade, fortified centers, and power by 500 BCE. Immediate endpoint control: exact-id absence and changed or absent classifications at representative places. Later control confirming that the exact target id does not return after the 500 BCE atlas seam.",
+          "dateScope": {
+            "from": -525,
+            "to": -500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "p20-genetic"
+          ],
+          "locator": "Atlas exact record and missing summary; Genetic History abstract and Discussion on heterogeneity and shared material culture versus ethnicity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-700"
+          ],
+          "locator": "Decoded world-bc700 exact feature, geometry type, ring and position counts, bounding box, and SHA-256 audited across all fifty snapshots.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-700"
+          ],
+          "locator": "Decoded point-in-polygon audit for twenty named controls in world-bc700, with boundary-inclusive algorithm and exact membership results.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-700"
+          ],
+          "locator": "World-bc700 raw topology, normalized shared-arc audit: six direct seams with Cimerians, Thrace, and chernoles-culture features; representative owners.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1000",
+            "atlas-map-700",
+            "atlas-map-500"
+          ],
+          "locator": "Three-snapshot seam audit, exact-id feature counts 0-1-0 and before-after ownership for all representative points.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "p02-radiocarbon"
+          ],
+          "locator": "Radiocarbon 43(2B), printed pages 1085 to 1087, Introduction and Results periodization; regional-start warning retained.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "p03-pre-scythian"
+          ],
+          "locator": "New Burials abstract paragraphs 1 to 5, chronological precedence and multiple alternative cultural attributions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "p21-oracc"
+          ],
+          "locator": "Assyrian Empire Builders, Assyrian princesses marrying abroad, paragraph citing SAA 4 20 and Esarhaddon’s 680 to 669 BCE reign.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "p25-met"
+          ],
+          "locator": "Met object 61.60.1, Artwork Details fields for title, date, geography, culture with question mark, medium, dimensions, and provenance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "p26-animal-style"
+          ],
+          "locator": "Antiquity article opening, Figure 1 context, Tunnug 1 dating and Arzhan-horizon discussion; geographic and chronological distance explicit.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "p04-settlement"
+          ],
+          "locator": "Settlement System abstract, paragraphs on cluster settlements, agricultural population, nomadic burials, routes, and wintering.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "p05-lifeways"
+          ],
+          "locator": "Re-evaluating Scythian Lifeways, abstract, site sample, isotope Results, and Conclusions on local mobility and economic diversity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "p01-cah"
+          ],
+          "locator": "Cambridge Ancient History chapter Summary, pages 547 to 590, core-periphery, nomadism, trade, and fortified-centers sentences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "p15-fortification"
+          ],
+          "locator": "Bilsk defensive-architecture abstract, open-settlement chronology, beginning of the third quarter of the sixth century, wooden fence, and later earthen-rampart discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "p14-urbanisation"
+          ],
+          "locator": "Processes of Early Iron Age Urbanisation, PDF pages 5 to 24, especially settlement synchrony, population estimates, fortification labor, and conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "p05-lifeways"
+          ],
+          "locator": "Re-evaluating Scythian Lifeways, Materials and Methods, stable-isotope Results, site comparisons, and diet discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "p18-dairy"
+          ],
+          "locator": "Pecnik et al. 2026, abstract, Methods, Results, protein identifications, sites, and stated archaeological interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "p17-oral-health"
+          ],
+          "locator": "International Journal of Osteoarchaeology article abstract and Results, sample size, sites, dental indicators, chronological range, and limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "p28-bilsk-glass"
+          ],
+          "locator": "Zadnikov 2026, abstract and Introduction on site chronology, exchange networks, and the Olbian route; section 3.1 and Figure 3 on dugouts, household pits, and ash-hill contexts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "p04-settlement",
+            "atlas-map-700"
+          ],
+          "locator": "Settlement System abstract and geographic scope; decoded atlas bounds and representative river-region controls; explicitly bounded inference and bounded absence of household-water details.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "p28-bilsk-glass"
+          ],
+          "locator": "Zadnikov 2026, Introduction and section 3.1, especially the dated settlement contexts and Figure 3 inventory of dugouts, household pits, and ash hills.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "p04-settlement"
+          ],
+          "locator": "Settlement System abstract, paragraphs on nomadic groups, movement routes, frequent stops, wintering, and agricultural clusters.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "p22-bm-intro"
+          ],
+          "locator": "British Museum Introducing the Scythians, sections on evidence, mobility, wagons, horses, and geographic breadth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "p07-woman-bilsk"
+          ],
+          "locator": "Mound 1/2021 abstract, grave dimensions and orientation, timber floor and ceiling, pottery position, and date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "p15-fortification"
+          ],
+          "locator": "Bilsk defensive-architecture abstract, pre-fortress settlements, light boundary, earthen rampart, wooden wall, moat, and proposed dates.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "p06-social"
+          ],
+          "locator": "Burghardt, printed pages 133 to 140, 197-complex sample, sex-assignment method, grave-good overlap, and source criticism.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "p07-woman-bilsk"
+          ],
+          "locator": "Mound 1/2021 abstract, identified woman, beads, gold plaques, looting, local-elite interpretation, and first-quarter sixth-century date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "p09-female-warriors"
+          ],
+          "locator": "Fialko, abstract and printed pages 42 to 43: total span, earliest armed-women graves, and main fourth-century concentration.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "p08-malynivtsi"
+          ],
+          "locator": "Malynivtsi article abstract, Barrow 4 construction, rites, remains, grave goods, date, nearby settlement, and social interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "p06-social",
+            "p23-bm-burial"
+          ],
+          "locator": "Burghardt sample and method limits; British Museum Burial mounds and Scythian society sections; bounded audit of direct child and household evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "p13-weaving"
+          ],
+          "locator": "National Academy thesis record, abstract, chronological scope, spindle whorls, vertical and horizontal looms, ceramic evidence, and domestic-production conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "p14-urbanisation"
+          ],
+          "locator": "Processes of Early Iron Age Urbanisation, PDF pages 15 to 19, metalworking centers, tools, techniques, workshops, and craft districts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "p12-cauldron"
+          ],
+          "locator": "Article abstract, paragraphs 1 to 8: X-ray fluorescence and morphology, proposed date, production connection, handle influence, and conditional mobility sentence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "p11-quivers"
+          ],
+          "locator": "Early Scythian Quiver Sets abstract, artifact associations, production centers, dating purpose, and listed geographic distribution.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "p27-greek-relations",
+            "p29-language"
+          ],
+          "locator": "On Relations keywords and abstract on the wider Archaic and Classical scope, goods, interpreters, goldsmiths, and misunderstanding; Iranica Scythian Language, opening paragraphs on indirect fragmentary evidence and external records.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "p17-oral-health"
+          ],
+          "locator": "Diet and Oral Health abstract and Results, sample size and sites, chronological range, five dental indicators, and interpretation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "p05-lifeways"
+          ],
+          "locator": "Re-evaluating Scythian Lifeways, sample construction, Methods, site coverage, Conclusions, and bounded audit of care practices not measured.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "p16-cocklebur"
+          ],
+          "locator": "Cocklebur article abstract, Scythian-period find inventory, random Bilsk context, clay impressions, insufficiency statement, and later medicinal comparison.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "p23-bm-burial"
+          ],
+          "locator": "British Museum Scythians, Ice Mummies and Burial Mounds, Burial mounds and Scythian society sections, scale and preservation comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "p16-cocklebur",
+            "p17-oral-health",
+            "p06-social"
+          ],
+          "locator": "Cocklebur evidence limits; oral-health evidence categories; social-stratification burial dataset; bounded absence across the selected direct-source corpus.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "p28-bilsk-glass"
+          ],
+          "locator": "Zadnikov 2026, section 3.1 and Figure 3 context inventory; the article identifies archaeological contexts without assigning sanitation functions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "p24-cesspit"
+          ],
+          "locator": "Smith 2013, printed pages 526 to 527 and Table 1: 49 features at 11 British sites, mostly twelfth- to fifteenth-century; comparison is methodological only.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "p04-settlement"
+          ],
+          "locator": "Settlement System abstract and article scope; bounded audit of named features and sanitation terms absent from the selected direct source.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "p28-bilsk-glass",
+            "p24-cesspit"
+          ],
+          "locator": "Zadnikov 2026, abstract, Introduction, section 3.1, and Figure 3; Smith 2013 indicator method; bounded audit of the features and functions actually named.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "p15-fortification"
+          ],
+          "locator": "Defensive-architecture abstract: named boundaries, walls, rampart, and moat; bounded audit of functions the study does not assign.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "p13-weaving",
+            "p26-animal-style"
+          ],
+          "locator": "Weaving thesis abstract and artifact scope; Antiquity early animal-style corpus, dating, technology, and geographic context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "p07-woman-bilsk"
+          ],
+          "locator": "Mound 1/2021 abstract, grave plan, timber construction, associated goods, sex assessment, elite interpretation, and looting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "p14-urbanisation"
+          ],
+          "locator": "Urbanisation abstract, production and fortification sections, population estimates, synchrony limits, and conclusion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "p20-genetic"
+          ],
+          "locator": "Genetic History of Scythia, abstract, sample design, Results, and Discussion on heterogeneity and shared culture versus ethnicity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "atlas-map-500",
+            "atlas-map-400",
+            "p20-genetic"
+          ],
+          "locator": "Atlas endpoint and later control; Genetic History abstract, sample design, and Discussion on temporally and geographically distinct communities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-500",
+            "atlas-map-400",
+            "p02-radiocarbon"
+          ],
+          "locator": "Immediate endpoint control: exact-id absence and changed or absent classifications at representative places. Later control confirming that the exact target id does not return after the 500 BCE atlas seam. Radiocarbon 43(2B), pages 1085 to 1107, especially pages 1085 to 1087: beginnings vary regionally; the authors distinguish a combined pre-Scythian and initial epoch, an early epoch, and a classical epoch.",
+          "dateScope": {
+            "year": -500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "proto-scythian-culture",
+        "name": "“Proto-Scythian culture” atlas archaeology layer",
+        "aliases": [
+          "Proto-Scythian culture atlas label, 700-500 BCE"
+        ],
+        "kind": "culture",
+        "region": "Europe",
+        "from": -700,
+        "to": -500,
+        "circa": true,
+        "card": "cards/proto-scythian-culture.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 700 to 500 BCE atlas archaeology layer, retained as a visual category; the card does not treat it as a self-name for a homogeneous people, a surveyed territory, or a unified state.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-bc700.json",
+          "properties": {
+            "civ": "proto-scythian-culture",
+            "from": -700,
+            "to": -500,
+            "precision": 1
+          },
+          "bounds": [
+            25.96525965259653,
+            44.58011578705401,
+            42.55422554225544,
+            50.01877120159277
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
