@@ -204,8 +204,14 @@ body.card { --ink-faint: #505666; }
 .key-approximate { border: 1px solid var(--line); }
 @media (max-width: 560px) {
   /* on a phone the title sets in two lines, as a cartouche does, and the
-     chips tighten so nothing scrolls sideways */
-  .bar .brand { white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 10px; }
-  .bar-tools { gap: 6px; }
+     chips tighten so nothing scrolls sideways; min-content undoes site.css's
+     min-width: 0, which let the frame shrink past HISTORY and spill it, and
+     max-content keeps the frame round the letters when it has a row alone */
+  .bar .brand { flex: 1 1 min-content; min-width: min-content; max-width: max-content; white-space: normal; overflow: visible; text-overflow: clip; font-size: 12px; letter-spacing: .04em; line-height: 1.4; padding: 4px 10px; }
+  /* with the title held at its narrowest the tools no longer fit beside it
+     on most phones, so they drop to a row of their own at the right rather
+     than pushing the page sideways */
+  .bar { flex-wrap: wrap; row-gap: 8px; }
+  .bar-tools { gap: 6px; margin-left: auto; }
   .bar .chip { padding: 6px 10px; font-size: 1rem; letter-spacing: .02em; }
 }
