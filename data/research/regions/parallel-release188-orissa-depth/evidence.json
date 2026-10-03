@@ -1,0 +1,927 @@
+{
+  "version": 1,
+  "region": "Asia",
+  "researcher": "Codex parallel release188-orissa research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact indexed id, imported display name, approximate 1000 to 1100 interval, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported modern-state summary audited and rejected for this medieval regional record."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed feature interval, one border file, approximate dates, missing card status, and pending identity review."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms that the exact orissa id lacks a runtime card before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms that the exact orissa id has no researched override before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Confirms imported-summary status and absence of a staged exact-id draft."
+    },
+    {
+      "id": "atlas-map-900",
+      "title": "Human History Map 900 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-900.json",
+      "note": "Pre-appearance control and ownership tests for Somavamshi, Pala, and Kalinga labels."
+    },
+    {
+      "id": "atlas-map-1000",
+      "title": "Human History Map 1000 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1000.json",
+      "note": "Only exact target feature, decoded geometry, representative points, and competing labels."
+    },
+    {
+      "id": "atlas-map-1100",
+      "title": "Human History Map 1100 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1100.json",
+      "note": "Endpoint control showing exact-id absence and a largely unpainted interior."
+    },
+    {
+      "id": "atlas-map-1200",
+      "title": "Human History Map 1200 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1200.json",
+      "note": "Later repaint control showing broad rajput-kingdoms coverage rather than a documented local succession."
+    },
+    {
+      "id": "o01-yayati4",
+      "title": "DHARMA, Orissa State Museum plates of Mahasivagupta Yayati year 4",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00017",
+      "note": "Critical digital edition checked for Sanskrit language, Uḍra place language, village grant, beneficiary genealogy, taxes, officials, water and dry land, and named record makers."
+    },
+    {
+      "id": "o02-dharmaratha11",
+      "title": "DHARMA, Mahulpara plates of Mahasivagupta Dharmaratha year 11",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00020",
+      "note": "Critical digital edition checked for royal year, village grant, recipient genealogy, record-office head Netradeva, engraver Sornnanka, and its unusually intimate opening verse."
+    },
+    {
+      "id": "o03-baragaon",
+      "title": "DHARMA, Baragaon plates of the time of Janamejaya year 13",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00040",
+      "note": "Critical digital edition checked for resident householders, district people, officers, four village boundaries, exemptions, trees, grass, water, and rents."
+    },
+    {
+      "id": "o04-balijhari",
+      "title": "DHARMA, Balijhari plates of Mahabhavagupta Uddyotakesarin year 4",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00015",
+      "note": "Critical digital edition checked for two donated villages, two brother beneficiaries, resident payments, minister Rudradatta, record officer Satamata, and two goldsmith engravers."
+    },
+    {
+      "id": "o05-brahmesvara",
+      "title": "DHARMA, Brahmesvara temple inscription of Uddyotakesarin year 18",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00030",
+      "note": "Critical digital edition checked for the lost-inscription caveat, Chandihara restoration story, queen mother Kolavati, temple dedication, learned poet, women attached to the temple, and mason Raya."
+    },
+    {
+      "id": "o07-kamalpur",
+      "title": "DHARMA, Kamalpur plates of the time of Karna year 4",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00014",
+      "note": "Critical digital edition checked for Karna year 4, a subordinate Vaisnava donor, Sanskrit text, and its edited opening."
+    },
+    {
+      "id": "o08-surya",
+      "title": "DHARMA, Gandhibedha Surya image inscription of the time of Karna",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00034",
+      "note": "Critical digital edition checked for a fragmentary image inscription associated with Karna and the severe limits of its preserved text."
+    },
+    {
+      "id": "o09-nuapatna",
+      "title": "DHARMA, Nuapatna plates of Mahabhavagupta Janamejaya year 5",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00021",
+      "note": "Critical digital edition checked for a Somavamshi copperplate grant, ruler, regnal year, beneficiaries, and administrative formulae."
+    },
+    {
+      "id": "o10-patna8",
+      "title": "DHARMA, Patna plates of Mahasivagupta Yayati year 8",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00022",
+      "note": "Critical digital edition checked for royal titulature, genealogy, grant language, and the distinction between court claims and observed control."
+    },
+    {
+      "id": "o11-patna24",
+      "title": "DHARMA, Patna plates of Mahasivagupta Yayati year 24",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00025",
+      "note": "Critical digital edition checked for a later regnal-year charter, genealogy, named places, fiscal language, and its value and limits for chronology."
+    },
+    {
+      "id": "o12-retrospect",
+      "title": "Odisha Review, History of Odisha in Retrospect",
+      "url": "https://magazines.odisha.gov.in/Orissareview/2022/October/engpdf/1-8.pdf",
+      "note": "Government historical overview checked for Somavamshi rise in South Kosala, movement into coastal Odisha, regional state formation, chronology, and succession by the Eastern Gangas."
+    },
+    {
+      "id": "o13-utkal",
+      "title": "Utkal University, Socio-Political and Administrative History of Ancient India, Paper XII",
+      "url": "https://ddceutkal.ac.in/Syllabus/MA_history/paper-12-N.pdf",
+      "note": "Official university course, Somavamshi and Ganga political-history units, checked for ruler sequences, Karna, Chodaganga, competing chronology, and the Lingaraja inscription reading."
+    },
+    {
+      "id": "o14-gazetteer",
+      "title": "Government of Odisha, Jagatsinghpur District Gazetteer",
+      "url": "https://jagatsinghpur.odisha.gov.in/sites/default/files/2023-05/2018051050.pdf",
+      "note": "Official district gazetteer checked at PDF pages 36 to 38 (gazetteer pages 19 to 21) for Somavamshi expansion, Karna, Chodaganga, Mukhalingam, Cuttack, Jajpur, and one reconstruction of the transition around 1108 to 1113."
+    },
+    {
+      "id": "o15-glimpse",
+      "title": "Odisha Review, A Glimpse of Odishan History",
+      "url": "https://magazines.odisha.gov.in/Orissareview/2019/Apr-May/engpdf/a_glimpse_of_odishan-8-10.pdf",
+      "note": "Government historical overview, especially article page 9, checked for Janmejaya, Yayati, Dharmaratha, Uddyotakesarin, regional power, architectural achievements, and broad succession by the Eastern Gangas."
+    },
+    {
+      "id": "o16-revenue",
+      "title": "Chittaranjan Mishra, Nature of Odishan Economy: From Ancient to Early-Medieval Period",
+      "url": "https://magazines.odisha.gov.in/Orissareview/2022/May/engpdf/May-or-2022.pdf",
+      "note": "Odisha Review, May 2022, pages 58 to 64, especially page 62, checked for bali, bhaga, bhoga, hiranya, land classifications, cultivation, cottage industry, and the need to separate evidence from later examples."
+    },
+    {
+      "id": "o17-survey",
+      "title": "Odisha Review, Land Records in Odisha: A Historical Perspective",
+      "url": "https://magazines.odisha.gov.in/orissareview/2021/May/engpdf/May_OR_%202021.pdf",
+      "note": "Government historical article checked in its land-records discussion for charter survey, measurement, boundary description, record keeping, and land administration."
+    },
+    {
+      "id": "o18-trade",
+      "title": "Studies in People's History, Trade and traders: An exploration into trading communities and their activities in early medieval Odisha",
+      "url": "https://journals.sagepub.com/doi/10.1177/2348448919875282",
+      "note": "Peer-reviewed article checked for inland and maritime routes, merchant groups, market connections, political change, and limits of evidence for individual households."
+    },
+    {
+      "id": "o19-irrigation",
+      "title": "Central Water Commission, History of irrigation development in Orissa",
+      "url": "https://cwc.adgstaging.in/sites/default/files/18-history-irrigation-development-orissa.pdf",
+      "note": "Government technical history checked for tanks, wells, irrigation traditions, regional water management, and chronological cautions."
+    },
+    {
+      "id": "o20-shell",
+      "title": "Shell Bangle Manufacturing in Coastal Odisha: A Study of Surface Collection at Manikapatana",
+      "url": "https://www.researchgate.net/publication/265846344_Shell_Bangle_Manufacturing_in_Coastal_Odisha_A_study_of_Surface_Collection_at_Manikapatana",
+      "note": "Archaeological paper checked for shell-working debris, bangles, coastal production, port context, long chronology, and dating limits."
+    },
+    {
+      "id": "o21-mukteswar",
+      "title": "Odisha Tourism, Mukteswar Temple",
+      "url": "https://odishatourism.gov.in/content/tourism/en/discover/attractions/temples-monuments/mukteswar-temple.html",
+      "note": "Official heritage page checked for tenth-century date, torana, sculpture, ascetics, and the carved image of a woman writing a letter."
+    },
+    {
+      "id": "o22-rajarani",
+      "title": "Odisha Tourism, Rajarani Temple",
+      "url": "https://odishatourism.gov.in/content/tourism/en/discover/attractions/temples-monuments/rajarani-temple.html",
+      "note": "Official heritage page checked for eleventh-century date, sandstone, plan, sculpture, and cautious interpretation of incomplete architecture."
+    },
+    {
+      "id": "o23-lingaraj",
+      "title": "Odisha Tourism, Lingaraj Temple",
+      "url": "https://odishatourism.gov.in/content/tourism/en/discover/attractions/temples-monuments/lingaraja-temple.html",
+      "note": "Official heritage page checked for eleventh-century date, 150 subsidiary shrines, four main halls, detailed plan, carvings of daily chores, Bindusagar, and present worship."
+    },
+    {
+      "id": "o24-brahmesvara-asi",
+      "title": "IGNCA Archaeological Survey report, Brahmesvara Temple",
+      "url": "https://ignca.gov.in/asi_reports/orkhurda031.pdf",
+      "note": "Official monument report checked for 1058 date, Kolavati patronage, plan, sandstone architecture, sculpture, inscriptions, and continuing use."
+    },
+    {
+      "id": "o26-music",
+      "title": "D. B. Mishra, Glimpses of Performing Art Heritage in Orissan Inscriptions",
+      "url": "https://magazines.odisha.gov.in/Orissareview/may2006/engpdf/22-29.pdf",
+      "note": "Odisha Review, May 2006, pages 22 to 29, checked for epigraphic and sculptural performance evidence, instruments, performers, and the page 25 Ratnagiri-charter discussion of Karpurasri and Mahari-Mahunadevi."
+    },
+    {
+      "id": "o27-purusottama",
+      "title": "Nanda Kishor Swain, The Purusottama Temple of Somavamsi Period at Puri",
+      "url": "https://magazines.odisha.gov.in/orissareview/2022/June-July/engpdf/OR-june-july%202022.pdf",
+      "note": "Odisha Review, June-July 2022, page 65 onward, checked for Shaiva royal identity, claimed Vaishnava patronage, absence of a Purusottama temple in known Somavamshi plates, and later legendary chronicles."
+    },
+    {
+      "id": "o28-agni",
+      "title": "British Museum, figure of Agni from Orissa",
+      "url": "https://www.britishmuseum.org/collection/object/A_1960-0412-3",
+      "note": "Museum catalogue checked for provenance, eleventh- to twelfth-century date, bronze material, size, iconography, water bowl, and rosary."
+    },
+    {
+      "id": "o29-leogryph",
+      "title": "British Museum, leogryph figure from Orissa",
+      "url": "https://www.britishmuseum.org/collection/object/A_1880-4",
+      "note": "Museum catalogue checked for Odisha provenance, eleventh- to twelfth-century date, sandstone material, scale, and the dating range across the atlas seam."
+    },
+    {
+      "id": "o30-temple-thesis",
+      "title": "Shodhganga, Early temples of Orissa from the sixth century to the end of Somavamsi rule",
+      "url": "https://shodhganga.inflibnet.ac.in/handle/10603/128730",
+      "note": "Indian national thesis repository record checked for research scope, temple chronology, architecture, patronage, and the end-of-dynasty boundary."
+    },
+    {
+      "id": "o31-transition-journal",
+      "title": "Utkal University journal, Career and Achievements of Anantavarman Chodagangadeva",
+      "url": "https://ddceutkal.org/Journal/Search-Journal-July-15.pdf",
+      "note": "University journal article, PDF pages 107 to 109 (journal pages 102 to 104), checked for Mukhalingam 1108, Korni 1112, Karna around 1106 to 1112, competing 1112 or 1114 Lingaraja readings, and annexation reconstructed around 1118."
+    },
+    {
+      "id": "o32-inscriptions",
+      "title": "Inscriptions of Orissa, volume 3 part 2",
+      "url": "https://www.wisdomlib.org/uploads/ocr/essays/orissa-inscriptions/vol-3-part-2.pdf",
+      "note": "Digital scan of an epigraphic corpus checked for Karna, Chodaganga, inscriptions, regional incorporation, and contested dates."
+    },
+    {
+      "id": "o33-sankhameri",
+      "title": "DHARMA, Sankhameri plates of Mahabhavagupta Uddyotakesarin year 4",
+      "url": "https://dharmalekha.info/texts/INSSomavamsin00038",
+      "note": "Critical digital edition checked for Sanskrit language metadata, charter form, Uddyotakesarin, regnal dating, and the limits of using a formal grant to infer everyday speech or literacy."
+    },
+    {
+      "id": "o34-macdonell",
+      "title": "University of Chicago DSAL, Macdonell A Practical Sanskrit Dictionary",
+      "url": "https://dsal.uchicago.edu/cgi-bin/app/macdonell_query.py?qs=svasti&matchtype=default",
+      "note": "Dictionary entry checked for svasti as well-being or success, used to label the card's short English rendering as an author translation rather than an edition translation."
+    }
+  ],
+  "entities": [
+    {
+      "id": "orissa",
+      "card": "data/cards/orissa.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "o12-retrospect",
+            "atlas-map-1000"
+          ],
+          "locator": "Government historical overview checked for Somavamshi rise in South Kosala, movement into coastal Odisha, regional state formation, chronology, and succession by the Eastern Gangas. Only exact target feature, decoded geometry, representative points, and competing labels.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "o15-glimpse"
+          ],
+          "locator": "Government historical overview, especially article page 9, checked for Janmejaya, Yayati, Dharmaratha, Uddyotakesarin, regional power, architectural achievements, and broad succession by the Eastern Gangas.",
+          "dateScope": {
+            "from": 1000,
+            "to": 1012
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "o13-utkal"
+          ],
+          "locator": "Official university course, Somavamshi and Ganga political-history units, checked for ruler sequences, Karna, Chodaganga, competing chronology, and the Lingaraja inscription reading.",
+          "dateScope": {
+            "from": 1012,
+            "to": 1025
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "o15-glimpse"
+          ],
+          "locator": "Government historical overview, especially article page 9, checked for Janmejaya, Yayati, Dharmaratha, Uddyotakesarin, regional power, architectural achievements, and broad succession by the Eastern Gangas.",
+          "dateScope": {
+            "from": 1025,
+            "to": 1038
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "o15-glimpse"
+          ],
+          "locator": "Government historical overview, especially article page 9, checked for Janmejaya, Yayati, Dharmaratha, Uddyotakesarin, regional power, architectural achievements, and broad succession by the Eastern Gangas.",
+          "dateScope": {
+            "from": 1038,
+            "to": 1052
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "o24-brahmesvara-asi"
+          ],
+          "locator": "Official monument report checked for 1058 date, Kolavati patronage, plan, sandstone architecture, sculpture, inscriptions, and continuing use.",
+          "dateScope": {
+            "from": 1052,
+            "to": 1062
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "o17-survey"
+          ],
+          "locator": "Government historical article checked in its land-records discussion for charter survey, measurement, boundary description, record keeping, and land administration.",
+          "dateScope": {
+            "from": 1062,
+            "to": 1077
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "o07-kamalpur",
+            "o08-surya",
+            "o32-inscriptions"
+          ],
+          "locator": "Critical digital edition checked for Karna year 4, a subordinate Vaisnava donor, Sanskrit text, and its edited opening. Critical digital edition checked for a fragmentary image inscription associated with Karna and the severe limits of its preserved text. Digital scan of an epigraphic corpus checked for Karna, Chodaganga, inscriptions, regional incorporation, and contested dates.",
+          "dateScope": {
+            "from": 1077,
+            "to": 1090
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "o14-gazetteer"
+          ],
+          "locator": "Official district gazetteer checked at PDF pages 36 to 38 (gazetteer pages 19 to 21) for Somavamshi expansion, Karna, Chodaganga, Mukhalingam, Cuttack, Jajpur, and one reconstruction of the transition around 1108 to 1113.",
+          "dateScope": {
+            "from": 1090,
+            "to": 1100
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-missing"
+          ],
+          "locator": "Repository data/hb/civilizations-hb.json, exact id orissa, fields name, from, to, circa, and generated. | Repository data/hb/summaries-hb.json, key orissa and its imported modern-state summary. | Repository data/research/coverage.json, exact record orissa and observedIntervals/content fields. | Repository data/cards/index.json, exact-id absence test for orissa. | Repository data/researched-overrides.json, exact-id absence test for orissa. | Repository data/research/missing-cards.json, exact record orissa, summaryStatus and stagedDrafts fields.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1000"
+          ],
+          "locator": "Repository data/hb/borders/world-1000.json, exact orissa feature, decoded ring, bbox, and point-in-polygon tests.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1000"
+          ],
+          "locator": "Repository data/hb/borders/world-1000.json, exact orissa feature, decoded ring, bbox, and point-in-polygon tests.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-900",
+            "atlas-map-1000"
+          ],
+          "locator": "Repository data/hb/borders/world-900.json, decoded representative-point ownership controls. | Repository data/hb/borders/world-1000.json, exact orissa feature, decoded ring, bbox, and point-in-polygon tests.",
+          "dateScope": {
+            "year": 1000
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1100",
+            "atlas-map-1200"
+          ],
+          "locator": "Repository data/hb/borders/world-1100.json, exact-id absence and representative-point ownership controls. | Repository data/hb/borders/world-1200.json, representative-point ownership and rajput-kingdoms repaint controls.",
+          "dateScope": {
+            "year": 1100
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "o02-dharmaratha11"
+          ],
+          "locator": "DHARMA INSSomavamsin00020 metadata and summary; page 1v line 1; pages 2r to 2v lines 28 to 38; colophon lines 61 to 63.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "o05-brahmesvara"
+          ],
+          "locator": "DHARMA INSSomavamsin00030 commentary on the lost original and edited verses naming Chandihara, Kolavati, Purusottama, attached women, and mason Raya.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "o04-balijhari"
+          ],
+          "locator": "DHARMA INSSomavamsin00015 edition lines 29 to 48 and colophon lines 69 to 75, recipients, officers, and engravers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "o07-kamalpur",
+            "o08-surya"
+          ],
+          "locator": "DHARMA INSSomavamsin00014 metadata and edition, plate 1v lines 1 to 8, Karna regnal year four and subordinate donor. | DHARMA INSSomavamsin00034 title, metadata, and complete surviving Gandhibedha fragment naming Karna.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "o14-gazetteer"
+          ],
+          "locator": "Government of Odisha Jagatsinghpur District Gazetteer, PDF pages 36 to 38 (gazetteer pages 19 to 21), Somavamshi and Chodaganga transition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "o01-yayati4"
+          ],
+          "locator": "DHARMA INSSomavamsin00017 summary; edition page 2r lines 17 to 29, addressees, resources, Kako genealogy, and dues.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "o04-balijhari"
+          ],
+          "locator": "DHARMA INSSomavamsin00015 edition lines 29 to 48 and colophon lines 69 to 75, recipients, officers, and engravers.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "o33-sankhameri"
+          ],
+          "locator": "DHARMA INSSomavamsin00038 metadata; edition lines 28 to 47 and 69 to 75, audience, resources, recipient, makers, and regnal year.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "o03-baragaon"
+          ],
+          "locator": "DHARMA INSSomavamsin00040 edition, plates 1v to 2v lines 7 to 24, householders, four boundaries, resources, rents, and shares.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "o09-nuapatna",
+            "o10-patna8",
+            "o11-patna24"
+          ],
+          "locator": "DHARMA INSSomavamsin00021 summary, grant formula, genealogy, and year-five colophon naming Janamejaya and Dharmaratha. | DHARMA INSSomavamsin00022 title, genealogy and grant sections, and year-eight colophon. | DHARMA INSSomavamsin00025 title, genealogy and fiscal clauses, and year-twenty-four colophon.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "o16-revenue",
+            "o01-yayati4"
+          ],
+          "locator": "Odisha Review, May 2022, printed page 62, tax terms and Production sector paragraphs. | DHARMA INSSomavamsin00017 summary; edition page 2r lines 17 to 29, addressees, resources, Kako genealogy, and dues.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "o17-survey",
+            "o03-baragaon"
+          ],
+          "locator": "Odisha Review, May 2021, Land Records in Odisha, printed pages 1 to 2, ancient Odisha and Somavamshi paragraphs. | DHARMA INSSomavamsin00040 edition, plates 1v to 2v lines 7 to 24, householders, four boundaries, resources, rents, and shares.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "o16-revenue"
+          ],
+          "locator": "Odisha Review, May 2022, printed page 62, tax terms and Production sector paragraphs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "o18-trade"
+          ],
+          "locator": "Studies in People's History DOI article, abstract and sections on inland routes, ports, and trading communities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "o20-shell"
+          ],
+          "locator": "Manikapatana surface-collection article, methods, results, shell debitage and bangle discussion, and disturbed chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "o21-mukteswar"
+          ],
+          "locator": "Odisha Tourism Mukteswar Temple page, About and architecture descriptions, including torana and carved writer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "o24-brahmesvara-asi"
+          ],
+          "locator": "IGNCA Archaeological Survey Brahmesvara report, history, date, patron, plan, material, inscription, and sculpture fields.",
+          "dateScope": {
+            "year": 1058
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "o22-rajarani"
+          ],
+          "locator": "Odisha Tourism Rajarani Temple page, About and architecture descriptions, dating, material, and figures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "o23-lingaraj"
+          ],
+          "locator": "Odisha Tourism Lingaraj Temple page, About, architecture, Bindusagar, and Festivals descriptions, including eleventh-century date, 150 subsidiary shrines, four main halls, and present worship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "o30-temple-thesis"
+          ],
+          "locator": "Shodhganga handle 10603/128730, thesis title, abstract, date range, and architectural research scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "o27-purusottama",
+            "o05-brahmesvara"
+          ],
+          "locator": "Odisha Review, June-July 2022, printed page 65, opening Somavamshi, Shaiva, Vaishnava, and inscription paragraphs. | DHARMA INSSomavamsin00030 commentary on the lost original and edited verses naming Chandihara, Kolavati, Purusottama, attached women, and mason Raya.",
+          "dateScope": {
+            "year": 1058
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "o26-music"
+          ],
+          "locator": "Odisha Review, May 2006, printed pages 22 to 29, especially page 25 epigraphic and sculptural performance discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "o26-music"
+          ],
+          "locator": "Odisha Review, May 2006, printed pages 22 to 29, especially page 25 epigraphic and sculptural performance discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "o28-agni"
+          ],
+          "locator": "British Museum object 1960,0412.3, production date, provenance, material, dimensions, and Description fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "o29-leogryph"
+          ],
+          "locator": "British Museum object 1880.4, production date, provenance, material, dimensions, and Description fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "o01-yayati4"
+          ],
+          "locator": "DHARMA INSSomavamsin00017 summary; edition page 2r lines 17 to 29, addressees, resources, Kako genealogy, and dues.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "o04-balijhari",
+            "o10-patna8"
+          ],
+          "locator": "DHARMA INSSomavamsin00015 edition lines 29 to 48 and colophon lines 69 to 75, recipients, officers, and engravers. | DHARMA INSSomavamsin00022 title, genealogy and grant sections, and year-eight colophon.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "o24-brahmesvara-asi"
+          ],
+          "locator": "IGNCA Archaeological Survey Brahmesvara report, history, date, patron, plan, material, inscription, and sculpture fields.",
+          "dateScope": {
+            "year": 1058
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "o26-music"
+          ],
+          "locator": "Odisha Review, May 2006, printed pages 22 to 29, especially page 25 epigraphic and sculptural performance discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "o03-baragaon"
+          ],
+          "locator": "DHARMA INSSomavamsin00040 edition, plates 1v to 2v lines 7 to 24, householders, four boundaries, resources, rents, and shares.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "o33-sankhameri"
+          ],
+          "locator": "DHARMA INSSomavamsin00038 metadata; edition lines 28 to 47 and 69 to 75, audience, resources, recipient, makers, and regnal year.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "o02-dharmaratha11",
+            "o34-macdonell"
+          ],
+          "locator": "DHARMA INSSomavamsin00020 metadata and summary; page 1v line 1; pages 2r to 2v lines 28 to 38; colophon lines 61 to 63. | Macdonell Practical Sanskrit Dictionary, DSAL query result for entry svasti, definition well-being or success.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "o05-brahmesvara"
+          ],
+          "locator": "DHARMA INSSomavamsin00030 commentary on the lost original and edited verses naming Chandihara, Kolavati, Purusottama, attached women, and mason Raya.",
+          "dateScope": {
+            "year": 1058
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "o02-dharmaratha11"
+          ],
+          "locator": "DHARMA INSSomavamsin00020 metadata and summary; page 1v line 1; pages 2r to 2v lines 28 to 38; colophon lines 61 to 63.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "o21-mukteswar"
+          ],
+          "locator": "Odisha Tourism Mukteswar Temple page, About and architecture descriptions, including torana and carved writer.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "o33-sankhameri"
+          ],
+          "locator": "DHARMA INSSomavamsin00038 metadata; edition lines 28 to 47 and 69 to 75, audience, resources, recipient, makers, and regnal year.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "o20-shell"
+          ],
+          "locator": "Manikapatana surface-collection article, methods, results, shell debitage and bangle discussion, and disturbed chronology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "o09-nuapatna",
+            "o11-patna24"
+          ],
+          "locator": "DHARMA INSSomavamsin00021 summary, grant formula, genealogy, and year-five colophon naming Janamejaya and Dharmaratha. | DHARMA INSSomavamsin00025 title, genealogy and fiscal clauses, and year-twenty-four colophon.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "o09-nuapatna",
+            "o30-temple-thesis"
+          ],
+          "locator": "DHARMA INSSomavamsin00021 summary, grant formula, genealogy, and year-five colophon naming Janamejaya and Dharmaratha. | Shodhganga handle 10603/128730, thesis title, abstract, date range, and architectural research scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "o22-rajarani",
+            "o26-music"
+          ],
+          "locator": "Odisha Tourism Rajarani Temple page, About and architecture descriptions, dating, material, and figures. | Odisha Review, May 2006, printed pages 22 to 29, especially page 25 epigraphic and sculptural performance discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "o33-sankhameri",
+            "o19-irrigation"
+          ],
+          "locator": "DHARMA INSSomavamsin00038 metadata; edition lines 28 to 47 and 69 to 75, audience, resources, recipient, makers, and regnal year. | Central Water Commission history, pre-British irrigation sections discussing Odisha tanks and wells.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "o23-lingaraj"
+          ],
+          "locator": "Odisha Tourism Lingaraj Temple page, About, architecture, Bindusagar, and Festivals descriptions, including eleventh-century date, 150 subsidiary shrines, four main halls, and present worship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "o09-nuapatna",
+            "o20-shell",
+            "o30-temple-thesis"
+          ],
+          "locator": "DHARMA INSSomavamsin00021 summary, grant formula, genealogy, and year-five colophon naming Janamejaya and Dharmaratha. | Manikapatana surface-collection article, methods, results, shell debitage and bangle discussion, and disturbed chronology. | Shodhganga handle 10603/128730, thesis title, abstract, date range, and architectural research scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "atlas-map-1100",
+            "o32-inscriptions"
+          ],
+          "locator": "Repository data/hb/borders/world-1100.json, exact-id absence and representative-point ownership controls. | Inscriptions of Orissa volume 3 part 2, scan printed page 378 and adjoining Karna and Chodaganga chronology discussion.",
+          "dateScope": {
+            "year": 1100
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "o13-utkal"
+          ],
+          "locator": "Utkal University Paper XII, Somavamshi and Ganga political-history units and Lingaraja chronology discussion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1100",
+            "atlas-map-1200",
+            "o31-transition-journal"
+          ],
+          "locator": "Endpoint control showing exact-id absence and a largely unpainted interior. Later repaint control showing broad rajput-kingdoms coverage rather than a documented local succession. University journal article, PDF pages 107 to 109 (journal pages 102 to 104), checked for Mukhalingam 1108, Korni 1112, Karna around 1106 to 1112, competing 1112 or 1114 Lingaraja readings, and annexation reconstructed around 1118.",
+          "dateScope": {
+            "year": 1100
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "orissa",
+        "name": "Orissa: late Somavamshi century",
+        "aliases": [
+          "Odisha under late Somavamshi rule",
+          "Somavamshi Orissa, 1000-1100"
+        ],
+        "kind": "region",
+        "region": "Asia",
+        "from": 1000,
+        "to": 1100,
+        "circa": true,
+        "card": "cards/orissa.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1000 to 1100 atlas region for late Somavamshi Odisha, ending before staged Eastern Ganga takeover.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1000.json",
+          "properties": {
+            "civ": "orissa",
+            "from": 1000,
+            "to": 1100,
+            "precision": 1
+          },
+          "bounds": [
+            82.91422914229145,
+            18.08473399705335,
+            85.38025380253805,
+            21.589818600551652
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
