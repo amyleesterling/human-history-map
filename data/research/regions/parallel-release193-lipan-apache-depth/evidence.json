@@ -1,0 +1,994 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release193-lipan-apache research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, display label, approximate 1492 to 1500 lifetime, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Exact-id summary absence and older lipan-key lead, audited but not reused as historical evidence."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact state-kind record, one observed interval, one border file, and missing detailed-card status."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Exact-id absence check before this packet is integrated."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Exact-id absence check before the researched culture override is integrated."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Exact missing-card record and North America queue association."
+    },
+    {
+      "id": "atlas-map-1400",
+      "title": "Human History Map 1400 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1400 seam control."
+    },
+    {
+      "id": "atlas-map-1492",
+      "title": "Human History Map 1492 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1500 seam control."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1530 seam control."
+    },
+    {
+      "id": "l01-tsha-overview",
+      "title": "Brandon Seale, “Lipan Apache Indians,” Handbook of Texas",
+      "url": "https://www.tshaonline.org/handbook/entries/lipan-apache-indians",
+      "note": "Lines 6 to 17 and 60 to 84: Southern Athabaskan identity, archaeological chronology, alliance-making, decentralized leadership, diaspora, continuity, recognition, and distinct modern organizations."
+    },
+    {
+      "id": "l02-nps-alibates",
+      "title": "National Park Service, “Apaches (1450 AD to 1700 AD)”",
+      "url": "https://home.nps.gov/alfl/learn/historyculture/apaches.htm",
+      "note": "Lines 21 to 30: broad Apache, not specifically Lipan, movement around 1500; 1541 Querechos; bison, dogs, tools, water containers, fuel, horses, and later dispersal."
+    },
+    {
+      "id": "l03-txdot-histories",
+      "title": "Texas Department of Transportation, TxDOT Tribal Histories: Mescalero Apache Tribe Research Report",
+      "url": "https://ftp.txdot.gov/pub/txdot-info/env/toolkit/415-07-rpt.pdf",
+      "note": "PDF page 11, Table 1: Kónitsąą or Kónitsąą-hii is listed for Lipan Apache people / People of Big Water; the table separately lists subgroup names and cites Hoijer 1975."
+    },
+    {
+      "id": "l04-tribe-timeline",
+      "title": "Lipan Apache Tribe, “Timeline of the Lipan Apache Tribe, 17th - 21st Centuries”",
+      "url": "https://www.lipanapachetribe.gov/LAT/timeline.html",
+      "note": "Lines 30 to 32, 47, and 54: community chronology for circa 1600 to 1670 arrival, identity, trade, divisions, drought, and horses, plus the separately dated 1750 and 1780 smallpox entries and the 1780 peyote-healing account."
+    },
+    {
+      "id": "l05-inali-language",
+      "title": "Instituto Nacional de Lenguas Indígenas, “Lengua N'dee/N'nee/Ndé”",
+      "url": "https://www.inali.gob.mx/detalle/lengua-ndee-nnee-nde",
+      "note": "Published June 5, 2023, sections Territorio, Datos lingüísticos, and Grado de riesgo: Na-Dené classification, Ndé miizaa as the Lipan variety, writing-system review, interrupted transmission, and community-based revitalization."
+    },
+    {
+      "id": "l06-tribe-name",
+      "title": "Nancy McGown Minor, “Our Language: The Meaning of Our Apache Name ‘Lipan’”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-name.html",
+      "note": "Lines 24 to 32: official tribal-history interpretation of łépai plus indeh or ndé as “The Light Gray People,” dated January 10, 2009."
+    },
+    {
+      "id": "l07-tribe-bands",
+      "title": "Nancy McGown Minor, “Our Sacred History: The Lipan Apache Bands”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-bands.html",
+      "note": "Lines 24 to 55: retrospective account of divisions, 10 to 14 bands, rancherías as extended-family groups, leadership, unity, and named bands including Kúne tsá."
+    },
+    {
+      "id": "l08-tribe-everyday",
+      "title": "Nancy McGown Minor, “Everyday Life in Lipan Past”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-life.html",
+      "note": "Lines 24 to 32: community account of later bison hunts, reunions, marriages, hunting practice, women’s gathering and basketry, plant foods, and riverbank corn and squash."
+    },
+    {
+      "id": "l09-tribe-homeland",
+      "title": "Nancy McGown Minor, “The Lipan Homeland of Many Houses (kíłááhíí)”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-house.html",
+      "note": "Lines 24 to 36, especially 29 to 34: community-history account of seventeenth-century movement into Texas, resources sought, later southward movement, Kíłááhíí around San Antonio, and Naa-ci-ká in Coahuila."
+    },
+    {
+      "id": "l10-utrgv-sample",
+      "title": "Robert Soto, “Lipan Apache Musical Lyrics: Vocable Sounds and English Translation”",
+      "url": "https://www.utrgv.edu/ancient-landscapes-southtexas/_files/documents/supplemental-teaching-tools/drumn-around/lipanapachevocablesonglyrics.pdf",
+      "note": "PDF page 1, lines 0 to 10: contributor, May 2014 date, exact Lipan lines and English translations; “Nii gooyí” is translated “There is a good land.”"
+    },
+    {
+      "id": "l11-utrgv-handbook",
+      "title": "Ashley Leal, “The Lipan Apaches,” in Native American Peoples of South Texas",
+      "url": "https://www.utrgv.edu/chaps/_files/documents/publications/native-american-peoples-of-south-texas.pdf",
+      "note": "Printed pages 45 to 52, PDF pages 52 to 59, especially printed pages 46 to 48, PDF pages 53 to 55: food, dwellings, smoke opening, clothing by age, horse adoption, and travel burdens."
+    },
+    {
+      "id": "l12-utrgv-powwow",
+      "title": "Ashley S. Leal, The Lipan Apache (Ndé) Tribe of Texas Powwow: A Curriculum of Culture(S) and Pedagogy of Place",
+      "url": "https://scholarworks.utrgv.edu/etd/1561/",
+      "note": "Lines 19 to 60: 2024 tribal-member ethnography, interviews, cultural survival, community connectedness, and powwow as local knowledge transmission."
+    },
+    {
+      "id": "l13-tbh-apache",
+      "title": "Texas Beyond History, “Apache,” Plateaus and Canyonlands",
+      "url": "https://www.texasbeyondhistory.net/plateaus/peoples/apache.html",
+      "note": "Lines 23 to 34 and 65 to 92: Apache naming and source cautions, later food and housing, close-knit matrilineal families, grandparents’ teaching, work, crafts, healing, and mourning."
+    },
+    {
+      "id": "l14-tbh-san-lorenzo",
+      "title": "Texas Beyond History, “Mission San Lorenzo de la Santa Cruz”",
+      "url": "https://www.texasbeyondhistory.net/plateaus/images/he2.html",
+      "note": "Lines 1 to 18 and 27 to 38: 1762 to 1771 colonial mission, buildings, irrigation, middens, trade goods, Native crafts, burials, food remains, and artifact locators."
+    },
+    {
+      "id": "l15-nps-san-saba",
+      "title": "National Park Service, “Mission Santa Cruz de San Sabá and Presidio San Luis de las Amarillas”",
+      "url": "https://www.nps.gov/subjects/travelspanishmissions/mission-santa-cruz-de-san-saba-and-presidio-san-luis-de-las-amarillas.htm",
+      "note": "Lines 34 to 72: 1757 mission, Lipan alliance strategy, refusal to settle, bison hunting, 1758 attack, archaeology, and Spanish irrigation ditch."
+    },
+    {
+      "id": "l16-nps-comanche-lookout",
+      "title": "National Park Service, “Comanche Lookout”",
+      "url": "https://www.nps.gov/places/comanche-lookout.htm",
+      "note": "Lines 41 to 46 and 67 to 71: site evidence, older travel routes, Lipan horse expansion, broad later Apache control claim, and displacement chronology with citations."
+    },
+    {
+      "id": "l17-tribe-treaties",
+      "title": "Lipan Apache Tribe, “About Our Treaties”",
+      "url": "https://www.lipanapachetribe.gov/LAT/treaties.html",
+      "note": "Lines 24 to 104: official community list of treaties with Spain, Mexico, Republic of Texas, United States, and other nations from 1749 to 1865."
+    },
+    {
+      "id": "l18-bustamante-pdf",
+      "title": "“1822 Bustamante Treaty with the Lipan Apache”",
+      "url": "https://www.lipanapache.org/LAT/assets/PDFs/treaties/TreatyBustamante10-27-1822.pdf",
+      "note": "PDF pages 1 to 6; Articles 1 to 8 and appended transcription record peace, movement, trade, water and pasture access, wild-horse gathering, and named Lipan negotiators."
+    },
+    {
+      "id": "l19-tribe-about",
+      "title": "Lipan Apache Tribe, “Our Sacred History: Who We Are”",
+      "url": "https://www.lipanapachetribe.gov/LAT/aboutus.html",
+      "note": "Lines 24 to 45, especially 29 to 34: community account of migration, divisions, epidemics, food shortages, dispersal, elders teaching children, surviving enclaves, a united present-day tribal organization, government, and continuity."
+    },
+    {
+      "id": "l20-tribe-faq",
+      "title": "Lipan Apache Tribe, “Frequently Asked Questions”",
+      "url": "https://www.lipanapachetribe.gov/LAT/faqs.html",
+      "note": "Lines 24 to 69: descent-based enrollment, elders and family records, current non-federal status, scholarships, possible health-service limits, social learning, and language restoration."
+    },
+    {
+      "id": "l21-tribe-children",
+      "title": "Nancy McGown Minor, “The Story of Kesetta and Jack”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-children.html",
+      "note": "Lines 24 to 32 and notes: children captured from a Lipan camp in 1877; the page explicitly disputes uncertain dates, kinship, and leadership claims in later retellings."
+    },
+    {
+      "id": "l22-si-vocabulary",
+      "title": "Smithsonian Institution, “MS 81 Lipan Apache Vocabulary”",
+      "url": "https://www.si.edu/object/archives/sova-naa-ms81",
+      "note": "Collection record: A. S. Gatschet vocabulary from Fort Griffin, Texas, September to October 1884, about 46 used pages with words and some phrases and sentences."
+    },
+    {
+      "id": "l23-opler-peyote",
+      "title": "Morris E. Opler, “The Use of Peyote by the Carrizo and Lipan Apache Tribes”",
+      "url": "https://anthrosource.onlinelibrary.wiley.com/doi/10.1525/aa.1938.40.2.02a00080",
+      "note": "Lines 23 to 44 and 74 to 116: exact title, author, American Anthropologist volume 40, 1938 date, pages 271 to 285, and DOI."
+    },
+    {
+      "id": "l24-thc-cemetery",
+      "title": "Texas Historical Commission, “Cementerio del Barrio de los Lipanes” marker text",
+      "url": "https://www.thc.texas.gov/public/upload/History-Programs_October%202021_QM-digital-packet.pdf",
+      "note": "PDF page 51, lines 1373 to 1399: sacred cemetery, 1790s peace settlement, bands, descendants on both sides of the border, 45 identified graves, markers, and 2021 designation."
+    },
+    {
+      "id": "l25-tribe-cemetery",
+      "title": "Lipan Apache Tribe, “About the Lipan Apache Tribe Cemetery Association (LATCA)”",
+      "url": "https://www.lipanapachetribe.gov/LAT/cemetery.html",
+      "note": "Lines 24 to 46, especially 26 and 35 to 46: association purpose, Presidio cemetery status, community preservation, transfers, and repatriations through November 2025."
+    },
+    {
+      "id": "l26-scr61",
+      "title": "Texas Legislature, “S.C.R. No. 61,” Senate Concurrent Resolution",
+      "url": "https://webservices.sos.state.tx.us/legbills/files/RS86/SCR61.pdf",
+      "note": "PDF pages 1 to 2, lines 25 to 73: 2019 resolution recognizes the Lipan Apache Tribe of Texas and records government, community, service, and contributions."
+    },
+    {
+      "id": "l27-nps-land-water",
+      "title": "National Park Service, “Land and Water Acknowledgement,” San Antonio Missions",
+      "url": "https://home.nps.gov/saan/learn/historyculture/land-and-water-acknowledgement.htm",
+      "note": "Lines 22 to 35: distinct peoples, living descendants, federally recognized associated nations, non-federally recognized San Antonio groups including Lipan Apache, and enduring place ties."
+    },
+    {
+      "id": "l28-tribe-nonprofits",
+      "title": "Lipan Apache Tribe, “Nonprofits of the Tribe”",
+      "url": "https://www.lipanapachetribe.gov/LAT/the_nonprofits.html",
+      "note": "Lines 24 to 60, especially 35 to 50 and 59 to 60: distinction between the Tribe and nonprofit instrumentalities, with stated cultural, educational, health, land, language, cemetery, and public-learning purposes."
+    },
+    {
+      "id": "l29-tribe-resources",
+      "title": "Nancy McGown Minor, “Dwindling Resources/Economic Cycle”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-resources.html",
+      "note": "Lines 24 to 31: community account of mixed subsistence, hide trade, horses-for-guns networks, horse breaking, later cash trade, and cross-border alliances."
+    },
+    {
+      "id": "l30-tribe-weapons",
+      "title": "Nancy McGown Minor, “Weapons of the Lipan Apache”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-weapons.html",
+      "note": "Lines 24 to 35: retrospective details for later bows, arrows, children’s arrows, flint-to-metal change, quivers, lances, firearms, and uncertain war-club adoption."
+    },
+    {
+      "id": "l31-tribe-reservation",
+      "title": "Nancy McGown Minor, “Transition- The Reservation and Assimilation”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-reservation.html",
+      "note": "Lines 24 to 31: community account of 1850 smallpox, Mescalero and other destinations, refuge in Mexico, returns, hidden Texas residence, surnames, and Tejano communities."
+    },
+    {
+      "id": "l32-tribe-chiefs",
+      "title": "Nancy McGown Minor, “Short Biographies of Some Notable Lipan Chiefs”",
+      "url": "https://www.lipanapachetribe.gov/LAT/e-chiefs.html",
+      "note": "Lines 24 to 75: explicitly non-exhaustive later leaders; dated diplomacy, trade, kinship alliances, movement, and descendants at Mescalero."
+    },
+    {
+      "id": "l33-law-defense-homeland",
+      "title": "Lipan Apache Women Defense, “Letter of Protest to Valley Morning Star Article: ‘Ranches of Significance’”",
+      "url": "https://lipanapachecommunitydefense.blogspot.com/2012_01_30_archive.html",
+      "note": "January 30, 2012 post, paragraph beginning “I am the daughter”: a Lipan community author translates Kónitsąąįį gokíyaa as “Big Water Lipan Country” and labels it a traditional territory or homeland."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nde-konitsaaii-gokiyaa-lipan-apache",
+      "card": "data/cards/nde-konitsaaii-gokiyaa-lipan-apache.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-coverage",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "l01-tsha-overview",
+            "l03-txdot-histories",
+            "l33-law-defense-homeland"
+          ],
+          "locator": "Exact imported id, display label, approximate 1492 to 1500 lifetime, and historical-basemap provenance. Exact state-kind record, one observed interval, one border file, and missing detailed-card status. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1500 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1530 seam control. Lines 6 to 17 and 60 to 84: Southern Athabaskan identity, archaeological chronology, alliance-making, decentralized leadership, diaspora, continuity, recognition, and distinct modern organizations. PDF page 11, Table 1: Kónitsąą or Kónitsąą-hii is listed for Lipan Apache people / People of Big Water; the table separately lists subgroup names and cites Hoijer 1975. January 30, 2012 post, paragraph beginning “I am the daughter”: a Lipan community author translates Kónitsąąįį gokíyaa as “Big Water Lipan Country” and labels it a traditional territory or homeland.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-map-1400",
+            "atlas-map-1492"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1400 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "l04-tribe-timeline"
+          ],
+          "locator": "Lines 30 to 32, 47, and 54: community chronology for circa 1600 to 1670 arrival, identity, trade, divisions, drought, and horses, plus the separately dated 1750 and 1780 smallpox entries and the 1780 peyote-healing account.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "l02-nps-alibates"
+          ],
+          "locator": "Lines 21 to 30: broad Apache, not specifically Lipan, movement around 1500; 1541 Querechos; bison, dogs, tools, water containers, fuel, horses, and later dispersal.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "l13-tbh-apache"
+          ],
+          "locator": "Lines 23 to 34 and 65 to 92: Apache naming and source cautions, later food and housing, close-knit matrilineal families, grandparents’ teaching, work, crafts, healing, and mourning.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "l11-utrgv-handbook"
+          ],
+          "locator": "Printed pages 45 to 52, PDF pages 52 to 59, especially printed pages 46 to 48, PDF pages 53 to 55: food, dwellings, smoke opening, clothing by age, horse adoption, and travel burdens.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "l10-utrgv-sample",
+            "l22-si-vocabulary"
+          ],
+          "locator": "PDF page 1, lines 0 to 10: contributor, May 2014 date, exact Lipan lines and English translations; “Nii gooyí” is translated “There is a good land.” Collection record: A. S. Gatschet vocabulary from Fort Griffin, Texas, September to October 1884, about 46 used pages with words and some phrases and sentences.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1500 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1530 seam control.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control. | Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1500 seam control. | Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1530 seam control.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "l06-tribe-name"
+          ],
+          "locator": "Lines 24 to 32: official tribal-history interpretation of łépai plus indeh or ndé as “The Light Gray People,” dated January 10, 2009.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "l07-tribe-bands"
+          ],
+          "locator": "Lines 24 to 55: retrospective account of divisions, 10 to 14 bands, rancherías as extended-family groups, leadership, unity, and named bands including Kúne tsá.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "l04-tribe-timeline"
+          ],
+          "locator": "Lines 30 to 32, 47, and 54: community chronology for circa 1600 to 1670 arrival, identity, trade, divisions, drought, and horses, plus the separately dated 1750 and 1780 smallpox entries and the 1780 peyote-healing account.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "l02-nps-alibates"
+          ],
+          "locator": "Lines 21 to 30: broad Apache, not specifically Lipan, movement around 1500; 1541 Querechos; bison, dogs, tools, water containers, fuel, horses, and later dispersal.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "l13-tbh-apache"
+          ],
+          "locator": "Lines 23 to 34 and 65 to 92: Apache naming and source cautions, later food and housing, close-knit matrilineal families, grandparents’ teaching, work, crafts, healing, and mourning.",
+          "dateScope": {
+            "year": 1541
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "l11-utrgv-handbook"
+          ],
+          "locator": "Printed pages 45 to 52, PDF pages 52 to 59, especially printed pages 46 to 48, PDF pages 53 to 55: food, dwellings, smoke opening, clothing by age, horse adoption, and travel burdens.",
+          "dateScope": {
+            "year": 2014
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "l22-si-vocabulary"
+          ],
+          "locator": "Collection record: A. S. Gatschet vocabulary from Fort Griffin, Texas, September to October 1884, about 46 used pages with words and some phrases and sentences.",
+          "dateScope": {
+            "year": 1884
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "l08-tribe-everyday"
+          ],
+          "locator": "Lines 24 to 32: community account of later bison hunts, reunions, marriages, hunting practice, women’s gathering and basketry, plant foods, and riverbank corn and squash.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "l08-tribe-everyday"
+          ],
+          "locator": "Lines 24 to 32: community account of later bison hunts, reunions, marriages, hunting practice, women’s gathering and basketry, plant foods, and riverbank corn and squash.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "l11-utrgv-handbook"
+          ],
+          "locator": "Printed pages 45 to 52, PDF pages 52 to 59, especially printed pages 46 to 48, PDF pages 53 to 55: food, dwellings, smoke opening, clothing by age, horse adoption, and travel burdens.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "l11-utrgv-handbook"
+          ],
+          "locator": "Printed pages 45 to 52, PDF pages 52 to 59, especially printed pages 46 to 48, PDF pages 53 to 55: food, dwellings, smoke opening, clothing by age, horse adoption, and travel burdens.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "l09-tribe-homeland",
+            "l16-nps-comanche-lookout"
+          ],
+          "locator": "Lines 24 to 36, especially 29 to 34: community-history account of seventeenth-century movement into Texas, resources sought, later southward movement, Kíłááhíí around San Antonio, and Naa-ci-ká in Coahuila. | Lines 41 to 46 and 67 to 71: site evidence, older travel routes, Lipan horse expansion, broad later Apache control claim, and displacement chronology with citations.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "l07-tribe-bands"
+          ],
+          "locator": "Lines 24 to 55: retrospective account of divisions, 10 to 14 bands, rancherías as extended-family groups, leadership, unity, and named bands including Kúne tsá.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "l08-tribe-everyday"
+          ],
+          "locator": "Lines 24 to 32: community account of later bison hunts, reunions, marriages, hunting practice, women’s gathering and basketry, plant foods, and riverbank corn and squash.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "l13-tbh-apache"
+          ],
+          "locator": "Lines 23 to 34 and 65 to 92: Apache naming and source cautions, later food and housing, close-knit matrilineal families, grandparents’ teaching, work, crafts, healing, and mourning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "l32-tribe-chiefs"
+          ],
+          "locator": "Lines 24 to 75: explicitly non-exhaustive later leaders; dated diplomacy, trade, kinship alliances, movement, and descendants at Mescalero.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "l21-tribe-children"
+          ],
+          "locator": "Lines 24 to 32 and notes: children captured from a Lipan camp in 1877; the page explicitly disputes uncertain dates, kinship, and leadership claims in later retellings.",
+          "dateScope": {
+            "year": 1877
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "l20-tribe-faq"
+          ],
+          "locator": "Lines 24 to 69: descent-based enrollment, elders and family records, current non-federal status, scholarships, possible health-service limits, social learning, and language restoration.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "l30-tribe-weapons"
+          ],
+          "locator": "Lines 24 to 35: retrospective details for later bows, arrows, children’s arrows, flint-to-metal change, quivers, lances, firearms, and uncertain war-club adoption.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "l12-utrgv-powwow"
+          ],
+          "locator": "Lines 19 to 60: 2024 tribal-member ethnography, interviews, cultural survival, community connectedness, and powwow as local knowledge transmission.",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "l10-utrgv-sample"
+          ],
+          "locator": "PDF page 1, lines 0 to 10: contributor, May 2014 date, exact Lipan lines and English translations; “Nii gooyí” is translated “There is a good land.”",
+          "dateScope": {
+            "year": 2014
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "l05-inali-language"
+          ],
+          "locator": "Published June 5, 2023, sections Territorio, Datos lingüísticos, and Grado de riesgo: Na-Dené classification, Ndé miizaa as the Lipan variety, writing-system review, interrupted transmission, and community-based revitalization.",
+          "dateScope": {
+            "year": 2023
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "l02-nps-alibates"
+          ],
+          "locator": "Lines 21 to 30: broad Apache, not specifically Lipan, movement around 1500; 1541 Querechos; bison, dogs, tools, water containers, fuel, horses, and later dispersal.",
+          "dateScope": {
+            "year": 1541
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "l29-tribe-resources"
+          ],
+          "locator": "Lines 24 to 31: community account of mixed subsistence, hide trade, horses-for-guns networks, horse breaking, later cash trade, and cross-border alliances.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "l30-tribe-weapons"
+          ],
+          "locator": "Lines 24 to 35: retrospective details for later bows, arrows, children’s arrows, flint-to-metal change, quivers, lances, firearms, and uncertain war-club adoption.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "l14-tbh-san-lorenzo"
+          ],
+          "locator": "Lines 1 to 18 and 27 to 38: 1762 to 1771 colonial mission, buildings, irrigation, middens, trade goods, Native crafts, burials, food remains, and artifact locators.",
+          "dateScope": {
+            "year": 1762
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "l17-tribe-treaties"
+          ],
+          "locator": "Lines 24 to 104: official community list of treaties with Spain, Mexico, Republic of Texas, United States, and other nations from 1749 to 1865.",
+          "dateScope": {
+            "year": 1749
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "l13-tbh-apache"
+          ],
+          "locator": "Lines 23 to 34 and 65 to 92: Apache naming and source cautions, later food and housing, close-knit matrilineal families, grandparents’ teaching, work, crafts, healing, and mourning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "l23-opler-peyote"
+          ],
+          "locator": "Lines 23 to 44 and 74 to 116: exact title, author, American Anthropologist volume 40, 1938 date, pages 271 to 285, and DOI.",
+          "dateScope": {
+            "year": 1938
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "l04-tribe-timeline"
+          ],
+          "locator": "Lines 30 to 32, 47, and 54: community chronology for circa 1600 to 1670 arrival, identity, trade, divisions, drought, and horses, plus the separately dated 1750 and 1780 smallpox entries and the 1780 peyote-healing account.",
+          "dateScope": {
+            "year": 1780
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "l31-tribe-reservation"
+          ],
+          "locator": "Lines 24 to 31: community account of 1850 smallpox, Mescalero and other destinations, refuge in Mexico, returns, hidden Texas residence, surnames, and Tejano communities.",
+          "dateScope": {
+            "year": 1850
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "l20-tribe-faq"
+          ],
+          "locator": "Lines 24 to 69: descent-based enrollment, elders and family records, current non-federal status, scholarships, possible health-service limits, social learning, and language restoration.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "l02-nps-alibates"
+          ],
+          "locator": "Lines 21 to 30: broad Apache, not specifically Lipan, movement around 1500; 1541 Querechos; bison, dogs, tools, water containers, fuel, horses, and later dispersal.",
+          "dateScope": {
+            "year": 1541
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "l14-tbh-san-lorenzo"
+          ],
+          "locator": "Lines 1 to 18 and 27 to 38: 1762 to 1771 colonial mission, buildings, irrigation, middens, trade goods, Native crafts, burials, food remains, and artifact locators.",
+          "dateScope": {
+            "year": 1762
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "l15-nps-san-saba"
+          ],
+          "locator": "Lines 34 to 72: 1757 mission, Lipan alliance strategy, refusal to settle, bison hunting, 1758 attack, archaeology, and Spanish irrigation ditch.",
+          "dateScope": {
+            "year": 1757
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "l18-bustamante-pdf"
+          ],
+          "locator": "PDF pages 1 to 6; Articles 1 to 8 and appended transcription record peace, movement, trade, water and pasture access, wild-horse gathering, and named Lipan negotiators.",
+          "dateScope": {
+            "year": 1822
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "l14-tbh-san-lorenzo"
+          ],
+          "locator": "Lines 1 to 18 and 27 to 38: 1762 to 1771 colonial mission, buildings, irrigation, middens, trade goods, Native crafts, burials, food remains, and artifact locators.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "l15-nps-san-saba"
+          ],
+          "locator": "Lines 34 to 72: 1757 mission, Lipan alliance strategy, refusal to settle, bison hunting, 1758 attack, archaeology, and Spanish irrigation ditch.",
+          "dateScope": {
+            "year": 1757
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "l18-bustamante-pdf"
+          ],
+          "locator": "PDF pages 1 to 6; Articles 1 to 8 and appended transcription record peace, movement, trade, water and pasture access, wild-horse gathering, and named Lipan negotiators.",
+          "dateScope": {
+            "year": 1822
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "l24-thc-cemetery"
+          ],
+          "locator": "PDF page 51, lines 1373 to 1399: sacred cemetery, 1790s peace settlement, bands, descendants on both sides of the border, 45 identified graves, markers, and 2021 designation.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "l31-tribe-reservation"
+          ],
+          "locator": "Lines 24 to 31: community account of 1850 smallpox, Mescalero and other destinations, refuge in Mexico, returns, hidden Texas residence, surnames, and Tejano communities.",
+          "dateScope": {
+            "year": 1850
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "l17-tribe-treaties"
+          ],
+          "locator": "Lines 24 to 104: official community list of treaties with Spain, Mexico, Republic of Texas, United States, and other nations from 1749 to 1865.",
+          "dateScope": {
+            "year": 1749
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "l26-scr61"
+          ],
+          "locator": "PDF pages 1 to 2, lines 25 to 73: 2019 resolution recognizes the Lipan Apache Tribe of Texas and records government, community, service, and contributions.",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "l27-nps-land-water"
+          ],
+          "locator": "Lines 22 to 35: distinct peoples, living descendants, federally recognized associated nations, non-federally recognized San Antonio groups including Lipan Apache, and enduring place ties.",
+          "dateScope": {
+            "year": 2023
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "l28-tribe-nonprofits"
+          ],
+          "locator": "Lines 24 to 60, especially 35 to 50 and 59 to 60: distinction between the Tribe and nonprofit instrumentalities, with stated cultural, educational, health, land, language, cemetery, and public-learning purposes.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "l20-tribe-faq"
+          ],
+          "locator": "Lines 24 to 69: descent-based enrollment, elders and family records, current non-federal status, scholarships, possible health-service limits, social learning, and language restoration.",
+          "dateScope": {
+            "year": 2026
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "l25-tribe-cemetery"
+          ],
+          "locator": "Lines 24 to 46, especially 26 and 35 to 46: association purpose, Presidio cemetery status, community preservation, transfers, and repatriations through November 2025.",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "l19-tribe-about"
+          ],
+          "locator": "Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1492 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1500 seam control. Exact-id presence or absence, decoded geometry, shared arcs, representative probes, simultaneous owners, and 1530 seam control. Lines 24 to 45, especially 29 to 34: community account of migration, divisions, epidemics, food shortages, dispersal, elders teaching children, surviving enclaves, a united present-day tribal organization, government, and continuity.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nde-konitsaaii-gokiyaa-lipan-apache",
+        "name": "Ndé Kónitsąąíí Gokíyaa (Lipan Apache atlas homeland)",
+        "aliases": [
+          "Ndé Kónitsąąíí Gokíyaa",
+          "Lipan Apache atlas layer",
+          "Lipan Apache"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/nde-konitsaaii-gokiyaa-lipan-apache.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1492 to 1500 overlapping atlas homeland layer paired with carefully dated Southern Athabaskan, Lipan, community, archaeological, and living-continuity evidence.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nde-konitsaaii-gokiyaa-lipan-apache",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -106.59886598865988,
+            25.16187634815938,
+            -96.91116911169111,
+            33.05304185557861
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
