@@ -1,0 +1,956 @@
+{
+  "version": 1,
+  "region": "Eurasia",
+  "researcher": "Codex parallel release190-nenets research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact id, imported name, approximate 1530 to 1600 interval, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported modern demographic and territorial summary, audited rather than treated as a polygon description."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed feature interval, one border file, approximate dates, state kind, and missing review status."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Exact-id absence from the tracked card index before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Exact-id absence from the tracked researched overrides before integration."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Imported-summary status and absence of staged exact-id drafts."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Immediate pre-appearance control, exact-id absence, and representative point ownership."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests."
+    },
+    {
+      "id": "atlas-map-1600",
+      "title": "Human History Map 1600 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1600.json",
+      "note": "Immediate post-interval control showing exact-id absence and Muscovy atlas ownership."
+    },
+    {
+      "id": "atlas-map-1650",
+      "title": "Human History Map 1650 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1650.json",
+      "note": "Later continuity control showing continued atlas classification under Muscovy."
+    },
+    {
+      "id": "n01-koryakov",
+      "title": "Yuri Koryakov, Linguistic Geography of Tundra Nenets: the History of the Western Groups",
+      "url": "https://blogs.helsinki.fi/language-diversification-and-spread-north/files/2025/05/Koryakov_2025_Linguistic_Geography_of_Tundra_Nenets_the_History.pdf",
+      "note": "International Journal of Eurasian Linguistics 7 article checked at journal pages 119 to 120 for early evidence, the 1545 charter, and its printed “Stephen Barrow” 1556 notice; page 121 for late sixteenth-century western Tundra Nenets distribution; and page 122 for the fuller charter text."
+    },
+    {
+      "id": "n02-arctica",
+      "title": "Dartmouth Libraries, Yamalo-Nenets National Okrug, Encyclopedia Arctica 10: Soviet North, Geography and General",
+      "url": "https://collections.dartmouth.edu/arctica-beta/html/EA10-22.html",
+      "note": "Digitized mid-twentieth-century unpublished typescript checked at scan and display pages 408 to 410 for Mangazeia knowledge, Russian sea travel, 1595 Dutch reports, and encounters with Nenets; pages 413 to 414 for tribute, exchange, and resistance. Its dated framing and OCR remain limitations."
+    },
+    {
+      "id": "n03-words",
+      "title": "Words and Silences: Nenets Reindeer Herders and Russian Evangelical Missionaries in the Post-Soviet Arctic, Introduction",
+      "url": "https://publish.iupress.indiana.edu/read/words-and-silences/section/5a77ae64-2fdc-4a04-b714-030e0c74dd3c",
+      "note": "Indiana University Press open book introduction checked in the subsection “The Nenets, Their Reindeer, and Their Others” for Pustozersk, tribute extraction, resistance, Obdorsk, and the much later chronology of large-scale mission work."
+    },
+    {
+      "id": "n04-history",
+      "title": "Arctic Megapedia, Historical background of the Nenets",
+      "url": "https://arctic-megapedia.com/en/blog/2020/12/10/nency-istoricheskaja-spravka/",
+      "note": "Institutional Arctic reference checked in paragraphs 38 to 43 for the dated founding sequence of Pustozersk, Berezov, Surgut, Obdorsk, Mangazeya, and Turukhansk, trade, tribute, and resistance; its inherited Soviet-era framing is not adopted."
+    },
+    {
+      "id": "n05-salekhard",
+      "title": "Ural Federal University, Salekhard",
+      "url": "https://old.study.urfu.ru/view/aid/8922/1/index.files/English/Russia.files/salehard.files/index.htm",
+      "note": "University regional-history page checked for the 1595 Obdorsk fort at an earlier Khanty settlement and the Nenets place-name Salekhard."
+    },
+    {
+      "id": "n06-sasaki",
+      "title": "Shiro Sasaki, Establishment of Large-Scale Reindeer Herding in European and West Siberian Tundra",
+      "url": "https://minpaku.repo.nii.ac.jp/record/515/files/SS%EF%BC%9AGTE%202010.p77-99.pdf",
+      "note": "National Museum of Ethnology study checked at printed pages 79 to 80 for the proposed seventeenth- to nineteenth-century growth of large-scale herding and its especially later expansion."
+    },
+    {
+      "id": "n07-cultured",
+      "title": "Kirill V. Istomin, Cultured reindeer, domesticated land, and (self)-cultivated herders: Histories and structures of reindeer herding landscapes in the European part of Russia",
+      "url": "https://link.springer.com/article/10.1186/s13570-023-00273-9",
+      "note": "Peer-reviewed article checked in the abstract and historical sections for small early-modern herds, transport, hunting, and later pastoral expansion in the European Russian and Archangelsk tundra scope."
+    },
+    {
+      "id": "n08-genetics",
+      "title": "Røed et al., Temporal and structural genetic variation in reindeer associated with the pastoral transition in Northwestern Siberia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7487228/",
+      "note": "Open peer-reviewed study checked in section 1, especially the paragraph beginning “The domestic reindeer studied,” for small domestic herds used in transport and hunting and the later pastoral transition."
+    },
+    {
+      "id": "n09-mobility",
+      "title": "Kirill V. Istomin and Mark J. Dwyer, Reindeer Herders’ Thinking: A Comparative Research of Relations Between Economy, Cognition and Way of Life",
+      "url": "https://bolt-dev.dh-north.org/files/dhn-pdf/istomin-dwyer.pdf",
+      "note": "2021 monograph checked at section 1.4, printed pages 25 to 26, for mobile hunting before later large-herd pastoralism."
+    },
+    {
+      "id": "n10-grammar",
+      "title": "Irina Nikolaeva, A Grammar of Tundra Nenets",
+      "url": "https://moodle.kubsu.ru/pluginfile.php/26662/mod_folder/content/0/Nikolaeva%2C%20I.%20%282014%29%20A%20Grammar%20of%20Tundra%20Nenets.pdf",
+      "note": "Reference grammar checked at section 2.3, printed page 14 and PDF page 30, for the transcription system; and printed page 68, PDF page 84, example 25a for the exact modern sample, gloss, and translation. The copy is a university Moodle host; DOI 10.1515/9783110320640 secures publication identity."
+    },
+    {
+      "id": "n11-inel",
+      "title": "Josefina Budzisch, Beáta Wagner-Nagy, and Alexandre Arkhipov, INEL Nenets corpus: User documentation",
+      "url": "https://s3-uhh.lzs.uni-hamburg.de/gwiss-inel-corpora/remote/nenets-1.0/documentation/INEL_Nenets_Corpus.pdf",
+      "note": "University corpus documentation checked at sections 1.1 to 1.2, pages 1 to 2; section 1.4, page 3; and sections 2.1 to 2.4, pages 5 to 6, for scope, lect distinctions, speakers, contributors, transcripts, glosses, and translations."
+    },
+    {
+      "id": "n12-forest",
+      "title": "Higher School of Economics, Грамматическое описание и документация лесного ненецкого языка (Grammatical Description and Documentation of the Forest Nenets Language)",
+      "url": "https://hum.hse.ru/fml/forestnenets",
+      "note": "University project page checked at the purpose and resources sections for Pur Forest Nenets documentation, threatened status, lack of a literary norm, and planned grammar, texts, and dictionary outputs."
+    },
+    {
+      "id": "n13-dictionary",
+      "title": "Словарь (Forest Nenets Audio Dictionary)",
+      "url": "https://forestnenets.ru/dictionary/",
+      "note": "Project resource checked in the introduction, usage guide, and entry-structure description for searchable Forest Nenets headwords, Russian translations, usage examples, forms, and audio where available; used only as modern language work."
+    },
+    {
+      "id": "n14-domestic",
+      "title": "Illinois State Museum, Hunters: Domestic Life",
+      "url": "https://museum.state.il.us/exhibits/changing/journey/hunters-domest.html",
+      "note": "Comparative Siberian museum exhibition checked for western Siberian chum construction, seasonal covers, sled transport, hide uses, and dated early twentieth-century photographs."
+    },
+    {
+      "id": "n15-reindeer",
+      "title": "Illinois State Museum, Hunters: Role of Reindeer",
+      "url": "https://museum.state.il.us/exhibits/changing/journey/hunters-reindeer.html",
+      "note": "Comparative Siberian museum exhibition checked for reindeer transport and material uses, with its regional breadth and twentieth-century photograph dates retained."
+    },
+    {
+      "id": "n16-doll",
+      "title": "Russian Ethnographic Museum, Malitsa with top piece, clothing for a male doll",
+      "url": "https://collection.ethnomuseum.ru/entity/OBJECT/112601",
+      "note": "Museum catalog record checked for exact object identity, Nenets attribution, early twentieth-century date, reindeer-hide and cotton materials, dimensions, and collection context."
+    },
+    {
+      "id": "n17-cradle",
+      "title": "Nenets Autonomous Okrug Museum, Toy cradle",
+      "url": "https://naomuseum.ru/collections/evropeyskie-nentsy/mir-rebenka/lyulka-nenetskaya/",
+      "note": "Regional museum page checked for the September 2008 toy cradle catalog record and, separately, the museum’s general text about full-size cradle suspension, seasonal covers, and sphagnum lining."
+    },
+    {
+      "id": "n18-uko",
+      "title": "Nenets Autonomous Okrug Museum, Uko doll",
+      "url": "https://naomuseum.ru/collections/evropeyskie-nentsy/mir-rebenka/kukla-uko/",
+      "note": "Regional museum page checked for one Uko woman doll cataloged in 2005, NKM KP OF-3050, and separate interpretive prose explaining that such dolls can form families representing generations and support child learning."
+    },
+    {
+      "id": "n19-women",
+      "title": "Security strategies of indigenous women in Nenets Autonomous Region, Russia",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/1088937X.2018.1489428",
+      "note": "Peer-reviewed article checked in methods and case sections for contemporary Nenets women, kin, care, household choices, paid and unpaid work, and regional specificity."
+    },
+    {
+      "id": "n20-school",
+      "title": "Stephan Dudeck, Challenging the state educational system in Western Siberia: taiga school by the Tiuitiakha River",
+      "url": "https://research.ulapland.fi/en/publications/challenging-the-state-educational-system-in-western-siberia-taiga/",
+      "note": "University of Lapland research record checked in the abstract and publication metadata for a Forest Nenets family-organized taiga school, distant boarding-school pressures, its thirteen-year duration, and contemporary educational agency."
+    },
+    {
+      "id": "n21-adolescents",
+      "title": "Self-Identity Development among Indigenous Adolescents from the Far North of Russia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6826631/",
+      "note": "Open peer-reviewed study checked in section 2.1, Participants, for 2018 Nenets respondents in the Nenets Autonomous District, boarding-school residence from September to May, and summer return to tundra families."
+    },
+    {
+      "id": "n22-children",
+      "title": "Zoia Jefimovna Vylka Ravna, The Inter-Generational Transmission of Indigenous Knowledge by Nenets Women: Viewed in the Context of the State Educational System of Russia",
+      "url": "https://hdl.handle.net/10037/18231",
+      "note": "UiT doctoral thesis checked at PDF pages 3, 39, 43, 73, 148 to 150, and 220 for author position, fieldwork, observation, participation, play, language, chores, mobility, and explicit modern ethnographic limits."
+    },
+    {
+      "id": "n23-access",
+      "title": "Effects of increase in temperature and open water on transmigration and access to health care by the Nenets reindeer herders in northern Russia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3749856/",
+      "note": "Open peer-reviewed study checked in Methods and Results for modern Kanin migration, kin-based herding groups, seasonal access to health care, open-water barriers, and clinics."
+    },
+    {
+      "id": "n24-birth",
+      "title": "“Catching a Child”: giving birth under nomadic conditions. The methods of pre- and postnatal care of the Nenets mothers and babies",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6507959/",
+      "note": "Open peer-reviewed ethnography checked in methods and results for Nenets prenatal and postnatal care, women, infants, regional interviews, and the date limits of testimony."
+    },
+    {
+      "id": "n25-medicine",
+      "title": "Our Neighbors: The Forest Nenets. Traditional Medicine",
+      "url": "https://scfh.ru/en/papers/our-neighbors-the-forest-nenets-traditional-medicine/",
+      "note": "Science First Hand museum-community article checked for jointly documented Forest Nenets remedies, named materials, field collection, and its modern project setting."
+    },
+    {
+      "id": "n26-diet",
+      "title": "Changing diets and traditional lifestyle of Siberian Arctic Indigenous Peoples and effects on health and well-being",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8497662/",
+      "note": "Open peer-reviewed Yamal-Nenets Autonomous Okrug study checked in background and dietary sections for present regional food patterns, health questions, and limits on historical inference."
+    },
+    {
+      "id": "n27-parasites",
+      "title": "Traditional Living Habits of the Taz Tundra Population: A Paleoparasitological Study",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5127544/",
+      "note": "Open peer-reviewed archaeology study checked in site, methods, and discussion sections for historic Taz Nenets food, parasite evidence, and analytical limitations."
+    },
+    {
+      "id": "n28-water",
+      "title": "The Yamal Nenets’ traditional and contemporary environmental knowledge of snow, ice, and permafrost",
+      "url": "https://ecologyandsociety.org/vol28/iss3/art6/",
+      "note": "Peer-reviewed open article checked in methods and results for Nenets snow, ice, water, route, camp, and shelter knowledge, including melting snow for drinking."
+    },
+    {
+      "id": "n29-waterquality",
+      "title": "Challenges of Changing Water Sources for Human Wellbeing in the Arctic Zone of Western Siberia",
+      "url": "https://www.mdpi.com/2073-4441/15/8/1577",
+      "note": "Peer-reviewed open study checked in sections 3 and 5 and Table 3 for current Yamalo-Nenets Autonomous Okrug water sources, quality, infrastructure, and settlement-specific variation."
+    },
+    {
+      "id": "n30-toilets",
+      "title": "Archived mirror of BBC - Tribe - Nenets",
+      "url": "https://bbc.com.im/tribe/tribes/nenets/index.shtml",
+      "note": "Nonofficial archive mirror of the BBC companion checked in “Nenets life” for a contemporary Yamal camp, water carrying, and outdoor toilet areas away from chums and separated by gender; its localized observational scope is retained."
+    },
+    {
+      "id": "n31-eallu",
+      "title": "Arctic Council, EALLU and Arctic Indigenous Peoples’ Food Systems",
+      "url": "https://arctic-council.org/news/eallu-and-arctic-indigenous-peoples-food-systems/",
+      "note": "Arctic Council page checked at paragraphs 3 to 17 for Indigenous-led food-knowledge work, youth, language, intergenerational workshops, and a contributor affiliated with the Centre for Reindeer Herding Development in Yamalo-Nenets Autonomous Okrug."
+    },
+    {
+      "id": "n32-heritage",
+      "title": "Kautokeino Declaration: On the Occasion of the 4th World Reindeer Herders’ Congress",
+      "url": "https://reindeerherding.org/images/wrh/declarations/pdf/2009-Kautokeino-Declaration.pdf",
+      "note": "Indigenous herder declaration checked at page 2 for women and knowledge transfer, pages 2 to 3 for family-based husbandry and local economy, and pages 3 to 5 for education, language, and youth."
+    },
+    {
+      "id": "n33-burrough",
+      "title": "A. E. Nordenskiöld, The Voyage of the Vega Round Asia and Europe: With a Historical Review of Previous Journeys Along the North Coast of the Old World, volume I",
+      "url": "https://www.gutenberg.org/cache/epub/24365/pg24365-images.html",
+      "note": "Public-domain volume checked at printed pages 100 to 101 for its transcription of Stephen Burrough’s 1556 report that Russian hunters told him of people called Samoeds; printed pages 222 to 224 separately describe the Kanin Nos route."
+    },
+    {
+      "id": "n34-reguly",
+      "title": "Eszter Ruttkay-Miklián, Antal Reguly’s Data on the Ural Nenets",
+      "url": "https://etnografia.kunstkamera.ru/files/etnografia_journal/2018_02/ruttkaye.pdf",
+      "note": "Peer-reviewed article checked at PDF pages 8 to 11, journal pages 100 to 103, for sixteenth-century registration evidence and historical tundra and forest group distribution on both sides of the Urals."
+    },
+    {
+      "id": "n35-limits",
+      "title": "Yuri Kvashnin, To the Question of the South-Western Limits of Nomadic Nenets",
+      "url": "https://journals.iea.ras.ru/vestantrop/article/download/1129/1359/2576",
+      "note": "Peer-reviewed Herald of Anthropology 3 (2023) article checked at journal pages 52 to 67 for royal letters, petitions, travelers, westward routes, trade, exchange, conflict, and evidence limits."
+    },
+    {
+      "id": "n36-charter",
+      "title": "A. A. Zhilinsky, Крайний Север Европейской России (The Far North of European Russia)",
+      "url": "https://kolamap.ru/library/1919_zhilinskiy/2_7.htm",
+      "note": "Digitized OCR of a 1919 secondary work checked at printed pages 187 to 188, chapter 2 section 7, for its transcription and discussion of the 1545 charter concerning Kanin and Tiun communities, fishing and hunting grounds, and encroachment; it is not an archival facsimile."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nenets",
+      "card": "data/cards/nenets.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1530",
+            "atlas-map-1600",
+            "n01-koryakov",
+            "n07-cultured"
+          ],
+          "locator": "Exact id, imported name, approximate 1530 to 1600 interval, and historical-basemap provenance. Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests. Immediate post-interval control showing exact-id absence and Muscovy atlas ownership. International Journal of Eurasian Linguistics 7 article checked at journal pages 119 to 120 for early evidence, the 1545 charter, and its printed “Stephen Barrow” 1556 notice; page 121 for late sixteenth-century western Tundra Nenets distribution; and page 122 for the fuller charter text. Peer-reviewed article checked in the abstract and historical sections for small early-modern herds, transport, hunting, and later pastoral expansion in the European Russian and Archangelsk tundra scope.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1530"
+          ],
+          "locator": "Exact id, imported name, approximate 1530 to 1600 interval, and historical-basemap provenance. Only exact target feature, decoded geometry, shared arcs, overlaps, and representative point tests.",
+          "dateScope": {
+            "from": 1530,
+            "to": 1538
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "n36-charter"
+          ],
+          "locator": "Digitized OCR of a 1919 secondary work checked at printed pages 187 to 188, chapter 2 section 7, for its transcription and discussion of the 1545 charter concerning Kanin and Tiun communities, fishing and hunting grounds, and encroachment; it is not an archival facsimile.",
+          "dateScope": {
+            "from": 1538,
+            "to": 1547
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "n03-words"
+          ],
+          "locator": "Indiana University Press open book introduction checked in the subsection “The Nenets, Their Reindeer, and Their Others” for Pustozersk, tribute extraction, resistance, Obdorsk, and the much later chronology of large-scale mission work.",
+          "dateScope": {
+            "from": 1547,
+            "to": 1556
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "n33-burrough"
+          ],
+          "locator": "Public-domain volume checked at printed pages 100 to 101 for its transcription of Stephen Burrough’s 1556 report that Russian hunters told him of people called Samoeds; printed pages 222 to 224 separately describe the Kanin Nos route.",
+          "dateScope": {
+            "from": 1556,
+            "to": 1565
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "n34-reguly"
+          ],
+          "locator": "Peer-reviewed article checked at PDF pages 8 to 11, journal pages 100 to 103, for sixteenth-century registration evidence and historical tundra and forest group distribution on both sides of the Urals.",
+          "dateScope": {
+            "from": 1565,
+            "to": 1574
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "n35-limits"
+          ],
+          "locator": "Peer-reviewed Herald of Anthropology 3 (2023) article checked at journal pages 52 to 67 for royal letters, petitions, travelers, westward routes, trade, exchange, conflict, and evidence limits.",
+          "dateScope": {
+            "from": 1574,
+            "to": 1583
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "n03-words",
+            "n09-mobility"
+          ],
+          "locator": "Indiana University Press open book introduction checked in the subsection “The Nenets, Their Reindeer, and Their Others” for Pustozersk, tribute extraction, resistance, Obdorsk, and the much later chronology of large-scale mission work. 2021 monograph checked at section 1.4, printed pages 25 to 26, for mobile hunting before later large-herd pastoralism.",
+          "dateScope": {
+            "from": 1583,
+            "to": 1592
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "n04-history",
+            "n05-salekhard",
+            "atlas-map-1600"
+          ],
+          "locator": "Institutional Arctic reference checked in paragraphs 38 to 43 for the dated founding sequence of Pustozersk, Berezov, Surgut, Obdorsk, Mangazeya, and Turukhansk, trade, tribute, and resistance; its inherited Soviet-era framing is not adopted. University regional-history page checked for the 1595 Obdorsk fort at an earlier Khanty settlement and the Nenets place-name Salekhard. Immediate post-interval control showing exact-id absence and Muscovy atlas ownership.",
+          "dateScope": {
+            "from": 1592,
+            "to": 1600
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-card-index",
+            "atlas-overrides",
+            "atlas-missing"
+          ],
+          "locator": "Repository data/hb/civilizations-hb.json, exact id nenets, fields name, from, to, circa, and generated. | Repository data/hb/summaries-hb.json, exact key nenets and imported summary. | Repository data/research/coverage.json, exact nenets record, kind, borderFiles, observedIntervals, datesApproximate, content, and review fields. | Repository data/cards/index.json, exact-id absence test for nenets. | Repository data/researched-overrides.json, exact-id absence test for nenets. | Repository data/research/missing-cards.json, exact nenets record, summaryStatus, sourceLead, and stagedDrafts fields.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1530"
+          ],
+          "locator": "Repository data/hb/borders/world-1530.json, feature 247 for exact nenets, decoded polygon, bbox, positions, shared arcs, and representative-point tests.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1530"
+          ],
+          "locator": "Repository data/hb/borders/world-1530.json, feature 247 for exact nenets, decoded polygon, bbox, positions, shared arcs, and representative-point tests.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1530"
+          ],
+          "locator": "Repository data/hb/borders/world-1530.json, feature 247 for exact nenets, decoded polygon, bbox, positions, shared arcs, and representative-point tests.",
+          "dateScope": {
+            "year": 1530
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "atlas-map-1600",
+            "atlas-map-1650"
+          ],
+          "locator": "Repository data/hb/borders/world-1500.json, exact-id absence and representative-point ownership controls. | Repository data/hb/borders/world-1530.json, feature 247 for exact nenets, decoded polygon, bbox, positions, shared arcs, and representative-point tests. | Repository data/hb/borders/world-1600.json, exact-id absence and Muscovy representative-point ownership controls. | Repository data/hb/borders/world-1650.json, exact-id absence and continued Muscovy ownership controls.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "n12-forest"
+          ],
+          "locator": "HSE project page, title and project-purpose paragraphs plus Resources section, on Pur Forest Nenets, threatened status, speech documentation, the absent literary norm, and planned outputs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "n34-reguly"
+          ],
+          "locator": "Ruttkay-Miklián, Antal Reguly’s Data on the Ural Nenets, PDF pages 8 to 11, journal pages 100 to 103, section “Nenets population in the area of Ob and Ural: historical review.”",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "atlas-index",
+            "n04-history",
+            "n35-limits"
+          ],
+          "locator": "Repository data/hb/civilizations-hb.json, exact id nenets, fields name, from, to, circa, and generated. | Arctic Megapedia, “Historical background of the Nenets,” paragraphs beginning with the 1499 Pustozersk reference and continuing through the Berezov, Surgut, Obdorsk, Mangazeya, and Turukhansk sequence, trade, tribute, and resistance. | Kvashnin 2023, To the Question of the South-Western Limits of Nomadic Nenets, journal pages 52 to 67, on westward routes, royal letters, petitions, traveler accounts, trade, exchange, and conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "atlas-summary",
+            "n20-school",
+            "n31-eallu"
+          ],
+          "locator": "Repository data/hb/summaries-hb.json, exact key nenets and imported summary. | Dudeck 2013, University of Lapland research record, abstract lines 32 to 38 and publication metadata lines 39 to 48, on the Forest Nenets family initiative and boarding-school context. | Arctic Council EALLU page, paragraphs 3 to 17 on youth workshops, language, Indigenous knowledge, food systems, and contributor Nechei Serotetto’s Yamalo-Nenets AO institutional affiliation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "n34-reguly"
+          ],
+          "locator": "Ruttkay-Miklián, Antal Reguly’s Data on the Ural Nenets, PDF pages 8 to 11, journal pages 100 to 103, section “Nenets population in the area of Ob and Ural: historical review.”",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "n36-charter"
+          ],
+          "locator": "Zhilinsky 1919, Крайний Север Европейской России, printed pages 187 to 188, chapter 2 section 7, beginning “In the charter of Ivan the Terrible, dated 7053 (1545)” and the following quoted passage.",
+          "dateScope": {
+            "year": 1545
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "n33-burrough"
+          ],
+          "locator": "Nordenskiöld, Voyage of the Vega, volume I, printed pages 100 to 101 for the quoted 1 August 1556 Burrough passage beginning “there were people called Samoeds”; printed pages 222 to 224 for the Kanin Nos route.",
+          "dateScope": {
+            "year": 1556
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "n04-history"
+          ],
+          "locator": "Arctic Megapedia, “Historical background of the Nenets,” paragraphs beginning with the 1499 Pustozersk reference and continuing through the Berezov, Surgut, Obdorsk, Mangazeya, and Turukhansk sequence, trade, tribute, and resistance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "n02-arctica"
+          ],
+          "locator": "Encyclopedia Arctica volume X, “Yamalo-Nenets National Okrug,” scan and display pages 408 to 410 on mid-sixteenth-century Mangazeia, English trade requests, the 1595 Dutch voyage, and Nenets encounters; pages 413 to 414 on tribute, exchange, and resistance.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "n04-history",
+            "n05-salekhard"
+          ],
+          "locator": "Arctic Megapedia, “Historical background of the Nenets,” paragraphs beginning with the 1499 Pustozersk reference and continuing through the Berezov, Surgut, Obdorsk, Mangazeya, and Turukhansk sequence, trade, tribute, and resistance. | Ural Federal University Salekhard page, opening history paragraphs on Obdorsk in 1595, the earlier Khanty settlement, and Nenets name Salekhard.",
+          "dateScope": {
+            "year": 1595
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "n06-sasaki",
+            "n08-genetics"
+          ],
+          "locator": "Sasaki, Establishment of Large-Scale Reindeer Herding in European and West Siberian Tundra, printed pages 79 to 80, abstract and core chronological synthesis. | Røed et al. 2020, section 1, paragraph beginning “The domestic reindeer studied,” on small transport and hunting herds and the later pastoral transition.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "n09-mobility"
+          ],
+          "locator": "Istomin and Dwyer 2021 monograph, section 1.4, printed pages 25 to 26, mobile migratory hunting before later large-herd pastoralism.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "n14-domestic"
+          ],
+          "locator": "Illinois State Museum Hunters: Domestic Life page, paragraphs on western Siberian chums, seasonal covers, transport, hide uses, and photograph captions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "n15-reindeer"
+          ],
+          "locator": "Illinois State Museum Hunters: Reindeer page, comparative transport and material-use paragraphs and twentieth-century photograph captions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "n35-limits"
+          ],
+          "locator": "Kvashnin 2023, To the Question of the South-Western Limits of Nomadic Nenets, journal pages 52 to 67, on westward routes, royal letters, petitions, traveler accounts, trade, exchange, and conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "n09-mobility",
+            "n36-charter"
+          ],
+          "locator": "Istomin and Dwyer 2021 monograph, section 1.4, printed pages 25 to 26, mobile migratory hunting before later large-herd pastoralism. | Zhilinsky 1919, Крайний Север Европейской России, printed pages 187 to 188, chapter 2 section 7, beginning “In the charter of Ivan the Terrible, dated 7053 (1545)” and the following quoted passage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "n26-diet"
+          ],
+          "locator": "Andronov et al., Background, Methods, and Results on a contemporary mixed Nenets, Khanty, and Selkup YNAO sample, questionnaires, diet, seasonal access, store foods, screening, and hypertension.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "n16-doll"
+          ],
+          "locator": "Russian Ethnographic Museum object 112601, title “Malitsa with top piece, clothing for a male doll,” people, early twentieth-century date, materials, dimensions, and collection fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "n14-domestic",
+            "n15-reindeer"
+          ],
+          "locator": "Illinois State Museum Hunters: Domestic Life page, paragraphs on western Siberian chums, seasonal covers, transport, hide uses, and photograph captions. | Illinois State Museum Hunters: Reindeer page, comparative transport and material-use paragraphs and twentieth-century photograph captions.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "n31-eallu"
+          ],
+          "locator": "Arctic Council EALLU page, paragraphs 3 to 17 on youth workshops, language, Indigenous knowledge, food systems, and contributor Nechei Serotetto’s Yamalo-Nenets AO institutional affiliation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "n19-women"
+          ],
+          "locator": "Tuisku, Security strategies of indigenous women in Nenets Autonomous Region, Methods and household-strategy sections on participant scope, kin, care, and work.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "n18-uko"
+          ],
+          "locator": "Nenets Autonomous Okrug Museum, Uko doll page, catalog record for one 2005 woman doll, NKM KP OF-3050, followed by general prose on making doll families, represented generations, bags, cradles, and learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "n17-cradle"
+          ],
+          "locator": "Nenets Autonomous Okrug Museum cradle page, catalog lines identifying the September 2008 toy cradle, followed by the museum’s general Nenets Baby Cradle description of suspension, covers, and sphagnum lining.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "n32-heritage"
+          ],
+          "locator": "Kautokeino Declaration 2009, page 2 on women and knowledge transfer, pages 2 to 3 on family-based husbandry and local economy, and pages 3 to 5 on education, language, and youth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "n34-reguly"
+          ],
+          "locator": "Ruttkay-Miklián, Antal Reguly’s Data on the Ural Nenets, PDF pages 8 to 11, journal pages 100 to 103, section “Nenets population in the area of Ob and Ural: historical review.”",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "n20-school"
+          ],
+          "locator": "Dudeck 2013, University of Lapland research record, abstract lines 32 to 38 and publication metadata lines 39 to 48, on the Forest Nenets family initiative and boarding-school context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "n21-adolescents"
+          ],
+          "locator": "Flotskaya et al. 2019, section 2.1, Participants, on the 2018 Nenets sample, September-to-May boarding residence, summer family return, and tundra-city rhythm.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "n22-children"
+          ],
+          "locator": "Vylka Ravna 2019 UiT thesis, PDF pages 3, 39, 43, 73, 148 to 150, and 220, on fieldwork, observation, participation, play, language, chores, and mobility.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "n12-forest",
+            "n13-dictionary"
+          ],
+          "locator": "HSE project page, title and project-purpose paragraphs plus Resources section, on Pur Forest Nenets, threatened status, speech documentation, the absent literary norm, and planned outputs. | Forest Nenets Audio Dictionary, introduction, usage guide, and entry-structure paragraphs on headwords, Russian translations, examples, forms, and audio where available.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "n10-grammar"
+          ],
+          "locator": "Nikolaeva 2014, section 2.3, printed page 14 and PDF page 30 for phonological transcription; printed page 68 and PDF page 84, example 25a, for the exact sample, gloss, and translation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "n23-access"
+          ],
+          "locator": "Health care in the Russian Arctic, Methods and Results sections on Kanin migration, kin groups, open-water barriers, clinics, and access to health care.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "n24-birth"
+          ],
+          "locator": "Catching a Child, Methods and Results sections on regions, interviews, pregnancy, birth, infant care, and postnatal practice.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "n25-medicine"
+          ],
+          "locator": "Science First Hand Forest Nenets medicine article, museum project description and fieldwork sections on documented remedies and materials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "n26-diet"
+          ],
+          "locator": "Andronov et al., Background, Methods, and Results on a contemporary mixed Nenets, Khanty, and Selkup YNAO sample, questionnaires, diet, seasonal access, store foods, screening, and hypertension.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "n36-charter"
+          ],
+          "locator": "Zhilinsky 1919, Крайний Север Европейской России, printed pages 187 to 188, chapter 2 section 7, beginning “In the charter of Ivan the Terrible, dated 7053 (1545)” and the following quoted passage.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "n28-water"
+          ],
+          "locator": "Ecology and Society volume 28 issue 3 article 6, Methods and Results on snow, ice, permafrost, drinking water, routes, camps, and shelter.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "n29-waterquality"
+          ],
+          "locator": "Water 15(8), article 1577, sections 3 and 5 and Table 3 on Yamalo-Nenets Autonomous Okrug water sources, quality, infrastructure, and settlement differences.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "n30-toilets"
+          ],
+          "locator": "Archived mirror of BBC - Tribe - Nenets, subsection “Nenets life,” paragraphs on water carrying and outdoor women’s and men’s toilet areas away from chums.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "n27-parasites"
+          ],
+          "locator": "Slepchenko et al., Archaeological context, Materials and Methods, Results, and Discussion on parasite remains from nineteenth- and twentieth-century Taz Nenets burials.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "n33-burrough"
+          ],
+          "locator": "Nordenskiöld, Voyage of the Vega, volume I, printed pages 100 to 101 for the quoted 1 August 1556 Burrough passage beginning “there were people called Samoeds”; printed pages 222 to 224 for the Kanin Nos route.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "n35-limits"
+          ],
+          "locator": "Kvashnin 2023, To the Question of the South-Western Limits of Nomadic Nenets, journal pages 52 to 67, on westward routes, royal letters, petitions, traveler accounts, trade, exchange, and conflict.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "n11-inel"
+          ],
+          "locator": "Budzisch, Wagner-Nagy, and Arkhipov 2024, INEL Nenets corpus: User documentation, sections 1.1 to 1.2 on pages 1 to 2, section 1.4 on page 3, and sections 2.1 to 2.4 on pages 5 to 6.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "n20-school",
+            "n31-eallu",
+            "n32-heritage"
+          ],
+          "locator": "Dudeck 2013, University of Lapland research record, abstract lines 32 to 38 and publication metadata lines 39 to 48, on the Forest Nenets family initiative and boarding-school context. | Arctic Council EALLU page, paragraphs 3 to 17 on youth workshops, language, Indigenous knowledge, food systems, and contributor Nechei Serotetto’s Yamalo-Nenets AO institutional affiliation. | Kautokeino Declaration 2009, page 2 on women and knowledge transfer, pages 2 to 3 on family-based husbandry and local economy, and pages 3 to 5 on education, language, and youth.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "n03-words"
+          ],
+          "locator": "Words and Silences, Introduction, subsection “The Nenets, Their Reindeer, and Their Others,” paragraphs on Pustozersk, fur tribute, resistance, Obdorsk, and later eighteenth-century mission expansion.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "atlas-map-1600",
+            "atlas-map-1650",
+            "n32-heritage"
+          ],
+          "locator": "Repository data/hb/borders/world-1600.json, exact-id absence and Muscovy representative-point ownership controls. | Repository data/hb/borders/world-1650.json, exact-id absence and continued Muscovy ownership controls. | Kautokeino Declaration 2009, page 2 on women and knowledge transfer, pages 2 to 3 on family-based husbandry and local economy, and pages 3 to 5 on education, language, and youth.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1600",
+            "atlas-map-1650",
+            "n02-arctica",
+            "n06-sasaki",
+            "n10-grammar",
+            "n11-inel"
+          ],
+          "locator": "Immediate post-interval control showing exact-id absence and Muscovy atlas ownership. Later continuity control showing continued atlas classification under Muscovy. Digitized mid-twentieth-century unpublished typescript checked at scan and display pages 408 to 410 for Mangazeia knowledge, Russian sea travel, 1595 Dutch reports, and encounters with Nenets; pages 413 to 414 for tribute, exchange, and resistance. Its dated framing and OCR remain limitations. National Museum of Ethnology study checked at printed pages 79 to 80 for the proposed seventeenth- to nineteenth-century growth of large-scale herding and its especially later expansion. Reference grammar checked at section 2.3, printed page 14 and PDF page 30, for the transcription system; and printed page 68, PDF page 84, example 25a for the exact modern sample, gloss, and translation. The copy is a university Moodle host; DOI 10.1515/9783110320640 secures publication identity. University corpus documentation checked at sections 1.1 to 1.2, pages 1 to 2; section 1.4, page 3; and sections 2.1 to 2.4, pages 5 to 6, for scope, lect distinctions, speakers, contributors, transcripts, glosses, and translations.",
+          "dateScope": {
+            "year": 1600
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nenets",
+        "name": "Nenets communities, 1530 atlas snapshot",
+        "aliases": [
+          "Nenets",
+          "Nenets, 1530 atlas layer"
+        ],
+        "kind": "culture",
+        "region": "Eurasia",
+        "from": 1530,
+        "to": 1600,
+        "circa": true,
+        "card": "cards/nenets.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1530 to 1600 atlas snapshot centered on Yamal, representing diverse Nenets communities rather than a centralized state.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1530.json",
+          "properties": {
+            "civ": "nenets",
+            "from": 1530,
+            "to": 1600,
+            "precision": 1
+          },
+          "bounds": [
+            66.67086670866709,
+            65.4819825187485,
+            83.75303753037531,
+            72.83446995733661
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}

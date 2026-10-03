@@ -1,0 +1,836 @@
+{
+  "version": 1,
+  "region": "North America",
+  "researcher": "Codex parallel release190-nitassinan-innu research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact nitassinan-innu record: imported display name, approximate 1492 to 1500 lifetime, and historical-basemaps provenance."
+    },
+    {
+      "id": "atlas-summaries",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Wikipedia-derived Nitassinan summary inspected as a lead, not retained as sufficient historical evidence."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "Exact target coverage record: state classification, approximate dates, one observed interval and border file, and missing content review."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Exact target record confirming imported-summary status, no packet, and no staged draft before this work."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Exact-id absence check confirming no nitassinan-innu runtime card before integration."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Exact-id absence check confirming no nitassinan-innu researched override before integration."
+    },
+    {
+      "id": "atlas-map-1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded predecessor snapshot and representative-point ownership tests before the target appears."
+    },
+    {
+      "id": "atlas-map-1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Only exact target feature, decoded geometry, bounds, overlaps, point memberships, and precision metadata."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Endpoint repaint control showing the exact id absent and multiple replacement labels at representative locations."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Post-endpoint control showing new Montagnais Innu and Naskapi Innu atlas labels at selected representative points."
+    },
+    {
+      "id": "n01-tshakapesh-nation",
+      "title": "Institut Tshakapesh, La Nation innue",
+      "url": "https://www.tshakapesh.ca/culture/decouvrir-la-culture-innue/nation-innue/",
+      "note": "Community institution page, headings La Nation innue and Les 11 communautes innues du Quebec et du Labrador: Nitassinan, seasonal mobility, lack of a fixed frontier, community diversity, and living transmission."
+    },
+    {
+      "id": "n02-meshikamau",
+      "title": "Parks Canada, Meshikamau-shipu Travel Route National Historic Event",
+      "url": "https://parks.canada.ca/culture/designation/evenement-event/meshikamau-shipu",
+      "note": "Paragraphs 20 to 29: 330-kilometre route, active and ancestral camps, portages, births and burials, family gatherings, travel, distant stone, oral history, and continuing use."
+    },
+    {
+      "id": "n03-kameshtashtan",
+      "title": "Parks Canada, Kameshtashtan National Historic Site",
+      "url": "https://parks.canada.ca/culture/designation/lieu-site/kameshtashtan",
+      "note": "Paragraphs 21 to 27, 35 to 47, and heritage value 67 to 74: ancient camps, family landscape, caribou crossings, caches, hearths, foods, travel, and current use."
+    },
+    {
+      "id": "n04-schwarz",
+      "title": "Frederick A. Schwarz, In the Eagle's Nest: Archaeological Investigations in the Mistassini Lake Area",
+      "url": "https://www.gov.nl.ca/tcar/provincial-archaeology-annual-report-series/1997-toc/schwarz-1997-eagles-nest/",
+      "note": "Archaeology in Newfoundland and Labrador 1997, paragraphs 18 to 55, 60 to 112, and 118 to 148: survey limits, visibility, trade, recent camp inventories, and uncertain precontact components."
+    },
+    {
+      "id": "n05-bibeau",
+      "title": "Pierre Bibeau, Phase 2 Report on a Heritage Study for the Utshimassit Community Relocation Project",
+      "url": "https://www.gov.nl.ca/tcar/provincial-archaeology-annual-report-series/1996-toc/bibeau1996sangbay/",
+      "note": "Archaeology in Newfoundland and Labrador 1996, introduction paragraphs 9 to 14 and site discussion: government-directed 1967 settlement, water and sewer problems, and older archaeological attribution."
+    },
+    {
+      "id": "n06-point-revenge",
+      "title": "Andronowski-Brake et al., Labrador Beothuk: A reconsideration of the Point Revenge complex",
+      "url": "https://journals.sagepub.com/doi/10.1177/01976931261431226",
+      "note": "North American Archaeologist 47.3-4, pages 59 to 89; abstract paragraphs 32 to 36 tests ancestry hypotheses and supports a relationship with Beothuk rather than silent assignment to Innu."
+    },
+    {
+      "id": "n07-armitage-book",
+      "title": "Peter Armitage, The Innu (The Montagnais-Naskapi)",
+      "url": "https://innueducation.ca/wp-content/uploads/2022/11/The-Innu_Armitage-1.pdf",
+      "note": "Community-hosted book. Printed pages 13 to 19 introduce identity and older archaeology; pages 66 to 73 describe twentieth-century camps, household work, foods, and gatherings. Used only as dated comparison."
+    },
+    {
+      "id": "n08-foster-guide",
+      "title": "Innu Round Table Secretariat, A Guide to Fostering Innu Culture",
+      "url": "https://fosterfamiliesnl.ca/wp-content/uploads/2021/11/A-Guide-to-Fostering-Innu-culture.pdf",
+      "note": "Community health staff guide, printed pages 3 to 9: historical disruption, extended family, collective childrearing, learning through participation, and flexible work roles. Retrospective/current evidence is marked."
+    },
+    {
+      "id": "n09-itkc",
+      "title": "Peter Armitage and Innu Traditional Knowledge Committee, Innu Environmental Knowledge of the Mishta-shipu",
+      "url": "https://www.kuekuatsheu.ca/reports/ITKCreport.pdf",
+      "note": "Report to Innu Nation, 2007. Printed pages 64 to 67, section 9 Nutshimiu-natukun: country medicine, documentation limits, knowledge governance, relative strength, and landscape relationships."
+    },
+    {
+      "id": "n10-nametau-material",
+      "title": "Nametau innu, Material Culture",
+      "url": "https://www.nametauinnu.ca/en/home/science/tool.html",
+      "note": "Musee regional de la Cote-Nord community knowledge site, paragraphs 112 to 121: archaeological stone tools, organic preservation limits, later photographs, shelters, snowshoes, canoes, and sleds."
+    },
+    {
+      "id": "n11-nametau-archaeology",
+      "title": "Nametau innu, Archaeology on Innu Territory",
+      "url": "https://www.nametauinnu.ca/en/home/science/territory/archaeology.html",
+      "note": "Paragraphs 112 to 130: Cote-Nord site counts, Sainte-Marguerite River excavations, four-millennia use, passage sites, structures, and diverse stone sources."
+    },
+    {
+      "id": "n12-nametau-contact",
+      "title": "Nametau innu, First Contact",
+      "url": "https://www.nametauinnu.ca/en/home/science/history/contact.html",
+      "note": "Paragraphs 112 to 121: Cabot in 1497, Breton fisheries documented in 1506, Cartier meeting Breton crews in 1534, and cautious inference about later Innu-European contact."
+    },
+    {
+      "id": "n13-language-lesson",
+      "title": "Innu Language Lessons, Nitassinan",
+      "url": "https://lessons.innu-aimun.ca/lessons/view/43",
+      "note": "Current lesson heading and activity text: the Roman-orthography form Nitassinan with the English translation Our territory and east/west dialect controls."
+    },
+    {
+      "id": "n14-place-names",
+      "title": "Natural Resources Canada, Innu-aimun audio for place names in Labrador",
+      "url": "https://natural-resources.canada.ca/maps-tools-publications/maps/geographical-names-canada/innu-aimun-audio-place-names-labrador",
+      "note": "Official page: research beginning in 1976, nearly 1,200 names, almost 500 official names, over 400 audio files, and associated place histories shared by Innu Nation."
+    },
+    {
+      "id": "n15-education",
+      "title": "Mamu Tshishkutamashutau Innu Education, About MTIE",
+      "url": "https://www.innueducation.ca/about",
+      "note": "Current Innu education authority page: established 2009, two community schools, Innu-selected trustees, and education honoring language, land, culture, and community goals."
+    },
+    {
+      "id": "n16-healing-evaluation",
+      "title": "Government of Canada, Impact Evaluation of the Labrador Innu Comprehensive Healing Strategy",
+      "url": "https://www.sac-isc.gc.ca/DAM/dam-cirnac-rcaanc/dam-aev/workarea/dam/texte-text/aev_pubs_ev_lichs_1328287772839_eng.pdf",
+      "note": "Final evaluation report, 2009, printed pages 7 to 10 and 18 to 27: community healing, health programs, relocation, clean water, indoor plumbing, and evidence limitations."
+    },
+    {
+      "id": "n17-naskapi-profile",
+      "title": "Gouvernement du Quebec, Naskapi",
+      "url": "https://www.quebec.ca/en/government/quebec-at-a-glance/first-nations-and-inuit/profile-of-the-nations/naskapi",
+      "note": "Official current profile, sections Population and territory, Language, and History: distinct Naskapi Nation, Kawawachikamach, iyuw iyimuun, caribou mobility, and modern institutions."
+    },
+    {
+      "id": "n18-nmai-snowshoes",
+      "title": "National Museum of the American Indian, Snowshoes, catalog 13/3080",
+      "url": "https://americanindian.si.edu/collections-search/object/NMAI_142572",
+      "note": "Object record NMAI_142572: Montagnais Innu attribution, Labrador, collected 1924, wood and hide thong, carved and plaited techniques."
+    },
+    {
+      "id": "n19-nmai-game",
+      "title": "National Museum of the American Indian, Cup and pin game, catalog 13/3201",
+      "url": "https://americanindian.si.edu/collections-search/object/NMAI_142797",
+      "note": "Object record NMAI_142797: Montagnais Innu attribution, Labrador, collected 1924, animal bone, hide thong, deer tail, incised and perforated."
+    },
+    {
+      "id": "n20-curriculum",
+      "title": "Mamu Tshishkutamashutau Innu Education, Innu curriculum resources",
+      "url": "https://www.innueducation.ca/innu-curriculum-resources/",
+      "note": "Current curriculum catalogue sections for Innu-aimun activities, beginner lessons, school vocabulary, early literacy, spelling, typing, and Innu social studies."
+    },
+    {
+      "id": "n21-aip",
+      "title": "Government of Canada, Labrador Innu Land Claims Agreement-in-Principle",
+      "url": "https://www.rcaanc-cirnac.gc.ca/eng/1331657507074/1539778707675",
+      "note": "Chapter 22, Part 22.9 Archaeology, sections 22.9.1 to 22.9.4: proposed artifact transfer, burial protection, consultation, conservation, and reburial responsibilities."
+    },
+    {
+      "id": "n22-nametau-food",
+      "title": "Nametau innu, Food from the Caribou",
+      "url": "https://www.nametauinnu.ca/en/nomad/detail/26.html",
+      "note": "Community museum teaching page, paragraphs 91 to 103 and 160 to 175: caribou food knowledge, guest portions, bone fat, birch-bark storage, respect, and explicit elder-to-youth transmission context."
+    }
+  ],
+  "entities": [
+    {
+      "id": "nitassinan-innu",
+      "card": "data/cards/nitassinan-innu.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "n01-tshakapesh-nation"
+          ],
+          "locator": "Exact nitassinan-innu record: imported display name, approximate 1492 to 1500 lifetime, and historical-basemaps provenance. Only exact target feature, decoded geometry, bounds, overlaps, point memberships, and precision metadata. Endpoint repaint control showing the exact id absent and multiple replacement labels at representative locations. Community institution page, headings La Nation innue and Les 11 communautes innues du Quebec et du Labrador: Nitassinan, seasonal mobility, lack of a fixed frontier, community diversity, and living transmission.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492"
+          ],
+          "locator": "Exact nitassinan-innu record: imported display name, approximate 1492 to 1500 lifetime, and historical-basemaps provenance. Only exact target feature, decoded geometry, bounds, overlaps, point memberships, and precision metadata.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "n03-kameshtashtan"
+          ],
+          "locator": "Paragraphs 21 to 27, 35 to 47, and heritage value 67 to 74: ancient camps, family landscape, caribou crossings, caches, hearths, foods, travel, and current use.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "n06-point-revenge"
+          ],
+          "locator": "North American Archaeologist 47.3-4, pages 59 to 89; abstract paragraphs 32 to 36 tests ancestry hypotheses and supports a relationship with Beothuk rather than silent assignment to Innu.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "n11-nametau-archaeology"
+          ],
+          "locator": "Paragraphs 112 to 130: Cote-Nord site counts, Sainte-Marguerite River excavations, four-millennia use, passage sites, structures, and diverse stone sources.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "n02-meshikamau"
+          ],
+          "locator": "Paragraphs 20 to 29: 330-kilometre route, active and ancestral camps, portages, births and burials, family gatherings, travel, distant stone, oral history, and continuing use.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "n12-nametau-contact"
+          ],
+          "locator": "Paragraphs 112 to 121: Cabot in 1497, Breton fisheries documented in 1506, Cartier meeting Breton crews in 1534, and cautious inference about later Innu-European contact.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "n04-schwarz"
+          ],
+          "locator": "Archaeology in Newfoundland and Labrador 1997, paragraphs 18 to 55, 60 to 112, and 118 to 148: survey limits, visibility, trade, recent camp inventories, and uncertain precontact components.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500"
+          ],
+          "locator": "Only exact target feature, decoded geometry, bounds, overlaps, point memberships, and precision metadata. Endpoint repaint control showing the exact id absent and multiple replacement labels at representative locations.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-coverage",
+            "atlas-missing",
+            "atlas-card-index",
+            "atlas-overrides"
+          ],
+          "locator": "Civilization index exact record; coverage exact record and observed interval; missing-card exact record; card-index and override exact-id absence checks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "world-1492 exact nitassinan-innu feature; decoded geometry type, component count, ring count, position count, and bounding box.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "world-1492 decoded point-in-polygon tests for named representative coordinates; tests characterize only the stored feature.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "n17-naskapi-profile"
+          ],
+          "locator": "world-1492 representative ownership overlaps; Quebec Naskapi profile, Population and territory, Language, and History sections, current page checked 2026.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-summaries",
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Imported summaries exact target record; decoded 1400 predecessor, 1492 overlaps, and 1500 to 1530 seam labels at representative locations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "n03-kameshtashtan"
+          ],
+          "locator": "Kameshtashtan paragraphs 21 to 27 and heritage value paragraphs 67 to 74, ancient camps, Mushuau Innu association, and ongoing archaeology.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "n11-nametau-archaeology"
+          ],
+          "locator": "Archaeology on Innu Territory paragraphs 114 to 127, site counts, EeDq-1 structures and occupations, passage interpretation, and cultural-influence caveat.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "n05-bibeau"
+          ],
+          "locator": "Bibeau 1996 Cultural and Historical Background and archaeological sequence, Point Revenge description and attribution; read as historiography, not final identification.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "n06-point-revenge"
+          ],
+          "locator": "North American Archaeologist abstract paragraphs 32 to 36, three hypotheses, site and diagnostic-tool method, early-sixteenth-century return, and Beothuk relationship.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "n06-point-revenge"
+          ],
+          "locator": "Article abstract and data statement, pages 59 to 89: contested archaeological-culture relationship and hypothesis testing; interpretive limit stated explicitly by this card.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "n02-meshikamau"
+          ],
+          "locator": "Meshikamau-shipu paragraphs 20 to 29, route length, landforms, camps, portages, named life places, travel modes, and distant lithic sources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "n11-nametau-archaeology"
+          ],
+          "locator": "Archaeology on Innu Territory paragraphs 121 to 127, EeDq-1 portage setting, EkDr-1 stone diversity, and inferred regional relationships.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "n04-schwarz"
+          ],
+          "locator": "Schwarz 1997 paragraphs 39 to 55, outer-coastal bias, interior survey limits, precontact materials, Ramah chert, and travel and trade inference.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "n14-place-names"
+          ],
+          "locator": "Natural Resources Canada page, decades-long research paragraph: 1976 start, participants, floor maps, nearly 1,200 names, and associated histories.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "n14-place-names"
+          ],
+          "locator": "Natural Resources Canada page, opening and closing sections: more than 400 audio files, close to 500 official names, and language revitalization purpose.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "n03-kameshtashtan"
+          ],
+          "locator": "Kameshtashtan paragraphs 26 to 27 and heritage value paragraphs 68 to 71, drives, water crossings, caches, hearths, and site-specific scope.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "n03-kameshtashtan"
+          ],
+          "locator": "Kameshtashtan paragraphs 35 to 37 and 70 to 72, ecotone, animal resources, hunting and fishing, and modern landscape description.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "n22-nametau-food"
+          ],
+          "locator": "Food from the Caribou paragraphs 91 to 103 and site statement at 160 to 175, named practices and current teaching context.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "n22-nametau-food"
+          ],
+          "locator": "Food from the Caribou page navigation paragraphs 105 to 159, seasonal activity sequence and linked foods; regional universality explicitly rejected.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "n07-armitage-book"
+          ],
+          "locator": "The Innu, printed pages 70 to 71, twentieth-century seasonal hunting camps, fishing, small game, berries, and household participation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "n10-nametau-material"
+          ],
+          "locator": "Material Culture paragraphs 112 to 117, archaeological tool list and explicit organic preservation limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "n10-nametau-material"
+          ],
+          "locator": "Material Culture paragraphs 116 to 117, shelter, clothing, snowshoe, canoe, sled, shovel, oar, and trap descriptions with stated late-nineteenth-century visual basis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "n18-nmai-snowshoes"
+          ],
+          "locator": "NMAI object NMAI_142572, Culture/People, Collection History, Place, Catalog Number, Media/Materials, and Techniques fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "n19-nmai-game"
+          ],
+          "locator": "NMAI object NMAI_142797, Culture/People, Collection History, Place, Catalog Number, Object Type, Media/Materials, and Techniques fields.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "n07-armitage-book"
+          ],
+          "locator": "The Innu, printed pages 66 to 67, camp size, site selection, tents, poles, canvas, stoves, water, fuel, fish, and boughs.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "n08-foster-guide"
+          ],
+          "locator": "A Guide to Fostering Innu Culture, printed page 8, Innu family structures, extended family roles, identity, land, and ancestors.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "n08-foster-guide"
+          ],
+          "locator": "A Guide to Fostering Innu Culture, printed page 8, Innu child rearing before village settlement and shared extended-family responsibilities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "n02-meshikamau"
+          ],
+          "locator": "Meshikamau-shipu paragraphs 23 to 29, family gatherings, human connections, resource harvesting, continuing family camps, and colonization impacts.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "n07-armitage-book"
+          ],
+          "locator": "The Innu, printed pages 66 to 73, multi-tent camps, household work, summer gatherings, and explicit modern setting.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "n05-bibeau"
+          ],
+          "locator": "Bibeau 1996 introduction paragraphs 9 to 14, 1967 settlement, government and church initiative, referendum, and Natuashish relocation planning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "n08-foster-guide"
+          ],
+          "locator": "A Guide to Fostering Innu Culture, printed pages 8 to 9, observation, participation, goose-plucking example, and flexible gendered learning.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "n08-foster-guide"
+          ],
+          "locator": "A Guide to Fostering Innu Culture, printed pages 3 to 5, missions, settlement, schooling, elder displacement, and intergenerational trauma.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "n15-education"
+          ],
+          "locator": "MTIE About page, Who we are, Our story, and Mission sections, establishment date, governance, two schools, and educational commitments.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "n20-curriculum"
+          ],
+          "locator": "MTIE Innu curriculum resources page, Innu-aimun activities, beginner lessons, teaching and school words, literacy, spelling, typing, and social-studies sections.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "n14-place-names"
+          ],
+          "locator": "Natural Resources Canada, decades-long place-name research paragraph, participants, floor maps, place categories, and 1976 start date.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "n09-itkc"
+          ],
+          "locator": "ITKC report, printed page 64, section 9 opening, source community, definition, documentation history, and explicit incompleteness.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "n09-itkc"
+          ],
+          "locator": "ITKC report, printed page 65, participant account of knowledge appropriation and reluctance to disclose country medicine.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "n09-itkc"
+          ],
+          "locator": "ITKC report, printed pages 65 to 67, medicine-strength hierarchy, landscape distribution, translation language, and report limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "n16-healing-evaluation"
+          ],
+          "locator": "Impact Evaluation, printed pages 7 to 10 and section 3.1, community-healing definitions, interview evidence, program date, and limitations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "n16-healing-evaluation"
+          ],
+          "locator": "Impact Evaluation, printed pages 8 to 10, program activities, success and challenge summary, maternal and child health, mental health, and community infrastructure.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "n04-schwarz"
+          ],
+          "locator": "Schwarz 1997 site inventory paragraphs 60 to 112, especially Mistassini 2 to 6 and Meshustun; listed features and absence of a named precontact toilet.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "n04-schwarz"
+          ],
+          "locator": "Schwarz 1997 paragraphs 39 to 55 and 118 to 130, survey bias, small sites, organic traces, low visibility, and warning against conclusions from scarcity.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "n05-bibeau"
+          ],
+          "locator": "Bibeau 1996 introduction paragraphs 9 to 12, 1967 settlement, drinking-water scarcity, sewer impossibility, health effects, and relocation decision.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "n16-healing-evaluation"
+          ],
+          "locator": "Impact Evaluation, printed page 7, relocation implementation and resulting wharf, airstrip, clean water, and indoor plumbing.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "n10-nametau-material"
+          ],
+          "locator": "Material Culture paragraphs 114 to 117, survival of stone tools and loss of wood, antler, leather, and most bone; absence statement limited to selected sources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "n13-language-lesson"
+          ],
+          "locator": "Innu Language Lessons, Nitassinan page, heading, Study the following, written phrase, English translation, and East and West dialect controls.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "n13-language-lesson"
+          ],
+          "locator": "Nitassinan lesson lines 11 to 30, current web display and exact translation; historical-evidence absence restricted to the packet’s reviewed sources.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "n12-nametau-contact"
+          ],
+          "locator": "First Contact paragraphs 112 to 116, Cabot voyage, Breton fisheries date, and explicitly probabilistic contact wording.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "n12-nametau-contact"
+          ],
+          "locator": "First Contact paragraphs 113 to 118, 1506 Breton maps, 1534 Cartier encounter, later fleets, and inferred commercial opportunities.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "n21-aip"
+          ],
+          "locator": "Labrador Innu Land Claims Agreement-in-Principle, Chapter 22, Part 22.9, sections 22.9.1 to 22.9.4.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "n15-education"
+          ],
+          "locator": "Endpoint repaint control showing the exact id absent and multiple replacement labels at representative locations. Post-endpoint control showing new Montagnais Innu and Naskapi Innu atlas labels at selected representative points. Current Innu education authority page: established 2009, two community schools, Innu-selected trustees, and education honoring language, land, culture, and community goals.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "nitassinan-innu",
+        "name": "Nitassinan (Innu): atlas homeland layer",
+        "aliases": [
+          "Nitassinan atlas layer, 1492-1500",
+          "Innu homeland layer in the 1492 atlas snapshot"
+        ],
+        "kind": "culture",
+        "region": "North America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/nitassinan-innu.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1492 to 1500 atlas layer for Nitassinan, carefully distinguished from a surveyed border, a historical state, or the lifespan of Innu people.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "nitassinan-innu",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -74.13734137341373,
+            47.741835393828325,
+            -55.65835658356583,
+            56.87999306797708
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
