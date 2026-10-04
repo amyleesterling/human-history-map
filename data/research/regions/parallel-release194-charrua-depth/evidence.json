@@ -1,0 +1,926 @@
+{
+  "version": 1,
+  "region": "South America",
+  "researcher": "Codex parallel release194-charrua research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, name, 1492 to 1500 atlas lifetime, approximate dating flag, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "Imported Charrúa summary audited and superseded where it overgeneralizes mobility, subsistence, and identity."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, imported state kind, approximate dates, and missing-review status."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map researched card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms the exact id was not already indexed as a researched card when the packet began."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no earlier identity override existed for the exact id."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Exact queued record and source lead; the imported Wikipedia lead is not used as substantive evidence."
+    },
+    {
+      "id": "atlas-map-1400",
+      "title": "Human History Map 1400 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Audited predecessor snapshot for the label-appearance seam and representative-point ownership."
+    },
+    {
+      "id": "atlas-map-1492",
+      "title": "Human History Map 1492 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 borders",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Audited endpoint snapshot showing the exact id disappears while broader regional labels continue."
+    },
+    {
+      "id": "c01-mna-day",
+      "title": "Museo Nacional de Antropología, Día de la Nación Charrúa y de la Identidad Indígena",
+      "url": "https://www.mna.gub.uy/mecweb/imprimir.jsp?channel=mecweb&contentid=126929&site=14",
+      "note": "Web section “Arqueología,” paragraphs and bullet list at lines 41 to 52: numerous Indigenous groups, mounds, ceramics, domesticated dogs, beans, squash, maize, and native plants."
+    },
+    {
+      "id": "c35-mna-charrua-fascicle",
+      "title": "Diego Bracco, Nuestro pasado indígena 4: Los charrúas",
+      "url": "https://www.mna.gub.uy/innovaportal/file/127916/1/fasciculo-4-los-charruas.pdf",
+      "note": "Museo Nacional de Antropología fascicle, printed and PDF pages 2 to 7: changing territories and named-group distinctions; riverbanks and possible canoes; horse adaptation by about 1640; missions, conflict, alliances, forced transfers, Salsipuedes, and family separation. Dedicated to the overview."
+    },
+    {
+      "id": "c02-udelar-ethnohistory",
+      "title": "Leonel Cabrera Pérez (coord.), Óscar Marozzi, and Jimena Blasco, Fuentes históricas del contacto europeo con los pueblos originarios: siglos XVI–XIX. Manual didáctico para Etnohistoria de la Cuenca del Plata",
+      "url": "https://www.cse.udelar.edu.uy/wp-content/uploads/2023/07/Manual-dida%CC%81ctico-para-Etnohistoria-Final-1.pdf",
+      "note": "PDF file page 406: Azara reached the Río de la Plata in 1782 and his regional work spans 1781 to 1797; PDF file pages 410 to 412, reproduced-source pages 105 to 108: toldos, meetings, and healer report; PDF file page 432: criticism of Azara’s access and language knowledge."
+    },
+    {
+      "id": "c03-udelar-languages",
+      "title": "Virginia Bertolotti and Magdalena Coll, Retrato lingüístico del Uruguay: un enfoque histórico sobre las lenguas en la región (2014)",
+      "url": "https://udelar.edu.uy/eduper/wp-content/uploads/sites/29/2015/09/retrato.pdf",
+      "note": "PDF file page 101, printed page 101: two Vilardebó manuscripts and their informants; PDF file page 102, printed page 102: November 1842 entry agua hué [we]; PDF file page 103, printed page 103: only a few dozen terms survive and their reliability is low."
+    },
+    {
+      "id": "c04-complejo-charrua",
+      "title": "Olaf Blixen, “Sobre el llamado ‘Complejo Charrúa’,” Boletín del Museo Nacional de Historia Natural 2(28) (1980)",
+      "url": "https://www.mna.gub.uy/innovaportal/file/118664/1/boletin-del-museo-nacional-de-historia-natural-num-28-1980.pdf",
+      "note": "Printed pages 1 to 6: no direct observation for the earliest centuries, inconsistent ethnonyms, and the need to combine documentary, archaeological, linguistic, and biological evidence."
+    },
+    {
+      "id": "c05-bolas",
+      "title": "Erchini and Tobella, Bolas, esferoides y afines: una aproximación en el actual territorio uruguayo",
+      "url": "https://www.mna.gub.uy/innovaportal/file/124857/1/erchini-y-tobella.pdf",
+      "note": "Printed pages 75 to 79 and Table 2: 290 objects from 13 departments, possible hunting and fishing uses, manufacturing sequence, poor provenience, and long chronology that prevents easy ethnic assignment."
+    },
+    {
+      "id": "c06-mna-ceramic",
+      "title": "Museo Nacional de Antropología, Patrimonio Arqueológico: Olla cerámica",
+      "url": "https://www.mna.gub.uy/innovaportal/file/124306/1/patrimonio-arqueologico---ceramica.pdf",
+      "note": "One-page teaching sheet: 18-centimetre coiled pot, soot, residue study, at least 3,000-year regional history, and domestic, ritual, funerary, fish, plant-storage, and fermentation uses."
+    },
+    {
+      "id": "c07-mna-pendant",
+      "title": "Museo Nacional de Antropología, Probable Colgante lítico",
+      "url": "https://www.mna.gub.uy/innovaportal/file/124306/1/patrimonio-arqueologico---colgante-litico.pdf",
+      "note": "One-page teaching sheet: polished slate object from Canelones, traditional pendant interpretation, unknown original function, and sparse regional comparanda."
+    },
+    {
+      "id": "c08-mna-beads",
+      "title": "Museo Nacional de Antropología, Cuentas en valvas de moluscos",
+      "url": "https://www.mna.gub.uy/innovaportal/file/124306/1/patrimonio-arqueologico---cuentas-malacologicas.pdf",
+      "note": "One-page teaching sheet: shell beads from Los Cardos, fracture, percussion, abrasion, drilling, and cautious necklace or clothing interpretation."
+    },
+    {
+      "id": "c10-mna-bone-awl",
+      "title": "Museo Nacional de Antropología, “Punzón” elaborado en hueso de Venado de Campo",
+      "url": "https://www.mna.gub.uy/innovaportal/file/124306/1/patrimonio-arqueologico---punta-osea.pdf",
+      "note": "One-page teaching sheet: deer-bone awl from Cañada Saldaña, fracture, sawing, abrasion and possible heat hardening, with hide, basketry, and pottery uses."
+    },
+    {
+      "id": "c11-mna-urn",
+      "title": "Museo Nacional de Antropología, Patrimonio Arqueológico: Urna funeraria",
+      "url": "https://www.mna.gub.uy/innovaportal/file/124306/1/patrimonio-arqueologico---urna-funeraria.pdf",
+      "note": "One-page teaching sheet: Isla Larga urn, adult burial, site chronology through the seventeenth century, Tupí-Guaraní or Guaranized attribution, glass beads, and interethnic contact."
+    },
+    {
+      "id": "c12-uruguay-sites",
+      "title": "Suárez and colleagues, New sites and challenges in prehistoric archaeology of Uruguay: recurrent occupations in caves, rockshelters and earthen mounds",
+      "url": "https://doi.org/10.15184/aqy.2024.95",
+      "note": "PDF and journal pages 1 to 2, “Study area and methodology,” and pages 6 to 9, “Results” and “Discussion”: the stratified Tamanduá sequence, lithics, ceramics, burned palm endocarps, historical and roughly 3,000-year-old mound-builder contexts, probable later Guaraní material, and 173 nearby mounds."
+    },
+    {
+      "id": "c13-cerritos-food",
+      "title": "Admiraal and colleagues, Feasting on fish. Specialized function of pre-colonial pottery of the Cerritos mound builders of southern Brazil",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11798503/",
+      "note": "PDF and journal pages 2 to 3, archaeological background: scarce and fragmentary human remains limit demographic, dietary, and health reconstruction; pages 7 to 10, “Discussion”: fish and plant residues, with fermentation and seasonal aggregation retained as qualified interpretations."
+    },
+    {
+      "id": "c14-mound-villages",
+      "title": "Gazzán and colleagues, From Mounds to Villages: The Social Construction of the Landscape during the Middle and Late Holocene in the India Muerta Lowlands, Uruguay",
+      "url": "https://www.mdpi.com/2073-445X/11/3/441",
+      "note": "PDF and journal pages 2 to 3, section 1.1: housing and village models, funerary and ceremonial roles, cultivation, mobility, and competing interpretations; pages 13 to 16, section 3.4 plus “Discussion” and “Conclusions”: low flood risk, prominence, visibility, and water-management structures."
+    },
+    {
+      "id": "c15-parana-mounds",
+      "title": "Bonomo, Politis, and Gianotti, Montículos, jerarquía social y horticultura en las sociedades indígenas del delta del río Paraná",
+      "url": "https://doi.org/10.7183/1045-6635.22.3.297",
+      "note": "Peer-reviewed article abstract and indexed text: Upper Paraná Delta mounds, houses, burials, food evidence, horticulture, and debated hierarchy. Regional evidence only."
+    },
+    {
+      "id": "c16-parana-plants",
+      "title": "Silvia Elena Cornero, Lucía Rangone, and Osvaldo Di Sapio, “Identificación de microestructuras y análisis arqueobotánico en sitios del Holoceno tardío de la llanura aluvial del Paraná medio,” Dominguezia 31(1) (2015), 15–21",
+      "url": "https://ojs.dominguezia.org/index.php/Dominguezia/article/view/2015%2031%281%29-2",
+      "note": "Abstract and printed pages 15 to 21: microremains from adult dental calculus, sediments beneath primary burials, and vessel residues include maize, bean, and squash; the paper situates these finds alongside regional hunting and fishing evidence."
+    },
+    {
+      "id": "c17-mound-sky",
+      "title": "Gianotti and colleagues, Knowledge of the Sky among Indigenous Peoples of the South American Lowlands—First Archaeoastronomical Analyses of Orientations at Mounds in Uruguay",
+      "url": "https://www.mdpi.com/2073-445X/12/4/805",
+      "note": "PDF and journal pages 5 to 12, sections 2 and 3: five mound sets, horizon and axis measurements, roughly 100 observations, and statistical results; pages 17 to 18, “Conclusions”: preliminary relationships to the Southern Cross, Milky Way, and full Moon, with sample limits."
+    },
+    {
+      "id": "c18-mortuary-pottery",
+      "title": "Loponte and colleagues, Mortuary pottery and sacred landscapes in complex hunter-gatherers in the Paraná Basin, South America",
+      "url": "https://doi.org/10.1017/S0959774319000477",
+      "note": "Journal pages 21 to 22, Abstract and “The tubular pottery,” and pages 34 to 38, “Discussion” and “Conclusions”: structural, microscopic, chemical, and residue evidence weighs against domestic use and supports a qualified mortuary interpretation."
+    },
+    {
+      "id": "c19-ancient-genomes",
+      "title": "The genomic prehistory of the Indigenous peoples of Uruguay",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9802099/",
+      "note": "Article “Introduction,” final two paragraphs and Table 1: two CH2D01-A genomes dated about 1,450 and 668 radiocarbon years BP and caution about historical ethnic labels; “Methods,” subsection “Archaeology and samples”: primary and secondary burials of at least 21 individuals; “Discussion,” final paragraph: limits and needed comparisons."
+    },
+    {
+      "id": "c20-modern-genomes",
+      "title": "Indigenous Ancestry and Admixture in the Uruguayan Population",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8495321/",
+      "note": "Article pages 2 to 3, “Introduction” and “Samples and DNA extraction”: ten sequenced volunteers, self-declared ancestries, and the quoted “Charrúa” convention; pages 10 to 13, “Discussion”: small samples and absent Chaná, Minuán, and other adjacent reference groups limit historical identification."
+    },
+    {
+      "id": "c22-salsipuedes",
+      "title": "Institución Nacional de Derechos Humanos, Paso de Salsipuedes, territorio de la masacre Charrúa",
+      "url": "https://www.gub.uy/institucion-nacional-derechos-humanos-uruguay/comision-nacional-honoraria-sitios-memoria/sitios-memoria/paso-salsipuedes-territorio-masacre",
+      "note": "Official memory-site account, 15 December 2021: 1831 state massacre, displacement, enslavement, four captives sent to Paris, community petitioners, and 2021 site declaration. Dedicated to ending."
+    },
+    {
+      "id": "c23-law-18589",
+      "title": "Presidencia Uruguay, Ley N° 18.589 de fecha 18/09/2009",
+      "url": "https://www.gub.uy/presidencia/institucional/normativa/ley-n-18589-fecha-18092009",
+      "note": "Official law record declaring every 11 April the Day of the Charrúa Nation and Indigenous Identity."
+    },
+    {
+      "id": "c24-memory-struggle",
+      "title": "José Ignacio Gomeza Gómez, Memorias en disputa. Usos, relatos y debates en torno a las acciones de Estado contra el pueblo charrúa en Uruguay",
+      "url": "https://ojs.fhce.edu.uy/index.php/claves/article/download/2393/3366",
+      "note": "Journal pages 4 to 6: family separation and imposed servitude after state violence; pages 17 to 21, especially 20 to 21: organizations, memories restricted to private settings, transmission in family settings, associations, and networks of affective or political sociability, followed by entry into public debate."
+    },
+    {
+      "id": "c25-conacha",
+      "title": "Consejo de la Nación Charrúa, official site",
+      "url": "https://conacha.com/",
+      "note": "Community-controlled source checked 3 October 2026: organization created in 2005, multiple Uruguayan communities, living-community slogans, twentieth anniversary, and itinerant intercultural school announcement. Dedicated chiefly to living continuity."
+    },
+    {
+      "id": "c26-naybu",
+      "title": "Argentina, Instituto Nacional de Asuntos Indígenas, Resolución 881 / 2013, COMUNIDAD NAYBU",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-881-2013-228480",
+      "note": "Official page heading “COMUNIDAD NAYBU,” Article 1, and record dates: legal personality for the Naybu community of the Charrúa people in rural Colonia Federal, Entre Ríos; sanctioned 9 October 2013 and published 3 April 2014."
+    },
+    {
+      "id": "c27-indigenous-women",
+      "title": "Institución Nacional de Derechos Humanos, Día Internacional de la Mujer Indígena",
+      "url": "https://www.gub.uy/institucion-nacional-derechos-humanos-uruguay/comunicacion/noticias/dia-internacional-mujer-indigena",
+      "note": "Official 4 September 2020 page: 2011 ancestry figures, named organizations, women’s cultural and socio-educational work, and access concerns. Figures are Indigenous, not specifically Charrúa."
+    },
+    {
+      "id": "c28-indigenous-culture",
+      "title": "Institución Nacional de Derechos Humanos, Identidad y cultura indígena en Uruguay",
+      "url": "https://www.gub.uy/institucion-nacional-derechos-humanos-uruguay/comunicacion/noticias/identidad-cultura-indigena-uruguay",
+      "note": "Official 24 April 2025 report: Charrúa and Chaná film forum, Basquadé Inchalá participation, collaborative creative process, and planned circulation in educational centers."
+    },
+    {
+      "id": "c29-health-territory",
+      "title": "Emilia Martínez Rojo et al., Salud y Territorio en la zona norte de Rocha, Uruguay",
+      "url": "https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/45325/1/Cartilla_Salud%20y%20Territorio%20en%20la%20zona%20norte%20de%20Rocha.pdf",
+      "note": "PDF section “2. Bañados del Este de Rocha: una mirada histórica,” subsections “Cerritos de Indios” and “Los cerritos de indios en India Muerta,” especially paragraphs beginning “Dentro de los sitios analizados...” and “Se trata de una forma...”: nine García Ricci mounds, age and height ranges, earth architecture, nearby and burned soil, animal and fish bones, dog remains, pottery, stone-tool debris, and hearth remains."
+    },
+    {
+      "id": "c30-archaeology-panels",
+      "title": "Museo Nacional de Antropología, Paneles Exposición Educativa Arqueología",
+      "url": "https://www.mna.gub.uy/innovaportal/file/128099/1/paneles-exposicion-educativa-arqueologia.pdf",
+      "note": "Panels headed “TECNOLOGÍA CERÁMICA,” especially “EL HALLAZGO DE CERÁMICA EN SITIOS PREHISTÓRICOS DEL URUGUAY Y LA INFORMACIÓN QUE NOS BRINDA” and “POSIBLES USOS DE LA CERÁMICA”: more than 3,000 years of pottery, manufacture, domestic soot, symbolic forms, and funerary urns; the panels do not attribute these examples to named Charrúa people."
+    },
+    {
+      "id": "c31-paleoethnobotany",
+      "title": "Diego Suárez, Arqueología experimental y Paleoetnobotánica de los constructores de cerritos del Este del Uruguay: una aproximación a partir del registro macrobotánico del sitio CH2D01",
+      "url": "https://www.colibri.udelar.edu.uy/items/5875a48c-ec13-4852-9ade-14196f6504e2",
+      "note": "Udelar repository abstract, labelled “dc.description.abstract”: CH2D01 late-Holocene chronology, flotation and experimental methods, 840 plant charcoals, identified plant taxa, the role of Butiá and Pindó palms, and wood fuel."
+    },
+    {
+      "id": "c32-earth-ovens",
+      "title": "Bracco and colleagues, El fuego, los hornos de tierra y la elevación de los montículos de la cuenca de la Laguna Merín",
+      "url": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/39028",
+      "note": "Udelar repository abstract, lines 14 to 33, for the 2021 peer-reviewed study: repeated earth ovens, possible plant processing, and secular debris accumulation as a mound-formation hypothesis."
+    },
+    {
+      "id": "c33-archival-limits",
+      "title": "Erbig and Latini, Across Archival Limits: Colonial Records, Changing Ethnonyms, and Geographies of Knowledge",
+      "url": "https://www.jeffreyerbig.com/uploads/2/0/4/0/20408503/_2019__erbig_jr._jeffrey_a.___sergio_latini_-_across_archival_limits.pdf",
+      "note": "PDF pages 1 and 11 to 14, journal pages 249 and 259 to 262: colonial archives are geographically partial; ethnonyms shifted; Charrúa first appears in a 1527 account; catchall labels obscured distinct tolderías and kin networks."
+    },
+    {
+      "id": "c34-language-history",
+      "title": "Juan Justino da Rosa, Historiografía lingüística del Río de la Plata: las lenguas indígenas de la Banda Oriental",
+      "url": "https://www.scielo.cl/pdf/bfilol/v48n2/art_07.pdf",
+      "note": "PDF pages 1 to 2 and 5 to 9, journal pages 131 to 140: sparse linguistic evidence, uncertain classifications, conflation of language, ethnicity, and nation, and the late scholarly history of Charrúa word lists."
+    }
+  ],
+  "entities": [
+    {
+      "id": "charrua",
+      "card": "data/cards/charrua.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-coverage",
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "c35-mna-charrua-fascicle"
+          ],
+          "locator": "Exact imported id, name, 1492 to 1500 atlas lifetime, approximate dating flag, and historical-basemap provenance. One observed interval, one border file, imported state kind, approximate dates, and missing-review status. Audited predecessor snapshot for the label-appearance seam and representative-point ownership. Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence. Audited endpoint snapshot showing the exact id disappears while broader regional labels continue. Museo Nacional de Antropología fascicle, printed and PDF pages 2 to 7: changing territories and named-group distinctions; riverbanks and possible canoes; horse adaptation by about 1640; missions, conflict, alliances, forced transfers, Salsipuedes, and family separation. Dedicated to the overview.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-index"
+          ],
+          "locator": "Audited predecessor snapshot for the label-appearance seam and representative-point ownership. Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence. Exact imported id, name, 1492 to 1500 atlas lifetime, approximate dating flag, and historical-basemap provenance.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "c04-complejo-charrua"
+          ],
+          "locator": "Printed pages 1 to 6: no direct observation for the earliest centuries, inconsistent ethnonyms, and the need to combine documentary, archaeological, linguistic, and biological evidence.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "c12-uruguay-sites"
+          ],
+          "locator": "PDF and journal pages 1 to 2, “Study area and methodology,” and pages 6 to 9, “Results” and “Discussion”: the stratified Tamanduá sequence, lithics, ceramics, burned palm endocarps, historical and roughly 3,000-year-old mound-builder contexts, probable later Guaraní material, and 173 nearby mounds.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "c33-archival-limits"
+          ],
+          "locator": "PDF pages 1 and 11 to 14, journal pages 249 and 259 to 262: colonial archives are geographically partial; ethnonyms shifted; Charrúa first appears in a 1527 account; catchall labels obscured distinct tolderías and kin networks.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "c34-language-history"
+          ],
+          "locator": "PDF pages 1 to 2 and 5 to 9, journal pages 131 to 140: sparse linguistic evidence, uncertain classifications, conflation of language, ethnicity, and nation, and the late scholarly history of Charrúa word lists.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "c19-ancient-genomes"
+          ],
+          "locator": "Article “Introduction,” final two paragraphs and Table 1: two CH2D01-A genomes dated about 1,450 and 668 radiocarbon years BP and caution about historical ethnic labels; “Methods,” subsection “Archaeology and samples”: primary and secondary burials of at least 21 individuals; “Discussion,” final paragraph: limits and needed comparisons.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500"
+          ],
+          "locator": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence. Audited endpoint snapshot showing the exact id disappears while broader regional labels continue.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence.",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-map-1500"
+          ],
+          "locator": "Audited predecessor snapshot for the label-appearance seam and representative-point ownership. | Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence. | Audited endpoint snapshot showing the exact id disappears while broader regional labels continue.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-coverage",
+            "c04-complejo-charrua"
+          ],
+          "locator": "One observed interval, one border file, imported state kind, approximate dates, and missing-review status. | Printed pages 1 to 6: no direct observation for the earliest centuries, inconsistent ethnonyms, and the need to combine documentary, archaeological, linguistic, and biological evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "c33-archival-limits",
+            "atlas-map-1492"
+          ],
+          "locator": "PDF pages 1 and 11 to 14, journal pages 249 and 259 to 262: colonial archives are geographically partial; ethnonyms shifted; Charrúa first appears in a 1527 account; catchall labels obscured distinct tolderías and kin networks. | Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "c04-complejo-charrua"
+          ],
+          "locator": "Printed pages 1 to 6: no direct observation for the earliest centuries, inconsistent ethnonyms, and the need to combine documentary, archaeological, linguistic, and biological evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "c01-mna-day"
+          ],
+          "locator": "Web section “Arqueología,” paragraphs and bullet list at lines 41 to 52: numerous Indigenous groups, mounds, ceramics, domesticated dogs, beans, squash, maize, and native plants.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "c19-ancient-genomes"
+          ],
+          "locator": "Article “Introduction,” final two paragraphs and Table 1: two CH2D01-A genomes dated about 1,450 and 668 radiocarbon years BP and caution about historical ethnic labels; “Methods,” subsection “Archaeology and samples”: primary and secondary burials of at least 21 individuals; “Discussion,” final paragraph: limits and needed comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "c20-modern-genomes"
+          ],
+          "locator": "Article pages 2 to 3, “Introduction” and “Samples and DNA extraction”: ten sequenced volunteers, self-declared ancestries, and the quoted “Charrúa” convention; pages 10 to 13, “Discussion”: small samples and absent Chaná, Minuán, and other adjacent reference groups limit historical identification.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "c12-uruguay-sites"
+          ],
+          "locator": "PDF and journal pages 1 to 2, “Study area and methodology,” and pages 6 to 9, “Results” and “Discussion”: the stratified Tamanduá sequence, lithics, ceramics, burned palm endocarps, historical and roughly 3,000-year-old mound-builder contexts, probable later Guaraní material, and 173 nearby mounds.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "c29-health-territory"
+          ],
+          "locator": "PDF section “2. Bañados del Este de Rocha: una mirada histórica,” subsections “Cerritos de Indios” and “Los cerritos de indios en India Muerta,” especially paragraphs beginning “Dentro de los sitios analizados...” and “Se trata de una forma...”: nine García Ricci mounds, age and height ranges, earth architecture, nearby and burned soil, animal and fish bones, dog remains, pottery, stone-tool debris, and hearth remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "c15-parana-mounds"
+          ],
+          "locator": "Peer-reviewed article abstract and indexed text: Upper Paraná Delta mounds, houses, burials, food evidence, horticulture, and debated hierarchy. Regional evidence only.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "c29-health-territory"
+          ],
+          "locator": "PDF section “2. Bañados del Este de Rocha: una mirada histórica,” subsections “Cerritos de Indios” and “Los cerritos de indios en India Muerta,” especially paragraphs beginning “Dentro de los sitios analizados...” and “Se trata de una forma...”: nine García Ricci mounds, age and height ranges, earth architecture, nearby and burned soil, animal and fish bones, dog remains, pottery, stone-tool debris, and hearth remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "c02-udelar-ethnohistory"
+          ],
+          "locator": "PDF file page 406: Azara reached the Río de la Plata in 1782 and his regional work spans 1781 to 1797; PDF file pages 410 to 412, reproduced-source pages 105 to 108: toldos, meetings, and healer report; PDF file page 432: criticism of Azara’s access and language knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "c06-mna-ceramic"
+          ],
+          "locator": "One-page teaching sheet: 18-centimetre coiled pot, soot, residue study, at least 3,000-year regional history, and domestic, ritual, funerary, fish, plant-storage, and fermentation uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "c16-parana-plants"
+          ],
+          "locator": "Abstract and printed pages 15 to 21: microremains from adult dental calculus, sediments beneath primary burials, and vessel residues include maize, bean, and squash; the paper situates these finds alongside regional hunting and fishing evidence.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "c31-paleoethnobotany"
+          ],
+          "locator": "Udelar repository abstract, labelled “dc.description.abstract”: CH2D01 late-Holocene chronology, flotation and experimental methods, 840 plant charcoals, identified plant taxa, the role of Butiá and Pindó palms, and wood fuel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "c06-mna-ceramic"
+          ],
+          "locator": "One-page teaching sheet: 18-centimetre coiled pot, soot, residue study, at least 3,000-year regional history, and domestic, ritual, funerary, fish, plant-storage, and fermentation uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "c29-health-territory",
+            "c31-paleoethnobotany"
+          ],
+          "locator": "PDF section “2. Bañados del Este de Rocha: una mirada histórica,” subsections “Cerritos de Indios” and “Los cerritos de indios en India Muerta,” especially paragraphs beginning “Dentro de los sitios analizados...” and “Se trata de una forma...”: nine García Ricci mounds, age and height ranges, earth architecture, nearby and burned soil, animal and fish bones, dog remains, pottery, stone-tool debris, and hearth remains. | Udelar repository abstract, labelled “dc.description.abstract”: CH2D01 late-Holocene chronology, flotation and experimental methods, 840 plant charcoals, identified plant taxa, the role of Butiá and Pindó palms, and wood fuel.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "c05-bolas"
+          ],
+          "locator": "Printed pages 75 to 79 and Table 2: 290 objects from 13 departments, possible hunting and fishing uses, manufacturing sequence, poor provenience, and long chronology that prevents easy ethnic assignment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "c05-bolas"
+          ],
+          "locator": "Printed pages 75 to 79 and Table 2: 290 objects from 13 departments, possible hunting and fishing uses, manufacturing sequence, poor provenience, and long chronology that prevents easy ethnic assignment.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "c10-mna-bone-awl"
+          ],
+          "locator": "One-page teaching sheet: deer-bone awl from Cañada Saldaña, fracture, sawing, abrasion and possible heat hardening, with hide, basketry, and pottery uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "c08-mna-beads"
+          ],
+          "locator": "One-page teaching sheet: shell beads from Los Cardos, fracture, percussion, abrasion, drilling, and cautious necklace or clothing interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "c07-mna-pendant"
+          ],
+          "locator": "One-page teaching sheet: polished slate object from Canelones, traditional pendant interpretation, unknown original function, and sparse regional comparanda.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "c02-udelar-ethnohistory"
+          ],
+          "locator": "PDF file page 406: Azara reached the Río de la Plata in 1782 and his regional work spans 1781 to 1797; PDF file pages 410 to 412, reproduced-source pages 105 to 108: toldos, meetings, and healer report; PDF file page 432: criticism of Azara’s access and language knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "c24-memory-struggle"
+          ],
+          "locator": "Journal pages 4 to 6: family separation and imposed servitude after state violence; pages 17 to 21, especially 20 to 21: organizations, memories restricted to private settings, transmission in family settings, associations, and networks of affective or political sociability, followed by entry into public debate.",
+          "dateScope": {
+            "year": 1831
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "c24-memory-struggle"
+          ],
+          "locator": "Journal pages 4 to 6: family separation and imposed servitude after state violence; pages 17 to 21, especially 20 to 21: organizations, memories restricted to private settings, transmission in family settings, associations, and networks of affective or political sociability, followed by entry into public debate.",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "c27-indigenous-women"
+          ],
+          "locator": "Official 4 September 2020 page: 2011 ancestry figures, named organizations, women’s cultural and socio-educational work, and access concerns. Figures are Indigenous, not specifically Charrúa.",
+          "dateScope": {
+            "year": 2020
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "c33-archival-limits"
+          ],
+          "locator": "PDF pages 1 and 11 to 14, journal pages 249 and 259 to 262: colonial archives are geographically partial; ethnonyms shifted; Charrúa first appears in a 1527 account; catchall labels obscured distinct tolderías and kin networks.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "c03-udelar-languages"
+          ],
+          "locator": "PDF file page 101, printed page 101: two Vilardebó manuscripts and their informants; PDF file page 102, printed page 102: November 1842 entry agua hué [we]; PDF file page 103, printed page 103: only a few dozen terms survive and their reliability is low.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "c03-udelar-languages"
+          ],
+          "locator": "PDF file page 101, printed page 101: two Vilardebó manuscripts and their informants; PDF file page 102, printed page 102: November 1842 entry agua hué [we]; PDF file page 103, printed page 103: only a few dozen terms survive and their reliability is low.",
+          "dateScope": {
+            "year": 1842
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "c03-udelar-languages"
+          ],
+          "locator": "PDF file page 101, printed page 101: two Vilardebó manuscripts and their informants; PDF file page 102, printed page 102: November 1842 entry agua hué [we]; PDF file page 103, printed page 103: only a few dozen terms survive and their reliability is low.",
+          "dateScope": {
+            "year": 1937
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "c28-indigenous-culture"
+          ],
+          "locator": "Official 24 April 2025 report: Charrúa and Chaná film forum, Basquadé Inchalá participation, collaborative creative process, and planned circulation in educational centers.",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "c27-indigenous-women"
+          ],
+          "locator": "Official 4 September 2020 page: 2011 ancestry figures, named organizations, women’s cultural and socio-educational work, and access concerns. Figures are Indigenous, not specifically Charrúa.",
+          "dateScope": {
+            "year": 2020
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "c02-udelar-ethnohistory"
+          ],
+          "locator": "PDF file page 406: Azara reached the Río de la Plata in 1782 and his regional work spans 1781 to 1797; PDF file pages 410 to 412, reproduced-source pages 105 to 108: toldos, meetings, and healer report; PDF file page 432: criticism of Azara’s access and language knowledge.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "c19-ancient-genomes"
+          ],
+          "locator": "Article “Introduction,” final two paragraphs and Table 1: two CH2D01-A genomes dated about 1,450 and 668 radiocarbon years BP and caution about historical ethnic labels; “Methods,” subsection “Archaeology and samples”: primary and secondary burials of at least 21 individuals; “Discussion,” final paragraph: limits and needed comparisons.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "c13-cerritos-food"
+          ],
+          "locator": "PDF and journal pages 2 to 3, archaeological background: scarce and fragmentary human remains limit demographic, dietary, and health reconstruction; pages 7 to 10, “Discussion”: fish and plant residues, with fermentation and seasonal aggregation retained as qualified interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "c20-modern-genomes"
+          ],
+          "locator": "Article pages 2 to 3, “Introduction” and “Samples and DNA extraction”: ten sequenced volunteers, self-declared ancestries, and the quoted “Charrúa” convention; pages 10 to 13, “Discussion”: small samples and absent Chaná, Minuán, and other adjacent reference groups limit historical identification.",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "c13-cerritos-food"
+          ],
+          "locator": "PDF and journal pages 2 to 3, archaeological background: scarce and fragmentary human remains limit demographic, dietary, and health reconstruction; pages 7 to 10, “Discussion”: fish and plant residues, with fermentation and seasonal aggregation retained as qualified interpretations.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "c14-mound-villages"
+          ],
+          "locator": "PDF and journal pages 2 to 3, section 1.1: housing and village models, funerary and ceremonial roles, cultivation, mobility, and competing interpretations; pages 13 to 16, section 3.4 plus “Discussion” and “Conclusions”: low flood risk, prominence, visibility, and water-management structures.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "c32-earth-ovens"
+          ],
+          "locator": "Udelar repository abstract, lines 14 to 33, for the 2021 peer-reviewed study: repeated earth ovens, possible plant processing, and secular debris accumulation as a mound-formation hypothesis.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "c29-health-territory"
+          ],
+          "locator": "PDF section “2. Bañados del Este de Rocha: una mirada histórica,” subsections “Cerritos de Indios” and “Los cerritos de indios en India Muerta,” especially paragraphs beginning “Dentro de los sitios analizados...” and “Se trata de una forma...”: nine García Ricci mounds, age and height ranges, earth architecture, nearby and burned soil, animal and fish bones, dog remains, pottery, stone-tool debris, and hearth remains.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "c06-mna-ceramic"
+          ],
+          "locator": "One-page teaching sheet: 18-centimetre coiled pot, soot, residue study, at least 3,000-year regional history, and domestic, ritual, funerary, fish, plant-storage, and fermentation uses.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "c30-archaeology-panels"
+          ],
+          "locator": "Panels headed “TECNOLOGÍA CERÁMICA,” especially “EL HALLAZGO DE CERÁMICA EN SITIOS PREHISTÓRICOS DEL URUGUAY Y LA INFORMACIÓN QUE NOS BRINDA” and “POSIBLES USOS DE LA CERÁMICA”: more than 3,000 years of pottery, manufacture, domestic soot, symbolic forms, and funerary urns; the panels do not attribute these examples to named Charrúa people.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "c17-mound-sky"
+          ],
+          "locator": "PDF and journal pages 5 to 12, sections 2 and 3: five mound sets, horizon and axis measurements, roughly 100 observations, and statistical results; pages 17 to 18, “Conclusions”: preliminary relationships to the Southern Cross, Milky Way, and full Moon, with sample limits.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "c18-mortuary-pottery"
+          ],
+          "locator": "Journal pages 21 to 22, Abstract and “The tubular pottery,” and pages 34 to 38, “Discussion” and “Conclusions”: structural, microscopic, chemical, and residue evidence weighs against domestic use and supports a qualified mortuary interpretation.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "c11-mna-urn"
+          ],
+          "locator": "One-page teaching sheet: Isla Larga urn, adult burial, site chronology through the seventeenth century, Tupí-Guaraní or Guaranized attribution, glass beads, and interethnic contact.",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "c23-law-18589"
+          ],
+          "locator": "Official law record declaring every 11 April the Day of the Charrúa Nation and Indigenous Identity.",
+          "dateScope": {
+            "year": 2009
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "c26-naybu"
+          ],
+          "locator": "Official page heading “COMUNIDAD NAYBU,” Article 1, and record dates: legal personality for the Naybu community of the Charrúa people in rural Colonia Federal, Entre Ríos; sanctioned 9 October 2013 and published 3 April 2014.",
+          "dateScope": {
+            "year": 2013
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "c22-salsipuedes",
+            "c25-conacha"
+          ],
+          "locator": "Exact target feature, TopoJSON geometry, interval properties, representative-point overlap, and shared-arc evidence. Audited endpoint snapshot showing the exact id disappears while broader regional labels continue. Official memory-site account, 15 December 2021: 1831 state massacre, displacement, enslavement, four captives sent to Paris, community petitioners, and 2021 site declaration. Dedicated to ending. Community-controlled source checked 3 October 2026: organization created in 2005, multiple Uruguayan communities, living-community slogans, twentieth anniversary, and itinerant intercultural school announcement. Dedicated chiefly to living continuity.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "charrua",
+        "name": "Charrúa people (approximate atlas umbrella)",
+        "aliases": [
+          "Charrúa",
+          "Charrua"
+        ],
+        "kind": "culture",
+        "region": "South America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/charrua.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1492 to 1500 atlas umbrella paired with carefully bounded regional archaeology, later Charrúa documentation, and living community continuity.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "charrua",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -62.026820268202684,
+            -35.014481781999066,
+            -52.29952299522995,
+            -28.926063265062435
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
