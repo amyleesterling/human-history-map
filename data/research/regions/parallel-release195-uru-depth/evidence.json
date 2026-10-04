@@ -1,0 +1,985 @@
+{
+  "version": 1,
+  "region": "South America",
+  "researcher": "Codex parallel release195-uru research, integrated by Codex",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "atlas-index",
+      "title": "Human History Map civilization index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/civilizations-hb.json",
+      "note": "Exact imported id, label, approximate 1492 to 1500 coverage, and historical-basemap provenance."
+    },
+    {
+      "id": "atlas-summary",
+      "title": "Human History Map imported summaries",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/summaries-hb.json",
+      "note": "The imported Kerala dhow summary and Uru boat namesake URL are audited and rejected."
+    },
+    {
+      "id": "atlas-coverage",
+      "title": "Human History Map research coverage registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/coverage.json",
+      "note": "One observed interval, one border file, default state kind, approximate dates, and missing review."
+    },
+    {
+      "id": "atlas-card-index",
+      "title": "Human History Map researched card index",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/cards/index.json",
+      "note": "Confirms the exact id was not indexed as a researched card when work began."
+    },
+    {
+      "id": "atlas-overrides",
+      "title": "Human History Map researched overrides",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/researched-overrides.json",
+      "note": "Confirms no researched identity override existed for this exact id."
+    },
+    {
+      "id": "atlas-missing",
+      "title": "Human History Map missing-card registry",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/research/missing-cards.json",
+      "note": "Queued record exposes the boat-summary mismatch and unresolved source lead."
+    },
+    {
+      "id": "atlas-map-1400",
+      "title": "Human History Map 1400 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1400.json",
+      "note": "Decoded geometry, simultaneous owners, overlap, shared arcs, and 1400 seam control."
+    },
+    {
+      "id": "atlas-map-1492",
+      "title": "Human History Map 1492 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1492.json",
+      "note": "Decoded geometry, simultaneous owners, overlap, shared arcs, and 1492 seam control."
+    },
+    {
+      "id": "atlas-map-1500",
+      "title": "Human History Map 1500 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1500.json",
+      "note": "Decoded geometry, simultaneous owners, overlap, shared arcs, and 1500 seam control."
+    },
+    {
+      "id": "atlas-map-1530",
+      "title": "Human History Map 1530 border snapshot",
+      "url": "https://github.com/amyleesterling/human-history-map/blob/main/data/hb/borders/world-1530.json",
+      "note": "Decoded geometry, simultaneous owners, overlap, shared arcs, and 1530 seam control."
+    },
+    {
+      "id": "u01-bdpi-uro",
+      "title": "Peru Ministry of Culture, BDPI: Uro",
+      "url": "https://bdpi.cultura.gob.pe/pueblos/uro",
+      "note": "Introduction and history distinguish the living Peruvian Uro people, Lake Titicaca presence, Inca-era tribute synthesis, later records, language loss, family islands, tourism, totora knowledge, and continuity."
+    },
+    {
+      "id": "u02-bdpi-ficha",
+      "title": "Peru Ministry of Culture, Ficha Uro",
+      "url": "https://bdpi.cultura.gob.pe/sites/default/files/archivos/pueblos_indigenas/Ficha%20Uro.pdf",
+      "note": "Pages 1 to 5 summarize official identity, history, languages, family islands, fishing, tourism, totora engineering, and source limitations."
+    },
+    {
+      "id": "u03-totora-resolution",
+      "title": "Peru Ministry of Culture, Resolución Viceministerial 005-2013-VMPCIC-MC",
+      "url": "https://repositorio.cultura.gob.pe/backend/api/core/bitstreams/eb5c3a90-7e4f-4d5f-83d9-b79637cb49a0/content",
+      "note": "Pages 2 to 5 describe qilli blocks, reed layers, maintenance, houses, boats, tools, drying, sails, and the official heritage declaration."
+    },
+    {
+      "id": "u04-law-30729",
+      "title": "Congress of Peru, Law 30729",
+      "url": "https://www.leyes.congreso.gob.pe/Documentos/2016_2021/ADLP/Normas_Legales/30729-LEY.pdf",
+      "note": "Single-page 2018 law declares protection of the Uros and Uros Chulluni, especially cultural and language recovery, to be of national interest and public necessity."
+    },
+    {
+      "id": "u05-recognition",
+      "title": "Peru Ministry of Culture, State recognition of the Uros",
+      "url": "https://www.gob.pe/institucion/cultura/noticias/5004-presidencia-de-la-republica-y-ministerio-de-cultura-reconocen-a-los-uros-como-pueblo-originario-para-proteger-sus-tradiciones-y-su-lengua",
+      "note": "9 March 2018 recognition, community authorities, Qhas Qut Suñis self-presentation, cultural and language recovery, and modern wastewater planning."
+    },
+    {
+      "id": "u06-revival-course",
+      "title": "Peru Ministry of Culture, Uro language revitalization course",
+      "url": "https://www.gob.pe/institucion/cultura/noticias/1302179-mincul-avanza-en-revitalizacion-de-lengua-uro-cerca-de-100-escolares-de-la-comunidad-campesina-uros-chulluni-aprendieron-lengua-ancestral",
+      "note": "1 December 2025 report: 88 pupils, 12 teachers, two course stages, basic vocabulary, conversation, poetry and songs, with an intermediate and adult course planned."
+    },
+    {
+      "id": "u07-language-registry",
+      "title": "Peru Ministry of Culture, National Registry of Indigenous Languages, Andean Languages",
+      "url": "https://repositorio.cultura.gob.pe/bitstream/handle/CULTURA/1520/Registro%20Nacional%20de%20Lenguas%20Ind%C3%ADgenas%20u%20Originarias%20%E2%80%93%20Tomo%20I%20%E2%80%93%20Lenguas%20Andinas.pdf",
+      "note": "PDF pages 343 to 345 distinguish Uru-Chipaya varieties, report about three hundred Ch’imu words collected at Puno in 1929, classify Peruvian Uro as extinct, and record language-recovery work."
+    },
+    {
+      "id": "u08-dobes-people",
+      "title": "DOBES Uru-Chipaya documentation, People and Culture",
+      "url": "https://dobes.mpi.nl/projects/uru-chipaya/people/",
+      "note": "Separates Chipaya and Ayparavi, Lake Poopó, Irohito, and Puno floating-island communities; documents fishing, bird hunting, children’s meetings, language shift, tourism study, and modern livelihoods."
+    },
+    {
+      "id": "u09-dobes-language",
+      "title": "DOBES Uru-Chipaya documentation, Language",
+      "url": "https://dobes.mpi.nl/projects/uru-chipaya/language/",
+      "note": "Defines documented varieties, late nineteenth-century documentation, Ch’imu material, current Chipaya vitality, structural cautions, and Aymara influence."
+    },
+    {
+      "id": "u10-dobes-project",
+      "title": "DOBES Uru-Chipaya documentation, Project",
+      "url": "https://dobes.mpi.nl/projects/uru-chipaya/project/",
+      "note": "Describes community recordings, native-speaker interviewing, alphabet teaching, water interviews, Irohito recordings, Lake Poopó instruments, and limits of project coverage."
+    },
+    {
+      "id": "u11-illa-vocabulary",
+      "title": "Katja Hannß, Vocabulario Uru (Uchumataqu)",
+      "url": "https://www.illaa.org/pirwa/diccionarios/VocabularioUru-Hannss-output.html",
+      "note": "2013 historical vocabulary preserves source-specific transcriptions; the water entry includes Lehmann’s 1929 Ch’imu form hŭắsē and multiple distinct Uru forms."
+    },
+    {
+      "id": "u12-illa-introduction",
+      "title": "Katja Hannß, Vocabulario Uru: introduction and transcription key",
+      "url": "https://www.illaa.org/pirwa/diccionarios/VocabularioUru-Introduccion.pdf",
+      "note": "Pages i to iv explain the Irohito or Ancoaqui focus, 1894 to 2005 source range, semantic organization, and intentionally unstandardized historical transcriptions."
+    },
+    {
+      "id": "u13-pucp-book",
+      "title": "Instituto Riva-Agüero PUCP, El Uro de la Bahía de Puno",
+      "url": "https://ira.pucp.edu.pe/publicaciones/impresas/el-uro-de-la-bahia-de-puno-2/",
+      "note": "Publisher record identifies Rodolfo Cerrón-Palomino’s 2016 study, the Titicaca-Coipasa aquatic axis, fishing communities, and Chipaya as the surviving related language."
+    },
+    {
+      "id": "u14-pucp-interview",
+      "title": "PUCP, El Uro de la bahía de Puno: interview with Rodolfo Cerrón-Palomino",
+      "url": "https://puntoedu.pucp.edu.pe/archivo/el-uro-de-la-bahia-de-puno-nueva-publicacion-de-cerron-palomino/",
+      "note": "27 June 2017 interview explains Lehmann’s 1929 material, language replacement, multilingual history, the Peruvian language’s extinction, and parent-to-child Chipaya transmission."
+    },
+    {
+      "id": "u15-julien-tribute",
+      "title": "Catherine J. Julien, The Uru Tribute Category",
+      "url": "https://www.pueblos-originarios.ucb.edu.bo/digital/106000824.pdf",
+      "note": "Pages 55 to 76 analyze 1567 and 1570s administrative records, lower tribute rates, category meanings, language distribution, occupational stereotypes, and why colonial labels are not simple ethnic maps."
+    },
+    {
+      "id": "u16-chucuito-visita",
+      "title": "Garci Diez de San Miguel, Visita hecha a la provincia de Chucuito en 1567",
+      "url": "https://n2bibliotecadigital.bnp.gob.pe/server/api/core/bitstreams/32164e82-dc66-42d7-b043-871cd5e6e575/content",
+      "note": "Primary colonial survey and 1964 paleographic edition; preliminary note and folios record questions, testimony, tribute, and socioeconomic evidence after conquest, with administrative bias."
+    },
+    {
+      "id": "u17-wachtel-cambridge",
+      "title": "Nathan Wachtel, Men of the water: the Uru problem",
+      "url": "https://www.cambridge.org/core/books/abs/anthropological-history-of-andean-polities/men-of-the-water-the-uru-problem-sixteenth-and-seventeenth-centuries/401E16634C3136404308D70E7E17A460",
+      "note": "Chapter summary maps a sixteenth-century aquatic axis, estimates a large Uru population, and identifies dehumanizing stereotypes in colonial and later scholarship."
+    },
+    {
+      "id": "u18-wachtel-persee",
+      "title": "Nathan Wachtel, Hommes d’eau: le problème uru",
+      "url": "https://www.persee.fr/doc/ahess_0395-2649_1978_num_33_5_294005",
+      "note": "Open 1978 article, especially pages 1127 to 1159, examines the sixteenth- and seventeenth-century aquatic axis, social categories, language, tribute, mobility, and hostile stereotypes."
+    },
+    {
+      "id": "u19-plos-genetics",
+      "title": "Barbieri and colleagues, The Genetic History of Indigenous Populations of the Peruvian and Bolivian Altiplano",
+      "url": "https://doi.org/10.1371/journal.pone.0073006",
+      "note": "PLOS ONE 8(9):e73006, Introduction and Materials and Methods, Population Samples and DNA Extraction: Uro meanings, distinct sampled communities, multilingual histories, and informed consent."
+    },
+    {
+      "id": "u20-kent-identity",
+      "title": "Michael Kent, A importância de ser uro",
+      "url": "https://www.scielo.br/j/ha/a/JmJB3nGtnYtPXXbQPx5cgLM/?lang=pt",
+      "note": "Peer-reviewed 2011 ethnography covers Uro self-representation, disputed identity, territorial politics, genomics, oral histories, and the danger of making DNA an identity test."
+    },
+    {
+      "id": "u21-kent-territory",
+      "title": "Michael Kent, Práticas territoriais indígenas entre a flexibilidade e a fixação",
+      "url": "https://www.scielo.br/j/mana/a/DMdnWZXKFzTWmYV75S7gvdS/?format=pdf&lang=pt",
+      "note": "Mana 17(3), pages 549 to 582: island merging and splitting, household and community flexibility, neighboring relations, state mapping, and conflicts produced by fixing boundaries."
+    },
+    {
+      "id": "u22-community-knowledge",
+      "title": "Julio Villca, Rita Suaña, and collaborators, Saberes y conocimientos de los uros de Puno",
+      "url": "https://www.funproeibandes.org/wp-content/uploads/2024/07/libro-SABERES-Y-CONOCIMIENTOS-URUS-DE-LAS-AGUAS-ok-1.pdf",
+      "note": "Community research, printed pages 85 to 105: territory, islands, boats, teaching, group fishing, seasonal eggs, family foods, reported remedies, health posts, and explicit 2019 testimonies."
+    },
+    {
+      "id": "u23-water-quality",
+      "title": "Gina Hallasi Puntaca, Water quality on the Uros floating islands",
+      "url": "https://repositorio.unap.edu.pe/items/e347dcbf-8db0-4fb5-b7dd-356c9be43d68",
+      "note": "2018 UNAP thesis record and abstract describe May to July 2016 sampling at five named islands for microbial, physical, and chemical drinking-water measures."
+    },
+    {
+      "id": "u24-covid-care",
+      "title": "Peru Ministry of Culture, COVID-19 vaccination reaches the Uro people",
+      "url": "https://www.gob.pe/institucion/cultura/noticias/505061-ministerio-de-cultura-participa-del-inicio-de-proceso-de-vacunacion-contra-la-covid-19-al-pueblo-uro-en-islas-flotantes-del-lago-titicaca",
+      "note": "8 July 2021 report documents Uro island vaccination, health-network coordination, community authorities, and information and materials in Aymara and Quechua; explicit Aymara interpretation concerns other Puno communities."
+    },
+    {
+      "id": "u25-cappi-sanitation",
+      "title": "Peru Ministry of Housing, Resolución Directoral 079-2022-VIVIENDA-DGAA",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/3566512/RD-079-2022-VIVIENDA-DGAA.pdf.pdf",
+      "note": "Section 3.2 describes a current Cappi Los Uros project for 256 residents and 109 students: water treatment and twenty floating composting-sanitation modules."
+    },
+    {
+      "id": "u26-uros-chulluni",
+      "title": "Peru Ministry of Culture, BDPI locality: Uros Chulluni",
+      "url": "https://bdpi.cultura.gob.pe/localidades/uros-chulluni",
+      "note": "Community record gives 1975 recognition, 1994 title, 2007 population and age data, Indigenous-language figures, and six initial, primary, and secondary education institutions."
+    },
+    {
+      "id": "u27-agn-recognition",
+      "title": "Archivo General de la Nación, Uros-Chulluni recognition record",
+      "url": "https://www.gob.pe/institucion/agn/noticias/1212667-puno-agn-llega-a-los-uros-para-gestionar-la-propuesta-de-declaratoria-de-un-documento-historico-como-patrimonio-cultural-de-la-nacion",
+      "note": "19 July 2025 report identifies the 23 October 1975 recognition resolution, community request, leaders, and more than one hundred currently inhabited floating islands."
+    },
+    {
+      "id": "u28-emsapuno-water",
+      "title": "EMSAPUNO, Memoria Anual 2024",
+      "url": "https://emsapuno.com.pe/downloads/TRANSPARENCIA/MEMORIA/MEMORIA_ANUAL_2024.pdf",
+      "note": "Annual report project CUI 2574386 records Uros Chulluni potable-water construction, dates, financing, 91.05 percent physical progress, and stated access objective."
+    },
+    {
+      "id": "u29-puno-water",
+      "title": "Municipality of Puno, Potable water for Uros Chulluni",
+      "url": "https://www.gob.pe/institucion/munipuno/noticias/938966-agua-potable-para-uros-chulluni-alcalde-de-puno-entrega-cheque-de-750-mil-soles-para-culminacion-de-proyecto",
+      "note": "1 April 2024 report documents co-financing and participation by municipal, utility, and Uros Chulluni authorities in the water project."
+    },
+    {
+      "id": "u30-oefa-monitoring",
+      "title": "OEFA, Water-quality monitoring near the Uros islands",
+      "url": "https://www.gob.pe/institucion/oefa/noticias/1233904-oefa-realizo-monitoreo-de-calidad-del-agua-en-la-zona-de-influencia-de-los-uros-puno",
+      "note": "2025 field report records joint OEFA, binational-lake, and water-authority monitoring with Uros Chulluni municipal and community leaders."
+    },
+    {
+      "id": "u31-inca-fishing",
+      "title": "Amanda Aland, Fishing Economies and Ethnic Specialization under Inca Rule",
+      "url": "https://academic.oup.com/edited-volume/34666/chapter-abstract/295366322",
+      "note": "Oxford Handbook chapter abstract frames Titicaca fishing under Inca rule through archaeological and ethnohistorical evidence, occupational specialization, administration, and tribute."
+    },
+    {
+      "id": "u32-archaeology-fishing",
+      "title": "Capriles, Moore, Domic, and Hastorf, Fishing and environmental change in the Lake Titicaca Basin",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0278416514000130",
+      "note": "Journal of Anthropological Archaeology 34:66–77 analyzes faunal remains from 367 flotation samples at five sites dated 1500 BCE to 1100 CE and finds fishing intensity varied through time."
+    },
+    {
+      "id": "u33-aquatic-territories",
+      "title": "Dominique Levieil and Benjamin Orlove, Local Control of Aquatic Resources",
+      "url": "https://anthrosource.onlinelibrary.wiley.com/doi/abs/10.1525/aa.1990.92.2.02a00070",
+      "note": "American Anthropologist 92(2):362–382 reports contemporary communal fishing territories and ecological variation around Lake Titicaca; modern evidence, not a 1492 cadastral map."
+    },
+    {
+      "id": "u34-ipelc-materials",
+      "title": "Bolivia IPELC, Review of Uru-Chipaya language materials",
+      "url": "https://prensa.ipelc.gob.bo/revision-de-textos-en-lengua-uru-chipaya",
+      "note": "2 May 2024 report names a standardized Spanish–Uru-Chipaya dictionary, teaching booklet, and other educational texts under review by the Uru language and culture institute."
+    }
+  ],
+  "entities": [
+    {
+      "id": "uru",
+      "card": "data/cards/uru.json",
+      "status": "source_checked_pending_independent_review",
+      "claims": [
+        {
+          "pointer": "/overview",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-map-1492",
+            "u01-bdpi-uro"
+          ],
+          "locator": "Exact imported id, label, approximate 1492 to 1500 coverage, and historical-basemap provenance. The imported Kerala dhow summary and Uru boat namesake URL are audited and rejected. One observed interval, one border file, default state kind, approximate dates, and missing review. Decoded geometry, simultaneous owners, overlap, shared arcs, and 1492 seam control. Introduction and history distinguish the living Peruvian Uro people, Lake Titicaca presence, Inca-era tribute synthesis, later records, language loss, family islands, tourism, totora knowledge, and continuity.",
+          "dateScope": null,
+          "uncertainty": "Scope and distinctions are explicit in the card; no polygon accuracy is inferred."
+        },
+        {
+          "pointer": "/periods/0/summary",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-map-1492"
+          ],
+          "locator": "Exact imported id, label, approximate 1492 to 1500 coverage, and historical-basemap provenance. The imported Kerala dhow summary and Uru boat namesake URL are audited and rejected. One observed interval, one border file, default state kind, approximate dates, and missing review. Decoded geometry, simultaneous owners, overlap, shared arcs, and 1492 seam control.",
+          "dateScope": {
+            "from": 1492,
+            "to": 1493
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/1/summary",
+          "sourceIds": [
+            "u31-inca-fishing"
+          ],
+          "locator": "Oxford Handbook chapter abstract frames Titicaca fishing under Inca rule through archaeological and ethnohistorical evidence, occupational specialization, administration, and tribute.",
+          "dateScope": {
+            "from": 1493,
+            "to": 1494
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/2/summary",
+          "sourceIds": [
+            "u32-archaeology-fishing"
+          ],
+          "locator": "Journal of Anthropological Archaeology 34:66–77 analyzes faunal remains from 367 flotation samples at five sites dated 1500 BCE to 1100 CE and finds fishing intensity varied through time.",
+          "dateScope": {
+            "from": 1494,
+            "to": 1495
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/3/summary",
+          "sourceIds": [
+            "u02-bdpi-ficha"
+          ],
+          "locator": "Pages 1 to 5 summarize official identity, history, languages, family islands, fishing, tourism, totora engineering, and source limitations.",
+          "dateScope": {
+            "from": 1495,
+            "to": 1496
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/4/summary",
+          "sourceIds": [
+            "u15-julien-tribute"
+          ],
+          "locator": "Pages 55 to 76 analyze 1567 and 1570s administrative records, lower tribute rates, category meanings, language distribution, occupational stereotypes, and why colonial labels are not simple ethnic maps.",
+          "dateScope": {
+            "from": 1496,
+            "to": 1497
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/5/summary",
+          "sourceIds": [
+            "u16-chucuito-visita"
+          ],
+          "locator": "Primary colonial survey and 1964 paleographic edition; preliminary note and folios record questions, testimony, tribute, and socioeconomic evidence after conquest, with administrative bias.",
+          "dateScope": {
+            "from": 1497,
+            "to": 1498
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/6/summary",
+          "sourceIds": [
+            "u09-dobes-language"
+          ],
+          "locator": "Defines documented varieties, late nineteenth-century documentation, Ch’imu material, current Chipaya vitality, structural cautions, and Aymara influence.",
+          "dateScope": {
+            "from": 1498,
+            "to": 1499
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/periods/7/summary",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "Decoded geometry, simultaneous owners, overlap, shared arcs, and 1492 seam control. Decoded geometry, simultaneous owners, overlap, shared arcs, and 1500 seam control. Decoded geometry, simultaneous owners, overlap, shared arcs, and 1530 seam control.",
+          "dateScope": {
+            "from": 1499,
+            "to": 1500
+          },
+          "uncertainty": "Approximate interpretive phase; see the attributed dating discussion."
+        },
+        {
+          "pointer": "/sections/0/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-summary",
+            "atlas-coverage",
+            "atlas-missing"
+          ],
+          "locator": "civilization row uru; coverage row uru; imported summary and missing-card source lead",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/1/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "feature 748, properties civ uru, from 1492, to 1500, precision 1; decoded ring and bounding box",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/2/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "feature 748 polygon intersection report: 23 area-overlap labels and direct shared arc with chango",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/3/text",
+          "sourceIds": [
+            "atlas-map-1492"
+          ],
+          "locator": "representative point-owner audit for Puno, Uros Chulluni, Desaguadero, Irohito, and Oruro",
+          "dateScope": {
+            "year": 1492
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/0/items/4/text",
+          "sourceIds": [
+            "atlas-map-1400",
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530"
+          ],
+          "locator": "representative-point seam comparison for 1400, 1492, 1500, and 1530",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/0/text",
+          "sourceIds": [
+            "u02-bdpi-ficha"
+          ],
+          "locator": "PDF pages 1 to 5, identity, history, language, subsistence, family islands, and tourism",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/1/text",
+          "sourceIds": [
+            "u08-dobes-people"
+          ],
+          "locator": "People and Culture sections on Chipaya and Ayparavi, Lago Poopó, Irohito, and Puno",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/2/text",
+          "sourceIds": [
+            "u19-plos-genetics"
+          ],
+          "locator": "PLOS ONE 8(9):e73006, Introduction; Materials and Methods, Population Samples and DNA Extraction",
+          "dateScope": {
+            "year": 2013
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/3/text",
+          "sourceIds": [
+            "u20-kent-identity"
+          ],
+          "locator": "Horizontes Antropológicos 17(35), article sections on self-representation, identity disputes, tourism, territory, and genomics",
+          "dateScope": {
+            "year": 2011
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/1/items/4/text",
+          "sourceIds": [
+            "u17-wachtel-cambridge"
+          ],
+          "locator": "chapter abstract, sixteenth- and seventeenth-century aquatic axis and dehumanizing descriptions",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/0/text",
+          "sourceIds": [
+            "u32-archaeology-fishing"
+          ],
+          "locator": "Journal of Anthropological Archaeology 34, pages 66 to 77, faunal remains from 367 flotation samples at five sites",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/1/text",
+          "sourceIds": [
+            "u31-inca-fishing"
+          ],
+          "locator": "chapter abstract, fishing economies, ethnic specialization, administration, and tribute under Inca rule",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/2/text",
+          "sourceIds": [
+            "u22-community-knowledge"
+          ],
+          "locator": "printed pages 96 to 98, community testimonies on boats, nets, group fishing, and teaching",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/3/text",
+          "sourceIds": [
+            "u22-community-knowledge"
+          ],
+          "locator": "printed pages 99 to 102, bird and egg seasons, foods, and marriage-related meals",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/2/items/4/text",
+          "sourceIds": [
+            "u33-aquatic-territories"
+          ],
+          "locator": "American Anthropologist 92(2), pages 362 to 382, contemporary aquatic-resource territories",
+          "dateScope": {
+            "year": 1990
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/0/text",
+          "sourceIds": [
+            "u03-totora-resolution"
+          ],
+          "locator": "resolution pages 2 to 4, q’illi blocks, binding, and crossed totora layers",
+          "dateScope": {
+            "year": 2013
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/1/text",
+          "sourceIds": [
+            "u03-totora-resolution"
+          ],
+          "locator": "resolution pages 3 to 4, anchoring, replenishing reed layers, maintenance, and houses",
+          "dateScope": {
+            "year": 2013
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/2/text",
+          "sourceIds": [
+            "u03-totora-resolution"
+          ],
+          "locator": "resolution pages 3 to 5, reed selection and drying, boat construction, tools, and sails",
+          "dateScope": {
+            "year": 2013
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/3/text",
+          "sourceIds": [
+            "u02-bdpi-ficha"
+          ],
+          "locator": "PDF pages 3 to 5, newer family islands, totora uses, houses, boats, crafts, and tourism",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/3/items/4/text",
+          "sourceIds": [
+            "u22-community-knowledge"
+          ],
+          "locator": "printed pages 96 to 98, learning by accompanying parents and a father making a small balsa for his child",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/0/text",
+          "sourceIds": [
+            "u21-kent-territory"
+          ],
+          "locator": "Mana 17(3), pages 549 to 582, island joining and splitting, households, and mapping",
+          "dateScope": {
+            "year": 2011
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/1/text",
+          "sourceIds": [
+            "u26-uros-chulluni"
+          ],
+          "locator": "BDPI locality fields for recognition, title, 2007 census indicators, and six education institutions",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/2/text",
+          "sourceIds": [
+            "u21-kent-territory"
+          ],
+          "locator": "Mana 17(3), pages 549 to 582, household flexibility, neighbors, tourism, and state territorialization",
+          "dateScope": {
+            "year": 2011
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/3/text",
+          "sourceIds": [
+            "u08-dobes-people"
+          ],
+          "locator": "People and Culture subsections on livelihoods, tourism, fishing, birds, crafts, and children",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/4/items/4/text",
+          "sourceIds": [
+            "u10-dobes-project"
+          ],
+          "locator": "Project description, community interviews, alphabet work, Irohito recordings, water narratives, and Lake Poopó instruments",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/0/text",
+          "sourceIds": [
+            "u09-dobes-language"
+          ],
+          "locator": "Language sections on varieties, documentation dates, vitality, Ch’imu records, and Aymara influence",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/1/text",
+          "sourceIds": [
+            "u11-illa-vocabulary"
+          ],
+          "locator": "entry for Spanish agua, Ch’imu column citing Lehmann 1929; exact form hŭắsē",
+          "dateScope": {
+            "year": 1929
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/2/text",
+          "sourceIds": [
+            "u12-illa-introduction"
+          ],
+          "locator": "introduction pages i to iv, scope, source dates, organization, and unstandardized transcriptions",
+          "dateScope": {
+            "year": 2013
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/3/text",
+          "sourceIds": [
+            "u07-language-registry"
+          ],
+          "locator": "PDF pages 343 to 345, classification, varieties, 1929 Ch’imu vocabulary, and recovery",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/5/items/4/text",
+          "sourceIds": [
+            "u06-revival-course"
+          ],
+          "locator": "1 December 2025 report, participant counts, two stages, lesson topics, poetry, songs, and planned courses",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/0/text",
+          "sourceIds": [
+            "u22-community-knowledge"
+          ],
+          "locator": "printed pages 103 to 104, remedies, postpartum household care, Quta mama ritual, doctors and nurses, and the 2010 health post",
+          "dateScope": {
+            "year": 2019
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/1/text",
+          "sourceIds": [
+            "u23-water-quality"
+          ],
+          "locator": "UNAP thesis record and abstract, May to July 2016 sampling, five islands, and measured parameters",
+          "dateScope": {
+            "year": 2018
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/2/text",
+          "sourceIds": [
+            "u24-covid-care"
+          ],
+          "locator": "8 July 2021 report, Uro vaccination launch, coordination, authorities, and information and materials in Aymara and Quechua",
+          "dateScope": {
+            "year": 2021
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/3/text",
+          "sourceIds": [
+            "u25-cappi-sanitation"
+          ],
+          "locator": "Resolution 079-2022, section 3.2, population, students, treatment system, and 20 floating modules",
+          "dateScope": {
+            "year": 2022
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/6/items/4/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492"
+          ],
+          "locator": "absence in reviewed atlas metadata and bounded 1492 feature evidence",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/0/text",
+          "sourceIds": [
+            "atlas-index",
+            "atlas-map-1492"
+          ],
+          "locator": "atlas fields and 1492 feature supply no sanitation evidence; documented absence is explicit",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/1/text",
+          "sourceIds": [
+            "u25-cappi-sanitation"
+          ],
+          "locator": "Resolution 079-2022, section 3.2, water-treatment works, intended population, and twenty floating composting-sanitation modules",
+          "dateScope": {
+            "year": 2022
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/2/text",
+          "sourceIds": [
+            "u28-emsapuno-water"
+          ],
+          "locator": "Memoria Anual 2024, project CUI 2574386 table: Estado de la obra Culminado, 91.05 percent physical progress, financing, and goal",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/3/text",
+          "sourceIds": [
+            "u29-puno-water"
+          ],
+          "locator": "1 April 2024 municipal report, amount, completion purpose, and participating authorities",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/7/items/4/text",
+          "sourceIds": [
+            "u30-oefa-monitoring"
+          ],
+          "locator": "2025 field report, monitoring locations, participating agencies, municipal representatives, and community leaders",
+          "dateScope": {
+            "year": 2025
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/0/text",
+          "sourceIds": [
+            "u15-julien-tribute"
+          ],
+          "locator": "pages 55 to 76, tribute rates, occupations, mobility, language, and category interpretation",
+          "dateScope": {
+            "year": 1567
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/1/text",
+          "sourceIds": [
+            "u15-julien-tribute"
+          ],
+          "locator": "pages 55 to 76, occupational descriptions, social judgments, and shifting tribute categories",
+          "dateScope": null,
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/2/text",
+          "sourceIds": [
+            "u16-chucuito-visita"
+          ],
+          "locator": "1567 visitation, preliminary study and interrogations on households, resources, labor, and tribute",
+          "dateScope": {
+            "year": 1567
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/3/text",
+          "sourceIds": [
+            "u16-chucuito-visita"
+          ],
+          "locator": "1964 paleographic edition of the 1567 visita; folios and editorial introduction",
+          "dateScope": {
+            "year": 1567
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/8/items/4/text",
+          "sourceIds": [
+            "u18-wachtel-persee"
+          ],
+          "locator": "Annales 33(5), pages 1127 to 1159, aquatic axis, mobility, tribute, language, and categories",
+          "dateScope": {
+            "year": 1978
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/0/text",
+          "sourceIds": [
+            "u04-law-30729"
+          ],
+          "locator": "single-page Law 30729, purpose and named protection of the Uros and Uros Chulluni",
+          "dateScope": {
+            "year": 2018
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/1/text",
+          "sourceIds": [
+            "u27-agn-recognition"
+          ],
+          "locator": "19 July 2025 report on the 23 October 1975 resolution, leaders, heritage request, and inhabited islands",
+          "dateScope": {
+            "year": 1975
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/2/text",
+          "sourceIds": [
+            "u13-pucp-book"
+          ],
+          "locator": "publisher description of the 2016 book, documentary corpus, aquatic axis, fishing communities, and Chipaya",
+          "dateScope": {
+            "year": 2016
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/3/text",
+          "sourceIds": [
+            "u14-pucp-interview"
+          ],
+          "locator": "27 June 2017 interview, Lehmann material, language replacement, multilingualism, and Chipaya transmission",
+          "dateScope": {
+            "year": 2017
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/sections/9/items/4/text",
+          "sourceIds": [
+            "u34-ipelc-materials"
+          ],
+          "locator": "2 May 2024 report, dictionary, teaching booklet, review process, and Uru institute",
+          "dateScope": {
+            "year": 2024
+          },
+          "uncertainty": "Limited to the named object, study, institution or community; not an assertion of uniform practice."
+        },
+        {
+          "pointer": "/ending/text",
+          "sourceIds": [
+            "atlas-map-1492",
+            "atlas-map-1500",
+            "atlas-map-1530",
+            "u05-recognition"
+          ],
+          "locator": "Decoded geometry, simultaneous owners, overlap, shared arcs, and 1492 seam control. Decoded geometry, simultaneous owners, overlap, shared arcs, and 1500 seam control. Decoded geometry, simultaneous owners, overlap, shared arcs, and 1530 seam control. 9 March 2018 recognition, community authorities, Qhas Qut Suñis self-presentation, cultural and language recovery, and modern wastewater planning.",
+          "dateScope": {
+            "year": 1500
+          },
+          "uncertainty": "Political change is distinguished from cultural continuity; no unverified successor links."
+        }
+      ],
+      "scopeNotes": [
+        "New text needs independent review; earlier hashes do not certify it.",
+        "Map endpoints are not historical founding or extinction dates.",
+        "Agent researched a disjoint batch; integration and structural checks are not independent historical certification.",
+        "Imported border coordinates remain unchanged. Historical events and map coverage are distinguished in prose; see batchIdentityNotes for conflicts."
+      ],
+      "proposedOverrides": {
+        "id": "uru",
+        "name": "Uru / Uro peoples (approximate atlas layer)",
+        "aliases": [
+          "Uru",
+          "Uro",
+          "Uros"
+        ],
+        "kind": "culture",
+        "region": "South America",
+        "from": 1492,
+        "to": 1500,
+        "circa": true,
+        "card": "cards/uru.json",
+        "dateBasis": "map_coverage",
+        "summary": "Approximate 1492 to 1500 atlas cultural layer, distinct from the Kerala boat namesake, living Uro and Uru communities, and historical tribute or status categories.",
+        "summarySource": null,
+        "fell": null,
+        "predecessors": [],
+        "successors": []
+      },
+      "geometryStatus": "Imported polygons unchanged and unverified.",
+      "identityEvidence": [
+        {
+          "file": "world-1492.json",
+          "properties": {
+            "civ": "uru",
+            "from": 1492,
+            "to": 1500,
+            "precision": 1
+          },
+          "bounds": [
+            -71.06651066510665,
+            -23.7155161737059,
+            -64.08964089640897,
+            -15.184264886690471
+          ]
+        }
+      ]
+    }
+  ],
+  "batchIdentityNotes": []
+}
